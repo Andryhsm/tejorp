@@ -6,13 +6,12 @@
     <head>
         <meta charset="UTF-8">
         <title>installation</title>
-
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
         <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datepicker3.min.css">
-        <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datetimepicker.min.css">
-
+        <!--<link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datetimepicker.min.css">-->
+        <link rel="stylesheet" type="text/css" href="btn.css">
 
         <style>
             #rot  img{
@@ -58,8 +57,10 @@
             {
                 background: rgba(10, 10, 10, 0.51);
             }
-            h4{
-                color: white;
+            h4
+            {
+                color: #1995dc;
+                font-size: 1.8em;
             }
         </style>
 
@@ -1695,14 +1696,68 @@
             </div>
             <button type="submit" class="btn btn-primary hidden" id="save">Enregistrement</button>
         </form>
-        <div class="container">
+
+
+        <div class="container" id = "bouton">
+            <!--
             <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="1" onClick="enHaut();">Etape 1</button>
             <button class="btn btn-primary col-md-2 col-lg-2 col-sm-12 col-xs-12" id="2" onClick="enHaut();">Etape 2</button>
             <button class="btn btn-success col-md-2 col-lg-2 col-sm-12 col-xs-12" id="3" onClick="enHaut();">Etape 3</button>
             <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="4" onClick="enHaut();">Etape 4</button>
             <button class="btn btn-info col-md-2 col-lg-2 col-sm-12 col-xs-12" id="5" onClick="enHaut();">Etape 5</button>
             <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
+            -->
+            <ul>
+                <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
+                    <span class="round">
+                        Renseignements<br>
+                        Choix du matériel
+                    </span>
+                </a></li>
+                <li><a class="round red" onClick="enHaut();" id = "2">Etape 2
+                    <span class="round">
+                        Données médicale </br>
+                        Insulinothérapie </br>
+                    </span>
+                </a></li>
+                <li><a class="round vert" onClick="enHaut();" id = "3">Etape 3
+                    <span class="round">
+                        Habitude de vie <br>
+                        Habitude alimentaire
+                    </span>
+                </a></li>
+                <li><a class="round orange" onClick="enHaut();" id = "4">Etape 4
+                    <span class="round">
+                        Manipulation de la pompe <br>
+                        Alarme
+                    </span>
+                </a></li>
+                <li><a class="round violet" onClick="enHaut();" id = "5">Etape 5
+                    <span class="round">
+                        Pose du cathéter <br>
+                        Manipulation <br>
+                        ASG
+                    </span>
+                </a></li>
+                <li><a class="round yellow" onClick="enHaut();" id = "6">Etape 6
+                    <span class="round">
+                        Enregistrer<br>
+                        Partager<br>
+                        Imprimer
+                    </span>
+                </a></li>
+            </ul>
         </div>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.round').click(function(){
+                    $('.round').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
+        </script>
+
 
         <button class="btn btn-primary btn-lg hidden" id="triggerwarning" data-toggle="modal" data-target="#loginerror"></button>
         <div class="modal" id="loginerror">
@@ -1724,7 +1779,7 @@
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
         <script src="assets/js/Chart.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
         <script type="text/javascript">
                 $('#enregistrer').click(function () {
                     $('#save').trigger('click');
@@ -1771,75 +1826,6 @@
                             }, 4000);
                         }
                     });
-
-
-                    //Pour les photo du pdf
-                    var capture = {};
-                    var target = $('#bardate1');
-                    html2canvas(target, {
-                        onrendered: function(canvas) {
-                            capture.img = canvas.toDataURL( "image/png" );
-                            capture.data = { 'image' : capture.img };
-                            $.ajax({
-                            url: "pdf/ajax.php",
-                            data: capture.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-                    var capture2 = {};
-                    var target2 = $('#bardate2');
-                    html2canvas(target2, {
-                        onrendered: function(canvas) {
-                            capture2.img = canvas.toDataURL( "image/png" );
-                            capture2.data = { 'image' : capture2.img };
-                            $.ajax({
-                            url: "pdf/ajax2.php",
-                            data: capture2.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-                    var capture3 = {};
-                    var target3 = $('#barhg');
-                    html2canvas(target3, {
-                        onrendered: function(canvas) {
-                            capture3.img = canvas.toDataURL( "image/png" );
-                            capture3.data = { 'image' : capture3.img };
-                            $.ajax({
-                            url: "pdf/ajax3.php",
-                            data: capture3.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-
-                    var capture4 = {};
-                    var target4 = $('#bar');
-                    html2canvas(target4, {
-                        onrendered: function(canvas) {
-                            capture4.img = canvas.toDataURL( "image/png" );
-                            capture4.data = { 'image' : capture4.img };
-                            $.ajax({
-                            url: "pdf/ajax4.php",
-                            data: capture4.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-
                 });
 
                 function enHaut()

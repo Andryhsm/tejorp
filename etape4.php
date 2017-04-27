@@ -134,8 +134,11 @@
                     </tbody>
                 </table>
 
-                <div>
-                    <h4>Autres : </h4>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Autres :</label>
+                    <div class="col-sm-7">
+                        <textarea rows="3" type="text" placeholder="Autres" class="form-control" name="pmpautre" id="autre1"></textarea>
+                    </div>
                 </div>
 
 	</fieldset>
@@ -249,8 +252,11 @@
                     </tbody>
                 </table>
 
-                <div>
-                    <h4>Autres : </h4>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Autres :</label>
+                    <div class="col-sm-7">
+                        <textarea rows="3" type="text" placeholder="Autres" class="form-control" name="alarmeautre" id="autre2"></textarea>
+                    </div>
                 </div>
 
     </fieldset>

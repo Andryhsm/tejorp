@@ -75,15 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="adresse" class="col-sm-3 control-label">Adresse:</label>
-                        <div class="col-sm-8">
-                            <div class="input-group">
-                                <input type="text" placeholder="adresse" required="" class="form-control" name="adresse" id="adresse">
-                                <span class="input-group-addon loko">*</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="form-group">
                         <label for="rue" class="col-sm-3 control-label">Numéro et nom de rue:</label>
                         <div class="col-sm-8">
