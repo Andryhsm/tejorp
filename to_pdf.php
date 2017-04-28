@@ -65,7 +65,7 @@
     <div>
         <h4>CHOIX DU MATERIEL</h4>
         <p>   
-            <strong>Pompe :</strong> <?php echo $_POST["pompe"] ; ?> <br/>
+            <strong>Pompe :</strong> <?php echo $_POST["Pompe"] ; ?> <br/>
             <strong>Date d’installation :</strong> <?php echo $_POST["dateinstallation"] ; ?> <br/>
             <strong>Type de cathéter :</strong> <?php echo $_POST["catheter"] ; ?><br/>
             <strong>Modèle :</strong> <?php echo $_POST["modele"] ; ?> <br/>
@@ -73,7 +73,7 @@
             <strong>Inserteur :</strong> <?php echo $_POST["inserteur"] ; ?><br/><br/>
 
             <strong> Réservoir :</strong> <?php echo $_POST["reservoir"] ; ?> <br/>                      
-            <strong>Système de portage de la pompe (qql lignes) : </strong> <?php echo $_POST["spp"] ; ?>  <br/>    
+            <strong>Système de portage de la Pompe (qql lignes) : </strong> <?php echo $_POST["spp"] ; ?>  <br/>    
 
             <strong>Observations et commentaires :</strong> <?php echo $_POST["observation"] ; ?>  
         </p>
@@ -84,8 +84,8 @@
             <strong>Date de diagnostic :</strong> <?php echo $_POST["datediagnostic"] ; ?> <br/>     
             <strong>Circonstances de découverte :</strong> <?php echo $_POST["circonstancedecouverte"] ; ?>   <br/>   
             <strong>Antécédents familiaux :</strong> <?php echo $_POST["antecedentfamiliaux"] ; ?>    <br/>  
-            <strong>Date de première mise sous pompe :</strong> <?php echo $_POST["datepremieremisesouspompe"] ; ?> <br/>     
-            <strong>HbA1C de référence avant la mise sous pompe :</strong>   <?php echo $_POST["hba1c"] ; ?> <br/>     
+            <strong>Date de première mise sous Pompe :</strong> <?php echo $_POST["datepremieremisesousPompe"] ; ?> <br/>     
+            <strong>HbA1C de référence avant la mise sous Pompe :</strong>   <?php echo $_POST["hba1c"] ; ?> <br/>     
         </p><br/>
     </div>
     <table class="table " style="background: blue;">
@@ -159,7 +159,7 @@
         </table>
 
         <h4>Traitements complémentaires :</h4>
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                     <th style="width: 40%;">Spécialité</th>
@@ -187,7 +187,7 @@
         </table><br/><br/><br/>
     </div>
     <div>
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;">Shéma basals date 1</td>
@@ -253,7 +253,7 @@
         </table><br/><br/><br/>
     </div>
     <div>
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;">Shéma basals date 2</td>
@@ -319,7 +319,7 @@
     </div>
     
     <div>
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                     <th style="width:17.66666666666667%;">Valeur glycémique</th>
@@ -395,7 +395,7 @@
         <strong>Objectif glycémique pré prandial (g/l) :</strong><?php echo $_POST["objectifglycemiquepreprandial"] ; ?> <br/>
          <strong>Objectif glycémique post prandial (g/l) :</strong><?php echo $_POST["objectifglycemiquepostprandial"] ; ?> <br/>
         <h4>Hémoglobine glyquée</h4>
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td style="width: 10%;">Dates</td>
@@ -548,7 +548,7 @@
        
 
         <div>
-         <font><h4>MANIPULATION DE LA POMPE</h4></font><br/>
+         <font><h4>MANIPULATION DE LA Pompe</h4></font><br/>
 
             <table>
                     <thead>
@@ -734,7 +734,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Entretien de la pompe</td>
+                            <td>Entretien de la Pompe</td>
                             <td><?php echo $_POST["alarmedate25"] ; ?></td>
                             <td><?php echo $_POST["alarmedate26"] ; ?></td>
                             <td><?php echo $_POST["alarmedate27"] ; ?></td>

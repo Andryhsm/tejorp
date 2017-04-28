@@ -376,11 +376,11 @@ if ($statut == "Médecin traitant") {
         <div class="form-group">
             <label for="nom" class="col-sm-4 control-label">Pompe:</label>
             <div class="col-sm-7">
-                <select name="pompe" class="form-control">
-                    <option value="pompe1">pompe1</option>
-                    <option value="pompe2">pompe2</option>
-                    <option value="pompe3">pompe3</option>
-                    <option value="pompe4">pompe4</option>
+                <select name="Pompe" class="form-control">
+                    <option value="Pompe1">Pompe1</option>
+                    <option value="Pompe2">Pompe2</option>
+                    <option value="Pompe3">Pompe3</option>
+                    <option value="Pompe4">Pompe4</option>
                 </select>
             </div>
         </div>
@@ -457,9 +457,9 @@ if ($statut == "Médecin traitant") {
             </div>
         </div>
         <div class="form-group">
-            <label for="spp" class="col-sm-4 control-label">Système de portage de la pompe:</label>
+            <label for="spp" class="col-sm-4 control-label">Système de portage de la Pompe:</label>
             <div class="col-sm-7">
-                <input type="text" placeholder="Système de portage de la pompe" class="form-control" name="spp" id="spp">
+                <input type="text" placeholder="Système de portage de la Pompe" class="form-control" name="spp" id="spp">
             </div>
         </div>
         <div class="form-group">

@@ -1732,7 +1732,7 @@
                 </a></li>
                 <li><a class="round orange" onClick="enHaut();" id = "4">Etape 4
                     <span class="round">
-                        Manipulation de la pompe <br>
+                        Manipulation de la Pompe <br>
                         Alarme
                     </span>
                 </a></li>

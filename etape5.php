@@ -2,7 +2,7 @@
 	<fieldset class="well" id="field">
 		<center><font><h4>POSE DU CATHETER</h4></font></center><br/>
 
-		<table class="table table-bordered table-hover" style="color: white;">
+		<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
@@ -164,7 +164,7 @@
         <fieldset class="well" id="field">
             <center><font><h4>CONNAISSANCE</h4></font></center><br/>
 
-				<table class="table table-bordered table-hover" style="color: white;">
+				<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;"></td>
@@ -386,7 +386,7 @@
 
 		<fieldset class="well" id="field">
 			<center><font><h4>AUTO SURVEILLANCE GLYCEMIQUE</h4></font></center><br/>
-				<table class="table table-bordered table-hover" style="color: white;">
+				<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="width:20%; text-align: center;"></td>
@@ -421,7 +421,7 @@
 
 		<fieldset class="well" id="field">
 			<center><font><h4>AUTO SURVEILLANCE GLYCEMIQUE (ASG)</h4></font></center><br/>
-				<table class="table table-bordered table-hover" style="color: white;">
+				<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;"></td>

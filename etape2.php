@@ -53,24 +53,24 @@
                         </div>
                     </div>
 
-                    <!-- Date de première mise sous pompe -->
+                    <!-- Date de première mise sous Pompe -->
                     <div class="form-group">
-                        <label for="datepremieremisesouspompe" class="col-lg-4 control-label">Date de première mise sous pompe:</label>
+                        <label for="datepremieremisesousPompe" class="col-lg-4 control-label">Date de première mise sous Pompe:</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control datepickerAll" name="datepremieremisesouspompe" id="datepremieremisesouspompe" placeholder="Date de première mise sous pompe">
+                            <input type="text" class="form-control datepickerAll" name="datepremieremisesousPompe" id="datepremieremisesousPompe" placeholder="Date de première mise sous Pompe">
                         </div>
                     </div>
 
-                    <!-- HbA1C de référence avant la mise sous pompe -->
+                    <!-- HbA1C de référence avant la mise sous Pompe -->
                     <div class="form-group">
-                        <label for="hba1c" class="col-lg-4 control-label">HbA1C de référence avant la mise sous pompe:</label>
+                        <label for="hba1c" class="col-lg-4 control-label">HbA1C de référence avant la mise sous Pompe:</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" name="hba1c" id="hba1c" placeholder="HbA1C de référence avant la mise sous pompe (%)">
+                            <input type="text" class="form-control" name="hba1c" id="hba1c" placeholder="HbA1C de référence avant la mise sous Pompe (%)">
                         </div>
                     </div></br>
 
                     <div class="table-responsive">
-                        <table class="table table-bordered table-hover" style="color: white;">
+                        <table class="table table-bordered" style="color: white;">
                             <thead>
                             <th>Taille (cm)</th>
                             <th>Poids actuel (kg)</th>
@@ -301,7 +301,7 @@
             </fieldset>	</br>
 
             <fieldset>
-                <table class="table table-bordered table-hover" style="color: white;">
+                <table class="table table-bordered" style="color: white;">
                     <thead>
                     <th style="text-align: center;"></th>
                     <th style="text-align: center;">Insuline lente (Ui)</th>
@@ -338,7 +338,7 @@
         <div class="well">
 
             <h4>Traitement complémentaire :</h4><br>
-            <table class="table table-bordered table-hover" style="color: white;">
+            <table class="table table-bordered" style="color: white;">
                 <thead>
                 <th style="text-align: center;">Spécialité</th>
                 <th style="text-align: center;">Posologie</th>
@@ -368,7 +368,7 @@
 
         <div class="well">
             <fieldset>
-                <table class="table table-bordered table-hover table-responsive" style="color: white;">
+                <table class="table table-bordered table-responsive" style="color: white;">
                     <thead>
                         <tr>
                             <th style="text-align: center;" colspan="12">Schémas basals date 1</th>
@@ -469,7 +469,7 @@
                 <!-- chart -->
                 </br>
 
-                <table class="table table-bordered table-hover  table-responsive" style="color: white;">
+                <table class="table table-bordered  table-responsive" style="color: white;">
                     <thead>
                         <tr>
                             <th style="text-align: center;" colspan="12">Schémas basals date 2</th>
@@ -581,7 +581,7 @@
                 <label for="Autre1" class="col-lg-3 control-label">Date de MAJ :</label>
                 </br>
                 </br>
-                <table class="table table-bordered table-hover" style="color: white;">
+                <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Valeur glycémique</td>
@@ -679,7 +679,7 @@
                 <label for="Autre1" class="col-lg-7 control-label">Hémoglobine glyquée</label>
                 </br>
                 </br>
-                <table class="table table-bordered table-hover" style="color: white;">
+                <table class="table table-bordered" style="color: white;">
                     <tbody>
                         <tr>
                             <th scope="row">Dates</th>

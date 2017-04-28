@@ -152,7 +152,7 @@
         </table><br/>
 
         <h4><u>Traitements complémentaires :</u></h4>
-        <table class="table table-hover" style="margin-left: 70px;">
+        <table class="table" style="margin-left: 70px;">
             <thead>
                 <tr>
                     <th style="width: 35%;"><strong>Spécialité</strong></th>
@@ -182,7 +182,7 @@
         <br/><br/>
     </div>
     <div class="dec">
-        <table class="table table-hover" style="margin-right: 20px;">
+        <table class="table" style="margin-right: 20px;">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;"><strong>Shéma basals date 1</strong></td>
@@ -251,7 +251,7 @@
         <br/><br/>
     </div>
     <div class="dec">
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;"><strong>Shéma basals date 2</strong></td>
@@ -320,7 +320,7 @@
     </div>
     
     <div class="dec">
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                     <th style="width:17.66666666666667%;"><strong>Valeur glycémique</strong></th>
@@ -399,7 +399,7 @@
         <strong>Objectif glycémique pré prandial (g/l) :</strong><?php echo $_POST["objectifglycemiquepreprandial"] ; ?> <br/>
          <strong>Objectif glycémique post prandial (g/l) :</strong><?php echo $_POST["objectifglycemiquepostprandial"] ; ?> <br/>
         <h4><u>Hémoglobine glyquée</u></h4>
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td style="width: 10%;">Dates</td>

@@ -75,7 +75,7 @@
         <center><font><h4>INSULUNOTHERAPIE FONCTIONNELLE</h4></font>
             <div class="form-group">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover" style="color: white;">
+                    <table class="table table-bordered" style="color: white;">
                         <thead>
                             <tr style="color: white;">
                                 <th></th>
@@ -156,7 +156,7 @@
         <input type="text" name="observation2" class="form-control" id="" placeholder="suivi de poids"> -->
         <br>
         <div class="table-responsive">
-            <table id="table_habitude" class="table table-bordered table-hover" style="color: white;">
+            <table id="table_habitude" class="table table-bordered" style="color: white;">
                 <tr>
                     <th>Date</th>
                     <th><input type="text" id="date1" class="col-lg-12 form-control datepickerAll" name="date1"></th>

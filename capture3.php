@@ -4,7 +4,7 @@
 	<title>Une capture 3</title>
 </head>
 <body>
-  			<table class="table table-bordered table-hover" style="color: white;">
+  			<table class="table table-bordered" style="color: white;">
                     <tbody>
                         <tr>
                             <th scope="row">Dates</th>

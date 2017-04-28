@@ -4,7 +4,7 @@
     <title> </title>
 </head>
 <body>
-           <table id="table_habitude" class="table table-bordered table-hover" style="color: white;">
+           <table id="table_habitude" class="table table-bordered" style="color: white;">
                 <tr>
                     <th>Date</th>
                     <th><input type="text" id="date1" class="col-lg-12 form-control datepickerAll" name="date1"></th>

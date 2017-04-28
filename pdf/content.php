@@ -28,7 +28,7 @@
     </head>
     <body>
         <div class="title">
-            <h3> Fiche de compte rendu de primo installation Insulinothérapie par pompe </h3>
+            <h3> Fiche de compte rendu de primo installation Insulinothérapie par Pompe </h3>
         </div>
         <div class="dec">
             <h4><u>RENSEIGNEMENTS BASTIDE LE CONFORT MEDICAL</u></h4>
@@ -90,7 +90,7 @@
             <strong>Inserteur :</strong> oui ou non<br/><br/>
 
             <strong> Réservoir :</strong> saisie libre  <br/>                      
-            <strong>Système de portage de la pompe (qql lignes)</strong> saisie libre  <br/>    
+            <strong>Système de portage de la Pompe (qql lignes)</strong> saisie libre  <br/>    
 
             <strong>Observations et commentaires :</strong>  
         </p>
@@ -101,8 +101,8 @@
             <strong>Date de diagnostic :</strong> saisie libre <br/>     
             <strong>Circonstances de découverte :</strong> saisie libre   <br/>   
             <strong>Antécédents familiaux :</strong> saisie libre    <br/>  
-            <strong>Date de première mise sous pompe :</strong> saisie libre <br/>     
-            <strong>HbA1C de référence avant la mise sous pompe :</strong>   % saisie libre <br/>     
+            <strong>Date de première mise sous Pompe :</strong> saisie libre <br/>     
+            <strong>HbA1C de référence avant la mise sous Pompe :</strong>   % saisie libre <br/>     
         </p><br/>
     </div>
     <div class="dec">
@@ -176,7 +176,7 @@
         </table>
 
         <h4><u>Traitements complémentaires :</u></h4>
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                     <th style="width: 40%;">Spécialité</th>
@@ -208,7 +208,7 @@
         </table><br/><br/><br/>
     </div>
     <div class="dec">
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;">Shéma basals date 1</td>
@@ -263,7 +263,7 @@
         </table><br/><br/><br/>
     </div>
     <div class="dec">
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;">Shéma basals date 2</td>
@@ -318,7 +318,7 @@
         </table><br/><br/><br/>
     </div>
     <div class="dec">
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                     <th style="width:17.66666666666667%;">Valeur glycémique</th>
@@ -393,7 +393,7 @@
         <strong>Synthèse / Commentaire : </strong> valeur <br/><br/>
         <strong>Objectif glycémique pré prandial (g/l) :</strong><br/>
         <h4><u>Hémoglobine glyquée</u></h4>
-        <table class="table table-hover">
+        <table class="table">
             <tbody>
                 <tr>
                     <td style="width: 10%;">Dates</td>
@@ -545,7 +545,7 @@
             </table>
         </div>
         <div class="dec">
-         <font><h4><u>MANIPULATION DE LA POMPE</u></h4></font><br/>
+         <font><h4><u>MANIPULATION DE LA Pompe</u></h4></font><br/>
 
             <table>
                     <thead>
@@ -731,7 +731,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Entretien de la pompe</td>
+                            <td>Entretien de la Pompe</td>
                             <td></td>
                             <td></td>
                             <td></td>

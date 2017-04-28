@@ -1,8 +1,8 @@
 <div class="container-fluid">                        
 	<fieldset class="well" id="field">
-		<center><font><h4>MANIPULATION DE LA POMPE</h4></font></center><br/>
+		<center><font><h4>MANIPULATION DE LA Pompe</h4></font></center><br/>
 
-			<table class="table table-bordered table-hover" style="color: white;">
+			<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
@@ -146,7 +146,7 @@
     <fieldset class="well" id="field">
         <center><font><h4>ALARMES ET PRECAUTIONS</h4></font></center><br/>
 
-            <table class="table table-bordered table-hover" style="color: white;">
+            <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
@@ -237,7 +237,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Entretien de la pompe</td>
+                            <td>Entretien de la Pompe</td>
                             <td><input type="text" class="form-control datepickerAll" id="alarmedate25" name="alarmedate25"></td>
                             <td><input type="text" class="form-control datepickerAll" id="alarmedate26" name="alarmedate26"></td>
                             <td><input type="text" class="form-control datepickerAll" id="alarmedate27" name="alarmedate27"></td>
@@ -264,7 +264,7 @@
     <fieldset class="well" id="field">
         <center><font><h4>MANIPULATIONS</h4></font></center><br/>
 
-            <table class="table table-bordered table-hover" style="color: white;">
+            <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>

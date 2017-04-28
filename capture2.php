@@ -4,7 +4,7 @@
 	<title> Une deuxième capture</title>
 </head>
 <body>		
-			   <table class="table table-bordered table-hover  table-responsive" style="color: white;">
+			   <table class="table table-bordered  table-responsive" style="color: white;">
                     <thead>
                         <tr>
                             <th style="text-align: center;" colspan="12">Schémas basals date 2</th>
