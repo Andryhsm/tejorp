@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
         <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datepicker3.min.css">
-        <!--<link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datetimepicker.min.css">-->
+        <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datetimepicker.min.css">
         <link rel="stylesheet" type="text/css" href="btn.css">
 
         <style>
@@ -41,7 +41,7 @@
                 -webkit-transform: rotate(5deg) scale(1.10);
                 -o-transform: rotate(5deg) scale(1.10);
                 -ms-transform: rotate(5deg) scale(1.10);
-                transform: rotate(5deg) scale(1.10);
+                    transform: rotate(5deg) scale(1.10);
                 opacity: 1;
             }
             body
@@ -57,14 +57,9 @@
             {
                 background: rgba(10, 10, 10, 0.51);
             }
-<<<<<<< HEAD
+
             h4{
                 color: yellowgreen;
-=======
-            h4
-            {
-                color: #1995dc;
->>>>>>> 04e522eb64626f3ad3bf25b5dff9fc14a08d0f56
                 font-size: 1.8em;
             }
         </style>
