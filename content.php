@@ -177,7 +177,9 @@
                     <td><?php echo $_POST["posologie4"] ;?></td>
                 </tr>
             </tbody>
-        </table><br/><br/><br/>
+        </table><br/>
+            <img src="img/image4.png"  style="width: 700px;"/>
+        <br/><br/>
     </div>
     <div class="dec">
         <table class="table table-hover" style="margin-right: 20px;">
@@ -387,7 +389,10 @@
                     <td><?php echo $_POST["ValGlyAutre7"] ; ?></td>
                 </tr>
             </tbody>
-        </table><br/><br/><br/>
+        </table><br/>
+                <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
+               <img src="img/image3.png" style="width: 700px;" />
+        <br/><br/>
     </div>
     <div class="dec">
         <strong>Synthèse/Commentaire : </strong> <?php echo $_POST["synthesecommentaire"] ; ?> <br/>

@@ -100,81 +100,26 @@
  	<script src="assets/js/Chart.min.js"></script>  
  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
  	<script type="text/javascript">
- 		 					var Debit21 = 0,
-                            Debit22 = 0,
-                            Debit23 = 0,
-                            Debit24 = 0,
-                            Debit25 = 0,
-                            Debit26 = 0,
-                            Debit27 = 0,
-                            Debit28 = 0;
-        			var Debit29 = 0, Debit210 = 0, Debit211 = 0, Debit212 = 0, Debit213 = 0, Debit214 = 0, Debit215 = 0, Debit216 = 0;
+ 		 					var Debit21 = <?php echo $_POST["Debit21"] ?>,
+                            Debit22 = <?php echo $_POST["Debit22"] ?>,
+                            Debit23 = <?php echo $_POST["Debit23"] ?>,
+                            Debit24 = <?php echo $_POST["Debit24"] ?>,
+                            Debit25 = <?php echo $_POST["Debit25"] ?>,
+                            Debit26 = <?php echo $_POST["Debit26"] ?>,
+                            Debit27 = <?php echo $_POST["Debit27"] ?>,
+                            Debit28 = <?php echo $_POST["Debit28"] ?>;
+        			var Debit29 = <?php echo $_POST["Debit29"] ?>,
+                    Debit210 = <?php echo $_POST["Debit210"] ?>,
+                    Debit211 = <?php echo $_POST["Debit211"] ?>,
+                    Debit212 = <?php echo $_POST["Debit212"] ?>, 
+                    Debit213 = <?php echo $_POST["Debit213"] ?>,
+                    Debit214 = <?php echo $_POST["Debit214"] ?>,
+                    Debit215 = <?php echo $_POST["Debit215"] ?>, 
+                    Debit216 = <?php echo $_POST["Debit216"] ?>;
  						
 
- 						$("#Debit21").change(function (event) {
-                            Debit21 = $('#Debit21').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit22").change(function (event) {
-                            Debit22 = $('#Debit22').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit23").change(function (event) {
-                            Debit23 = $('#Debit23').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit24").change(function (event) {
-                            Debit24 = $('#Debit24').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit25").change(function (event) {
-                            Debit25 = $('#Debit25').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit26").change(function (event) {
-                            Debit26 = $('#Debit26').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit27").change(function (event) {
-                            Debit27 = $('#Debit27').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit28").change(function (event) {
-                            Debit28 = $('#Debit28').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit29").change(function (event) {
-                            Debit29 = $('#Debit29').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit210").change(function (event) {
-                            Debit210 = $('#Debit210').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit211").change(function (event) {
-                            Debit211 = $('#Debit211').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit212").change(function (event) {
-                            Debit212 = $('#Debit212').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit213").change(function (event) {
-                            Debit213 = $('#Debit213').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit214").change(function (event) {
-                            Debit214 = $('#Debit214').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit215").change(function (event) {
-                            Debit215 = $('#Debit215').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit216").change(function (event) {
-                            Debit216 = $('#Debit216').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
+                    Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
+                       
 
 
 

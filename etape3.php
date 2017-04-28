@@ -328,3 +328,27 @@
         </div> -->
     </fieldset><br/><br/>
 </div>
+
+<script type="text/javascript">
+    
+                function capturer2(){
+                    alert("On appelle aussi ! ");
+                    var capture4 = {};
+                    var target4 = $('#bar');
+                    html2canvas(target4, {
+                        onrendered: function(canvas) {
+                            capture4.img = canvas.toDataURL( "image/png" );
+                            capture4.data = { 'image' : capture4.img };
+                            $.ajax({
+                            url: "pdf/ajax4.php",
+                            data: capture4.data,
+                            type: 'post',
+                            success: function( result ) {
+                                    alert('image bien generer');
+                            }
+                            });
+                        }
+                    });
+                }
+
+</script>

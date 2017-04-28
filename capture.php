@@ -154,10 +154,42 @@
 
 <script type="text/javascript">
 
-                    var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
-                    var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
-                    var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
-                    var imc1 = 0, imc2 = 0, imc3 = 0, imc4 = 0, imc5 = 0, imc6 = 0, imc7 = 0, imc8 = 0, imc9 = 0;
+                    var date1 = <?php echo $_POST["date1"];?>,
+                     date2 = <?php echo $_POST["date2"];?>,
+                      date3 = <?php echo $_POST["date3"];?>,
+                       date4 = <?php echo $_POST["date4"];?>,
+                        date5 = <?php echo $_POST["date5"];?>,
+                         date6 = <?php echo $_POST["date6"];?>,
+                          date7 = <?php echo $_POST["date7"];?>,
+                           date8 = <?php echo $_POST["date8"];?>,
+                            date9 = <?php echo $_POST["date9"];?>;
+                    var taille1 =<?php echo $_POST["taille1"];?>,
+                     taille2 =<?php echo $_POST["taille2"];?>,
+                      taille3 =<?php echo $_POST["taille3"];?>,
+                       taille4 =<?php echo $_POST["taille4"];?>,
+                        taille5 =<?php echo $_POST["taille5"];?>,
+                         taille6 =<?php echo $_POST["taille6"];?>,
+                          taille7 =<?php echo $_POST["taille7"];?>,
+                           taille8 =<?php echo $_POST["taille8"];?>,
+                            taille9 =<?php echo $_POST["taille9"];?>;
+                    var poids1 =<?php echo $_POST["poids1"];?>,
+                     poids2 =<?php echo $_POST["poids2"];?>,
+                      poids3 =<?php echo $_POST["poids3"];?>,
+                       poids4 =<?php echo $_POST["poids4"];?>,
+                        poids5 =<?php echo $_POST["poids5"];?>,
+                         poids6 =<?php echo $_POST["poids6"];?>,
+                          poids7 =<?php echo $_POST["poids7"];?>,
+                           poids8 =<?php echo $_POST["poids8"];?>,
+                            poids9 =<?php echo $_POST["poids9"];?>;
+                    var imc1 = <?php echo $_POST["imc1"] ;?>,
+                     imc2 = <?php echo $_POST["imc2"]; ?>,
+                      imc3 = <?php echo $_POST["imc3"]; ?>,
+                       imc4 = <?php echo $_POST["imc4"]; ?>,
+                        imc5 = <?php echo $_POST["imc5"]; ?>,
+                         imc6 = <?php echo $_POST["imc6"] ;?>,
+                          imc7 = <?php echo $_POST["imc7"]; ?>,
+                           imc8 = <?php echo $_POST["imc8"]; ?>,
+                            imc9 = <?php echo $_POST["imc9"]; ?>;
                     jQuery(document).ready(function ($) {
                         $("#date1").change(function (event) {
                             date1 = $('#date1').val();

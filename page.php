@@ -59,7 +59,8 @@
                 background: rgba(10, 10, 10, 0.51);
             }
             h4{
-                color: white;
+                color: yellowgreen;
+                font-size: 1.8em;
             }
         </style>
 
@@ -309,6 +310,7 @@
                         $("#Debit16").change(function (event) {
                             Debit16 = $('#Debit16').val();
                             Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
+                            setTimeout("capture1()", 800);
                         });
                         // recup data table01
                         // recup data table02
@@ -1702,6 +1704,7 @@
             <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="4" onClick="enHaut();">Etape 4</button>
             <button class="btn btn-info col-md-2 col-lg-2 col-sm-12 col-xs-12" id="5" onClick="enHaut();">Etape 5</button>
             <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
+          
         </div>
 
         <button class="btn btn-primary btn-lg hidden" id="triggerwarning" data-toggle="modal" data-target="#loginerror"></button>
@@ -1726,13 +1729,162 @@
         <script src="assets/js/Chart.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
         <script type="text/javascript">
+
                 $('#enregistrer').click(function () {
                     $('#save').trigger('click');
                 });
+
+                $("#3").click(function(event) {
+                    tester();
+                });
+
+                function capture1(){
+                    
+                            var capture = {};
+                                var target = $('#bardate1');
+                                html2canvas(target, {
+                                    onrendered: function(canvas) {
+                                        capture.img = canvas.toDataURL( "image/png" );
+                                        capture.data = { 'image' : capture.img };
+                                        $.ajax({
+                                        url: "pdf/ajax.php",
+                                        data: capture.data,
+                                        type: 'post',
+                                        success: function( result ) {
+                                    //            alert('image bien generer');
+                                                $('html,body').animate({scrollTop: 2200}, 'fast');
+                                        }
+                                        });
+                                    }
+                        });
+                }
+
+                $("#test").click(function(event) {
+                    var dataList = {
+                            Debit1: $("#Debit1").val(),
+                            Debit2 : $("#Debit2").val(),
+                            Debit3: $("#Debit3").val(),
+                            Debit4: $("#Debit4").val(),
+                            Debit5: $("#Debit5").val(),
+                            Debit6: $("#Debit6").val(),
+                            Debit7 : $("#Debit7").val(),
+                            Debit8 : $("#Debit8").val(),
+                            Debit9 : $("#Debit9").val(),
+                            Debit10 : $("#Debit10").val(),
+                            Debit11 : $("#Debit11").val(),
+                            Debit12 : $("#Debit12").val(),
+                            Debit13 : $("#Debit13").val(),
+                            Debit14 : $("#Debit14").val(),
+                            Debit15 : $("#Debit15").val(),
+                            Debit16 : $("#Debit16").val()
+                    };
+
+                    $.ajax({
+                        url: 'capture1.php',
+                        type: 'GET',
+                        data: dataList,
+                        success: function(data){
+                            alert(data);
+                        },
+                        error: function(){
+                            alert("Une erreur est survenue ! ");
+                        }
+                    });
+                });
+
+
+
+
                 $('#imprimer').click(function () {
                     $("#form-filter").attr('action', 'content.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
+
+                  
+                    $.post('capture2', {Debit21: $("#Debit21").val(),
+                            Debit22: $("#Debit22").val(),
+                            Debit23: $("#Debit23").val(),
+                            Debit24: $("#Debit24").val(),
+                            Debit25: $("#Debit25").val(),
+                            Debit26: $("#Debit26").val(),
+                            Debit27: $("#Debit27").val(),
+                            Debit28: $("#Debit28").val(),
+                            Debit29: $("#Debit29").val(),
+                            Debit210: $("#Debit210").val(),
+                            Debit211: $("#Debit211").val(),
+                            Debit212: $("#Debit212").val(),
+                            Debit213: $("#Debit213").val(),
+                            Debit214: $("#Debit214").val(),
+                            Debit215: $("#Debit215").val(),
+                            Debit216: $("#Debit216").val()
+                        }, function(data, textStatus, xhr) {
+                       //alert(data);
+                    });
+
+                    $.post('capture3.php', {
+                        ValDatesHemGlyc1: $("#ValDatesHemGlyc1").val(),
+                        ValDatesHemGlyc2: $("#ValDatesHemGlyc2").val(),
+                        ValDatesHemGlyc3: $("#ValDatesHemGlyc3").val(),
+                        ValDatesHemGlyc4: $("#ValDatesHemGlyc4").val(),
+                        ValDatesHemGlyc5: $("#ValDatesHemGlyc5").val(),
+                        ValDatesHemGlyc6: $("#ValDatesHemGlyc6").val(),
+                        ValDatesHemGlyc7: $("#ValDatesHemGlyc7").val(),
+                        ValDatesHemGlyc8: $("#ValDatesHemGlyc8").val(),
+                        ValDatesHemGlyc9: $("#ValDatesHemGlyc9").val(),
+                        ValHbA1cHemGlyc1: $("#ValHbA1cHemGlyc1").val(),
+                        ValHbA1cHemGlyc2: $("#ValHbA1cHemGlyc2").val(),
+                        ValHbA1cHemGlyc3: $("#ValHbA1cHemGlyc3").val(),
+                        ValHbA1cHemGlyc4: $("#ValHbA1cHemGlyc4").val(),
+                        ValHbA1cHemGlyc5: $("#ValHbA1cHemGlyc5").val(),
+                        ValHbA1cHemGlyc6: $("#ValHbA1cHemGlyc6").val(),
+                        ValHbA1cHemGlyc7: $("#ValHbA1cHemGlyc7").val(),
+                        ValHbA1cHemGlyc8: $("#ValHbA1cHemGlyc8").val(),
+                        ValHbA1cHemGlyc9: $("#ValHbA1cHemGlyc9").val()
+                    }, function(data, textStatus, xhr) {
+                       // alert(data);
+                    });
+
+                    $.post('capture.php', {
+                        date1: $("#date1").val(),
+                        date2: $("#date2").val(),
+                        date3: $("#date3").val(),
+                        date4: $("#date4").val(),
+                        date5: $("#date5").val(),
+                        date6: $("#date6").val(),
+                        date7: $("#date7").val(),
+                        date8: $("#date8").val(),
+                        date8: $("#date8").val(),
+                        taille1: $("#taille1").val(),
+                        taille2: $("#taille2").val(),
+                        taille3: $("#taille3").val(),
+                        taille4: $("#taille4").val(),
+                        taille5: $("#taille5").val(),
+                        taille6: $("#taille6").val(),
+                        taille7: $("#taille7").val(),
+                        taille8: $("#taille8").val(),
+                        taille9: $("#taille9").val(),
+                        poids1: $("#poids1").val(),
+                        poids2: $("#poids2").val(),
+                        poids3: $("#poids3").val(),
+                        poids4: $("#poids4").val(),
+                        poids5: $("#poids5").val(),
+                        poids6: $("#poids6").val(),
+                        poids7: $("#poids7").val(),
+                        poids8: $("#poids8").val(),
+                        poids9: $("#poids9").val(),
+                        imc1: $("#imc1").val(),
+                        imc2: $("#imc2").val(),
+                        imc3: $("#imc3").val(),
+                        imc4: $("#imc4").val(),
+                        imc5: $("#imc5").val(),
+                        imc6: $("#imc6").val(),
+                        imc7: $("#imc7").val(),
+                        imc8: $("#imc8").val(),
+                        imc9: $("#imc9").val()
+                    }, function(data, textStatus, xhr) {
+                        
+                    });
+
                 });
                 $('#save').click(function (e) {
                     e.preventDefault();
@@ -1773,72 +1925,7 @@
                     });
 
 
-                    //Pour les photo du pdf
-                    var capture = {};
-                    var target = $('#bardate1');
-                    html2canvas(target, {
-                        onrendered: function(canvas) {
-                            capture.img = canvas.toDataURL( "image/png" );
-                            capture.data = { 'image' : capture.img };
-                            $.ajax({
-                            url: "pdf/ajax.php",
-                            data: capture.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-                    var capture2 = {};
-                    var target2 = $('#bardate2');
-                    html2canvas(target2, {
-                        onrendered: function(canvas) {
-                            capture2.img = canvas.toDataURL( "image/png" );
-                            capture2.data = { 'image' : capture2.img };
-                            $.ajax({
-                            url: "pdf/ajax2.php",
-                            data: capture2.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-                    var capture3 = {};
-                    var target3 = $('#barhg');
-                    html2canvas(target3, {
-                        onrendered: function(canvas) {
-                            capture3.img = canvas.toDataURL( "image/png" );
-                            capture3.data = { 'image' : capture3.img };
-                            $.ajax({
-                            url: "pdf/ajax3.php",
-                            data: capture3.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-
-                    var capture4 = {};
-                    var target4 = $('#bar');
-                    html2canvas(target4, {
-                        onrendered: function(canvas) {
-                            capture4.img = canvas.toDataURL( "image/png" );
-                            capture4.data = { 'image' : capture4.img };
-                            $.ajax({
-                            url: "pdf/ajax4.php",
-                            data: capture4.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
+                  
 
                 });
 
@@ -1846,6 +1933,8 @@
                 {
                     $('html,body').animate({scrollTop: 0}, 'fast');
                 }
+
+
         </script>
 
     </body>
