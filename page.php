@@ -6,13 +6,12 @@
     <head>
         <meta charset="UTF-8">
         <title>installation</title>
-
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
         <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datepicker3.min.css">
-        <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datetimepicker.min.css">
-
+        <!--<link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datetimepicker.min.css">-->
+        <link rel="stylesheet" type="text/css" href="btn.css">
 
         <style>
             #rot  img{
@@ -58,8 +57,14 @@
             {
                 background: rgba(10, 10, 10, 0.51);
             }
+<<<<<<< HEAD
             h4{
                 color: yellowgreen;
+=======
+            h4
+            {
+                color: #1995dc;
+>>>>>>> 04e522eb64626f3ad3bf25b5dff9fc14a08d0f56
                 font-size: 1.8em;
             }
         </style>
@@ -1697,15 +1702,72 @@
             </div>
             <button type="submit" class="btn btn-primary hidden" id="save">Enregistrement</button>
         </form>
-        <div class="container">
+
+
+        <div class="container" id = "bouton">
+            <!--
             <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="1" onClick="enHaut();">Etape 1</button>
             <button class="btn btn-primary col-md-2 col-lg-2 col-sm-12 col-xs-12" id="2" onClick="enHaut();">Etape 2</button>
             <button class="btn btn-success col-md-2 col-lg-2 col-sm-12 col-xs-12" id="3" onClick="enHaut();">Etape 3</button>
             <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="4" onClick="enHaut();">Etape 4</button>
             <button class="btn btn-info col-md-2 col-lg-2 col-sm-12 col-xs-12" id="5" onClick="enHaut();">Etape 5</button>
             <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
+<<<<<<< HEAD
           
+=======
+            -->
+            <ul>
+                <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
+                    <span class="round">
+                        Renseignements<br>
+                        Choix du matériel
+                    </span>
+                </a></li>
+                <li><a class="round red" onClick="enHaut();" id = "2">Etape 2
+                    <span class="round">
+                        Données médicale </br>
+                        Insulinothérapie </br>
+                    </span>
+                </a></li>
+                <li><a class="round vert" onClick="enHaut();" id = "3">Etape 3
+                    <span class="round">
+                        Habitude de vie <br>
+                        Habitude alimentaire
+                    </span>
+                </a></li>
+                <li><a class="round orange" onClick="enHaut();" id = "4">Etape 4
+                    <span class="round">
+                        Manipulation de la pompe <br>
+                        Alarme
+                    </span>
+                </a></li>
+                <li><a class="round violet" onClick="enHaut();" id = "5">Etape 5
+                    <span class="round">
+                        Pose du cathéter <br>
+                        Manipulation <br>
+                        ASG
+                    </span>
+                </a></li>
+                <li><a class="round yellow" onClick="enHaut();" id = "6">Etape 6
+                    <span class="round">
+                        Enregistrer<br>
+                        Partager<br>
+                        Imprimer
+                    </span>
+                </a></li>
+            </ul>
+>>>>>>> 04e522eb64626f3ad3bf25b5dff9fc14a08d0f56
         </div>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.round').click(function(){
+                    $('.round').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
+        </script>
+
 
         <button class="btn btn-primary btn-lg hidden" id="triggerwarning" data-toggle="modal" data-target="#loginerror"></button>
         <div class="modal" id="loginerror">
@@ -1727,7 +1789,7 @@
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
         <script src="assets/js/Chart.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
         <script type="text/javascript">
 
                 $('#enregistrer').click(function () {
@@ -1923,10 +1985,13 @@
                             }, 4000);
                         }
                     });
+<<<<<<< HEAD
 
 
                   
 
+=======
+>>>>>>> 04e522eb64626f3ad3bf25b5dff9fc14a08d0f56
                 });
 
                 function enHaut()
