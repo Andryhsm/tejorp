@@ -62,6 +62,15 @@
                 color: yellowgreen;
                 font-size: 1.8em;
             }
+
+            .etapesIndication
+            {
+                position: fixed;
+                top: 80px;
+                left: 10px;
+                width: 200px;
+                height: auto;
+            }
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
@@ -178,6 +187,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
+                    $('#titreEtape').html("<div class='list-group-item active'>Etape 1</div><div class='list-group-item'>Renseignements</div><div class='list-group-item'>Choix du matériel</div>");
                 });
                 $("#2").click(function () {
                     $("#etape1").hide();
@@ -186,6 +196,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
+                    $('#titreEtape').html("<div class='list-group-item active'>Etape 2</div><div class='list-group-item'>Données médicale</div><div class='list-group-item'>ASG</div><div class='list-group-item'>Insulinothérapie</div>");
                     var Horaire1 = "",
                             Horaire2 = "",
                             Horaire3 = "",
@@ -647,6 +658,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
+                    $('#titreEtape').html("<div class='list-group-item active'>Etape 3</div><div class='list-group-item'>Habitude de vie</div><div class='list-group-item'>Insulinothérapie Fonctionnelle</div><div class='list-group-item'>Habitude alimentaire</div>");
                     var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
                     var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
                     var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
@@ -846,6 +858,7 @@
                     $("#etape4").show();
                     $("#etape5").hide();
                     $("#etape6").hide();
+                    $('#titreEtape').html("<div class='list-group-item active'>Etape 4</div><div class='list-group-item'>Manipulation de la pompe</div><div class='list-group-item'>Alarmes et précautions</div><div class='list-group-item'>Manipulations</div>");
 
                     var pmpdate1 = "",
                             pmpdate2 = "",
@@ -1262,6 +1275,7 @@
                     $("#etape4").hide();
                     $("#etape5").show();
                     $("#etape6").hide();
+                    $('#titreEtape').html("<div class='list-group-item active'>Etape 5</div><div class='list-group-item'>Pose du cathéter</div><div class='list-group-item'>Connaissance</div><div class='list-group-item'>ASG</div>");
 
                     var cathdate1 = "",
                             cathdate2 = "",
@@ -1657,6 +1671,11 @@
                 </div>
             </div>
         </nav>
+
+        <div class="etapesIndication">
+            <div class="list-group" id="titreEtape">
+            </div>
+        </div>
 
         <form method="POST" action="" id="form-filter" class="form-horizontal" enctype="multipart/form-data">
 
