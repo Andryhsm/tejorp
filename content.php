@@ -1111,4 +1111,11 @@
         echo $e;
         exit;
     }
+
+    //Suppression des fichiers
+    
+    unlink("img/image".$_POST["id"]."bardate1.png");
+    unlink("img/image".$_POST["id"]."bardate2.png");
+    unlink("img/image".$_POST["id"]."barhg.png");
+    unlink("img/image".$_POST["id"]."bar.png");
 ?>
