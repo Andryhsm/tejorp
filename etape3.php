@@ -72,7 +72,7 @@
 
 
     <fieldset class="well" id="field">
-        <center><font><h4>INSULUNOTHERAPIE FONCTIONNELLE</h4></font>
+        <center><font><h4>INSULINOTHERAPIE FONCTIONNELLE</h4></font>
             <div class="form-group">
                 <div class="table-responsive">
                     <table class="table table-bordered" style="color: white;">

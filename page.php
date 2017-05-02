@@ -1678,7 +1678,7 @@
                 <div class="item"  id="etape5" style="display: none;">
                     <?php require './etape5.php'; ?>
                 </div>
-                <?php echo '<input type="text" class="hidden" name="id" value="'.$_SESSION["id"].'">';?>
+                <?php echo '<input type="text" class="hidden" name="id" value="'.$_SESSION["login"].'">';?>
                 <div class="item" id="etape6" style="display: none;">
                     <div class="container"  style="margin-top: 230px;">
                         <div class="col-lg-3 col-md-offset-1">
@@ -1762,7 +1762,7 @@
                     </span>
                 </a></li>
             </ul>
-            
+
         </div>
 
         <script type="text/javascript">
@@ -1772,6 +1772,11 @@
                     $(this).addClass('active');
                 });
             });
+
+            function enHaut()
+                {
+                    $('html,body').animate({scrollTop: 0}, 'slow');
+                }
         </script>
 
 
@@ -1879,10 +1884,6 @@
 
                 });
 
-                function enHaut()
-                {
-                    $('html,body').animate({scrollTop: 0}, 'slow');
-                }
 
 
         </script>
