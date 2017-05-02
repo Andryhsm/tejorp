@@ -1707,9 +1707,6 @@
             <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="4" onClick="enHaut();">Etape 4</button>
             <button class="btn btn-info col-md-2 col-lg-2 col-sm-12 col-xs-12" id="5" onClick="enHaut();">Etape 5</button>
             <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
-<<<<<<< HEAD
-          
-=======
             -->
             <ul>
                 <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
@@ -1751,7 +1748,7 @@
                     </span>
                 </a></li>
             </ul>
->>>>>>> 04e522eb64626f3ad3bf25b5dff9fc14a08d0f56
+
         </div>
 
         <script type="text/javascript">
@@ -1980,18 +1977,12 @@
                             }, 4000);
                         }
                     });
-<<<<<<< HEAD
 
-
-                  
-
-=======
->>>>>>> 04e522eb64626f3ad3bf25b5dff9fc14a08d0f56
                 });
 
                 function enHaut()
                 {
-                    $('html,body').animate({scrollTop: 0}, 'fast');
+                    $('html,body').animate({scrollTop: 0}, 'slow');
                 }
 
 
