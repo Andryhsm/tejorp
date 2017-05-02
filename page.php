@@ -1824,7 +1824,7 @@
                                                if(target === "bardate1")
                                                 	$('html,body').scrollTop(2400);	
                                                if(target === "bardate2")
-                                               		$('html,body').scrollTop(3300);
+                                               		$('html,body').scrollTop(3400);
                                                if(target === "barhg")
                                                		$('html,body').scrollTop(5000);
                                                if(target === "bar")
