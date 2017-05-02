@@ -310,7 +310,9 @@
                         $("#Debit16").change(function (event) {
                             Debit16 = $('#Debit16').val();
                             Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                            setTimeout("capture1()", 800);
+                            setTimeout(function(){
+                            	capture('bardate1');
+                            }, 800);
                         });
                         // recup data table01
                         // recup data table02
@@ -377,6 +379,9 @@
                         $("#Debit216").change(function (event) {
                             Debit216 = $('#Debit216').val();
                             Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
+                            setTimeout(function(){
+                            	capture('bardate2');
+                            }, 800);
                         });
                         // recup data table02
                         // recup data table Dates
@@ -453,6 +458,10 @@
                         $("#ValHbA1cHemGlyc9").change(function (event) {
                             ValHbA1cHemGlyc9 = $('#ValHbA1cHemGlyc9').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            setTimeout(function(){
+                            	capture('barhg');
+                            }, 800);
+
                         });
                         // recup data table HbA1c
                         //init graphe table date01
@@ -759,6 +768,10 @@
                             imc9 = poids9 / taille;
                             $("#imc9").val(imc9);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            setTimeout(function () {
+                                    capture("bar");
+                            }, 800);
+
                         });
                         var barData = {
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
@@ -1665,6 +1678,7 @@
                 <div class="item"  id="etape5" style="display: none;">
                     <?php require './etape5.php'; ?>
                 </div>
+                <?php echo '<input type="text" class="hidden" name="id" value="'.$_SESSION["id"].'">';?>
                 <div class="item" id="etape6" style="display: none;">
                     <div class="container"  style="margin-top: 230px;">
                         <div class="col-lg-3 col-md-offset-1">
@@ -1748,7 +1762,7 @@
                     </span>
                 </a></li>
             </ul>
-
+            
         </div>
 
         <script type="text/javascript">
@@ -1781,6 +1795,7 @@
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
         <script src="assets/js/Chart.min.js"></script>
+           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
         <script type="text/javascript">
 
@@ -1788,158 +1803,42 @@
                     $('#save').trigger('click');
                 });
 
-                $("#3").click(function(event) {
-                    tester();
-                });
-
-                function capture1(){
-                    
+                function capture(target){
                             var capture = {};
-                                var target = $('#bardate1');
-                                html2canvas(target, {
+                                var trg = $('#'+target);
+                                <?php echo " var id = '".$_SESSION["id"]."' + target;";?>
+                                html2canvas(trg, {
                                     onrendered: function(canvas) {
                                         capture.img = canvas.toDataURL( "image/png" );
-                                        capture.data = { 'image' : capture.img };
+                                        capture.data = { 'image' : capture.img, 'id' : id};
                                         $.ajax({
                                         url: "pdf/ajax.php",
                                         data: capture.data,
                                         type: 'post',
                                         success: function( result ) {
-                                    //            alert('image bien generer');
-                                                $('html,body').animate({scrollTop: 2200}, 'fast');
+                                               if(target === "bardate1")
+                                                	$('html,body').scrollTop(2400);	
+                                               if(target === "bardate2")
+                                               		$('html,body').scrollTop(3300);
+                                               if(target === "barhg")
+                                               		$('html,body').scrollTop(5000);
+                                               if(target === "bar")
+                                               		$('html,body').scrollTop(2000);
+
                                         }
                                         });
                                     }
                         });
                 }
 
-                $("#test").click(function(event) {
-                    var dataList = {
-                            Debit1: $("#Debit1").val(),
-                            Debit2 : $("#Debit2").val(),
-                            Debit3: $("#Debit3").val(),
-                            Debit4: $("#Debit4").val(),
-                            Debit5: $("#Debit5").val(),
-                            Debit6: $("#Debit6").val(),
-                            Debit7 : $("#Debit7").val(),
-                            Debit8 : $("#Debit8").val(),
-                            Debit9 : $("#Debit9").val(),
-                            Debit10 : $("#Debit10").val(),
-                            Debit11 : $("#Debit11").val(),
-                            Debit12 : $("#Debit12").val(),
-                            Debit13 : $("#Debit13").val(),
-                            Debit14 : $("#Debit14").val(),
-                            Debit15 : $("#Debit15").val(),
-                            Debit16 : $("#Debit16").val()
-                    };
-
-                    $.ajax({
-                        url: 'capture1.php',
-                        type: 'GET',
-                        data: dataList,
-                        success: function(data){
-                            alert(data);
-                        },
-                        error: function(){
-                            alert("Une erreur est survenue ! ");
-                        }
-                    });
-                });
-
-
-
 
                 $('#imprimer').click(function () {
                     $("#form-filter").attr('action', 'content.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
-
-                  
-                    $.post('capture2', {Debit21: $("#Debit21").val(),
-                            Debit22: $("#Debit22").val(),
-                            Debit23: $("#Debit23").val(),
-                            Debit24: $("#Debit24").val(),
-                            Debit25: $("#Debit25").val(),
-                            Debit26: $("#Debit26").val(),
-                            Debit27: $("#Debit27").val(),
-                            Debit28: $("#Debit28").val(),
-                            Debit29: $("#Debit29").val(),
-                            Debit210: $("#Debit210").val(),
-                            Debit211: $("#Debit211").val(),
-                            Debit212: $("#Debit212").val(),
-                            Debit213: $("#Debit213").val(),
-                            Debit214: $("#Debit214").val(),
-                            Debit215: $("#Debit215").val(),
-                            Debit216: $("#Debit216").val()
-                        }, function(data, textStatus, xhr) {
-                       //alert(data);
-                    });
-
-                    $.post('capture3.php', {
-                        ValDatesHemGlyc1: $("#ValDatesHemGlyc1").val(),
-                        ValDatesHemGlyc2: $("#ValDatesHemGlyc2").val(),
-                        ValDatesHemGlyc3: $("#ValDatesHemGlyc3").val(),
-                        ValDatesHemGlyc4: $("#ValDatesHemGlyc4").val(),
-                        ValDatesHemGlyc5: $("#ValDatesHemGlyc5").val(),
-                        ValDatesHemGlyc6: $("#ValDatesHemGlyc6").val(),
-                        ValDatesHemGlyc7: $("#ValDatesHemGlyc7").val(),
-                        ValDatesHemGlyc8: $("#ValDatesHemGlyc8").val(),
-                        ValDatesHemGlyc9: $("#ValDatesHemGlyc9").val(),
-                        ValHbA1cHemGlyc1: $("#ValHbA1cHemGlyc1").val(),
-                        ValHbA1cHemGlyc2: $("#ValHbA1cHemGlyc2").val(),
-                        ValHbA1cHemGlyc3: $("#ValHbA1cHemGlyc3").val(),
-                        ValHbA1cHemGlyc4: $("#ValHbA1cHemGlyc4").val(),
-                        ValHbA1cHemGlyc5: $("#ValHbA1cHemGlyc5").val(),
-                        ValHbA1cHemGlyc6: $("#ValHbA1cHemGlyc6").val(),
-                        ValHbA1cHemGlyc7: $("#ValHbA1cHemGlyc7").val(),
-                        ValHbA1cHemGlyc8: $("#ValHbA1cHemGlyc8").val(),
-                        ValHbA1cHemGlyc9: $("#ValHbA1cHemGlyc9").val()
-                    }, function(data, textStatus, xhr) {
-                       // alert(data);
-                    });
-
-                    $.post('capture.php', {
-                        date1: $("#date1").val(),
-                        date2: $("#date2").val(),
-                        date3: $("#date3").val(),
-                        date4: $("#date4").val(),
-                        date5: $("#date5").val(),
-                        date6: $("#date6").val(),
-                        date7: $("#date7").val(),
-                        date8: $("#date8").val(),
-                        date8: $("#date8").val(),
-                        taille1: $("#taille1").val(),
-                        taille2: $("#taille2").val(),
-                        taille3: $("#taille3").val(),
-                        taille4: $("#taille4").val(),
-                        taille5: $("#taille5").val(),
-                        taille6: $("#taille6").val(),
-                        taille7: $("#taille7").val(),
-                        taille8: $("#taille8").val(),
-                        taille9: $("#taille9").val(),
-                        poids1: $("#poids1").val(),
-                        poids2: $("#poids2").val(),
-                        poids3: $("#poids3").val(),
-                        poids4: $("#poids4").val(),
-                        poids5: $("#poids5").val(),
-                        poids6: $("#poids6").val(),
-                        poids7: $("#poids7").val(),
-                        poids8: $("#poids8").val(),
-                        poids9: $("#poids9").val(),
-                        imc1: $("#imc1").val(),
-                        imc2: $("#imc2").val(),
-                        imc3: $("#imc3").val(),
-                        imc4: $("#imc4").val(),
-                        imc5: $("#imc5").val(),
-                        imc6: $("#imc6").val(),
-                        imc7: $("#imc7").val(),
-                        imc8: $("#imc8").val(),
-                        imc9: $("#imc9").val()
-                    }, function(data, textStatus, xhr) {
-                        
-                    });
-
                 });
+
+                
                 $('#save').click(function (e) {
                     e.preventDefault();
                     $("#form-filter").attr('action', 'traitement.php');
