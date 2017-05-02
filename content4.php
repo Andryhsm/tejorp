@@ -12,7 +12,7 @@
                 border: 1px solid black;
             }
         </style>              
-              <font><h4>MANIPULATION DE LA POMPE</h4></font><br/>
+              <font><h4>MANIPULATION DE LA Pompe</h4></font><br/>
 
             <table>
                     <thead>
@@ -198,7 +198,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Entretien de la pompe</td>
+                            <td>Entretien de la Pompe</td>
                             <td></td>
                             <td></td>
                             <td></td>

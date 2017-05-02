@@ -741,59 +741,6 @@
 		        
 <script type="text/javascript">
                  
-                function capturer(){
-                      //Pour les photo du pdf
-                    var capture = {};
-                    var target = $('#bardate1');
-                    html2canvas(target, {
-                        onrendered: function(canvas) {
-                            capture.img = canvas.toDataURL( "image/png" );
-                            capture.data = { 'image' : capture.img };
-                            $.ajax({
-                            url: "pdf/ajax.php",
-                            data: capture.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-                    var capture2 = {};
-                    var target2 = $('#bardate2');
-                    html2canvas(target2, {
-                        onrendered: function(canvas) {
-                            capture2.img = canvas.toDataURL( "image/png" );
-                            capture2.data = { 'image' : capture2.img };
-                            $.ajax({
-                            url: "pdf/ajax2.php",
-                            data: capture2.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-                    var capture3 = {};
-                    var target3 = $('#barhg');
-                    html2canvas(target3, {
-                        onrendered: function(canvas) {
-                            capture3.img = canvas.toDataURL( "image/png" );
-                            capture3.data = { 'image' : capture3.img };
-                            $.ajax({
-                            url: "pdf/ajax3.php",
-                            data: capture3.data,
-                            type: 'post',
-                            success: function( result ) {
-                                    alert('image bien generer');
-                            }
-                            });
-                        }
-                    });
-
-                }
-
     $("#taille").blur(function() {
 
         var poids = ($('#poidsactuel').val()) ? $('#poidsactuel').val() : 0;

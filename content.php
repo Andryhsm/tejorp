@@ -19,7 +19,7 @@
 
     <div id='content' >
          <div><img style="position: relative; margin-left: 600px; width: 120px;" src="img/basitide.png"></div>
-        <div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de pompe à insuline</h3></div><br/><br/><br/></div>
+        <div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de Pompe à insuline</h3></div><br/><br/><br/></div>
         <div class="dec">
             <h4><u>RENSEIGNEMENTS BASTIDE LE CONFORT MEDICAL</u></h4>
             <p>
@@ -58,7 +58,7 @@
     <div class="dec">
         <h4><u>CHOIX DU MATERIEL</u></h4>
         <p>   
-            <strong>Pompe :</strong> <?php echo $_POST["pompe"] ; ?> <br/>
+            <strong>Pompe :</strong> <?php echo $_POST["Pompe"] ; ?> <br/>
             <strong>Date d’installation :</strong> <?php echo $_POST["dateinstallation"] ; ?> <br/>
             <strong>Type de cathéter :</strong> <?php echo $_POST["catheter"] ; ?><br/>
             <strong>Modèle :</strong> <?php echo $_POST["modele"] ; ?> <br/>
@@ -66,7 +66,7 @@
             <strong>Inserteur :</strong> <?php echo $_POST["inserteur"] ; ?><br/><br/>
 
             <strong>Réservoir :</strong> <?php echo $_POST["reservoir"] ; ?> <br/>                      
-            <strong>Système de portage de la pompe (qql lignes) : </strong> <?php echo $_POST["spp"] ; ?>  <br/>    
+            <strong>Système de portage de la Pompe (qql lignes) : </strong> <?php echo $_POST["spp"] ; ?>  <br/>    
 
             <strong>Observations et commentaires :</strong> <?php echo $_POST["observation"] ; ?>  
         </p>
@@ -77,8 +77,8 @@
             <strong>Date de diagnostic :</strong> <?php echo $_POST["datediagnostic"] ; ?> <br/>     
             <strong>Circonstances de découverte :</strong> <?php echo $_POST["circonstancedecouverte"] ; ?>   <br/>   
             <strong>Antécédents familiaux :</strong> <?php echo $_POST["antecedentfamiliaux"] ; ?>    <br/>  
-            <strong>Date de première mise sous pompe :</strong> <?php echo $_POST["datepremieremisesouspompe"] ; ?> <br/>     
-            <strong>HbA1C de référence avant la mise sous pompe :</strong>   <?php echo $_POST["hba1c"] ; ?> <br/>     
+            <strong>Date de première mise sous Pompe :</strong> <?php echo $_POST["datepremieremisesousPompe"] ; ?> <br/>     
+            <strong>HbA1C de référence avant la mise sous Pompe :</strong>   <?php echo $_POST["hba1c"] ; ?> <br/>     
         </p><br/>
     </div>
     <table style="margin: 0px 30px 0px 50px;">
@@ -178,7 +178,6 @@
                 </tr>
             </tbody>
         </table><br/>
-            <img src="img/image4.png"  style="width: 700px;"/>
         <br/><br/>
     </div>
     <div class="dec">
@@ -247,7 +246,7 @@
             </tbody>
         </table><br/>
         <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
-            <img src="img/image.png" style="width: 700px;" />
+            <?php echo '<img src="img/image'.$_POST["id"].'bardate1.png" style="width: 700px;" />';?>
         <br/><br/>
     </div>
     <div class="dec">
@@ -315,7 +314,7 @@
             </tbody>
         </table><br/>
             
-            <img src="img/image2.png" style="width: 700px;" />
+              <?php echo '<img src="img/image'.$_POST["id"].'bardate2.png" style="width: 700px;" />';?>
         <br/><br/>
     </div>
     
@@ -391,7 +390,7 @@
             </tbody>
         </table><br/>
                 <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
-               <img src="img/image3.png" style="width: 700px;" />
+                 <?php echo '<img src="img/image'.$_POST["id"].'barhg.png" style="width: 700px;" />';?>
         <br/><br/>
     </div>
     <div class="dec">
@@ -548,11 +547,11 @@
 
                 </tbody>
             </table>
-        </div>
+        </div><br/><br/>
        
-
+              <?php echo '<img src="img/image'.$_POST["id"].'bar.png" style="width: 700px;" />';?>
         <div class="dec">
-         <font><h4><u>MANIPULATION DE LA POMPE</u></h4></font><br/>
+         <font><h4><u>MANIPULATION DE LA Pompe</u></h4></font><br/>
 
             <table>
                     <thead>
@@ -738,7 +737,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><strong>Entretien de la pompe</strong></td>
+                            <td><strong>Entretien de la Pompe</strong></td>
                             <td><?php echo $_POST["alarmedate25"] ; ?></td>
                             <td><?php echo $_POST["alarmedate26"] ; ?></td>
                             <td><?php echo $_POST["alarmedate27"] ; ?></td>
