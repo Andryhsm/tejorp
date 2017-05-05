@@ -20,7 +20,7 @@
                 <textarea type="text" rows="3" class="form-control" id="hygienealimentaire" name="hygienealimentaire" placeholder="hygiène alimentaire"/></textarea>
 
                 <div class="radio">
-                    <label for="stabilitehoraires">Stabilités des horraires : </label>
+                    <label for="stabilitehoraires">Stabilités des horaires : </label>
                     <label>
                         <input type="radio" name="stabilitehoraires" id="radio" value="oui" checked="checked">
                         Oui
@@ -30,7 +30,7 @@
                         Non
                     </label>
                 </div>
-                <label for="details">Details:	</label>
+                <label for="details">Détails:	</label>
                 <textarea name="details" id="inputDetails" class="form-control" rows="3"></textarea>
                 <label for="environnement">Environnement social :	</label>
                 <textarea type="text" rows="3" class="form-control" id="environnement" name="environnement" placeholder="environement social"/></textarea>
@@ -40,8 +40,8 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <label for="etatcutane">Etat cutané au point injection :	</label>
-                <input type="text" class="form-control" id="etatcutane" name="etatcutane" placeholder="etat cutané au point injection"/>
+                <label for="etatcutane">Êtat cutané au point injection :	</label>
+                <input type="text" class="form-control" id="etatcutane" name="etatcutane" placeholder="êtat cutané au point injection"/>
             </div>
             <div class="col-lg-6">
                 <label for="choixpoint">Choix des points d'injection :	</label>
@@ -81,7 +81,7 @@
                                 <th></th>
                                 <th>Horaires</th>
                                 <th>Ration Insuline/glucide</th>
-                                <th>Objectif glicémique</th>
+                                <th>Objectif glycémique</th>
                                 <th>Sensibilité à  l'insuline</th>
                             </tr>
                         </thead>
@@ -146,7 +146,7 @@
         <label for="survenue">Survenue de compilations :  </label>
         <textarea rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de compilations"></textarea>
         <br>
-        <label for="atcd">ATCD/ autre pathologies :  </label>
+        <label for="atcd">ATCD/ autres pathologies :  </label>
         <textarea rows="3" type="text" name="atcd" class="form-control" id="" placeholder="ATCD/ autre pathologies"></textarea>
         <br>
         <label for="traitement">Traitement :  </label>
