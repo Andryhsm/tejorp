@@ -8,7 +8,6 @@ $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $email = $_POST['email'];
 $tel = $_POST['tel'];
-$adresse = $_POST['adresse'];
 $rue = $_POST['rue'];
 $code_postal = $_POST['code-postal'];
 $ville = $_POST['ville'];
@@ -20,7 +19,7 @@ $login = $_POST['login'];
 $mdp = $_POST['mdp'];
 $conf_mdp = $_POST['conf-mdp'];
 
-if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $adresse == "" || $rue == "" || $code_postal == "" || $ville == "" || $etablissement == "" || $statut == "" || $login == "" || $mdp == "" || $conf_mdp == "") {
+if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $rue == "" || $code_postal == "" || $ville == "" || $etablissement == "" || $statut == "" || $login == "" || $mdp == "" || $conf_mdp == "") {
     echo 'Les champs marquer * sont réquis';
 } else {
 
@@ -37,7 +36,7 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $adresse == "" 
 
         if (($isa == "0") && ($isa1 == "0")) {
             if ($mdp == $conf_mdp) {
-                $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`adresse`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('avatar.png','$nom','$prenom','$tel','$email','$adresse','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
+                $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('avatar.png','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
                 $_SESSION['login'] = $login;
 
                 $_SESSION['photo'] = 'avatar.png';
@@ -45,7 +44,6 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $adresse == "" 
                 $_SESSION['prenom'] = $prenom;
                 $_SESSION['tel'] = $tel;
                 $_SESSION['email'] = $email;
-                $_SESSION['adresse'] = $adresse;
                 $_SESSION['rue'] = $rue;
                 $_SESSION['code-postal'] = $code_postal;
                 $_SESSION['ville'] = $ville;
@@ -83,7 +81,7 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $adresse == "" 
 
                 if (($isa == "0") && ($isa1 == "0")) {
                     if ($mdp == $conf_mdp) {
-                        $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`adresse`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('$fichier','$nom','$prenom','$tel','$email','$adresse','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
+                        $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('$fichier','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
                         $_SESSION['login'] = $login;
                         $donnees = $reponse->fetch();
 
@@ -92,7 +90,6 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $adresse == "" 
                         $_SESSION['prenom'] = $prenom;
                         $_SESSION['tel'] = $tel;
                         $_SESSION['email'] = $email;
-                        $_SESSION['adresse'] = $adresse;
                         $_SESSION['rue'] = $rue;
                         $_SESSION['code-postal'] = $code_postal;
                         $_SESSION['ville'] = $ville;
