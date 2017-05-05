@@ -751,6 +751,7 @@
         var taille = ($('#taille').val()) ? $('#taille').val() : 0;
 
         var imcPT = (parseInt(poids) / ((parseInt(taille)*0.01)*(parseInt(taille)*0.01)));
+        imcPT = imcPT.toFixed(1);
         $('#imc').val(imcPT);
     });
 
@@ -761,6 +762,7 @@
         var taille = ($('#taille').val()) ? $('#taille').val() : 0;
 
         var imcPT = (parseInt(poids) / ((parseInt(taille)*0.01)*(parseInt(taille)*0.01)));
+         imcPT = imcPT.toFixed(1);
         $('#imc').val(imcPT);
     });
 
