@@ -362,7 +362,7 @@
                             <td><input type="number" class="form-control" name="Debit16" id="Debit16"></td>
                         </tr>
                     </tbody>
-                </table> <a class="btn btn-default" id="btnAdd">Ajouter une ligne</a>
+                </table> <a class="btn btn-default pull-right" id="btnAdd"> + </a>
                 </br></br>
 
 
@@ -468,7 +468,7 @@
                             <td><input type="number" class="form-control" name="Debit216" id="Debit216"></td>
                         </tr>
                     </tbody>
-                </table> <a class="btn btn-default" id="btnAdd2">Ajouter une ligne</a>
+                </table> <a class="btn btn-default pull-right" id="btnAdd2"> + </a>
                 </br></br>
 
                 <!-- chart -->
