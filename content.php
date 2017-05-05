@@ -246,7 +246,7 @@
             </tbody>
         </table><br/>
         <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
-            <?php echo '<img src="img/image'.$_POST["id"].'bardate1.png" style="width: 700px;" />';?>
+            <!-- ?php echo '<img src="img/image'.$_POST["id"].'bardate1.png" style="width: 700px;" />';? -->
         <br/><br/>
     </div>
     <div class="dec">
@@ -314,7 +314,7 @@
             </tbody>
         </table><br/>
             
-              <?php echo '<img src="img/image'.$_POST["id"].'bardate2.png" style="width: 700px;" />';?>
+              <!-- ?php echo '<img src="img/image'.$_POST["id"].'bardate2.png" style="width: 700px;" />';? -->
         <br/><br/>
     </div>
     
@@ -390,7 +390,7 @@
             </tbody>
         </table><br/>
                 <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
-                 <?php echo '<img src="img/image'.$_POST["id"].'barhg.png" style="width: 700px;" />';?>
+                 <!-- ?php echo '<img src="img/image'.$_POST["id"].'barhg.png" style="width: 700px;" />';? -->
         <br/><br/>
     </div>
     <div class="dec">
@@ -549,7 +549,7 @@
             </table>
         </div><br/><br/>
        
-              <?php echo '<img src="img/image'.$_POST["id"].'bar.png" style="width: 700px;" />';?>
+              <!-- ?php echo '<img src="img/image'.$_POST["id"].'bar.png" style="width: 700px;" />';? -->
         <div class="dec">
          <font><h4><u>MANIPULATION DE LA Pompe</u></h4></font><br/>
 
@@ -1099,13 +1099,16 @@
     $content = ob_get_clean();
 
     // convert in PDF
-    require_once('html2pdf-4.4.0/html2pdf.class.php');
+    require_once(dirname(__FILE__).'/html2pdf-4.4.0/html2pdf.class.php');
+    require_once(dirname(__FILE__).'/pjmail/pjmail.class.php');
+ 
     try
     {
         $html2pdf = new HTML2PDF('P', 'A4', 'fr');
         $html2pdf->setDefaultFont('Arial');
         $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
         $html2pdf->Output('pdf/content.pdf');
+
     }
     catch(HTML2PDF_exception $e) {
         echo $e;
@@ -1113,9 +1116,12 @@
     }
 
     //Suppression des fichiers
-    
+    /*
     unlink("img/image".$_POST["id"]."bardate1.png");
     unlink("img/image".$_POST["id"]."bardate2.png");
     unlink("img/image".$_POST["id"]."barhg.png");
     unlink("img/image".$_POST["id"]."bar.png");
+    */
+
+
 ?>

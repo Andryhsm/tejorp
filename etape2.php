@@ -283,7 +283,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <label for="autrestylo" class="col-lg-3 control-label">Flacon :</label>
+                    <label for="autrestylo" class="col-lg-3 control-label">Flacon:</label>
                     <div class="col-lg-9">
                         <input type="text" class="form-control" name="autrestylo" id="autrestylo" placeholder="Flacon ">
                     </div>
@@ -295,8 +295,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <label for="autreaiguille" class="col-lg-3 control-label">Seringue :</label>
-                    <div class="col-lg-9">
+                    <label for="autreaiguille" class="col-lg-4 control-label">Seringue:</label>
+                    <div class="col-lg-8">
                         <input type="text" class="form-control" name="autreaiguille" id="autreaiguille" placeholder="Seringue  ">
                     </div>
                 </div>
@@ -761,6 +761,7 @@
         var taille = ($('#taille').val()) ? $('#taille').val() : 0;
 
         var imcPT = (parseInt(poids) / ((parseInt(taille)*0.01)*(parseInt(taille)*0.01)));
+        imcPT = imcPT.toFixed(1);
         $('#imc').val(imcPT);
     });
 
@@ -771,6 +772,7 @@
         var taille = ($('#taille').val()) ? $('#taille').val() : 0;
 
         var imcPT = (parseInt(poids) / ((parseInt(taille)*0.01)*(parseInt(taille)*0.01)));
+         imcPT = imcPT.toFixed(1);
         $('#imc').val(imcPT);
     });
 
