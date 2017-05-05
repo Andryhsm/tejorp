@@ -392,42 +392,101 @@ if ($statut == "Médecin traitant") {
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="mobile" class="col-sm-4 control-label">Type de cathéter:</label>
-            <div class="col-sm-7">
-                <select name="catheter" class="form-control">
-                    <option value="DROIT">DROIT</option>
-                    <option value="TANGEANTIEL">TANGEANTIEL</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="form-group">
-            <label for="modele" class="col-sm-4 control-label">Modèle:</label>
-            <div class="col-sm-7">
-                <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele">
-            </div>
-        </div>
 
-        <div class="form-group col-sm-6">
-            <label for="longueurcanule" class="col-sm-4 control-label">Longueur de canule:</label>
-            <div class="col-sm-7">
-                <div class="input-group">
-                    <input type="number" placeholder="Longueur de canule" class="form-control" name="longueurcanule" id="longueurcanule">
-                    <span class="input-group-addon">mm</span>
+        <div class="row">
+            <div class="col-lg-6">
+                <center><h4>Cathéter 1</h4></center>
+                <div class="form-group">
+                    <label for="mobile" class="col-sm-4 control-label">Type de cathéter:</label>
+                    <div class="col-sm-7">
+                        <select name="catheter" class="form-control">
+                            <option value="DROIT">DROIT</option>
+                            <option value="TANGEANTIEL">TANGEANTIEL</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="modele" class="col-sm-4 control-label">Modèle:</label>
+                    <div class="col-sm-7">
+                        <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="longueurcanule" class="col-sm-4 control-label">Longueur de canule:</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <input type="number" placeholder="Longueur de canule" class="form-control" name="longueurcanule" id="longueurcanule">
+                            <span class="input-group-addon">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="longueurtubulure" class="col-sm-4 control-label">Longueur de tubulure:</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <input type="number" placeholder="Longueur de tubulure" class="form-control" name="longueurtubulure" id="longueurtubulure">
+                            <span class="input-group-addon">cm</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-lg-6">
+                <center><h4>Cathéter 2</h4></center>
+                <div class="form-group">
+                    <label for="mobile" class="col-sm-4 control-label">Type de cathéter:</label>
+                    <div class="col-sm-7">
+                        <select name="catheter" class="form-control">
+                            <option value="DROIT">DROIT</option>
+                            <option value="TANGEANTIEL">TANGEANTIEL</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="modele" class="col-sm-4 control-label">Modèle:</label>
+                    <div class="col-sm-7">
+                        <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="longueurcanule" class="col-sm-4 control-label">Longueur de canule:</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <input type="number" placeholder="Longueur de canule" class="form-control" name="longueurcanule" id="longueurcanule">
+                            <span class="input-group-addon">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="longueurtubulure" class="col-sm-4 control-label">Longueur de tubulure:</label>
+                    <div class="col-sm-7">
+                        <div class="input-group">
+                            <input type="number" placeholder="Longueur de tubulure" class="form-control" name="longueurtubulure" id="longueurtubulure">
+                            <span class="input-group-addon">cm</span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="form-group col-sm-6">
-            <label for="longueurtubulure" class="col-sm-4 control-label">Longueur de tubulure:</label>
-            <div class="col-sm-7">
-                <div class="input-group">
-                    <input type="number" placeholder="Longueur de tubulure" class="form-control" name="longueurtubulure" id="longueurtubulure">
-                    <span class="input-group-addon">cm</span>
-                </div>
-            </div>
-        </div>
+
+
+
+
         <div class="form-group">
             <label for="inserteur" class="col-sm-4 control-label">Inserteur:</label>
             <div class="col-sm-7">
@@ -453,7 +512,7 @@ if ($statut == "Médecin traitant") {
                     <option value="Réservoir 3">Réservoir 3</option>
                     <option value="Réservoir 4">Réservoir 4</option>
                 </select>
-              
+
             </div>
         </div>
         <div class="form-group">
