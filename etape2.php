@@ -313,20 +313,30 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="matin">Matin</td>
+                            <td id="matin">Petit déjeuner</td>
                             <td><input type="number" class="form-control" name="insulinelentematin" id="insulinelentematin" placeholder=""></td>
                             <td><input type="number" class="form-control" name="insulinerapidematin" id="insulinerapidematin" placeholder=""></td>
                            <!--  <td><input type="text" class="form-control" name="quantitetotal" readonly="" id="quantitetotal" placeholder=""></td> -->
                         </tr>
                         <tr>
-                            <td id="midi">Midi</td>
+                            <td id="midi">Déjeuner</td>
                             <td><input type="number" class="form-control" name="insulinelentemidi" id="insulinelentemidi" placeholder=""></td>
                             <td><input type="number" class="form-control" name="insulinerapidemidi" id="insulinerapidemidi" placeholder=""></td>
                         </tr>
                         <tr>
-                            <td id="soir">Soir</td>
+                            <td id="soir">Goûter</td>
                             <td><input type="number" class="form-control" name="insulinelentesoir" id="insulinelentesoir" placeholder=""></td>
                             <td><input type="number" class="form-control" name="insulinerapidesoir" id="insulinerapidesoir" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <td id="soir">Dîner</td>
+                            <td><input type="number" class="form-control" name="insulinelentediner" id="insulinelentediner" placeholder=""></td>
+                            <td><input type="number" class="form-control" name="insulinerapidediner" id="insulinerapidediner" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <td id="soir">Collation</td>
+                            <td><input type="number" class="form-control" name="insulinelentecollation" id="insulinelentecollation" placeholder=""></td>
+                            <td><input type="number" class="form-control" name="insulinerapidecollation" id="insulinerapidecollation" placeholder=""></td>
                         </tr>
                         <tr>
                             <td id="total"><b>Total</b></td>
@@ -587,11 +597,11 @@
                 <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
-                            <td style="text-align: center;">Valeur glycémique</td>
-                            <td style="text-align: center;">Matin (UI)</td>
-                            <td style="text-align: center;">Midi (UI)</td>
+                            <td style="text-align: center;">Petit déjeuner (UI)</td>
+                            <td style="text-align: center;">Déjeuner (UI)</td>
+                            <td style="text-align: center;">Goûter (UI)</td>
+                            <td style="text-align: center;">Dîner (UI)</td>
                             <td style="text-align: center;">Collation (UI)</td>
-                            <td style="text-align: center;">Soir (UI)</td>
                             <td style="text-align: center;">Autre (UI)</td>
                         </tr>
                     </thead>
