@@ -446,7 +446,7 @@ if ($statut == "Médecin traitant") {
                 <div class="form-group">
                     <label for="mobile" class="col-sm-4 control-label">Type de cathéter:</label>
                     <div class="col-sm-7">
-                        <select name="catheter" class="form-control">
+                        <select class="form-control">
                             <option value="DROIT">DROIT</option>
                             <option value="TANGEANTIEL">TANGEANTIEL</option>
                         </select>
@@ -456,14 +456,14 @@ if ($statut == "Médecin traitant") {
                 <div class="form-group">
                     <label for="modele" class="col-sm-4 control-label">Modèle:</label>
                     <div class="col-sm-7">
-                        <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele">
+                        <input type="text" placeholder="Modèle" class="form-control" id="modele">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="longueurcanule" class="col-sm-4 control-label">Longueur de canule:</label>
                     <div class="col-sm-7">
                         <div class="input-group">
-                            <input type="number" placeholder="Longueur de canule" class="form-control" name="longueurcanule" id="longueurcanule">
+                            <input type="number" placeholder="Longueur de canule" class="form-control" id="longueurcanule">
                             <span class="input-group-addon">mm</span>
                         </div>
                     </div>
@@ -474,7 +474,7 @@ if ($statut == "Médecin traitant") {
                     <label for="longueurtubulure" class="col-sm-4 control-label">Longueur de tubulure:</label>
                     <div class="col-sm-7">
                         <div class="input-group">
-                            <input type="number" placeholder="Longueur de tubulure" class="form-control" name="longueurtubulure" id="longueurtubulure">
+                            <input type="number" placeholder="Longueur de tubulure" class="form-control" id="longueurtubulure">
                             <span class="input-group-addon">cm</span>
                         </div>
 

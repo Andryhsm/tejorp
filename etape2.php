@@ -1,7 +1,7 @@
     <section class="container-fluid">
     <div>
         <div class="well">
-            <h4 style="text-align: center;">DONNEES MEDICALE</h4></br>
+            <h4 style="text-align: center;">DONNEES MEDICALES</h4></br>
             <fieldset>
 
                 <!-- type de diabète -->
@@ -65,7 +65,10 @@
                     <div class="form-group">
                         <label for="hba1c" class="col-lg-4 control-label">HbA1C de référence avant la mise sous Pompe:</label>
                         <div class="col-lg-8">
+                            <div class="input-group">
                             <input type="text" class="form-control" name="hba1c" id="hba1c" placeholder="HbA1C de référence avant la mise sous Pompe (%)">
+                            <span class="input-group-addon">%</span>
+                            </div>
                         </div>
                     </div></br>
 
