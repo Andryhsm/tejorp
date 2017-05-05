@@ -6,130 +6,265 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Installation de la pile</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate1" name="pmpdate1"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate2" name="pmpdate2"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate3" name="pmpdate3"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate4" name="pmpdate4"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire1" id = "pmpcommentaire1">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Marche/Arrêt</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate5" name="pmpdate5"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate6" name="pmpdate6"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate7" name="pmpdate7"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate8" name="pmpdate8"></td>
-                            <td>
-                                <select class="form-control" name = "pmpcommentaire2" id = "pmpcommentaire2">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                           <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Réglage Date/heure</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate9" name="pmpdate9"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate10" name="pmpdate10"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate11" name="pmpdate11"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate12" name="pmpdate12"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire3" id = "pmpcommentaire3">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr> 
                         <tr>
                             <td>Réglage du bolus</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate13" name="pmpdate13"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate14" name="pmpdate14"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate15" name="pmpdate15"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate16" name="pmpdate16"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire4" id = "pmpcommentaire4">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Arrêt du bolus en cours</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate17" name="pmpdate17"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate18" name="pmpdate18"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate19" name="pmpdate19"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate20" name="pmpdate20"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire5" id = "pmpcommentaire5">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Historique des bolus</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate21" name="pmpdate21"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate22" name="pmpdate22"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate23" name="pmpdate23"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate24" name="pmpdate24"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire6" id = "pmpcommentaire6">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Programmation du débit basal</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate25" name="pmpdate25"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate26" name="pmpdate26"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate27" name="pmpdate27"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate28" name="pmpdate28"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire7" id = "pmpcommentaire7">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Consulter les débits de base</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate29" name="pmpdate29"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate291" name="pmpdate291"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate292" name="pmpdate292"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate293" name="pmpdate293"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire8" id = "pmpcommentaire8">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Programmer et arrêter le débit de base temporaire</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate294" name="pmpdate294"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate295" name="pmpdate295"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate296" name="pmpdate296"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate297" name="pmpdate297"></td>
                             <td>
-                                <select class="form-control" name = "pmpcommentaire9" id = "pmpcommentaire9">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -150,10 +285,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
+                            <td styl><input type="text" class="form-control datepickerAll"></td>
+                            <td styl><input type="text" class="form-control datepickerAll"></td>
+                            <td styl><input type="text" class="form-control datepickerAll"></td>
+                            <td styl><input type="text" class="form-control datepickerAll"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>

@@ -79,40 +79,53 @@
                         <thead>
                             <tr style="color: white;">
                                 <th></th>
-                                <th>Horaires</th>
+                                <th>De</th>
+                                <th>A</th>
                                 <th>Ration Insuline/glucide</th>
                                 <th>Objectif glycémique</th>
                                 <th>Sensibilité à  l'insuline</th>
                             </tr>
                         </thead>
-                        <tbody>
+                       <tbody>
                             <tr>
-                                <td>Matin</td>
-                                <td><input type="time" class="form-control date" name="horairematin" id="horaire"></td>
-                                <td><input type="text" class="form-control" name="rotationmatin" id="rotation"></td>
-                                <td><input type="text" class="form-control" name="objectifmatin" id="objectif"></td>
-                                <td><input type="text" class="form-control" name="sensibilitematin" id="sensibilite"></td>
+                                <td>Petit déjeuner</td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="text" class="form-control" name="" id="rotation"></td>
+                                <td><input type="text" class="form-control" name="" id="objectif"></td>
+                                <td><input type="text" class="form-control" name="" id="sensibilite"></td>
                             </tr>
                             <tr>
-                                <td>Midi</td>
-                                <td><input type="time" class="form-control date" name="horairemidi" id="horaire"></td>
-                                <td><input type="text" class="form-control" name="rotationmidi" id="rotation"></td>
-                                <td><input type="text" class="form-control" name="objectifmidi" id="objectif"></td>
-                                <td><input type="text" class="form-control" name="sensibilitemidi" id="sensibilite"></td>	
+                                <td>Déjeuner</td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="text" class="form-control" name="" id="rotation"></td>
+                                <td><input type="text" class="form-control" name="" id="objectif"></td>
+                                <td><input type="text" class="form-control" name="" id="sensibilite"></td>  
+                            </tr>
+                            <tr>
+                                <td>Goûter</td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="text" class="form-control" name="" id="rotation"></td>
+                                <td><input type="text" class="form-control" name="" id="objectif"></td>
+                                <td><input type="text" class="form-control" name="" id="sensibilite"></td>
+                            </tr>
+                            <tr>
+                                <td>Dîner</td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="text" class="form-control" name="" id="rotation"></td>
+                                <td><input type="text" class="form-control" name="" id="objectif"></td>
+                                <td><input type="text" class="form-control" name="" id="soir"></td>
                             </tr>
                             <tr>
                                 <td>Collation</td>
-                                <td><input type="time" class="form-control date" name="horairecollation" id="horaire"></td>
-                                <td><input type="text" class="form-control" name="rotationcollation" id="rotation"></td>
-                                <td><input type="text" class="form-control" name="objectifcollation" id="objectif"></td>
-                                <td><input type="text" class="form-control" name="sensibilitecollation" id="sensibilite"></td>
-                            </tr>
-                            <tr>
-                                <td>Soir</td>
-                                <td><input type="time" class="form-control date" name="horairesoir" id="horaire"></td>
-                                <td><input type="text" class="form-control" name="rotationsoir" id="rotation"></td>
-                                <td><input type="text" class="form-control" name="objectifsoir" id="objectif"></td>
-                                <td><input type="text" class="form-control" name="sensibilitesoir" id="soir"></td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="time" class="form-control datetimepicker" name="" id="horaire"></td>
+                                <td><input type="text" class="form-control" name="" id="rotation"></td>
+                                <td><input type="text" class="form-control" name="" id="objectif"></td>
+                                <td><input type="text" class="form-control" name="" id="soir"></td>
                             </tr>
                         </tbody>
                     </table>
