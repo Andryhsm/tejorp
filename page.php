@@ -68,10 +68,17 @@
                 position: fixed;
                 top: 80px;
                 left: 10px;
-                width: 200px;
+                width: 150px;
                 height: auto;
                 z-index: 9999;
             }
+            /*
+            body
+            {
+                margin-left: 50px;
+            }
+            */
+            
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
@@ -1745,7 +1752,7 @@
             <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
             -->
             <ul>
-                <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
+                <li><a class="round green active" onClick="enHaut();" id = "1">Etape 1
                     <span class="round">
                         Renseignements<br>
                         Choix du matériel
