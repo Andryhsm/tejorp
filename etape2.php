@@ -606,7 +606,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr> <!-- Mbola interface fotsiny io an -->
                             <td><input type="text" class="form-control" name="ValGlycemique1" id="ValGlycemique1"></td>
                             <td><input type="text" class="form-control" name="ValGlyMatin1" id="ValGlyMatin1"></td>
                             <td><input type="text" class="form-control" name="ValGlyMid1" id="ValGlyMid1"></td>
@@ -662,6 +662,164 @@
                             <td><input type="text" class="form-control" name="ValGlySoir7" id="ValGlySoir7"></td>
                             <td><input type="text" class="form-control" name="ValGlyAutre7" id="ValGlyAutre7"></td>
                         </tr>
+                    </tbody>
+                </table>
+
+
+
+                <label for="Autre1" class="col-lg-5 control-label">Schéma des glycémies</label>
+                <label for="Autre1" class="col-lg-3 control-label">Date de MAJ :</label>
+                </br>
+                </br>
+                <table class="table table-bordered" style="color: white;">
+                    <thead>
+                        <tr>
+                            <td style="text-align: center;" colspan="2">Petit déjeuner (g/l)</td>
+                            <td style="text-align: center;" colspan="2">Déjeuner (g/l)</td>
+                            <td style="text-align: center;" colspan="2">Goûter (g/l)</td>
+                            <td style="text-align: center;" colspan="2">Dîner (g/l)</td>
+                            <td style="text-align: center;" colspan="2">Collation (g/l)</td>
+                            <td style="text-align: center;" colspan="2">Coucher (g/l)</td>
+                            <td style="text-align: center;" colspan="2">Nuit (g/l)</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">Pré</td>
+                            <td style="text-align: center;">Post</td>
+                            <td style="text-align: center;">Pré</td>
+                            <td style="text-align: center;">Post</td>
+                            <td style="text-align: center;">Pré</td>
+                            <td style="text-align: center;">Post</td>
+                            <td style="text-align: center;">Pré</td>
+                            <td style="text-align: center;">Post</td>
+                            <td style="text-align: center;">Pré</td>
+                            <td style="text-align: center;">Post</td>
+                            <td style="text-align: center;">Pré</td>
+                            <td style="text-align: center;">Post</td>
+                            <td style="text-align: center;">Pré</td>
+                            <td style="text-align: center;">Post</td>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        
                     </tbody>
                 </table>
 
