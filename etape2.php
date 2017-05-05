@@ -450,7 +450,7 @@
                             <td><input type="text" class="form-control datetimepicker" name="Horaire20" id="Horaire20"></td>
                             <td><input type="number" class="form-control" name="Debit12" id="Debit12"></td>
                         </tr>
-                        <tr>
+                        <tr  id="ligne4">
                             <td><input type="text" class="form-control datetimepicker"  name="Horaire21" id="Horaire21"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit13" id="Debit13"></td>
@@ -465,8 +465,13 @@
                             <td><input type="number" class="form-control" name="Debit16" id="Debit16"></td>
                         </tr>
                     </tbody>
-                </table></br></br>
+                </table> <a class="btn btn-default" id="btnAdd">Ajouter une ligne</a>
+            </br></br>
 
+
+
+
+                
                 <!-- chart -->
                 <div>
                     <!-- Row and col -->
@@ -551,7 +556,7 @@
                             <td><input type="text" class="form-control datetimepicker" name="Horaire220" id="Horaire220"></td>
                             <td><input type="number" class="form-control" name="Debit212" id="Debit212"></td>
                         </tr>
-                        <tr>
+                        <tr id="ligne24">
                             <td><input type="text" class="form-control datetimepicker"  name="Horaire221" id="Horaire221"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit213" id="Debit213"></td>
@@ -566,7 +571,8 @@
                             <td><input type="number" class="form-control" name="Debit216" id="Debit216"></td>
                         </tr>
                     </tbody>
-                </table>
+                </table> <a class="btn btn-default" id="btnAdd2">Ajouter une ligne</a>
+            </br></br>
 
                 <!-- chart -->
                 <div>
@@ -930,4 +936,28 @@ $(document).ready(function() {
 });
 
 });
+</script>
+<script type="text/javascript">
+        var i = 0;
+    $('#btnAdd').click(function(e) 
+    {
+        e.preventDefault();
+        i++;
+        if(i<10)
+        {
+            $('#ligne4').before("<tr><td><input type='text' class='form-control datetimepicker' name='Horaire13' id='Horaire13'></td><td><input type='text' class='form-control datetimepicker' name='Horaire14' id='Horaire14'></td><td><input type='number' class='form-control' name='Debit9' id='Debit9'></td><td><input type='text' class='form-control datetimepicker' name='Horaire15' id='Horaire15'></td><td><input type='text' class='form-control datetimepicker' name='Horaire16' id='Horaire16'></td><td><input type='number' class='form-control' name='Debit10' id='Debit10'></td><td><input type='text' class='form-control datetimepicker' name='Horaire17' id='Horaire17'></td><td><input type='text' class='form-control datetimepicker' name='Horaire18' id='Horaire18'></td><td><input type='number' class='form-control' name='Debit11' id='Debit11'></td><td><input type='text' class='form-control datetimepicker' name='Horaire19' id='Horaire19'></td><td><input type='text' class='form-control datetimepicker' name='Horaire20' id='Horaire20'></td><td><input type='number' class='form-control' name='Debit12' id='Debit12'></td></tr>");
+        }
+    });
+</script>
+<script type="text/javascript">
+        var i = 0;
+    $('#btnAdd2').click(function(e) 
+    {
+        e.preventDefault();
+        i++;
+        if(i<10)
+        {
+            $('#ligne24').before("<tr><td><input type='text' class='form-control datetimepicker' name='Horaire13' id='Horaire13'></td><td><input type='text' class='form-control datetimepicker' name='Horaire14' id='Horaire14'></td><td><input type='number' class='form-control' name='Debit9' id='Debit9'></td><td><input type='text' class='form-control datetimepicker' name='Horaire15' id='Horaire15'></td><td><input type='text' class='form-control datetimepicker' name='Horaire16' id='Horaire16'></td><td><input type='number' class='form-control' name='Debit10' id='Debit10'></td><td><input type='text' class='form-control datetimepicker' name='Horaire17' id='Horaire17'></td><td><input type='text' class='form-control datetimepicker' name='Horaire18' id='Horaire18'></td><td><input type='number' class='form-control' name='Debit11' id='Debit11'></td><td><input type='text' class='form-control datetimepicker' name='Horaire19' id='Horaire19'></td><td><input type='text' class='form-control datetimepicker' name='Horaire20' id='Horaire20'></td><td><input type='number' class='form-control' name='Debit12' id='Debit12'></td></tr>");
+        }
+    });
 </script>
