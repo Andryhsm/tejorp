@@ -21,7 +21,7 @@ if (($isa == "0") || ($isa1 == "0")) {
 }  else {
     $_SESSION['login'] = $login;
     $donnees = $reponse->fetch();
-    
+    $_SESSION['id'] = $donnees['id'];
     $_SESSION['photo'] = $donnees['photo'];
     $_SESSION['nom'] = $donnees['nom'];
     $_SESSION['prenom'] = $donnees['prenom'];

@@ -1,6 +1,6 @@
 <div class="container-fluid">                        
 	<fieldset class="well" id="field">
-		<center><font><h4>MANIPULATION DE LA Pompe</h4></font></center><br/>
+		<center><font><h4>MANIPULATION DE LA POMPE</h4></font></center><br/>
 
 			<table class="table table-bordered" style="color: white;">
                     <thead>
