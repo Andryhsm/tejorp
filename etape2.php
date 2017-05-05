@@ -679,8 +679,8 @@
                             <td style="text-align: center;" colspan="2">Goûter (g/l)</td>
                             <td style="text-align: center;" colspan="2">Dîner (g/l)</td>
                             <td style="text-align: center;" colspan="2">Collation (g/l)</td>
-                            <td style="text-align: center;" colspan="2">Coucher (g/l)</td>
-                            <td style="text-align: center;" colspan="2">Nuit (g/l)</td>
+                            <td style="text-align: center;">Coucher (g/l)</td>
+                            <td style="text-align: center;">Nuit (g/l)</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">Pré</td>
@@ -693,10 +693,8 @@
                             <td style="text-align: center;">Post</td>
                             <td style="text-align: center;">Pré</td>
                             <td style="text-align: center;">Post</td>
-                            <td style="text-align: center;">Pré</td>
-                            <td style="text-align: center;">Post</td>
-                            <td style="text-align: center;">Pré</td>
-                            <td style="text-align: center;">Post</td>
+                            <td style="text-align: center;"></td>
+                            <td style="text-align: center;"></td>
                             
                         </tr>
                     </thead>
@@ -714,30 +712,9 @@
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                        </tr>
-
-                        <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
@@ -765,6 +742,19 @@
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
+                        </tr>
+
+                        <tr> <!-- Mbola interface fotsiny io an -->
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                         </tr>
@@ -782,8 +772,6 @@
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
@@ -799,13 +787,9 @@
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
                             <td><input type="text" class="form-control"></td>
