@@ -6,156 +6,321 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
-                            <td style="text-align: center;">Date</td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Mise en place du cathéter dans l'Inserteur</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate1" name="cathdate1"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate2" name="cathdate2"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate3" name="cathdate3"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate4" name="cathdate4"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire1" id = "cathcommentaire1">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Retrait de l'adhésif et de la protection de l'aiguille</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate5" name="cathdate5"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate6" name="cathdate6"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate7" name="cathdate7"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate8" name="cathdate8"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire2" id = "cathcommentaire2">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Armement de l'Inserteur</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate9" name="cathdate9"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate10" name="cathdate10"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate11" name="cathdate11"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate12" name="cathdate12"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire3" id = "cathcommentaire3">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr> 
                         <tr>
                             <td>Choix du lieu d'injection</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate13" name="cathdate13"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate14" name="cathdate14"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate15" name="cathdate15"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate16" name="cathdate16"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire4" id = "cathcommentaire4">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Désinfection cutanée</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate17" name="cathdate17"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate18" name="cathdate18"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate19" name="cathdate19"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate20" name="cathdate20"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire5" id = "cathcommentaire5">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Déclenchement de l'Inserteur</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate21" name="cathdate21"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate22" name="cathdate22"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate23" name="cathdate23"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate24" name="cathdate24"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire6" id = "cathcommentaire6">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Retrait de l'aiguille</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate25" name="cathdate25"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate26" name="cathdate26"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate27" name="cathdate27"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate28" name="cathdate28"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire7" id = "cathcommentaire7">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Amorce de la canule</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate29" name="cathdate29"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate211" name="cathdate211"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate212" name="cathdate212"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate213" name="cathdate213"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire8" id = "cathcommentaire8">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Contrôle glycémique 2h après la pose</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate214" name="cathdate214"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate215" name="cathdate215"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate216" name="cathdate216"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate217" name="cathdate217"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire9" id = "cathcommentaire9">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Conservation de l'insuline</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate218" name="cathdate218"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate219" name="cathdate219"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate221" name="cathdate221"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate222" name="cathdate222"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire10" id = "cathcommentaire10">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                         <tr>
                             <td>Fréquence de changement des cathéters</td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate223" name="cathdate223"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate224" name="cathdate224"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate225" name="cathdate225"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="cathdate226" name="cathdate226"></td>
                             <td>
-                                <select class="form-control" name = "cathcommentaire11" id = "cathcommentaire11">                                 
-                                    <option value="oui">Oui</option>
-                                    <option value="non">Non</option>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td>
+                                <select class="form-control">                                 
+                                    <option value="oui">Acquis</option>
+                                    <option value="non">Non acquis</option>
+                                    <option value="en cours">En cours d'acquisition</option>
+                            </td>
+                            <td><input type="text" class="form-control"></td>
                         </tr>
                     </tbody>
                 </table>
