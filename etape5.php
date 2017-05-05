@@ -599,7 +599,7 @@
                                         <input type="radio" name="connaissance13" id="optionsRadios25" value="Oui" checked="">
                                         Oui
                                     </label>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <label>
                                         <input type="radio" name="connaissance13" id="optionsRadios26" value="Non">
                                         Non
@@ -699,11 +699,61 @@
                                         <input type="radio" name="asg1" id="asgRadio1" value="Oui" checked="">
                                         Oui
                                     </label>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <label>
                                         <input type="radio" name="asg1" id="asgRadio2" value="Non">
+                                        <input type="radio" name="connaissance4" id="optionsRadios8" value="Non">
                                         Non
                                     </label>
+                                </p>
+                            </div>
+                            <div class="radio">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="connaissance5" id="optionsRadios9" value="Oui" checked="">
+                                        Oui
+                                    </label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <input type="radio" name="connaissance5" id="optionsRadios10" value="Non">
+                                        Non
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="radio">
+                                <p>
+                                    <label>
+                                        <input type="radio" name="connaissance5" id="optionsRadios9" value="Oui" checked="">
+                                        Oui
+                                    </label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <input type="radio" name="connaissance5" id="optionsRadios10" value="Non">
+                                        Non
+                                    </label>
+                                </p>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="radio">Date de péremption</div>
+                        <div class="radio">
+                            <ul>
+                                <div class="radio">
+
+                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate1" name="perempdate1">
+
+                                </div>
+                                <div class="radio">
+
+                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate2" name="perempdate2">
+
+                                </div>
+                                <div class="radio">
+
+                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate2" name="perempdate2">
+
                                 </div>
                             </td>
                             <td><input type="text" class="form-control" placeholder = "Commentaire"></td>
@@ -711,5 +761,247 @@
                     </tbody>
                 </table>
 		</fieldset>
+                                <div class="radio">
 
-	</div>
+                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate2" name="perempdate2">
+
+                                </div>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Matériel de secours</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance5" id="optionsRadios9" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance5" id="optionsRadios10" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+
+
+
+                        <div class="radio">
+
+                            <input type="text" class="form-control datepickerAll" placeholder = "Date de péremption">
+
+                        </div>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Schéma de remplacement</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance6" id="optionsRadios11" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance6" id="optionsRadios12" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" id="cnsobservation3" name="cnsobservation3"></td>
+                </tr>
+                <tr>
+                    <td>CAT en cas d'hypoglycémie</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance7" id="optionsRadios13" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance7" id="optionsRadios14" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" id="cnsobservation4" name="cnsobservation4"></td>
+                </tr>
+                <tr>
+                    <td>Maitrise du ressucrage</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance8" id="optionsRadios15" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance8" id="optionsRadios16" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" id="cnsobservation5" name="cnsobservation5"></td>
+                </tr>                        
+                <tr>
+                    <td>CAT en cas d'hyperglycémie</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance9" id="optionsRadios17" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance9" id="optionsRadios18" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" id="cnsobservation6" name="cnsobservation6"></td>
+                </tr>
+                <tr>
+                    <td>Maitrise de l'adaptation du bolus de correction</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance10" id="optionsRadios19" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance10" id="optionsRadios20" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
+                </tr>
+                <tr>
+                    <td>Réalise le contrôle de la Cétone</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance10" id="optionsRadios19" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance10" id="optionsRadios20" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
+                </tr>
+                <tr>
+                    <td>CAT en cas de cétone</td>
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="connaissance11" id="optionsRadios21" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" name="connaissance11" id="optionsRadios22" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" id="cnsobservation8" name="cnsobservation8"></td>
+                </tr>                     
+            </tbody>
+        </table>
+    </fieldset>
+
+    <fieldset class="well" id="field">
+        <center><font><h4>AUTO SURVEILLANCE GLYCEMIQUE</h4></font></center><br/>
+        <table class="table table-bordered" style="color: white;">
+            <thead>
+                <tr>
+                    <td style="width:20%; text-align: center;"></td>
+                    <td style="text-align: center;">Détails</td>
+                    <td style="text-align: center;">Observations</td>                            
+                </tr>
+            </thead>
+            <tbody>                      
+                <tr>
+                    <td>Nom du dispositif ASG principal et des bandelettes</td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgdetail1" name="asgdetail1"></textarea></td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgobservation1" name="asgobservation1"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Nom du dispositif ASG secondaire éventuel et des bandelettes</td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgdetail2" name="asgdetail2"></textarea></td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgobservation2" name="asgobservation2"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Nom du dispositif auto piqueur</td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgdetail3" name="asgdetail3"></textarea></td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgobservation3" name="asgobservation3"></textarea></td>
+                </tr>                        
+                <tr>
+                    <td>Etat cutané des doigts/respect de "la pince"</td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgdetail4" name="asgdetail4"></textarea></td>
+                    <td><textarea type="text" rows="4" class="form-control" id="asgobservation4" name="asgobservation4"></textarea></td>
+                </tr>                                        
+            </tbody>
+        </table>
+    </fieldset>
+
+    <fieldset class="well" id="field">
+        <center><font><h4>AUTO SURVEILLANCE GLYCEMIQUE (ASG)</h4></font></center><br/>
+        <table class="table table-bordered" style="color: white;">
+            <thead>
+                <tr>
+                    <td style="text-align: center;"></td>
+                    <td style="text-align: center;">Prescription</td>
+                    <td style="text-align: center;">Réalisation réelle</td>                            
+                </tr>
+            </thead>
+            <tbody>                      
+                <tr>
+                    <td>Fréqeunce des glycémies</td>
+                    <td>
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="asgfrequence1" id="asgfrequence1">
+                            <span class="input-group-addon">/ jour</span>
+                        </div>  
+                    </td> 
+                    <td>
+                        <div class="input-group">
+                            <input type="number" class="form-control" name="asgfrequence2" id="asgfrequence2">
+                            <span class="input-group-addon">/ jour</span>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Connaissance et respect des mesures d'hygiène relatives l'ASG</td>
+                    <td>
+                        <div class="radio" align = "center">
+                            <label>
+                                <input type="radio" value="Oui" checked="">
+                                Oui
+                            </label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>
+                                <input type="radio" value="Non">
+                                Non
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" placeholder = Commentaire></td>
+                </tr>                                      
+            </tbody>
+        </table>
+    </fieldset>
+
+</div>
