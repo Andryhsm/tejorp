@@ -280,9 +280,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <label for="autrestylo" class="col-lg-3 control-label">Autre:</label>
+                    <label for="autrestylo" class="col-lg-3 control-label">Flacon :</label>
                     <div class="col-lg-9">
-                        <input type="text" class="form-control" name="autrestylo" id="autrestylo" placeholder="Autre ">
+                        <input type="text" class="form-control" name="autrestylo" id="autrestylo" placeholder="Flacon ">
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -292,9 +292,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <label for="autreaiguille" class="col-lg-3 control-label">Autre:</label>
+                    <label for="autreaiguille" class="col-lg-3 control-label">Seringue :</label>
                     <div class="col-lg-9">
-                        <input type="text" class="form-control" name="autreaiguille" id="autreaiguille" placeholder="Autre ">
+                        <input type="text" class="form-control" name="autreaiguille" id="autreaiguille" placeholder="Seringue  ">
                     </div>
                 </div>
             </div>
