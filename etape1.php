@@ -93,7 +93,7 @@ if ($statut == "Médecin traitant") {
             <div class="form-group">
                 <label for="nom" class="col-sm-4 control-label">Nom:</label>
                 <div class="col-sm-7">
-                    <input type="text" placeholder="Nom Patient" ="" class="form-control" name="nompatient" id="nompatient">
+                    <input type="text" placeholder="Nom Patient" class="form-control" name="nompatient" id="nompatient">
                 </div>
             </div>
             <div class="form-group">
