@@ -327,7 +327,7 @@
         </fieldset>
 
         <fieldset class="well" id="field">
-            <center><font><h4>CONNAISSANCE</h4></font></center><br/>
+            <center><font><h4>CONNAISSANCES</h4></font></center><br/>
 
 				<table class="table table-bordered" style="color: white;">
                     <thead>
@@ -339,7 +339,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Numéro de l'astreinte médicale</td>
+                            <td>Numéro de l'astreinte Bastide médicale</td>
                             <td>
                             	<div class="radio">
                     				<label>
@@ -380,9 +380,10 @@
                             			<div class="radio"><li>Stylo d'insuline rapide</li></div>
                             			<div class="radio"><li>Stylo d'insuline lente</li></div>
                             			<div class="radio"><li>Aiguilles</li></div>
+                                        <div class="radio"><li>Stylo de glucagen</li></div>
                             		</ul>
                             	</div>
-                            	<div class="radio">Matériel de secours</div>
+                            	
                             </td>
                             
                             <td>
@@ -422,6 +423,17 @@
                         						Non
                     						</label>
                 						</div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="connaissance5" id="optionsRadios9" value="Oui" checked="">
+                                                Oui
+                                            </label>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label>
+                                                <input type="radio" name="connaissance5" id="optionsRadios10" value="Non">
+                                                Non
+                                            </label>
+                                        </div>
                 					
                 				</div>
                             </td>
@@ -430,19 +442,57 @@
                             		<div class="radio">
                             			<ul>
                             				<div class="radio">
-                            					<li>
+                            					
                                                                     <input type="text" class="form-control datepickerAll" id="perempdate1" name="perempdate1">
-                            					</li>
+                            					
                             				</div>
                             				<div class="radio">
-                            					<li>
+                            					
                                                                     <input type="text" class="form-control datepickerAll" id="perempdate2" name="perempdate2">
-                            					</li>
+                            					
                             				</div>
+                                            <div class="radio">
+                                                
+                                                                    <input type="text" class="form-control datepickerAll" id="perempdate2" name="perempdate2">
+                                                
+                                            </div>
+                                            <div class="radio">
+                                                
+                                                                    <input type="text" class="form-control datepickerAll" id="perempdate2" name="perempdate2">
+                                               
+                                            </div>
                             			</ul>
                             		</div>
                             </td>
-                        </tr> 
+                        </tr>
+                        <tr>
+                            <td>Matériel de secours</td>
+                            <td>
+                                <div class="radio">
+                                            <label>
+                                                <input type="radio" name="connaissance5" id="optionsRadios9" value="Oui" checked="">
+                                                Oui
+                                            </label>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <label>
+                                                <input type="radio" name="connaissance5" id="optionsRadios10" value="Non">
+                                                Non
+                                            </label>
+                                        </div>
+                            </td>
+                            <td>
+                                
+                                    
+                                        
+                                            <div class="radio">
+                                               
+                                                                    <input type="text" class="form-control datepickerAll" placeholder = "Date de péremption">
+                                                
+                                            </div>
+                                        
+                                    
+                            </td>
+                        </tr>
                         <tr>
                             <td>Schéma de remplacement</td>
                             <td>
@@ -512,7 +562,7 @@
                             <td><input type="text" class="form-control" id="cnsobservation6" name="cnsobservation6"></td>
                         </tr>
                         <tr>
-                            <td>Maitrise de l'acceptation du bolus de correction</td>
+                            <td>Maitrise de l'adaptation du bolus de correction</td>
                             <td>
                             	<div class="radio">
                     				<label>
@@ -528,8 +578,25 @@
                             </td>
                             <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
                         </tr>
+                         <tr>
+                            <td>Réalise le contrôle de la Cétone</td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="connaissance10" id="optionsRadios19" value="Oui" checked="">
+                                        Oui
+                                    </label>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <input type="radio" name="connaissance10" id="optionsRadios20" value="Non">
+                                        Non
+                                    </label>
+                                </div>
+                            </td>
+                            <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
+                        </tr>
                         <tr>
-                            <td>CAT en cas d'accétonémie</td>
+                            <td>CAT en cas de cétone</td>
                             <td>
                             	<div class="radio">
                     				<label>
