@@ -40,8 +40,8 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <label for="etatcutane">Etat cutané au point injection :	</label>
-                <input type="text" class="form-control" id="etatcutane" name="etatcutane" placeholder="etat cutané au point injection"/>
+                <label for="etatcutane">Êtat cutané au point injection :	</label>
+                <input type="text" class="form-control" id="etatcutane" name="etatcutane" placeholder="êtat cutané au point injection"/>
             </div>
             <div class="col-lg-6">
                 <label for="choixpoint">Choix des points d'injection :	</label>
@@ -81,7 +81,7 @@
                                 <th></th>
                                 <th>Horaires</th>
                                 <th>Ration Insuline/glucide</th>
-                                <th>Objectif glicémique</th>
+                                <th>Objectif glycémique</th>
                                 <th>Sensibilité à  l'insuline</th>
                             </tr>
                         </thead>
