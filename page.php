@@ -70,6 +70,7 @@
                 left: 10px;
                 width: 200px;
                 height: auto;
+                z-index: 9999;
             }
         </style>
 
@@ -80,6 +81,8 @@
         <script src="bootstrap-datepicker-1.6.4/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
         <script>
             $(document).ready(function () {
+                $('#titreEtape').html("<div class='list-group-item active'>Etape 1</div><div class='list-group-item'>Renseignements</div><div class='list-group-item'>Choix du matériel</div>");
+
                 $("#insulinelentematin").change(function (event) {
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
                             ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
@@ -1784,21 +1787,6 @@
 
         </div>
 
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.round').click(function(){
-                    $('.round').removeClass('active');
-                    $(this).addClass('active');
-                });
-            });
-
-            function enHaut()
-                {
-                    $('html,body').animate({scrollTop: 0}, 'slow');
-                }
-        </script>
-
-
         <button class="btn btn-primary btn-lg hidden" id="triggerwarning" data-toggle="modal" data-target="#loginerror"></button>
         <div class="modal" id="loginerror">
             <div class="modal-dialog">
@@ -1820,6 +1808,20 @@
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
         <script src="assets/js/Chart.min.js"></script>
            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.round').click(function(){
+                    $('.round').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });
+
+            function enHaut()
+                {
+                    $('html,body').animate({scrollTop: 0}, 'slow');
+                }
+        </script>
 
         <script type="text/javascript">
 

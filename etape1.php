@@ -58,7 +58,7 @@ if ($statut == "Médecin traitant") {
 <div class="container-fluid">
     <fieldset class="well">
 
-        <center><h4>RENSEIGNEMENTS BASTIDE LE CONFORT MEDICAL</h4></center>
+        
         <div class="form-group">
             <label for="nom" class="col-sm-4 control-label">Nom IDE Responsable:</label>
             <div class="col-sm-7">
@@ -522,9 +522,9 @@ if ($statut == "Médecin traitant") {
             </div>
         </div>
         <div class="form-group">
-            <label for="observation" class="col-sm-4 control-label">Observations et commentaires:</label>
+            <label for="observation" class="col-sm-4 control-label">Observations</label>
             <div class="col-sm-7">
-                <textarea rows="3" type="text" placeholder="Observations et commentaires" class="form-control" name="observation" id="observation"></textarea>
+                <textarea rows="3" type="text" placeholder="Observations" class="form-control" name="observation" id="observation"></textarea>
             </div>
         </div>
 
