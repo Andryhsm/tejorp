@@ -146,7 +146,7 @@
         <label for="survenue">Survenue de compilations :  </label>
         <textarea rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de compilations"></textarea>
         <br>
-        <label for="atcd">ATCD/ autre pathologies :  </label>
+        <label for="atcd">ATCD/ autres pathologies :  </label>
         <textarea rows="3" type="text" name="atcd" class="form-control" id="" placeholder="ATCD/ autre pathologies"></textarea>
         <br>
         <label for="traitement">Traitement :  </label>
