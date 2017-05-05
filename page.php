@@ -225,6 +225,8 @@
                     $("#etape5").hide();
                     $("#etape6").hide();
                     $('#titreEtape').html("<div class='list-group-item active'>Etape 1</div><div class='list-group-item'>Renseignements</div><div class='list-group-item'>Choix du matériel</div>");
+                    
+                    document.getElementById("field1").style.backgroundColor="rgba(0,63,71,.7)";
                 });
                 $("#2").click(function () {
                     $("#etape1").hide();

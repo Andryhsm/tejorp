@@ -2,7 +2,7 @@
 
 require './cnx.php';
 
-
+/*
 $activitephysique = ($_POST["activitephysique"]);
 $profession = ($_POST["profession"]);
 $situationfamiliale = ($_POST["situationfamiliale"]);
@@ -250,13 +250,13 @@ $ValHbA1cHemGlyc7 = ($_POST['ValHbA1cHemGlyc7']);
 $ValHbA1cHemGlyc8 = ($_POST['ValHbA1cHemGlyc8']);
 $ValHbA1cHemGlyc9 = ($_POST['ValHbA1cHemGlyc9']);
 
-
+*/
 
 
 
 
 try {
-    
+    /*
       $bdd->exec("INSERT INTO infobastide(nomresp, prenomresp, mobileresp, coordonnee) VALUES('" . $_POST["nomresp"] . "','" . $_POST["prenomresp"] . "','" . $_POST["mobileresp"] . "','" . $_POST["coordonnee"] . "')") or die(print_r($bdd->ErrorInfo()));
 
       $bdd->exec("INSERT INTO infopatient(nompatient, prenompatient, datenaissance, agepatient, telpatient, mobilepatient, adressepatient, codepostalpatient, villepatient) VALUES('" . $_POST["nompatient"] . "','" . $_POST["prenompatient"] . "','" . $_POST["datenaissance"] . "','" . $_POST["agepatient"] . "','" . $_POST["telpatient"] . "','" . $_POST["mobilepatient"] . "','" . $_POST["adressepatient"] . "','" . $_POST["codepostalpatient"] . "','" . $_POST["villepatient"] . "')")or die(print_r($bdd->ErrorInfo()));
@@ -275,22 +275,137 @@ try {
 
       $bdd->exec("INSERT INTO habitudealimentaire(regime, observation2, survenue, atcd, traitement, date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9, imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9) VALUES ('" . $regime . "','" . $observation2 . "', '" . $survenue . "', '" . $atcd . "','" . $traitement . "','" . $date1 . "','" . $date2 . "','" . $date3 . "','" . $date4 . "','" . $date5 . "','" . $date6 . "','" . $date7 . "','" . $date8 . "','" . $date9 . "','" . $taille1 . "','" . $taille2 . "','" . $taille3 . "','" . $taille4 . "','" . $taille5 . "','" . $taille6 . "','" . $taille7 . "','" . $taille8 . "','" . $taille9 . "','" . $poids1 . "','" . $poids2 . "','" . $poids3 . "','" . $poids4 . "','" . $poids5 . "','" . $poids6 . "','" . $poids7 . "','" . $poids8 . "','" . $poids9 . "','" . $imc1 . "','" . $imc2 . "','" . $imc3 . "','" . $imc4 . "','" . $imc5 . "','" . $imc6 . "','" . $imc7 . "','" . $imc8 . "','" . $imc9 . "')") or die(print_r($bdd->errorInfo()));
  
-      $bdd->exec("INSERT INTO manipulationdelaPompe(date1, date2, date3, date4, commentaire1, date5, date6, date7, date8, commentaire2, date9, date10, date11, date12, commentaire3, date13, date14, date15, date16, commentaire4, date17, date18, date19, date20, commentaire5, date21, date22, date23, date24, commentaire6, date25, date26, date27, date28, commentaire7, date29, date30, date31, date32, commentaire8, date33, date34, date35, date36, commentaire9, autre) VALUES ('" . $_POST["pmpdate1"] . "','" . $_POST["pmpdate2"] . "','" . $_POST["pmpdate3"] . "','" . $_POST["pmpdate4"] . "','" . $_POST["pmpcommentaire1"] . "','" . $_POST["pmpdate5"] . "','" . $_POST["pmpdate6"] . "','" . $_POST["pmpdate7"] . "','" . $_POST["pmpdate8"] . "','" . $_POST["pmpcommentaire2"] . "','" . $_POST["pmpdate9"] . "','" . $_POST["pmpdate10"] . "','" . $_POST["pmpdate11"] . "','" . $_POST["pmpdate12"] . "','" . $_POST["pmpcommentaire3"] . "','" . $_POST["pmpdate13"] . "','" . $_POST["pmpdate14"] . "','" . $_POST["pmpdate15"] . "','" . $_POST["pmpdate16"] . "','" . $_POST["pmpcommentaire4"] . "','" . $_POST["pmpdate17"] . "','" . $_POST["pmpdate18"] . "','" . $_POST["pmpdate19"] . "','" . $_POST["pmpdate20"] . "','" . $_POST["pmpcommentaire5"] . "','" . $_POST["pmpdate21"] . "','" . $_POST["pmpdate22"] . "','" . $_POST["pmpdate23"] . "','" . $_POST["pmpdate24"] . "','" . $_POST["pmpcommentaire6"] . "','" . $_POST["pmpdate25"] . "','" . $_POST["pmpdate26"] . "','" . $_POST["pmpdate27"] . "','" . $_POST["pmpdate28"] . "','" . $_POST["pmpcommentaire7"] . "','" . $_POST["pmpdate29"] . "','" . $_POST["pmpdate291"] . "','" . $_POST["pmpdate292"] . "','" . $_POST["pmpdate293"] . "','" . $_POST["pmpcommentaire8"] . "','" . $_POST["pmpdate294"] . "','" . $_POST["pmpdate295"] . "','" . $_POST["pmpdate296"] . "','" . $_POST["pmpdate297"] . "','" . $_POST["pmpcommentaire9"] . "','" . $_POST["pmpautre"] . "')") or die(print_r($bdd->ErrorInfo()));
+      $bdd->exec("INSERT INTO manipulationdelaPompe
+      	(
+      		date1, date2, date3, date4,
+      		etat1, etat2, etat3, etat4, commentaire1, 
+      		etat5, etat6, etat7, etat8, commentaire2, 
+      		etat9, etat10, etat11, etat12, commentaire3, 
+      		etat13, etat14, etat15, etat16, commentaire4, 
+      		etat17, etat18, etat19, etat20, commentaire5, 
+      		etat21, etat22, etat23, etat24, commentaire6, 
+      		etat25, etat26, etat27, etat28, commentaire7, 
+      		etat29, etat30, etat31, etat32, commentaire8, 
+      		etat33, etat34, etat35, etat36, commentaire9, 
+      		autre) 
+		VALUES ('" 
+			. $_POST["pmpdate1"] . "','"
+			. $_POST["pmpdate2"] . "','"
+			. $_POST["pmpdate3"] . "','"
+			. $_POST["pmpdate4"] . "','"
+			. $_POST["pmpselect1"] . "','" 
+			. $_POST["pmpselect2"] . "','" 
+			. $_POST["pmpselect3"] . "','" 
+			. $_POST["pmpselect4"] . "','" 
+			. $_POST["pmpcommentaire1"] . "','" 
+			. $_POST["pmpselect5"] . "','" 
+			. $_POST["pmpselect6"] . "','" 
+			. $_POST["pmpselect7"] . "','" 
+			. $_POST["pmpselect8"] . "','" 
+			. $_POST["pmpcommentaire2"] . "','" 
+			. $_POST["pmpselect9"] . "','" 
+			. $_POST["pmpselect10"] . "','" 
+			. $_POST["pmpselect11"] . "','" 
+			. $_POST["pmpselect12"] . "','" 
+			. $_POST["pmpcommentaire3"] . "','" 
+			. $_POST["pmpselect13"] . "','" 
+			. $_POST["pmpselect14"] . "','" 
+			. $_POST["pmpselect15"] . "','" 
+			. $_POST["pmpselect16"] . "','" 
+			. $_POST["pmpcommentaire4"] . "','" 
+			. $_POST["pmpselect17"] . "','" 
+			. $_POST["pmpselect18"] . "','" 
+			. $_POST["pmpselect19"] . "','" 
+			. $_POST["pmpselect20"] . "','" 
+			. $_POST["pmpcommentaire5"] . "','" 
+			. $_POST["pmpselect21"] . "','" 
+			. $_POST["pmpselect22"] . "','" 
+			. $_POST["pmpselect23"] . "','" 
+			. $_POST["pmpselect24"] . "','" 
+			. $_POST["pmpcommentaire6"] . "','" 
+			. $_POST["pmpselect25"] . "','" 
+			. $_POST["pmpselect26"] . "','" 
+			. $_POST["pmpselect27"] . "','" 
+			. $_POST["pmpselect28"] . "','" 
+			. $_POST["pmpcommentaire7"] . "','" 
+			. $_POST["pmpselect29"] . "','" 
+			. $_POST["pmpselect291"] . "','" 
+			. $_POST["pmpselect292"] . "','" 
+			. $_POST["pmpselect293"] . "','" 
+			. $_POST["pmpcommentaire8"] . "','" 
+			. $_POST["pmpselect294"] . "','" 
+			. $_POST["pmpselect295"] . "','" 
+			. $_POST["pmpselect296"] . "','" 
+			. $_POST["pmpselect297"] . "','" 
+			. $_POST["pmpcommentaire9"] . "','" 
+			. $_POST["pmpautre"] . "')") or die(print_r($bdd->ErrorInfo()));
 
-      $bdd->exec("INSERT INTO alarmesetprecautions(alarmedate1, alarmedate2, alarmedate3, alarmedate4, commentaire1, alarmedate5, alarmedate6, alarmedate7, alarmedate8, commentaire2, alarmedate9, alarmedate10, alarmedate11, alarmedate12, commentaire3, alarmedate13, alarmedate14, alarmedate15, alarmedate16, commentaire4, alarmedate17, alarmedate18, alarmedate19, alarmedate20, commentaire5, alarmedate21, alarmedate22, alarmedate23, alarmedate24, commentaire6, alarmedate25, alarmedate26, alarmedate27, alarmedate28, commentaire7, autre) VALUES ('" . $_POST["alarmedate1"] . "','" . $_POST["alarmedate2"] . "','" . $_POST["alarmedate3"] . "','" . $_POST["alarmedate4"] . "','" . $_POST["alarmecommentaire1"] . "','" . $_POST["alarmedate5"] . "','" . $_POST["alarmedate6"] . "','" . $_POST["alarmedate7"] . "','" . $_POST["alarmedate8"] . "','" . $_POST["alarmecommentaire2"] . "','" . $_POST["alarmedate9"] . "','" . $_POST["alarmedate10"] . "','" . $_POST["alarmedate11"] . "','" . $_POST["alarmedate12"] . "','" . $_POST["alarmecommentaire3"] . "','" . $_POST["alarmedate13"] . "','" . $_POST["alarmedate14"] . "','" . $_POST["alarmedate15"] . "','" . $_POST["alarmedate16"] . "','" . $_POST["alarmecommentaire4"] . "','" . $_POST["alarmedate17"] . "','" . $_POST["alarmedate18"] . "','" . $_POST["alarmedate19"] . "','" . $_POST["alarmedate20"] . "','" . $_POST["alarmecommentaire5"] . "','" . $_POST["alarmedate21"] . "','" . $_POST["alarmedate22"] . "','" . $_POST["alarmedate23"] . "','" . $_POST["alarmedate24"] . "','" . $_POST["alarmecommentaire6"] . "','" . $_POST["alarmedate25"] . "','" . $_POST["alarmedate26"] . "','" . $_POST["alarmedate27"] . "','" . $_POST["alarmedate28"] . "','" . $_POST["alarmecommentaire7"] . "','" . $_POST["alarmeautre"] . "')") or die(print_r($bdd->ErrorInfo()));
+    $bdd->exec("INSERT INTO alarmesetprecautions
+    	(
+    		alarmedate1, alarmedate2, alarmedate3, alarmedate4,
+    		alarmeetat1, alarmeetat2, alarmeetat3, alarmeetat4, commentaire1, 
+    		alarmeetat5, alarmeetat6, alarmeetat7, alarmeetat8, commentaire2, 
+    		alarmeetat9, alarmeetat10, alarmeetat11, alarmeetat12, commentaire3, 
+    		alarmeetat13, alarmeetat14, alarmeetat15, alarmeetat16, commentaire4, 
+    		alarmeetat17, alarmeetat18, alarmeetat19, alarmeetat20, commentaire5, 
+    		alarmeetat21, alarmeetat22, alarmeetat23, alarmeetat24, commentaire6, 
+    		alarmeetat25, alarmeetat26, alarmeetat27, alarmeetat28, commentaire7, 
+    		autre) 
+		VALUES ('" 
+			. $_POST["alarmedate1"] . "','" 
+			. $_POST["alarmedate2"] . "','" 
+			. $_POST["alarmedate3"] . "','" 
+			. $_POST["alarmedate4"] . "','" 
+			. $_POST["alarmeselect1"] . "','" 
+			. $_POST["alarmeselect2"] . "','" 
+			. $_POST["alarmeselect3"] . "','" 
+			. $_POST["alarmeselect4"] . "','" 
+			. $_POST["alarmecommentaire1"] . "','" 
+			. $_POST["alarmeselect5"] . "','" 
+			. $_POST["alarmeselect6"] . "','" 
+			. $_POST["alarmeselect7"] . "','" 
+			. $_POST["alarmeselect8"] . "','" 
+			. $_POST["alarmecommentaire2"] . "','" 
+			. $_POST["alarmeselect9"] . "','" 
+			. $_POST["alarmeselect10"] . "','" 
+			. $_POST["alarmeselect11"] . "','" 
+			. $_POST["alarmeselect12"] . "','" 
+			. $_POST["alarmecommentaire3"] . "','" 
+			. $_POST["alarmeselect13"] . "','" 
+			. $_POST["alarmeselect14"] . "','" 
+			. $_POST["alarmeselect15"] . "','" 
+			. $_POST["alarmeselect16"] . "','" 
+			. $_POST["alarmecommentaire4"] . "','" 
+			. $_POST["alarmeselect17"] . "','" 
+			. $_POST["alarmeselect18"] . "','" 
+			. $_POST["alarmeselect19"] . "','" 
+			. $_POST["alarmeselect20"] . "','" 
+			. $_POST["alarmecommentaire5"] . "','" 
+			. $_POST["alarmeselect21"] . "','" 
+			. $_POST["alarmeselect22"] . "','" 
+			. $_POST["alarmeselect23"] . "','" 
+			. $_POST["alarmeselect24"] . "','" 
+			. $_POST["alarmecommentaire6"] . "','" 
+			. $_POST["alarmeselect25"] . "','" 
+			. $_POST["alarmeselect26"] . "','" 
+			. $_POST["alarmeselect27"] . "','" 
+			. $_POST["alarmeselect28"] . "','" 
+			. $_POST["alarmecommentaire7"] . "','" 
+			. $_POST["alarmeautre"] . "')") or die(print_r($bdd->ErrorInfo()));
 
-    
+ */    
     $bdd->exec("INSERT INTO manipulations
 		(
-			date1, date2, date3, date4, 
+			date1, date2, date3, date4,
+			etat1, etat2, etat3, etat4, 
 			commentaire1, 
-			date5, date6, date7, date8,
+			etat5, etat6, etat7, etat8,
 			commentaire2, 
-			date9, date10, date11, date12,
+			etat9, etat10, etat11, etat12,
 			commentaire3, 
-			date13, date14, date15, date16,
+			etat13, etat14, etat15, etat16,
 			commentaire4, 
-			date17, date18, date19, date20,
+			etat17, etat18, etat19, etat20,
 			commentaire5
 		) VALUES 
 		('"
@@ -298,30 +413,34 @@ try {
                     . $_POST["manipdate2"] . "','"
                     . $_POST["manipdate3"] . "','"
                     . $_POST["manipdate4"] . "','"
+                    . $_POST["manipselect1"] . "','"
+                    . $_POST["manipselect2"] . "','"
+                    . $_POST["manipselect3"] . "','"
+                    . $_POST["manipselect4"] . "','"
                     . $_POST["manipcommentaire1"] . "','"
-                    . $_POST["manipdate5"] . "','"
-                    . $_POST["manipdate6"] . "','"
-                    . $_POST["manipdate7"] . "','"
-                    . $_POST["manipdate8"] . "','"
+                    . $_POST["manipselect5"] . "','"
+                    . $_POST["manipselect6"] . "','"
+                    . $_POST["manipselect7"] . "','"
+                    . $_POST["manipselect8"] . "','"
                     . $_POST["manipcommentaire2"] . "','"
-                    . $_POST["manipdate9"] . "','"
-                    . $_POST["manipdate10"] . "','"
-                    . $_POST["manipdate11"] . "','"
-                    . $_POST["manipdate12"] . "','"
+                    . $_POST["manipselect9"] . "','"
+                    . $_POST["manipselect10"] . "','"
+                    . $_POST["manipselect11"] . "','"
+                    . $_POST["manipselect12"] . "','"
                     . $_POST["manipcommentaire3"] . "','"
-                    . $_POST["manipdate13"] . "','"
-                    . $_POST["manipdate14"] . "','"
-                    . $_POST["manipdate15"] . "','"
-                    . $_POST["manipdate16"] . "','"
+                    . $_POST["manipselect13"] . "','"
+                    . $_POST["manipselect14"] . "','"
+                    . $_POST["manipselect15"] . "','"
+                    . $_POST["manipselect16"] . "','"
                     . $_POST["manipcommentaire4"] . "','"
-                    . $_POST["manipdate17"] . "','"
-                    . $_POST["manipdate18"] . "','"
-                    . $_POST["manipdate19"] . "','"
-                    . $_POST["manipdate20"] . "','"
+                    . $_POST["manipselect17"] . "','"
+                    . $_POST["manipselect18"] . "','"
+                    . $_POST["manipselect19"] . "','"
+                    . $_POST["manipselect20"] . "','"
                     . $_POST["manipcommentaire5"] .
                     "')") or die(print_r($bdd->ErrorInfo()));
 
-
+/*
     $bdd->exec("INSERT INTO poseducatheter
 		(
 			date1, date2, date3, date4, 
@@ -472,7 +591,7 @@ try {
                     . $_POST["perempdate1"] . "','"
                     . $_POST["perempdate2"] .
                     "')") or die(print_r($bdd->ErrorInfo()));
-
+*/
 
     echo "Enregistrement reussi!";
 } catch (PDOException $e) {

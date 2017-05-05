@@ -1,15 +1,28 @@
+<style type="text/css">
+.field5
+{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgba(84, 46, 90, 0.4);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(84, 46, 90, 0.4);
+    box-shadow: inset 0 1px 1px rgba(84, 46, 90, 0.4);
+}
+</style>
+
 <div class ="container-fluid">
-	<fieldset class="well" id="field">
+	<fieldset class="field5" id="field">
 		<center><font><h4>POSE DU CATHETER</h4></font></center><br/>
 
 		<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" id="cathdate1" name="cathdate1" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" id="cathdate2" name="cathdate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" id="cathdate3" name="cathdate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" id="cathdate4" name="cathdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -17,316 +30,316 @@
                         <tr>
                             <td>Mise en place du cathéter dans l'Inserteur</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect1" name="cathselect1">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect2" name="cathselect2">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect3" name="cathselect3">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect4" name="cathselect4">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire1" id = "cathcommentaire1"></td>
                         </tr>
                         <tr>
                             <td>Retrait de l'adhésif et de la protection de l'aiguille</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect5" name="cathselect5">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect6" name="cathselect6">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect7" name="cathselect7">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect8" name="cathselect8">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire2" id = "cathcommentaire2"></td>
                         </tr>
                         <tr>
                             <td>Armement de l'Inserteur</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect9" name="cathselect9">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect10" name="cathselect10">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect11" name="cathselect11">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect12" name="cathselect12">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire3" id = "cathcommentaire3"></td>
                         </tr> 
                         <tr>
                             <td>Choix du lieu d'injection</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect13" name="cathselect13">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect14" name="cathselect14">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect15" name="cathselect15">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect16" name="cathselect16">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire4" id = "cathcommentaire4"></td>
                         </tr>
                         <tr>
                             <td>Désinfection cutanée</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect17" name="cathselect17">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect18" name="cathselect18">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect19" name="cathselect19">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect20" name="cathselect20">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire5" id = "cathcommentaire5"></td>
                         </tr>
                         <tr>
                             <td>Déclenchement de l'Inserteur</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect21" name="cathselect21">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect22" name="cathselect22">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect23" name="cathselect23">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect24" name="cathselect24">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire6" id = "cathcommentaire6"></td>
                         </tr>
                         <tr>
                             <td>Retrait de l'aiguille</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect25" name="cathselect25">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect26" name="cathselect26">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect27" name="cathselect27">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect28" name="cathselect28">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire7" id = "cathcommentaire7"></td>
                         </tr>
                         <tr>
                             <td>Amorce de la canule</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect29" name="cathselect29">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect211" name="cathselect211">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect212" name="cathselect212">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect213" name="cathselect213">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire8" id = "cathcommentaire8"></td>
                         </tr>
                         <tr>
                             <td>Contrôle glycémique 2h après la pose</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect214" name="cathselect214">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect215" name="cathselect215">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect216" name="cathselect216">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect217" name="cathselect217">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire9" id = "cathcommentaire9"></td>
                         </tr>
                         <tr>
                             <td>Conservation de l'insuline</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect218" name="cathselect218">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect219" name="cathselect219">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect221" name="cathselect221">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect222" name="cathselect222">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire13" id = "cathcommentaire13"></td>
                         </tr>
                         <tr>
                             <td>Fréquence de changement des cathéters</td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect223" name="cathselect223">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect224" name="cathselect224">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect225" name="cathselect225">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
                             <td>
-                                <select class="form-control">                                 
+                                <select class="form-control" id="cathselect226" name="cathselect226">                                 
                                     <option value="oui">Acquis</option>
                                     <option value="non">Non acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                             </td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input type="text" class="form-control" name = "cathcommentaire11" id = "cathcommentaire11"></td>
                         </tr>
                     </tbody>
                 </table>
         </fieldset>
 
-        <fieldset class="well" id="field">
+        <fieldset class="field5" id="field">
             <center><font><h4>CONNAISSANCES</h4></font></center><br/>
 
 				<table class="table table-bordered" style="color: white;">
@@ -425,12 +438,12 @@
                 						</div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="connaissance5" id="optionsRadios9" value="Oui" checked="">
+                                                <input type="radio" name="connaissance6" id="optionsRadios11" value="Oui" checked="">
                                                 Oui
                                             </label>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <label>
-                                                <input type="radio" name="connaissance5" id="optionsRadios10" value="Non">
+                                                <input type="radio" name="connaissance6" id="optionsRadios12" value="Non">
                                                 Non
                                             </label>
                                         </div>
@@ -453,12 +466,12 @@
                             				</div>
                                             <div class="radio">
                                                 
-                                                                    <input type="text" class="form-control datepickerAll" id="perempdate2" name="perempdate2">
+                                                                    <input type="text" class="form-control datepickerAll" id="perempdate3" name="perempdate3">
                                                 
                                             </div>
                                             <div class="radio">
                                                 
-                                                                    <input type="text" class="form-control datepickerAll" id="perempdate2" name="perempdate2">
+                                                                    <input type="text" class="form-control datepickerAll" id="perempdate4" name="perempdate4">
                                                
                                             </div>
                             			</ul>
@@ -470,12 +483,12 @@
                             <td>
                                 <div class="radio">
                                             <label>
-                                                <input type="radio" name="connaissance5" id="optionsRadios9" value="Oui" checked="">
+                                                <input type="radio" name="connaissance7" id="optionsRadios13" value="Oui" checked="">
                                                 Oui
                                             </label>
                                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <label>
-                                                <input type="radio" name="connaissance5" id="optionsRadios10" value="Non">
+                                                <input type="radio" name="connaissance7" id="optionsRadios14" value="Non">
                                                 Non
                                             </label>
                                         </div>
@@ -486,7 +499,7 @@
                                         
                                             <div class="radio">
                                                
-                                                                    <input type="text" class="form-control datepickerAll" placeholder = "Date de péremption">
+                                                                    <input type="text" class="form-control datepickerAll" id="perempdate5" name="perempdate5" placeholder = "Date de péremption">
                                                 
                                             </div>
                                         
@@ -495,40 +508,6 @@
                         </tr>
                         <tr>
                             <td>Schéma de remplacement</td>
-                            <td>
-                            	<div class="radio">
-                    				<label>
-                        				<input type="radio" name="connaissance6" id="optionsRadios11" value="Oui" checked="">
-                        				Oui
-                    				</label>
-                   						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    				<label>
-                        				<input type="radio" name="connaissance6" id="optionsRadios12" value="Non">
-                        				Non
-                    				</label>
-                				</div>
-                            </td>
-                            <td><input type="text" class="form-control" id="cnsobservation3" name="cnsobservation3"></td>
-                        </tr>
-                        <tr>
-                            <td>CAT en cas d'hypoglycémie</td>
-                            <td>
-                            	<div class="radio">
-                    				<label>
-                        				<input type="radio" name="connaissance7" id="optionsRadios13" value="Oui" checked="">
-                        				Oui
-                    				</label>
-                   						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    				<label>
-                        				<input type="radio" name="connaissance7" id="optionsRadios14" value="Non">
-                        				Non
-                    				</label>
-                				</div>
-                            </td>
-                            <td><input type="text" class="form-control" id="cnsobservation4" name="cnsobservation4"></td>
-                        </tr>
-                        <tr>
-                            <td>Maitrise du ressucrage</td>
                             <td>
                             	<div class="radio">
                     				<label>
@@ -542,10 +521,10 @@
                     				</label>
                 				</div>
                             </td>
-                            <td><input type="text" class="form-control" id="cnsobservation5" name="cnsobservation5"></td>
-                        </tr>                        
+                            <td><input type="text" class="form-control" id="cnsobservation3" name="cnsobservation3"></td>
+                        </tr>
                         <tr>
-                            <td>CAT en cas d'hyperglycémie</td>
+                            <td>CAT en cas d'hypoglycémie</td>
                             <td>
                             	<div class="radio">
                     				<label>
@@ -559,10 +538,10 @@
                     				</label>
                 				</div>
                             </td>
-                            <td><input type="text" class="form-control" id="cnsobservation6" name="cnsobservation6"></td>
+                            <td><input type="text" class="form-control" id="cnsobservation4" name="cnsobservation4"></td>
                         </tr>
                         <tr>
-                            <td>Maitrise de l'adaptation du bolus de correction</td>
+                            <td>Maitrise du ressucrage</td>
                             <td>
                             	<div class="radio">
                     				<label>
@@ -576,27 +555,10 @@
                     				</label>
                 				</div>
                             </td>
-                            <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
-                        </tr>
-                         <tr>
-                            <td>Réalise le contrôle de la Cétone</td>
-                            <td>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="connaissance10" id="optionsRadios19" value="Oui" checked="">
-                                        Oui
-                                    </label>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <label>
-                                        <input type="radio" name="connaissance10" id="optionsRadios20" value="Non">
-                                        Non
-                                    </label>
-                                </div>
-                            </td>
-                            <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
-                        </tr>
+                            <td><input type="text" class="form-control" id="cnsobservation5" name="cnsobservation5"></td>
+                        </tr>                        
                         <tr>
-                            <td>CAT en cas de cétone</td>
+                            <td>CAT en cas d'hyperglycémie</td>
                             <td>
                             	<div class="radio">
                     				<label>
@@ -610,13 +572,64 @@
                     				</label>
                 				</div>
                             </td>
+                            <td><input type="text" class="form-control" id="cnsobservation6" name="cnsobservation6"></td>
+                        </tr>
+                        <tr>
+                            <td>Maitrise de l'adaptation du bolus de correction</td>
+                            <td>
+                            	<div class="radio">
+                    				<label>
+                        				<input type="radio" name="connaissance12" id="optionsRadios23" value="Oui" checked="">
+                        				Oui
+                    				</label>
+                   						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    				<label>
+                        				<input type="radio" name="connaissance12" id="optionsRadios24" value="Non">
+                        				Non
+                    				</label>
+                				</div>
+                            </td>
+                            <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
+                        </tr>
+                         <tr>
+                            <td>Réalise le contrôle de la Cétone</td>
+                            <td>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="connaissance13" id="optionsRadios25" value="Oui" checked="">
+                                        Oui
+                                    </label>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <input type="radio" name="connaissance13" id="optionsRadios26" value="Non">
+                                        Non
+                                    </label>
+                                </div>
+                            </td>
+                            <td><input type="text" class="form-control" id="cnsobservation7" name="cnsobservation7"></td>
+                        </tr>
+                        <tr>
+                            <td>CAT en cas de cétone</td>
+                            <td>
+                            	<div class="radio">
+                    				<label>
+                        				<input type="radio" name="connaissance14" id="optionsRadios27" value="Oui" checked="">
+                        				Oui
+                    				</label>
+                   						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    				<label>
+                        				<input type="radio" name="connaissance14" id="optionsRadios28" value="Non">
+                        				Non
+                    				</label>
+                				</div>
+                            </td>
                             <td><input type="text" class="form-control" id="cnsobservation8" name="cnsobservation8"></td>
                         </tr>                     
                     </tbody>
                 </table>
 		</fieldset>
 
-		<fieldset class="well" id="field">
+		<fieldset class="field5" id="field">
 			<center><font><h4>AUTO SURVEILLANCE GLYCEMIQUE</h4></font></center><br/>
 				<table class="table table-bordered" style="color: white;">
                     <thead>
@@ -651,7 +664,7 @@
                 </table>
 		</fieldset>
 
-		<fieldset class="well" id="field">
+		<fieldset class="field5" id="field">
 			<center><font><h4>AUTO SURVEILLANCE GLYCEMIQUE (ASG)</h4></font></center><br/>
 				<table class="table table-bordered" style="color: white;">
                     <thead>
@@ -683,17 +696,17 @@
                             <td>
                                 <div class="radio" align = "center">
                                     <label>
-                                        <input type="radio" value="Oui" checked="">
+                                        <input type="radio" name="asg1" id="asgRadio1" value="Oui" checked="">
                                         Oui
                                     </label>
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     <label>
-                                        <input type="radio" value="Non">
+                                        <input type="radio" name="asg1" id="asgRadio2" value="Non">
                                         Non
                                     </label>
                                 </div>
                             </td>
-                            <td><input type="text" class="form-control" placeholder = Commentaire></td>
+                            <td><input type="text" class="form-control" placeholder = "Commentaire"></td>
                         </tr>                                      
                     </tbody>
                 </table>
