@@ -94,67 +94,101 @@
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
                             ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
                             ILsoir = ($("#insulinelentesoir").val()) ? $("#insulinelentesoir").val() : 0,
+                            ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
+                            ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir);
-                    var total = totalIL + parseInt(totalIR);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
-                    $("#quantitetotal").val(total);
                 });
                 $("#insulinelentemidi").change(function (event) {
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
                             ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
                             ILsoir = ($("#insulinelentesoir").val()) ? $("#insulinelentesoir").val() : 0,
+                            ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
+                            ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir);
-                    var total = totalIL + parseInt(totalIR);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
-                    $("#quantitetotal").val(total);
                 });
                 $("#insulinelentesoir").change(function (event) {
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
                             ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
                             ILsoir = ($("#insulinelentesoir").val()) ? $("#insulinelentesoir").val() : 0,
+                            ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
+                            ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir);
-                    var total = totalIL + parseInt(totalIR);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
-                    $("#quantitetotal").val(total);
                 });
-                $("#insulinerapidematin").change(function (event) {
+                $("#insulinelentediner").change(function (event) {
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
                             ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
                             ILsoir = ($("#insulinelentesoir").val()) ? $("#insulinelentesoir").val() : 0,
+                            ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
+                            ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
+                            totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
+                    $("#totalinsulinelente").val(totalIL);
+                });
+                $("#insulinelentecollation").change(function (event) {
+                    var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
+                            ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
+                            ILsoir = ($("#insulinelentesoir").val()) ? $("#insulinelentesoir").val() : 0,
+                            ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
+                            ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
+                            totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
+                    $("#totalinsulinelente").val(totalIL);
+                });
+                
+                
+                $("#insulinerapidematin").change(function (event) {
+                    var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
+                            IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
-                    var total = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + totalR;
-                    $("#quantitetotal").val(total);
+                    
                 });
                 $("#insulinerapidemidi").change(function (event) {
-                    var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
-                            ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
-                            ILsoir = ($("#insulinelentesoir").val()) ? $("#insulinelentesoir").val() : 0,
+                    var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
+                            IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
-                    var total = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + totalR;
-                    $("#quantitetotal").val(total);
                 });
                 $("#insulinerapidesoir").change(function (event) {
-                    var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
-                            ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
-                            ILsoir = ($("#insulinelentesoir").val()) ? $("#insulinelentesoir").val() : 0,
+                    var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
+                            IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
-                    var total = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + totalR;
-                    $("#quantitetotal").val(total);
+                });
+                
+                $("#insulinerapidediner").change(function (event) {
+                    var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
+                            IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
+                            IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
+                            IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
+                            IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
+                    $("#totalinsulinerapide").val(totalR);
+                });
+                
+                $("#insulinerapidecollation").change(function (event) {
+                    var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
+                            IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
+                            IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
+                            IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
+                            IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
+                    $("#totalinsulinerapide").val(totalR);
                 });
                 $('.datepicker').datepicker({
                     language: 'fr',
