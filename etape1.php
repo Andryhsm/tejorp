@@ -58,7 +58,7 @@ if ($statut == "Médecin traitant") {
 <div class="container-fluid">
     <fieldset class="well">
 
-        
+        <center><h4>UTILISATEUR BASTIDE MEDICAL</h4></center>
         <div class="form-group">
             <label for="nom" class="col-sm-4 control-label">Nom IDE Responsable:</label>
             <div class="col-sm-7">
