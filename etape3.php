@@ -20,7 +20,7 @@
                 <textarea type="text" rows="3" class="form-control" id="hygienealimentaire" name="hygienealimentaire" placeholder="hygiène alimentaire"/></textarea>
 
                 <div class="radio">
-                    <label for="stabilitehoraires">Stabilités des horraires : </label>
+                    <label for="stabilitehoraires">Stabilités des horaires : </label>
                     <label>
                         <input type="radio" name="stabilitehoraires" id="radio" value="oui" checked="checked">
                         Oui
@@ -30,7 +30,7 @@
                         Non
                     </label>
                 </div>
-                <label for="details">Details:	</label>
+                <label for="details">Détails:	</label>
                 <textarea name="details" id="inputDetails" class="form-control" rows="3"></textarea>
                 <label for="environnement">Environnement social :	</label>
                 <textarea type="text" rows="3" class="form-control" id="environnement" name="environnement" placeholder="environement social"/></textarea>
