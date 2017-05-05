@@ -445,15 +445,23 @@
                     			</div>
                             </td>
                         </tr>
-                        <tr>
-                            <td style="text-align: center;"></td>
-                            <td style="text-align: center;">OUI</td>
-                            <td style="text-align: center;">NON</td>
-                        </tr>
+                       
                         <tr>
                             <td>Connaissance et respect des mesures d'hygiène relatives l'ASG</td>
-                            <td><input type="text" class="form-control" id="asgconnaissance1" name="asgconnaissance1"></td>
-                            <td><input type="text" class="form-control" id="asgconnaissance2" name="asgconnaissance2"></td>
+                            <td>
+                                <div class="radio" align = "center">
+                                    <label>
+                                        <input type="radio" value="Oui" checked="">
+                                        Oui
+                                    </label>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label>
+                                        <input type="radio" value="Non">
+                                        Non
+                                    </label>
+                                </div>
+                            </td>
+                            <td><input type="text" class="form-control" placeholder = Commentaire></td>
                         </tr>                                      
                     </tbody>
                 </table>
