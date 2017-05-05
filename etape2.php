@@ -597,11 +597,11 @@
                 <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
-                            <td style="text-align: center;">Valeur glycémique</td>
-                            <td style="text-align: center;">Matin (UI)</td>
-                            <td style="text-align: center;">Midi (UI)</td>
+                            <td style="text-align: center;">Petit déjeuner (UI)</td>
+                            <td style="text-align: center;">Déjeuner (UI)</td>
+                            <td style="text-align: center;">Goûter (UI)</td>
+                            <td style="text-align: center;">Dîner (UI)</td>
                             <td style="text-align: center;">Collation (UI)</td>
-                            <td style="text-align: center;">Soir (UI)</td>
                             <td style="text-align: center;">Autre (UI)</td>
                         </tr>
                     </thead>
