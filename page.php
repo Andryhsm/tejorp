@@ -68,17 +68,10 @@
                 position: fixed;
                 top: 80px;
                 left: 10px;
-                width: 150px;
+                width: 200px;
                 height: auto;
                 z-index: 9999;
             }
-            /*
-            body
-            {
-                margin-left: 50px;
-            }
-            */
-            
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
@@ -718,8 +711,7 @@
                             poids1 = $("#poids1").val();
                             var taille = Math.pow((taille1 * 0.01), 2);
                             imc1 = poids1 / taille;
-                            imc1 = imc1.toFixed(1);
-                            $("#imc1").val(imc1);
+                            $("#imc1").val(imc1);   
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
                         $("#date2").change(function (event) {
@@ -732,7 +724,6 @@
                             poids2 = $("#poids2").val();
                             var taille = Math.pow((taille2 * 0.01), 2);
                             imc2 = poids2 / taille;
-                            imc2 = imc2.toFixed(1);
                             $("#imc2").val(imc2);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -746,7 +737,6 @@
                             poids3 = $("#poids3").val();
                             var taille = Math.pow((taille3 * 0.01), 2);
                             imc3 = poids3 / taille;
-                            imc3 = imc3.toFixed(1);
                             $("#imc3").val(imc3);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -760,7 +750,6 @@
                             poids4 = $("#poids4").val();
                             var taille = Math.pow((taille4 * 0.01), 2);
                             imc4 = poids4 / taille;
-                            imc4 = imc4.toFixed(1);
                             $("#imc4").val(imc4);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -774,7 +763,6 @@
                             poids5 = $("#poids5").val();
                             var taille = Math.pow((taille5 * 0.01), 2);
                             imc5 = poids5 / taille;
-                            imc5 = imc5.toFixed(1);
                             $("#imc5").val(imc5);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -788,7 +776,6 @@
                             poids6 = $("#poids6").val();
                             var taille = Math.pow((taille6 * 0.01), 2);
                             imc6 = poids6 / taille;
-                            imc6 = imc6.toFixed(1);
                             $("#imc6").val(imc6);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -802,7 +789,6 @@
                             poids7 = $("#poids7").val();
                             var taille = Math.pow((taille7 * 0.01), 2);
                             imc7 = poids7 / taille;
-                            imc7 = imc7.toFixed(1);
                             $("#imc7").val(imc7);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -816,7 +802,6 @@
                             poids8 = $("#poids8").val();
                             var taille = Math.pow((taille8 * 0.01), 2);
                             imc8 = poids8 / taille;
-                            imc8 = imc8.toFixed(1);
                             $("#imc8").val(imc8);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -830,7 +815,6 @@
                             poids9 = $("#poids9").val();
                             var taille = Math.pow((taille9 * 0.01), 2);
                             imc9 = poids9 / taille;
-                            imc9 = imc9.toFixed(1);
                             $("#imc9").val(imc9);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                             setTimeout(function () {
@@ -1795,7 +1779,7 @@
             <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
             -->
             <ul>
-                <li><a class="round green active" onClick="enHaut();" id = "1">Etape 1
+                <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
                     <span class="round">
                         Renseignements<br>
                         Choix du matériel
