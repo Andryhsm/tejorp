@@ -295,8 +295,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <label for="autreaiguille" class="col-lg-3 control-label">Seringue:</label>
-                    <div class="col-lg-9">
+                    <label for="autreaiguille" class="col-lg-4 control-label">Seringue:</label>
+                    <div class="col-lg-8">
                         <input type="text" class="form-control" name="autreaiguille" id="autreaiguille" placeholder="Seringue  ">
                     </div>
                 </div>
