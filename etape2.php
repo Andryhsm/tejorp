@@ -1,6 +1,19 @@
-<section class="container-fluid">
+<style type="text/css">
+.field2
+{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgba(133,32,28,.4);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
+    box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
+}
+</style>
+
+    <section class="container-fluid">
     <div>
-        <div class="well">
+        <div class="field2">
             <h4 style="text-align: center;">DONNEES MEDICALES</h4></br>
             <fieldset>
 
@@ -94,7 +107,7 @@
             </fieldset>	
         </div>
 
-        <div class="well">
+        <div class="field2">
 
             <fieldset>
                 <h4 style="text-align: center;">Auto surveillance glycémique</h4><br>
@@ -131,7 +144,7 @@
                 </div>
         </div>
 
-        <div class="well">
+        <div class="field2">
             <h4 style="text-align: center;">Insulinothérapie</h4><br>
             <div class="form-group">
                 <label for="nombreinjectionjour" class="col-lg-4 control-label">Nombre d’injection par jour:</label>
@@ -245,7 +258,7 @@
 
         </div>
 
-        <div class="well">
+        <div class="field2">
 
             <h4>Traitement complémentaire :</h4><br>
             <table class="table table-bordered" style="color: white;">
@@ -276,7 +289,7 @@
             </fieldset>
         </div>
 
-        <div class="well">
+        <div class="field2">
             <fieldset>
                 <table class="table table-bordered table-responsive" style="color: white;">
                     <thead>
@@ -491,7 +504,7 @@
         </div>
 
         </br>
-        <div class="well table-responsive">
+        <div class="field2 table-responsive">
             <fieldset>
                 <label for="Autre1" class="col-lg-5 control-label">Schéma des bolus</label>
                 <label for="Autre1" class="col-lg-3 control-label">Date de MAJ :</label>
@@ -731,7 +744,7 @@
             </fieldset>
         </div>
         </br>
-        <div class="well table-responsive">
+        <div class="field2 table-responsive">
             <fieldset>
 
                 <label for="Autre1" class="col-lg-7 control-label">Hémoglobine glyquée</label>

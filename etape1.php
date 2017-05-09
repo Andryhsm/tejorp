@@ -54,9 +54,22 @@ if ($statut == "Médecin traitant") {
 }
 ?>
 
+<style type="text/css">
+.field1 
+{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgba(0,63,71,.5);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,63,71,.5);
+    box-shadow: inset 0 1px 1px rgba(0,63,71,.5);
+}
+</style>
+
 
 <div class="container-fluid">
-    <fieldset class="well">
+    <fieldset class="field1">
 
         <center><h4>UTILISATEUR BASTIDE MEDICAL</h4></center>
         <div class="form-group">
@@ -88,7 +101,7 @@ if ($statut == "Médecin traitant") {
 
     </fieldset>
     <fieldset class="col-sm-5">
-        <div class="well">
+        <div class="field1">
             <center><h4>RENSEIGNEMENTS PATIENT</h4></center>
             <div class="form-group">
                 <label for="nom" class="col-sm-4 control-label">Nom:</label>
@@ -168,7 +181,7 @@ if ($statut == "Médecin traitant") {
     </fieldset>
 
     <fieldset class="col-sm-7">
-        <div class="well">
+        <div class="field1">
             <center><h4>RENSEIGNEMENTS PRESCRIPTEUR</h4></center>
             <div class="form-group">
                 <label for="prescripteur" class="col-sm-4 control-label">Etablissement prescripteur:</label>
@@ -371,7 +384,7 @@ if ($statut == "Médecin traitant") {
         </div>
     </fieldset>
 
-    <fieldset class="well col-sm-12">
+    <fieldset class="field1 col-sm-12">
         <center><h4>CHOIX DU MATERIEL</h4></center>
         <div class="form-group">
             <label for="nom" class="col-sm-4 control-label">Pompe:</label>

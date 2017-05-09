@@ -1,5 +1,18 @@
+<style type="text/css">
+.field3 
+{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgba(8, 110, 25, 0.4);
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(8, 110, 25, 0.4);
+    box-shadow: inset 0 1px 1px rgba(8, 110, 25, 0.4);
+}
+</style>
+
 <div class="container-fluid">
-    <fieldset class="well" id="field">
+    <fieldset class="field3" id="field">
         <center><font><h4>HABITUDE DE VIE</h4></font></center><br/>
         <div class="row">
             <div class="col-lg-6">
@@ -71,7 +84,7 @@
     </fieldset><br/><br/>
 
 
-    <fieldset class="well" id="field">
+    <fieldset class="field3" id="field">
         <center><font><h4>INSULINOTHERAPIE FONCTIONNELLE</h4></font>
             <div class="form-group">
                 <div class="table-responsive">
@@ -137,7 +150,7 @@
 
 
 
-    <fieldset class="well" id="field">
+    <fieldset class="field3" id="field">
         <center><font><h4>HABITUDES ALIMENTAIRES</h4></font></center><br/>
 
 
