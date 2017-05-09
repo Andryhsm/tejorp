@@ -393,7 +393,7 @@ try {
 			. $_POST["alarmecommentaire7"] . "','" 
 			. $_POST["alarmeautre"] . "')") or die(print_r($bdd->ErrorInfo()));
 
- */    
+  
     $bdd->exec("INSERT INTO manipulations
 		(
 			date1, date2, date3, date4,
@@ -439,31 +439,32 @@ try {
                     . $_POST["manipselect20"] . "','"
                     . $_POST["manipcommentaire5"] .
                     "')") or die(print_r($bdd->ErrorInfo()));
+ 
 
-/*
     $bdd->exec("INSERT INTO poseducatheter
 		(
-			date1, date2, date3, date4, 
+			date1, date2, date3, date4,
+			etat1, etat2, etat3, etat4,
 			commentaire1, 
-			date5, date6, date7, date8,
+			etat5, etat6, etat7, etat8,
 			commentaire2, 
-			date9, date10, date11, date12,
+			etat9, etat10, etat11, etat12,
 			commentaire3, 
-			date13, date14, date15, date16,
+			etat13, etat14, etat15, etat16,
 			commentaire4, 
-			date17, date18, date19, date20,
+			etat17, etat18, etat19, etat20,
 			commentaire5,
-			date21, date22, date23, date24,
+			etat21, etat22, etat23, etat24,
 			commentaire6,
-			date25, date26, date27, date28,
+			etat25, etat26, etat27, etat28,
 			commentaire7,
-			date29, date30, date31, date32,
+			etat29, etat30, etat31, etat32,
 			commentaire8,
-			date33, date34, date35, date36,
+			etat33, etat34, etat35, etat36,
 			commentaire9,
-			date37, date38, date39, date40,
+			etat37, etat38, etat39, etat40,
 			commentaire10,
-			date41, date42, date43, date44,
+			etat41, etat42, etat43, etat44,
 			commentaire11
 		) VALUES 
 		('"
@@ -471,59 +472,63 @@ try {
                     . $_POST["cathdate2"] . "','"
                     . $_POST["cathdate3"] . "','"
                     . $_POST["cathdate4"] . "','"
+                    . $_POST["cathselect1"] . "','"
+                    . $_POST["cathselect2"] . "','"
+                    . $_POST["cathselect3"] . "','"
+                    . $_POST["cathselect4"] . "','"
                     . $_POST["cathcommentaire1"] . "','"
-                    . $_POST["cathdate5"] . "','"
-                    . $_POST["cathdate6"] . "','"
-                    . $_POST["cathdate7"] . "','"
-                    . $_POST["cathdate8"] . "','"
+                    . $_POST["cathselect5"] . "','"
+                    . $_POST["cathselect6"] . "','"
+                    . $_POST["cathselect7"] . "','"
+                    . $_POST["cathselect8"] . "','"
                     . $_POST["cathcommentaire2"] . "','"
-                    . $_POST["cathdate9"] . "','"
-                    . $_POST["cathdate10"] . "','"
-                    . $_POST["cathdate11"] . "','"
-                    . $_POST["cathdate12"] . "','"
+                    . $_POST["cathselect9"] . "','"
+                    . $_POST["cathselect10"] . "','"
+                    . $_POST["cathselect11"] . "','"
+                    . $_POST["cathselect12"] . "','"
                     . $_POST["cathcommentaire3"] . "','"
-                    . $_POST["cathdate13"] . "','"
-                    . $_POST["cathdate14"] . "','"
-                    . $_POST["cathdate15"] . "','"
-                    . $_POST["cathdate16"] . "','"
+                    . $_POST["cathselect13"] . "','"
+                    . $_POST["cathselect14"] . "','"
+                    . $_POST["cathselect15"] . "','"
+                    . $_POST["cathselect16"] . "','"
                     . $_POST["cathcommentaire4"] . "','"
-                    . $_POST["cathdate17"] . "','"
-                    . $_POST["cathdate18"] . "','"
-                    . $_POST["cathdate19"] . "','"
-                    . $_POST["cathdate20"] . "','"
+                    . $_POST["cathselect17"] . "','"
+                    . $_POST["cathselect18"] . "','"
+                    . $_POST["cathselect19"] . "','"
+                    . $_POST["cathselect20"] . "','"
                     . $_POST["cathcommentaire5"] . "','"
-                    . $_POST["cathdate21"] . "','"
-                    . $_POST["cathdate22"] . "','"
-                    . $_POST["cathdate23"] . "','"
-                    . $_POST["cathdate24"] . "','"
+                    . $_POST["cathselect21"] . "','"
+                    . $_POST["cathselect22"] . "','"
+                    . $_POST["cathselect23"] . "','"
+                    . $_POST["cathselect24"] . "','"
                     . $_POST["cathcommentaire6"] . "','"
-                    . $_POST["cathdate25"] . "','"
-                    . $_POST["cathdate26"] . "','"
-                    . $_POST["cathdate27"] . "','"
-                    . $_POST["cathdate28"] . "','"
+                    . $_POST["cathselect25"] . "','"
+                    . $_POST["cathselect26"] . "','"
+                    . $_POST["cathselect27"] . "','"
+                    . $_POST["cathselect28"] . "','"
                     . $_POST["cathcommentaire7"] . "','"
-                    . $_POST["cathdate29"] . "','"
-                    . $_POST["cathdate211"] . "','"
-                    . $_POST["cathdate212"] . "','"
-                    . $_POST["cathdate213"] . "','"
+                    . $_POST["cathselect29"] . "','"
+                    . $_POST["cathselect211"] . "','"
+                    . $_POST["cathselect212"] . "','"
+                    . $_POST["cathselect213"] . "','"
                     . $_POST["cathcommentaire8"] . "','"
-                    . $_POST["cathdate214"] . "','"
-                    . $_POST["cathdate215"] . "','"
-                    . $_POST["cathdate216"] . "','"
-                    . $_POST["cathdate217"] . "','"
+                    . $_POST["cathselect214"] . "','"
+                    . $_POST["cathselect215"] . "','"
+                    . $_POST["cathselect216"] . "','"
+                    . $_POST["cathselect217"] . "','"
                     . $_POST["cathcommentaire9"] . "','"
-                    . $_POST["cathdate218"] . "','"
-                    . $_POST["cathdate219"] . "','"
-                    . $_POST["cathdate221"] . "','"
-                    . $_POST["cathdate222"] . "','"
+                    . $_POST["cathselect218"] . "','"
+                    . $_POST["cathselect219"] . "','"
+                    . $_POST["cathselect221"] . "','"
+                    . $_POST["cathselect222"] . "','"
                     . $_POST["cathcommentaire10"] . "','"
-                    . $_POST["cathdate223"] . "','"
-                    . $_POST["cathdate224"] . "','"
-                    . $_POST["cathdate225"] . "','"
-                    . $_POST["cathdate226"] . "','"
+                    . $_POST["cathselect223"] . "','"
+                    . $_POST["cathselect224"] . "','"
+                    . $_POST["cathselect225"] . "','"
+                    . $_POST["cathselect226"] . "','"
                     . $_POST["cathcommentaire11"] .
                     "')") or die(print_r($bdd->ErrorInfo()));
-
+/*
 
     $req = $bdd->prepare("INSERT INTO DonneMedicale(typediabete, datediagnostic, circonstancedecouverte, antecedentfamiliaux, datepremieremisesousPompe, hba1c, poidsactuel, poidsforme, taille, imc, nombreglycemieparjour, typelecteur, dateprescription, styloautopiqueur, nombreinjectionjour, stylo, autrestylo, aiguillestylo, autreaiguille, insulinelentematin, insulinerapidematin, insulinelentemidi, insulinerapidemidi, insulinelentesoir, insulinerapidesoir, totalinsulinelente, totalinsulinerapide, specialite1, posologie1, specialite2, posologie2, specialite3, posologie3, specialite4, posologie4, Horaire1, Debit1, Horaire2, Debit2, Horaire3, Debit3, Horaire4, Debit4, Horaire5, Debit5, Horaire6, Debit6, Horaire7, Debit7, Horaire8, Debit8, Horaire9, Debit9, Horaire10, Debit10, Horaire11, Debit11, Horaire12, Debit12, Horaire13, Debit13, Horaire14, Debit14, Horaire15, Debit15, Horaire16, Debit16, Horaire21, Debit21, Horaire22, Debit22, Horaire23, Debit23, Horaire24, Debit24, Horaire25, Debit25, Horaire26, Debit26, Horaire27, Debit27, Horaire28, Debit28, Horaire29, Debit29, Horaire210, Debit210, Horaire211, Debit211, Horaire212, Debit212, Horaire213, Debit213, Horaire214, Debit214, Horaire215, Debit215, Horaire216, Debit216) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ");
 
@@ -551,22 +556,22 @@ try {
 
     $bdd->exec("INSERT INTO asg2
 			(
-				asgfrequence1, asgfrequence2, asgconnaissance1, asgconnaissance2)
+				asgfrequence1, asgfrequence2, asgconnaissance, asgcommentaire)
 			VALUES 
 			('"
                     . $_POST["asgfrequence1"] . "','"
                     . $_POST["asgfrequence2"] . "','"
-                    . $_POST["asgconnaissance1"] . "','"
-                    . $_POST["asgconnaissance2"] .
+                    . $_POST["asgconnaissance"] . "','"
+                    . $_POST["asgcommentaire"] .
                     "')") or die(print_r($bdd->ErrorInfo()));
 
-
+*/
 
     $bdd->exec("INSERT INTO connaissances
 			(
-				reponse1, reponse2, reponse3, reponse4, reponse5, reponse6, reponse7, reponse8, reponse9, reponse10, reponse11,
-				observation1, observation2, observation3, observation4, observation5, observation6, observation7, observation8,
-				date1, date2)
+				reponse1, reponse2, reponse3, reponse4, reponse5, reponse6, reponse7, reponse8, reponse9, reponse10, reponse11, reponse12, reponse13, reponse14,
+				observation1, observation2, observation3, observation4, observation5, observation6, observation7, observation8, observation9,
+				date1, date2, date3, date4, date5)
 			VALUES 
 			('"
                     . $_POST["connaissance1"] . "','"
@@ -580,6 +585,9 @@ try {
                     . $_POST["connaissance9"] . "','"
                     . $_POST["connaissance10"] . "','"
                     . $_POST["connaissance11"] . "','"
+                    . $_POST["connaissance12"] . "','"
+                    . $_POST["connaissance13"] . "','"
+                    . $_POST["connaissance14"] . "','"
                     . $_POST["cnsobservation1"] . "','"
                     . $_POST["cnsobservation2"] . "','"
                     . $_POST["cnsobservation3"] . "','"
@@ -588,10 +596,14 @@ try {
                     . $_POST["cnsobservation6"] . "','"
                     . $_POST["cnsobservation7"] . "','"
                     . $_POST["cnsobservation8"] . "','"
+                    . $_POST["cnsobservation9"] . "','"
                     . $_POST["perempdate1"] . "','"
-                    . $_POST["perempdate2"] .
+                    . $_POST["perempdate2"] .  "','"
+                    . $_POST["perempdate3"] .  "','"
+                    . $_POST["perempdate4"] .  "','"
+                    . $_POST["perempdate5"] . 
                     "')") or die(print_r($bdd->ErrorInfo()));
-*/
+
 
     echo "Enregistrement reussi!";
 } catch (PDOException $e) {
