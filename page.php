@@ -198,7 +198,7 @@
         <script src="bootstrap-datepicker-1.6.4/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
         <script>
             $(document).ready(function () {
-                $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
+                $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div id='12' class='rouge'>Etape 2</div><div id='13' class='verte'>Etape 3</div><div id='14' class='orangee'>Etape 4</div><div id='15' class='violette'>Etape 5</div><div id='16' class='jaune'>Etape 6</div></div>");
 
                 $("#insulinelentematin").change(function (event) {
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
@@ -334,6 +334,7 @@
                     maxView: 1,
                     forceParse: 0
                 });
+                
                 $("#1").click(function () {
                     $("#etape1").show();
                     $("#etape2").hide();
@@ -343,6 +344,9 @@
                     $("#etape6").hide();
                     $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
                 });
+                $("#12").click(function () {
+                    $('#2').trigger('click');
+                });
                 $("#2").click(function () {
                     $("#etape1").hide();
                     $("#etape2").show();
@@ -351,203 +355,12 @@
                     $("#etape5").hide();
                     $("#etape6").hide();
                     $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div></div><div class='rougegrand'>Etape 2</div><div class='decale'><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
-                    var Horaire1 = "",
-                            Horaire2 = "",
-                            Horaire3 = "",
-                            Horaire4 = "",
-                            Horaire5 = "",
-                            Horaire6 = "",
-                            Horaire7 = "",
-                            Horaire8 = "";
-                    var Horaire9 = "",
-                            Horaire10 = "",
-                            Horaire11 = "",
-                            Horaire12 = "",
-                            Horaire13 = "",
-                            Horaire14 = "",
-                            Horaire15 = "",
-                            Horaire16 = "";
-                    var Horaire21 = "",
-                            Horaire22 = "",
-                            Horaire23 = "",
-                            Horaire24 = "",
-                            Horaire25 = "",
-                            Horaire26 = "",
-                            Horaire27 = "",
-                            Horaire28 = "";
-                    var Horaire29 = "",
-                            Horaire210 = "",
-                            Horaire211 = "",
-                            Horaire212 = "",
-                            Horaire213 = "",
-                            Horaire214 = "",
-                            Horaire215 = "",
-                            Horaire216 = "";
-                    var Debit1 = 0,
-                            Debit2 = 0,
-                            Debit3 = 0,
-                            Debit4 = 0,
-                            Debit5 = 0,
-                            Debit6 = 0,
-                            Debit7 = 0,
-                            Debit8 = 0;
-                    var Debit9 = 0,
-                            Debit10 = 0,
-                            Debit11 = 0,
-                            Debit12 = 0,
-                            Debit13 = 0,
-                            Debit14 = 0,
-                            Debit15 = 0,
-                            Debit16 = 0;
-                    var Debit21 = 0,
-                            Debit22 = 0,
-                            Debit23 = 0,
-                            Debit24 = 0,
-                            Debit25 = 0,
-                            Debit26 = 0,
-                            Debit27 = 0,
-                            Debit28 = 0;
-                    var Debit29 = 0, Debit210 = 0, Debit211 = 0, Debit212 = 0, Debit213 = 0, Debit214 = 0, Debit215 = 0, Debit216 = 0;
+                   
                     var ValDatesHemGlyc1 = 0, ValDatesHemGlyc2 = 0, ValDatesHemGlyc3 = 0, ValDatesHemGlyc4 = 0, ValDatesHemGlyc5 = 0, ValDatesHemGlyc6 = 0, ValDatesHemGlyc7 = 0, ValDatesHemGlyc8 = 0, ValDatesHemGlyc9 = 0;
                     var ValHbA1cHemGlyc1 = 0, ValHbA1cHemGlyc2 = 0, ValHbA1cHemGlyc3 = 0, ValHbA1cHemGlyc4 = 0, ValHbA1cHemGlyc5 = 0, ValHbA1cHemGlyc6 = 0, ValHbA1cHemGlyc7 = 0, ValHbA1cHemGlyc8 = 0, ValHbA1cHemGlyc9 = 0;
                     jQuery(document).ready(function ($) {
-                        // recup data table01
-                        $("#Debit1").change(function (event) {
-                            Debit1 = $('#Debit1').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit2").change(function (event) {
-                            Debit2 = $('#Debit2').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit3").change(function (event) {
-                            Debit3 = $('#Debit3').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit4").change(function (event) {
-                            Debit4 = $('#Debit4').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit5").change(function (event) {
-                            Debit5 = $('#Debit5').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit6").change(function (event) {
-                            Debit6 = $('#Debit6').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit7").change(function (event) {
-                            Debit7 = $('#Debit7').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit8").change(function (event) {
-                            Debit8 = $('#Debit8').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit9").change(function (event) {
-                            Debit9 = $('#Debit9').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit10").change(function (event) {
-                            Debit10 = $('#Debit10').val();
-                            Debit_graphe1(DDebit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit11").change(function (event) {
-                            Debit11 = $('#Debit11').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit12").change(function (event) {
-                            Debit12 = $('#Debit12').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit13").change(function (event) {
-                            Debit13 = $('#Debit13').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit14").change(function (event) {
-                            Debit14 = $('#Debit14').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit15").change(function (event) {
-                            Debit15 = $('#Debit15').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                        });
-                        $("#Debit16").change(function (event) {
-                            Debit16 = $('#Debit16').val();
-                            Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                            setTimeout(function () {
-                                capture('bardate1');
-                            }, 800);
-                        });
-                        // recup data table01
-                        // recup data table02
-                        $("#Debit21").change(function (event) {
-                            Debit21 = $('#Debit21').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit22").change(function (event) {
-                            Debit22 = $('#Debit22').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit23").change(function (event) {
-                            Debit23 = $('#Debit23').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit24").change(function (event) {
-                            Debit24 = $('#Debit24').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit25").change(function (event) {
-                            Debit25 = $('#Debit25').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit26").change(function (event) {
-                            Debit26 = $('#Debit26').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit27").change(function (event) {
-                            Debit27 = $('#Debit27').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit28").change(function (event) {
-                            Debit28 = $('#Debit28').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit29").change(function (event) {
-                            Debit29 = $('#Debit29').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit210").change(function (event) {
-                            Debit210 = $('#Debit210').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit211").change(function (event) {
-                            Debit211 = $('#Debit211').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit212").change(function (event) {
-                            Debit212 = $('#Debit212').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit213").change(function (event) {
-                            Debit213 = $('#Debit213').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit214").change(function (event) {
-                            Debit214 = $('#Debit214').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit215").change(function (event) {
-                            Debit215 = $('#Debit215').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                        });
-                        $("#Debit216").change(function (event) {
-                            Debit216 = $('#Debit216').val();
-                            Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                            setTimeout(function () {
-                                capture('bardate2');
-                            }, 800);
-                        });
+                       
+                      
                         // recup data table02
                         // recup data table Dates
                         $("#ValDatesHemGlyc1").change(function (event) {
@@ -629,76 +442,8 @@
 
                         });
                         // recup data table HbA1c
-                        //init graphe table date01
-                        var barData1 = {
-                            labels: ["Schémas 1", "Schémas 2", "Schémas 3", "Schémas 4"],
-                            datasets: [{
-                                    fillColor: "rgba(220,220,220,0.5)",
-                                    strokeColor: "rgba(220,220,220,0.8)",
-                                    highlightFill: "rgba(220,220,220,0.75)",
-                                    highlightStroke: "rgba(220,220,220,1)",
-                                    data: [Debit1, Debit2, Debit3, Debit4]
-                                }, {
-                                    fillColor: "rgba(151,187,205,0.5)",
-                                    strokeColor: "rgba(151,187,205,0.8)",
-                                    highlightFill: "rgba(151,187,205,0.75)",
-                                    highlightStroke: "rgba(151,187,205,1)",
-                                    data: [Debit5, Debit6, Debit7, Debit8]
-                                }, {
-                                    fillColor: "rgba(11,187,25,0.5)",
-                                    strokeColor: "rgba(11,187,25,0.8)",
-                                    highlightFill: "rgba(11,187,25,0.75)",
-                                    highlightStroke: "rgba(11,187,25,1)",
-                                    data: [Debit9, Debit10, Debit11, Debit12]
-                                }, {
-                                    fillColor: "rgba(11,56,205,0.5)",
-                                    strokeColor: "rgba(11,56,205,0.8)",
-                                    highlightFill: "rgba(11,56,205,0.75)",
-                                    highlightStroke: "rgba(11,56,205,1)",
-                                    data: [Debit13, Debit14, Debit15, Debit16]
-                                }]
-                        }
-                        var barOptions = {
-                            responsive: true
-                        }
-                        var bardate01 = document.getElementById('bardate1').getContext('2d');
-                        new Chart(bardate01).Bar(barData1, barOptions);
-                        //init graphe table date01
-                        //init graphe table date02
-                        var barData2 = {
-                            labels: ["Schémas 1", "Schémas 2", "Schémas 3", "Schémas 4"],
-                            datasets: [{
-                                    fillColor: "rgba(220,220,220,0.5)",
-                                    strokeColor: "rgba(220,220,220,0.8)",
-                                    highlightFill: "rgba(220,220,220,0.75)",
-                                    highlightStroke: "rgba(220,220,220,1)",
-                                    data: [Debit21, Debit22, Debit23, Debit24]
-                                }, {
-                                    fillColor: "rgba(151,187,205,0.5)",
-                                    strokeColor: "rgba(151,187,205,0.8)",
-                                    highlightFill: "rgba(151,187,205,0.75)",
-                                    highlightStroke: "rgba(151,187,205,1)",
-                                    data: [Debit25, Debit26, Debit27, Debit28]
-                                }, {
-                                    fillColor: "rgba(11,187,25,0.5)",
-                                    strokeColor: "rgba(11,187,25,0.8)",
-                                    highlightFill: "rgba(11,187,25,0.75)",
-                                    highlightStroke: "rgba(11,187,25,1)",
-                                    data: [Debit29, Debit210, Debit211, Debit212]
-                                }, {
-                                    fillColor: "rgba(11,56,205,0.5)",
-                                    strokeColor: "rgba(11,56,205,0.8)",
-                                    highlightFill: "rgba(11,56,205,0.75)",
-                                    highlightStroke: "rgba(11,56,205,1)",
-                                    data: [Debit213, Debit214, Debit215, Debit216]
-                                }]
-                        }
-                        var barOptions = {
-                            responsive: true
-                        }
-                        var bardate02 = document.getElementById('bardate2').getContext('2d');
-                        new Chart(bardate02).Bar(barData2, barOptions);
-                        //init graphe table date02
+                       
+                       
                         //init graphe table HG
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
@@ -717,76 +462,8 @@
                         new Chart(barHbA1c).Bar(barDataHG, barOptions);
                         //init graphe table HG
                     });
-                    function Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16) {
-                        var barData1 = {
-                            labels: ["Schémas 1", "Schémas 2", "Schémas 3", "Schémas 4"],
-                            datasets: [{
-                                    fillColor: "rgba(220,220,220,0.5)",
-                                    strokeColor: "rgba(220,220,220,0.8)",
-                                    highlightFill: "rgba(220,220,220,0.75)",
-                                    highlightStroke: "rgba(220,220,220,1)",
-                                    data: [Debit1, Debit2, Debit3, Debit4]
-                                }, {
-                                    fillColor: "rgba(151,187,205,0.5)",
-                                    strokeColor: "rgba(151,187,205,0.8)",
-                                    highlightFill: "rgba(151,187,205,0.75)",
-                                    highlightStroke: "rgba(151,187,205,1)",
-                                    data: [Debit5, Debit6, Debit7, Debit8]
-                                }, {
-                                    fillColor: "rgba(11,187,25,0.5)",
-                                    strokeColor: "rgba(11,187,25,0.8)",
-                                    highlightFill: "rgba(11,187,25,0.75)",
-                                    highlightStroke: "rgba(11,187,25,1)",
-                                    data: [Debit9, Debit10, Debit11, Debit12]
-                                }, {
-                                    fillColor: "rgba(11,56,205,0.5)",
-                                    strokeColor: "rgba(11,56,205,0.8)",
-                                    highlightFill: "rgba(11,56,205,0.75)",
-                                    highlightStroke: "rgba(11,56,205,1)",
-                                    data: [Debit13, Debit14, Debit15, Debit16]
-                                }]
-                        }
-                        var barOptions = {
-                            responsive: true
-                        }
-                        var bardate01 = document.getElementById('bardate1').getContext('2d');
-                        new Chart(bardate01).Bar(barData1, barOptions);
-                    }
-                    function Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216) {
-                        var barData2 = {
-                            labels: ["Schémas 1", "Schémas 2", "Schémas 3", "Schémas 4"],
-                            datasets: [{
-                                    fillColor: "rgba(220,220,220,0.5)",
-                                    strokeColor: "rgba(220,220,220,0.8)",
-                                    highlightFill: "rgba(220,220,220,0.75)",
-                                    highlightStroke: "rgba(220,220,220,1)",
-                                    data: [Debit21, Debit22, Debit23, Debit24]
-                                }, {
-                                    fillColor: "rgba(151,187,205,0.5)",
-                                    strokeColor: "rgba(151,187,205,0.8)",
-                                    highlightFill: "rgba(151,187,205,0.75)",
-                                    highlightStroke: "rgba(151,187,205,1)",
-                                    data: [Debit25, Debit26, Debit27, Debit28]
-                                }, {
-                                    fillColor: "rgba(11,187,25,0.5)",
-                                    strokeColor: "rgba(11,187,25,0.8)",
-                                    highlightFill: "rgba(11,187,25,0.75)",
-                                    highlightStroke: "rgba(11,187,25,1)",
-                                    data: [Debit29, Debit210, Debit211, Debit212]
-                                }, {
-                                    fillColor: "rgba(11,56,205,0.5)",
-                                    strokeColor: "rgba(11,56,205,0.8)",
-                                    highlightFill: "rgba(11,56,205,0.75)",
-                                    highlightStroke: "rgba(11,56,205,1)",
-                                    data: [Debit213, Debit214, Debit215, Debit216]
-                                }]
-                        }
-                        var barOptions = {
-                            responsive: true
-                        }
-                        var bardate02 = document.getElementById('bardate2').getContext('2d');
-                        new Chart(bardate02).Bar(barData2, barOptions);
-                    }
+                    
+                 
                     function Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9) {
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
