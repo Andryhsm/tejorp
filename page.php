@@ -35,6 +35,7 @@
                 -ms-transition: all 0.5s ease-in-out 0s;
                 transition: all 0.5s ease-in-out 0s;
                 opacity: 0.7;
+                cursor: pointer;
             }
             img.zoomEffect:hover {
                 -moz-transform: rotate(5deg) scale(1.10);
@@ -80,6 +81,7 @@
                 width:85px;
                 height:85px;
                 margin-bottom: 7px;
+                cursor: pointer;
             }
             .bleugrand{
                 background:rgba(0,63,71,.7);
@@ -99,6 +101,7 @@
                 width:85px;
                 height:85px;
                 margin-bottom: 7px;
+                cursor: pointer;
             }
             .rougegrand{
                 background:rgba(133,32,28,.7);
@@ -118,6 +121,7 @@
                 width:85px;
                 height:85px;
                 margin-bottom: 7px;
+                cursor: pointer;
             }
             .vertegrand{
                 background:rgba(8, 110, 25, 0.66);
@@ -137,6 +141,7 @@
                 width:85px;
                 height:85px;
                 margin-bottom: 7px;
+                cursor: pointer;
             }
             .orangeegrand{
                 background:rgba(233,101,25,.7);
@@ -156,6 +161,7 @@
                 width:85px;
                 height:85px;
                 margin-bottom: 7px;
+                cursor: pointer;
             }
             .violettegrand{
                 background:rgba(84, 46, 90, 0.66);
@@ -175,6 +181,7 @@
                 width:85px;
                 height:85px;
                 margin-bottom: 7px;
+                cursor: pointer;
             }
             .jaunegrand{
                 background:rgba(161,145,0,.7);
