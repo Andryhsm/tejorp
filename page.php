@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>installation</title>
+        <title>Installation</title>
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
