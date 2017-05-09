@@ -41,7 +41,7 @@
                 -webkit-transform: rotate(5deg) scale(1.10);
                 -o-transform: rotate(5deg) scale(1.10);
                 -ms-transform: rotate(5deg) scale(1.10);
-                    transform: rotate(5deg) scale(1.10);
+                transform: rotate(5deg) scale(1.10);
                 opacity: 1;
             }
             body
@@ -66,11 +66,128 @@
             .etapesIndication
             {
                 position: fixed;
-                top: 80px;
+                top: 130px;
                 left: 10px;
-                width: 200px;
+                width: 150px;
                 height: auto;
                 z-index: 9999;
+            }
+            .bleu{
+                background:rgba(0,63,71,.7);
+                border-radius:50%;
+                color: white;
+                padding: 33px 16px;
+                width:85px;
+                height:85px;
+                margin-bottom: 7px;
+            }
+            .bleugrand{
+                background:rgba(0,63,71,.7);
+                border-radius:50%;
+                color: white;
+                padding: 43px 23px;
+                width:120px;
+                height:120px;
+                margin-bottom: 7px;
+                border: 10px #fff solid;
+            }
+            .rouge{
+                background:rgba(133,32,28,.7);
+                border-radius:50%;
+                color: white;
+                padding: 33px 16px;
+                width:85px;
+                height:85px;
+                margin-bottom: 7px;
+            }
+            .rougegrand{
+                background:rgba(133,32,28,.7);
+                border-radius:50%;
+                color: white;
+                padding: 43px 23px;
+                width:120px;
+                height:120px;
+                margin-bottom: 7px;
+                border: 10px #fff solid;
+            }
+            .verte{
+                background:rgba(8, 110, 25, 0.66);
+                border-radius:50%;
+                color: white;
+                padding: 33px 16px;
+                width:85px;
+                height:85px;
+                margin-bottom: 7px;
+            }
+            .vertegrand{
+                background:rgba(8, 110, 25, 0.66);
+                border-radius:50%;
+                color: white;
+                padding: 43px 23px;
+                width:120px;
+                height:120px;
+                margin-bottom: 7px;
+                border: 10px #fff solid;
+            }
+            .orangee{
+                background:rgba(233,101,25,.7);
+                border-radius:50%;
+                color: white;
+                padding: 33px 16px;
+                width:85px;
+                height:85px;
+                margin-bottom: 7px;
+            }
+            .orangeegrand{
+                background:rgba(233,101,25,.7);
+                border-radius:50%;
+                color: white;
+                padding: 43px 23px;
+                width:120px;
+                height:120px;
+                margin-bottom: 7px;
+                border: 10px #fff solid;
+            }
+            .violette{
+                background:rgba(84, 46, 90, 0.66);
+                border-radius:50%;
+                color: white;
+                padding: 33px 16px;
+                width:85px;
+                height:85px;
+                margin-bottom: 7px;
+            }
+            .violettegrand{
+                background:rgba(84, 46, 90, 0.66);
+                border-radius:50%;
+                color: white;
+                padding: 43px 23px;
+                width:120px;
+                height:120px;
+                margin-bottom: 7px;
+                border: 10px #fff solid;
+            }
+            .jaune{
+                background:rgba(161,145,0,.7);
+                border-radius:50%;
+                color: white;
+                padding: 33px 16px;
+                width:85px;
+                height:85px;
+                margin-bottom: 7px;
+            }
+            .jaunegrand{
+                background:rgba(161,145,0,.7);
+                border-radius:50%;
+                color: white;
+                padding: 43px 23px;
+                width:120px;
+                height:120px;
+                margin-bottom: 7px;
+                border: 10px #fff solid;
+            }
+            .decale{
+                margin-left: 20px;
             }
         </style>
 
@@ -81,7 +198,7 @@
         <script src="bootstrap-datepicker-1.6.4/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
         <script>
             $(document).ready(function () {
-                $('#titreEtape').html("<div class='list-group-item active'>Etape 1</div><div class='list-group-item'>Renseignements</div><div class='list-group-item'>Choix du matériel</div>");
+                $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
 
                 $("#insulinelentematin").change(function (event) {
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
@@ -90,7 +207,7 @@
                             ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
                             ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
                 });
                 $("#insulinelentemidi").change(function (event) {
@@ -100,7 +217,7 @@
                             ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
                             ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
                 });
                 $("#insulinelentesoir").change(function (event) {
@@ -110,7 +227,7 @@
                             ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
                             ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
                 });
                 $("#insulinelentediner").change(function (event) {
@@ -120,7 +237,7 @@
                             ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
                             ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
                 });
                 $("#insulinelentecollation").change(function (event) {
@@ -130,20 +247,20 @@
                             ILdiner = ($("#insulinelentediner").val()) ? $("#insulinelentediner").val() : 0,
                             ILcollation = ($("#insulinelentecollation").val()) ? $("#insulinelentecollation").val() : 0,
                             totalIR = ($("#totalinsulinerapide").val()) ? $("#totalinsulinerapide").val() : 0;
-                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir)+ parseInt(ILdiner) + parseInt(ILcollation);
+                    var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
                 });
-                
-                
+
+
                 $("#insulinerapidematin").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
                             IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
-                    
+
                 });
                 $("#insulinerapidemidi").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
@@ -151,7 +268,7 @@
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
                 $("#insulinerapidesoir").change(function (event) {
@@ -160,27 +277,27 @@
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
-                
+
                 $("#insulinerapidediner").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
                             IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
-                
+
                 $("#insulinerapidecollation").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
                             IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
                             IRmatin = ($("#insulinerapidematin").val()) ? $("#insulinerapidematin").val() : 0,
                             IRmidi = ($("#insulinerapidemidi").val()) ? $("#insulinerapidemidi").val() : 0,
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
-                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir)+ parseInt(IRdiner) + parseInt(IRcollation);
+                    var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
                 $('.datepicker').datepicker({
@@ -197,7 +314,7 @@
 
                 $('.datepickerAll').datepicker({
                     language: 'fr',
-                    showAnim : 'fadeIn',
+                    showAnim: 'fadeIn',
                     autoclose: true,
                     format: "dd-mm-yyyy",
                     todayHighlight: true,
@@ -224,9 +341,9 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='list-group-item active'>Etape 1</div><div class='list-group-item'>Renseignements</div><div class='list-group-item'>Choix du matériel</div>");
-                    
-                    document.getElementById("field1").style.backgroundColor="rgba(0,63,71,.7)";
+
+                    $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
+
                 });
                 $("#2").click(function () {
                     $("#etape1").hide();
@@ -235,7 +352,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='list-group-item active'>Etape 2</div><div class='list-group-item'>Données médicale</div><div class='list-group-item'>ASG</div><div class='list-group-item'>Insulinothérapie</div>");
+                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div></div><div class='rougegrand'>Etape 2</div><div class='decale'><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
                     var Horaire1 = "",
                             Horaire2 = "",
                             Horaire3 = "",
@@ -360,8 +477,8 @@
                         $("#Debit16").change(function (event) {
                             Debit16 = $('#Debit16').val();
                             Debit_graphe1(Debit1, Debit2, Debit3, Debit4, Debit5, Debit6, Debit7, Debit8, Debit9, Debit10, Debit11, Debit12, Debit13, Debit14, Debit15, Debit16);
-                            setTimeout(function(){
-                            	capture('bardate1');
+                            setTimeout(function () {
+                                capture('bardate1');
                             }, 800);
                         });
                         // recup data table01
@@ -429,8 +546,8 @@
                         $("#Debit216").change(function (event) {
                             Debit216 = $('#Debit216').val();
                             Debit_graphe2(Debit21, Debit22, Debit23, Debit24, Debit25, Debit26, Debit27, Debit28, Debit29, Debit210, Debit211, Debit212, Debit213, Debit214, Debit215, Debit216);
-                            setTimeout(function(){
-                            	capture('bardate2');
+                            setTimeout(function () {
+                                capture('bardate2');
                             }, 800);
                         });
                         // recup data table02
@@ -508,8 +625,8 @@
                         $("#ValHbA1cHemGlyc9").change(function (event) {
                             ValHbA1cHemGlyc9 = $('#ValHbA1cHemGlyc9').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
-                            setTimeout(function(){
-                            	capture('barhg');
+                            setTimeout(function () {
+                                capture('barhg');
                             }, 800);
 
                         });
@@ -697,7 +814,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='list-group-item active'>Etape 3</div><div class='list-group-item'>Habitude de vie</div><div class='list-group-item'>Insulinothérapie Fonctionnelle</div><div class='list-group-item'>Habitude alimentaire</div>");
+                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div></div><div class='vertegrand'>Etape 3</div><div class='decale'><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
                     var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
                     var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
                     var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
@@ -713,7 +830,8 @@
                             poids1 = $("#poids1").val();
                             var taille = Math.pow((taille1 * 0.01), 2);
                             imc1 = poids1 / taille;
-                            $("#imc1").val(imc1);   
+                            imc1 = imc1.toFixed(1);
+                            $("#imc1").val(imc1);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
                         $("#date2").change(function (event) {
@@ -726,6 +844,7 @@
                             poids2 = $("#poids2").val();
                             var taille = Math.pow((taille2 * 0.01), 2);
                             imc2 = poids2 / taille;
+                            imc2 = imc2.toFixed(1);
                             $("#imc2").val(imc2);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -739,6 +858,7 @@
                             poids3 = $("#poids3").val();
                             var taille = Math.pow((taille3 * 0.01), 2);
                             imc3 = poids3 / taille;
+                            imc3 = imc3.toFixed(1);
                             $("#imc3").val(imc3);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -752,6 +872,7 @@
                             poids4 = $("#poids4").val();
                             var taille = Math.pow((taille4 * 0.01), 2);
                             imc4 = poids4 / taille;
+                            imc4 = imc4.toFixed(1);
                             $("#imc4").val(imc4);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -765,6 +886,7 @@
                             poids5 = $("#poids5").val();
                             var taille = Math.pow((taille5 * 0.01), 2);
                             imc5 = poids5 / taille;
+                            imc5 = imc5.toFixed(1);
                             $("#imc5").val(imc5);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -778,6 +900,7 @@
                             poids6 = $("#poids6").val();
                             var taille = Math.pow((taille6 * 0.01), 2);
                             imc6 = poids6 / taille;
+                            imc6 = imc6.toFixed(1);
                             $("#imc6").val(imc6);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -791,6 +914,7 @@
                             poids7 = $("#poids7").val();
                             var taille = Math.pow((taille7 * 0.01), 2);
                             imc7 = poids7 / taille;
+                            imc7 = imc7.toFixed(1);
                             $("#imc7").val(imc7);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -804,6 +928,7 @@
                             poids8 = $("#poids8").val();
                             var taille = Math.pow((taille8 * 0.01), 2);
                             imc8 = poids8 / taille;
+                            imc8 = imc8.toFixed(1);
                             $("#imc8").val(imc8);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
@@ -817,10 +942,11 @@
                             poids9 = $("#poids9").val();
                             var taille = Math.pow((taille9 * 0.01), 2);
                             imc9 = poids9 / taille;
+                            imc9 = imc9.toFixed(1);
                             $("#imc9").val(imc9);
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                             setTimeout(function () {
-                                    capture("bar");
+                                capture("bar");
                             }, 800);
 
                         });
@@ -830,22 +956,28 @@
                                 {
                                     fillColor: "rgba(220,220,220,0.5)",
                                     strokeColor: "rgba(220,220,220,0.8)",
-                                    highlightFill: "rgba(220,220,220,0.75)",
-                                    highlightStroke: "rgba(220,220,220,1)",
+                                    pointColor: "rgba(22,20,220,0.75)",
+                                    pointStrokeColor: "rgba(220,220,220,1)",
+                                    pointHighlightFill: "rgba(220,220,220,0.75)",
+                                    pointHighlightStroke: "rgba(220,220,220,1)",
                                     data: [taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9]
                                 },
                                 {
                                     fillColor: "rgba(151,187,205,0.5)",
                                     strokeColor: "rgba(151,187,205,0.8)",
-                                    highlightFill: "rgba(151,187,205,0.75)",
-                                    highlightStroke: "rgba(151,187,205,1)",
+                                    pointColor: "rgba(151,187,205,0.75)",
+                                    pointStrokeColor: "rgba(151,187,205,1)",
+                                    pointHighlightFill: "rgba(151,187,205,0.75)",
+                                    pointHighlightStroke: "rgba(151,187,205,1)",
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
                                     fillColor: "rgba(11,187,25,0.5)",
                                     strokeColor: "rgba(11,187,25,0.8)",
-                                    highlightFill: "rgba(11,187,25,0.75)",
-                                    highlightStroke: "rgba(11,187,25,1)",
+                                    pointColor: "rgba(11,187,25,0.75)",
+                                    pointStrokeColor: "rgba(11,187,25,1)",
+                                    pointHighlightFill: "rgba(11,187,25,0.75)",
+                                    pointHighlightStroke: "rgba(11,187,25,1)",
                                     data: [imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9]
                                 }
                             ]
@@ -854,7 +986,7 @@
                             responsive: true
                         }
                         var bar = document.getElementById('bar').getContext('2d');
-                        new Chart(bar).Bar(barData, barOptions);
+                        new Chart(bar).Line(barData, barOptions);
                     });
                     function dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9) {
                         var barData = {
@@ -863,22 +995,28 @@
                                 {
                                     fillColor: "rgba(220,220,220,0.5)",
                                     strokeColor: "rgba(220,220,220,0.8)",
-                                    highlightFill: "rgba(220,220,220,0.75)",
-                                    highlightStroke: "rgba(220,220,220,1)",
+                                    pointColor: "rgba(220,220,220,0.75)",
+                                    pointStrokeColor: "rgba(220,220,220,1)",
+                                    pointHighlightFill: "rgba(220,220,220,0.75)",
+                                    pointHighlightStroke: "rgba(220,220,220,1)",
                                     data: [taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9]
                                 },
                                 {
-                                    fillColor: "rgba(151,187,205,0.5)",
-                                    strokeColor: "rgba(151,187,205,0.8)",
-                                    highlightFill: "rgba(151,187,205,0.75)",
-                                    highlightStroke: "rgba(151,187,205,1)",
+                                    fillColor: "rgba(0,0,0,0.5)",
+                                    strokeColor: "rgba(0,0,0,0.8)",
+                                    pointColor: "rgba(0,0,0,0.75)",
+                                    pointStrokeColor: "rgba(0,0,0,1)",
+                                    pointHighlightFill: "rgba(0,0,0,0.75)",
+                                    pointHighlightStroke: "rgba(0,0,0,1)",
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
                                     fillColor: "rgba(11,187,25,0.5)",
                                     strokeColor: "rgba(11,187,25,0.8)",
-                                    highlightFill: "rgba(11,187,25,0.75)",
-                                    highlightStroke: "rgba(11,187,25,1)",
+                                    pointColor: "rgba(11,187,25,0.75)",
+                                    pointStrokeColor: "rgba(11,187,25,1)",
+                                    pointHighlightFill: "rgba(11,187,25,0.75)",
+                                    pointHighlightStroke: "rgba(11,187,25,1)",
                                     data: [imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9]
                                 }
                             ]
@@ -887,7 +1025,7 @@
                             responsive: true
                         }
                         var bar = document.getElementById('bar').getContext('2d');
-                        new Chart(bar).Bar(barData, barOptions);
+                        new Chart(bar).Line(barData, barOptions);
                     }
                 });
                 $("#4").click(function () {
@@ -897,7 +1035,7 @@
                     $("#etape4").show();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='list-group-item active'>Etape 4</div><div class='list-group-item'>Manipulation de la pompe</div><div class='list-group-item'>Alarmes et précautions</div><div class='list-group-item'>Manipulations</div>");
+                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div></div><div class='orangeegrand'>Etape 4</div><div class='decale'><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
 
                     var pmpdate1 = "",
                             pmpdate2 = "",
@@ -1314,7 +1452,7 @@
                     $("#etape4").hide();
                     $("#etape5").show();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='list-group-item active'>Etape 5</div><div class='list-group-item'>Pose du cathéter</div><div class='list-group-item'>Connaissance</div><div class='list-group-item'>ASG</div>");
+                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div></div><div class='violettegrand'>Etape 5</div><div class='decale'><div class='jaune'>Etape 6</div></div>");
 
                     var cathdate1 = "",
                             cathdate2 = "",
@@ -1675,6 +1813,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").show();
+                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div></div><div class='jaunegrand'>Etape 6</div>");
                 });
             });
         </script>
@@ -1736,7 +1875,7 @@
                 <div class="item"  id="etape5" style="display: none;">
                     <?php require './etape5.php'; ?>
                 </div>
-                <?php echo '<input type="text" class="hidden" name="id" value="'.$_SESSION["login"].'">';?>
+                <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
                 <div class="item" id="etape6" style="display: none;">
                     <div class="container"  style="margin-top: 230px;">
                         <div class="col-lg-3 col-md-offset-1">
@@ -1782,43 +1921,44 @@
             -->
             <ul>
                 <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
-                    <span class="round">
-                        Renseignements<br>
-                        Choix du matériel
-                    </span>
-                </a></li>
+                        <span class="round">
+                            Renseignements<br>
+                            Choix du matériel
+                        </span>
+                    </a></li>
+
                 <li><a class="round red" onClick="enHaut();" id = "2">Etape 2
-                    <span class="round">
-                        Données médicale </br>
-                        Insulinothérapie </br>
-                    </span>
-                </a></li>
+                        <span class="round">
+                            Données médicale </br>
+                            Insulinothérapie </br>
+                        </span>
+                    </a></li>
                 <li><a class="round vert" onClick="enHaut();" id = "3">Etape 3
-                    <span class="round">
-                        Habitude de vie <br>
-                        Habitude alimentaire
-                    </span>
-                </a></li>
+                        <span class="round">
+                            Habitude de vie <br>
+                            Habitude alimentaire
+                        </span>
+                    </a></li>
                 <li><a class="round orange" onClick="enHaut();" id = "4">Etape 4
-                    <span class="round">
-                        Manipulation de la Pompe <br>
-                        Alarme
-                    </span>
-                </a></li>
+                        <span class="round">
+                            Manipulation de la Pompe <br>
+                            Alarme
+                        </span>
+                    </a></li>
                 <li><a class="round violet" onClick="enHaut();" id = "5">Etape 5
-                    <span class="round">
-                        Pose du cathéter <br>
-                        Manipulation <br>
-                        ASG
-                    </span>
-                </a></li>
+                        <span class="round">
+                            Pose du cathéter <br>
+                            Manipulation <br>
+                            ASG
+                        </span>
+                    </a></li>
                 <li><a class="round yellow" onClick="enHaut();" id = "6">Etape 6
-                    <span class="round">
-                        Enregistrer<br>
-                        Partager<br>
-                        Imprimer
-                    </span>
-                </a></li>
+                        <span class="round">
+                            Enregistrer<br>
+                            Partager<br>
+                            Imprimer
+                        </span>
+                    </a></li>
             </ul>
 
         </div>
@@ -1843,93 +1983,84 @@
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
         <script src="assets/js/Chart.min.js"></script>
-           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
         <script type="text/javascript">
-            $(document).ready(function(){
-                $('.round').click(function(){
-                    $('.round').removeClass('active');
-                    $(this).addClass('active');
-                });
-            });
+                    $(document).ready(function () {
+                        $('.round').click(function () {
+                            $('.round').removeClass('active');
+                            $(this).addClass('active');
+                        });
+                    });
 
-            function enHaut()
-                {
-                    $('html,body').animate({scrollTop: 0}, 'slow');
-                }
+                    function enHaut()
+                    {
+                        $('html,body').animate({scrollTop: 0}, 'slow');
+                    }
         </script>
 
         <script type="text/javascript">
 
-                $('#enregistrer').click(function () {
-                    $('#save').trigger('click');
-                });
+            $('#enregistrer').click(function () {
+                $('#save').trigger('click');
+            });
 
-                function capture(target){
-                            var capture = {};
-                                var trg = $('#'+target);
-                                <?php echo " var id = '".$_SESSION["id"]."' + target;";?>
-                                html2canvas(trg, {
-                                    onrendered: function(canvas) {
-                                        capture.img = canvas.toDataURL( "image/png" );
-                                        capture.data = { 'image' : capture.img, 'id' : id};
-                                        $.ajax({
-                                        url: "pdf/ajax.php",
-                                        data: capture.data,
-                                        type: 'post',
-                                        success: function( result ) {
-                                               if(target === "bardate1")
-                                                	$('html,body').scrollTop(2400);	
-                                               if(target === "bardate2")
-                                               		$('html,body').scrollTop(3400);
-                                               if(target === "barhg")
-                                               		$('html,body').scrollTop(5000);
-                                               if(target === "bar")
-                                               		$('html,body').scrollTop(2000);
+            function capture(target) {
+                var capture = {};
+                var trg = $('#' + target);
+<?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+                html2canvas(trg, {
+                    onrendered: function (canvas) {
+                        capture.img = canvas.toDataURL("image/png");
+                        capture.data = {'image': capture.img, 'id': id};
+                        $.ajax({
+                            url: "pdf/ajax.php",
+                            data: capture.data,
+                            type: 'post',
+                            success: function (result) {
+                                if (target === "bardate1")
+                                    $('html,body').scrollTop(2400);
+                                if (target === "bardate2")
+                                    $('html,body').scrollTop(3400);
+                                if (target === "barhg")
+                                    $('html,body').scrollTop(5000);
+                                if (target === "bar")
+                                    $('html,body').scrollTop(2000);
 
-                                        }
-                                        });
-                                    }
+                            }
                         });
-                }
-
-
-                $('#imprimer').click(function () {
-                    $("#form-filter").attr('action', 'content.php');
-                    $("#form-filter").attr('target', '_blank');
-                    $("#form-filter").submit();
+                    }
                 });
+            }
 
-                
-                $('#save').click(function (e) {
-                    e.preventDefault();
-                    $("#form-filter").attr('action', 'traitement.php');
-                    var form = $('#form-filter').get(0);
-                    var formData = new FormData(form);// get the form data
-                    // on envoi formData vers mail.php
-                    $.ajax({
-                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                        url: 'traitement.php', // the url where we want to POST
-                        data: formData, // our data object
-                        dataType: 'text', // what type of data do we expect back from the server
-                        processData: false,
-                        contentType: false,
-                        success: function (server_response)
+
+            $('#imprimer').click(function () {
+                $("#form-filter").attr('action', 'content.php');
+                $("#form-filter").attr('target', '_blank');
+                $("#form-filter").submit();
+            });
+
+
+            $('#save').click(function (e) {
+                e.preventDefault();
+                $("#form-filter").attr('action', 'traitement.php');
+                var form = $('#form-filter').get(0);
+                var formData = new FormData(form);// get the form data
+                // on envoi formData vers mail.php
+                $.ajax({
+                    type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                    url: 'traitement.php', // the url where we want to POST
+                    data: formData, // our data object
+                    dataType: 'text', // what type of data do we expect back from the server
+                    processData: false,
+                    contentType: false,
+                    success: function (server_response)
+                    {
+                        if (server_response === "succes")
                         {
-                            if (server_response === "succes")
-                            {
-                                window.location.href = "page.php";
-                            }
-                            else
-                            {
-                                $('#erreur_inscription').html('<p>' + server_response + '</p>');
-                                $('#triggerwarning').trigger('click');
-                                setTimeout(function () {
-                                    $('#ferme').trigger('click');
-                                }, 4000);
-                            }
-                        },
-                        error: function (server_response)
+                            window.location.href = "page.php";
+                        }
+                        else
                         {
                             $('#erreur_inscription').html('<p>' + server_response + '</p>');
                             $('#triggerwarning').trigger('click');
@@ -1937,9 +2068,18 @@
                                 $('#ferme').trigger('click');
                             }, 4000);
                         }
-                    });
-
+                    },
+                    error: function (server_response)
+                    {
+                        $('#erreur_inscription').html('<p>' + server_response + '</p>');
+                        $('#triggerwarning').trigger('click');
+                        setTimeout(function () {
+                            $('#ferme').trigger('click');
+                        }, 4000);
+                    }
                 });
+
+            });
 
 
 
