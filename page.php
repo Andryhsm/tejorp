@@ -473,14 +473,10 @@
                             }, 800);
                         });
                         // recup data table HbA1c
-<<<<<<< HEAD
 
-
-=======
                         initialiser();
                         initialiser2();
-                       
->>>>>>> 9591c11604d0095e974a0888a3d7abd03864046f
+
                         //init graphe table HG
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
