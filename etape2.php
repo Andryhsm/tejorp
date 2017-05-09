@@ -1,4 +1,3 @@
-
 <style type="text/css">
 .field2
 {
@@ -13,8 +12,6 @@
 </style>
 
     <section class="container-fluid">
-
-<section class="container-fluid">
     <div>
         <div class="field2">
             <h4 style="text-align: center;">DONNEES MEDICALES</h4></br>

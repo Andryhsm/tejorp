@@ -761,7 +761,6 @@
                     </tbody>
                 </table>
 		</fieldset>
-                                
 
     <fieldset class="well" id="field">
         <center><font><h4>AUTO SURVEILLANCE GLYCEMIQUE</h4></font></center><br/>

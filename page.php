@@ -341,9 +341,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
-
                     $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
-
                 });
                 $("#2").click(function () {
                     $("#etape1").hide();
