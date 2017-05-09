@@ -442,7 +442,8 @@
 
                         });
                         // recup data table HbA1c
-                       
+                        initialiser();
+                        initialiser2();
                        
                         //init graphe table HG
                         var barDataHG = {
