@@ -110,6 +110,7 @@ a.green
     background: rgba(0,63,71,.7);
     color: #fff;
     border-color: rgba(0,63,71,.2);
+    cursor: pointer;
 }
 
 a.green:hover, .green:active
@@ -122,6 +123,7 @@ a.yellow
     background-color: rgba(161,145,0,.7);
     color: #fff;
     border-color: rgba(153,38,0,.2);
+    cursor: pointer;
 }
 
 a.yellow:hover, .yellow:active 
@@ -134,6 +136,7 @@ a.orange
     background-color: rgba(233,101,25,.7);
     color: #fff;
     border-color: rgba(153,38,0,.2);
+    cursor: pointer;
 }
 
 a.orange:hover, .orange:active 
@@ -146,6 +149,7 @@ a.violet
     background-color: rgba(84, 46, 90, 0.66);
     color: #fff;
     border-color: rgba(153,38,0,.2);
+    cursor: pointer;
 }
 
 a.violet:hover, .violet:active 
@@ -158,6 +162,7 @@ a.vert
     background-color: rgba(8, 110, 25, 0.66);
     color: #fff;
     border-color: rgba(153,38,0,.2);
+    cursor: pointer;
 }
 
 a.vert:hover, .vert:active 
