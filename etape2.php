@@ -334,20 +334,19 @@
                         </tr>
                         
                         <tr  id="ligne4">
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire1N" id="Horaire1N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit1N" id="Debit1N"></td>
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire2N" id="Horaire2N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit2N" id="Debit2N"></td>
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire3N" id="Horaire3N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit3N" id="Debit3N"></td>
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire4N" id="Horaire4N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit4N" id="Debit4N"></td>
                         </tr>
-                    </tbody>
                 </table> <a class="btn btn-primary pull-right" id="btnAdd"> + </a>
                 </br></br>
 

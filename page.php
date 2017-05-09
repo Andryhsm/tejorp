@@ -648,7 +648,7 @@
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
-                                    fillColor: "rgba(11,187,25,0.5)",
+                                    fillColor: "rgba(255, 0, 128,0.5)",
                                     strokeColor: "rgba(11,187,25,0.8)",
                                     pointColor: "rgba(11,187,25,0.75)",
                                     pointStrokeColor: "rgba(11,187,25,1)",
