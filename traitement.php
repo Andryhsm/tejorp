@@ -13,7 +13,7 @@ $details = ($_POST["details"]);
 $environnement = ($_POST["details"]);
 $etatcutane = ($_POST["etatcutane"]);
 $choixpoint = ($_POST["choixpoint"]);
-$horairematin = ($_POST["horairematin"]);
+/*$horairematin = ($_POST["horairematin"]);
 $rotationmatin = ($_POST["rotationmatin"]);
 $objectifmatin = ($_POST["objectifmatin"]);
 $sensibilitematin = ($_POST["sensibilitematin"]);
@@ -28,7 +28,7 @@ $sensibilitecollation = ($_POST["sensibilitecollation"]);
 $horairesoir = ($_POST["horairesoir"]);
 $rotationsoir = ($_POST["rotationsoir"]);
 $objectifsoir = ($_POST["objectifsoir"]);
-$sensibilitesoir = ($_POST["sensibilitesoir"]);
+$sensibilitesoir = ($_POST["sensibilitesoir"]);*/
 $regime = ($_POST["regime"]);
 $observation2 = ($_POST["observation2"]);
 $survenue = ($_POST["survenue"]);
@@ -251,6 +251,41 @@ $ValHbA1cHemGlyc8 = ($_POST['ValHbA1cHemGlyc8']);
 $ValHbA1cHemGlyc9 = ($_POST['ValHbA1cHemGlyc9']);
 
 
+	
+	$petitdejeunerDe = ($_POST['petitdejeunerDe']);
+	$petitdejeunerA = ($_POST['petitdejeunerA']);
+
+	$dejeunerDe = ($_POST['dejeunerDe']);
+	$dejeunerA = ($_POST['dejeunerA']);
+
+	$gouterDe = ($_POST['gouterDe']);
+	$gouterA = ($_POST['gouterA']);
+
+	$dinerDe = ($_POST['dinerDe']);
+	$dinerA = ($_POST['dinerA']);
+
+	$collationDe = ($_POST['collationDe']);
+	$collationA = ($_POST['collationA']);
+
+	$petitdejeunerRotation = ($_POST['petitdejeunerRotation']);
+	$petitdejeunerObjectif = ($_POST['petitdejeunerObjectif']);
+	$petitdejeunerSensibilite = ($_POST['petitdejeunerSensibilite']);
+
+	$dejeunerRotation = ($_POST['dejeunerRotation']);
+	$dejeunerObjectif = ($_POST['dejeunerObjectif']);
+	$dejeunerSensibilite = ($_POST['dejeunerSensibilite']);
+
+	$gouterRotation = ($_POST['gouterRotation']);
+	$gouterObjectif = ($_POST['gouterObjectif']);
+	$gouterSensibilite = ($_POST['gouterSensibilite']);
+
+	$dinerRotation = ($_POST['dinerRotation']);
+	$dinerObjectif = ($_POST['dinerObjectif']);
+	$dinerSensibilite = ($_POST['dinerSensibilite']);
+
+	$collationRotation = ($_POST['collationRotation']);
+	$collationObjectif = ($_POST['collationObjectif']);
+	$collationSensibilite = ($_POST['collationSensibilite']);
 
 
 
@@ -270,7 +305,7 @@ try {
       $bdd->exec("INSERT INTO habitudevie(activitephysique, profession, situationfamiliale, observation, hygienealimentaire, stabilitehoraires, details, environnement, etatcutane, choixpoint) VALUES('" . $activitephysique . "','" . $profession . "','" . $situationfamiliale . "','" . $observation . "','" . $hygienealimentaire . "','" . $stabilitehoraires . "','" . $details . "','" . $environnement . "','" . $etatcutane . "','" . $choixpoint . "')") or die(print_r($bdd->ErrorInfo()));
 
 
-      $bdd->exec("INSERT INTO insulunotherapiefonctionnelle(horairematin, rotationmatin, objectifmatin, sensibilitematin, horairemidi, rotationmidi, objectifmidi, sensibilitemidi, horairecollation, rotationcollation, objectifcollation, sensibilitecollation, horairesoir, rotationsoir, objectifsoir, sensibilitesoir) VALUES('" . $horairematin . "','" . $rotationmatin . "','" . $objectifmatin . "','" . $sensibilitematin . "','" . $horairemidi . "','" . $rotationmidi . "','" . $objectifmidi . "','" . $sensibilitemidi . "','" . $horairecollation . "','" . $rotationcollation . "','" . $objectifcollation . "','" . $sensibilitecollation . "','" . $horairesoir . "','" . $rotationsoir . "','" . $objectifsoir . "','" . $sensibilitesoir . "')");
+      /*$bdd->exec("INSERT INTO insulunotherapiefonctionnelle(horairematin, rotationmatin, objectifmatin, sensibilitematin, horairemidi, rotationmidi, objectifmidi, sensibilitemidi, horairecollation, rotationcollation, objectifcollation, sensibilitecollation, horairesoir, rotationsoir, objectifsoir, sensibilitesoir) VALUES('" . $horairematin . "','" . $rotationmatin . "','" . $objectifmatin . "','" . $sensibilitematin . "','" . $horairemidi . "','" . $rotationmidi . "','" . $objectifmidi . "','" . $sensibilitemidi . "','" . $horairecollation . "','" . $rotationcollation . "','" . $objectifcollation . "','" . $sensibilitecollation . "','" . $horairesoir . "','" . $rotationsoir . "','" . $objectifsoir . "','" . $sensibilitesoir . "')");*/
 
 
       $bdd->exec("INSERT INTO habitudealimentaire(regime, observation2, survenue, atcd, traitement, date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9, imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9) VALUES ('" . $regime . "','" . $observation2 . "', '" . $survenue . "', '" . $atcd . "','" . $traitement . "','" . $date1 . "','" . $date2 . "','" . $date3 . "','" . $date4 . "','" . $date5 . "','" . $date6 . "','" . $date7 . "','" . $date8 . "','" . $date9 . "','" . $taille1 . "','" . $taille2 . "','" . $taille3 . "','" . $taille4 . "','" . $taille5 . "','" . $taille6 . "','" . $taille7 . "','" . $taille8 . "','" . $taille9 . "','" . $poids1 . "','" . $poids2 . "','" . $poids3 . "','" . $poids4 . "','" . $poids5 . "','" . $poids6 . "','" . $poids7 . "','" . $poids8 . "','" . $poids9 . "','" . $imc1 . "','" . $imc2 . "','" . $imc3 . "','" . $imc4 . "','" . $imc5 . "','" . $imc6 . "','" . $imc7 . "','" . $imc8 . "','" . $imc9 . "')") or die(print_r($bdd->errorInfo()));
@@ -604,6 +639,9 @@ try {
                     . $_POST["perempdate5"] . 
                     "')") or die(print_r($bdd->ErrorInfo()));
 
+
+	$req = $bdd->prepare("INSERT INTO insulinotherapiefonctionnelle(petitdejeunerDe, petitdejeunerA, dejeunerDe, dejeunerA, gouterDe, gouterA, dinerDe, dinerA, collationDe, collationA, petitdejeunerRotation, petitdejeunerObjectif, petitdejeunerSensibilite, dejeunerRotation, dejeunerObjectif, dejeunerSensibilite, gouterRotation, gouterObjectif, gouterSensibilite, dinerRotation, dinerObjectif, dinerSensibilite, collationRotation, collationObjectif, collationSensibilite) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+	$req->execute(array($petitdejeunerDe, $petitdejeunerA, $dejeunerDe, $dejeunerA, $gouterDe, $gouterA, $dinerDe, $dinerA, $collationDe, $collationA, $petitdejeunerRotation, $petitdejeunerObjectif, $petitdejeunerSensibilite, $dejeunerRotation, $dejeunerObjectif, $dejeunerSensibilite, $gouterRotation, $gouterObjectif, $gouterSensibilite, $dinerRotation, $dinerObjectif, $dinerSensibilite, $collationRotation, $collationObjectif, $collationSensibilite));
 
     echo "Enregistrement reussi!";
 } catch (PDOException $e) {
