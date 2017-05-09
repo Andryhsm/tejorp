@@ -199,7 +199,6 @@
         <script>
             $(document).ready(function () {
                 $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div id='12' class='rouge'>Etape 2</div><div id='13' class='verte'>Etape 3</div><div id='14' class='orangee'>Etape 4</div><div id='15' class='violette'>Etape 5</div><div id='16' class='jaune'>Etape 6</div></div>");
-
                 $("#insulinelentematin").change(function (event) {
                     var ILmidi = ($("#insulinelentemidi").val()) ? $("#insulinelentemidi").val() : 0,
                             ILmatin = ($("#insulinelentematin").val()) ? $("#insulinelentematin").val() : 0,
@@ -250,8 +249,6 @@
                     var totalIL = parseInt(ILmatin) + parseInt(ILmidi) + parseInt(ILsoir) + parseInt(ILdiner) + parseInt(ILcollation);
                     $("#totalinsulinelente").val(totalIL);
                 });
-
-
                 $("#insulinerapidematin").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
                             IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
@@ -260,7 +257,6 @@
                             IRsoir = ($("#insulinerapidesoir").val()) ? $("#insulinerapidesoir").val() : 0;
                     var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
-
                 });
                 $("#insulinerapidemidi").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
@@ -280,7 +276,6 @@
                     var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
-
                 $("#insulinerapidediner").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
                             IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
@@ -290,7 +285,6 @@
                     var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
-
                 $("#insulinerapidecollation").change(function (event) {
                     var IRdiner = ($("#insulinerapidediner").val()) ? $("#insulinerapidediner").val() : 0,
                             IRcollation = ($("#insulinerapidecollation").val()) ? $("#insulinerapidecollation").val() : 0,
@@ -311,7 +305,6 @@
                     minView: 2,
                     forceParse: 0
                 });
-
                 $('.datepickerAll').datepicker({
                     language: 'fr',
                     showAnim: 'fadeIn',
@@ -321,7 +314,6 @@
                     orientation: "auto",
                     todayBtn: true
                 });
-
                 $('.datetimepicker').datetimepicker({
                     language: 'fr',
                     weekStart: 1,
@@ -334,7 +326,21 @@
                     maxView: 1,
                     forceParse: 0
                 });
-                
+                $("#12").click(function () {
+                    $('#2').trigger('click');
+                });
+                $("#13").click(function () {
+                    $('#3').trigger('click');
+                });
+                $("#14").click(function () {
+                    $('#4').trigger('click');
+                });
+                $("#15").click(function () {
+                    $('#5').trigger('click');
+                });
+                $("#16").click(function () {
+                    $('#6').trigger('click');
+                });
                 $("#1").click(function () {
                     $("#etape1").show();
                     $("#etape2").hide();
@@ -342,10 +348,22 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
-                });
-                $("#12").click(function () {
-                    $('#2').trigger('click');
+                    $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div id='112' class='rouge'>Etape 2</div><div id='113' class='verte'>Etape 3</div><div id='114' class='orangee'>Etape 4</div><div id='115' class='violette'>Etape 5</div><div id='116' class='jaune'>Etape 6</div></div>");
+                    $("#112").click(function () {
+                        $('#2').trigger('click');
+                    });
+                    $("#113").click(function () {
+                        $('#3').trigger('click');
+                    });
+                    $("#114").click(function () {
+                        $('#4').trigger('click');
+                    });
+                    $("#115").click(function () {
+                        $('#5').trigger('click');
+                    });
+                    $("#116").click(function () {
+                        $('#6').trigger('click');
+                    });
                 });
                 $("#2").click(function () {
                     $("#etape1").hide();
@@ -354,13 +372,27 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div></div><div class='rougegrand'>Etape 2</div><div class='decale'><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
-                   
+                    $('#titreEtape').html("<div class='decale'><div id='21' class='bleu'>Etape 1</div></div><div class='rougegrand'>Etape 2</div><div class='decale'><div id='23' class='verte'>Etape 3</div><div id='24' class='orangee'>Etape 4</div><div id='25' class='violette'>Etape 5</div><div id='26' class='jaune'>Etape 6</div></div>");
+                    $("#21").click(function () {
+                        $('#1').trigger('click');
+                    });
+                    $("#23").click(function () {
+                        $('#3').trigger('click');
+                    });
+                    $("#24").click(function () {
+                        $('#4').trigger('click');
+                    });
+                    $("#25").click(function () {
+                        $('#5').trigger('click');
+                    });
+                    $("#26").click(function () {
+                        $('#6').trigger('click');
+                    });
                     var ValDatesHemGlyc1 = 0, ValDatesHemGlyc2 = 0, ValDatesHemGlyc3 = 0, ValDatesHemGlyc4 = 0, ValDatesHemGlyc5 = 0, ValDatesHemGlyc6 = 0, ValDatesHemGlyc7 = 0, ValDatesHemGlyc8 = 0, ValDatesHemGlyc9 = 0;
                     var ValHbA1cHemGlyc1 = 0, ValHbA1cHemGlyc2 = 0, ValHbA1cHemGlyc3 = 0, ValHbA1cHemGlyc4 = 0, ValHbA1cHemGlyc5 = 0, ValHbA1cHemGlyc6 = 0, ValHbA1cHemGlyc7 = 0, ValHbA1cHemGlyc8 = 0, ValHbA1cHemGlyc9 = 0;
                     jQuery(document).ready(function ($) {
-                       
-                      
+
+
                         // recup data table02
                         // recup data table Dates
                         $("#ValDatesHemGlyc1").change(function (event) {
@@ -439,12 +471,12 @@
                             setTimeout(function () {
                                 capture('barhg');
                             }, 800);
-
                         });
                         // recup data table HbA1c
+
                         initialiser();
                         initialiser2();
-                       
+
                         //init graphe table HG
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
@@ -463,8 +495,6 @@
                         new Chart(barHbA1c).Bar(barDataHG, barOptions);
                         //init graphe table HG
                     });
-                    
-                 
                     function Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9) {
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
@@ -490,7 +520,22 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div></div><div class='vertegrand'>Etape 3</div><div class='decale'><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
+                    $('#titreEtape').html("<div class='decale'><div id='31' class='bleu'>Etape 1</div><div id='32' class='rouge'>Etape 2</div></div><div class='vertegrand'>Etape 3</div><div class='decale'><div id='34' class='orangee'>Etape 4</div><div id='35' class='violette'>Etape 5</div><div id='36' class='jaune'>Etape 6</div></div>");
+                    $("#31").click(function () {
+                        $('#1').trigger('click');
+                    });
+                    $("#32").click(function () {
+                        $('#2').trigger('click');
+                    });
+                    $("#34").click(function () {
+                        $('#4').trigger('click');
+                    });
+                    $("#35").click(function () {
+                        $('#5').trigger('click');
+                    });
+                    $("#36").click(function () {
+                        $('#6').trigger('click');
+                    });
                     var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
                     var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
                     var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
@@ -624,7 +669,6 @@
                             setTimeout(function () {
                                 capture("bar");
                             }, 800);
-
                         });
                         var barData = {
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
@@ -711,7 +755,23 @@
                     $("#etape4").show();
                     $("#etape5").hide();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div></div><div class='orangeegrand'>Etape 4</div><div class='decale'><div class='violette'>Etape 5</div><div class='jaune'>Etape 6</div></div>");
+                    $('#titreEtape').html("<div class='decale'><div id='41' class='bleu'>Etape 1</div><div id='42' class='rouge'>Etape 2</div><div id='43' class='verte'>Etape 3</div></div><div class='orangeegrand'>Etape 4</div><div class='decale'><div id='45' class='violette'>Etape 5</div><div id='46' class='jaune'>Etape 6</div></div>");
+
+                    $("#41").click(function () {
+                        $('#1').trigger('click');
+                    });
+                    $("#42").click(function () {
+                        $('#2').trigger('click');
+                    });
+                    $("#43").click(function () {
+                        $('#3').trigger('click');
+                    });
+                    $("#45").click(function () {
+                        $('#5').trigger('click');
+                    });
+                    $("#46").click(function () {
+                        $('#6').trigger('click');
+                    });
 
                     var pmpdate1 = "",
                             pmpdate2 = "",
@@ -885,7 +945,6 @@
                         $("#pmpcommentaire9").change(function (event) {
                             pmpcommentaire9 = $('#pmpcommentaire9').val();
                         });
-
                     });
                     var alarmedate1 = "",
                             alarmedate2 = "",
@@ -1022,7 +1081,6 @@
                             alarmecommentaire7 = $('#alarmecommentaire7').val();
                         });
                     });
-
                     var manipdate1,
                             manipdate2,
                             manipdate3,
@@ -1128,7 +1186,23 @@
                     $("#etape4").hide();
                     $("#etape5").show();
                     $("#etape6").hide();
-                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div></div><div class='violettegrand'>Etape 5</div><div class='decale'><div class='jaune'>Etape 6</div></div>");
+                    $('#titreEtape').html("<div class='decale'><div id='51' class='bleu'>Etape 1</div><div id='52' class='rouge'>Etape 2</div><div id='53' class='verte'>Etape 3</div><div id='54' class='orangee'>Etape 4</div></div><div class='violettegrand'>Etape 5</div><div class='decale'><div id='56' class='jaune'>Etape 6</div></div>");
+
+                    $("#51").click(function () {
+                        $('#1').trigger('click');
+                    });
+                    $("#52").click(function () {
+                        $('#2').trigger('click');
+                    });
+                    $("#53").click(function () {
+                        $('#3').trigger('click');
+                    });
+                    $("#54").click(function () {
+                        $('#4').trigger('click');
+                    });
+                    $("#56").click(function () {
+                        $('#6').trigger('click');
+                    });
 
                     var cathdate1 = "",
                             cathdate2 = "",
@@ -1340,10 +1414,8 @@
                         $("#cathcommentaire11").change(function (event) {
                             cathcommentaire11 = $('#cathcommentaire11').val();
                         });
-
                     });
                 });
-
                 var asgdetail1 = "",
                         asgdetail2 = "",
                         asgdetail3 = "",
@@ -1489,10 +1561,26 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").show();
-                    $('#titreEtape').html("<div class='decale'><div class='bleu'>Etape 1</div><div class='rouge'>Etape 2</div><div class='verte'>Etape 3</div><div class='orangee'>Etape 4</div><div class='violette'>Etape 5</div></div><div class='jaunegrand'>Etape 6</div>");
+                    $('#titreEtape').html("<div class='decale'><div id='61' class='bleu'>Etape 1</div><div id='62' class='rouge'>Etape 2</div><div id='63' class='verte'>Etape 3</div><div id='64' class='orangee'>Etape 4</div><div id='65' class='violette'>Etape 5</div></div><div class='jaunegrand'>Etape 6</div>");
+
+                    $("#61").click(function () {
+                        $('#1').trigger('click');
+                    });
+                    $("#62").click(function () {
+                        $('#2').trigger('click');
+                    });
+                    $("#63").click(function () {
+                        $('#3').trigger('click');
+                    });
+                    $("#64").click(function () {
+                        $('#4').trigger('click');
+                    });
+                    $("#65").click(function () {
+                        $('#5').trigger('click');
+                    });
+
                 });
-            });
-        </script>
+            });</script>
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -1596,39 +1684,45 @@
             <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
             -->
             <ul>
-                <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
+                <li><a class="round green" onClick="enHa
+                        ut();" id = "1">Etape 1
                         <span class="round">
                             Renseignements<br>
                             Choix du matériel
                         </span>
                     </a></li>
 
-                <li><a class="round red" onClick="enHaut();" id = "2">Etape 2
+                <li><a class="round red" onClick="enHa
+                        ut();" id = "2">Etape 2
                         <span class="round">
                             Données médicale </br>
                             Insulinothérapie </br>
                         </span>
                     </a></li>
-                <li><a class="round vert" onClick="enHaut();" id = "3">Etape 3
+                <li><a class="round vert" onClick="enHa
+                        ut();" id = "3">Etape 3
                         <span class="round">
                             Habitude de vie <br>
                             Habitude alimentaire
                         </span>
                     </a></li>
-                <li><a class="round orange" onClick="enHaut();" id = "4">Etape 4
+                <li><a class="round orange" onClick="enHa
+                        ut();" id = "4">Etape 4
                         <span class="round">
                             Manipulation de la Pompe <br>
                             Alarme
                         </span>
                     </a></li>
-                <li><a class="round violet" onClick="enHaut();" id = "5">Etape 5
+                <li><a class="round violet" onClick="enHa
+                        ut();" id = "5">Etape 5
                         <span class="round">
                             Pose du cathéter <br>
                             Manipulation <br>
                             ASG
                         </span>
                     </a></li>
-                <li><a class="round yellow" onClick="enHaut();" id = "6">Etape 6
+                <li><a class="round yellow" onClick="enHa
+                        ut();" id = "6">Etape 6
                         <span class="round">
                             Enregistrer<br>
                             Partager<br>
@@ -1668,7 +1762,6 @@
                             $(this).addClass('active');
                         });
                     });
-
                     function enHaut()
                     {
                         $('html,body').animate({scrollTop: 0}, 'slow');
@@ -1680,7 +1773,6 @@
             $('#enregistrer').click(function () {
                 $('#save').trigger('click');
             });
-
             function capture(target) {
                 var capture = {};
                 var trg = $('#' + target);
@@ -1702,7 +1794,6 @@
                                     $('html,body').scrollTop(5000);
                                 if (target === "bar")
                                     $('html,body').scrollTop(2000);
-
                             }
                         });
                     }
@@ -1715,13 +1806,11 @@
                 $("#form-filter").attr('target', '_blank');
                 $("#form-filter").submit();
             });
-
-
             $('#save').click(function (e) {
                 e.preventDefault();
                 $("#form-filter").attr('action', 'traitement.php');
                 var form = $('#form-filter').get(0);
-                var formData = new FormData(form);// get the form data
+                var formData = new FormData(form); // get the form data
                 // on envoi formData vers mail.php
                 $.ajax({
                     type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
@@ -1754,7 +1843,6 @@
                         }, 4000);
                     }
                 });
-
             });
 
 
