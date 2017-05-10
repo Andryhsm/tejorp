@@ -17,7 +17,6 @@ $statut = utf8_encode($statut);
  * isset($_GET['vuehtml']) is not mandatory
  * it allow to display the result in the HTML format
  */
-// get the HTML
 
 $nomresp = (isset($_POST["nomresp"])) ? $_POST["nomresp"] : "";
 $prenomresp = (isset($_POST["prenomresp"])) ? $_POST["prenomresp"] : "";
@@ -58,21 +57,18 @@ $membrereseau = (isset($_POST["membrereseau"])) ? $_POST["membrereseau"] : "";
 $nomreseau = (isset($_POST["nomreseau"])) ? $_POST["nomreseau"] : "";
 $Pompe = (isset($_POST["Pompe"])) ? $_POST["Pompe"] : "";
 $dateinstallation = (isset($_POST["dateinstallation"])) ? $_POST["dateinstallation"] : "";
-
 $catheter = (isset($_POST["catheter"])) ? $_POST["catheter"] : "";
 $modele = (isset($_POST["modele"])) ? $_POST["modele"] : "";
 $longueurcanule = (isset($_POST["longueurcanule"])) ? $_POST["longueurcanule"] : "";
 $longueurtubulure = (isset($_POST["longueurtubulure"])) ? $_POST["longueurtubulure"] : "";
-
 $catheter2 = (isset($_POST["catheter2"])) ? $_POST["catheter2"] : "";
 $modele2 = (isset($_POST["modele2"])) ? $_POST["modele2"] : "";
 $longueurcanule2 = (isset($_POST["longueurcanule2"])) ? $_POST["longueurcanule2"] : "";
 $longueurtubulure2 = (isset($_POST["longueurtubulure2"])) ? $_POST["longueurtubulure2"] : "";
-
 $inserteur = (isset($_POST["inserteur"])) ? $_POST["inserteur"] : "";
 $reservoir = (isset($_POST["reservoir"])) ? $_POST["reservoir"] : "";
 $spp = (isset($_POST["spp"])) ? $_POST["spp"] : "";
-$observation = (isset($_POST["observation"])) ? $_POST["observation"] : "";
+$observatiom = (isset($_POST["observatiom"])) ? $_POST["observatiom"] : "";
 $typediabete = (isset($_POST["typediabete"])) ? $_POST["typediabete"] : "";
 $datediagnostic = (isset($_POST["datediagnostic"])) ? $_POST["datediagnostic"] : "";
 $circonstancedecouverte = (isset($_POST["circonstancedecouverte"])) ? $_POST["circonstancedecouverte"] : "";
@@ -440,12 +436,38 @@ $ValHbA1cHemGlyc9 = (isset($_POST["ValHbA1cHemGlyc9"])) ? $_POST["ValHbA1cHemGly
 $activitephysique = (isset($_POST["activitephysique"])) ? $_POST["activitephysique"] : "";
 $profession = (isset($_POST["profession"])) ? $_POST["profession"] : "";
 $situationfamiliale = (isset($_POST["situationfamiliale"])) ? $_POST["situationfamiliale"] : "";
+$observation = (isset($_POST["observation"])) ? $_POST["observation"] : "";
 $hygienealimentaire = (isset($_POST["hygienealimentaire"])) ? $_POST["hygienealimentaire"] : "";
 $stabilitehoraires = (isset($_POST["stabilitehoraires"])) ? $_POST["stabilitehoraires"] : "";
 $details = (isset($_POST["details"])) ? $_POST["details"] : "";
 $environnement = (isset($_POST["environnement"])) ? $_POST["environnement"] : "";
 $etatcutane = (isset($_POST["etatcutane"])) ? $_POST["etatcutane"] : "";
 $choixpoint = (isset($_POST["choixpoint"])) ? $_POST["choixpoint"] : "";
+$petitdejeunerDe = (isset($_POST["petitdejeunerDe"])) ? $_POST["petitdejeunerDe"] : "";
+$petitdejeunerA = (isset($_POST["petitdejeunerA"])) ? $_POST["petitdejeunerA"] : "";
+$petitdejeunerRotation = (isset($_POST["petitdejeunerRotation"])) ? $_POST["petitdejeunerRotation"] : "";
+$petitdejeunerObjectif = (isset($_POST["petitdejeunerObjectif"])) ? $_POST["petitdejeunerObjectif"] : "";
+$petitdejeunerSensibilite = (isset($_POST["petitdejeunerSensibilite"])) ? $_POST["petitdejeunerSensibilite"] : "";
+$dejeunerDe = (isset($_POST["dejeunerDe"])) ? $_POST["dejeunerDe"] : "";
+$dejeunerA = (isset($_POST["dejeunerA"])) ? $_POST["dejeunerA"] : "";
+$dejeunerRotation = (isset($_POST["dejeunerRotation"])) ? $_POST["dejeunerRotation"] : "";
+$dejeunerObjectif = (isset($_POST["dejeunerObjectif"])) ? $_POST["dejeunerObjectif"] : "";
+$dejeunerSensibilite = (isset($_POST["dejeunerSensibilite"])) ? $_POST["dejeunerSensibilite"] : "";
+$gouterDe = (isset($_POST["gouterDe"])) ? $_POST["gouterDe"] : "";
+$gouterA = (isset($_POST["gouterA"])) ? $_POST["gouterA"] : "";
+$gouterRotation = (isset($_POST["gouterRotation"])) ? $_POST["gouterRotation"] : "";
+$gouterObjectif = (isset($_POST["gouterObjectif"])) ? $_POST["gouterObjectif"] : "";
+$gouterSensibilite = (isset($_POST["gouterSensibilite"])) ? $_POST["gouterSensibilite"] : "";
+$dinerDe = (isset($_POST["dinerDe"])) ? $_POST["dinerDe"] : "";
+$dinerA = (isset($_POST["dinerA"])) ? $_POST["dinerA"] : "";
+$dinerRotation = (isset($_POST["dinerRotation"])) ? $_POST["dinerRotation"] : "";
+$dinerObjectif = (isset($_POST["dinerObjectif"])) ? $_POST["dinerObjectif"] : "";
+$dinerSensibilite = (isset($_POST["dinerSensibilite"])) ? $_POST["dinerSensibilite"] : "";
+$collationDe = (isset($_POST["collationDe"])) ? $_POST["collationDe"] : "";
+$collationA = (isset($_POST["collationA"])) ? $_POST["collationA"] : "";
+$collationRotation = (isset($_POST["collationRotation"])) ? $_POST["collationRotation"] : "";
+$collationObjectif = (isset($_POST["collationObjectif"])) ? $_POST["collationObjectif"] : "";
+$collationSensibilite = (isset($_POST["collationSensibilite"])) ? $_POST["collationSensibilite"] : "";
 $regime = (isset($_POST["regime"])) ? $_POST["regime"] : "";
 $observation2 = (isset($_POST["observation2"])) ? $_POST["observation2"] : "";
 $survenue = (isset($_POST["survenue"])) ? $_POST["survenue"] : "";
@@ -709,39 +731,6 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
 
 /* MODIFS STIAN DECLARATIONS DE VARIABLES */
 
-$petitdejeunerDe = (isset($_POST["petitdejeunerDe"])) ? $_POST["petitdejeunerDe"] : "";
-$petitdejeunerA = (isset($_POST["petitdejeunerA"])) ? $_POST["petitdejeunerA"] : "";
-$petitdejeunerRotation = (isset($_POST["petitdejeunerRotation"])) ? $_POST["petitdejeunerRotation"] : "";
-$petitdejeunerObjectif = (isset($_POST["petitdejeunerObjectif"])) ? $_POST["petitdejeunerObjectif"] : "";
-$petitdejeunerSensibilite = (isset($_POST["petitdejeunerSensibilite"])) ? $_POST["petitdejeunerSensibilite"] : "";
-
-$dejeunerDe = (isset($_POST["dejeunerDe"])) ? $_POST["dejeunerDe"] : "";
-$dejeunerA = (isset($_POST["dejeunerA"])) ? $_POST["dejeunerA"] : "";
-$dejeunerRotation = (isset($_POST["dejeunerRotation"])) ? $_POST["dejeunerRotation"] : "";
-$dejeunerObjectif = (isset($_POST["dejeunerObjectif"])) ? $_POST["dejeunerObjectif"] : "";
-$dejeunerSensibilite = (isset($_POST["dejeunerSensibilite"])) ? $_POST["dejeunerSensibilite"] : "";
-
-$gouterDe = (isset($_POST["gouterDe"])) ? $_POST["gouterDe"] : "";
-$gouterA = (isset($_POST["gouterA"])) ? $_POST["gouterA"] : "";
-$gouterRotation = (isset($_POST["gouterRotation"])) ? $_POST["gouterRotation"] : "";
-$gouterObjectif = (isset($_POST["gouterObjectif"])) ? $_POST["gouterObjectif"] : "";
-$gouterSensibilite = (isset($_POST["gouterSensibilite"])) ? $_POST["gouterSensibilite"] : "";
-
-$dinerDe = (isset($_POST["dinerDe"])) ? $_POST["dinerDe"] : "";
-$dinerA = (isset($_POST["dinerA"])) ? $_POST["dinerA"] : "";
-$dinerRotation = (isset($_POST["dinerRotation"])) ? $_POST["dinerRotation"] : "";
-$dinerObjectif = (isset($_POST["dinerObjectif"])) ? $_POST["dinerObjectif"] : "";
-$dinerSensibilite = (isset($_POST["dinerSensibilite"])) ? $_POST["dinerSensibilite"] : "";
-
-$collationDe = (isset($_POST["collationDe"])) ? $_POST["collationDe"] : "";
-$collationA = (isset($_POST["collationA"])) ? $_POST["collationA"] : "";
-$collationRotation = (isset($_POST["collationRotation"])) ? $_POST["collationRotation"] : "";
-$collationObjectif = (isset($_POST["collationObjectif"])) ? $_POST["collationObjectif"] : "";
-$collationSensibilite = (isset($_POST["collationSensibilite"])) ? $_POST["collationSensibilite"] : "";
-
-
-/* MODIFS STIAN DECLARATIONS DE VARIABLES */
-
 ob_start();
 ?>
 
@@ -976,7 +965,7 @@ ob_start();
                 </tr>
                 <tr>
                     <td>00:00</td>
-                    <td><?php echo $Horaire1.$Debit1; ?></td>
+                    <td><?php echo $Horaire1; ?></td>
                     <td><?php echo $Debit1; ?></td>
                     <td>00:00</td>
                     <td><?php echo $Horaire2; ?></td>
@@ -988,7 +977,178 @@ ob_start();
                     <td><?php echo $Horaire4; ?></td>
                     <td><?php echo $Debit4; ?></td>
                 </tr>
+        <?php
+        if($Horaire5 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire5. " </td>
+                              <td> ".$Horaire6. " </td>
+                              <td> ".$Debit5 . "</td>
+                              <td> ".$Horaire7 . "</td>
+                              <td> ".$Horaire8 . "</td>
+                              <td> ".$Debit6 . "</td>
+                              <td> ".$Horaire9. " </td>
+                              <td> ".$Horaire10 . "</td>
+                              <td> ".$Debit7 . "</td>
+                              <td> ".$Horaire11 . "</td>
+                              <td> ".$Horaire12. " </td>
+                              <td> ".$Debit8 . "</td>
+                          </tr>";
+               }
 
+  		if($Horaire13 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire13. " </td>
+                              <td> ".$Horaire14. " </td>
+                              <td> ".$Debit9 . "</td>
+                              <td> ".$Horaire15 . "</td>
+                              <td> ".$Horaire16 . "</td>
+                              <td> ".$Debit10 . "</td>
+                              <td> ".$Horaire17. " </td>
+                              <td> ".$Horaire18 . "</td>
+                              <td> ".$Debit11 . "</td>
+                              <td> ".$Horaire19 . "</td>
+                              <td> ".$Horaire20. " </td>
+                              <td> ".$Debit12 . "</td>
+                          </tr>";
+               }
+
+  			if($Horaire21 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire21. " </td>
+                              <td> ".$Horaire22. " </td>
+                              <td> ".$Debit13 . "</td>
+                              <td> ".$Horaire23 . "</td>
+                              <td> ".$Horaire24 . "</td>
+                              <td> ".$Debit14 . "</td>
+                              <td> ".$Horaire25. " </td>
+                              <td> ".$Horaire26 . "</td>
+                              <td> ".$Debit15 . "</td>
+                              <td> ".$Horaire27 . "</td>
+                              <td> ".$Horaire28. " </td>
+                              <td> ".$Debit16 . "</td>
+                          </tr>";
+               }
+
+  			if($Horaire29 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire29. " </td>
+                              <td> ".$Horaire30. " </td>
+                              <td> ".$Debit17 . "</td>
+                              <td> ".$Horaire31 . "</td>
+                              <td> ".$Horaire32 . "</td>
+                              <td> ".$Debit18 . "</td>
+                              <td> ".$Horaire33. " </td>
+                              <td> ".$Horaire34 . "</td>
+                              <td> ".$Debit19 . "</td>
+                              <td> ".$Horaire35 . "</td>
+                              <td> ".$Horaire36. " </td>
+                              <td> ".$Debit20 . "</td>
+                          </tr>";
+               }
+
+  			if($Horaire37 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire37. " </td>
+                              <td> ".$Horaire38. " </td>
+                              <td> ".$Debit21 . "</td>
+                              <td> ".$Horaire39 . "</td>
+                              <td> ".$Horaire40 . "</td>
+                              <td> ".$Debit22 . "</td>
+                              <td> ".$Horaire41. " </td>
+                              <td> ".$Horaire42 . "</td>
+                              <td> ".$Debit23 . "</td>
+                              <td> ".$Horaire43 . "</td>
+                              <td> ".$Horaire44. " </td>
+                              <td> ".$Debit24 . "</td>
+                          </tr>";
+               }
+
+  			if($Horaire45 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire45. " </td>
+                              <td> ".$Horaire46. " </td>
+                              <td> ".$Debit25 . "</td>
+                              <td> ".$Horaire47 . "</td>
+                              <td> ".$Horaire48 . "</td>
+                              <td> ".$Debit26 . "</td>
+                              <td> ".$Horaire49. " </td>
+                              <td> ".$Horaire50 . "</td>
+                              <td> ".$Debit27 . "</td>
+                              <td> ".$Horaire51 . "</td>
+                              <td> ".$Horaire52. " </td>
+                              <td> ".$Debit28 . "</td>
+                          </tr>";
+               }
+
+  			if($Horaire53 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire53. " </td>
+                              <td> ".$Horaire54. " </td>
+                              <td> ".$Debit29 . "</td>
+                              <td> ".$Horaire55 . "</td>
+                              <td> ".$Horaire56 . "</td>
+                              <td> ".$Debit30 . "</td>
+                              <td> ".$Horaire57. " </td>
+                              <td> ".$Horaire58 . "</td>
+                              <td> ".$Debit31 . "</td>
+                              <td> ".$Horaire59 . "</td>
+                              <td> ".$Horaire60. " </td>
+                              <td> ".$Debit32 . "</td>
+                          </tr>";
+               }
+
+  			if($Horaire61 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire61. " </td>
+                              <td> ".$Horaire62. " </td>
+                              <td> ".$Debit33 . "</td>
+                              <td> ".$Horaire63 . "</td>
+                              <td> ".$Horaire64 . "</td>
+                              <td> ".$Debit34 . "</td>
+                              <td> ".$Horaire65. " </td>
+                              <td> ".$Horaire66 . "</td>
+                              <td> ".$Debit35 . "</td>
+                              <td> ".$Horaire67 . "</td>
+                              <td> ".$Horaire68. " </td>
+                              <td> ".$Debit36 . "</td>
+                          </tr>";
+               }
+
+  			if($Horaire69 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire69. " </td>
+                              <td> ".$Horaire70. " </td>
+                              <td> ".$Debit37 . "</td>
+                              <td> ".$Horaire71 . "</td>
+                              <td> ".$Horaire72 . "</td>
+                              <td> ".$Debit38 . "</td>
+                              <td> ".$Horaire73. " </td>
+                              <td> ".$Horaire74 . "</td>
+                              <td> ".$Debit39 . "</td>
+                              <td> ".$Horaire75 . "</td>
+                              <td> ".$Horaire76. " </td>
+                              <td> ".$Debit40 . "</td>
+                          </tr>";
+               }
+
+			  if($Horaire77 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire77. " </td>
+                              <td> ".$Horaire78. " </td>
+                              <td> ".$Debit41 . "</td>
+                              <td> ".$Horaire79 . "</td>
+                              <td> ".$Horaire80 . "</td>
+                              <td> ".$Debit42 . "</td>
+                              <td> ".$Horaire81. " </td>
+                              <td> ".$Horaire82 . "</td>
+                              <td> ".$Debit43 . "</td>
+                              <td> ".$Horaire83 . "</td>
+                              <td> ".$Horaire84. " </td>
+                              <td> ".$Debit44 . "</td>
+                          </tr>";
+               }
+
+               ?>
                 <tr>
                     <td><?php echo $Horaire1N; ?></td>
                     <td>23:59</td>
@@ -1051,7 +1211,180 @@ ob_start();
                     <td><?php echo $Horaire_4; ?></td>
                     <td><?php echo $Debit_4; ?></td>
                 </tr>
+                <?php
 
+  				if($Horaire_5 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_5. " </td>
+                              <td> ".$Horaire_6. " </td>
+                              <td> ".$Debit_5 . "</td>
+                              <td> ".$Horaire_7 . "</td>
+                              <td> ".$Horaire_8 . "</td>
+                              <td> ".$Debit_6 . "</td>
+                              <td> ".$Horaire_9. " </td>
+                              <td> ".$Horaire_10 . "</td>
+                              <td> ".$Debit_7 . "</td>
+                              <td> ".$Horaire_11 . "</td>
+                              <td> ".$Horaire_12. " </td>
+                              <td> ".$Debit_8 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_13 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_13. " </td>
+                              <td> ".$Horaire_14. " </td>
+                              <td> ".$Debit_9 . "</td>
+                              <td> ".$Horaire_15 . "</td>
+                              <td> ".$Horaire_16 . "</td>
+                              <td> ".$Debit_10 . "</td>
+                              <td> ".$Horaire_17. " </td>
+                              <td> ".$Horaire_18 . "</td>
+                              <td> ".$Debit_11 . "</td>
+                              <td> ".$Horaire_19 . "</td>
+                              <td> ".$Horaire_20. " </td>
+                              <td> ".$Debit_12 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_21 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_21. " </td>
+                              <td> ".$Horaire_22. " </td>
+                              <td> ".$Debit_13 . "</td>
+                              <td> ".$Horaire_23 . "</td>
+                              <td> ".$Horaire_24 . "</td>
+                              <td> ".$Debit_14 . "</td>
+                              <td> ".$Horaire_25. " </td>
+                              <td> ".$Horaire_26 . "</td>
+                              <td> ".$Debit_15 . "</td>
+                              <td> ".$Horaire_27 . "</td>
+                              <td> ".$Horaire_28. " </td>
+                              <td> ".$Debit_16 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_29 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_29. " </td>
+                              <td> ".$Horaire_30. " </td>
+                              <td> ".$Debit_17 . "</td>
+                              <td> ".$Horaire_31 . "</td>
+                              <td> ".$Horaire_32 . "</td>
+                              <td> ".$Debit_18 . "</td>
+                              <td> ".$Horaire_33. " </td>
+                              <td> ".$Horaire_34 . "</td>
+                              <td> ".$Debit_19 . "</td>
+                              <td> ".$Horaire_35 . "</td>
+                              <td> ".$Horaire_36. " </td>
+                              <td> ".$Debit_20 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_37 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_37. " </td>
+                              <td> ".$Horaire_38. " </td>
+                              <td> ".$Debit_21 . "</td>
+                              <td> ".$Horaire_39 . "</td>
+                              <td> ".$Horaire_40 . "</td>
+                              <td> ".$Debit_22 . "</td>
+                              <td> ".$Horaire_41. " </td>
+                              <td> ".$Horaire_42 . "</td>
+                              <td> ".$Debit_23 . "</td>
+                              <td> ".$Horaire_43 . "</td>
+                              <td> ".$Horaire_44. " </td>
+                              <td> ".$Debit_24 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_45 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_45. " </td>
+                              <td> ".$Horaire_46. " </td>
+                              <td> ".$Debit_25 . "</td>
+                              <td> ".$Horaire_47 . "</td>
+                              <td> ".$Horaire_48 . "</td>
+                              <td> ".$Debit_26 . "</td>
+                              <td> ".$Horaire_49. " </td>
+                              <td> ".$Horaire_50 . "</td>
+                              <td> ".$Debit_27 . "</td>
+                              <td> ".$Horaire_51 . "</td>
+                              <td> ".$Horaire_52. " </td>
+                              <td> ".$Debit_28 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_53 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_53. " </td>
+                              <td> ".$Horaire_54. " </td>
+                              <td> ".$Debit_29 . "</td>
+                              <td> ".$Horaire_55 . "</td>
+                              <td> ".$Horaire_56 . "</td>
+                              <td> ".$Debit_30 . "</td>
+                              <td> ".$Horaire_57. " </td>
+                              <td> ".$Horaire_58 . "</td>
+                              <td> ".$Debit_31 . "</td>
+                              <td> ".$Horaire_59 . "</td>
+                              <td> ".$Horaire_60. " </td>
+                              <td> ".$Debit_32 . "</td>
+                          </tr>";
+               }
+
+ 				 if($Horaire_61 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_61. " </td>
+                              <td> ".$Horaire_62. " </td>
+                              <td> ".$Debit_33 . "</td>
+                              <td> ".$Horaire_63 . "</td>
+                              <td> ".$Horaire_64 . "</td>
+                              <td> ".$Debit_34 . "</td>
+                              <td> ".$Horaire_65. " </td>
+                              <td> ".$Horaire_66 . "</td>
+                              <td> ".$Debit_35 . "</td>
+                              <td> ".$Horaire_67 . "</td>
+                              <td> ".$Horaire_68. " </td>
+                              <td> ".$Debit_36 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_69 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_69. " </td>
+                              <td> ".$Horaire_70. " </td>
+                              <td> ".$Debit_37 . "</td>
+                              <td> ".$Horaire_71 . "</td>
+                              <td> ".$Horaire_72 . "</td>
+                              <td> ".$Debit_38 . "</td>
+                              <td> ".$Horaire_73. " </td>
+                              <td> ".$Horaire_74 . "</td>
+                              <td> ".$Debit_39 . "</td>
+                              <td> ".$Horaire_75 . "</td>
+                              <td> ".$Horaire_76. " </td>
+                              <td> ".$Debit_40 . "</td>
+                          </tr>";
+               }
+
+  				if($Horaire_77 != ""){
+                    echo   "<tr>
+                              <td> ".$Horaire_77. " </td>
+                              <td> ".$Horaire_78. " </td>
+                              <td> ".$Debit_41 . "</td>
+                              <td> ".$Horaire_79 . "</td>
+                              <td> ".$Horaire_80 . "</td>
+                              <td> ".$Debit_42 . "</td>
+                              <td> ".$Horaire_81. " </td>
+                              <td> ".$Horaire_82 . "</td>
+                              <td> ".$Debit_43 . "</td>
+                              <td> ".$Horaire_83 . "</td>
+                              <td> ".$Horaire_84. " </td>
+                              <td> ".$Debit_44 . "</td>
+                          </tr>";
+               }
+
+
+                ?>
 
                 <tr>
                     <td><?php echo $Horaire_N1; ?></td>
@@ -1205,12 +1538,11 @@ ob_start();
         <table class="table " style="margin-left: 9px;">
             <thead>
                 <tr>
-                    <th style="width:16%"></th>
-                    <th style="width:16%"><strong>De</strong></th>
-                    <th style="width:16%"><strong>A</strong></th>
-                    <th style="width:16%"><strong>Ration Insuline/glucide</strong></th>
-                    <th style="width:16%"><strong>Objectif glicémique</strong></th>
-                    <th style="width:16%"><strong>Sensibilité à l'insuline</strong></th>
+                    <th style="width:19%"></th>
+                    <th style="width:19%"><strong>Horaires</strong></th>
+                    <th style="width:19%"><strong>Ration Insuline/glucide</strong></th>
+                    <th style="width:19%"><strong>Objectif glicémique</strong></th>
+                    <th style="width:19%"><strong>Sensibilité à l'insuline</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -1255,6 +1587,7 @@ ob_start();
                     <td><?php echo $collationSensibilite; ?></td>
                 </tr>
             </tbody>
+
         </table>
     </div>
     <div class="dec">
@@ -1320,7 +1653,7 @@ ob_start();
     </div><br/><br/>
 
        <!-- ?php echo '<img src="img/image'.$id.'bar.png" style="width: 700px;" />';? -->
-
+    
     <div class="dec">
         <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
 

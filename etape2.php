@@ -906,7 +906,10 @@
             if (/^Debit/.test(name_)) {
                 arr_Debit2.push(name_);
                 new_nameD.push(name_);
+<<<<<<< HEAD
+=======
 
+>>>>>>> c997f476125b3c025c7a3f2cef6bb0a5fcc9b38d
             }
         }
 
