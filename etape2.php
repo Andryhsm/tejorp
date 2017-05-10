@@ -1,17 +1,17 @@
 <style type="text/css">
-.field2
-{
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
-    background-color: rgba(133,32,28,.4);
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
-    box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
-}
+    .field2
+    {
+        min-height: 20px;
+        padding: 19px;
+        margin-bottom: 20px;
+        background-color: rgba(133,32,28,.4);
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
+        box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
+    }
 </style>
 
-    <section class="container-fluid">
+<section class="container-fluid">
     <div>
         <div class="field2">
             <h4 style="text-align: center;">DONNEES MEDICALES</h4></br>
@@ -332,7 +332,7 @@
                             <td><input type="text" class="form-control datetimepicker" name="Horaire4" id="Horaire4"></td>
                             <td><input type="number" class="form-control" name="Debit4" id="Debit4"></td>
                         </tr>
-                        
+
                         <tr  id="ligne4">
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire1N" id="Horaire1N"></td>
@@ -396,7 +396,7 @@
                             <td style="text-align: center;">Débit</td>
                         </tr>
                     </thead>
-                   <tbody id="contentBasal2">
+                    <tbody id="contentBasal2">
                         <tr>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire_1" id="Horaire_1"></td>
@@ -757,8 +757,8 @@
 
 <script type="text/javascript">
     var arr_Horaire = [], arr_Debit = [], arr_Horaire2 = [], arr_Debit2 = [];
-    var DSLScript ;
-    
+    var DSLScript;
+
     $("#taille").blur(function () {
 
         var poids = ($('#poidsactuel').val()) ? $('#poidsactuel').val() : 0;
@@ -785,51 +785,51 @@
 <script id="chart" type="text/javascript"></script>
 <script id="chart2" type="text/javascript"></script>
 <script language="javascript">
-        $(document).ready(function () {
-                $.ajax({
-                    url: 'lib/chart_dynamic.php',
-                    type: 'POST',
-                    success: function(data){
-                        $("#chart").html(data);
-                    },
-                    error: function(){
-                        alert("Erreur de chargement de lib/chart_dynamic.php");
-                    }
-                });
-                $.ajax({
-                    url: 'lib/chart_dynamic2.php',
-                    type: 'POST',
-                    success: function(data){
-                        $("#chart2").html(data);
-                    },
-                    error: function(){
-                        alert("Erreur de chargement de lib/chart_dynamic2.php");
-                    }
-                });
-
+    $(document).ready(function () {
+        $.ajax({
+            url: 'lib/chart_dynamic.php',
+            type: 'POST',
+            success: function (data) {
+                $("#chart").html(data);
+            },
+            error: function () {
+                alert("Erreur de chargement de lib/chart_dynamic.php");
+            }
         });
+        $.ajax({
+            url: 'lib/chart_dynamic2.php',
+            type: 'POST',
+            success: function (data) {
+                $("#chart2").html(data);
+            },
+            error: function () {
+                alert("Erreur de chargement de lib/chart_dynamic2.php");
+            }
+        });
+
+    });
 </script>
 <script type="text/javascript">
     var i = 0, inc = 4, incD = 4, len = 0, content = "", len2, name;
-    
+
     $('#btnAdd').click(function (e)
     {
         e.preventDefault();
         i++;
-        var c   =    "<tr>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+ i) +"' id='Horaire"+(inc + i)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+ i + 1) +"' id='Horaire"+(inc + i + 1)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+(incD + i)+"' id='Debit"+(incD + i)+"'></td>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+2)+"' id='Horaire"+(inc+i+2)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+3)+"' id='Horaire"+(inc+i+3)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+(incD + i + 1)+"' id='Debit"+(incD + i + 1)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+4)+"' id='Horaire"+(inc+i+4)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+5)+"' id='Horaire"+(inc+i+5)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+ (incD + i + 2) +"' id='Debit"+ (incD + i + 2) +"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+6)+"' id='Horaire"+(inc+i+6)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+7)+"' id='Horaire"+(inc+i+7)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+ (incD + i + 3) +"' id='Debit"+ (incD + i + 3) +"'></td>";
-            c +=      "</tr>";
+        var c = "<tr>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i) + "' id='Horaire" + (inc + i) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 1) + "' id='Horaire" + (inc + i + 1) + "'></td>";
+        c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i) + "' id='Debit" + (incD + i) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 2) + "' id='Horaire" + (inc + i + 2) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 3) + "' id='Horaire" + (inc + i + 3) + "'></td>";
+        c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i + 1) + "' id='Debit" + (incD + i + 1) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 4) + "' id='Horaire" + (inc + i + 4) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 5) + "' id='Horaire" + (inc + i + 5) + "'></td>";
+        c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i + 2) + "' id='Debit" + (incD + i + 2) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 6) + "' id='Horaire" + (inc + i + 6) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 7) + "' id='Horaire" + (inc + i + 7) + "'></td>";
+        c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i + 3) + "' id='Debit" + (incD + i + 3) + "'></td>";
+        c += "</tr>";
         inc += 7;
         incD += 3;
         if (i < 11)
@@ -837,22 +837,21 @@
             $('#ligne4').before(c);
         }
         len = $("#contentBasal1").children().length;
-       
-        len2 = $("#contentBasal1>tr:eq("+(len - 2)+")").children().length;
-        
+
+        len2 = $("#contentBasal1>tr:eq(" + (len - 2) + ")").children().length;
+
         var new_nameH = [], new_nameD = [];
-        for(var j = 0; j < len2; j++){
-            name = $("#contentBasal1>tr:eq("+(len - 2)+")>td:eq("+j+")").children().attr("name");
-            if(/^Horaire/.test(name)){   
+        for (var j = 0; j < len2; j++) {
+            name = $("#contentBasal1>tr:eq(" + (len - 2) + ")>td:eq(" + j + ")").children().attr("name");
+            if (/^Horaire/.test(name)) {
                 arr_Horaire.push(name);
                 new_nameH.push(name);
             }
-            if(/^Debit/.test(name)){
-                arr_Debit.push(name);    
+            if (/^Debit/.test(name)) {
+                arr_Debit.push(name);
                 new_nameD.push(name);
             }
         }
-        
 
         var dataD = JSON.stringify(arr_Debit);
         var dataH = JSON.stringify(arr_Horaire);
@@ -860,16 +859,29 @@
             url: 'lib/chart_dynamic.php',
             type: 'POST',
             data: {dataD: dataD, dataH: dataH},
-            success: function(data){
+            success: function (data) {
                 $("#chart").html(data);
             },
-            error: function(){
+            error: function () {
                 alert("Erreur de chargement de lib/chart_dynamic.php");
             }
         });
-        
+
         console.log(arr_Horaire);
         console.log(new_nameH);
+
+        $('.datetimepicker1').datetimepicker({
+            language: 'fr',
+            weekStart: 1,
+            todayBtn: 1,
+            format: "hh:ii",
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
     });
 </script>
 <script type="text/javascript">
@@ -877,6 +889,7 @@
     $('#btnAdd2').click(function (e )
     {
         e.preventDefault();
+<<<<<<< HEAD
         m++;
         var c   =    "<tr>";
              c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2 + m ) +"' id='Horaire_"+(inc2+ m )+"'></td>";
@@ -912,9 +925,47 @@
             if(/^Debit/.test(name_)){
                 arr_Debit2.push(name_);    
                 new_nameD.push(name_);
+=======
+        i++;
+        var c = "<tr>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i) + "' id='Horaire_" + (inc + i) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 1) + "' id='Horaire_" + (inc + i + 1) + "'></td>";
+        c += "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_" + (incD + i) + "' id='Debit_" + (incD + i) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 2) + "' id='Horaire" + (inc + i + 2) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 3) + "' id='Horaire_" + (inc + i + 3) + "'></td>";
+        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 1) + "' id='Debit_" + (incD + i + 1) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 4) + "' id='Horaire_" + (inc + i + 4) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 5) + "' id='Horaire_" + (inc + i + 5) + "'></td>";
+        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 2) + "' id='Debit_" + (incD + i + 2) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 6) + "' id='Horaire_" + (inc + i + 6) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 7) + "' id='Horaire_" + (inc + i + 7) + "'></td>";
+        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 3) + "' id='Debit_" + (incD + i + 3) + "'></td>";
+        c += "</tr>";
+
+        inc += 7;
+        incD += 3;
+        if (i < 10)
+        {
+            $('#ligne24').before(c);
+        }
+        len = $("#contentBasal2").children().length;
+
+        len2 = $("#contentBasal2>tr:eq(" + (len - 2) + ")").children().length;
+
+        var new_nameH = [], new_nameD = [];
+        for (var j = 0; j < len2; j++) {
+            name = $("#contentBasal2>tr:eq(" + (len - 2) + ")>td:eq(" + j + ")").children().attr("name");
+            if (/^Horaire/.test(name)) {
+                arr_Horaire2.push(name);
+                new_nameH.push(name);
+            }
+            if (/^Debit/.test(name)) {
+                arr_Debit2.push(name);
+                new_nameD.push(name);
+>>>>>>> ca275450254444508f7b570ceda7759bc856bfc4
             }
         }
-        
+
 
         var dataD = JSON.stringify(arr_Debit2);
         var dataH = JSON.stringify(arr_Horaire2);
@@ -922,16 +973,29 @@
             url: 'lib/chart_dynamic2.php',
             type: 'POST',
             data: {dataD: dataD, dataH: dataH},
-            success: function(data){
+            success: function (data) {
                 $("#chart2").html(data);
                 //alert(data);
             },
-            error: function(){
+            error: function () {
                 alert("Erreur de chargement de lib/chart_dynamic2.php");
             }
         });
-        
+
         console.log(arr_Horaire2);
         console.log(new_nameH);
+        
+        $('.datetimepicker1').datetimepicker({
+            language: 'fr',
+            weekStart: 1,
+            todayBtn: 1,
+            format: "hh:ii",
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
     });
 </script>

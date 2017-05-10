@@ -459,7 +459,7 @@ if ($statut == "Médecin traitant") {
                 <div class="form-group">
                     <label for="mobile" class="col-sm-4 control-label">Type de cathéter:</label>
                     <div class="col-sm-7">
-                        <select class="form-control">
+                        <select name="catheter2" id="catheter2" class="form-control">
                             <option value="DROIT">DROIT</option>
                             <option value="TANGEANTIEL">TANGEANTIEL</option>
                         </select>
@@ -469,14 +469,14 @@ if ($statut == "Médecin traitant") {
                 <div class="form-group">
                     <label for="modele" class="col-sm-4 control-label">Modèle:</label>
                     <div class="col-sm-7">
-                        <input type="text" placeholder="Modèle" class="form-control" id="modele">
+                        <input type="text" placeholder="Modèle" class="form-control" name="modele2" id="modele2">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="longueurcanule" class="col-sm-4 control-label">Longueur de canule:</label>
                     <div class="col-sm-7">
                         <div class="input-group">
-                            <input type="number" placeholder="Longueur de canule" class="form-control" id="longueurcanule">
+                            <input type="number" placeholder="Longueur de canule" class="form-control" name="longueurcanule2" id="longueurcanule2">
                             <span class="input-group-addon">mm</span>
                         </div>
                     </div>
@@ -487,7 +487,7 @@ if ($statut == "Médecin traitant") {
                     <label for="longueurtubulure" class="col-sm-4 control-label">Longueur de tubulure:</label>
                     <div class="col-sm-7">
                         <div class="input-group">
-                            <input type="number" placeholder="Longueur de tubulure" class="form-control" id="longueurtubulure">
+                            <input type="number" placeholder="Longueur de tubulure" class="form-control" name="longueurtubulure2" id="longueurtubulure2">
                             <span class="input-group-addon">cm</span>
                         </div>
 
@@ -537,7 +537,7 @@ if ($statut == "Médecin traitant") {
         <div class="form-group">
             <label for="observation" class="col-sm-4 control-label">Observations</label>
             <div class="col-sm-7">
-                <textarea rows="3" type="text" placeholder="Observations" class="form-control" name="observation" id="observation"></textarea>
+                <textarea rows="3" type="text" placeholder="Observations" class="form-control" name="observatiom" id="observatiom"></textarea>
             </div>
         </div>
 

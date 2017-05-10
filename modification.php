@@ -32,7 +32,7 @@ require './protection.php';
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="./page.php">Insulinothérapie</a>
+                    <a class="navbar-brand" href="./utilisateur.php">Insulinothérapie</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
