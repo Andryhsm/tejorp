@@ -1538,11 +1538,12 @@ ob_start();
         <table class="table " style="margin-left: 9px;">
             <thead>
                 <tr>
-                    <th style="width:19%"></th>
-                    <th style="width:19%"><strong>Horaires</strong></th>
-                    <th style="width:19%"><strong>Ration Insuline/glucide</strong></th>
-                    <th style="width:19%"><strong>Objectif glicémique</strong></th>
-                    <th style="width:19%"><strong>Sensibilité à l'insuline</strong></th>
+                    <th style="width:16%"></th>
+                    <th style="width:16%"><strong>De</strong></th>
+                    <th style="width:16%"><strong>A</strong></th>
+                    <th style="width:16%"><strong>Ration Insuline/glucide</strong></th>
+                    <th style="width:16%"><strong>Objectif glicémique</strong></th>
+                    <th style="width:16%"><strong>Sensibilité à l'insuline</strong></th>
                 </tr>
             </thead>
             <tbody>
