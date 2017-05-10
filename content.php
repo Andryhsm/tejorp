@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+$statut = $_SESSION['statut'];
+$statut = utf8_encode($statut);
+
 /**
  * HTML2PDF Library - example
  *
@@ -12,8 +17,7 @@
  * isset($_GET['vuehtml']) is not mandatory
  * it allow to display the result in the HTML format
  */
-
-    // get the HTML
+// get the HTML
 
 $nomresp = (isset($_POST["nomresp"])) ? $_POST["nomresp"] : "";
 $prenomresp = (isset($_POST["prenomresp"])) ? $_POST["prenomresp"] : "";
@@ -54,10 +58,17 @@ $membrereseau = (isset($_POST["membrereseau"])) ? $_POST["membrereseau"] : "";
 $nomreseau = (isset($_POST["nomreseau"])) ? $_POST["nomreseau"] : "";
 $Pompe = (isset($_POST["Pompe"])) ? $_POST["Pompe"] : "";
 $dateinstallation = (isset($_POST["dateinstallation"])) ? $_POST["dateinstallation"] : "";
+
 $catheter = (isset($_POST["catheter"])) ? $_POST["catheter"] : "";
 $modele = (isset($_POST["modele"])) ? $_POST["modele"] : "";
 $longueurcanule = (isset($_POST["longueurcanule"])) ? $_POST["longueurcanule"] : "";
 $longueurtubulure = (isset($_POST["longueurtubulure"])) ? $_POST["longueurtubulure"] : "";
+
+$catheter2 = (isset($_POST["catheter2"])) ? $_POST["catheter2"] : "";
+$modele2 = (isset($_POST["modele2"])) ? $_POST["modele2"] : "";
+$longueurcanule2 = (isset($_POST["longueurcanule2"])) ? $_POST["longueurcanule2"] : "";
+$longueurtubulure2 = (isset($_POST["longueurtubulure2"])) ? $_POST["longueurtubulure2"] : "";
+
 $inserteur = (isset($_POST["inserteur"])) ? $_POST["inserteur"] : "";
 $reservoir = (isset($_POST["reservoir"])) ? $_POST["reservoir"] : "";
 $spp = (isset($_POST["spp"])) ? $_POST["spp"] : "";
@@ -660,6 +671,7 @@ $connaissance2 = (isset($_POST["connaissance2"])) ? $_POST["connaissance2"] : ""
 $cnsobservation2 = (isset($_POST["cnsobservation2"])) ? $_POST["cnsobservation2"] : "";
 $connaissance3 = (isset($_POST["connaissance3"])) ? $_POST["connaissance3"] : "";
 $connaissance4 = (isset($_POST["connaissance4"])) ? $_POST["connaissance4"] : "";
+$connaissance5 = (isset($_POST["connaissance5"])) ? $_POST["connaissance5"] : "";
 $connaissance6 = (isset($_POST["connaissance6"])) ? $_POST["connaissance6"] : "";
 $perempdate1 = (isset($_POST["perempdate1"])) ? $_POST["perempdate1"] : "";
 $perempdate2 = (isset($_POST["perempdate2"])) ? $_POST["perempdate2"] : "";
@@ -678,8 +690,9 @@ $cnsobservation6 = (isset($_POST["cnsobservation6"])) ? $_POST["cnsobservation6"
 $connaissance12 = (isset($_POST["connaissance12"])) ? $_POST["connaissance12"] : "";
 $cnsobservation7 = (isset($_POST["cnsobservation7"])) ? $_POST["cnsobservation7"] : "";
 $connaissance13 = (isset($_POST["connaissance13"])) ? $_POST["connaissance13"] : "";
-$connaissance14 = (isset($_POST["connaissance14"])) ? $_POST["connaissance14"] : "";
 $cnsobservation8 = (isset($_POST["cnsobservation8"])) ? $_POST["cnsobservation8"] : "";
+$connaissance14 = (isset($_POST["connaissance14"])) ? $_POST["connaissance14"] : "";
+$cnsobservation9 = (isset($_POST["cnsobservation9"])) ? $_POST["cnsobservation9"] : "";
 $asgdetail1 = (isset($_POST["asgdetail1"])) ? $_POST["asgdetail1"] : "";
 $asgobservation1 = (isset($_POST["asgobservation1"])) ? $_POST["asgobservation1"] : "";
 $asgdetail2 = (isset($_POST["asgdetail2"])) ? $_POST["asgdetail2"] : "";
@@ -690,10 +703,9 @@ $asgdetail4 = (isset($_POST["asgdetail4"])) ? $_POST["asgdetail4"] : "";
 $asgobservation4 = (isset($_POST["asgobservation4"])) ? $_POST["asgobservation4"] : "";
 $asgfrequence1 = (isset($_POST["asgfrequence1"])) ? $_POST["asgfrequence1"] : "";
 $asgfrequence2 = (isset($_POST["asgfrequence2"])) ? $_POST["asgfrequence2"] : "";
-$asg1 = (isset($_POST["asg1"])) ? $_POST["asg1"] : "";
-$connaissance5 = (isset($_POST["connaissance5"])) ? $_POST["connaissance5"] : "";
+$asgconnaissance = (isset($_POST["asgconnaissance"])) ? $_POST["asgconnaissance"] : "";
+$asgcommentaire = (isset($_POST["asgcommentaire"])) ? $_POST["asgcommentaire"] : "";
 $id = (isset($_POST["id"])) ? $_POST["id"] : "";
-
 
 /* MODIFS STIAN DECLARATIONS DE VARIABLES */
 
@@ -733,68 +745,96 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
     ob_start();
 ?>
 
-    <div id='content' >
-         <div><img style="position: relative; margin-left: 600px; width: 120px;" src="img/basitide.png"></div>
-        <div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de Pompe à insuline</h3></div><br/><br/><br/></div>
-        <div class="dec">
-            <h4><u>RENSEIGNEMENTS BASTIDE LE CONFORT MEDICAL</u></h4>
-            <p>
-                <strong>Nom IDE Responsable :</strong> <?php echo $nomresp ; ?>  <br/>   
-                <strong>Prénom : </strong> <?php echo $prenomresp ; ?>  <br/>
-                <strong>Mobile : </strong> <?php echo $mobileresp ; ?>  <br/>
-                <strong>Coordonnées :</strong> <?php echo $coordonnee ; ?> 
+<div id='content' >
+    <div><img style="position: relative; margin-left: 600px; width: 120px;" src="img/basitide.png"></div>
+    <div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de Pompe à insuline</h3></div><br/><br/><br/></div>
+    <div class="dec">
+        <h4><u>UTILISATEUR BASTIDE MEDICAL</u></h4>
+        <p>
+            <strong>Nom IDE Responsable :</strong> <?php echo $nomresp; ?>  <br/>   
+            <strong>Prénom : </strong> <?php echo $prenomresp; ?>  <br/>
+            <strong>Mobile : </strong> <?php echo $mobileresp; ?>  <br/>
+            <strong>Coordonnées :</strong> <?php echo $coordonnee; ?> 
 
-                    <h4><u>RENSEIGNEMENTS PATIENT</u></h4>
-                <strong>Nom :</strong> <?php echo $nompatient ; ?>  <br/>
-                <strong>Prénom :</strong><?php echo $prenompatient ; ?><br/>
-                <strong>Né(e) le : </strong><?php echo $datenaissance ; ?> <br/>
-                <strong>Age :</strong> <?php echo $agepatient ; ?><br/>
-                <strong>Tel : </strong> <?php echo $telpatient ; ?><br/>
-                <strong>Mobile :</strong><?php echo $mobilepatient ; ?><br/>
-                <strong>Adresse :</strong><?php echo $adressepatient ; ?><br/>
-                <strong>Code postal :</strong><?php echo $codepostalpatient ; ?><br/>    
-                <strong>Ville :</strong><?php echo $villepatient ; ?><br/>
-                <h4><u>RENSEIGNEMENTS PRESCRIPTEUR</u></h4>
-                
-                <strong>Etablissement prescripteur:</strong> <?php echo $etablissementprescripteur ; ?> <br/>
-                <strong>Service :</strong> <?php echo $serviceep ; ?> <br/><br/> 
+        <h4><u>RENSEIGNEMENTS PATIENT</u></h4>
+        <strong>Nom :</strong> <?php echo $nompatient; ?>  <br/>
+        <strong>Prénom :</strong><?php echo $prenompatient; ?><br/>
+        <strong>Né(e) le : </strong><?php echo $datenaissance; ?> <br/>
+        <strong>Age :</strong> <?php echo $agepatient; ?><br/>
+        <strong>Tel : </strong> <?php echo $telpatient; ?><br/>
+        <strong>Mobile :</strong><?php echo $mobilepatient; ?><br/>
+        <strong>Adresse :</strong><?php echo $adressepatient; ?><br/>
+        <strong>Code postal :</strong><?php echo $codepostalpatient; ?><br/>    
+        <strong>Ville :</strong><?php echo $villepatient; ?><br/>
 
-                <strong>Mail :</strong> <?php echo $maildl ; ?> <br/><br/>
+        <h4><u>RENSEIGNEMENTS PRESCRIPTEUR</u></h4>
 
-                <h4><u> Médecin traitant :</u></h4>
-                <strong>Tel :</strong>  <?php echo $telmt ; ?><br/>   
-                <strong>Mobile :</strong>  <?php echo $mobilemt ; ?><br/>      
-                <strong>Ville :</strong><?php echo $villemt ; ?><br/>
-                <strong>Mail :</strong><?php echo $mailmt ; ?><br/><br/>
+        <strong>Etablissement prescripteur:</strong> <?php echo $etablissementprescripteur; ?> <br/>
+        <strong>Service :</strong> <?php echo $serviceep; ?> <br/><br/> 
 
-                <strong>Membre réseau :</strong> <?php echo $membrereseau ; ?> <br/> 
-            </p>
-        </div>
-       
+        <?php if ($statut == "Médecin traitant") { ?>            
+            <h4><u> Médecin traitant : <?php $medecintraitant; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $telmt; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobilemt; ?><br/>      
+            <strong>Ville :</strong><?php echo $villemt; ?><br/>
+            <strong>Mail :</strong><?php echo $mailmt; ?><br/><br/>    
+        <?php } elseif ($statut == "Diabétologue libéral") { ?>
+            <h4><u> Diabétologue prescripteur : <?php $diabetologueliberal; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $teldl; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobiledl; ?><br/>      
+            <strong>Ville :</strong><?php echo $villedl; ?><br/>
+            <strong>Mail :</strong><?php echo $maildl; ?><br/><br/>  
+        <?php } elseif ($statut == "Diabétologue prescripteur") { ?>
+            <h4><u> Diabétologue prescripteur : <?php $diabetologueprescripteur; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $teldp; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobiledp; ?><br/>      
+            <strong>Ville :</strong><?php echo $villedp; ?><br/>
+            <strong>Mail :</strong><?php echo $maildp; ?><br/><br/>  
+        <?php } elseif ($statut == "Diététicienne") { ?>
+            <h4><u> Diabétologue prescripteur : <?php $dieteticienne; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $teld; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobiled; ?><br/>      
+            <strong>Ville :</strong><?php echo $villed; ?><br/>
+            <strong>Mail :</strong><?php echo $maild; ?><br/><br/>  
+        <?php } ?>
+
+
+        <strong>Membre réseau :</strong> <?php echo $membrereseau; ?> <br/> 
+        </p>
+    </div>
+
     <div class="dec">
         <h4><u>CHOIX DU MATERIEL</u></h4>
         <p>   
-            <strong>Pompe :</strong> <?php echo $Pompe ; ?> <br/>
-            <strong>Date d’installation :</strong> <?php echo $dateinstallation ; ?> <br/>
-            <strong>Type de cathéter :</strong> <?php echo $catheter ; ?><br/>
-            <strong>Modèle :</strong> <?php echo $modele ; ?> <br/>
-            <strong>Longueur de canule :</strong> <?php echo $longueurcanule ; ?> mm              <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure ; ?> cm
-            <strong>Inserteur :</strong> <?php echo $inserteur ; ?><br/><br/>
+            <strong>Pompe :</strong> <?php echo $Pompe; ?> <br/>
+            <strong>Date d’installation :</strong> <?php echo $dateinstallation; ?> <br/>
 
-            <strong>Réservoir :</strong> <?php echo $reservoir ; ?> <br/>                      
-            <strong>Système de portage de la Pompe (qql lignes) : </strong> <?php echo $spp ; ?>  <br/>    
 
-            <strong>Observations et commentaires :</strong> <?php echo $observation ; ?>  
+            <strong>Type de cathéter 1 :</strong> <?php echo $catheter; ?><br/>
+            <strong>Modèle :</strong> <?php echo $modele; ?> <br/>
+            <strong>Longueur de canule :</strong> <?php echo $longueurcanule; ?> mm              
+            <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure; ?> cm
+
+            <strong>Type de cathéter 2 :</strong> <?php echo $catheter2; ?><br/>
+            <strong>Modèle :</strong> <?php echo $modele2; ?> <br/>
+            <strong>Longueur de canule :</strong> <?php echo $longueurcanule2; ?> mm              
+            <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure2; ?> cm            
+
+            <strong>Inserteur :</strong> <?php echo $inserteur; ?><br/><br/>
+            <strong>Réservoir :</strong> <?php echo $reservoir; ?> <br/>                      
+            <strong>Système de portage de la Pompe (qql lignes) : </strong> <?php echo $spp; ?>  <br/>    
+
+            <strong>Observations et commentaires :</strong> <?php echo $observation; ?>  
         </p>
 
         <h4><u>DONNEES MEDICALES</u></h4>
         <p>
-            <strong>Type de diabète :</strong> <?php echo $typediabete ; ?> <br/>
-            <strong>Date de diagnostic :</strong> <?php echo $datediagnostic ; ?> <br/>     
-            <strong>Circonstances de découverte :</strong> <?php echo $circonstancedecouverte ; ?>   <br/>   
-            <strong>Antécédents familiaux :</strong> <?php echo $antecedentfamiliaux ; ?>    <br/>  
-            <strong>Date de première mise sous Pompe :</strong> <?php echo $datepremieremisesousPompe ; ?> <br/>     
-            <strong>HbA1C de référence avant la mise sous Pompe :</strong>   <?php echo $hba1c ; ?> <br/>     
+            <strong>Type de diabète :</strong> <?php echo $typediabete; ?> <br/>
+            <strong>Date de diagnostic :</strong> <?php echo $datediagnostic; ?> <br/>     
+            <strong>Circonstances de découverte :</strong> <?php echo $circonstancedecouverte; ?>   <br/>   
+            <strong>Antécédents familiaux :</strong> <?php echo $antecedentfamiliaux; ?>    <br/>  
+            <strong>Date de première mise sous Pompe :</strong> <?php echo $datepremieremisesousPompe; ?> <br/>     
+            <strong>HbA1C de référence avant la mise sous Pompe :</strong>   <?php echo $hba1c; ?> <br/>     
         </p><br/>
     </div>
     <table style="margin: 0px 30px 0px 50px;">
@@ -808,10 +848,10 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
         </thead>
         <tbody>
             <tr>
-                <td><?php echo $poidsactuel ; ?></td>
-                <td><?php echo $poidsforme ; ?></td>
-                <td><?php echo $taille ; ?></td>
-                <td><?php echo $imc ; ?></td>
+                <td><?php echo $poidsactuel; ?></td>
+                <td><?php echo $poidsforme; ?></td>
+                <td><?php echo $taille; ?></td>
+                <td><?php echo $imc; ?></td>
             </tr>
         </tbody>
     </table>
@@ -819,14 +859,14 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
     <div class="dec">
         <h4><u>Auto surveillance glycémique :</u></h4>
         <p>
-            <strong>Nombre de glycémies par jour :</strong> <?php echo $nombreglycemieparjour ; ?> <br/>
-            <strong>Type de lecteur :</strong> <?php echo $typelecteur ; ?>           <strong>Date de prescription : </strong> <?php echo $dateprescription ; ?><br/>      
-            <strong>Stylo auto piqueur/lancette :</strong> <?php echo $styloautopiqueur ; ?> <br/>     
+            <strong>Nombre de glycémies par jour :</strong> <?php echo $nombreglycemieparjour; ?> <br/>
+            <strong>Type de lecteur :</strong> <?php echo $typelecteur; ?>           <strong>Date de prescription : </strong> <?php echo $dateprescription; ?><br/>      
+            <strong>Stylo auto piqueur/lancette :</strong> <?php echo $styloautopiqueur; ?> <br/>     
             <strong>Insulinothérapie :</strong><br/>
-            <strong>Nombre d’injection par jour :</strong> <?php echo $nombreinjectionjour ; ?>           <strong>Schéma multi injection :</strong><br/>
-            <strong>Stylo :</strong> <?php echo $stylo ; ?>      <strong>Autre : </strong> <?php echo $autrestylo ; ?>         
-            <strong>Aiguille pour stylo : </strong><?php echo $aiguillestylo ; ?> <br/>
-            <strong>Autre : </strong>  <?php echo $autreaiguille ; ?> <br/><br/><br/>    
+            <strong>Nombre d’injection par jour :</strong> <?php echo $nombreinjectionjour; ?>           <strong>Schéma multi injection :</strong><br/>
+            <strong>Stylo :</strong> <?php echo $stylo; ?>      <strong>Autre : </strong> <?php echo $autrestylo; ?>         
+            <strong>Aiguille pour stylo : </strong><?php echo $aiguillestylo; ?> <br/>
+            <strong>Autre : </strong>  <?php echo $autreaiguille; ?> <br/><br/><br/>    
         </p>
     </div>
     <div class="dec">
@@ -842,27 +882,39 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
             <tbody>
                 <tr>
                     <td>Matin</td>
-                    <td><?php echo $insulinelentematin ; ?></td>
-                    <td><?php echo $insulinerapidematin ; ?></td>
-                    <td><?php $total_1 = $insulinelentematin + $insulinerapidematin;  echo $total_1; ?></td>
+                    <td><?php echo $insulinelentematin; ?></td>
+                    <td><?php echo $insulinerapidematin; ?></td>
+                    <td><?php
+                        $total_1 = $insulinelentematin + $insulinerapidematin;
+                        echo $total_1;
+                        ?></td>
                 </tr>
                 <tr>
                     <td>Midi</td>
-                    <td><?php echo $insulinelentemidi ; ?></td>
-                    <td><?php echo $insulinerapidemidi ; ?></td>
-                    <td><?php $total_2 = $insulinelentemidi + $insulinerapidemidi;  echo $total_2; ?></td>
+                    <td><?php echo $insulinelentemidi; ?></td>
+                    <td><?php echo $insulinerapidemidi; ?></td>
+                    <td><?php
+                        $total_2 = $insulinelentemidi + $insulinerapidemidi;
+                        echo $total_2;
+                        ?></td>
                 </tr>
                 <tr>
                     <td>Soir</td>
-                    <td><?php echo $insulinelentesoir ; ?></td>
-                    <td><?php echo $insulinerapidesoir ; ?></td>
-                    <td><?php $total_3 = $insulinelentesoir + $insulinerapidesoir;  echo $total_1; ?></td>
+                    <td><?php echo $insulinelentesoir; ?></td>
+                    <td><?php echo $insulinerapidesoir; ?></td>
+                    <td><?php
+                        $total_3 = $insulinelentesoir + $insulinerapidesoir;
+                        echo $total_1;
+                        ?></td>
                 </tr>
                 <tr>
                     <td>TOTAL</td>
-                    <td><?php echo $totalinsulinelente ; ?></td>
-                    <td><?php echo $totalinsulinerapide ; ?></td>
-                    <td><?php $total = $total_1 + $total_2 + $total_3 ;  echo $total; ?></td>
+                    <td><?php echo $totalinsulinelente; ?></td>
+                    <td><?php echo $totalinsulinerapide; ?></td>
+                    <td><?php
+                        $total = $total_1 + $total_2 + $total_3;
+                        echo $total;
+                        ?></td>
                 </tr>
             </tbody>
         </table><br/>
@@ -877,20 +929,20 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
             </thead>
             <tbody>
                 <tr>
-                    <td><?php echo $specialite1 ;?></td>
-                    <td><?php echo $posologie1 ;?></td>
+                    <td><?php echo $specialite1; ?></td>
+                    <td><?php echo $posologie1; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $specialite2 ;?></td>
-                    <td><?php echo $posologie2 ;?></td>
+                    <td><?php echo $specialite2; ?></td>
+                    <td><?php echo $posologie2; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $specialite3 ;?></td>
-                    <td><?php echo $posologie3 ;?></td>
+                    <td><?php echo $specialite3; ?></td>
+                    <td><?php echo $posologie3; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $specialite4 ;?></td>
-                    <td><?php echo $posologie4 ;?></td>
+                    <td><?php echo $specialite4; ?></td>
+                    <td><?php echo $posologie4; ?></td>
                 </tr>
             </tbody>
         </table><br/>
@@ -919,44 +971,44 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
                     <td>Débit</td>
                 </tr>
                 <tr>
-                    <td><?php echo $Horaire1 ; ?></td>
-                    <td><?php echo $Debit1 ; ?></td>
-                    <td><?php echo $Horaire2 ; ?></td>
-                    <td><?php echo $Debit2 ; ?></td>
-                    <td><?php echo $Horaire3 ; ?></td>
-                    <td><?php echo $Debit3 ; ?></td>
-                    <td><?php echo $Horaire4 ; ?></td>
-                    <td><?php echo $Debit4 ; ?></td>
+                    <td><?php echo $Horaire1; ?></td>
+                    <td><?php echo $Debit1; ?></td>
+                    <td><?php echo $Horaire2; ?></td>
+                    <td><?php echo $Debit2; ?></td>
+                    <td><?php echo $Horaire3; ?></td>
+                    <td><?php echo $Debit3; ?></td>
+                    <td><?php echo $Horaire4; ?></td>
+                    <td><?php echo $Debit4; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $Horaire5 ; ?></td>
-                    <td><?php echo $Debit5 ; ?></td>
-                    <td><?php echo $Horaire6 ; ?></td>
-                    <td><?php echo $Debit6 ; ?></td>
-                    <td><?php echo $Horaire7 ; ?></td>
-                    <td><?php echo $Debit7 ; ?></td>
-                    <td><?php echo $Horaire8 ; ?></td>
-                    <td><?php echo $Debit8 ; ?></td>
+                    <td><?php echo $Horaire5; ?></td>
+                    <td><?php echo $Debit5; ?></td>
+                    <td><?php echo $Horaire6; ?></td>
+                    <td><?php echo $Debit6; ?></td>
+                    <td><?php echo $Horaire7; ?></td>
+                    <td><?php echo $Debit7; ?></td>
+                    <td><?php echo $Horaire8; ?></td>
+                    <td><?php echo $Debit8; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $Horaire9 ; ?></td>
-                    <td><?php echo $Debit9 ; ?></td>
-                    <td><?php echo $Horaire10 ; ?></td>
-                    <td><?php echo $Debit10 ; ?></td>
-                    <td><?php echo $Horaire11 ; ?></td>
-                    <td><?php echo $Debit11 ; ?></td>
-                    <td><?php echo $Horaire12 ; ?></td>
-                    <td><?php echo $Debit12 ; ?></td>
+                    <td><?php echo $Horaire9; ?></td>
+                    <td><?php echo $Debit9; ?></td>
+                    <td><?php echo $Horaire10; ?></td>
+                    <td><?php echo $Debit10; ?></td>
+                    <td><?php echo $Horaire11; ?></td>
+                    <td><?php echo $Debit11; ?></td>
+                    <td><?php echo $Horaire12; ?></td>
+                    <td><?php echo $Debit12; ?></td>
                 </tr>
                    <tr>
-                    <td><?php echo $Horaire13 ; ?></td>
-                    <td><?php echo $Debit13 ; ?></td>
-                    <td><?php echo $Horaire14 ; ?></td>
-                    <td><?php echo $Debit14 ; ?></td>
-                    <td><?php echo $Horaire15 ; ?></td>
-                    <td><?php echo $Debit15 ; ?></td>
-                    <td><?php echo $Horaire16 ; ?></td>
-                    <td><?php echo $Debit16 ; ?></td>
+                    <td><?php echo $Horaire13; ?></td>
+                    <td><?php echo $Debit13; ?></td>
+                    <td><?php echo $Horaire14; ?></td>
+                    <td><?php echo $Debit14; ?></td>
+                    <td><?php echo $Horaire15; ?></td>
+                    <td><?php echo $Debit15; ?></td>
+                    <td><?php echo $Horaire16; ?></td>
+                    <td><?php echo $Debit16; ?></td>
                 </tr>
                 
             </tbody>
@@ -988,53 +1040,53 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
                     <td>Débit</td>
                 </tr>
                   <tr>
-                    <td><?php echo $Horaire21 ; ?></td>
-                    <td><?php echo $Debit21 ; ?></td>
-                    <td><?php echo $Horaire22 ; ?></td>
-                    <td><?php echo $Debit22 ; ?></td>
-                    <td><?php echo $Horaire23 ; ?></td>
-                    <td><?php echo $Debit23 ; ?></td>
-                    <td><?php echo $Horaire24 ; ?></td>
-                    <td><?php echo $Debit24 ; ?></td>
+                    <td><?php echo $Horaire21; ?></td>
+                    <td><?php echo $Debit21; ?></td>
+                    <td><?php echo $Horaire22; ?></td>
+                    <td><?php echo $Debit22; ?></td>
+                    <td><?php echo $Horaire23; ?></td>
+                    <td><?php echo $Debit23; ?></td>
+                    <td><?php echo $Horaire24; ?></td>
+                    <td><?php echo $Debit24; ?></td>
                 </tr>
                   <tr>
-                    <td><?php echo $Horaire25 ; ?></td>
-                    <td><?php echo $Debit25 ; ?></td>
-                    <td><?php echo $Horaire26 ; ?></td>
-                    <td><?php echo $Debit26 ; ?></td>
-                    <td><?php echo $Horaire27 ; ?></td>
-                    <td><?php echo $Debit27 ; ?></td>
-                    <td><?php echo $Horaire28 ; ?></td>
-                    <td><?php echo $Debit28 ; ?></td>
+                    <td><?php echo $Horaire25; ?></td>
+                    <td><?php echo $Debit25; ?></td>
+                    <td><?php echo $Horaire26; ?></td>
+                    <td><?php echo $Debit26; ?></td>
+                    <td><?php echo $Horaire27; ?></td>
+                    <td><?php echo $Debit27; ?></td>
+                    <td><?php echo $Horaire28; ?></td>
+                    <td><?php echo $Debit28; ?></td>
                 </tr>
                   <tr>
-                    <td><?php echo $Horaire29 ; ?></td>
-                    <td><?php echo $Debit29 ; ?></td>
-                    <td><?php echo $Horaire210 ; ?></td>
-                    <td><?php echo $Debit210 ; ?></td>
-                    <td><?php echo $Horaire211 ; ?></td>
-                    <td><?php echo $Debit211 ; ?></td>
-                    <td><?php echo $Horaire212 ; ?></td>
-                    <td><?php echo $Debit212 ; ?></td>
+                    <td><?php echo $Horaire29; ?></td>
+                    <td><?php echo $Debit29; ?></td>
+                    <td><?php echo $Horaire210; ?></td>
+                    <td><?php echo $Debit210; ?></td>
+                    <td><?php echo $Horaire211; ?></td>
+                    <td><?php echo $Debit211; ?></td>
+                    <td><?php echo $Horaire212; ?></td>
+                    <td><?php echo $Debit212; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $Horaire213 ; ?></td>
-                    <td><?php echo $Debit213 ; ?></td>
-                    <td><?php echo $Horaire214 ; ?></td>
-                    <td><?php echo $Debit214 ; ?></td>
-                    <td><?php echo $Horaire215 ; ?></td>
-                    <td><?php echo $Debit215 ; ?></td>
-                    <td><?php echo $Horaire216 ; ?></td>
-                    <td><?php echo $Debit216 ; ?></td>
+                    <td><?php echo $Horaire213; ?></td>
+                    <td><?php echo $Debit213; ?></td>
+                    <td><?php echo $Horaire214; ?></td>
+                    <td><?php echo $Debit214; ?></td>
+                    <td><?php echo $Horaire215; ?></td>
+                    <td><?php echo $Debit215; ?></td>
+                    <td><?php echo $Horaire216; ?></td>
+                    <td><?php echo $Debit216; ?></td>
                 </tr>
             </tbody>
         </table
         --><br/>
-            
-              <!-- ?php echo '<img src="img/image'.$id.'bardate2.png" style="width: 700px;" />';? -->
+
+  <!-- ?php echo '<img src="img/image'.$id.'bardate2.png" style="width: 700px;" />';? -->
         <br/><br/>
     </div>
-    
+
     <div class="dec">
         <table class="table">
             <thead>
@@ -1049,171 +1101,335 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
             </thead>
             <tbody>
                 <tr>
-                    <td><?php echo $ValGlycemique1 ; ?></td>
-                    <td><?php echo $ValGlyMatin1 ; ?></td>
-                    <td><?php echo $ValGlyMid1 ; ?></td>
-                    <td><?php echo $ValGlyCollation1 ; ?></td>
-                    <td><?php echo $ValGlySoir1 ; ?></td>
-                    <td><?php echo $ValGlyAutre1 ; ?></td>
-                </tr>
-                 <tr>
-                    <td><?php echo $ValGlycemique2 ; ?></td>
-                    <td><?php echo $ValGlyMatin2 ; ?></td>
-                    <td><?php echo $ValGlyMid2 ; ?></td>
-                    <td><?php echo $ValGlyCollation2 ; ?></td>
-                    <td><?php echo $ValGlySoir2 ; ?></td>
-                    <td><?php echo $ValGlyAutre2 ; ?></td>
-                </tr>
-                 <tr>
-                    <td><?php echo $ValGlycemique3 ; ?></td>
-                    <td><?php echo $ValGlyMatin3 ; ?></td>
-                    <td><?php echo $ValGlyMid3 ; ?></td>
-                    <td><?php echo $ValGlyCollation3 ; ?></td>
-                    <td><?php echo $ValGlySoir3 ; ?></td>
-                    <td><?php echo $ValGlyAutre3 ; ?></td>
+                    <td><?php echo $ValGlycemique1; ?></td>
+                    <td><?php echo $ValGlyMatin1; ?></td>
+                    <td><?php echo $ValGlyMid1; ?></td>
+                    <td><?php echo $ValGlyCollation1; ?></td>
+                    <td><?php echo $ValGlySoir1; ?></td>
+                    <td><?php echo $ValGlyAutre1; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique4 ; ?></td>
-                    <td><?php echo $ValGlyMatin4 ; ?></td>
-                    <td><?php echo $ValGlyMid4 ; ?></td>
-                    <td><?php echo $ValGlyCollation4 ; ?></td>
-                    <td><?php echo $ValGlySoir4 ; ?></td>
-                    <td><?php echo $ValGlyAutre4 ; ?></td>
+                    <td><?php echo $ValGlycemique2; ?></td>
+                    <td><?php echo $ValGlyMatin2; ?></td>
+                    <td><?php echo $ValGlyMid2; ?></td>
+                    <td><?php echo $ValGlyCollation2; ?></td>
+                    <td><?php echo $ValGlySoir2; ?></td>
+                    <td><?php echo $ValGlyAutre2; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique5 ; ?></td>
-                    <td><?php echo $ValGlyMatin5 ; ?></td>
-                    <td><?php echo $ValGlyMid5 ; ?></td>
-                    <td><?php echo $ValGlyCollation5 ; ?></td>
-                    <td><?php echo $ValGlySoir5 ; ?></td>
-                    <td><?php echo $ValGlyAutre5 ; ?></td>
+                    <td><?php echo $ValGlycemique3; ?></td>
+                    <td><?php echo $ValGlyMatin3; ?></td>
+                    <td><?php echo $ValGlyMid3; ?></td>
+                    <td><?php echo $ValGlyCollation3; ?></td>
+                    <td><?php echo $ValGlySoir3; ?></td>
+                    <td><?php echo $ValGlyAutre3; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique6 ; ?></td>
-                    <td><?php echo $ValGlyMatin6 ; ?></td>
-                    <td><?php echo $ValGlyMid6 ; ?></td>
-                    <td><?php echo $ValGlyCollation6 ; ?></td>
-                    <td><?php echo $ValGlySoir6 ; ?></td>
-                    <td><?php echo $ValGlyAutre6 ; ?></td>
+                    <td><?php echo $ValGlycemique4; ?></td>
+                    <td><?php echo $ValGlyMatin4; ?></td>
+                    <td><?php echo $ValGlyMid4; ?></td>
+                    <td><?php echo $ValGlyCollation4; ?></td>
+                    <td><?php echo $ValGlySoir4; ?></td>
+                    <td><?php echo $ValGlyAutre4; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique7 ; ?></td>
-                    <td><?php echo $ValGlyMatin7 ; ?></td>
-                    <td><?php echo $ValGlyMid7 ; ?></td>
-                    <td><?php echo $ValGlyCollation7 ; ?></td>
-                    <td><?php echo $ValGlySoir7 ; ?></td>
-                    <td><?php echo $ValGlyAutre7 ; ?></td>
+                    <td><?php echo $ValGlycemique5; ?></td>
+                    <td><?php echo $ValGlyMatin5; ?></td>
+                    <td><?php echo $ValGlyMid5; ?></td>
+                    <td><?php echo $ValGlyCollation5; ?></td>
+                    <td><?php echo $ValGlySoir5; ?></td>
+                    <td><?php echo $ValGlyAutre5; ?></td>
+                </tr>
+                <tr>
+                    <td><?php echo $ValGlycemique6; ?></td>
+                    <td><?php echo $ValGlyMatin6; ?></td>
+                    <td><?php echo $ValGlyMid6; ?></td>
+                    <td><?php echo $ValGlyCollation6; ?></td>
+                    <td><?php echo $ValGlySoir6; ?></td>
+                    <td><?php echo $ValGlyAutre6; ?></td>
+                </tr>
+                <tr>
+                    <td><?php echo $ValGlycemique7; ?></td>
+                    <td><?php echo $ValGlyMatin7; ?></td>
+                    <td><?php echo $ValGlyMid7; ?></td>
+                    <td><?php echo $ValGlyCollation7; ?></td>
+                    <td><?php echo $ValGlySoir7; ?></td>
+                    <td><?php echo $ValGlyAutre7; ?></td>
                 </tr>
             </tbody>
         </table><br/>
-                <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
-                 <!-- ?php echo '<img src="img/image'.$id.'barhg.png" style="width: 700px;" />';? -->
+        <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
+         <!-- ?php echo '<img src="img/image'.$id.'barhg.png" style="width: 700px;" />';? -->
         <br/><br/>
     </div>
     <div class="dec">
-        <strong>Synthèse/Commentaire : </strong> <?php echo $synthesecommentaire ; ?> <br/>
-        <strong>Objectif glycémique pré prandial (g/l) :</strong><?php echo $objectifglycemiquepreprandial ; ?> <br/>
-         <strong>Objectif glycémique post prandial (g/l) :</strong><?php echo $objectifglycemiquepostprandial ; ?> <br/>
+        <strong>Synthèse/Commentaire : </strong> <?php echo $synthesecommentaire; ?> <br/>
+        <strong>Objectif glycémique pré prandial (g/l) :</strong><?php echo $objectifglycemiquepreprandial; ?> <br/>
+        <strong>Objectif glycémique post prandial (g/l) :</strong><?php echo $objectifglycemiquepostprandial; ?> <br/>
         <h4><u>Hémoglobine glyquée</u></h4>
         <table class="table">
             <tbody>
                 <tr>
                     <td style="width: 10%;">Dates</td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc1 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc2 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc3 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc4 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc5 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc6 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc7 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc8 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc9 ; ?></td>
+                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc1; ?></td>
+                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc2; ?></td>
+                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc3; ?></td>
+                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc4; ?></td>
+                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc5; ?></td>
+                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc6; ?></td>
+                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc7; ?></td>
+                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc8; ?></td>
+                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc9; ?></td>
                 </tr>
                 <tr>
                     <td style="width: 10%;">HbA1c (%)</td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc1 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc2 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc3 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc4 ; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc5 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc6 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc7 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc8 ; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc9 ; ?></td>
+                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc1; ?></td>
+                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc2; ?></td>
+                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc3; ?></td>
+                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc4; ?></td>
+                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc5; ?></td>
+                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc6; ?></td>
+                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc7; ?></td>
+                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc8; ?></td>
+                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc9; ?></td>
                 </tr>
             </tbody>
         </table>
     </div>
-      <div class="dec">
-            <h4><u>HABITUDE DE VIE</u></h4>
-            
-                <strong>Activité physique (type/frequence) :</strong> <?php echo $activitephysique ; ?><br>
-                <strong>Profession :</strong> <?php echo $profession ; ?> <br>
-                <strong>Situation familiale :</strong> <?php echo $situationfamiliale ; ?> <br>
-                <strong>Observations :</strong> <?php echo $observation ; ?><br>
-                <strong>Etat cutané au point injection : </strong> <?php echo $etatcutane ; ?> <br>
-                <strong>Hygiène alimentaire (habitude/régime): </strong> <?php echo $hygienealimentaire ; ?> <br>
-                <strong>Stabilités des horraires :  </strong> <?php echo $stabilitehoraires ; ?> <br>
-                <strong>Details: </strong> <?php echo $details ; ?> <br>
-                <strong>Environnement social : </strong> <?php echo $environnement ; ?> <br>
-                <strong>Choix des points d'injection : </strong> <?php echo $choixpoint ; ?> <br>
-           
-        </div>
-        <div class="dec">
-            <h4><u>INSULUNOTHERAPIE FONCTIONNELLE</u></h4>
-            <table class="table " style="margin-left: 9px;">
-                <thead>
-                    <tr>
-                        <th style="width:100px"></th>
-                        <th style="width:100px"><strong>Horaires</strong></th>
-                        <th style="width:100px"><strong>Ration Insuline/glucide</strong></th>
-                        <th style="width:100px"><strong>Objectif glicémique</strong></th>
-                        <th style="width:100px"><strong>Sensibilité à l'insuline</strong></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Petit déjeuner</td>
-                        <td><?php echo $petitdejeunerDe ; ?></td>
-                        <td><?php echo $petitdejeunerA ; ?></td>
-                        <td><?php echo $petitdejeunerRotation ; ?></td>
-                        <td><?php echo $petitdejeunerObjectif ; ?></td>
-                        <td><?php echo $petitdejeunerSensibilite ; ?></td>
-                    </tr>
-                    <tr>
-                        <td>Déjeuner</td>
-                        <td><?php echo $dejeunerDe ; ?></td>
-                        <td><?php echo $dejeunerA ; ?></td>
-                        <td><?php echo $dejeunerRotation ; ?></td>
-                        <td><?php echo $dejeunerObjectif ; ?></td>
-                        <td><?php echo $dejeunerSensibilite ; ?></td>
-                    </tr>
-                    <tr>
-                        <td>Goûter</td>
-                        <td><?php echo $gouterDe ; ?></td>
-                        <td><?php echo $gouterA ; ?></td>
-                        <td><?php echo $gouterRotation ; ?></td>
-                        <td><?php echo $gouterObjectif ; ?></td>
-                        <td><?php echo $gouterSensibilite ; ?></td>
-                    </tr>
-                    <tr>
-                        <td>Diner</td>
-                        <td><?php echo $dinerDe ; ?></td>
-                        <td><?php echo $dinerA ; ?></td>
-                        <td><?php echo $dinerRotation ; ?></td>
-                        <td><?php echo $dinerObjectif ; ?></td>
-                        <td><?php echo $dinerSensibilite ; ?></td>
-                    </tr>
-                    <tr>
-                        <td>Collation</td>
-                        <td><?php echo $collationDe ; ?></td>
-                        <td><?php echo $collationA ; ?></td>
-                        <td><?php echo $collationRotation ; ?></td>
-                        <td><?php echo $collationObjectif ; ?></td>
-                        <td><?php echo $collationSensibilite ; ?></td>
-                    </tr>
-                </tbody>
-            </table>
+
+    <div class="dec">
+        <h4><u>HABITUDE DE VIE</u></h4>
+
+        <strong>Activité physique (type/frequence) :</strong> <?php echo $activitephysique; ?><br>
+        <strong>Profession :</strong> <?php echo $profession; ?> <br>
+        <strong>Situation familiale :</strong> <?php echo $situationfamiliale; ?> <br>
+        <strong>Observations :</strong> <?php echo $observation; ?><br>
+        <strong>Etat cutané au point injection : </strong> <?php echo $etatcutane; ?> <br>
+        <strong>Hygiène alimentaire (habitude/régime): </strong> <?php echo $hygienealimentaire; ?> <br>
+        <strong>Stabilités des horraires :  </strong> <?php echo $stabilitehoraires; ?> <br>
+        <strong>Details: </strong> <?php echo $details; ?> <br>
+        <strong>Environnement social : </strong> <?php echo $environnement; ?> <br>
+        <strong>Choix des points d'injection : </strong> <?php echo $choixpoint; ?> <br>
+
+    </div>
+    <div class="dec">
+        <h4><u>INSULUNOTHERAPIE FONCTIONNELLE</u></h4>
+        <table class="table " style="margin-left: 9px;">
+            <thead>
+                <tr>
+                    <th style="width:19%"></th>
+                    <th style="width:19%"><strong>Horaires</strong></th>
+                    <th style="width:19%"><strong>Ration Insuline/glucide</strong></th>
+                    <th style="width:19%"><strong>Objectif glicémique</strong></th>
+                    <th style="width:19%"><strong>Sensibilité à l'insuline</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Matin</td>
+                    <td><?php echo $horairematin; ?></td>
+                    <td><?php echo $rotationmatin; ?></td>
+                    <td><?php echo $objectifmatin; ?></td>
+                    <td><?php echo $sensibilitematin; ?></td>
+                </tr>
+                <tr>
+                    <td>Midi</td>
+                    <td><?php echo $horairemidi; ?></td>
+                    <td><?php echo $rotationmidi; ?></td>
+                    <td><?php echo $objectifmidi; ?></td>
+                    <td><?php echo $sensibilitemidi; ?></td>
+                </tr>
+                <tr>
+                    <td>Collation</td>
+                    <td><?php echo $horairecollation; ?></td>
+                    <td><?php echo $rotationcollation; ?></td>
+                    <td><?php echo $objectifcollation; ?></td>
+                    <td><?php echo $sensibilitecollation; ?></td>
+                </tr>
+                <tr>
+                    <td>Soir</td>
+                    <td><?php echo $horairesoir; ?></td>
+                    <td><?php echo $rotationsoir; ?></td>
+                    <td><?php echo $objectifsoir; ?></td>
+                    <td><?php echo $sensibilitesoir; ?></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="dec">
+        <h4><u>HABITUDES ALIMENTAIRES</u></h4>
+        <strong>SUIVI DE POIDS : </strong> <?php echo $regime; ?> <br>
+        <strong>Observation : </strong> <?php echo $observation2; ?> <br>
+        <strong>Survenue de compilations : </strong> <?php echo $survenue; ?> <br>
+        <strong>ATCD/ autre pathologies : </strong> <?php echo $atcd; ?> <br>
+        <strong>Traitement :</strong> <?php echo $traitement; ?> <br><br/><br/>
+        <!-- table class="table " style="margin-left: 8px;">
+            <tbody>
+                <tr>
+                    <td style="width:10%">Date</td>
+                    <td style="width:10%"><?php echo $date1; ?></td>
+                    <td style="width:10%"><?php echo $date2; ?></td>
+                    <td style="width:10%"><?php echo $date3; ?></td>
+                    <td style="width:10%"><?php echo $date4; ?></td>
+                    <td style="width:9%"><?php echo $date5; ?></td>
+                    <td style="width:9%"><?php echo $date6; ?></td>
+                    <td style="width:9%"><?php echo $date7; ?></td>
+                    <td style="width:9%"><?php echo $date8; ?></td>
+                    <td style="width:9%"><?php echo $date9; ?></td>
+                </tr>
+                <tr>
+                    <td>Taille</td>
+                    <td><?php echo $taille1; ?></td>
+                    <td><?php echo $taille2; ?></td>
+                    <td><?php echo $taille3; ?></td>
+                    <td><?php echo $taille4; ?></td>
+                    <td><?php echo $taille5; ?></td>
+                    <td><?php echo $taille6; ?></td>
+                    <td><?php echo $taille7; ?></td>
+                    <td><?php echo $taille8; ?></td>
+                    <td><?php echo $taille9; ?></td>
+                </tr>
+                <tr>
+                    <td>Poids</td>
+                    <td><?php echo $poids1; ?></td>
+                    <td><?php echo $poids2; ?></td>
+                    <td><?php echo $poids3; ?></td>
+                    <td><?php echo $poids4; ?></td>
+                    <td><?php echo $poids5; ?></td>
+                    <td><?php echo $poids6; ?></td>
+                    <td><?php echo $poids7; ?></td>
+                    <td><?php echo $poids8; ?></td>
+                    <td><?php echo $poids9; ?></td>
+                </tr>
+                <tr>
+                    <td>IMC</td>
+                    <td><?php echo round($imc1, 2); ?></td>
+                    <td><?php echo round($imc2, 2); ?></td>
+                    <td><?php echo round($imc3, 2); ?></td>
+                    <td><?php echo round($imc4, 2); ?></td>
+                    <td><?php echo round($imc5, 2); ?></td>
+                    <td><?php echo round($imc6, 2); ?></td>
+                    <td><?php echo round($imc7, 2); ?></td>
+                    <td><?php echo round($imc8, 2); ?></td>
+                    <td><?php echo round($imc9, 2); ?></td>
+                </tr>
+
+            </tbody>
+        </table -->
+    </div><br/><br/>
+
+       <!-- ?php echo '<img src="img/image'.$id.'bar.png" style="width: 700px;" />';? -->
+    <div class="dec">
+        <font><h4><u>MANIPULATION DE LA Pompe</u></h4></font><br/>
+
+        <table>
+            <thead>
+                <tr>
+                    <td style="text-align: center; width: 15%;"><strong>Etapes</strong></td>
+                    <td style="text-align: center; width: 10%;"><strong>Date</strong></td>
+                    <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
+                    <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
+                    <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
+                    <td style="text-align: center; width: 15%;"><strong>Commentaire</strong></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Installation de la pile</strong></td>
+                    <td><?php echo $pmpdate1; ?></td>
+                    <td><?php echo $pmpdate2; ?></td>
+                    <td><?php echo $pmpdate3; ?></td>
+                    <td><?php echo $pmpdate4; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire1; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Marche/Arrêt</strong></td>
+                    <td><?php echo $pmpdate5; ?></td>
+                    <td><?php echo $pmpdate6; ?></td>
+                    <td><?php echo $pmpdate7; ?></td>
+                    <td><?php echo $pmpdate8; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire2; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Réglage Date/heure</strong></td>
+                    <td><?php echo $pmpdate9; ?></td>
+                    <td><?php echo $pmpdate10; ?></td>
+                    <td><?php echo $pmpdate11; ?></td>
+                    <td><?php echo $pmpdate12; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire3; ?>
+                    </td>
+                </tr> 
+                <tr>
+                    <td><strong>Réglage du bolus</strong></td>
+                    <td><?php echo $pmpdate13; ?></td>
+                    <td><?php echo $pmpdate14; ?></td>
+                    <td><?php echo $pmpdate15; ?></td>
+                    <td><?php echo $pmpdate16; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire4; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Arrêt du bolus en cours</strong></td>
+                    <td><?php echo $pmpdate17; ?></td>
+                    <td><?php echo $pmpdate18; ?></td>
+                    <td><?php echo $pmpdate19; ?></td>
+                    <td><?php echo $pmpdate20; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire5; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Historique des bolus</strong></td>
+                    <td><?php echo $pmpdate21; ?></td>
+                    <td><?php echo $pmpdate22; ?></td>
+                    <td><?php echo $pmpdate23; ?></td>
+                    <td><?php echo $pmpdate24; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire6; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Programmation du débit basal</strong></td>
+                    <td><?php echo $pmpdate25; ?></td>
+                    <td><?php echo $pmpdate26; ?></td>
+                    <td><?php echo $pmpdate27; ?></td>
+                    <td><?php echo $pmpdate28; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire7; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Consulter les débits de base</strong></td>
+                    <td><?php echo $pmpdate29; ?></td>
+                    <td><?php echo $pmpdate291; ?></td>
+                    <td><?php echo $pmpdate292; ?></td>
+                    <td><?php echo $pmpdate293; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire8; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Programmer et arrêter le débit de base temporaire</strong></td>
+                    <td><?php echo $pmpdate294; ?></td>
+                    <td><?php echo $pmpdate295; ?></td>
+                    <td><?php echo $pmpdate296; ?></td>
+                    <td><?php echo $pmpdate297; ?></td>
+                    <td>
+                        <?php echo $pmpcommentaire9; ?>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <h4><u>Autres : </u></h4>
         </div>
 
         <div class="dec">
@@ -1280,576 +1496,545 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
        
               <!-- ?php echo '<img src="img/image'.$id.'bar.png" style="width: 700px;" />';? -->
         <div class="dec">
-         <font><h4><u>MANIPULATION DE LA Pompe</u></h4></font><br/>
+        <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
 
             <table>
                     <thead>
                         <tr>
-                            <td style="text-align: center; width: 15%;"><strong>Etapes</strong></td>
-                            <td style="text-align: center; width: 10%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 15%;"><strong>Commentaire</strong></td>
+                            <td style="text-align: center;">Etapes</td>
+                            <td style="text-align: center;"><?php echo $pmpdate1 ; ?></td>
+                            <td style="text-align: center;"><?php echo $pmpdate2 ; ?></td>
+                            <td style="text-align: center;"><?php echo $pmpdate3 ; ?></td>
+                            <td style="text-align: center;"><?php echo $pmpdate4 ; ?></td>
+                            <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Installation de la pile</strong></td>
-                            <td><?php echo $pmpdate1 ; ?></td>
-                            <td><?php echo $pmpdate2 ; ?></td>
-                            <td><?php echo $pmpdate3 ; ?></td>
-                            <td><?php echo $pmpdate4 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire1 ; ?>
-                            </td>
+                            <td>Installation de la pile</td>
+                            <td><?php echo $pmpselect1 ; ?></td>
+                            <td><?php echo $pmpselect2 ; ?></td>
+                            <td><?php echo $pmpselect3 ; ?></td>
+                            <td><?php echo $pmpselect4 ; ?></td>
+                            <td><?php echo $pmpcommentaire1 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Marche/Arrêt</strong></td>
-                            <td><?php echo $pmpdate5 ; ?></td>
-                            <td><?php echo $pmpdate6 ; ?></td>
-                            <td><?php echo $pmpdate7 ; ?></td>
-                            <td><?php echo $pmpdate8 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire2 ; ?>
-                            </td>
+                            <td>Marche/Arrêt</td>
+                           	<td><?php echo $pmpselect5 ; ?></td>
+                            <td><?php echo $pmpselect6 ; ?></td>
+                            <td><?php echo $pmpselect7 ; ?></td>
+                            <td><?php echo $pmpselect8 ; ?></td>
+                            <td><?php echo $pmpcommentaire2 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Réglage Date/heure</strong></td>
-                            <td><?php echo $pmpdate9 ; ?></td>
-                            <td><?php echo $pmpdate10 ; ?></td>
-                            <td><?php echo $pmpdate11 ; ?></td>
-                            <td><?php echo $pmpdate12 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire3 ; ?>
-                            </td>
+                            <td>Réglage Date/heure</td>
+                            <td><?php echo $pmpselect9 ; ?></td>
+                            <td><?php echo $pmpselect10 ; ?></td>
+                            <td><?php echo $pmpselect11 ; ?></td>
+                            <td><?php echo $pmpselect12 ; ?></td>
+                            <td><?php echo $pmpcommentaire3 ; ?></td>
                         </tr> 
                         <tr>
-                            <td><strong>Réglage du bolus</strong></td>
-                            <td><?php echo $pmpdate13 ; ?></td>
-                            <td><?php echo $pmpdate14 ; ?></td>
-                            <td><?php echo $pmpdate15 ; ?></td>
-                            <td><?php echo $pmpdate16 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire4 ; ?>
-                            </td>
+                            <td>Réglage du bolus</td>
+                            <td><?php echo $pmpselect13 ; ?></td>
+                            <td><?php echo $pmpselect14 ; ?></td>
+                            <td><?php echo $pmpselect15 ; ?></td>
+                            <td><?php echo $pmpselect16 ; ?></td>
+                            <td><?php echo $pmpcommentaire4 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Arrêt du bolus en cours</strong></td>
-                            <td><?php echo $pmpdate17 ; ?></td>
-                            <td><?php echo $pmpdate18 ; ?></td>
-                            <td><?php echo $pmpdate19 ; ?></td>
-                            <td><?php echo $pmpdate20 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire5 ; ?>
-                            </td>
+                            <td>Arrêt du bolus en cours</td>
+                            <td><?php echo $pmpselect17 ; ?></td>
+                            <td><?php echo $pmpselect18 ; ?></td>
+                            <td><?php echo $pmpselect19 ; ?></td>
+                            <td><?php echo $pmpselect20 ; ?></td>
+                            <td><?php echo $pmpcommentaire5 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Historique des bolus</strong></td>
-                            <td><?php echo $pmpdate21 ; ?></td>
-                            <td><?php echo $pmpdate22 ; ?></td>
-                            <td><?php echo $pmpdate23 ; ?></td>
-                            <td><?php echo $pmpdate24 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire6 ; ?>
-                            </td>
+                            <td>Historique des bolus</td>
+                            <td><?php echo $pmpselect21 ; ?></td>
+                            <td><?php echo $pmpselect22 ; ?></td>
+                            <td><?php echo $pmpselect23 ; ?></td>
+                            <td><?php echo $pmpselect24 ; ?></td>
+                            <td><?php echo $pmpcommentaire6 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Programmation du débit basal</strong></td>
-                            <td><?php echo $pmpdate25 ; ?></td>
-                            <td><?php echo $pmpdate26 ; ?></td>
-                            <td><?php echo $pmpdate27 ; ?></td>
-                            <td><?php echo $pmpdate28 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire7 ; ?>
-                            </td>
+                            <td>Programmation du débit basal</td>
+                            <td><?php echo $pmpselect25 ; ?></td>
+                            <td><?php echo $pmpselect26 ; ?></td>
+                            <td><?php echo $pmpselect27 ; ?></td>
+                            <td><?php echo $pmpselect28 ; ?></td>
+                            <td><?php echo $pmpcommentaire7 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Consulter les débits de base</strong></td>
-                            <td><?php echo $pmpdate29 ; ?></td>
-                            <td><?php echo $pmpdate291 ; ?></td>
-                            <td><?php echo $pmpdate292 ; ?></td>
-                            <td><?php echo $pmpdate293 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire8 ; ?>
-                            </td>
+                            <td>Consulter les débits de base</td>
+                            <td><?php echo $pmpselect29 ; ?></td>
+                            <td><?php echo $pmpselect291 ; ?></td>
+                            <td><?php echo $pmpselect292 ; ?></td>
+                            <td><?php echo $pmpselect293 ; ?></td>
+                            <td><?php echo $pmpcommentaire8 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Programmer et arrêter le débit de base temporaire</strong></td>
-                            <td><?php echo $pmpdate294 ; ?></td>
-                            <td><?php echo $pmpdate295 ; ?></td>
-                            <td><?php echo $pmpdate296 ; ?></td>
-                            <td><?php echo $pmpdate297 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire9 ; ?>
-                            </td>
+                            <td>Programmer et arrêter le débit de base temporaire</td>
+                            <td><?php echo $pmpselect294 ; ?></td>
+                            <td><?php echo $pmpselect295 ; ?></td>
+                            <td><?php echo $pmpselect296 ; ?></td>
+                            <td><?php echo $pmpselect297 ; ?></td>
+                            <td><?php echo $pmpcommentaire9 ; ?></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div>
-                    <h4><u>Autres : </u></h4>
+                    <strong>Autres :</strong> <?php echo $pmpautre ; ?>
                 </div>
 
-        <font><h4><u>ALARMES ET PRECAUTIONS</u></h4></font><br/>
 
-            <table>
+        <h4><u>ALARMES ET PRECAUTIONS</u></h4><br/>
+
+            <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
-                            <td style="text-align: center; width: 25%;"><strong>Etapes</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 15%;"><strong>Commentaire</strong></td>
+                            <td style="text-align: center;">Etapes</td>
+                            <td style="text-align: center;"><?php echo $alarmedate1 ; ?></td>
+                            <td style="text-align: center;"><?php echo $alarmedate2 ; ?></td>
+                            <td style="text-align: center;"><?php echo $alarmedate3 ; ?></td>
+                            <td style="text-align: center;"><?php echo $alarmedate4 ; ?></td>
+                            <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Reconnaitre une alarme</strong></td>
-                            <td><?php echo $alarmedate1 ; ?></td>
-                            <td><?php echo $alarmedate2 ; ?></td>
-                            <td><?php echo $alarmedate3 ; ?></td>
-                            <td><?php echo $alarmedate4 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire1 ; ?>
-                            </td>
+                            <td>Reconnaitre une alarme</td>
+                            <td><?php echo $alarmeselect1 ; ?></td>
+                            <td><?php echo $alarmeselect2 ; ?></td>
+                            <td><?php echo $alarmeselect3 ; ?></td>
+                            <td><?php echo $alarmeselect4 ; ?></td>
+                            <td><?php echo $alarmecommentaire1 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Pile faible</strong></td>
-                            <td><?php echo $alarmedate5 ; ?></td>
-                            <td><?php echo $alarmedate6 ; ?></td>
-                            <td><?php echo $alarmedate7 ; ?></td>
-                            <td><?php echo $alarmedate8 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire2 ; ?>
-                            </td>
+                            <td>Pile faible</td>
+                            <td><?php echo $alarmeselect5 ; ?></td>
+                            <td><?php echo $alarmeselect6 ; ?></td>
+                            <td><?php echo $alarmeselect7 ; ?></td>
+                            <td><?php echo $alarmeselect8 ; ?></td>
+                            <td><?php echo $alarmecommentaire2 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Pile épuisée</strong></td>
-                            <td><?php echo $alarmedate9 ; ?></td>
-                            <td><?php echo $alarmedate10 ; ?></td>
-                            <td><?php echo $alarmedate11 ; ?></td>
-                            <td><?php echo $alarmedate12 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire3 ; ?>
-                            </td>
+                            <td>Pile épuisée</td>
+                            <td><?php echo $alarmeselect9 ; ?></td>
+                            <td><?php echo $alarmeselect10 ; ?></td>
+                            <td><?php echo $alarmeselect11 ; ?></td>
+                            <td><?php echo $alarmeselect12 ; ?></td>
+                            <td><?php echo $alarmecommentaire3 ; ?></td>
                         </tr> 
                         <tr>
-                            <td><strong>Réservoire vide</strong></td>
-                            <td><?php echo $alarmedate13 ; ?></td>
-                            <td><?php echo $alarmedate14 ; ?></td>
-                            <td><?php echo $alarmedate15 ; ?></td>
-                            <td><?php echo $alarmedate16 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire4 ; ?>
-                            </td>
+                            <td>Réservoire vide</td>
+                            <td><?php echo $alarmeselect13 ; ?></td>
+                            <td><?php echo $alarmeselect14 ; ?></td>
+                            <td><?php echo $alarmeselect15 ; ?></td>
+                            <td><?php echo $alarmeselect16 ; ?></td>
+                            <td><?php echo $alarmecommentaire4 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Occlusion/pas d'injection</strong></td>
-                            <td><?php echo $alarmedate17 ; ?></td>
-                            <td><?php echo $alarmedate18 ; ?></td>
-                            <td><?php echo $alarmedate19 ; ?></td>
-                            <td><?php echo $alarmedate20 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire5 ; ?>
-                            </td>
+                            <td>Occlusion/pas d'injection</td>
+                            <td><?php echo $alarmeselect17 ; ?></td>
+                            <td><?php echo $alarmeselect18 ; ?></td>
+                            <td><?php echo $alarmeselect19 ; ?></td>
+                            <td><?php echo $alarmeselect20 ; ?></td>
+                            <td><?php echo $alarmecommentaire5 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Historique des alarmes</strong></td>
-                            <td><?php echo $alarmedate21 ; ?></td>
-                            <td><?php echo $alarmedate22 ; ?></td>
-                            <td><?php echo $alarmedate23 ; ?></td>
-                            <td><?php echo $alarmedate24 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire6 ; ?>
-                            </td>
+                            <td>Historique des alarmes</td>
+                            <td><?php echo $alarmeselect21 ; ?></td>
+                            <td><?php echo $alarmeselect22 ; ?></td>
+                            <td><?php echo $alarmeselect23 ; ?></td>
+                            <td><?php echo $alarmeselect24 ; ?></td>
+                            <td><?php echo $alarmecommentaire6 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Entretien de la Pompe</strong></td>
-                            <td><?php echo $alarmedate25 ; ?></td>
-                            <td><?php echo $alarmedate26 ; ?></td>
-                            <td><?php echo $alarmedate27 ; ?></td>
-                            <td><?php echo $alarmedate28 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire7 ; ?>
-                            </td>
+                            <td>Entretien de la Pompe</td>
+                            <td><?php echo $alarmeselect25 ; ?></td>
+                            <td><?php echo $alarmeselect26 ; ?></td>
+                            <td><?php echo $alarmeselect27 ; ?></td>
+                            <td><?php echo $alarmeselect28 ; ?></td>
+                            <td><?php echo $alarmecommentaire7 ; ?></td>
                         </tr>
                     </tbody>
                 </table>
 
- <div class="dec">
-                    <h4><u>Autres : </u></h4>
-</div>
+                <div>
+                    <strong>Autres :</strong> <?php echo $alarmeautre ; ?>
+                </div>
+
         <font><h4><u>MANIPULATIONS</u></h4></font><br/>
 
-            <table>
+            <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
-                            <td style="text-align: center; width: 25%;"><strong>Etapes</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 13%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 13%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 15%;"><strong>Commentaire</strong></td>
+                            <td style="text-align: center;">Etapes</td>
+                            <td style="text-align: center;"><?php echo $manipdate1 ; ?></td>
+                            <td style="text-align: center;"><?php echo $manipdate2 ; ?></td>
+                            <td style="text-align: center;"><?php echo $manipdate3 ; ?></td>
+                            <td style="text-align: center;"><?php echo $manipdate4 ; ?></td>
+                            <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Lavage des mains</strong></td>
-                            <td><?php echo $manipdate1 ; ?></td>
-                            <td><?php echo $manipdate2 ; ?></td>
-                            <td><?php echo $manipdate3 ; ?></td>
-                            <td><?php echo $manipdate4 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire1 ; ?>
-                            </td>
+                            <td>Lavage des mains</td>
+                            <td><?php echo $manipselect1 ; ?></td>
+                            <td><?php echo $manipselect2 ; ?></td>
+                            <td><?php echo $manipselect3 ; ?></td>
+                            <td><?php echo $manipselect4 ; ?></td>
+                            <td><?php echo $manipcommentaire1 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Remplissage du réservoir</strong></td>
-                            <td><?php echo $manipdate5 ; ?></td>
-                            <td><?php echo $manipdate6 ; ?></td>
-                            <td><?php echo $manipdate7 ; ?></td>
-                            <td><?php echo $manipdate8 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire2 ; ?>
-                            </td>
+                            <td>Remplissage du réservoir</td>
+                            <td><?php echo $manipselect5 ; ?></td>
+                            <td><?php echo $manipselect6 ; ?></td>
+                            <td><?php echo $manipselect7 ; ?></td>
+                            <td><?php echo $manipselect8 ; ?></td>
+                            <td><?php echo $manipcommentaire2 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Connexion réservoir/tubulaire</strong></td>
-                            <td><?php echo $manipdate9 ; ?></td>
-                            <td><?php echo $manipdate10 ; ?></td>
-                            <td><?php echo $manipdate11 ; ?></td>
-                            <td><?php echo $manipdate12 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire3 ; ?>
-                            </td>
+                            <td>Connexion réservoir/tubulaire</td>
+                            <td><?php echo $manipselect9 ; ?></td>
+                            <td><?php echo $manipselect10 ; ?></td>
+                            <td><?php echo $manipselect11 ; ?></td>
+                            <td><?php echo $manipselect12 ; ?></td>
+                            <td><?php echo $manipcommentaire3 ; ?></td>
                         </tr> 
                         <tr>
-                            <td><strong>Retour du piston</strong></td>
-                            <td><?php echo $manipdate13 ; ?></td>
-                            <td><?php echo $manipdate14 ; ?></td>
-                            <td><?php echo $manipdate15 ; ?></td>
-                            <td><?php echo $manipdate16 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire4 ; ?>
-                            </td>
+                            <td>Retour du piston</td>
+                            <td><?php echo $manipselect13 ; ?></td>
+                            <td><?php echo $manipselect14 ; ?></td>
+                            <td><?php echo $manipselect15 ; ?></td>
+                            <td><?php echo $manipselect16 ; ?></td>
+                            <td><?php echo $manipcommentaire4 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Purge de la tubulure</strong></td>
-                            <td><?php echo $manipdate17 ; ?></td>
-                            <td><?php echo $manipdate18 ; ?></td>
-                            <td><?php echo $manipdate19 ; ?></td>
-                            <td><?php echo $manipdate20 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire5 ; ?>
-                            </td>
+                            <td>Purge de la tubulure</td>
+                            <td><?php echo $manipselect17 ; ?></td>
+                            <td><?php echo $manipselect18 ; ?></td>
+                            <td><?php echo $manipselect19 ; ?></td>
+                            <td><?php echo $manipselect20 ; ?></td>
+                            <td><?php echo $manipcommentaire5 ; ?></td>
                         </tr>
                     </tbody>
                 </table>
-        </div>
-       
+    <div class="dec">
 
-        <div class="dec">
-    
         <h4><u>POSE DU CATHETER</u></h4><br/>
 
+       <table>
+            <thead>
+                <tr>
+                    <td style="text-align: center;">Etapes</td>
+                    <td><?php echo $cathdate1 ; ?></td>
+                    <td><?php echo $cathdate2 ; ?></td>
+                    <td><?php echo $cathdate3 ; ?></td>
+                    <td><?php echo $cathdate4 ; ?></td>
+                    <td style="text-align: center;">Commentaire</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mise en place du cathéter dans l'Inserteur</td>
+                    <td><?php echo $cathselect1 ; ?></td>
+                    <td><?php echo $cathselect2 ; ?></td>
+                    <td><?php echo $cathselect3 ; ?></td>
+                    <td><?php echo $cathselect4 ; ?></td>
+                    <td><?php echo $cathcommentaire1 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Retrait de l'adhésif et de la protection de l'aiguille</td>
+                    <td><?php echo $cathselect5 ; ?></td>
+                    <td><?php echo $cathselect6 ; ?></td>
+                    <td><?php echo $cathselect7 ; ?></td>
+                    <td><?php echo $cathselect8 ; ?></td>
+                    <td><?php echo $cathcommentaire2 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Armement de l'Inserteur</td>
+                    <td><?php echo $cathselect9 ; ?></td>
+                    <td><?php echo $cathselect10 ; ?></td>
+                    <td><?php echo $cathselect11 ; ?></td>
+                    <td><?php echo $cathselect12 ; ?></td>
+                    <td><?php echo $cathcommentaire3 ; ?></td>
+                </tr> 
+                <tr>
+                    <td>Choix du lieu d'injection</td>
+                    <td><?php echo $cathselect13 ; ?></td>
+                    <td><?php echo $cathselect14 ; ?></td>
+                    <td><?php echo $cathselect15 ; ?></td>
+                    <td><?php echo $cathselect16 ; ?></td>
+                    <td><?php echo $cathcommentaire4 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Désinfection cutanée</td>
+                    <td><?php echo $cathselect17 ; ?></td>
+                    <td><?php echo $cathselect18 ; ?></td>
+                    <td><?php echo $cathselect19 ; ?></td>
+                    <td><?php echo $cathselect20 ; ?></td>
+                    <td><?php echo $cathcommentaire5 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Déclenchement de l'Inserteur</td>
+                    <td><?php echo $cathselect21 ; ?></td>
+                    <td><?php echo $cathselect22 ; ?></td>
+                    <td><?php echo $cathselect23 ; ?></td>
+                    <td><?php echo $cathselect24 ; ?></td>
+                    <td><?php echo $cathcommentaire6 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Retrait de l'aiguille</td>
+                    <td><?php echo $cathselect25 ; ?></td>
+                    <td><?php echo $cathselect26 ; ?></td>
+                    <td><?php echo $cathselect27 ; ?></td>
+                    <td><?php echo $cathselect28 ; ?></td>
+                    <td><?php echo $cathcommentaire7 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Amorce de la canule</td>
+                    <td><?php echo $cathselect29 ; ?></td>
+                    <td><?php echo $cathselect211 ; ?></td>
+                    <td><?php echo $cathselect212 ; ?></td>
+                    <td><?php echo $cathselect213 ; ?></td>
+                    <td><?php echo $cathcommentaire8 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Contrôle glycémique 2h après la pose</td>
+                    <td><?php echo $cathselect214 ; ?></td>
+                    <td><?php echo $cathselect215 ; ?></td>
+                    <td><?php echo $cathselect216 ; ?></td>
+                    <td><?php echo $cathselect214 ; ?></td>
+                    <td><?php echo $cathcommentaire9 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Conservation de l'insuline</td>
+                    <td><?php echo $cathselect218 ; ?></td>
+                    <td><?php echo $cathselect219 ; ?></td>
+                    <td><?php echo $cathselect221 ; ?></td>
+                    <td><?php echo $cathselect222 ; ?></td>
+                    <td><?php echo $cathcommentaire10 ; ?></td>
+                </tr>
+                <tr>
+                    <td>Fréquence de changement des cathéters</td>
+                    <td><?php echo $cathselect223 ; ?></td>
+                    <td><?php echo $cathselect224 ; ?></td>
+                    <td><?php echo $cathselect225 ; ?></td>
+                    <td><?php echo $cathselect226 ; ?></td>
+                    <td><?php echo $cathcommentaire11 ; ?></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <h4><u>CONNAISSANCE</u></h4><br/>
+
         <table>
-                    
-                        <tr>
-                            <td style="text-align: center; "><strong>Etapes</strong></td>
-                            <td style="text-align: center; width: 60px;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 60px;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 60px;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 60px;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 100px;"><strong>Commentaire</strong></td>
-                        </tr>
-                    
-                    <tbody>
-                        <tr>
-                            <td><strong>Mise en place du cathéter dans l'Inserteur</strong></td>
-                            <td><?php echo $cathdate1 ; ?></td>
-                            <td><?php echo $cathdate2 ; ?></td>
-                            <td><?php echo $cathdate3 ; ?></td>
-                            <td><?php echo $cathdate4 ; ?></td>
-                            <td><?php echo $cathcommentaire1 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Retrait de l'adhésif et de la protection de l'aiguille</strong></td>
-                            <td><?php echo $cathdate5 ; ?></td>
-                            <td><?php echo $cathdate6 ; ?></td>
-                            <td><?php echo $cathdate7 ; ?></td>
-                            <td><?php echo $cathdate8 ; ?></td>
-                            <td><?php echo $cathcommentaire2 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Armement de l'Inserteur</strong></td>
-                            <td><?php echo $cathdate9 ; ?></td>
-                            <td><?php echo $cathdate10 ; ?></td>
-                            <td><?php echo $cathdate11 ; ?></td>
-                            <td><?php echo $cathdate12 ; ?></td>
-                            <td><?php echo $cathcommentaire3 ; ?></td>
-                        </tr> 
-                        <tr>
-                            <td><strong>Choix du lieu d'injection</strong></td>
-                            <td><?php echo $cathdate13 ; ?></td>
-                            <td><?php echo $cathdate14 ; ?></td>
-                            <td><?php echo $cathdate15 ; ?></td>
-                            <td><?php echo $cathdate16 ; ?></td>
-                            <td><?php echo $cathcommentaire4 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Désinfection cutanée</strong></td>
-                            <td><?php echo $cathdate17 ; ?></td>
-                            <td><?php echo $cathdate18 ; ?></td>
-                            <td><?php echo $cathdate19 ; ?></td>
-                            <td><?php echo $cathdate20 ; ?></td>
-                            <td><?php echo $cathcommentaire5 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Déclenchement de l'Inserteur</strong></td>
-                            <td><?php echo $cathdate21 ; ?></td>
-                            <td><?php echo $cathdate22 ; ?></td>
-                            <td><?php echo $cathdate23 ; ?></td>
-                            <td><?php echo $cathdate24 ; ?></td>
-                            <td><?php echo $cathcommentaire6 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Retrait de l'aiguille</strong></td>
-                            <td><?php echo $cathdate25 ; ?></td>
-                            <td><?php echo $cathdate26 ; ?></td>
-                            <td><?php echo $cathdate27 ; ?></td>
-                            <td><?php echo $cathdate28 ; ?></td>
-                            <td><?php echo $cathcommentaire7 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Amorce de la canule</strong></td>
-                            <td><?php echo $cathdate29 ; ?></td>
-                            <td><?php echo $cathdate211 ; ?></td>
-                            <td><?php echo $cathdate212 ; ?></td>
-                            <td><?php echo $cathdate213 ; ?></td>
-                            <td><?php echo $cathcommentaire8 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Contrôle glycémique 2h après la pose</strong></td>
-                            <td><?php echo $cathdate214 ; ?></td>
-                            <td><?php echo $cathdate215 ; ?></td>
-                            <td><?php echo $cathdate216 ; ?></td>
-                            <td><?php echo $cathdate217 ; ?></td>
-                            <td><?php echo $cathcommentaire9 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Conservation de l'insuline</strong></td>
-                            <td><?php echo $cathdate218 ; ?></td>
-                            <td><?php echo $cathdate219 ; ?></td>
-                            <td><?php echo $cathdate221 ; ?></td>
-                            <td><?php echo $cathdate222 ; ?></td>
-                            <td><?php echo $cathcommentaire10 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Fréquence de changement des cathéters</strong></td>
-                            <td><?php echo $cathdate223 ; ?></td>
-                            <td><?php echo $cathdate224 ; ?></td>
-                            <td><?php echo $cathdate225 ; ?></td>
-                            <td><?php echo $cathdate226 ; ?></td>
-                            <td><?php echo $cathcommentaire11 ; ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-        
 
-        
-            <h4><u>CONNAISSANCE</u></h4><br/>
+            <tr>
+                <td style="text-align: center; width: 400px;"></td>
+                <td style="text-align: center; width: 80px;">OUI / NON</td>
+                <td style="text-align: center; width: 190px;"><strong>Observation</strong></td>                            
+            </tr>
 
-                <table>
-                    
-                        <tr>
-                            <td style="text-align: center; width: 400px;"></td>
-                            <td style="text-align: center; width: 80px;">OUI / NON</td>
-                            <td style="text-align: center; width: 190px;"><strong>Observation</strong></td>                            
-                        </tr>
-                    
-                    
-                        <tr>
-                            <td><strong>Numéro de l'astreinte médicale</strong></td>
-                            <td><?php echo $connaissance1 ; ?></td>
-                            <td><?php echo $cnsobservation1 ; ?></td>                            
-                        </tr>
-                       
-                        <tr>
-                            <td><strong>Numéro de l'astreinte BLCM</strong></td>
-                            <td><?php echo $connaissance2 ; ?></td>
-                            <td><?php echo $cnsobservation2 ; ?></td>
-                        </tr>
-                       
-                        <tr> 
-                            <td>
-                                <strong>Kit de sécurité</strong><br/>
-                                <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline rapide : </strong><?php echo $perempdate1 ; ?><br/>
-                                <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline lente : </strong><?php echo $perempdate2 ; ?><br/>
-                                <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Aiguilles : </strong> <?php echo $connaissance5 ; ?><br/>
-                                <strong>Matériel de secours</strong>
-                            </td>
-                           
-                            <td>
-                                <br/>
-                                    * <br/>
-                                    * <br/>
-                                    *   
-                            </td>
-                            
-                            <td>
-                                <strong>Date de péremption</strong> : <br/>
-                                    * <br/>
-                                    *
-                            </td>
-                        
-                        </tr> 
-                        <tr>
-                            <td><strong>Schéma de remplacement</strong></td>
-                            <td><?php echo $connaissance6 ; ?></td>
-                            <td><?php echo $cnsobservation3 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>CAT en cas d'hypoglycémie</strong></td>
-                            <td><?php echo $connaissance7 ; ?></td>
-                            <td><?php echo $cnsobservation4 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Maitrise du ressucrage</strong></td>
-                            <td><?php echo $connaissance8 ; ?></td>
-                            <td><?php echo $cnsobservation5 ; ?></td>
-                        </tr>                        
-                        <tr>
-                            <td><strong>CAT en cas d'hyperglycémie</strong></td>
-                            <td><?php echo $connaissance9 ; ?></td>
-                            <td><?php echo $cnsobservation6 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Maitrise de l'acceptation du bolus de correction</strong></td>
-                            <td><?php echo $connaissance10 ; ?></td>
-                            <td><?php echo $cnsobservation7 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>CAT en cas d'accétonémie</strong></td>
-                            <td><?php echo $connaissance11 ; ?></td>
-                            <td><?php echo $cnsobservation8 ; ?></td>
-                        </tr>                     
-                    
-                </table>
-        
 
-        
-            <h4><u>AUTO SURVEILLANCE GLYCEMIQUE</u></h4><br/>
-                <table>
-                    
-                        <tr>
-                            <td style="width: 400px;"></td>
-                            <td style="text-align: center; width: 130px;"><strong>Détails</strong></td>
-                            <td style="text-align: center; width: 140px;"><strong>Observations</strong></td>                            
-                        </tr>
-                    
-                    <tbody>                      
-                        <tr>
-                            <td><strong>Nom du dispositif ASG principal et des bandelettes</strong></td>
-                            <td><?php echo $asgdetail1 ; ?></td>
-                            <td><?php echo $asgobservation1 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Nom du dispositif ASG secondaire éventuel et des bandelettes</strong></td>
-                            <td><?php echo $asgdetail2 ; ?></td>
-                            <td><?php echo $asgobservation2 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Nom du dispositif auto piqueur</strong></td>
-                            <td><?php echo $asgdetail3 ; ?></td>
-                            <td><?php echo $asgobservation3 ; ?></td>
-                        </tr>                        
-                        <tr>
-                            <td><strong>Etat cutané des doigts/respect de "la pince"</strong></td>
-                            <td><?php echo $asgdetail4 ; ?></td>
-                            <td><?php echo $asgobservation4 ; ?></td>
-                        </tr>                                        
-                    </tbody>
-                </table>
-        
+            <tr>
+                <td><strong>Numéro de l'astreinte médicale</strong></td>
+                <td><?php echo $connaissance1; ?></td>
+                <td><?php echo $cnsobservation1; ?></td>                            
+            </tr>
 
-        
-            <h4><u>AUTO SURVEILLANCE GLYCEMIQUE (ASG)</u></h4><br/>
-                <table>
-                   
-                        <tr>
-                            <td style="text-align: center; width: 400px;"></td>
-                            <td style="text-align: center; width: 130px;"><strong>Prescription</strong></td>
-                            <td style="text-align: center; width: 140px;"><strong>Réalisation réelle</strong></td>                            
-                        </tr>
-                   
-                    <tbody>                      
-                        <tr>
-                            <td><strong>Fréqeunce des glycémies</strong></td>
-                            <td><?php echo $asgfrequence1 ; ?></td> 
-                            <td><?php echo $asgfrequence2 ; ?></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Connaissance et respect des mesures d'hygiène relatives l'ASG</strong></td>
-                            <td><?php echo $asgconnaissance1 ; ?></td>
-                            <td><?php echo $asgconnaissance2 ; ?></td>
-                        </tr>                                      
-                    </tbody>
-                </table>
+            <tr>
+                <td><strong>Numéro de l'astreinte BLCM</strong></td>
+                <td><?php echo $connaissance2; ?></td>
+                <td><?php echo $cnsobservation2; ?></td>
+            </tr>
 
-              
+            <tr> 
+                <td>
+                    <strong>Kit de sécurité</strong><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline rapide : </strong><?php echo $connaissance3; ?><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline lente : </strong><?php echo $connaissance4; ?><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Aiguilles : </strong> <?php echo $connaissance5; ?><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo de glucagen : </strong> <?php echo $connaissance6; ?><br/>
+          
+                </td>
+
+                <td>
+                    <br/>
+                    * <br/>
+                    * <br/>
+                    * <br/>
+                    *   
+                </td>
+
+                <td>
+                    <strong>Date de péremption</strong> : <br/>
+                    * <?php echo $perempdate1; ?> <br/>
+                    * <?php echo $perempdate2; ?> <br/>
+                    * <?php echo $perempdate3; ?> <br/>
+                    * <?php echo $perempdate4; ?>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><strong>Matériel de secours</strong></td>
+                <td><?php echo $connaissance7; ?></td>
+                <td><?php echo $perempdate5; ?></td>
+            </tr>
+
+            <tr>
+                <td><strong>Schéma de remplacement</strong></td>
+                <td><?php echo $connaissance8; ?></td>
+                <td><?php echo $cnsobservation3; ?></td>
+            </tr>
+            <tr>
+                <td><strong>CAT en cas d'hypoglycémie</strong></td>
+                <td><?php echo $connaissance9; ?></td>
+                <td><?php echo $cnsobservation4; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Maitrise du ressucrage</strong></td>
+                <td><?php echo $connaissance10; ?></td>
+                <td><?php echo $cnsobservation5; ?></td>
+            </tr>                        
+            <tr>
+                <td><strong>CAT en cas d'hyperglycémie</strong></td>
+                <td><?php echo $connaissance11; ?></td>
+                <td><?php echo $cnsobservation6; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Maitrise de l'acceptation du bolus de correction</strong></td>
+                <td><?php echo $connaissance12; ?></td>
+                <td><?php echo $cnsobservation7; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Réalise le contrôle de la Cétone</strong></td>
+                <td><?php echo $connaissance13; ?></td>
+                <td><?php echo $cnsobservation8; ?></td>
+            </tr>
+            <tr>
+                <td><strong>CAT en cas d'accétonémie</strong></td>
+                <td><?php echo $connaissance14; ?></td>
+                <td><?php echo $cnsobservation9; ?></td>
+            </tr>                     
+
+        </table>
+
+
+
+        <h4><u>AUTO SURVEILLANCE GLYCEMIQUE</u></h4><br/>
+        <table>
+
+            <tr>
+                <td style="width: 400px;"></td>
+                <td style="text-align: center; width: 130px;"><strong>Détails</strong></td>
+                <td style="text-align: center; width: 140px;"><strong>Observations</strong></td>                            
+            </tr>
+
+            <tbody>                      
+                <tr>
+                    <td><strong>Nom du dispositif ASG principal et des bandelettes</strong></td>
+                    <td><?php echo $asgdetail1; ?></td>
+                    <td><?php echo $asgobservation1; ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Nom du dispositif ASG secondaire éventuel et des bandelettes</strong></td>
+                    <td><?php echo $asgdetail2; ?></td>
+                    <td><?php echo $asgobservation2; ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Nom du dispositif auto piqueur</strong></td>
+                    <td><?php echo $asgdetail3; ?></td>
+                    <td><?php echo $asgobservation3; ?></td>
+                </tr>                        
+                <tr>
+                    <td><strong>Etat cutané des doigts/respect de "la pince"</strong></td>
+                    <td><?php echo $asgdetail4; ?></td>
+                    <td><?php echo $asgobservation4; ?></td>
+                </tr>                                        
+            </tbody>
+        </table>
+
+
+
+        <h4><u>AUTO SURVEILLANCE GLYCEMIQUE (ASG)</u></h4><br/>
+        <table>
+
+            <tr>
+                <td style="text-align: center; width: 400px;"></td>
+                <td style="text-align: center; width: 130px;"><strong>Prescription</strong></td>
+                <td style="text-align: center; width: 140px;"><strong>Réalisation réelle</strong></td>                            
+            </tr>
+
+            <tbody>                      
+                <tr>
+                    <td><strong>Fréqeunce des glycémies</strong></td>
+                    <td><?php echo $asgfrequence1; ?></td> 
+                    <td><?php echo $asgfrequence2; ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Connaissance et respect des mesures d'hygiène relatives l'ASG</strong></td>
+                    <td><?php echo $asgconnaissance; ?></td>
+                    <td><?php echo $asgcommentaire; ?></td>
+                </tr>                                      
+            </tbody>
+        </table>
+
+
     </div>
 </div>
-  
-    <style>
-            table
 
-            {
-                width: 100%;
-                border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
+<style>
+    table
 
-            }
-
-            td, th
-            {
-                border: 1px solid black;
-            }
-            .dec{
-                margin-left: 25px;
-                margin-right: 25px;
-            }
-            .title{
-                margin-left: 25px;
-            }
-            
-        </style>
-    <?php
-    $content = ob_get_clean();
-
-    // convert in PDF
-    require_once(dirname(__FILE__).'/html2pdf-4.4.0/html2pdf.class.php');
- 
-    try
     {
-        $html2pdf = new HTML2PDF('A', 'A4', 'fr');
-        $html2pdf->setDefaultFont('Arial');
-        $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
-        $html2pdf->Output('pdf/content.pdf');
+
+        width: 100%;
+        border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
 
     }
-    catch(HTML2PDF_exception $e) {
-        echo $e;
-        exit;
+
+    td, th
+    {
+        border: 1px solid black;
+    }
+    .dec{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .title{
+        margin-left: 25px;
     }
 
-    //Suppression des fichiers
-    /*
-    unlink("img/image".$id."bardate1.png");
-    unlink("img/image".$id."bardate2.png");
-    unlink("img/image".$id."barhg.png");
-    unlink("img/image".$id."bar.png");
-    */
+</style>
+<?php
+$content = ob_get_clean();
 
+// convert in PDF
+require_once(dirname(__FILE__) . '/html2pdf-4.4.0/html2pdf.class.php');
 
+try {
+    $html2pdf = new HTML2PDF('P', 'A4', 'fr');
+    $html2pdf->setDefaultFont('Arial');
+    $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
+    $html2pdf->Output('pdf/content.pdf');
+} catch (HTML2PDF_exception $e) {
+    echo $e;
+    exit;
+}
+
+//Suppression des fichiers
+/*
+  unlink("img/image".$id."bardate1.png");
+  unlink("img/image".$id."bardate2.png");
+  unlink("img/image".$id."barhg.png");
+  unlink("img/image".$id."bar.png");
+ */
 ?>
