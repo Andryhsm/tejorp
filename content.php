@@ -952,7 +952,7 @@ ob_start();
         <table class="table" style="margin-right: 20px;">
             <tbody>
                 <tr>
-                    <td colspan=8 style="text-align: center;"><strong>Shéma basals date 1</strong></td>
+                    <td colspan=12 style="text-align: center;"><strong>Shéma basals date 1</strong></td>
                 </tr>
                 <tr>
                     <td style="width:24%;" colspan=3><strong>Schéma 1</strong></td>
@@ -1016,7 +1016,7 @@ ob_start();
         <table class="table">
             <tbody>
                 <tr>
-                    <td colspan=8 style="text-align: center;"><strong>Shéma basals date 2</strong></td>
+                    <td colspan=12 style="text-align: center;"><strong>Shéma basals date 2</strong></td>
                 </tr>
                 <tr>
                     <td style="width:24%;" colspan=3><strong>Schéma 1</strong></td>
