@@ -889,7 +889,6 @@
     $('#btnAdd2').click(function (e )
     {
         e.preventDefault();
-<<<<<<< HEAD
         m++;
         var c   =    "<tr>";
              c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2 + m ) +"' id='Horaire_"+(inc2+ m )+"'></td>";
@@ -925,44 +924,6 @@
             if(/^Debit/.test(name_)){
                 arr_Debit2.push(name_);    
                 new_nameD.push(name_);
-=======
-        i++;
-        var c = "<tr>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i) + "' id='Horaire_" + (inc + i) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 1) + "' id='Horaire_" + (inc + i + 1) + "'></td>";
-        c += "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_" + (incD + i) + "' id='Debit_" + (incD + i) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 2) + "' id='Horaire" + (inc + i + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 3) + "' id='Horaire_" + (inc + i + 3) + "'></td>";
-        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 1) + "' id='Debit_" + (incD + i + 1) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 4) + "' id='Horaire_" + (inc + i + 4) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 5) + "' id='Horaire_" + (inc + i + 5) + "'></td>";
-        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 2) + "' id='Debit_" + (incD + i + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 6) + "' id='Horaire_" + (inc + i + 6) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 7) + "' id='Horaire_" + (inc + i + 7) + "'></td>";
-        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 3) + "' id='Debit_" + (incD + i + 3) + "'></td>";
-        c += "</tr>";
-
-        inc += 7;
-        incD += 3;
-        if (i < 10)
-        {
-            $('#ligne24').before(c);
-        }
-        len = $("#contentBasal2").children().length;
-
-        len2 = $("#contentBasal2>tr:eq(" + (len - 2) + ")").children().length;
-
-        var new_nameH = [], new_nameD = [];
-        for (var j = 0; j < len2; j++) {
-            name = $("#contentBasal2>tr:eq(" + (len - 2) + ")>td:eq(" + j + ")").children().attr("name");
-            if (/^Horaire/.test(name)) {
-                arr_Horaire2.push(name);
-                new_nameH.push(name);
-            }
-            if (/^Debit/.test(name)) {
-                arr_Debit2.push(name);
-                new_nameD.push(name);
->>>>>>> ca275450254444508f7b570ceda7759bc856bfc4
             }
         }
 
