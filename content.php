@@ -1233,270 +1233,229 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
        
               <!-- ?php echo '<img src="img/image'.$id.'bar.png" style="width: 700px;" />';? -->
         <div class="dec">
-         <font><h4><u>MANIPULATION DE LA Pompe</u></h4></font><br/>
+        <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
 
             <table>
                     <thead>
                         <tr>
-                            <td style="text-align: center; width: 15%;"><strong>Etapes</strong></td>
-                            <td style="text-align: center; width: 10%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 9%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 15%;"><strong>Commentaire</strong></td>
+                            <td style="text-align: center;">Etapes</td>
+                            <td style="text-align: center;"><?php echo $pmpdate1 ; ?></td>
+                            <td style="text-align: center;"><?php echo $pmpdate2 ; ?></td>
+                            <td style="text-align: center;"><?php echo $pmpdate3 ; ?></td>
+                            <td style="text-align: center;"><?php echo $pmpdate4 ; ?></td>
+                            <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Installation de la pile</strong></td>
-                            <td><?php echo $pmpdate1 ; ?></td>
-                            <td><?php echo $pmpdate2 ; ?></td>
-                            <td><?php echo $pmpdate3 ; ?></td>
-                            <td><?php echo $pmpdate4 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire1 ; ?>
-                            </td>
+                            <td>Installation de la pile</td>
+                            <td><?php echo $pmpselect1 ; ?></td>
+                            <td><?php echo $pmpselect2 ; ?></td>
+                            <td><?php echo $pmpselect3 ; ?></td>
+                            <td><?php echo $pmpselect4 ; ?></td>
+                            <td><?php echo $pmpcommentaire1 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Marche/Arrêt</strong></td>
-                            <td><?php echo $pmpdate5 ; ?></td>
-                            <td><?php echo $pmpdate6 ; ?></td>
-                            <td><?php echo $pmpdate7 ; ?></td>
-                            <td><?php echo $pmpdate8 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire2 ; ?>
-                            </td>
+                            <td>Marche/Arrêt</td>
+                           	<td><?php echo $pmpselect5 ; ?></td>
+                            <td><?php echo $pmpselect6 ; ?></td>
+                            <td><?php echo $pmpselect7 ; ?></td>
+                            <td><?php echo $pmpselect8 ; ?></td>
+                            <td><?php echo $pmpcommentaire2 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Réglage Date/heure</strong></td>
-                            <td><?php echo $pmpdate9 ; ?></td>
-                            <td><?php echo $pmpdate10 ; ?></td>
-                            <td><?php echo $pmpdate11 ; ?></td>
-                            <td><?php echo $pmpdate12 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire3 ; ?>
-                            </td>
+                            <td>Réglage Date/heure</td>
+                            <td><?php echo $pmpselect9 ; ?></td>
+                            <td><?php echo $pmpselect10 ; ?></td>
+                            <td><?php echo $pmpselect11 ; ?></td>
+                            <td><?php echo $pmpselect12 ; ?></td>
+                            <td><?php echo $pmpcommentaire3 ; ?></td>
                         </tr> 
                         <tr>
-                            <td><strong>Réglage du bolus</strong></td>
-                            <td><?php echo $pmpdate13 ; ?></td>
-                            <td><?php echo $pmpdate14 ; ?></td>
-                            <td><?php echo $pmpdate15 ; ?></td>
-                            <td><?php echo $pmpdate16 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire4 ; ?>
-                            </td>
+                            <td>Réglage du bolus</td>
+                            <td><?php echo $pmpselect13 ; ?></td>
+                            <td><?php echo $pmpselect14 ; ?></td>
+                            <td><?php echo $pmpselect15 ; ?></td>
+                            <td><?php echo $pmpselect16 ; ?></td>
+                            <td><?php echo $pmpcommentaire4 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Arrêt du bolus en cours</strong></td>
-                            <td><?php echo $pmpdate17 ; ?></td>
-                            <td><?php echo $pmpdate18 ; ?></td>
-                            <td><?php echo $pmpdate19 ; ?></td>
-                            <td><?php echo $pmpdate20 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire5 ; ?>
-                            </td>
+                            <td>Arrêt du bolus en cours</td>
+                            <td><?php echo $pmpselect17 ; ?></td>
+                            <td><?php echo $pmpselect18 ; ?></td>
+                            <td><?php echo $pmpselect19 ; ?></td>
+                            <td><?php echo $pmpselect20 ; ?></td>
+                            <td><?php echo $pmpcommentaire5 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Historique des bolus</strong></td>
-                            <td><?php echo $pmpdate21 ; ?></td>
-                            <td><?php echo $pmpdate22 ; ?></td>
-                            <td><?php echo $pmpdate23 ; ?></td>
-                            <td><?php echo $pmpdate24 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire6 ; ?>
-                            </td>
+                            <td>Historique des bolus</td>
+                            <td><?php echo $pmpselect21 ; ?></td>
+                            <td><?php echo $pmpselect22 ; ?></td>
+                            <td><?php echo $pmpselect23 ; ?></td>
+                            <td><?php echo $pmpselect24 ; ?></td>
+                            <td><?php echo $pmpcommentaire6 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Programmation du débit basal</strong></td>
-                            <td><?php echo $pmpdate25 ; ?></td>
-                            <td><?php echo $pmpdate26 ; ?></td>
-                            <td><?php echo $pmpdate27 ; ?></td>
-                            <td><?php echo $pmpdate28 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire7 ; ?>
-                            </td>
+                            <td>Programmation du débit basal</td>
+                            <td><?php echo $pmpselect25 ; ?></td>
+                            <td><?php echo $pmpselect26 ; ?></td>
+                            <td><?php echo $pmpselect27 ; ?></td>
+                            <td><?php echo $pmpselect28 ; ?></td>
+                            <td><?php echo $pmpcommentaire7 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Consulter les débits de base</strong></td>
-                            <td><?php echo $pmpdate29 ; ?></td>
-                            <td><?php echo $pmpdate291 ; ?></td>
-                            <td><?php echo $pmpdate292 ; ?></td>
-                            <td><?php echo $pmpdate293 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire8 ; ?>
-                            </td>
+                            <td>Consulter les débits de base</td>
+                            <td><?php echo $pmpselect29 ; ?></td>
+                            <td><?php echo $pmpselect291 ; ?></td>
+                            <td><?php echo $pmpselect292 ; ?></td>
+                            <td><?php echo $pmpselect293 ; ?></td>
+                            <td><?php echo $pmpcommentaire8 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Programmer et arrêter le débit de base temporaire</strong></td>
-                            <td><?php echo $pmpdate294 ; ?></td>
-                            <td><?php echo $pmpdate295 ; ?></td>
-                            <td><?php echo $pmpdate296 ; ?></td>
-                            <td><?php echo $pmpdate297 ; ?></td>
-                            <td>
-                                <?php echo $pmpcommentaire9 ; ?>
-                            </td>
+                            <td>Programmer et arrêter le débit de base temporaire</td>
+                            <td><?php echo $pmpselect294 ; ?></td>
+                            <td><?php echo $pmpselect295 ; ?></td>
+                            <td><?php echo $pmpselect296 ; ?></td>
+                            <td><?php echo $pmpselect297 ; ?></td>
+                            <td><?php echo $pmpcommentaire9 ; ?></td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div>
-                    <h4><u>Autres : </u></h4>
+                    <strong>Autres :</strong> <?php echo $pmpautre ; ?>
                 </div>
 
-        <font><h4><u>ALARMES ET PRECAUTIONS</u></h4></font><br/>
+        <h4><u>ALARMES ET PRECAUTIONS</u></h4><br/>
 
-            <table>
+            <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
-                            <td style="text-align: center; width: 25%;"><strong>Etapes</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 15%;"><strong>Commentaire</strong></td>
+                            <td style="text-align: center;">Etapes</td>
+                            <td style="text-align: center;"><?php echo $alarmedate1 ; ?></td>
+                            <td style="text-align: center;"><?php echo $alarmedate2 ; ?></td>
+                            <td style="text-align: center;"><?php echo $alarmedate3 ; ?></td>
+                            <td style="text-align: center;"><?php echo $alarmedate4 ; ?></td>
+                            <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Reconnaitre une alarme</strong></td>
-                            <td><?php echo $alarmedate1 ; ?></td>
-                            <td><?php echo $alarmedate2 ; ?></td>
-                            <td><?php echo $alarmedate3 ; ?></td>
-                            <td><?php echo $alarmedate4 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire1 ; ?>
-                            </td>
+                            <td>Reconnaitre une alarme</td>
+                            <td><?php echo $alarmeselect1 ; ?></td>
+                            <td><?php echo $alarmeselect2 ; ?></td>
+                            <td><?php echo $alarmeselect3 ; ?></td>
+                            <td><?php echo $alarmeselect4 ; ?></td>
+                            <td><?php echo $alarmecommentaire1 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Pile faible</strong></td>
-                            <td><?php echo $alarmedate5 ; ?></td>
-                            <td><?php echo $alarmedate6 ; ?></td>
-                            <td><?php echo $alarmedate7 ; ?></td>
-                            <td><?php echo $alarmedate8 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire2 ; ?>
-                            </td>
+                            <td>Pile faible</td>
+                            <td><?php echo $alarmeselect5 ; ?></td>
+                            <td><?php echo $alarmeselect6 ; ?></td>
+                            <td><?php echo $alarmeselect7 ; ?></td>
+                            <td><?php echo $alarmeselect8 ; ?></td>
+                            <td><?php echo $alarmecommentaire2 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Pile épuisée</strong></td>
-                            <td><?php echo $alarmedate9 ; ?></td>
-                            <td><?php echo $alarmedate10 ; ?></td>
-                            <td><?php echo $alarmedate11 ; ?></td>
-                            <td><?php echo $alarmedate12 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire3 ; ?>
-                            </td>
+                            <td>Pile épuisée</td>
+                            <td><?php echo $alarmeselect9 ; ?></td>
+                            <td><?php echo $alarmeselect10 ; ?></td>
+                            <td><?php echo $alarmeselect11 ; ?></td>
+                            <td><?php echo $alarmeselect12 ; ?></td>
+                            <td><?php echo $alarmecommentaire3 ; ?></td>
                         </tr> 
                         <tr>
-                            <td><strong>Réservoire vide</strong></td>
-                            <td><?php echo $alarmedate13 ; ?></td>
-                            <td><?php echo $alarmedate14 ; ?></td>
-                            <td><?php echo $alarmedate15 ; ?></td>
-                            <td><?php echo $alarmedate16 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire4 ; ?>
-                            </td>
+                            <td>Réservoire vide</td>
+                            <td><?php echo $alarmeselect13 ; ?></td>
+                            <td><?php echo $alarmeselect14 ; ?></td>
+                            <td><?php echo $alarmeselect15 ; ?></td>
+                            <td><?php echo $alarmeselect16 ; ?></td>
+                            <td><?php echo $alarmecommentaire4 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Occlusion/pas d'injection</strong></td>
-                            <td><?php echo $alarmedate17 ; ?></td>
-                            <td><?php echo $alarmedate18 ; ?></td>
-                            <td><?php echo $alarmedate19 ; ?></td>
-                            <td><?php echo $alarmedate20 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire5 ; ?>
-                            </td>
+                            <td>Occlusion/pas d'injection</td>
+                            <td><?php echo $alarmeselect17 ; ?></td>
+                            <td><?php echo $alarmeselect18 ; ?></td>
+                            <td><?php echo $alarmeselect19 ; ?></td>
+                            <td><?php echo $alarmeselect20 ; ?></td>
+                            <td><?php echo $alarmecommentaire5 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Historique des alarmes</strong></td>
-                            <td><?php echo $alarmedate21 ; ?></td>
-                            <td><?php echo $alarmedate22 ; ?></td>
-                            <td><?php echo $alarmedate23 ; ?></td>
-                            <td><?php echo $alarmedate24 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire6 ; ?>
-                            </td>
+                            <td>Historique des alarmes</td>
+                            <td><?php echo $alarmeselect21 ; ?></td>
+                            <td><?php echo $alarmeselect22 ; ?></td>
+                            <td><?php echo $alarmeselect23 ; ?></td>
+                            <td><?php echo $alarmeselect24 ; ?></td>
+                            <td><?php echo $alarmecommentaire6 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Entretien de la Pompe</strong></td>
-                            <td><?php echo $alarmedate25 ; ?></td>
-                            <td><?php echo $alarmedate26 ; ?></td>
-                            <td><?php echo $alarmedate27 ; ?></td>
-                            <td><?php echo $alarmedate28 ; ?></td>
-                            <td>
-                                <?php echo $alarmecommentaire7 ; ?>
-                            </td>
+                            <td>Entretien de la Pompe</td>
+                            <td><?php echo $alarmeselect25 ; ?></td>
+                            <td><?php echo $alarmeselect26 ; ?></td>
+                            <td><?php echo $alarmeselect27 ; ?></td>
+                            <td><?php echo $alarmeselect28 ; ?></td>
+                            <td><?php echo $alarmecommentaire7 ; ?></td>
                         </tr>
                     </tbody>
                 </table>
 
- <div class="dec">
-                    <h4><u>Autres : </u></h4>
-</div>
+                <div>
+                    <strong>Autres :</strong> <?php echo $alarmeautre ; ?>
+                </div>
+
         <font><h4><u>MANIPULATIONS</u></h4></font><br/>
 
-            <table>
+            <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
-                            <td style="text-align: center; width: 25%;"><strong>Etapes</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 14%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 13%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 13%;"><strong>Date</strong></td>
-                            <td style="text-align: center; width: 15%;"><strong>Commentaire</strong></td>
+                            <td style="text-align: center;">Etapes</td>
+                            <td style="text-align: center;"><?php echo $manipdate1 ; ?></td>
+                            <td style="text-align: center;"><?php echo $manipdate2 ; ?></td>
+                            <td style="text-align: center;"><?php echo $manipdate3 ; ?></td>
+                            <td style="text-align: center;"><?php echo $manipdate4 ; ?></td>
+                            <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Lavage des mains</strong></td>
-                            <td><?php echo $manipdate1 ; ?></td>
-                            <td><?php echo $manipdate2 ; ?></td>
-                            <td><?php echo $manipdate3 ; ?></td>
-                            <td><?php echo $manipdate4 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire1 ; ?>
-                            </td>
+                            <td>Lavage des mains</td>
+                            <td><?php echo $manipselect1 ; ?></td>
+                            <td><?php echo $manipselect2 ; ?></td>
+                            <td><?php echo $manipselect3 ; ?></td>
+                            <td><?php echo $manipselect4 ; ?></td>
+                            <td><?php echo $manipcommentaire1 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Remplissage du réservoir</strong></td>
-                            <td><?php echo $manipdate5 ; ?></td>
-                            <td><?php echo $manipdate6 ; ?></td>
-                            <td><?php echo $manipdate7 ; ?></td>
-                            <td><?php echo $manipdate8 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire2 ; ?>
-                            </td>
+                            <td>Remplissage du réservoir</td>
+                            <td><?php echo $manipselect5 ; ?></td>
+                            <td><?php echo $manipselect6 ; ?></td>
+                            <td><?php echo $manipselect7 ; ?></td>
+                            <td><?php echo $manipselect8 ; ?></td>
+                            <td><?php echo $manipcommentaire2 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Connexion réservoir/tubulaire</strong></td>
-                            <td><?php echo $manipdate9 ; ?></td>
-                            <td><?php echo $manipdate10 ; ?></td>
-                            <td><?php echo $manipdate11 ; ?></td>
-                            <td><?php echo $manipdate12 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire3 ; ?>
-                            </td>
+                            <td>Connexion réservoir/tubulaire</td>
+                            <td><?php echo $manipselect9 ; ?></td>
+                            <td><?php echo $manipselect10 ; ?></td>
+                            <td><?php echo $manipselect11 ; ?></td>
+                            <td><?php echo $manipselect12 ; ?></td>
+                            <td><?php echo $manipcommentaire3 ; ?></td>
                         </tr> 
                         <tr>
-                            <td><strong>Retour du piston</strong></td>
-                            <td><?php echo $manipdate13 ; ?></td>
-                            <td><?php echo $manipdate14 ; ?></td>
-                            <td><?php echo $manipdate15 ; ?></td>
-                            <td><?php echo $manipdate16 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire4 ; ?>
-                            </td>
+                            <td>Retour du piston</td>
+                            <td><?php echo $manipselect13 ; ?></td>
+                            <td><?php echo $manipselect14 ; ?></td>
+                            <td><?php echo $manipselect15 ; ?></td>
+                            <td><?php echo $manipselect16 ; ?></td>
+                            <td><?php echo $manipcommentaire4 ; ?></td>
                         </tr>
                         <tr>
-                            <td><strong>Purge de la tubulure</strong></td>
-                            <td><?php echo $manipdate17 ; ?></td>
-                            <td><?php echo $manipdate18 ; ?></td>
-                            <td><?php echo $manipdate19 ; ?></td>
-                            <td><?php echo $manipdate20 ; ?></td>
-                            <td>
-                                <?php echo $manipcommentaire5 ; ?>
-                            </td>
+                            <td>Purge de la tubulure</td>
+                            <td><?php echo $manipselect17 ; ?></td>
+                            <td><?php echo $manipselect18 ; ?></td>
+                            <td><?php echo $manipselect19 ; ?></td>
+                            <td><?php echo $manipselect20 ; ?></td>
+                            <td><?php echo $manipcommentaire5 ; ?></td>
                         </tr>
                     </tbody>
                 </table>
