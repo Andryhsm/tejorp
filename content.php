@@ -659,7 +659,7 @@ $cathselect218 = (isset($_POST["cathselect218"])) ? $_POST["cathselect218"] : ""
 $cathselect219 = (isset($_POST["cathselect219"])) ? $_POST["cathselect219"] : "";
 $cathselect221 = (isset($_POST["cathselect221"])) ? $_POST["cathselect221"] : "";
 $cathselect222 = (isset($_POST["cathselect222"])) ? $_POST["cathselect222"] : "";
-$cathcommentaire13 = (isset($_POST["cathcommentaire13"])) ? $_POST["cathcommentaire13"] : "";
+$cathcommentaire10 = (isset($_POST["cathcommentaire10"])) ? $_POST["cathcommentaire10"] : "";
 $cathselect223 = (isset($_POST["cathselect223"])) ? $_POST["cathselect223"] : "";
 $cathselect224 = (isset($_POST["cathselect224"])) ? $_POST["cathselect224"] : "";
 $cathselect225 = (isset($_POST["cathselect225"])) ? $_POST["cathselect225"] : "";
@@ -727,17 +727,17 @@ $gouterRotation = (isset($_POST["gouterRotation"])) ? $_POST["gouterRotation"] :
 $gouterObjectif = (isset($_POST["gouterObjectif"])) ? $_POST["gouterObjectif"] : "";
 $gouterSensibilite = (isset($_POST["gouterSensibilite"])) ? $_POST["gouterSensibilite"] : "";
 
-$gouterDe = (isset($_POST["dinerDe"])) ? $_POST["dinerDe"] : "";
-$gouterA = (isset($_POST["dinerA"])) ? $_POST["dinerA"] : "";
-$gouterRotation = (isset($_POST["dinerRotation"])) ? $_POST["dinerRotation"] : "";
-$gouterObjectif = (isset($_POST["dinerObjectif"])) ? $_POST["dinerObjectif"] : "";
-$gouterSensibilite = (isset($_POST["dinerSensibilite"])) ? $_POST["dinerSensibilite"] : "";
+$dinerDe = (isset($_POST["dinerDe"])) ? $_POST["dinerDe"] : "";
+$dinerA = (isset($_POST["dinerA"])) ? $_POST["dinerA"] : "";
+$dinerRotation = (isset($_POST["dinerRotation"])) ? $_POST["dinerRotation"] : "";
+$dinerObjectif = (isset($_POST["dinerObjectif"])) ? $_POST["dinerObjectif"] : "";
+$dinerSensibilite = (isset($_POST["dinerSensibilite"])) ? $_POST["dinerSensibilite"] : "";
 
-$gouterDe = (isset($_POST["collationDe"])) ? $_POST["collationDe"] : "";
-$gouterA = (isset($_POST["collationA"])) ? $_POST["collationA"] : "";
-$gouterRotation = (isset($_POST["collationRotation"])) ? $_POST["collationRotation"] : "";
-$gouterObjectif = (isset($_POST["collationObjectif"])) ? $_POST["collationObjectif"] : "";
-$gouterSensibilite = (isset($_POST["collationSensibilite"])) ? $_POST["collationSensibilite"] : "";
+$collationDe = (isset($_POST["collationDe"])) ? $_POST["collationDe"] : "";
+$collationA = (isset($_POST["collationA"])) ? $_POST["collationA"] : "";
+$collationRotation = (isset($_POST["collationRotation"])) ? $_POST["collationRotation"] : "";
+$collationObjectif = (isset($_POST["collationObjectif"])) ? $_POST["collationObjectif"] : "";
+$collationSensibilite = (isset($_POST["collationSensibilite"])) ? $_POST["collationSensibilite"] : "";
 
 
 /* MODIFS STIAN DECLARATIONS DE VARIABLES */
@@ -976,7 +976,7 @@ ob_start();
                 </tr>
                 <tr>
                     <td>00:00</td>
-                    <td><?php echo $Horaire1; ?></td>
+                    <td><?php echo $Horaire1.$Debit1; ?></td>
                     <td><?php echo $Debit1; ?></td>
                     <td>00:00</td>
                     <td><?php echo $Horaire2; ?></td>
@@ -988,7 +988,6 @@ ob_start();
                     <td><?php echo $Horaire4; ?></td>
                     <td><?php echo $Debit4; ?></td>
                 </tr>
-
 
                 <tr>
                     <td><?php echo $Horaire1N; ?></td>
@@ -1206,11 +1205,12 @@ ob_start();
         <table class="table " style="margin-left: 9px;">
             <thead>
                 <tr>
-                    <th style="width:19%"></th>
-                    <th style="width:19%"><strong>Horaires</strong></th>
-                    <th style="width:19%"><strong>Ration Insuline/glucide</strong></th>
-                    <th style="width:19%"><strong>Objectif glicémique</strong></th>
-                    <th style="width:19%"><strong>Sensibilité à l'insuline</strong></th>
+                    <th style="width:16%"></th>
+                    <th style="width:16%"><strong>De</strong></th>
+                    <th style="width:16%"><strong>A</strong></th>
+                    <th style="width:16%"><strong>Ration Insuline/glucide</strong></th>
+                    <th style="width:16%"><strong>Objectif glicémique</strong></th>
+                    <th style="width:16%"><strong>Sensibilité à l'insuline</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -1255,7 +1255,6 @@ ob_start();
                     <td><?php echo $collationSensibilite; ?></td>
                 </tr>
             </tbody>
-
         </table>
     </div>
     <div class="dec">
@@ -1321,7 +1320,7 @@ ob_start();
     </div><br/><br/>
 
        <!-- ?php echo '<img src="img/image'.$id.'bar.png" style="width: 700px;" />';? -->
-    
+
     <div class="dec">
         <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
 
