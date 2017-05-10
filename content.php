@@ -778,12 +778,12 @@ ob_start();
             <strong>Modèle :</strong> <?php echo $modele; ?> <br/>
             <strong>Longueur de canule :</strong> <?php echo $longueurcanule; ?> mm              
             <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure; ?> cm
-
+            <br><br>
             <strong>Type de cathéter 2 :</strong> <?php echo $catheter2; ?><br/>
             <strong>Modèle :</strong> <?php echo $modele2; ?> <br/>
             <strong>Longueur de canule :</strong> <?php echo $longueurcanule2; ?> mm              
             <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure2; ?> cm            
-
+            <br><br>
             <strong>Inserteur :</strong> <?php echo $inserteur; ?><br/><br/>
             <strong>Réservoir :</strong> <?php echo $reservoir; ?> <br/>                      
             <strong>Système de portage de la Pompe (qql lignes) : </strong> <?php echo $spp; ?>  <br/>    
@@ -804,10 +804,10 @@ ob_start();
     <table style="margin: 0px 30px 0px 50px;">
         <thead>
             <tr>
-                <th style="width: 20%";><strong>Poids actuel (kg) </strong></th>
-                <th style="width: 20%";><strong>Poids de forme (kg)</strong></th>
-                <th style="width: 20%";><strong>Taille (cm)</strong></th>
-                <th style="width: 20%";><strong>IMC</strong></th>
+                <th style="width: 20%"><strong>Poids actuel (kg) </strong></th>
+                <th style="width: 20%"><strong>Poids de forme (kg)</strong></th>
+                <th style="width: 20%"><strong>Taille (cm)</strong></th>
+                <th style="width: 20%"><strong>IMC</strong></th>
             </tr>
         </thead>
         <tbody>
@@ -837,10 +837,10 @@ ob_start();
         <table class="table " style="margin-left: 110px;">
             <thead>
                 <tr>
-                    <th style="width:100px";></th>
-                    <th style="width:100px";><strong>Insuline lente</strong></th>
-                    <th style="width:100px";><strong>Insuline rapide</strong></th>
-                    <th style="width:100px";><strong>Quantité totale</strong></th>
+                    <th style="width:100px"></th>
+                    <th style="width:100px"><strong>Insuline lente</strong></th>
+                    <th style="width:100px"><strong>Insuline rapide</strong></th>
+                    <th style="width:100px"><strong>Quantité totale</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -913,139 +913,128 @@ ob_start();
         <br/><br/>
     </div>
     <div class="dec">
-        <!-- table class="table" style="margin-right: 20px;">
+         <table class="table" style="margin-right: 20px;">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;"><strong>Shéma basals date 1</strong></td>
                 </tr>
                 <tr>
-                    <td style="width:24%;" colspan=2><strong>Schéma 1</strong></td>
-                    <td style="width:24%;" colspan=2><strong>Schéma 2</strong></td>
-                    <td style="width:24%;" colspan=2><strong>Schéma 3</strong></td>
-                    <td style="width:24%;" colspan=2><strong>Schéma 4</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 1</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 2</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 3</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 4</strong></td>
                 </tr>
                 <tr>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
                 </tr>
                 <tr>
+                    <td>00:00</td>
                     <td><?php echo $Horaire1; ?></td>
                     <td><?php echo $Debit1; ?></td>
+                    <td>00:00</td>
                     <td><?php echo $Horaire2; ?></td>
                     <td><?php echo $Debit2; ?></td>
+                    <td>00:00</td>
                     <td><?php echo $Horaire3; ?></td>
                     <td><?php echo $Debit3; ?></td>
+                    <td>00:00</td>
                     <td><?php echo $Horaire4; ?></td>
                     <td><?php echo $Debit4; ?></td>
                 </tr>
+                
+                
                 <tr>
-                    <td><?php echo $Horaire5; ?></td>
-                    <td><?php echo $Debit5; ?></td>
-                    <td><?php echo $Horaire6; ?></td>
-                    <td><?php echo $Debit6; ?></td>
-                    <td><?php echo $Horaire7; ?></td>
-                    <td><?php echo $Debit7; ?></td>
-                    <td><?php echo $Horaire8; ?></td>
-                    <td><?php echo $Debit8; ?></td>
-                </tr>
-                <tr>
-                    <td><?php echo $Horaire9; ?></td>
-                    <td><?php echo $Debit9; ?></td>
-                    <td><?php echo $Horaire10; ?></td>
-                    <td><?php echo $Debit10; ?></td>
-                    <td><?php echo $Horaire11; ?></td>
-                    <td><?php echo $Debit11; ?></td>
-                    <td><?php echo $Horaire12; ?></td>
-                    <td><?php echo $Debit12; ?></td>
-                </tr>
-                   <tr>
-                    <td><?php echo $Horaire13; ?></td>
-                    <td><?php echo $Debit13; ?></td>
-                    <td><?php echo $Horaire14; ?></td>
-                    <td><?php echo $Debit14; ?></td>
-                    <td><?php echo $Horaire15; ?></td>
-                    <td><?php echo $Debit15; ?></td>
-                    <td><?php echo $Horaire16; ?></td>
-                    <td><?php echo $Debit16; ?></td>
+                    <td><?php echo $Horaire1N; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit1N; ?></td>
+                    <td><?php echo $Horaire2N; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit2N; ?></td>
+                    <td><?php echo $Horaire3N; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit3N; ?></td>
+                    <td><?php echo $Horaire4N; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit4N; ?></td>
                 </tr>
                 
             </tbody>
-        </table --><br/>
+        </table 
+        <br/>
         <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
             <!-- ?php echo '<img src="img/image'.$id.'bardate1.png" style="width: 700px;" />';? -->
         <br/><br/>
     </div>
     <div class="dec">
-        <!-- table class="table">
+         <table class="table">
             <tbody>
                 <tr>
                     <td colspan=8 style="text-align: center;"><strong>Shéma basals date 2</strong></td>
                 </tr>
                 <tr>
-                    <td style="width:24%;" colspan=2><strong>Schéma 1</strong></td>
-                    <td style="width:24%;" colspan=2><strong>Schéma 2</strong></td>
-                    <td style="width:24%;" colspan=2><strong>Schéma 3</strong></td>
-                    <td style="width:24%;" colspan=2><strong>Schéma 4</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 1</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 2</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 3</strong></td>
+                    <td style="width:24%;" colspan=3><strong>Schéma 4</strong></td>
                 </tr>
                 <tr>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
-                    <td>Horaire</td>
+                    <td>De</td>
+                    <td>A</td>
                     <td>Débit</td>
                 </tr>
                   <tr>
-                    <td><?php echo $Horaire21; ?></td>
-                    <td><?php echo $Debit21; ?></td>
-                    <td><?php echo $Horaire22; ?></td>
-                    <td><?php echo $Debit22; ?></td>
-                    <td><?php echo $Horaire23; ?></td>
-                    <td><?php echo $Debit23; ?></td>
-                    <td><?php echo $Horaire24; ?></td>
-                    <td><?php echo $Debit24; ?></td>
+                    <td>00:00</td>
+                    <td><?php echo $Horaire_1; ?></td>
+                    <td><?php echo $Debit_1; ?></td>
+                    <td>00:00</td>
+                    <td><?php echo $Horaire_2; ?></td>
+                    <td><?php echo $Debit_2; ?></td>
+                    <td>00:00</td>
+                    <td><?php echo $Horaire_3; ?></td>
+                    <td><?php echo $Debit_3; ?></td>
+                    <td>00:00</td>
+                    <td><?php echo $Horaire_4; ?></td>
+                    <td><?php echo $Debit_4; ?></td>
                 </tr>
-                  <tr>
-                    <td><?php echo $Horaire25; ?></td>
-                    <td><?php echo $Debit25; ?></td>
-                    <td><?php echo $Horaire26; ?></td>
-                    <td><?php echo $Debit26; ?></td>
-                    <td><?php echo $Horaire27; ?></td>
-                    <td><?php echo $Debit27; ?></td>
-                    <td><?php echo $Horaire28; ?></td>
-                    <td><?php echo $Debit28; ?></td>
-                </tr>
-                  <tr>
-                    <td><?php echo $Horaire29; ?></td>
-                    <td><?php echo $Debit29; ?></td>
-                    <td><?php echo $Horaire210; ?></td>
-                    <td><?php echo $Debit210; ?></td>
-                    <td><?php echo $Horaire211; ?></td>
-                    <td><?php echo $Debit211; ?></td>
-                    <td><?php echo $Horaire212; ?></td>
-                    <td><?php echo $Debit212; ?></td>
-                </tr>
+                
+                
                 <tr>
-                    <td><?php echo $Horaire213; ?></td>
-                    <td><?php echo $Debit213; ?></td>
-                    <td><?php echo $Horaire214; ?></td>
-                    <td><?php echo $Debit214; ?></td>
-                    <td><?php echo $Horaire215; ?></td>
-                    <td><?php echo $Debit215; ?></td>
-                    <td><?php echo $Horaire216; ?></td>
-                    <td><?php echo $Debit216; ?></td>
+                    <td><?php echo $Horaire_N1; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit_N1; ?></td>
+                    <td><?php echo $Horaire_N2; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit_N2; ?></td>
+                    <td><?php echo $Horaire_N3; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit_N3; ?></td>
+                    <td><?php echo $Horaire_N4; ?></td>
+                    <td>23:59</td>
+                    <td><?php echo $Debit_N4; ?></td>
                 </tr>
             </tbody>
         </table
-        --><br/>
+        <br/>
 
   <!-- ?php echo '<img src="img/image'.$id.'bardate2.png" style="width: 700px;" />';? -->
         <br/><br/>
