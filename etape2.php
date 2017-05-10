@@ -334,17 +334,17 @@
                         </tr>
 
                         <tr  id="ligne4">
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire1N" id="Horaire1N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>                            
                             <td><input type="number" class="form-control" name="Debit1N" id="Debit1N"></td>
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire2N" id="Horaire2N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit2N" id="Debit2N"></td>
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire3N" id="Horaire3N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit3N" id="Debit3N"></td>
-                            <td><input type="text" class="form-control" value="00:00" readonly></td>
                             <td><input type="text" class="form-control datetimepicker" name="Horaire4N" id="Horaire4N"></td>
+                            <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit4N" id="Debit4N"></td>
                         </tr>
                     </tbody>
@@ -758,30 +758,22 @@
 <script type="text/javascript">
     var arr_Horaire = [], arr_Debit = [], arr_Horaire2 = [], arr_Debit2 = [];
     var DSLScript;
-
     $("#taille").blur(function () {
 
         var poids = ($('#poidsactuel').val()) ? $('#poidsactuel').val() : 0;
-
         var taille = ($('#taille').val()) ? $('#taille').val() : 0;
-
         var imcPT = (parseInt(poids) / ((parseInt(taille) * 0.01) * (parseInt(taille) * 0.01)));
         imcPT = imcPT.toFixed(1);
         $('#imc').val(imcPT);
     });
-
     $("#poidsactuel").change(function () {
 
         var poids = ($('#poidsactuel').val()) ? $('#poidsactuel').val() : 0;
-
         var taille = ($('#taille').val()) ? $('#taille').val() : 0;
-
         var imcPT = (parseInt(poids) / ((parseInt(taille) * 0.01) * (parseInt(taille) * 0.01)));
         imcPT = imcPT.toFixed(1);
         $('#imc').val(imcPT);
-    });
-
-</script>
+    });</script>
 <script id="chart" type="text/javascript"></script>
 <script id="chart2" type="text/javascript"></script>
 <script language="javascript">
@@ -806,12 +798,9 @@
                 alert("Erreur de chargement de lib/chart_dynamic2.php");
             }
         });
-
-    });
-</script>
+    });</script>
 <script type="text/javascript">
     var i = 0, inc = 4, incD = 4, len = 0, content = "", len2, name;
-
     $('#btnAdd').click(function (e)
     {
         e.preventDefault();
@@ -837,9 +826,7 @@
             $('#ligne4').before(c);
         }
         len = $("#contentBasal1").children().length;
-
         len2 = $("#contentBasal1>tr:eq(" + (len - 2) + ")").children().length;
-
         var new_nameH = [], new_nameD = [];
         for (var j = 0; j < len2; j++) {
             name = $("#contentBasal1>tr:eq(" + (len - 2) + ")>td:eq(" + j + ")").children().attr("name");
@@ -866,10 +853,8 @@
                 alert("Erreur de chargement de lib/chart_dynamic.php");
             }
         });
-
         console.log(arr_Horaire);
         console.log(new_nameH);
-
         $('.datetimepicker1').datetimepicker({
             language: 'fr',
             weekStart: 1,
@@ -882,87 +867,46 @@
             maxView: 1,
             forceParse: 0
         });
-    });
-</script>
+    });</script>
 <script type="text/javascript">
-     var m = 0, inc2= 4, incD2= 4, len_ = 0, content = "", len_2, name_;
-    $('#btnAdd2').click(function (e )
+    var m = 0, inc2 = 4, incD2 = 4, len_ = 0, content = "", len_2, name_;
+    $('#btnAdd2').click(function (e)
     {
         e.preventDefault();
-<<<<<<< HEAD
         m++;
-        var c   =    "<tr>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2 + m ) +"' id='Horaire_"+(inc2+ m )+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2 + m + 1) +"' id='Horaire_"+(inc2+ m + 1)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_"+(incD2+ m)+"' id='Debit_"+(incD2+ m)+"'></td>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc2+ m +2)+"' id='Horaire"+(inc2+ m +2)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +3)+"' id='Horaire_"+(inc2+ m +3)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' name='Debit_"+(incD2+ m + 1)+"' id='Debit_"+(incD2+ m + 1)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +4)+"' id='Horaire_"+(inc2+ m +4)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +5)+"' id='Horaire_"+(inc2+ m +5)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' name='Debit_"+ (incD2+ m + 2) +"' id='Debit_"+ (incD2+ m + 2) +"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +6)+"' id='Horaire_"+(inc2+ m +6)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +7)+"' id='Horaire_"+(inc2+ m +7)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' name='Debit_"+ (incD2+ m + 3) +"' id='Debit_"+ (incD2+ m + 3) +"'></td>";
-            c +=      "</tr>";
-
-        inc2+= 7; incD2+= 3;
+        var c = "<tr>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m) + "' id='Horaire_" + (inc2 + m) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 1) + "' id='Horaire_" + (inc2 + m + 1) + "'></td>";
+        c += "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_" + (incD2 + m) + "' id='Debit_" + (incD2 + m) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire" + (inc2 + m + 2) + "' id='Horaire" + (inc2 + m + 2) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 3) + "' id='Horaire_" + (inc2 + m + 3) + "'></td>";
+        c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 1) + "' id='Debit_" + (incD2 + m + 1) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 4) + "' id='Horaire_" + (inc2 + m + 4) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 5) + "' id='Horaire_" + (inc2 + m + 5) + "'></td>";
+        c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 2) + "' id='Debit_" + (incD2 + m + 2) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 6) + "' id='Horaire_" + (inc2 + m + 6) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 7) + "' id='Horaire_" + (inc2 + m + 7) + "'></td>";
+        c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 3) + "' id='Debit_" + (incD2 + m + 3) + "'></td>";
+        c += "</tr>";
+        inc2 += 7;
+        incD2 += 3;
         if (m < 11)
         {
             $('#ligne24').before(c);
         }
         len_ = $("#contentBasal2").children().length;
-       
-        len_2 = $("#contentBasal2>tr:eq("+(len_ - 2)+")").children().length;
-        
+        len_2 = $("#contentBasal2>tr:eq(" + (len_ - 2) + ")").children().length;
         var new_nameH = [], new_nameD = [];
-        for(var j = 0; j < len_2; j++){
-            name_ = $("#contentBasal2>tr:eq("+(len_ - 2)+")>td:eq("+j+")").children().attr("name");
-            if(/^Horaire/.test(name_)){   
+        for (var j = 0; j < len_2; j++) {
+            name_ = $("#contentBasal2>tr:eq(" + (len_ - 2) + ")>td:eq(" + j + ")").children().attr("name");
+            if (/^Horaire/.test(name_)) {
                 arr_Horaire2.push(name_);
                 new_nameH.push(name_);
             }
-            if(/^Debit/.test(name_)){
-                arr_Debit2.push(name_);    
+            if (/^Debit/.test(name_)) {
+                arr_Debit2.push(name_);
                 new_nameD.push(name_);
-=======
-        i++;
-        var c = "<tr>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i) + "' id='Horaire_" + (inc + i) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 1) + "' id='Horaire_" + (inc + i + 1) + "'></td>";
-        c += "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_" + (incD + i) + "' id='Debit_" + (incD + i) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 2) + "' id='Horaire" + (inc + i + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 3) + "' id='Horaire_" + (inc + i + 3) + "'></td>";
-        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 1) + "' id='Debit_" + (incD + i + 1) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 4) + "' id='Horaire_" + (inc + i + 4) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 5) + "' id='Horaire_" + (inc + i + 5) + "'></td>";
-        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 2) + "' id='Debit_" + (incD + i + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 6) + "' id='Horaire_" + (inc + i + 6) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc + i + 7) + "' id='Horaire_" + (inc + i + 7) + "'></td>";
-        c += "<td><input type='number' class='form-control' name='Debit_" + (incD + i + 3) + "' id='Debit_" + (incD + i + 3) + "'></td>";
-        c += "</tr>";
 
-        inc += 7;
-        incD += 3;
-        if (i < 10)
-        {
-            $('#ligne24').before(c);
-        }
-        len = $("#contentBasal2").children().length;
-
-        len2 = $("#contentBasal2>tr:eq(" + (len - 2) + ")").children().length;
-
-        var new_nameH = [], new_nameD = [];
-        for (var j = 0; j < len2; j++) {
-            name = $("#contentBasal2>tr:eq(" + (len - 2) + ")>td:eq(" + j + ")").children().attr("name");
-            if (/^Horaire/.test(name)) {
-                arr_Horaire2.push(name);
-                new_nameH.push(name);
-            }
-            if (/^Debit/.test(name)) {
-                arr_Debit2.push(name);
-                new_nameD.push(name);
->>>>>>> ca275450254444508f7b570ceda7759bc856bfc4
             }
         }
 
@@ -981,10 +925,8 @@
                 alert("Erreur de chargement de lib/chart_dynamic2.php");
             }
         });
-
         console.log(arr_Horaire2);
         console.log(new_nameH);
-        
         $('.datetimepicker1').datetimepicker({
             language: 'fr',
             weekStart: 1,
