@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+$statut = $_SESSION['statut'];
+$statut = utf8_encode($statut);
+
 /**
  * HTML2PDF Library - example
  *
@@ -708,7 +713,7 @@ ob_start();
     <div><img style="position: relative; margin-left: 600px; width: 120px;" src="img/basitide.png"></div>
     <div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de Pompe à insuline</h3></div><br/><br/><br/></div>
     <div class="dec">
-        <h4><u>RENSEIGNEMENTS BASTIDE LE CONFORT MEDICAL</u></h4>
+        <h4><u>UTILISATEUR BASTIDE MEDICAL</u></h4>
         <p>
             <strong>Nom IDE Responsable :</strong> <?php echo $nomresp; ?>  <br/>   
             <strong>Prénom : </strong> <?php echo $prenomresp; ?>  <br/>
@@ -725,18 +730,38 @@ ob_start();
         <strong>Adresse :</strong><?php echo $adressepatient; ?><br/>
         <strong>Code postal :</strong><?php echo $codepostalpatient; ?><br/>    
         <strong>Ville :</strong><?php echo $villepatient; ?><br/>
+
         <h4><u>RENSEIGNEMENTS PRESCRIPTEUR</u></h4>
 
         <strong>Etablissement prescripteur:</strong> <?php echo $etablissementprescripteur; ?> <br/>
         <strong>Service :</strong> <?php echo $serviceep; ?> <br/><br/> 
 
-        <strong>Mail :</strong> <?php echo $maildl; ?> <br/><br/>
+        <?php if ($statut == "Médecin traitant") { ?>            
+            <h4><u> Médecin traitant : <?php $medecintraitant; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $telmt; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobilemt; ?><br/>      
+            <strong>Ville :</strong><?php echo $villemt; ?><br/>
+            <strong>Mail :</strong><?php echo $mailmt; ?><br/><br/>    
+        <?php } elseif ($statut == "Diabétologue libéral") { ?>
+            <h4><u> Diabétologue prescripteur : <?php $diabetologueliberal; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $teldl; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobiledl; ?><br/>      
+            <strong>Ville :</strong><?php echo $villedl; ?><br/>
+            <strong>Mail :</strong><?php echo $maildl; ?><br/><br/>  
+        <?php } elseif ($statut == "Diabétologue prescripteur") { ?>
+            <h4><u> Diabétologue prescripteur : <?php $diabetologueprescripteur; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $teldp; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobiledp; ?><br/>      
+            <strong>Ville :</strong><?php echo $villedp; ?><br/>
+            <strong>Mail :</strong><?php echo $maildp; ?><br/><br/>  
+        <?php } elseif ($statut == "Diététicienne") { ?>
+            <h4><u> Diabétologue prescripteur : <?php $dieteticienne; ?></u></h4>
+            <strong>Tel :</strong>  <?php echo $teld; ?><br/>   
+            <strong>Mobile :</strong>  <?php echo $mobiled; ?><br/>      
+            <strong>Ville :</strong><?php echo $villed; ?><br/>
+            <strong>Mail :</strong><?php echo $maild; ?><br/><br/>  
+        <?php } ?>
 
-        <h4><u> Médecin traitant :</u></h4>
-        <strong>Tel :</strong>  <?php echo $telmt; ?><br/>   
-        <strong>Mobile :</strong>  <?php echo $mobilemt; ?><br/>      
-        <strong>Ville :</strong><?php echo $villemt; ?><br/>
-        <strong>Mail :</strong><?php echo $mailmt; ?><br/><br/>
 
         <strong>Membre réseau :</strong> <?php echo $membrereseau; ?> <br/> 
         </p>
@@ -747,18 +772,18 @@ ob_start();
         <p>   
             <strong>Pompe :</strong> <?php echo $Pompe; ?> <br/>
             <strong>Date d’installation :</strong> <?php echo $dateinstallation; ?> <br/>
-            
-            
+
+
             <strong>Type de cathéter 1 :</strong> <?php echo $catheter; ?><br/>
             <strong>Modèle :</strong> <?php echo $modele; ?> <br/>
             <strong>Longueur de canule :</strong> <?php echo $longueurcanule; ?> mm              
             <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure; ?> cm
-            
+
             <strong>Type de cathéter 2 :</strong> <?php echo $catheter2; ?><br/>
             <strong>Modèle :</strong> <?php echo $modele2; ?> <br/>
             <strong>Longueur de canule :</strong> <?php echo $longueurcanule2; ?> mm              
             <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure2; ?> cm            
-            
+
             <strong>Inserteur :</strong> <?php echo $inserteur; ?><br/><br/>
             <strong>Réservoir :</strong> <?php echo $reservoir; ?> <br/>                      
             <strong>Système de portage de la Pompe (qql lignes) : </strong> <?php echo $spp; ?>  <br/>    
@@ -823,29 +848,37 @@ ob_start();
                     <td>Matin</td>
                     <td><?php echo $insulinelentematin; ?></td>
                     <td><?php echo $insulinerapidematin; ?></td>
-                    <td><?php $total_1 = $insulinelentematin + $insulinerapidematin;
-echo $total_1; ?></td>
+                    <td><?php
+                        $total_1 = $insulinelentematin + $insulinerapidematin;
+                        echo $total_1;
+                        ?></td>
                 </tr>
                 <tr>
                     <td>Midi</td>
                     <td><?php echo $insulinelentemidi; ?></td>
                     <td><?php echo $insulinerapidemidi; ?></td>
-                    <td><?php $total_2 = $insulinelentemidi + $insulinerapidemidi;
-echo $total_2; ?></td>
+                    <td><?php
+                        $total_2 = $insulinelentemidi + $insulinerapidemidi;
+                        echo $total_2;
+                        ?></td>
                 </tr>
                 <tr>
                     <td>Soir</td>
                     <td><?php echo $insulinelentesoir; ?></td>
                     <td><?php echo $insulinerapidesoir; ?></td>
-                    <td><?php $total_3 = $insulinelentesoir + $insulinerapidesoir;
-echo $total_1; ?></td>
+                    <td><?php
+                        $total_3 = $insulinelentesoir + $insulinerapidesoir;
+                        echo $total_1;
+                        ?></td>
                 </tr>
                 <tr>
                     <td>TOTAL</td>
                     <td><?php echo $totalinsulinelente; ?></td>
                     <td><?php echo $totalinsulinerapide; ?></td>
-                    <td><?php $total = $total_1 + $total_2 + $total_3;
-echo $total; ?></td>
+                    <td><?php
+                        $total = $total_1 + $total_2 + $total_3;
+                        echo $total;
+                        ?></td>
                 </tr>
             </tbody>
         </table><br/>
@@ -1272,7 +1305,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate3; ?></td>
                     <td><?php echo $pmpdate4; ?></td>
                     <td>
-<?php echo $pmpcommentaire1; ?>
+                        <?php echo $pmpcommentaire1; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1282,7 +1315,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate7; ?></td>
                     <td><?php echo $pmpdate8; ?></td>
                     <td>
-<?php echo $pmpcommentaire2; ?>
+                        <?php echo $pmpcommentaire2; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1292,7 +1325,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate11; ?></td>
                     <td><?php echo $pmpdate12; ?></td>
                     <td>
-<?php echo $pmpcommentaire3; ?>
+                        <?php echo $pmpcommentaire3; ?>
                     </td>
                 </tr> 
                 <tr>
@@ -1302,7 +1335,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate15; ?></td>
                     <td><?php echo $pmpdate16; ?></td>
                     <td>
-<?php echo $pmpcommentaire4; ?>
+                        <?php echo $pmpcommentaire4; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1312,7 +1345,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate19; ?></td>
                     <td><?php echo $pmpdate20; ?></td>
                     <td>
-<?php echo $pmpcommentaire5; ?>
+                        <?php echo $pmpcommentaire5; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1322,7 +1355,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate23; ?></td>
                     <td><?php echo $pmpdate24; ?></td>
                     <td>
-<?php echo $pmpcommentaire6; ?>
+                        <?php echo $pmpcommentaire6; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1332,7 +1365,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate27; ?></td>
                     <td><?php echo $pmpdate28; ?></td>
                     <td>
-<?php echo $pmpcommentaire7; ?>
+                        <?php echo $pmpcommentaire7; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1342,7 +1375,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate292; ?></td>
                     <td><?php echo $pmpdate293; ?></td>
                     <td>
-<?php echo $pmpcommentaire8; ?>
+                        <?php echo $pmpcommentaire8; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1352,7 +1385,7 @@ echo $total; ?></td>
                     <td><?php echo $pmpdate296; ?></td>
                     <td><?php echo $pmpdate297; ?></td>
                     <td>
-<?php echo $pmpcommentaire9; ?>
+                        <?php echo $pmpcommentaire9; ?>
                     </td>
                 </tr>
             </tbody>
@@ -1383,7 +1416,7 @@ echo $total; ?></td>
                     <td><?php echo $alarmedate3; ?></td>
                     <td><?php echo $alarmedate4; ?></td>
                     <td>
-<?php echo $alarmecommentaire1; ?>
+                        <?php echo $alarmecommentaire1; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1393,7 +1426,7 @@ echo $total; ?></td>
                     <td><?php echo $alarmedate7; ?></td>
                     <td><?php echo $alarmedate8; ?></td>
                     <td>
-<?php echo $alarmecommentaire2; ?>
+                        <?php echo $alarmecommentaire2; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1403,7 +1436,7 @@ echo $total; ?></td>
                     <td><?php echo $alarmedate11; ?></td>
                     <td><?php echo $alarmedate12; ?></td>
                     <td>
-<?php echo $alarmecommentaire3; ?>
+                        <?php echo $alarmecommentaire3; ?>
                     </td>
                 </tr> 
                 <tr>
@@ -1413,7 +1446,7 @@ echo $total; ?></td>
                     <td><?php echo $alarmedate15; ?></td>
                     <td><?php echo $alarmedate16; ?></td>
                     <td>
-<?php echo $alarmecommentaire4; ?>
+                        <?php echo $alarmecommentaire4; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1423,7 +1456,7 @@ echo $total; ?></td>
                     <td><?php echo $alarmedate19; ?></td>
                     <td><?php echo $alarmedate20; ?></td>
                     <td>
-<?php echo $alarmecommentaire5; ?>
+                        <?php echo $alarmecommentaire5; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1433,7 +1466,7 @@ echo $total; ?></td>
                     <td><?php echo $alarmedate23; ?></td>
                     <td><?php echo $alarmedate24; ?></td>
                     <td>
-<?php echo $alarmecommentaire6; ?>
+                        <?php echo $alarmecommentaire6; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1443,7 +1476,7 @@ echo $total; ?></td>
                     <td><?php echo $alarmedate27; ?></td>
                     <td><?php echo $alarmedate28; ?></td>
                     <td>
-<?php echo $alarmecommentaire7; ?>
+                        <?php echo $alarmecommentaire7; ?>
                     </td>
                 </tr>
             </tbody>
@@ -1473,7 +1506,7 @@ echo $total; ?></td>
                     <td><?php echo $manipdate3; ?></td>
                     <td><?php echo $manipdate4; ?></td>
                     <td>
-<?php echo $manipcommentaire1; ?>
+                        <?php echo $manipcommentaire1; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1483,7 +1516,7 @@ echo $total; ?></td>
                     <td><?php echo $manipdate7; ?></td>
                     <td><?php echo $manipdate8; ?></td>
                     <td>
-<?php echo $manipcommentaire2; ?>
+                        <?php echo $manipcommentaire2; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1493,7 +1526,7 @@ echo $total; ?></td>
                     <td><?php echo $manipdate11; ?></td>
                     <td><?php echo $manipdate12; ?></td>
                     <td>
-<?php echo $manipcommentaire3; ?>
+                        <?php echo $manipcommentaire3; ?>
                     </td>
                 </tr> 
                 <tr>
@@ -1503,7 +1536,7 @@ echo $total; ?></td>
                     <td><?php echo $manipdate15; ?></td>
                     <td><?php echo $manipdate16; ?></td>
                     <td>
-<?php echo $manipcommentaire4; ?>
+                        <?php echo $manipcommentaire4; ?>
                     </td>
                 </tr>
                 <tr>
@@ -1513,7 +1546,7 @@ echo $total; ?></td>
                     <td><?php echo $manipdate19; ?></td>
                     <td><?php echo $manipdate20; ?></td>
                     <td>
-<?php echo $manipcommentaire5; ?>
+                        <?php echo $manipcommentaire5; ?>
                     </td>
                 </tr>
             </tbody>
