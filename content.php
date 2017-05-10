@@ -695,8 +695,43 @@ $connaissance5 = (isset($_POST["connaissance5"])) ? $_POST["connaissance5"] : ""
 $id = (isset($_POST["id"])) ? $_POST["id"] : "";
 
 
+/* MODIFS STIAN DECLARATIONS DE VARIABLES */
+
+	$petitdejeunerDe = (isset($_POST["petitdejeunerDe"])) ? $_POST["petitdejeunerDe"] : "";
+	$petitdejeunerA = (isset($_POST["petitdejeunerA"])) ? $_POST["petitdejeunerA"] : "";
+	$petitdejeunerRotation = (isset($_POST["petitdejeunerRotation"])) ? $_POST["petitdejeunerRotation"] : "";
+	$petitdejeunerObjectif = (isset($_POST["petitdejeunerObjectif"])) ? $_POST["petitdejeunerObjectif"] : "";
+	$petitdejeunerSensibilite = (isset($_POST["petitdejeunerSensibilite"])) ? $_POST["petitdejeunerSensibilite"] : "";
+
+	$dejeunerDe = (isset($_POST["dejeunerDe"])) ? $_POST["dejeunerDe"] : "";
+	$dejeunerA = (isset($_POST["dejeunerA"])) ? $_POST["dejeunerA"] : "";
+	$dejeunerRotation = (isset($_POST["dejeunerRotation"])) ? $_POST["dejeunerRotation"] : "";
+	$dejeunerObjectif = (isset($_POST["dejeunerObjectif"])) ? $_POST["dejeunerObjectif"] : "";
+	$dejeunerSensibilite = (isset($_POST["dejeunerSensibilite"])) ? $_POST["dejeunerSensibilite"] : "";
+
+	$gouterDe = (isset($_POST["gouterDe"])) ? $_POST["gouterDe"] : "";
+	$gouterA = (isset($_POST["gouterA"])) ? $_POST["gouterA"] : "";
+	$gouterRotation = (isset($_POST["gouterRotation"])) ? $_POST["gouterRotation"] : "";
+	$gouterObjectif = (isset($_POST["gouterObjectif"])) ? $_POST["gouterObjectif"] : "";
+	$gouterSensibilite = (isset($_POST["gouterSensibilite"])) ? $_POST["gouterSensibilite"] : "";
+
+	$gouterDe = (isset($_POST["dinerDe"])) ? $_POST["dinerDe"] : "";
+	$gouterA = (isset($_POST["dinerA"])) ? $_POST["dinerA"] : "";
+	$gouterRotation = (isset($_POST["dinerRotation"])) ? $_POST["dinerRotation"] : "";
+	$gouterObjectif = (isset($_POST["dinerObjectif"])) ? $_POST["dinerObjectif"] : "";
+	$gouterSensibilite = (isset($_POST["dinerSensibilite"])) ? $_POST["dinerSensibilite"] : "";
+
+	$gouterDe = (isset($_POST["collationDe"])) ? $_POST["collationDe"] : "";
+	$gouterA = (isset($_POST["collationA"])) ? $_POST["collationA"] : "";
+	$gouterRotation = (isset($_POST["collationRotation"])) ? $_POST["collationRotation"] : "";
+	$gouterObjectif = (isset($_POST["collationObjectif"])) ? $_POST["collationObjectif"] : "";
+	$gouterSensibilite = (isset($_POST["collationSensibilite"])) ? $_POST["collationSensibilite"] : "";
+
+
+/* MODIFS STIAN DECLARATIONS DE VARIABLES */
+
     ob_start();
-    ?>
+?>
 
     <div id='content' >
          <div><img style="position: relative; margin-left: 600px; width: 120px;" src="img/basitide.png"></div>
@@ -1129,46 +1164,58 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
             <table class="table " style="margin-left: 9px;">
                 <thead>
                     <tr>
-                        <th style="width:19%"></th>
-                        <th style="width:19%"><strong>Horaires</strong></th>
-                        <th style="width:19%"><strong>Ration Insuline/glucide</strong></th>
-                        <th style="width:19%"><strong>Objectif glicémique</strong></th>
-                        <th style="width:19%"><strong>Sensibilité à l'insuline</strong></th>
+                        <th style="width:100px"></th>
+                        <th style="width:100px"><strong>Horaires</strong></th>
+                        <th style="width:100px"><strong>Ration Insuline/glucide</strong></th>
+                        <th style="width:100px"><strong>Objectif glicémique</strong></th>
+                        <th style="width:100px"><strong>Sensibilité à l'insuline</strong></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Matin</td>
-                        <td><?php echo $horairematin ; ?></td>
-                        <td><?php echo $rotationmatin ; ?></td>
-                        <td><?php echo $objectifmatin ; ?></td>
-                        <td><?php echo $sensibilitematin ; ?></td>
+                        <td>Petit déjeuner</td>
+                        <td><?php echo $petitdejeunerDe ; ?></td>
+                        <td><?php echo $petitdejeunerA ; ?></td>
+                        <td><?php echo $petitdejeunerRotation ; ?></td>
+                        <td><?php echo $petitdejeunerObjectif ; ?></td>
+                        <td><?php echo $petitdejeunerSensibilite ; ?></td>
                     </tr>
                     <tr>
-                        <td>Midi</td>
-                        <td><?php echo $horairemidi ; ?></td>
-                        <td><?php echo $rotationmidi ; ?></td>
-                        <td><?php echo $objectifmidi ; ?></td>
-                        <td><?php echo $sensibilitemidi ; ?></td>
+                        <td>Déjeuner</td>
+                        <td><?php echo $dejeunerDe ; ?></td>
+                        <td><?php echo $dejeunerA ; ?></td>
+                        <td><?php echo $dejeunerRotation ; ?></td>
+                        <td><?php echo $dejeunerObjectif ; ?></td>
+                        <td><?php echo $dejeunerSensibilite ; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Goûter</td>
+                        <td><?php echo $gouterDe ; ?></td>
+                        <td><?php echo $gouterA ; ?></td>
+                        <td><?php echo $gouterRotation ; ?></td>
+                        <td><?php echo $gouterObjectif ; ?></td>
+                        <td><?php echo $gouterSensibilite ; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Diner</td>
+                        <td><?php echo $dinerDe ; ?></td>
+                        <td><?php echo $dinerA ; ?></td>
+                        <td><?php echo $dinerRotation ; ?></td>
+                        <td><?php echo $dinerObjectif ; ?></td>
+                        <td><?php echo $dinerSensibilite ; ?></td>
                     </tr>
                     <tr>
                         <td>Collation</td>
-                        <td><?php echo $horairecollation ; ?></td>
-                        <td><?php echo $rotationcollation ; ?></td>
-                        <td><?php echo $objectifcollation ; ?></td>
-                        <td><?php echo $sensibilitecollation ; ?></td>
+                        <td><?php echo $collationDe ; ?></td>
+                        <td><?php echo $collationA ; ?></td>
+                        <td><?php echo $collationRotation ; ?></td>
+                        <td><?php echo $collationObjectif ; ?></td>
+                        <td><?php echo $collationSensibilite ; ?></td>
                     </tr>
-                    <tr>
-                        <td>Soir</td>
-                        <td><?php echo $horairesoir ; ?></td>
-                        <td><?php echo $rotationsoir ; ?></td>
-                        <td><?php echo $objectifsoir ; ?></td>
-                        <td><?php echo $sensibilitesoir ; ?></td>
-                    </tr>
-
                 </tbody>
             </table>
         </div>
+
         <div class="dec">
             <h4><u>HABITUDES ALIMENTAIRES</u></h4>
             <strong>SUIVI DE POIDS : </strong> <?php echo $regime ; ?> <br>
@@ -1785,7 +1832,7 @@ $id = (isset($_POST["id"])) ? $_POST["id"] : "";
  
     try
     {
-        $html2pdf = new HTML2PDF('P', 'A4', 'fr');
+        $html2pdf = new HTML2PDF('A', 'A4', 'fr');
         $html2pdf->setDefaultFont('Arial');
         $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
         $html2pdf->Output('pdf/content.pdf');
