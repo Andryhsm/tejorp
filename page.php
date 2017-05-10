@@ -685,30 +685,24 @@
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
                             datasets: [
                                 {
-                                    fillColor: "rgba(220,220,220,0.5)",
-                                    strokeColor: "rgba(220,220,220,0.8)",
-                                    pointColor: "rgba(22,20,220,0.75)",
-                                    pointStrokeColor: "rgba(220,220,220,1)",
-                                    pointHighlightFill: "rgba(220,220,220,0.75)",
-                                    pointHighlightStroke: "rgba(220,220,220,1)",
+                                    fillColor: "rgba(255, 130, 130,0.5)",
+                                    strokeColor: "rgba(255, 130, 130,0.8)",
+                                    highlightFill: "rgba(255, 130, 130,0.75)",
+                                    highlightStroke: "rgba(255, 130, 130,1)",
                                     data: [taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9]
                                 },
                                 {
-                                    fillColor: "rgba(151,187,205,0.5)",
-                                    strokeColor: "rgba(151,187,205,0.8)",
-                                    pointColor: "rgba(151,187,205,0.75)",
-                                    pointStrokeColor: "rgba(151,187,205,1)",
-                                    pointHighlightFill: "rgba(151,187,205,0.75)",
-                                    pointHighlightStroke: "rgba(151,187,205,1)",
+                                    fillColor: "rgba(255, 72, 72,0.5)",
+                                    strokeColor: "rgba(255, 72, 72, 0.8)",
+                                    highlightFill: "rgba(255, 72, 72,0.75)",
+                                    highlightStroke: "rgba(255, 72, 72, 1)",
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
-                                    fillColor: "rgba(11,187,25,0.5)",
-                                    strokeColor: "rgba(11,187,25,0.8)",
-                                    pointColor: "rgba(11,187,25,0.75)",
-                                    pointStrokeColor: "rgba(11,187,25,1)",
-                                    pointHighlightFill: "rgba(11,187,25,0.75)",
-                                    pointHighlightStroke: "rgba(11,187,25,1)",
+                                    fillColor: "rgba(255, 0, 0,0.5)",
+                                    strokeColor: "rgba(255, 0, 0,0.8)",
+                                    highlightFill: "rgba(255, 0, 0,0.75)",
+                                    highlightStroke: "rgba(255, 0, 0,1)",
                                     data: [imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9]
                                 }
                             ]
@@ -724,30 +718,24 @@
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
                             datasets: [
                                 {
-                                    fillColor: "rgba(220,220,220,0.5)",
-                                    strokeColor: "rgba(220,220,220,0.8)",
-                                    pointColor: "rgba(220,220,220,0.75)",
-                                    pointStrokeColor: "rgba(220,220,220,1)",
-                                    pointHighlightFill: "rgba(220,220,220,0.75)",
-                                    pointHighlightStroke: "rgba(220,220,220,1)",
+                                    fillColor: "rgba(255, 130, 130,0.5)",
+                                    strokeColor: "rgba(255, 130, 130,0.8)",
+                                    highlightFill: "rgba(255, 130, 130,0.75)",
+                                    highlightStroke: "rgba(255, 130, 130,1)",
                                     data: [taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9]
                                 },
                                 {
-                                    fillColor: "rgba(0,0,0,0.5)",
-                                    strokeColor: "rgba(0,0,0,0.8)",
-                                    pointColor: "rgba(0,0,0,0.75)",
-                                    pointStrokeColor: "rgba(0,0,0,1)",
-                                    pointHighlightFill: "rgba(0,0,0,0.75)",
-                                    pointHighlightStroke: "rgba(0,0,0,1)",
+                                    fillColor: "rgba(255, 72, 72,0.5)",
+                                    strokeColor: "rgba(255, 72, 72, 0.8)",
+                                    highlightFill: "rgba(255, 72, 72,0.75)",
+                                    highlightStroke: "rgba(255, 72, 72, 1)",
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
-                                    fillColor: "rgba(11,187,25,0.5)",
-                                    strokeColor: "rgba(11,187,25,0.8)",
-                                    pointColor: "rgba(11,187,25,0.75)",
-                                    pointStrokeColor: "rgba(11,187,25,1)",
-                                    pointHighlightFill: "rgba(11,187,25,0.75)",
-                                    pointHighlightStroke: "rgba(11,187,25,1)",
+                                    fillColor: "rgba(255, 0, 0,0.5)",
+                                    strokeColor: "rgba(255, 0, 0,0.8)",
+                                    highlightFill: "rgba(255, 0, 0,0.75)",
+                                    highlightStroke: "rgba(255, 0, 0,1)",
                                     data: [imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9]
                                 }
                             ]

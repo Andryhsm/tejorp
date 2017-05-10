@@ -23,13 +23,13 @@
           			var barData1 = {
                            labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
                             datasets: [{
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.5)\",
+                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
                                     strokeColor: \"rgba(220,220,220,0.8)\",
                                     highlightFill: \"rgba(220,220,220,0.75)\",
                                     highlightStroke: \"rgba(220,220,220,1)\",
                                     data: [Debit_1, Debit_2, Debit_3, Debit_4]
                                 }, {
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.5)\",
+                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
                                     strokeColor: \"rgba(151,187,205,0.8)\",
                                     highlightFill: \"rgba(151,187,205,0.75)\",
                                     highlightStroke: \"rgba(151,187,205,1)\",
@@ -45,17 +45,17 @@
   			
             $datasets = array();
 
-            $tracer_graphe2 = "function Debit_graphe2() {
+            $tracer_graphe1 = "function Debit_graphe2() {
                         var barData1 = {
                             labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
                             datasets: [{
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.5)\",
+                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
                                     strokeColor: \"rgba(220,220,220,0.8)\",
                                     highlightFill: \"rgba(220,220,220,0.75)\",
                                     highlightStroke: \"rgba(220,220,220,1)\",
                                     data: [Debit_1, Debit_2, Debit_3, Debit_4]
                                 }, {
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.5)\",
+                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
                                     strokeColor: \"rgba(151,187,205,0.8)\",
                                     highlightFill: \"rgba(151,187,205,0.75)\",
                                     highlightStroke: \"rgba(151,187,205,1)\",
@@ -70,12 +70,12 @@
                }";
 
 
-               function tracer_graphe2($datasets){
+               function tracer_graphe1($datasets){
 	               	echo "function Debit_graphe2() {
 								var barData1 = {
 								labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
 								datasets: [{
-										fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.5)\",
+										fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
 										strokeColor: \"rgba(220,220,220,0.8)\",
 										highlightFill: \"rgba(220,220,220,0.75)\",
 										highlightStroke: \"rgba(220,220,220,1)\",
@@ -84,13 +84,13 @@
 	  							foreach ($datasets as $key => $value) {
 	  											echo $value;
 	  							}
-	  				echo	"  {
-                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.5)\",
-                    strokeColor: \"rgba(151,187,205,0.8)\",
-                    highlightFill: \"rgba(151,187,205,0.75)\",
-                    highlightStroke: \"rgba(151,187,205,1)\",
-                    data: [Debit_N1, Debit_N2, Debit_N3, Debit_N4]
-                  }]
+	  				echo			"{
+										fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
+										strokeColor: \"rgba(151,187,205,0.8)\",
+										highlightFill: \"rgba(151,187,205,0.75)\",
+										highlightStroke: \"rgba(151,187,205,1)\",
+										data: [Debit_N1, Debit_N2, Debit_N3, Debit_N4]
+									}]
 								}
 								var barOptions = {
 									responsive: true
@@ -127,7 +127,7 @@
 
   									while($key == $inc){
   										$datasets[] = "{
-			                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.5)\",
+			                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
 			                                    strokeColor: \"rgba(220,220,220,0.8)\",
                                     			highlightFill: \"rgba(220,220,220,0.75)\",
                                     			highlightStroke: \"rgba(220,220,220,1)\",
@@ -152,28 +152,27 @@
   								foreach ($dataD as $key => $value) {
   									echo 	"$(\"#".$value."\").change(function(){
 					              				".$value." = $(\"#".$value."\").val();
+                                alert('Je suis changer !');
 					              				Debit_graphe2();
 					              			});";
 								}
 
-								tracer_graphe2($datasets);
-
-
+								tracer_graphe1($datasets);
   							}else{
   								for($i = 0; $i < 5 ; $i++){
 	                        		echo	"$(\"#Debit_".$i."\").change(function (event) {";
 			                        echo    	"Debit_".$i." = $('#Debit_".$i."').val();";
 			                        echo    	"Debit_graphe2();";
 			                        echo 	"});";
-  								}
-  	                        	for($i = 0; $i < 5 ; $i++){
-  	                        		echo	"$(\"#Debit_N".$i."\").change(function (event) {";
-  			                        echo    	"Debit_N".$i." = $('#Debit_N".$i."').val();";
-  			                        echo    	"Debit_graphe2();"	;
-  			                        echo 	"});";
-  								}
-    								echo $initialiser;
-    								echo $tracer_graphe2;
+								}
+	                        	for($i = 0; $i < 5 ; $i++){
+	                        		echo	"$(\"#Debit_N".$i."\").change(function (event) {";
+			                        echo    	"Debit_N".$i." = $('#Debit_N".$i."').val();";
+			                        echo    	"Debit_graphe2();"	;
+			                        echo 	"});";
+								}	
+  								echo $initialiser;
+  								echo $tracer_graphe1;
   							}
   						
 

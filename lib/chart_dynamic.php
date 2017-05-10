@@ -23,14 +23,14 @@
           			var barData1 = {
                            labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
                             datasets: [{
-                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
-                                    strokeColor: \"rgba(220,220,220,0.8)\",
+                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
+                                    strokeColor: \"rgba(220,220,220,0.9)\",
                                     highlightFill: \"rgba(220,220,220,0.75)\",
                                     highlightStroke: \"rgba(220,220,220,1)\",
                                     data: [Debit1, Debit2, Debit3, Debit4]
                                 }, {
-                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
-                                    strokeColor: \"rgba(151,187,205,0.8)\",
+                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
+                                    strokeColor: \"rgba(151,187,205,0.9)\",
                                     highlightFill: \"rgba(151,187,205,0.75)\",
                                     highlightStroke: \"rgba(151,187,205,1)\",
                                      data: [Debit1N, Debit2N, Debit3N, Debit4N]
@@ -49,14 +49,14 @@
                         var barData1 = {
                             labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
                             datasets: [{
-                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
-                                    strokeColor: \"rgba(220,220,220,0.8)\",
+                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
+                                    strokeColor: \"rgba(220,220,220,0.9)\",
                                     highlightFill: \"rgba(220,220,220,0.75)\",
                                     highlightStroke: \"rgba(220,220,220,1)\",
                                     data: [Debit1, Debit2, Debit3, Debit4]
                                 }, {
-                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
-                                    strokeColor: \"rgba(151,187,205,0.8)\",
+                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
+                                    strokeColor: \"rgba(151,187,205,0.9)\",
                                     highlightFill: \"rgba(151,187,205,0.75)\",
                                     highlightStroke: \"rgba(151,187,205,1)\",
                                     data: [Debit1N, Debit2N, Debit3N, Debit4N]
@@ -75,8 +75,8 @@
 								var barData1 = {
 								labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
 								datasets: [{
-										fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
-										strokeColor: \"rgba(220,220,220,0.8)\",
+										fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
+										strokeColor: \"rgba(220,220,220,0.9)\",
 										highlightFill: \"rgba(220,220,220,0.75)\",
 										highlightStroke: \"rgba(220,220,220,1)\",
 										data: [Debit1, Debit2, Debit3, Debit4]
@@ -85,8 +85,8 @@
 	  											echo $value;
 	  							}
 	  				echo			"{
-										fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
-										strokeColor: \"rgba(151,187,205,0.8)\",
+										fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
+										strokeColor: \"rgba(151,187,205,0.9)\",
 										highlightFill: \"rgba(151,187,205,0.75)\",
 										highlightStroke: \"rgba(151,187,205,1)\",
 										data: [Debit1N, Debit2N, Debit3N, Debit4N]
@@ -127,8 +127,8 @@
 
   									while($key == $inc){
   										$datasets[] = "{
-			                                    fillColor: \"rgba(".rand(20, 225).", ".rand(20, 225).", ".rand(20, 225).",0.5)\",
-			                                    strokeColor: \"rgba(220,220,220,0.8)\",
+			                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
+			                                    strokeColor: \"rgba(220,220,220,0.9)\",
                                     			highlightFill: \"rgba(220,220,220,0.75)\",
                                     			highlightStroke: \"rgba(220,220,220,1)\",
 			                                    data: [".$dataD[$key].", ".$dataD[$key + 1].", ".$dataD[$key + 2].", ". $dataD[$key + 3] ."]

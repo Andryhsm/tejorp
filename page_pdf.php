@@ -1,18 +1,32 @@
-<style type="text/css">
-.field2
-{
-    min-height: 20px;
-    padding: 19px;
-    margin-bottom: 20px;
-    background-color: rgba(133,32,28,.4);
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
-    box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
-}
+
+
+<?php
+/**
+ * HTML2PDF Library - example
+ *
+ * HTML => PDF convertor
+ * distributed under the LGPL License
+ *
+ * @package   Html2pdf
+ * @author    Laurent MINGUET <webmaster@html2pdf.fr>
+ * @copyright 2016 Laurent MINGUET
+ *
+ * isset($_GET['vuehtml']) is not mandatory
+ * it allow to display the result in the HTML format
+ */
+
+    // get the HTML
+    ob_start();
+    ?>
+
+
+
+
+<style>
+
 </style>
 
-    <section class="container-fluid">
-    <div>
+      <div>
         <div class="field2">
             <h4 style="text-align: center;">DONNEES MEDICALES</h4></br>
             <fieldset>
@@ -211,7 +225,7 @@
                     </div>
                 </div>
             </div>
-            </fieldset>	</br>
+            </fieldset>	<br>
 
             <fieldset>
                 <table class="table table-bordered" style="color: white;">
@@ -737,201 +751,30 @@
 
                         </div>
                     </div>
-                    <!-- chart -->
                 </div>
 
             </fieldset>
 
         </div>
 
-        <!-- 
-            <div class="form-group hidden">
-                <div class="col-lg-10 col-lg-offset-2">
-                    <button type="submit" class="btn btn-success" id="etape2">Envoyer</button>
-                </div>
-            </div> 
-        -->
+  </div>
+  <?php
+    $content = ob_get_clean();
 
-    </div>
-</section>
-
-<script type="text/javascript">
-    var arr_Horaire = [], arr_Debit = [], arr_Horaire2 = [], arr_Debit2 = [];
-    var DSLScript ;
-    
-    $("#taille").blur(function () {
-
-        var poids = ($('#poidsactuel').val()) ? $('#poidsactuel').val() : 0;
-
-        var taille = ($('#taille').val()) ? $('#taille').val() : 0;
-
-        var imcPT = (parseInt(poids) / ((parseInt(taille) * 0.01) * (parseInt(taille) * 0.01)));
-        imcPT = imcPT.toFixed(1);
-        $('#imc').val(imcPT);
-    });
-
-    $("#poidsactuel").change(function () {
-
-        var poids = ($('#poidsactuel').val()) ? $('#poidsactuel').val() : 0;
-
-        var taille = ($('#taille').val()) ? $('#taille').val() : 0;
-
-        var imcPT = (parseInt(poids) / ((parseInt(taille) * 0.01) * (parseInt(taille) * 0.01)));
-        imcPT = imcPT.toFixed(1);
-        $('#imc').val(imcPT);
-    });
-
-</script>
-<script id="chart" type="text/javascript"></script>
-<script id="chart2" type="text/javascript"></script>
-<script language="javascript">
-        $(document).ready(function () {
-                $.ajax({
-                    url: 'lib/chart_dynamic.php',
-                    type: 'POST',
-                    success: function(data){
-                        $("#chart").html(data);
-                    },
-                    error: function(){
-                        alert("Erreur de chargement de lib/chart_dynamic.php");
-                    }
-                });
-                $.ajax({
-                    url: 'lib/chart_dynamic2.php',
-                    type: 'POST',
-                    success: function(data){
-                        $("#chart2").html(data);
-                    },
-                    error: function(){
-                        alert("Erreur de chargement de lib/chart_dynamic2.php");
-                    }
-                });
-
-        });
-</script>
-<script type="text/javascript">
-    var i = 0, inc = 4, incD = 4, len = 0, content = "", len2, name;
-    
-    $('#btnAdd').click(function (e)
+    require_once(dirname(__FILE__).'/html2pdf-4.4.0/html2pdf.class.php');
+ 
+    try
     {
-        e.preventDefault();
-        i++;
-        var c   =    "<tr>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+ i) +"' id='Horaire"+(inc + i)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+ i + 1) +"' id='Horaire"+(inc + i + 1)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+(incD + i)+"' id='Debit"+(incD + i)+"'></td>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+2)+"' id='Horaire"+(inc+i+2)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+3)+"' id='Horaire"+(inc+i+3)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+(incD + i + 1)+"' id='Debit"+(incD + i + 1)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+4)+"' id='Horaire"+(inc+i+4)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+5)+"' id='Horaire"+(inc+i+5)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+ (incD + i + 2) +"' id='Debit"+ (incD + i + 2) +"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+6)+"' id='Horaire"+(inc+i+6)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc+i+7)+"' id='Horaire"+(inc+i+7)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit"+ (incD + i + 3) +"' id='Debit"+ (incD + i + 3) +"'></td>";
-            c +=      "</tr>";
-        inc += 7;
-        incD += 3;
-        if (i < 11)
-        {
-            $('#ligne4').before(c);
-        }
-        len = $("#contentBasal1").children().length;
-       
-        len2 = $("#contentBasal1>tr:eq("+(len - 2)+")").children().length;
-        
-        var new_nameH = [], new_nameD = [];
-        for(var j = 0; j < len2; j++){
-            name = $("#contentBasal1>tr:eq("+(len - 2)+")>td:eq("+j+")").children().attr("name");
-            if(/^Horaire/.test(name)){   
-                arr_Horaire.push(name);
-                new_nameH.push(name);
-            }
-            if(/^Debit/.test(name)){
-                arr_Debit.push(name);    
-                new_nameD.push(name);
-            }
-        }
-        
+        $html2pdf = new HTML2PDF('P', 'A4', 'fr');
+        $html2pdf->setDefaultFont('Arial');
+        $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
+        $html2pdf->Output('pdf/content.pdf');
 
-        var dataD = JSON.stringify(arr_Debit);
-        var dataH = JSON.stringify(arr_Horaire);
-        $.ajax({
-            url: 'lib/chart_dynamic.php',
-            type: 'POST',
-            data: {dataD: dataD, dataH: dataH},
-            success: function(data){
-                $("#chart").html(data);
-            },
-            error: function(){
-                alert("Erreur de chargement de lib/chart_dynamic.php");
-            }
-        });
-        
-        console.log(arr_Horaire);
-        console.log(new_nameH);
-    });
-</script>
-<script type="text/javascript">
-     var m = 0, inc2= 4, incD2= 4, len_ = 0, content = "", len_2, name_;
-    $('#btnAdd2').click(function (e )
-    {
-        e.preventDefault();
-        m++;
-        var c   =    "<tr>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2 + m ) +"' id='Horaire_"+(inc2+ m )+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2 + m + 1) +"' id='Horaire_"+(inc2+ m + 1)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_"+(incD2+ m)+"' id='Debit_"+(incD2+ m)+"'></td>";
-             c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire"+(inc2+ m +2)+"' id='Horaire"+(inc2+ m +2)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +3)+"' id='Horaire_"+(inc2+ m +3)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' name='Debit_"+(incD2+ m + 1)+"' id='Debit_"+(incD2+ m + 1)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +4)+"' id='Horaire_"+(inc2+ m +4)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +5)+"' id='Horaire_"+(inc2+ m +5)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' name='Debit_"+ (incD2+ m + 2) +"' id='Debit_"+ (incD2+ m + 2) +"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +6)+"' id='Horaire_"+(inc2+ m +6)+"'></td>";
-            c +=      "<td><input type='text' class='form-control datetimepicker' name='Horaire_"+(inc2+ m +7)+"' id='Horaire_"+(inc2+ m +7)+"'></td>";
-            c +=      "<td><input type='number' class='form-control' name='Debit_"+ (incD2+ m + 3) +"' id='Debit_"+ (incD2+ m + 3) +"'></td>";
-            c +=      "</tr>";
+    }
+    catch(HTML2PDF_exception $e) {
+        echo $e;
+        exit;
+    }
 
-        inc2+= 7; incD2+= 3;
-        if (m < 11)
-        {
-            $('#ligne24').before(c);
-        }
-        len_ = $("#contentBasal2").children().length;
-       
-        len_2 = $("#contentBasal2>tr:eq("+(len_ - 2)+")").children().length;
-        
-        var new_nameH = [], new_nameD = [];
-        for(var j = 0; j < len_2; j++){
-            name_ = $("#contentBasal2>tr:eq("+(len_ - 2)+")>td:eq("+j+")").children().attr("name");
-            if(/^Horaire/.test(name_)){   
-                arr_Horaire2.push(name_);
-                new_nameH.push(name_);
-            }
-            if(/^Debit/.test(name_)){
-                arr_Debit2.push(name_);    
-                new_nameD.push(name_);
-            }
-        }
-        
 
-        var dataD = JSON.stringify(arr_Debit2);
-        var dataH = JSON.stringify(arr_Horaire2);
-        $.ajax({
-            url: 'lib/chart_dynamic2.php',
-            type: 'POST',
-            data: {dataD: dataD, dataH: dataH},
-            success: function(data){
-                $("#chart2").html(data);
-                //alert(data);
-            },
-            error: function(){
-                alert("Erreur de chargement de lib/chart_dynamic2.php");
-            }
-        });
-        
-        console.log(arr_Horaire2);
-        console.log(new_nameH);
-    });
-</script>
+?>
