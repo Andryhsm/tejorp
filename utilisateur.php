@@ -78,7 +78,7 @@ require './protection.php';
                     <figcaption>
                         <h2><span style="color: #e29000;">Controle</span></h2>
                         <p>Controler les patients qui sont déja enregistré.</p>
-                        <a href="#">View more</a>
+                        <a href="controle.php">View more</a>
                     </figcaption>			
                 </figure>
 

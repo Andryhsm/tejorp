@@ -4,16 +4,16 @@ session_start();
 
 require 'cnx.php';
 
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$email = $_POST['email'];
+$nom = addslashes($_POST['nom']);
+$prenom = addslashes($_POST['prenom']);
+$email = addslashes($_POST['email']);
 $tel = $_POST['tel'];
-$rue = $_POST['rue'];
+$rue = addslashes($_POST['rue']);
 $code_postal = $_POST['code-postal'];
-$ville = $_POST['ville'];
-$etablissement = $_POST['etablissement'];
+$ville = addslashes($_POST['ville']);
+$etablissement = addslashes($_POST['etablissement']);
 $statut = utf8_decode($_POST['statut']);
-$login = $_POST['login'];
+$login = addslashes($_POST['login']);
 
 
 $mdp = $_POST['mdp'];
