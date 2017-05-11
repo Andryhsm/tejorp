@@ -774,7 +774,7 @@ $statut = utf8_encode($statut);
 
         <h4><u>ALARMES ET PRECAUTIONS</u></h4><br/>
 
-        <table class="table table-bordered" style="color: white;">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <td style="text-align: center;">Etapes</td>
@@ -851,7 +851,7 @@ $statut = utf8_encode($statut);
 
         <font><h4><u>MANIPULATIONS</u></h4></font><br/>
 
-        <table class="table table-bordered" style="color: white;">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <td style="text-align: center;">Etapes</td>
