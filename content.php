@@ -829,10 +829,10 @@ ob_start();
     <table style="margin: 0px 30px 0px 50px;">
         <thead>
             <tr>
-                <th style="width: 20%"><strong>Poids actuel (kg) </strong></th>
-                <th style="width: 20%"><strong>Poids de forme (kg)</strong></th>
-                <th style="width: 20%"><strong>Taille (cm)</strong></th>
-                <th style="width: 20%"><strong>IMC</strong></th>
+                <th style="width: 20% ; text-align: center;"><strong>Poids actuel (kg) </strong></th>
+                <th style="width: 20% ; text-align: center;"><strong>Poids de forme (kg)</strong></th>
+                <th style="width: 20% ; text-align: center;"><strong>Taille (cm)</strong></th>
+                <th style="width: 20% ; text-align: center;"><strong>IMC</strong></th>
             </tr>
         </thead>
         <tbody>
@@ -862,10 +862,10 @@ ob_start();
         <table class="table " style="margin-left: 110px;">
             <thead>
                 <tr>
-                    <th style="width:100px"></th>
-                    <th style="width:100px"><strong>Insuline lente</strong></th>
-                    <th style="width:100px"><strong>Insuline rapide</strong></th>
-                    <th style="width:100px"><strong>Quantité totale</strong></th>
+                    <th style="width:100px ; text-align: center;"></th>
+                    <th style="width:100px ; text-align: center;"><strong>Insuline lente</strong></th>
+                    <th style="width:100px ; text-align: center;"><strong>Insuline rapide</strong></th>
+                    <th style="width:100px ; text-align: center;"><strong>Quantité totale</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -912,8 +912,8 @@ ob_start();
         <table class="table" style="margin-left: 70px;">
             <thead>
                 <tr>
-                    <th style="width: 35%;"><strong>Spécialité</strong></th>
-                    <th style="width: 35%;"><strong>Posologie</strong></th>
+                    <th style="width: 35% ; text-align: center;"><strong>Spécialité</strong></th>
+                    <th style="width: 35% ; text-align: center;"><strong>Posologie</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -941,13 +941,13 @@ ob_start();
         <table class="table" style="margin-right: 20px;">
             <tbody>
                 <tr>
-                    <td colspan=12 style="text-align: center;"><strong>Shéma basals date 1</strong></td>
+                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 1</strong></td>
                 </tr>
                 <tr>
-                    <td style="width:24%;" colspan=3><strong>Schéma 1</strong></td>
-                    <td style="width:24%;" colspan=3><strong>Schéma 2</strong></td>
-                    <td style="width:24%;" colspan=3><strong>Schéma 3</strong></td>
-                    <td style="width:24%;" colspan=3><strong>Schéma 4</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
                 </tr>
                 <tr>
                     <td>De</td>
@@ -1175,13 +1175,13 @@ ob_start();
         <table class="table">
             <tbody>
                 <tr>
-                    <td colspan=12 style="text-align: center;"><strong>Shéma basals date 2</strong></td>
+                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 2</strong></td>
                 </tr>
                 <tr>
-                    <td style="width:24%;" colspan=3><strong>Schéma 1</strong></td>
-                    <td style="width:24%;" colspan=3><strong>Schéma 2</strong></td>
-                    <td style="width:24%;" colspan=3><strong>Schéma 3</strong></td>
-                    <td style="width:24%;" colspan=3><strong>Schéma 4</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
                 </tr>
                 <tr>
                     <td>De</td>
@@ -1412,11 +1412,11 @@ ob_start();
         <table class="table">
             <thead>
                 <tr>
-                    <th style="width:17.66666666666667%;"><strong>Valeur glycémique</strong></th>
-                    <th style="width:14%;"><strong>Matin (UI)</strong></th>
-                    <th style="width:17.66666666666667%;"><strong>Midi (UI)</strong></th>
-                    <th style="width:18.66666666666667%;"><strong>Collation (UI)</strong></th>
-                    <th style="width:19.6%;"><strong>Soir (UI)</strong></th>
+                    <th style="width:17.66666666666667%; text-align: center;"><strong>Valeur glycémique</strong></th>
+                    <th style="width:14%; text-align: center;"><strong>Matin (UI)</strong></th>
+                    <th style="width:17.66666666666667%; text-align: center;"><strong>Midi (UI)</strong></th>
+                    <th style="width:18.66666666666667%; text-align: center;"><strong>Collation (UI)</strong></th>
+                    <th style="width:19.6%; text-align: center;"><strong>Soir (UI)</strong></th>
                     <th>Autre (UI)</th>
                 </tr>
             </thead>
@@ -1538,11 +1538,12 @@ ob_start();
         <table class="table " style="margin-left: 9px;">
             <thead>
                 <tr>
-                    <th style="width:19%"></th>
-                    <th style="width:19%"><strong>Horaires</strong></th>
-                    <th style="width:19%"><strong>Ration Insuline/glucide</strong></th>
-                    <th style="width:19%"><strong>Objectif glicémique</strong></th>
-                    <th style="width:19%"><strong>Sensibilité à l'insuline</strong></th>
+                    <th style="width:16%; text-align: center;"></th>
+                    <th style="width:16%; text-align: center;"><strong>De</strong></th>
+                    <th style="width:16%; text-align: center;"><strong>A</strong></th>
+                    <th style="width:16%; text-align: center;"><strong>Ration Insuline/glucide</strong></th>
+                    <th style="width:16%; text-align: center;"><strong>Objectif glicémique</strong></th>
+                    <th style="width:16%; text-align: center;"><strong>Sensibilité à l'insuline</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -2018,19 +2019,19 @@ ob_start();
             <tr> 
                 <td>
                     <strong>Kit de sécurité</strong><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline rapide : </strong><?php echo $connaissance3; ?><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline lente : </strong><?php echo $connaissance4; ?><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Aiguilles : </strong> <?php echo $connaissance5; ?><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo de glucagen : </strong> <?php echo $connaissance6; ?><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline rapide : </strong><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline lente : </strong><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Aiguilles : </strong> <br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo de glucagen : </strong> <br/>
 
                 </td>
 
                 <td>
                     <br/>
-                    * <br/>
-                    * <br/>
-                    * <br/>
-                    *   
+                    * <?php echo $connaissance3; ?><br/>
+                    * <?php echo $connaissance4; ?><br/>
+                    * <?php echo $connaissance5; ?><br/>
+                    * <?php echo $connaissance6; ?>  
                 </td>
 
                 <td>
