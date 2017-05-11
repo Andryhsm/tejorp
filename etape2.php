@@ -4,7 +4,7 @@
         min-height: 20px;
         padding: 19px;
         margin-bottom: 20px;
-        background-color: rgba(133,32,28,.4);
+        background-color: rgba(133,32,28,.7);
         border-radius: 10px;
         -webkit-box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
         box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
