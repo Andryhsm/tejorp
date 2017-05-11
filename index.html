@@ -43,7 +43,7 @@
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" onchange="vider()" class="form-control" name="login" id="login">
+                                <input type="text" onchange="vider(this.value)" class="form-control" name="login" id="login">
                                 <div id="ito" class="form-control-placeholder">
                                     Nom d'utilisateur
                                 </div>
@@ -52,7 +52,7 @@
 
                         <div class="col-md-12" style="margin-top: 10px;">
                             <div class="form-group">
-                                <input type="password" onchange="vider1()" class="form-control" name="mdp" id="mdp">
+                                <input type="password" onchange="vider1(this.value)" class="form-control" name="mdp" id="mdp">
                                 <div id="ito1" class="form-control-placeholder">
                                     Mot de passe
                                 </div>
@@ -91,21 +91,41 @@
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
         <script type="text/javascript">
 
-                                    function vider() {
-                                        $('#ito').css({
-                                            color: 'white',
-                                            'font-size': '100%',
-                                            'top': '-25px'
-                                        });
-
+                                    function vider(valeur) {
+                                        if (valeur !== '') {
+                                            $('#ito').css({
+                                                color: 'white',
+                                                'font-size': '100%',
+                                                'top': '-25px'
+                                            });
+                                        } else {
+                                            $('#ito').css({
+                                                'position': 'absolute',
+                                                'top': '0',
+                                                'padding': '7px 0 0 13px',
+                                                'pointer-events': 'none',
+                                                'color': '#aaa',
+                                                'transition': 'all 200ms'
+                                            });
+                                        }
                                     }
-                                    function vider1() {
-                                        $('#ito1').css({
-                                            color: 'white',
-                                            'font-size': '100%',
-                                            'top': '-25px'
-                                        });
-
+                                    function vider1(valeur1) {
+                                        if (valeur1 !== '') {
+                                            $('#ito1').css({
+                                                color: 'white',
+                                                'font-size': '100%',
+                                                'top': '-25px'
+                                            });
+                                        } else {
+                                            $('#ito1').css({
+                                                'position': 'absolute',
+                                                'top': '0',
+                                                'padding': '7px 0 0 13px',
+                                                'pointer-events': 'none',
+                                                'color': '#aaa',
+                                                'transition': 'all 200ms'
+                                            });
+                                        }
                                     }
 
                                     $('#session').click(function (e)
