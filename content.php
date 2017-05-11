@@ -556,7 +556,7 @@ $statut = utf8_encode($statut);
 
     </div>
     <div class="dec">
-        <h4><u>INSULINOTHERAPIE FONCTIONNELLE</u></h4>
+        <h4><u>INSULINOTHERAPIE FONCTIONNELLE </u></h4>
         <table class="table " style="margin-left: 9px;">
             <thead>
                 <tr>
