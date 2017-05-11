@@ -23,19 +23,19 @@ $statut = utf8_encode($statut);
 	//Soloina le post lava be
 
 	foreach (array_keys($_POST) as $value) {
-		eval("\$".$value." = (isset(\$_POST[\"".$value."\"])) ? \$_POST[\"".$value."\"] : \"\";");
+		eval("\$".$value." = (isset(\$_POST[\"".$value."\"])) ? addslashes(\$_POST[\"".$value."\"]) : \"\";");
 	}
 	for($i = 5; $i < 85; $i++){
-		eval("\$Horaire".$i." = (isset(\$_POST[\"Horaire".$i."\"])) ? \$_POST[\"Horaire".$i."\"] : \"\";");
+		eval("\$Horaire".$i." = (isset(\$_POST[\"Horaire".$i."\"])) ? addslashes(\$_POST[\"Horaire".$i."\"]) : \"\";");
 	}
 	for($i = 5; $i < 85; $i++){
-		eval("\$Horaire_".$i." = (isset(\$_POST[\"Horaire_".$i."\"])) ? \$_POST[\"Horaire_".$i."\"] : \"\";");
+		eval("\$Horaire_".$i." = (isset(\$_POST[\"Horaire_".$i."\"])) ? addslashes(\$_POST[\"Horaire_".$i."\"]) : \"\";");
 	}
 	for($i = 5; $i < 45; $i++){
-		eval("\$Debit".$i." = (isset(\$_POST[\"Debit".$i."\"])) ? \$_POST[\"Debit".$i."\"] : \"\";");
+		eval("\$Debit".$i." = (isset(\$_POST[\"Debit".$i."\"])) ? addslashes(\$_POST[\"Debit".$i."\"]) : \"\";");
 	}
 	for($i = 5; $i < 45; $i++){
-		eval("\$Debit_".$i." = (isset(\$_POST[\"Debit_".$i."\"])) ? \$_POST[\"Debit_".$i."\"] : \"\";");
+		eval("\$Debit_".$i." = (isset(\$_POST[\"Debit_".$i."\"])) ? addslashes(\$_POST[\"Debit_".$i."\"]) : \"\";");
 	}
 
 	/* MODIFS STIAN DECLARATIONS DE VARIABLES */
