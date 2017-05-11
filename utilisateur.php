@@ -17,7 +17,7 @@ require './protection.php';
         <style>
             body
             {
-                background: url("img/fruit_Pod.jpg") no-repeat fixed;
+                background: url("img/fruit_Pod1.jpg") no-repeat fixed;
                 background-size: cover;    
                 color: #fff;
                 font-family: "Calibri"; 
@@ -40,24 +40,31 @@ require './protection.php';
                 transform: rotate(5deg) scale(1.10);
                 opacity: 1;
             }
+            .maitso{
+                background-color: #8c993d;
+                width: 100%;
+                height: 11vw;
+            }
         </style>
     </head>
     <body>
 
-        <div class="container">
+        <div class="maitso"></div>
+
+        <div class="container" style="margin-top: -11vw;">
             <div class="grid">
                 <br><br>
                 <div class="row col-lg-offset-1" style="margin-bottom: 50px; ">
                     <div class="col-lg-3">
                         <img class="img-responsive img-circle" style="vertical-align: center; background-color: white;" width="180px" heigth="180px" src="./image-person/<?php echo $_SESSION['photo']; ?>">
                     </div>
-                    <div class="col-lg-6" style="background-color: white; height: 170px; border-radius: 6px;">
+                    <div class="col-lg-6" style="background-color: white; height: 170px; border-bottom-left-radius: 6px; border-top-left-radius: 6px;">
 
                         <h2 style="color: green;"> <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?> </h2>
                         <h3><?php echo utf8_encode($_SESSION['statut']); ?></h3>
                         <h5>Téléphone: <?php echo $_SESSION['tel']; ?> &nbsp;&nbsp; Email: <?php echo $_SESSION['email']; ?></h5>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-2" style="background-color: white; height: 170px; border-bottom-right-radius: 6px; border-top-right-radius: 6px;">
                         <br>
                         <a href="./modification.php"> <img class="zoomEffect img-responsive" width="90px" src="./img/edit.png" alt="Modifier image" title="Modifier mon profil"> </a>
                     </div>
@@ -68,16 +75,16 @@ require './protection.php';
                 <figure class="effect-ming">
                     <img src="img/installation.png" alt="img09"/>
                     <figcaption>
-                        <h2> <span style="color: #e29000;">Installation</span></h2>
-                        <p>Enregistrer des nouveaux patients.</p>
+                        <h2> <span style="color: #e29000;">+ Ajout</span></h2>
+                        <p>Ajouter un nouveau patient</p>
                         <a href="./page.php">View more</a>
                     </figcaption>			
                 </figure>
                 <figure class="effect-ming">
                     <img src="img/controle.png" alt="img08"/>
                     <figcaption>
-                        <h2><span style="color: #e29000;">Controle</span></h2>
-                        <p>Controler les patients qui sont déja enregistré.</p>
+                        <h2><span style="color: #e29000;">Acces</span></h2>
+                        <p>Accéder au dossier de mes patients</p>
                         <a href="controle.php">View more</a>
                     </figcaption>			
                 </figure>
