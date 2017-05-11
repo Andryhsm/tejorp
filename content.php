@@ -1534,16 +1534,15 @@ ob_start();
 
     </div>
     <div class="dec">
-        <h4><u>INSULUNOTHERAPIE FONCTIONNELLE</u></h4>
+        <h4><u>INSULINOTHERAPIE FONCTIONNELLE</u></h4>
         <table class="table " style="margin-left: 9px;">
             <thead>
                 <tr>
-                    <th style="width:16%"></th>
-                    <th style="width:16%"><strong>De</strong></th>
-                    <th style="width:16%"><strong>A</strong></th>
-                    <th style="width:16%"><strong>Ration Insuline/glucide</strong></th>
-                    <th style="width:16%"><strong>Objectif glicémique</strong></th>
-                    <th style="width:16%"><strong>Sensibilité à l'insuline</strong></th>
+                    <th style="width:19%"></th>
+                    <th style="width:19%"><strong>Horaires</strong></th>
+                    <th style="width:19%"><strong>Ration Insuline/glucide</strong></th>
+                    <th style="width:19%"><strong>Objectif glicémique</strong></th>
+                    <th style="width:19%"><strong>Sensibilité à l'insuline</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -2019,19 +2018,19 @@ ob_start();
             <tr> 
                 <td>
                     <strong>Kit de sécurité</strong><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline rapide : </strong><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline lente : </strong><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Aiguilles : </strong><br/>
-                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo de glucagen : </strong><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline rapide : </strong><?php echo $connaissance3; ?><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo d'insuline lente : </strong><?php echo $connaissance4; ?><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Aiguilles : </strong> <?php echo $connaissance5; ?><br/>
+                    <strong>&nbsp;&nbsp;&nbsp;&nbsp; * &nbsp;&nbsp;&nbsp;Stylo de glucagen : </strong> <?php echo $connaissance6; ?><br/>
 
                 </td>
 
                 <td>
                     <br/>
-                    * <?php echo $connaissance3; ?><br/>
-                    * <?php echo $connaissance4; ?><br/>
-                    * <?php echo $connaissance5; ?><br/>
-                    * <?php echo $connaissance6; ?>  
+                    * <br/>
+                    * <br/>
+                    * <br/>
+                    *   
                 </td>
 
                 <td>
