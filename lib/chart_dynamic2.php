@@ -110,18 +110,19 @@
 
   								$inc = 0;
 
-  								$dataD = json_decode($_POST["dataD"]);
-  								$dataH = json_decode($_POST["dataH"]);
+  							$dataD = json_decode($_POST["dataD"]);
+  							$dataH = json_decode($_POST["dataH"]);
   							
-  								//Initialisation des variables en javascript
+
+  							//Initialisation des variables en javascript
 
 
-  								foreach ($dataH as $key => $value) {
-  									echo "var ".$value." = \"\";\n";
-  								}
+  							foreach ($dataH as $key => $value) {
+  								echo "var ".$value." = \"\";\n";
+  							}
 
 
-  								foreach ($dataD as $key => $value) {
+  							foreach ($dataD as $key => $value) {
   									
   									echo "var ".$value." = \"\";\n";
 
@@ -137,16 +138,29 @@
   									}  									
   								}
   								echo "Debit_graphe2();";
-  								//Initialisation des variables
-  								for($i = 0; $i < 5 ; $i++){
-  									echo "$(\"#Debit_".$i."\").val('');";
-	                        	}
-	                        	for($i = 0; $i < 5 ; $i++){
-  									echo "$(\"#Debit_N".$i."\").val('');";
-	                        	}
-  								foreach ($dataD as $key => $value) {
-  									echo "$(\"#".$value."\").val('');";
-								}							
+  							
+
+                	//Initialisation des variables
+  							  
+                  for($i = 0; $i < 5 ; $i++){
+                    echo "Debit_".$i." = $(\"#Debit_".$i."\").val();";
+                  }
+                  
+                  for($i = 0; $i < 5 ; $i++){
+                    echo "Debit_N".$i." = $(\"#Debit_N".$i."\").val();";
+                  }
+
+                  foreach ($dataD as $key => $value) {
+                    echo $value." = $(\"#".$value."\").val();";
+                  }             
+
+
+                  foreach ($dataD as $key => $value) {
+                    echo  "$(\"#".$value."\").change(function(){
+                                ".$value." = $(\"#".$value."\").val();
+                                Debit_graphe1();
+                              });";
+                }
 
 
   								foreach ($dataD as $key => $value) {

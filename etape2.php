@@ -853,6 +853,7 @@
                 alert("Erreur de chargement de lib/chart_dynamic.php");
             }
         });
+        Debit_graphe1();
         console.log(arr_Horaire);
         console.log(new_nameH);
         $('.datetimepicker1').datetimepicker({
