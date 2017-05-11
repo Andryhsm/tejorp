@@ -17,7 +17,7 @@ require './protection.php';
         <style>
             body
             {
-                background: url("img/fruit_Pod.jpg") no-repeat fixed;
+                background: url("img/fruit_Pod1.jpg") no-repeat fixed;
                 background-size: cover;    
                 color: #fff;
                 font-family: "Calibri"; 
@@ -75,16 +75,16 @@ require './protection.php';
                 <figure class="effect-ming">
                     <img src="img/installation.png" alt="img09"/>
                     <figcaption>
-                        <h2> <span style="color: #e29000;">Installation</span></h2>
-                        <p>Enregistrer des nouveaux patients.</p>
+                        <h2> <span style="color: #e29000;">+ Ajout</span></h2>
+                        <p>Ajouter un nouveau patient</p>
                         <a href="./page.php">View more</a>
                     </figcaption>			
                 </figure>
                 <figure class="effect-ming">
                     <img src="img/controle.png" alt="img08"/>
                     <figcaption>
-                        <h2><span style="color: #e29000;">Controle</span></h2>
-                        <p>Controler les patients qui sont déja enregistré.</p>
+                        <h2><span style="color: #e29000;">Acces</span></h2>
+                        <p>Accéder au dossier de mes patients</p>
                         <a href="controle.php">View more</a>
                     </figcaption>			
                 </figure>
