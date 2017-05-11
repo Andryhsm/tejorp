@@ -561,108 +561,108 @@
                     </thead>
                     <tbody>
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input name="glycemie1" type="text" class="form-control"></td>
+                            <td><input name="glycemie2" type="text" class="form-control"></td>
+                            <td><input name="glycemie3" type="text" class="form-control"></td>
+                            <td><input name="glycemie4" type="text" class="form-control"></td>
+                            <td><input name="glycemie5" type="text" class="form-control"></td>
+                            <td><input name="glycemie6" type="text" class="form-control"></td>
+                            <td><input name="glycemie7" type="text" class="form-control"></td>
+                            <td><input name="glycemie8" type="text" class="form-control"></td>
+                            <td><input name="glycemie9" type="text" class="form-control"></td>
+                            <td><input name="glycemie10" type="text" class="form-control"></td>
+                            <td><input name="glycemie11" type="text" class="form-control"></td>
+                            <td><input name="glycemie12" type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input name="glycemie13" type="text" class="form-control"></td>
+                            <td><input name="glycemie14" type="text" class="form-control"></td>
+                            <td><input name="glycemie15" type="text" class="form-control"></td>
+                            <td><input name="glycemie16" type="text" class="form-control"></td>
+                            <td><input name="glycemie17" type="text" class="form-control"></td>
+                            <td><input name="glycemie18" type="text" class="form-control"></td>
+                            <td><input name="glycemie19" type="text" class="form-control"></td>
+                            <td><input name="glycemie20" type="text" class="form-control"></td>
+                            <td><input name="glycemie21" type="text" class="form-control"></td>
+                            <td><input name="glycemie22" type="text" class="form-control"></td>
+                            <td><input name="glycemie23" type="text" class="form-control"></td>
+                            <td><input name="glycemie24" type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input name="glycemie25" type="text" class="form-control"></td>
+                            <td><input name="glycemie26" type="text" class="form-control"></td>
+                            <td><input name="glycemie27" type="text" class="form-control"></td>
+                            <td><input name="glycemie28" type="text" class="form-control"></td>
+                            <td><input name="glycemie29" type="text" class="form-control"></td>
+                            <td><input name="glycemie30" type="text" class="form-control"></td>
+                            <td><input name="glycemie31" type="text" class="form-control"></td>
+                            <td><input name="glycemie32" type="text" class="form-control"></td>
+                            <td><input name="glycemie33" type="text" class="form-control"></td>
+                            <td><input name="glycemie34" type="text" class="form-control"></td>
+                            <td><input name="glycemie35" type="text" class="form-control"></td>
+                            <td><input name="glycemie36" type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input name="glycemie37" type="text" class="form-control"></td>
+                            <td><input name="glycemie38" type="text" class="form-control"></td>
+                            <td><input name="glycemie39" type="text" class="form-control"></td>
+                            <td><input name="glycemie40" type="text" class="form-control"></td>
+                            <td><input name="glycemie41" type="text" class="form-control"></td>
+                            <td><input name="glycemie42" type="text" class="form-control"></td>
+                            <td><input name="glycemie43" type="text" class="form-control"></td>
+                            <td><input name="glycemie44" type="text" class="form-control"></td>
+                            <td><input name="glycemie45" type="text" class="form-control"></td>
+                            <td><input name="glycemie46" type="text" class="form-control"></td>
+                            <td><input name="glycemie47" type="text" class="form-control"></td>
+                            <td><input name="glycemie48" type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input name="glycemie49" type="text" class="form-control"></td>
+                            <td><input name="glycemie50" type="text" class="form-control"></td>
+                            <td><input name="glycemie51" type="text" class="form-control"></td>
+                            <td><input name="glycemie52" type="text" class="form-control"></td>
+                            <td><input name="glycemie53" type="text" class="form-control"></td>
+                            <td><input name="glycemie54" type="text" class="form-control"></td>
+                            <td><input name="glycemie55" type="text" class="form-control"></td>
+                            <td><input name="glycemie56" type="text" class="form-control"></td>
+                            <td><input name="glycemie57" type="text" class="form-control"></td>
+                            <td><input name="glycemie58" type="text" class="form-control"></td>
+                            <td><input name="glycemie59" type="text" class="form-control"></td>
+                            <td><input name="glycemie60" type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input name="glycemie61" type="text" class="form-control"></td>
+                            <td><input name="glycemie62" type="text" class="form-control"></td>
+                            <td><input name="glycemie63" type="text" class="form-control"></td>
+                            <td><input name="glycemie64" type="text" class="form-control"></td>
+                            <td><input name="glycemie65" type="text" class="form-control"></td>
+                            <td><input name="glycemie66" type="text" class="form-control"></td>
+                            <td><input name="glycemie67" type="text" class="form-control"></td>
+                            <td><input name="glycemie68" type="text" class="form-control"></td>
+                            <td><input name="glycemie69" type="text" class="form-control"></td>
+                            <td><input name="glycemie70" type="text" class="form-control"></td>
+                            <td><input name="glycemie71" type="text" class="form-control"></td>
+                            <td><input name="glycemie72" type="text" class="form-control"></td>
                         </tr>
 
                         <tr> <!-- Mbola interface fotsiny io an -->
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="text" class="form-control"></td>
+                            <td><input name="glycemie73" type="text" class="form-control"></td>
+                            <td><input name="glycemie74" type="text" class="form-control"></td>
+                            <td><input name="glycemie75" type="text" class="form-control"></td>
+                            <td><input name="glycemie76" type="text" class="form-control"></td>
+                            <td><input name="glycemie77" type="text" class="form-control"></td>
+                            <td><input name="glycemie78" type="text" class="form-control"></td>
+                            <td><input name="glycemie79" type="text" class="form-control"></td>
+                            <td><input name="glycemie80" type="text" class="form-control"></td>
+                            <td><input name="glycemie81" type="text" class="form-control"></td>
+                            <td><input name="glycemie82" type="text" class="form-control"></td>
+                            <td><input name="glycemie83" type="text" class="form-control"></td>
+                            <td><input name="glycemie84" type="text" class="form-control"></td>
                         </tr>
 
                     </tbody>
