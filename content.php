@@ -680,15 +680,15 @@ $statut = utf8_encode($statut);
     <div class="dec">
         <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
 
-        <table>
+        <table style="width: 1200px;">
             <thead>
                 <tr>
-                    <td style="text-align: center;">Etapes</td>
-                    <td style="text-align: center;"><?php echo $pmpdate1; ?></td>
-                    <td style="text-align: center;"><?php echo $pmpdate2; ?></td>
-                    <td style="text-align: center;"><?php echo $pmpdate3; ?></td>
-                    <td style="text-align: center;"><?php echo $pmpdate4; ?></td>
-                    <td style="text-align: center;">Commentaire</td>
+                    <th style="text-align: center; ">Etapes</th>
+                    <th style="text-align: center; width: 60px;"><?php echo $pmpdate1; ?></th>
+                    <th style="text-align: center; width: 60px;"><?php echo $pmpdate2; ?></th>
+                    <th style="text-align: center; width: 60px;"><?php echo $pmpdate3; ?></th>
+                    <th style="text-align: center; width: 60px;"><?php echo $pmpdate4; ?></th>
+                    <th style="text-align: center; width: 150px;">Commentaire</th>
                 </tr>
             </thead>
             <tbody>
@@ -777,12 +777,12 @@ $statut = utf8_encode($statut);
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <td style="text-align: center;">Etapes</td>
-                    <td style="text-align: center;"><?php echo $alarmedate1; ?></td>
-                    <td style="text-align: center;"><?php echo $alarmedate2; ?></td>
-                    <td style="text-align: center;"><?php echo $alarmedate3; ?></td>
-                    <td style="text-align: center;"><?php echo $alarmedate4; ?></td>
-                    <td style="text-align: center;">Commentaire</td>
+                    <th style="text-align: center; width: 240px;">Etapes</th>
+                    <th style="text-align: center; width:60px; "><?php echo $alarmedate1; ?></th>
+                    <th style="text-align: center; width:60px; "><?php echo $alarmedate2; ?></th>
+                    <th style="text-align: center; width:60px; "><?php echo $alarmedate3; ?></th>
+                    <th style="text-align: center; width:60px; "><?php echo $alarmedate4; ?></th>
+                    <th style="text-align: center; width: 207px;">Commentaire</th>
                 </tr>
             </thead>
             <tbody>
@@ -854,12 +854,12 @@ $statut = utf8_encode($statut);
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <td style="text-align: center;">Etapes</td>
-                    <td style="text-align: center;"><?php echo $manipdate1; ?></td>
-                    <td style="text-align: center;"><?php echo $manipdate2; ?></td>
-                    <td style="text-align: center;"><?php echo $manipdate3; ?></td>
-                    <td style="text-align: center;"><?php echo $manipdate4; ?></td>
-                    <td style="text-align: center;">Commentaire</td>
+                    <th style="text-align: center; width: 240px">Etapes</th>
+                    <th style="text-align: center; width:60px;  "><?php echo $manipdate1; ?></th>
+                    <th style="text-align: center; width:60px;  "><?php echo $manipdate2; ?></th>
+                    <th style="text-align: center; width:60px;  "><?php echo $manipdate3; ?></th>
+                    <th style="text-align: center; width:60px;  "><?php echo $manipdate4; ?></th>
+                    <th style="text-align: center; width:207px; ">Commentaire</th>
                 </tr>
             </thead>
             <tbody>
@@ -910,15 +910,15 @@ $statut = utf8_encode($statut);
 
         <h4><u>POSE DU CATHETER</u></h4><br/>
 
-        <table>
+        <table style="margin-left: 5px;">
             <thead>
-                <tr>
-                    <td style="text-align: center;">Etapes</td>
-                    <td><?php echo $cathdate1; ?></td>
-                    <td><?php echo $cathdate2; ?></td>
-                    <td><?php echo $cathdate3; ?></td>
-                    <td><?php echo $cathdate4; ?></td>
-                    <td style="text-align: center;">Commentaire</td>
+                 <tr>
+                    <th style="text-align: center;">Etapes</th>
+                    <th style="width: 60px;" ><?php echo $cathdate1; ?></th>
+                    <th style="width: 60px;" ><?php echo $cathdate2; ?></th>
+                    <th style="width: 60px;" ><?php echo $cathdate3; ?></th>
+                    <th style="width: 60px;" ><?php echo $cathdate4; ?></th>
+                    <th style="text-align: center; width: 145px;">Commentaire</th>
                 </tr>
             </thead>
             <tbody>
@@ -1017,7 +1017,7 @@ $statut = utf8_encode($statut);
 
         <h4><u>CONNAISSANCE</u></h4><br/>
 
-        <table>
+        <table style="margin-left: 5px;">
 
             <tr>
                 <td style="text-align: center; width: 400px;"></td>
@@ -1113,7 +1113,7 @@ $statut = utf8_encode($statut);
 
 
         <h4><u>AUTO SURVEILLANCE GLYCEMIQUE</u></h4><br/>
-        <table>
+        <table style="margin-left: 5px;">
 
             <tr>
                 <td style="width: 400px;"></td>

@@ -56,7 +56,7 @@
             }
             .well
             {
-                background: rgba(10, 10, 10, 0.51);
+                background: rgba(10, 10, 10, 11);
             }
 
             h4{
@@ -496,7 +496,7 @@
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
                             datasets: [{
-                                    fillColor: "rgba(220,220,220,0.5)",
+                                    fillColor: "rgba(220,220,220,1)",
                                     strokeColor: "rgba(220,220,220,0.8)",
                                     highlightFill: "rgba(220,220,220,0.75)",
                                     highlightStroke: "rgba(220,220,220,1)",
@@ -516,7 +516,7 @@
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
                             datasets: [{
-                                    fillColor: "rgba(147,163,244,0.5)",
+                                    fillColor: "rgba(147,163,244,1)",
                                     strokeColor: "rgba(147,163,244,0.8)",
                                     highlightFill: "rgba(147,163,244,0.75)",
                                     highlightStroke: "rgba(147,163,244,1)",
@@ -692,24 +692,24 @@
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
                             datasets: [
                                 {
-                                    fillColor: "rgba(255, 130, 130,0.5)",
-                                    strokeColor: "rgba(255, 130, 130,0.8)",
-                                    highlightFill: "rgba(255, 130, 130,0.75)",
-                                    highlightStroke: "rgba(255, 130, 130,1)",
+                                    fillColor: "rgba(81, 255, 81,1)",
+                                    strokeColor: "rgba(81, 255, 81,0.8)",
+                                    highlightFill: "rgba(81, 255, 81,0.75)",
+                                    highlightStroke: "rgba(81, 255, 81,1)",
                                     data: [taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9]
                                 },
                                 {
-                                    fillColor: "rgba(255, 72, 72,0.5)",
-                                    strokeColor: "rgba(255, 72, 72, 0.8)",
-                                    highlightFill: "rgba(255, 72, 72,0.75)",
-                                    highlightStroke: "rgba(255, 72, 72, 1)",
+                                    fillColor: "rgba(0, 215, 0,1)",
+                                    strokeColor: "rgba(0, 215, 0, 0.8)",
+                                    highlightFill: "rgba(0, 215, 0,0.75)",
+                                    highlightStroke: "rgba(0, 215, 0, 1)",
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
-                                    fillColor: "rgba(255, 0, 0,0.5)",
-                                    strokeColor: "rgba(255, 0, 0,0.8)",
-                                    highlightFill: "rgba(255, 0, 0,0.75)",
-                                    highlightStroke: "rgba(255, 0, 0,1)",
+                                    fillColor: "rgba(0, 128, 0,1)",
+                                    strokeColor: "rgba(0, 128, 0,0.8)",
+                                    highlightFill: "rgba(0, 128, 0,0.75)",
+                                    highlightStroke: "rgba(0, 128, 0, 0,1)",
                                     data: [imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9]
                                 }
                             ]
@@ -725,24 +725,24 @@
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
                             datasets: [
                                 {
-                                    fillColor: "rgba(255, 130, 130,0.5)",
-                                    strokeColor: "rgba(255, 130, 130,0.8)",
-                                    highlightFill: "rgba(255, 130, 130,0.75)",
-                                    highlightStroke: "rgba(255, 130, 130,1)",
+                                    fillColor: "rgba(81, 255, 81,1)",
+                                    strokeColor: "rgba(81, 255, 81,0.8)",
+                                    highlightFill: "rgba(81, 255, 81,0.75)",
+                                    highlightStroke: "rgba(81, 255, 81,1)",
                                     data: [taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9]
                                 },
                                 {
-                                    fillColor: "rgba(255, 72, 72,0.5)",
-                                    strokeColor: "rgba(255, 72, 72, 0.8)",
-                                    highlightFill: "rgba(255, 72, 72,0.75)",
-                                    highlightStroke: "rgba(255, 72, 72, 1)",
+                                    fillColor: "rgba(0, 215, 0,1)",
+                                    strokeColor: "rgba(0, 215, 0, 0.8)",
+                                    highlightFill: "rgba(0, 215, 0,0.75)",
+                                    highlightStroke: "rgba(0, 215, 0, 1)",
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
-                                    fillColor: "rgba(255, 0, 0,0.5)",
-                                    strokeColor: "rgba(255, 0, 0,0.8)",
-                                    highlightFill: "rgba(255, 0, 0,0.75)",
-                                    highlightStroke: "rgba(255, 0, 0,1)",
+                                    fillColor: "rgba(0, 128, 0,1)",
+                                    strokeColor: "rgba(0, 128, 0,0.8)",
+                                    highlightFill: "rgba(0, 128, 0,0.75)",
+                                    highlightStroke: "rgba(0, 128, 0, 0,1)",
                                     data: [imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9]
                                 }
                             ]
