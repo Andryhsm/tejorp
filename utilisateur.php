@@ -17,7 +17,7 @@ require './protection.php';
         <style>
             body
             {
-                background: url("img/fruit_Pod.jpg") no-repeat fixed;
+                background: url("img/fruit_Pod1.jpg") no-repeat fixed;
                 background-size: cover;    
                 color: #fff;
                 font-family: "Calibri"; 
