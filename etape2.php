@@ -875,18 +875,18 @@
     {
         e.preventDefault();
         m++;
-        var c = "<tr>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m) + "' id='Horaire_" + (inc2 + m) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 1) + "' id='Horaire_" + (inc2 + m + 1) + "'></td>";
+         var c = "<tr>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m) + "' id='Horaire_" + (inc2 + m) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 1) + "' id='Horaire_" + (inc2 + m + 1) + "'></td>";
         c += "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_" + (incD2 + m) + "' id='Debit_" + (incD2 + m) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire" + (inc2 + m + 2) + "' id='Horaire" + (inc2 + m + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 3) + "' id='Horaire_" + (inc2 + m + 3) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc2 + m + 2) + "' id='Horaire" + (inc2 + m + 2) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 3) + "' id='Horaire_" + (inc2 + m + 3) + "'></td>";
         c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 1) + "' id='Debit_" + (incD2 + m + 1) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 4) + "' id='Horaire_" + (inc2 + m + 4) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 5) + "' id='Horaire_" + (inc2 + m + 5) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 4) + "' id='Horaire_" + (inc2 + m + 4) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 5) + "' id='Horaire_" + (inc2 + m + 5) + "'></td>";
         c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 2) + "' id='Debit_" + (incD2 + m + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 6) + "' id='Horaire_" + (inc2 + m + 6) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker' name='Horaire_" + (inc2 + m + 7) + "' id='Horaire_" + (inc2 + m + 7) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 6) + "' id='Horaire_" + (inc2 + m + 6) + "'></td>";
+        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 7) + "' id='Horaire_" + (inc2 + m + 7) + "'></td>";
         c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 3) + "' id='Debit_" + (incD2 + m + 3) + "'></td>";
         c += "</tr>";
         inc2 += 7;
@@ -910,7 +910,18 @@
             }
         }
 
-
+         $('.datetimepicker1').datetimepicker({
+            language: 'fr',
+            weekStart: 1,
+            todayBtn: 1,
+            format: "hh:ii",
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 1,
+            minView: 0,
+            maxView: 1,
+            forceParse: 0
+        });
         var dataD = JSON.stringify(arr_Debit2);
         var dataH = JSON.stringify(arr_Horaire2);
         $.ajax({
@@ -927,17 +938,6 @@
         });
         console.log(arr_Horaire2);
         console.log(new_nameH);
-        $('.datetimepicker1').datetimepicker({
-            language: 'fr',
-            weekStart: 1,
-            todayBtn: 1,
-            format: "hh:ii",
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 1,
-            minView: 0,
-            maxView: 1,
-            forceParse: 0
-        });
+       
     });
 </script>
