@@ -138,15 +138,21 @@
   								}
   								echo "Debit_graphe1();";
   								//Initialisation des variables
-  								for($i = 0; $i < 5 ; $i++){
-  									echo "$(\"#Debit".$i."\").val('');";
-	                        	}
-	                        	for($i = 0; $i < 5 ; $i++){
-  									echo "$(\"#Debit".$i."N\").val('');";
-	                        	}
+
+
+
+                  
+  							  for($i = 0; $i < 5 ; $i++){
+  									echo "Debit".$i." = $(\"#Debit".$i."\").val();";
+	                }
+	                
+                  for($i = 0; $i < 5 ; $i++){
+  									echo "Debit".$i."N = $(\"#Debit".$i."N\").val();";
+	                }
+
   								foreach ($dataD as $key => $value) {
-  									echo "$(\"#".$value."\").val('');";
-								}							
+  									echo $value." = $(\"#".$value."\").val();";
+								  }							
 
 
   								foreach ($dataD as $key => $value) {
