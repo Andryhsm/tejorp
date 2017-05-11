@@ -27,7 +27,6 @@ if (($isa == "0") || ($isa1 == "0")) {
     $_SESSION['prenom'] = $donnees['prenom'];
     $_SESSION['tel'] = $donnees['tel'];
     $_SESSION['email'] = $donnees['email'];
-    $_SESSION['adresse'] = $donnees['adresse'];
     $_SESSION['rue'] = $donnees['rue'];
     $_SESSION['code-postal'] = $donnees['code-postal'];
     $_SESSION['ville'] = $donnees['ville'];
