@@ -23,19 +23,19 @@ $statut = utf8_encode($statut);
 	//Soloina le post lava be
 
 	foreach (array_keys($_POST) as $value) {
-		eval("\$".$value." = (isset(\$_POST[\"".$value."\"])) ? \$_POST[\"".$value."\"] : \"\";");
+		eval("\$".$value." = (isset(\$_POST[\"".$value."\"])) ? htmlentities(addslashes(\$_POST[\"".$value."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
 	}
 	for($i = 5; $i < 85; $i++){
-		eval("\$Horaire".$i." = (isset(\$_POST[\"Horaire".$i."\"])) ? \$_POST[\"Horaire".$i."\"] : \"\";");
+		eval("\$Horaire".$i." = (isset(\$_POST[\"Horaire".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Horaire".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
 	}
 	for($i = 5; $i < 85; $i++){
-		eval("\$Horaire_".$i." = (isset(\$_POST[\"Horaire_".$i."\"])) ? \$_POST[\"Horaire_".$i."\"] : \"\";");
+		eval("\$Horaire_".$i." = (isset(\$_POST[\"Horaire_".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Horaire_".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
 	}
 	for($i = 5; $i < 45; $i++){
-		eval("\$Debit".$i." = (isset(\$_POST[\"Debit".$i."\"])) ? \$_POST[\"Debit".$i."\"] : \"\";");
+		eval("\$Debit".$i." = (isset(\$_POST[\"Debit".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Debit".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
 	}
 	for($i = 5; $i < 45; $i++){
-		eval("\$Debit_".$i." = (isset(\$_POST[\"Debit_".$i."\"])) ? \$_POST[\"Debit_".$i."\"] : \"\";");
+		eval("\$Debit_".$i." = (isset(\$_POST[\"Debit_".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Debit_".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
 	}
 
 	/* MODIFS STIAN DECLARATIONS DE VARIABLES */
