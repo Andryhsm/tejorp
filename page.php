@@ -56,7 +56,7 @@
             }
             .well
             {
-                background: rgba(10, 10, 10, 11);
+                background: rgba(10, 10, 10, 0.51);
             }
 
             h4{
@@ -196,6 +196,37 @@
             .decale{
                 margin-left: 20px;
             }
+
+            /*
+            .progress
+            {
+                left:0;
+                width: 100%;
+                height: 0.4em;
+                margin-bottom: 0px;
+                position: fixed;
+                top: 0;
+                overflow: hidden;
+                background-color: white;
+                content: "";
+                display: table;
+                table-layout: fixed;
+                z-index:99;
+            }
+
+            .progressbar 
+            {
+                width: 0%;
+                float: left;
+                height: 100%;
+                max-width: 100%;
+                background-color:yellowgreen;
+                -webkit-transition: width .6s ease;
+                -o-transition: width .6s ease;
+                transition: width .6s ease;
+            }
+            */
+            
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
@@ -205,6 +236,20 @@
         <script src="bootstrap-datepicker-1.6.4/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
         <script>
             $(document).ready(function () {
+
+                /*
+                $(window).load(function(){
+                  $(window).scroll(function() {
+                    var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
+                    console.log(wintop);
+                    var totalScroll = (wintop/(docheight-winheight))*100;
+                    console.log("total scroll" + totalScroll);
+                    $(".progressbar").css("width",totalScroll+"%");
+                  });
+
+                });
+                */
+
                 $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div id='12' class='rouge'>Etape 2</div><div id='13' class='verte'>Etape 3</div><div id='14' class='orangee'>Etape 4</div><div id='15' class='violette'>Etape 5</div><div id='16' class='jaune'>Etape 6</div></div>");
 
                 $("#insulinelentematin").change(function (event) {
@@ -1591,6 +1636,9 @@
         </script>
     </head>
     <body>
+    <article>
+        
+        <div>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -1621,6 +1669,15 @@
                 </div>
             </div>
         </nav>
+        </div>
+
+        <!--
+        <div class="progress">
+            <div class="progressbar">
+
+            </div>
+        </div>
+        -->
 
         <div class="etapesIndication">
             <div class="list-group" id="titreEtape">
@@ -1857,6 +1914,7 @@
 
         </script>
 
+    </article>
     </body>
 
 </html>
