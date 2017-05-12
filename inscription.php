@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
         <style>
             body
             {
@@ -186,7 +187,35 @@
         </div>
         <script src="./bootstrap/js/jquery.js"></script>   
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
-        <script type="text/javascript">
+        <script src="assets/js/jquery-ui.min.js"></script>
+         <script type="text/javascript">
+            // Pour l'autocompletion
+             var ville = [];
+                var code_postal  = [];
+                
+                $.ajax({
+                  url: 'lib/ville_cp.json',
+                  type: 'POST',
+                  dataType: "json",
+                  success: function(data){
+                    for(var i = 0; i < data.length; i++){
+                      ville.push(data[i].ville_nom_reel);
+                      code_postal.push(data[i].ville_code_postal);
+                    }
+                  },
+                  error: function(xhr){
+                    alert("Erreur de recuperation");
+                  }
+                });
+                $('#ville').autocomplete({
+                    source : ville,
+                    minLength: 3
+                });
+                $('#code-postal').autocomplete({
+                    source : code_postal,
+                    minLength: 3
+                });
+
             $(function () {
                 // A chaque sélection de fichier
                 $('#form-filter').find('input[name="photo"]').on('change', function (e) {
