@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datepicker3.min.css">
         <link rel="stylesheet" type="text/css" href="bootstrap-datepicker-1.6.4/css/bootstrap-datetimepicker.min.css">
         <link rel="stylesheet" type="text/css" href="btn.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
 
         <style>
             #rot  img{
@@ -1812,6 +1813,7 @@
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
         <script src="assets/js/Chart.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
         <script type="text/javascript">
@@ -1829,6 +1831,35 @@
         </script>
 
         <script type="text/javascript">
+        	// Pour l'autocompletion
+        	 var ville = [];
+			    var code_postal  = [];
+			    
+			    $.ajax({
+			      url: 'lib/ville_cp.json',
+			      type: 'POST',
+			      dataType: "json",
+			      success: function(data){
+			        for(var i = 0; i < data.length; i++){
+			          ville.push(data[i].ville_nom_reel);
+			          code_postal.push(data[i].ville_code_postal);
+			        }
+			      },
+			      error: function(xhr){
+			        alert("Erreur de recuperation");
+			      }
+			    });
+			    $('#villepatient').autocomplete({
+			        source : ville,
+			        minLength: 3
+			    });
+			    $('#codepostalpatient').autocomplete({
+			        source : code_postal,
+			        minLength: 3
+			    });
+
+
+
 
             $('#enregistrer').click(function () {
                 $('#save').trigger('click');
@@ -1869,6 +1900,13 @@
                 $("#form-filter").submit();
             });
 
+            $("input").keypress(function(event) 
+            {
+                if(event.which == 13)
+                {
+                    event.preventDefault();
+                }
+            });
 
             $('#save').click(function (e) {
                 e.preventDefault();

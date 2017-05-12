@@ -248,7 +248,7 @@ ob_start();
         <table class="table" style="margin-right: 20px;">
             <tbody>
                 <tr>
-                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 1</strong></td>
+                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 1:</strong><?php echo $datebasal1; ?></td>
                 </tr>
                 <tr>
                     <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
@@ -338,7 +338,7 @@ ob_start();
         <table class="table">
             <tbody>
                 <tr>
-                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 2</strong></td>
+                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 2:</strong><?php echo $datebasal2; ?></td>
                 </tr>
                 <tr>
                     <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
@@ -431,7 +431,7 @@ ob_start();
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6" style="text-align: center;">Schéma des bolus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo "Hisy date eto f jereo tsara"; ?> </th>
+                    <th colspan="6" style="text-align: center;">Schéma des bolus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo $datebolus; ?> </th>
                 </tr>
             </thead>
             <tbody>
@@ -507,7 +507,7 @@ ob_start();
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="12" style="text-align: center;">Schéma des glycémies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo "Hisy date eto f jereo tsara"; ?> </th>
+                    <th colspan="12" style="text-align: center;">Schéma des glycémies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo $dateglycemie; ?> </th>
                 </tr>
             </thead>
             <tbody>
@@ -1353,9 +1353,9 @@ try {
 
 //Suppression des fichiers
 
-  unlink("img/image".$id."bardate1.png");
-  unlink("img/image".$id."bardate2.png");
-  unlink("img/image".$id."barhg.png");
-  unlink("img/image".$id."bar.png");
+  unlink("img/image".$id_."bardate1.png");
+  unlink("img/image".$id_."bardate2.png");
+  unlink("img/image".$id_."barhg.png");
+  unlink("img/image".$id_."bar.png");
  
 ?>
