@@ -1,7 +1,10 @@
 <?php
+	
+	require "cnx.php";
 
-	
-	$string = "<b>Ville d'eau</b>";
-	
-	echo htmlentities($string, ENT_NOQUOTES,'ISO-8859-1', true);
+	for($i = 2; $i < 85; $i++){
+		$bdd->exec("ALTER TABLE `donnemedicale` ADD COLUMN glycemie".$i." VARCHAR(100) AFTER glycemie".($i - 1)."") or die(print_r($bdd->errorInfo()));
+	}
+
+	echo "Ajout de notre colonne avec succes ! ";	
 ?>
