@@ -688,6 +688,7 @@
                     <td>
                         <div class="input-group">
                             <input type="number" class="form-control" name="asgfrequence1" id="asgfrequence1">
+                        
                             <span class="input-group-addon">/ jour</span>
                         </div>  
                     </td> 
