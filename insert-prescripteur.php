@@ -39,6 +39,9 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $rue == "" || $
                 $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('avatar.png','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
                 $_SESSION['login'] = $login;
 
+                $donnees = $reponse->fetch();
+                $_SESSION['id'] = $donnees['id'];
+
                 $_SESSION['photo'] = 'avatar.png';
                 $_SESSION['nom'] = $nom;
                 $_SESSION['prenom'] = $prenom;
@@ -83,7 +86,9 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $rue == "" || $
                     if ($mdp == $conf_mdp) {
                         $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('$fichier','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
                         $_SESSION['login'] = $login;
+
                         $donnees = $reponse->fetch();
+                        $_SESSION['id'] = $donnees['id'];
 
                         $_SESSION['photo'] = $fichier;
                         $_SESSION['nom'] = $nom;
