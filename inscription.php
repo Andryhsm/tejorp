@@ -190,17 +190,18 @@
         <script src="assets/js/jquery-ui.min.js"></script>
          <script type="text/javascript">
             // Pour l'autocompletion
-             var ville = [];
+                var ville = [];
                 var code_postal  = [];
-                
+                var complet = [];
+                var complet2 = [];
                 $.ajax({
                   url: 'lib/ville_cp.json',
                   type: 'POST',
                   dataType: "json",
                   success: function(data){
                     for(var i = 0; i < data.length; i++){
-                      ville.push(data[i].ville_nom_reel);
-                      code_postal.push(data[i].ville_code_postal);
+                      complet.push({ value : data[i].ville_nom_reel, desc: data[i].ville_code_postal});
+                      complet2.push({ value : data[i].ville_code_postal, desc: data[i].ville_nom_reel});
                     }
                   },
                   error: function(xhr){
@@ -208,12 +209,18 @@
                   }
                 });
                 $('#ville').autocomplete({
-                    source : ville,
-                    minLength: 3
+                    source : complet,
+                    minLength: 3,
+                    select : function(event, ui){
+                        $("#code-postal").val(ui.item.desc);
+                    }
                 });
                 $('#code-postal').autocomplete({
-                    source : code_postal,
-                    minLength: 3
+                    source : complet2,
+                    minLength: 3,
+                    select: function(event, ui){
+                        $("#ville").val(ui.item.desc);
+                    }
                 });
 
             $(function () {
