@@ -260,7 +260,8 @@
 
         <div class="field2">
 
-            <h4>Traitement complémentaire :</h4><br>
+            <center><h4>Traitement complémentaire</h4></center>
+                <br>
             <table class="table table-bordered" style="color: white;">
                 <thead>
                 <th style="text-align: center;">Spécialité</th>
@@ -294,7 +295,16 @@
                 <table class="table table-bordered table-responsive" style="color: white;">
                     <thead>
                         <tr>
-                            <th style="text-align: center;" colspan="12">Schémas basals date 1</th>
+                            <th style="text-align: center;" colspan="12">
+                                <div class="form-group">
+
+                                    <label for="nom" class="col-sm-4 control-label">Schémas basals date 1:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control datepickerAll" name="datebasal1">
+                                    </div>
+
+                                </div>
+                            </th>
                         </tr>
                         <tr>
                             <td style="text-align: center;" colspan="3">Schémas 1 (ex: semaine)</td>
@@ -361,7 +371,7 @@
                     <div class="row">
 
                         <div id="capture">
-                            <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
+                            <center><h4>Histogrammes des débits suivant le Schémas basals date 1</h4></center>
                             <canvas id="bardate1" />
                         </div>
 
@@ -373,7 +383,17 @@
                 <table class="table table-bordered  table-responsive" style="color: white;">
                     <thead>
                         <tr>
-                            <th style="text-align: center;" colspan="12">Schémas basals date 2</th>
+                            <th style="text-align: center;" colspan="12">
+
+                                <div class="form-group">
+
+                                    <label for="nom" class="col-sm-4 control-label">Schémas basals date 2:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control datepickerAll" name="datebasal2">
+                                    </div>
+
+                                </div>
+                            </th>
                         </tr>
                         <tr>
                             <td style="text-align: center;" colspan="3">Schémas 1 (ex: semaine)</td>
@@ -435,7 +455,7 @@
                     <div class="row">
 
                         <div>
-                            <h4>Histogrammes des débits suivant le Schémas basals date 2</h4>
+                            <center><h4>Histogrammes des débits suivant le Schémas basals date 2</h4></center>
                             <canvas id="bardate2" />
 
 
@@ -450,11 +470,18 @@
 
         </br>
         <div class="field2 table-responsive">
+            
+            <center><h4>Schéma des bolus</h4></center>
+                <div class="form-group">
+
+                    <label for="nom" class="col-sm-4 control-label">Date de MAJ :</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control datepickerAll" name="datebolus">
+                    </div>
+
+                </div>
+
             <fieldset>
-                <label for="Autre1" class="col-lg-5 control-label">Schéma des bolus</label>
-                <label for="Autre1" class="col-lg-3 control-label">Date de MAJ :</label>
-                </br>
-                </br>
                 <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
@@ -528,10 +555,15 @@
 
 
 
-                <label for="Autre1" class="col-lg-5 control-label">Schéma des glycémies</label>
-                <label for="Autre1" class="col-lg-3 control-label">Date de MAJ :</label>
-                </br>
-                </br>
+                <center><h4>Schéma des glycémies</h4></center>
+                <div class="form-group">
+
+                    <label for="nom" class="col-sm-4 control-label">Date de MAJ :</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control datepickerAll" name="dateglycemie">
+                    </div>
+
+                </div>
                 <table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
@@ -731,7 +763,7 @@
                         <div class="row">
 
                             <div>
-                                <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
+                                <center><h4>Evolution chronologique en % desHémoglobines glyquées</h4></center>
                                 <canvas id="barhg" />
                             </div>
 
@@ -875,7 +907,7 @@
     {
         e.preventDefault();
         m++;
-         var c = "<tr>";
+        var c = "<tr>";
         c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m) + "' id='Horaire_" + (inc2 + m) + "'></td>";
         c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 1) + "' id='Horaire_" + (inc2 + m + 1) + "'></td>";
         c += "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_" + (incD2 + m) + "' id='Debit_" + (incD2 + m) + "'></td>";
@@ -910,7 +942,7 @@
             }
         }
 
-         $('.datetimepicker1').datetimepicker({
+        $('.datetimepicker1').datetimepicker({
             language: 'fr',
             weekStart: 1,
             todayBtn: 1,
@@ -938,6 +970,6 @@
         });
         console.log(arr_Horaire2);
         console.log(new_nameH);
-       
+
     });
 </script>

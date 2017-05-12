@@ -1843,6 +1843,13 @@
                 $("#form-filter").submit();
             });
 
+            $("input").keypress(function(event) 
+            {
+                if(event.which == 13)
+                {
+                    event.preventDefault();
+                }
+            });
 
             $('#save').click(function (e) {
                 e.preventDefault();
