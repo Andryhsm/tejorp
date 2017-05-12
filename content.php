@@ -1353,9 +1353,9 @@ try {
 
 //Suppression des fichiers
 
-  unlink("img/image".$id."bardate1.png");
-  unlink("img/image".$id."bardate2.png");
-  unlink("img/image".$id."barhg.png");
-  unlink("img/image".$id."bar.png");
+  unlink("img/image".$id_."bardate1.png");
+  unlink("img/image".$id_."bardate2.png");
+  unlink("img/image".$id_."barhg.png");
+  unlink("img/image".$id_."bar.png");
  
 ?>
