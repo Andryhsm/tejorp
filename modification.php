@@ -11,6 +11,7 @@ require './protection.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
+         <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
         <style>
             body
             {
@@ -181,7 +182,42 @@ require './protection.php';
         </div>
         <script src="./bootstrap/js/jquery.js"></script>   
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
+
+        <script src="assets/js/jquery-ui.min.js"></script>
         <script type="text/javascript">
+        // Pour l'autocompletion
+                var ville = [];
+                var code_postal  = [];
+                var complet = [];
+                var complet2 = [];
+                $.ajax({
+                  url: 'lib/ville_cp.json',
+                  type: 'POST',
+                  dataType: "json",
+                  success: function(data){
+                    for(var i = 0; i < data.length; i++){
+                      complet.push({ value : data[i].ville_nom_reel, desc: data[i].ville_code_postal});
+                      complet2.push({ value : data[i].ville_code_postal, desc: data[i].ville_nom_reel});
+                    }
+                  },
+                  error: function(xhr){
+                    alert("Erreur de recuperation");
+                  }
+                });
+                $('#ville').autocomplete({
+                    source : complet,
+                    minLength: 3,
+                    select : function(event, ui){
+                        $("#code-postal").val(ui.item.desc);
+                    }
+                });
+                $('#code-postal').autocomplete({
+                    source : complet2,
+                    minLength: 3,
+                    select: function(event, ui){
+                        $("#ville").val(ui.item.desc);
+                    }
+                });
                                     $(function () {
                                         // A chaque sélection de fichier
                                         $('#form-filter').find('input[name="photo"]').on('change', function (e) {
