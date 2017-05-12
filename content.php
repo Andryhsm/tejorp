@@ -17,31 +17,27 @@ $statut = utf8_encode($statut);
  * isset($_GET['vuehtml']) is not mandatory
  * it allow to display the result in the HTML format
  */
+//Soloina le post lava be
 
+foreach (array_keys($_POST) as $value) {
+    eval("\$" . $value . " = (isset(\$_POST[\"" . $value . "\"])) ? htmlentities(addslashes(\$_POST[\"" . $value . "\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
+}
+for ($i = 5; $i < 85; $i++) {
+    eval("\$Horaire" . $i . " = (isset(\$_POST[\"Horaire" . $i . "\"])) ? htmlentities(addslashes(\$_POST[\"Horaire" . $i . "\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
+}
+for ($i = 5; $i < 85; $i++) {
+    eval("\$Horaire_" . $i . " = (isset(\$_POST[\"Horaire_" . $i . "\"])) ? htmlentities(addslashes(\$_POST[\"Horaire_" . $i . "\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
+}
+for ($i = 5; $i < 45; $i++) {
+    eval("\$Debit" . $i . " = (isset(\$_POST[\"Debit" . $i . "\"])) ? htmlentities(addslashes(\$_POST[\"Debit" . $i . "\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
+}
+for ($i = 5; $i < 45; $i++) {
+    eval("\$Debit_" . $i . " = (isset(\$_POST[\"Debit_" . $i . "\"])) ? htmlentities(addslashes(\$_POST[\"Debit_" . $i . "\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
+}
 
-	
-	//Soloina le post lava be
+/* MODIFS STIAN DECLARATIONS DE VARIABLES */
 
-	foreach (array_keys($_POST) as $value) {
-		eval("\$".$value." = (isset(\$_POST[\"".$value."\"])) ? htmlentities(addslashes(\$_POST[\"".$value."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
-	}
-	for($i = 5; $i < 85; $i++){
-		eval("\$Horaire".$i." = (isset(\$_POST[\"Horaire".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Horaire".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
-	}
-	for($i = 5; $i < 85; $i++){
-		eval("\$Horaire_".$i." = (isset(\$_POST[\"Horaire_".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Horaire_".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
-	}
-	for($i = 5; $i < 45; $i++){
-		eval("\$Debit".$i." = (isset(\$_POST[\"Debit".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Debit".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
-	}
-	for($i = 5; $i < 45; $i++){
-		eval("\$Debit_".$i." = (isset(\$_POST[\"Debit_".$i."\"])) ? htmlentities(addslashes(\$_POST[\"Debit_".$i."\"]), ENT_NOQUOTES,'UTF-8', true) : \"\";");
-	}
-
-	/* MODIFS STIAN DECLARATIONS DE VARIABLES */
-
-	ob_start();
-
+ob_start();
 ?>
 
 <div id='content'>
@@ -287,35 +283,34 @@ $statut = utf8_encode($statut);
                     <td><?php echo $Horaire4; ?></td>
                     <td><?php echo $Debit4; ?></td>
                 </tr>
-          <?php
- 
-			          $inc = 5;
-			          $incD = 5;
+                <?php
+                $inc = 5;
+                $incD = 5;
 
-			          for($i = 0; $i < 10; $i++){
+                for ($i = 0; $i < 10; $i++) {
 
 
-			            eval("  if(\$Horaire".$inc." != \"\"){
+                    eval("  if(\$Horaire" . $inc . " != \"\"){
 			                    echo   \"<tr>
-			                              <td> \".\$Horaire".$inc.". \" </td>
-			                              <td> \".\$Horaire".($inc+1).". \" </td>
-			                              <td> \".\$Debit".($incD)." . \"</td>
-			                              <td> \".\$Horaire".($inc+2)." . \"</td>
-			                              <td> \".\$Horaire".($inc+3)." . \"</td>
-			                              <td> \".\$Debit".($incD + 1)." . \"</td>
-			                              <td> \".\$Horaire".($inc+4).". \" </td>
-			                              <td> \".\$Horaire".($inc+5)." . \"</td>
-			                              <td> \".\$Debit".($incD+2)." . \"</td>
-			                              <td> \".\$Horaire".($inc+6)." . \"</td>
-			                              <td> \".\$Horaire".($inc+7).". \" </td>
-			                              <td> \".\$Debit".($incD+3)." . \"</td>
+			                              <td> \".\$Horaire" . $inc . ". \" </td>
+			                              <td> \".\$Horaire" . ($inc + 1) . ". \" </td>
+			                              <td> \".\$Debit" . ($incD) . " . \"</td>
+			                              <td> \".\$Horaire" . ($inc + 2) . " . \"</td>
+			                              <td> \".\$Horaire" . ($inc + 3) . " . \"</td>
+			                              <td> \".\$Debit" . ($incD + 1) . " . \"</td>
+			                              <td> \".\$Horaire" . ($inc + 4) . ". \" </td>
+			                              <td> \".\$Horaire" . ($inc + 5) . " . \"</td>
+			                              <td> \".\$Debit" . ($incD + 2) . " . \"</td>
+			                              <td> \".\$Horaire" . ($inc + 6) . " . \"</td>
+			                              <td> \".\$Horaire" . ($inc + 7) . ". \" </td>
+			                              <td> \".\$Debit" . ($incD + 3) . " . \"</td>
 			                          </tr>\";
 			               }");
-			               echo "\n\n";
-			                    $inc += 8;
-			                    $incD += 4;
-			           }
-			?>
+                    echo "\n\n";
+                    $inc += 8;
+                    $incD += 4;
+                }
+                ?>
                 <tr>
                     <td><?php echo $Horaire1N; ?></td>
                     <td>23:59</td>
@@ -378,35 +373,34 @@ $statut = utf8_encode($statut);
                     <td><?php echo $Horaire_4; ?></td>
                     <td><?php echo $Debit_4; ?></td>
                 </tr>
-              <?php
- 
-			          $inc = 5;
-			          $incD = 5;
+                <?php
+                $inc = 5;
+                $incD = 5;
 
-			          for($i = 0; $i < 10; $i++){
+                for ($i = 0; $i < 10; $i++) {
 
 
-			            eval("  if(\$Horaire_".$inc." != \"\"){
+                    eval("  if(\$Horaire_" . $inc . " != \"\"){
 			                    echo   \"<tr>
-			                              <td> \".\$Horaire_".$inc.". \" </td>
-			                              <td> \".\$Horaire_".($inc+1).". \" </td>
-			                              <td> \".\$Debit_".($incD)." . \"</td>
-			                              <td> \".\$Horaire_".($inc+2)." . \"</td>
-			                              <td> \".\$Horaire_".($inc+3)." . \"</td>
-			                              <td> \".\$Debit_".($incD + 1)." . \"</td>
-			                              <td> \".\$Horaire_".($inc+4).". \" </td>
-			                              <td> \".\$Horaire_".($inc+5)." . \"</td>
-			                              <td> \".\$Debit_".($incD+2)." . \"</td>
-			                              <td> \".\$Horaire_".($inc+6)." . \"</td>
-			                              <td> \".\$Horaire_".($inc+7).". \" </td>
-			                              <td> \".\$Debit_".($incD+3)." . \"</td>
+			                              <td> \".\$Horaire_" . $inc . ". \" </td>
+			                              <td> \".\$Horaire_" . ($inc + 1) . ". \" </td>
+			                              <td> \".\$Debit_" . ($incD) . " . \"</td>
+			                              <td> \".\$Horaire_" . ($inc + 2) . " . \"</td>
+			                              <td> \".\$Horaire_" . ($inc + 3) . " . \"</td>
+			                              <td> \".\$Debit_" . ($incD + 1) . " . \"</td>
+			                              <td> \".\$Horaire_" . ($inc + 4) . ". \" </td>
+			                              <td> \".\$Horaire_" . ($inc + 5) . " . \"</td>
+			                              <td> \".\$Debit_" . ($incD + 2) . " . \"</td>
+			                              <td> \".\$Horaire_" . ($inc + 6) . " . \"</td>
+			                              <td> \".\$Horaire_" . ($inc + 7) . ". \" </td>
+			                              <td> \".\$Debit_" . ($incD + 3) . " . \"</td>
 			                          </tr>\";
 			               }");
-			               echo "\n\n";
-			                    $inc += 8;
-			                    $incD += 4;
-			           }
-			?>
+                    echo "\n\n";
+                    $inc += 8;
+                    $incD += 4;
+                }
+                ?>
 
                 <tr>
                     <td><?php echo $Horaire_N1; ?></td>
@@ -431,18 +425,23 @@ $statut = utf8_encode($statut);
     </div>
 
     <div class="dec">
+
+
         <table class="table">
             <thead>
                 <tr>
-                    <th style="width:17.66666666666667%; text-align: center;"><strong>Valeur glycémique</strong></th>
-                    <th style="width:14%; text-align: center;"><strong>Matin (UI)</strong></th>
-                    <th style="width:17.66666666666667%; text-align: center;"><strong>Midi (UI)</strong></th>
-                    <th style="width:18.66666666666667%; text-align: center;"><strong>Collation (UI)</strong></th>
-                    <th style="width:19.6%; text-align: center;"><strong>Soir (UI)</strong></th>
-                    <th>Autre (UI)</th>
+                    <th colspan="6" style="text-align: center;">Schéma des bolus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo "Hisy date eto f jereo tsara"; ?> </th>
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td style="width:16%; text-align: center;">Petit déjeuner (UI)</td>
+                    <td style="width:16%; text-align: center;">Déjeuner (UI)</td>
+                    <td style="width:16%; text-align: center;">Goûter (UI)</td>
+                    <td style="width:16%; text-align: center;">Dîner (UI)</td>
+                    <td style="width:16%; text-align: center;">Collation (UI)</td>
+                    <td style="width:16%; text-align: center;">Autre (UI)</td>
+                </tr>
                 <tr>
                     <td><?php echo $ValGlycemique1; ?></td>
                     <td><?php echo $ValGlyMatin1; ?></td>
@@ -500,10 +499,143 @@ $statut = utf8_encode($statut);
                     <td><?php echo $ValGlyAutre7; ?></td>
                 </tr>
             </tbody>
-        </table><br/>
-        <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
-         <!-- ?php echo '<img src="img/image'.$id.'barhg.png" style="width: 700px;" />';? -->
-        <br/><br/>
+        </table>
+        
+        <br><br>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="12" style="text-align: center;">Schéma des glycémies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo "Hisy date eto f jereo tsara"; ?> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" style="width:15.2%; text-align: center;"><strong>Petit déjeuner (g/l)</strong></td>
+                    <td colspan="2" style="width:15.2%; text-align: center;"><strong>Déjeuner (g/l)</strong></td>
+                    <td colspan="2" style="width:15.2%; text-align: center;"><strong>Goûter (g/l)</strong></td>
+                    <td colspan="2" style="width:15.2%; text-align: center;"><strong>Dîner (g/l)</strong></td>
+                    <td colspan="2" style="width:15.2%; text-align: center;"><strong>Collation (g/l)</strong></td>
+                    <td style="width:10%; text-align: center;"><strong>Coucher (g/l)</strong></td>
+                    <td style="width:10%; text-align: center;"><strong>Nuit (g/l)</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Pré</strong></td>
+                    <td><strong>Post</strong></td>
+                    <td><strong>Pré</strong></td>
+                    <td><strong>Post</strong></td>
+                    <td><strong>Pré</strong></td>
+                    <td><strong>Post</strong></td>
+                    <td><strong>Pré</strong></td>
+                    <td><strong>Post</strong></td>
+                    <td><strong>Pré</strong></td>
+                    <td><strong>Post</strong></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><strong><?php echo $glycemie1; ?></strong></td>
+                    <td><strong><?php echo $glycemie2; ?></strong></td>
+                    <td><strong><?php echo $glycemie3; ?></strong></td>
+                    <td><strong><?php echo $glycemie4; ?></strong></td>
+                    <td><strong><?php echo $glycemie5; ?></strong></td>
+                    <td><strong><?php echo $glycemie6; ?></strong></td>
+                    <td><strong><?php echo $glycemie7; ?></strong></td>
+                    <td><strong><?php echo $glycemie8; ?></strong></td>
+                    <td><strong><?php echo $glycemie9; ?></strong></td>
+                    <td><strong><?php echo $glycemie10; ?></strong></td>
+                    <td><strong><?php echo $glycemie11; ?></strong></td>
+                    <td><strong><?php echo $glycemie12; ?></strong></td>
+                </tr>
+                <tr>
+                    <td><strong><?php echo $glycemie13; ?></strong></td>
+                    <td><strong><?php echo $glycemie14; ?></strong></td>
+                    <td><strong><?php echo $glycemie15; ?></strong></td>
+                    <td><strong><?php echo $glycemie16; ?></strong></td>
+                    <td><strong><?php echo $glycemie17; ?></strong></td>
+                    <td><strong><?php echo $glycemie18; ?></strong></td>
+                    <td><strong><?php echo $glycemie19; ?></strong></td>
+                    <td><strong><?php echo $glycemie20; ?></strong></td>
+                    <td><strong><?php echo $glycemie21; ?></strong></td>
+                    <td><strong><?php echo $glycemie22; ?></strong></td>
+                    <td><strong><?php echo $glycemie23; ?></strong></td>
+                    <td><strong><?php echo $glycemie24; ?></strong></td>
+                </tr>
+                <tr>
+                    <td><strong><?php echo $glycemie25; ?></strong></td>
+                    <td><strong><?php echo $glycemie26; ?></strong></td>
+                    <td><strong><?php echo $glycemie27; ?></strong></td>
+                    <td><strong><?php echo $glycemie28; ?></strong></td>
+                    <td><strong><?php echo $glycemie29; ?></strong></td>
+                    <td><strong><?php echo $glycemie30; ?></strong></td>
+                    <td><strong><?php echo $glycemie31; ?></strong></td>
+                    <td><strong><?php echo $glycemie32; ?></strong></td>
+                    <td><strong><?php echo $glycemie33; ?></strong></td>
+                    <td><strong><?php echo $glycemie34; ?></strong></td>
+                    <td><strong><?php echo $glycemie35; ?></strong></td>
+                    <td><strong><?php echo $glycemie36; ?></strong></td>
+                </tr>
+                <tr>
+                    <td><strong><?php echo $glycemie37; ?></strong></td>
+                    <td><strong><?php echo $glycemie38; ?></strong></td>
+                    <td><strong><?php echo $glycemie39; ?></strong></td>
+                    <td><strong><?php echo $glycemie40; ?></strong></td>
+                    <td><strong><?php echo $glycemie41; ?></strong></td>
+                    <td><strong><?php echo $glycemie42; ?></strong></td>
+                    <td><strong><?php echo $glycemie43; ?></strong></td>
+                    <td><strong><?php echo $glycemie44; ?></strong></td>
+                    <td><strong><?php echo $glycemie45; ?></strong></td>
+                    <td><strong><?php echo $glycemie46; ?></strong></td>
+                    <td><strong><?php echo $glycemie47; ?></strong></td>
+                    <td><strong><?php echo $glycemie48; ?></strong></td>
+                </tr>
+                <tr>
+                    <td><strong><?php echo $glycemie49; ?></strong></td>
+                    <td><strong><?php echo $glycemie50; ?></strong></td>
+                    <td><strong><?php echo $glycemie51; ?></strong></td>
+                    <td><strong><?php echo $glycemie52; ?></strong></td>
+                    <td><strong><?php echo $glycemie53; ?></strong></td>
+                    <td><strong><?php echo $glycemie54; ?></strong></td>
+                    <td><strong><?php echo $glycemie55; ?></strong></td>
+                    <td><strong><?php echo $glycemie56; ?></strong></td>
+                    <td><strong><?php echo $glycemie57; ?></strong></td>
+                    <td><strong><?php echo $glycemie58; ?></strong></td>
+                    <td><strong><?php echo $glycemie59; ?></strong></td>
+                    <td><strong><?php echo $glycemie60; ?></strong></td>
+                </tr>
+                <tr>
+                    <td><strong><?php echo $glycemie61; ?></strong></td>
+                    <td><strong><?php echo $glycemie62; ?></strong></td>
+                    <td><strong><?php echo $glycemie63; ?></strong></td>
+                    <td><strong><?php echo $glycemie64; ?></strong></td>
+                    <td><strong><?php echo $glycemie65; ?></strong></td>
+                    <td><strong><?php echo $glycemie66; ?></strong></td>
+                    <td><strong><?php echo $glycemie67; ?></strong></td>
+                    <td><strong><?php echo $glycemie68; ?></strong></td>
+                    <td><strong><?php echo $glycemie69; ?></strong></td>
+                    <td><strong><?php echo $glycemie70; ?></strong></td>
+                    <td><strong><?php echo $glycemie71; ?></strong></td>
+                    <td><strong><?php echo $glycemie72; ?></strong></td>
+                </tr>
+                <tr>
+                    <td><strong><?php echo $glycemie73; ?></strong></td>
+                    <td><strong><?php echo $glycemie74; ?></strong></td>
+                    <td><strong><?php echo $glycemie75; ?></strong></td>
+                    <td><strong><?php echo $glycemie76; ?></strong></td>
+                    <td><strong><?php echo $glycemie77; ?></strong></td>
+                    <td><strong><?php echo $glycemie78; ?></strong></td>
+                    <td><strong><?php echo $glycemie79; ?></strong></td>
+                    <td><strong><?php echo $glycemie80; ?></strong></td>
+                    <td><strong><?php echo $glycemie81; ?></strong></td>
+                    <td><strong><?php echo $glycemie82; ?></strong></td>
+                    <td><strong><?php echo $glycemie83; ?></strong></td>
+                    <td><strong><?php echo $glycemie84; ?></strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+
     </div>
     <div class="dec">
         <strong>Synthèse/Commentaire : </strong> <?php echo $synthesecommentaire; ?> <br/>
@@ -538,6 +670,10 @@ $statut = utf8_encode($statut);
                 </tr>
             </tbody>
         </table>
+        <br>
+        <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
+         <!-- ?php echo '<img src="img/image'.$id.'barhg.png" style="width: 700px;" />';? -->
+        <br/><br/>
     </div>
 
     <div class="dec">
@@ -676,7 +812,7 @@ $statut = utf8_encode($statut);
     </div><br/><br/>
 
        <!-- ?php echo '<img src="img/image'.$id.'bar.png" style="width: 700px;" />';? -->
-    
+
     <div class="dec">
         <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
 
@@ -912,7 +1048,7 @@ $statut = utf8_encode($statut);
 
         <table style="margin-left: 5px;">
             <thead>
-                 <tr>
+                <tr>
                     <th style="text-align: center;">Etapes</th>
                     <th style="width: 60px;" ><?php echo $cathdate1; ?></th>
                     <th style="width: 60px;" ><?php echo $cathdate2; ?></th>
