@@ -79,7 +79,7 @@ require './protection.php';
                         <img class="img-responsive img-circle" style="vertical-align: center; background-color: white;" width="180px" heigth="180px" src="./image-person/<?php echo $_SESSION['photo']; ?>">
                     </div>
                     <div class="col-lg-6 col-md-6 col-xs-6" style="background-color: white; height: 170px; border-bottom-left-radius: 6px; border-top-left-radius: 6px;">
-                        <h2 style="color: green;"> <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?> </h2>
+                        <h2 style="color: green; "> <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?> </h2>
                         <h3><?php echo utf8_encode($_SESSION['statut']); ?></h3>
                         <h5>Téléphone: <?php echo $_SESSION['tel']; ?> &nbsp;&nbsp; Email: <?php echo $_SESSION['email']; ?></h5>
                         <a href="./logout.php">Déconnexion</a>
