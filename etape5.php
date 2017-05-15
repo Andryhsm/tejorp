@@ -507,7 +507,7 @@
 
                         <div class="radio">
 
-                            <input type="text" class="form-control datepickerAll" id="perempdate5" name="perempdate5" placeholder = "Date de péremption">
+                            <input type="text" class="form-control input-sm datepickerAll" id="perempdate5" name="perempdate5" placeholder = "Date de péremption">
 
                         </div>
 
