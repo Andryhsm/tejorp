@@ -59,7 +59,11 @@ require './protection.php';
             .filterable .filters input[disabled]:-ms-input-placeholder {
                 color: #333;
             }
-
+	
+			tr :hover
+			{
+				box-shadow: 1px 1px 100px #555;
+			}
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
@@ -126,9 +130,10 @@ require './protection.php';
                                 $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "'");
 
                                 while ($donnees = $reponse->fetch()) {
+                                	$id = $donnees['nompatient']."-".$donnees['prenompatient'];
                                     ?>
 
-                                    <tr>
+                                    <tr onClick="location='patient_controle.php?id=<?php echo($id); ?>'" style="cursor: pointer;">
                                         <td style="width: 20%;"><?php echo $donnees['nompatient']; ?></td>
                                         <td style="width: 20%;"><?php echo $donnees['prenompatient']; ?></td>
                                         <td style="width: 40%;"><?php echo $donnees['adressepatient']; ?></td>
