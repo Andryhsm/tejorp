@@ -3,6 +3,7 @@
 session_start();
 
 require 'cnx.php';
+require_once 'phash.php';
 
 $nom = addslashes($_POST['nom']);
 $prenom = addslashes($_POST['prenom']);
@@ -36,7 +37,10 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $rue == "" || $
 
         if (($isa == "0") && ($isa1 == "0")) {
             if ($mdp == $conf_mdp) {
-                $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('avatar.png','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
+                
+                $hach = phash::hash($mdp);
+                
+                $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('avatar.png','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$hach')") or die(print_r($bdd->ErrorInfo()));
                 $_SESSION['login'] = $login;
 
                 $donnees = $reponse->fetch();
@@ -84,7 +88,10 @@ if ($nom == "" || $prenom == "" || $email == "" || $tel == "" || $rue == "" || $
 
                 if (($isa == "0") && ($isa1 == "0")) {
                     if ($mdp == $conf_mdp) {
-                        $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('$fichier','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$mdp')") or die(print_r($bdd->ErrorInfo()));
+                        
+                        $hach = phash::hash($mdp);
+                        
+                        $bdd->exec("INSERT INTO `prescripteur` (`photo`,`nom`,`prenom`,`tel`,`email`,`rue`,`code-postal`,`ville`,`etablissement`,`statut`,`login`,`mdp`) VALUES ('$fichier','$nom','$prenom','$tel','$email','$rue','$code_postal','$ville','$etablissement','$statut','$login','$hach')") or die(print_r($bdd->ErrorInfo()));
                         $_SESSION['login'] = $login;
 
                         $donnees = $reponse->fetch();

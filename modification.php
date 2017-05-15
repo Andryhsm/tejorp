@@ -124,12 +124,7 @@ require './protection.php';
                                 <input type="number" placeholder="téléphone" required="" class="form-control" name="tel" id="tel" value="<?php echo $donnees['tel']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="adresse" class="col-sm-3 control-label">Adresse:</label>
-                            <div class="col-sm-8">
-                                <input type="text" placeholder="adresse" required="" class="form-control" name="adresse" id="adresse" value="<?php echo $donnees['adresse']; ?>">
-                            </div>
-                        </div>
+                        
                         <div class="form-group">
                             <label for="rue" class="col-sm-3 control-label">Numéro et nom de rue:</label>
                             <div class="col-sm-8">
