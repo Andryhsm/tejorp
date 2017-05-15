@@ -834,7 +834,7 @@ try {
     $req = $bdd->prepare("INSERT INTO insulinotherapiefonctionnelle(petitdejeunerDe, petitdejeunerA, dejeunerDe, dejeunerA, gouterDe, gouterA, dinerDe, dinerA, collationDe, collationA, petitdejeunerRotation, petitdejeunerObjectif, petitdejeunerSensibilite, dejeunerRotation, dejeunerObjectif, dejeunerSensibilite, gouterRotation, gouterObjectif, gouterSensibilite, dinerRotation, dinerObjectif, dinerSensibilite, collationRotation, collationObjectif, collationSensibilite, idPrescripteur, idPatient) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $req->execute(array($petitdejeunerDe, $petitdejeunerA, $dejeunerDe, $dejeunerA, $gouterDe, $gouterA, $dinerDe, $dinerA, $collationDe, $collationA, $petitdejeunerRotation, $petitdejeunerObjectif, $petitdejeunerSensibilite, $dejeunerRotation, $dejeunerObjectif, $dejeunerSensibilite, $gouterRotation, $gouterObjectif, $gouterSensibilite, $dinerRotation, $dinerObjectif, $dinerSensibilite, $collationRotation, $collationObjectif, $collationSensibilite, $idPrescripteur, $idPatient));
 
-    echo "Enregistrement reussi!";
+    echo "succes";
 } catch (PDOException $e) {
     echo("Erreur : " . $e->getMessage());
 }
