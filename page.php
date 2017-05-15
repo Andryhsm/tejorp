@@ -1541,22 +1541,31 @@
                     <a class="navbar-brand" href="#">
                         <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?></a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                    </ul>
+
+                <!-- <div id="navbar" class="navbar-collapse collapse">
+                    
                     <ul class="nav navbar-nav navbar-right">
-                        <!--                        <li><a href="./essai.php">essai</a></li>-->
                         <li><a href="./lumiere.php"><img width="33px" src="./img/help.png" /></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img width="33px" src="./img/pignon.png" /> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="./modification.php">Modifier mon profil</a></li>
+                                <li><a href="./utilisateur.php">Accueil</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="./logout.php">Déconnexion</a></li>
                             </ul>
                         </li>
                     </ul>
+                </div> -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./utilisateur.php">Accueil</a></li>
+                    <li><a href="./modification.php">Modifier mon profil</a></li>
+                    <li><a href="./lumiere.php">Conseil</a></li>
+                    <li><a href="./logout.php">Deconnexion</a></li>
+                  </ul>
                 </div>
+
             </div>
         </nav>
         </div>
