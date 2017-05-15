@@ -55,16 +55,16 @@ require './protection.php';
             <div class="grid">
                 <br><br>
                 <div class="row col-lg-offset-1" style="margin-bottom: 50px; ">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-3 col-xs-3">
                         <img class="img-responsive img-circle" style="vertical-align: center; background-color: white;" width="180px" heigth="180px" src="./image-person/<?php echo $_SESSION['photo']; ?>">
                     </div>
-                    <div class="col-lg-6" style="background-color: white; height: 170px; border-bottom-left-radius: 6px; border-top-left-radius: 6px;">
+                    <div class="col-lg-6 col-md-6 col-xs-6" style="background-color: white; height: 170px; border-bottom-left-radius: 6px; border-top-left-radius: 6px;">
 
-                        <h2 style="color: green;"> <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?> </h2>
-                        <h3><?php echo utf8_encode($_SESSION['statut']); ?></h3>
-                        <h5>Téléphone: <?php echo $_SESSION['tel']; ?> &nbsp;&nbsp; Email: <?php echo $_SESSION['email']; ?></h5>
+                        <h2 style="color: green; font-size:2.4vw;"> <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?> </h2>
+                        <h3 style="font-size:1.8vw;"><?php echo utf8_encode($_SESSION['statut']); ?></h3>
+                        <h5 style="font-size:1vw;">Téléphone: <?php echo $_SESSION['tel']; ?> &nbsp;&nbsp; Email: <?php echo $_SESSION['email']; ?></h5>
                     </div>
-                    <div class="col-lg-2" style="background-color: white; height: 170px; border-bottom-right-radius: 6px; border-top-right-radius: 6px;">
+                    <div class="col-lg-2 col-md-2 col-xs-2" style="background-color: white; height: 170px; border-bottom-right-radius: 6px; border-top-right-radius: 6px;">
                         <br>
                         <a href="./modification.php"> <img class="zoomEffect img-responsive" width="90px" src="./img/edit.png" alt="Modifier image" title="Modifier mon profil"> </a>
                     </div>
