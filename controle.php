@@ -59,7 +59,11 @@ require './protection.php';
             .filterable .filters input[disabled]:-ms-input-placeholder {
                 color: #333;
             }
-
+	
+			tr :hover
+			{
+				box-shadow: 1px 1px 100px #555;
+			}
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
@@ -109,7 +113,7 @@ require './protection.php';
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table table-hover">
                             <thead>
                                 <tr class="filters">
                                     <th><input type="text" class="form-control" placeholder="Nom" disabled></th>
@@ -126,22 +130,29 @@ require './protection.php';
                                 $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "'");
 
                                 while ($donnees = $reponse->fetch()) {
+                                	$id = $donnees['nompatient']."-".$donnees['prenompatient'];
                                     ?>
 
-                                    <tr>
+                                    <tr onClick="location='patient_controle.php?id=<?php echo($id); ?>'" style="cursor: pointer;">
                                         <td style="width: 20%;"><?php echo $donnees['nompatient']; ?></td>
-                                        <td style="width: 30%;"><?php echo $donnees['prenompatient']; ?></td>
-                                        <td style="width: 30%;"><?php echo $donnees['adressepatient']; ?></td>
+                                        <td style="width: 20%;"><?php echo $donnees['prenompatient']; ?></td>
+                                        <td style="width: 40%;"><?php echo $donnees['adressepatient']; ?></td>
                                         <td style="width: 20%;"><?php echo $donnees['mobilepatient']; ?></td>
                                     </tr>
 
                                 <?php } ?>
 
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4" class="bg-primary">
+                                        <div class="col-md-12 text-center">
+                                            <ul class="pagination pager" id="myPager"></ul>
+                                        </div>
+                                    </td> 
+                                </tr>
+                            </tfoot>
                         </table>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <ul class="pagination pagination-lg pager" id="myPager"></ul>
                     </div>
                 </div>
             </div>
@@ -253,7 +264,7 @@ require './protection.php';
 
             $(document).ready(function () {
 
-                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
+                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 10});
 
             });
         </script>
@@ -298,7 +309,7 @@ require './protection.php';
                     $filteredRows.hide();
                     /* Prepend no-result row if all rows are filtered */
                     if ($filteredRows.length === $rows.length) {
-                        $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="' + $table.find('.filters th').length + '">No result found</td></tr>'));
+                        $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="' + $table.find('.filters th').length + '">Aucun patient ne correspond a votre recheche</td></tr>'));
                     }
                 });
             });
