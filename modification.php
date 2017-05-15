@@ -11,7 +11,7 @@ require './protection.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
-         <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
         <style>
             body
             {
@@ -19,6 +19,20 @@ require './protection.php';
                 background-size: cover;    
                 color: #fff;
                 font-family: "Calibri"; 
+            }
+            li>a:hover
+            {
+                font-size: 1.1em;
+                color:  #fff;
+                text-decoration: none;
+            }
+
+            li>a
+            {
+                background-color: transparent;
+                font-size: 1.1em;
+                color: #fff;
+                text-decoration: none;
             }
         </style>
     </head>
@@ -35,25 +49,30 @@ require './protection.php';
                     </button>
                     <a class="navbar-brand" href="./utilisateur.php">Insulinothérapie</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <!--<li class="active"><a href="#">Inscription Patient</a></li>-->
-                        <!--                        <li><a href="#about">About</a></li>
-                                                <li><a href="#contact">Contact</a></li>-->
 
-                    </ul>
+                <!-- <div id="navbar" class="navbar-collapse collapse">
+                    
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="./lumiere.php"><img width="33px" src="./img/help.png" /></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img width="33px" src="./img/pignon.png" /> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="./modification.php">Modifier mon profil</a></li>
+                                <li><a href="./utilisateur.php">Accueil</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="./logout.php">Déconnexion</a></li>
                             </ul>
                         </li>
                     </ul>
+                </div> -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./utilisateur.php"><span class ="glyphicon glyphicon-home"></span>&nbsp; Accueil</a></li>
+                     <li><a href="./lumiere.php">Conseil</a></li>
+                    <li><a href="./logout.php">Deconnexion</a></li>
+                  </ul>
                 </div>
+
             </div>
         </nav>
         <div class="container">
