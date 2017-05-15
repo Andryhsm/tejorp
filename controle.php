@@ -105,7 +105,7 @@ require './protection.php';
                     <div class="panel-heading">
                         <h3 class="panel-title">LISTE DES PATIENTS</h3>
                         <div class="pull-right">
-                            <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Recherche</button>
+                            <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filtrer </button>
                         </div>
                     </div>
                     <div class="table-responsive">
