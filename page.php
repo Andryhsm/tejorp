@@ -209,19 +209,6 @@
         <script>
             $(document).ready(function () {
 
-                /*
-                $(window).load(function(){
-                  $(window).scroll(function() {
-                    var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
-                    console.log(wintop);
-                    var totalScroll = (wintop/(docheight-winheight))*100;
-                    console.log("total scroll" + totalScroll);
-                    $(".progressbar").css("width",totalScroll+"%");
-                  });
-
-                });
-                */
-
                 $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div id='12' class='rouge'>Etape 2</div><div id='13' class='verte'>Etape 3</div><div id='14' class='orangee'>Etape 4</div><div id='15' class='violette'>Etape 5</div><div id='16' class='jaune'>Etape 6</div></div>");
 
                 $("#insulinelentematin").change(function (event) {
@@ -577,11 +564,13 @@
                     $("#36").click(function () {
                         $('#6').trigger('click');
                     });
+
                     var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
                     var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
                     var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
                     var imc1 = 0, imc2 = 0, imc3 = 0, imc4 = 0, imc5 = 0, imc6 = 0, imc7 = 0, imc8 = 0, imc9 = 0;
                     jQuery(document).ready(function ($) {
+
                       <?php 
 
                         for($i = 1; $i < 9; $i++){
@@ -1541,22 +1530,6 @@
                     <a class="navbar-brand" href="#">
                         <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?></a>
                 </div>
-
-                <!-- <div id="navbar" class="navbar-collapse collapse">
-                    
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="./lumiere.php"><img width="33px" src="./img/help.png" /></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img width="33px" src="./img/pignon.png" /> <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./utilisateur.php">Accueil</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="./logout.php">Déconnexion</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div> -->
-
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="./utilisateur.php">Accueil</a></li>
@@ -1594,7 +1567,8 @@
                 <div class="item" id="etape2" style="display: none;">
                     <?php require './etape2.php'; ?>
                 </div>
-                <div class="item"  id="etape3" style="display: none;">
+                <div cl
+                ass="item"  id="etape3" style="display: none;">
                     <?php require './etape3.php'; ?>
                 </div>
                 <div class="item" id="etape4" style="display: none;">
@@ -1817,7 +1791,7 @@
                 }
             });
 
-            $('#save').click(function (e) {
+            $('#save').click(function (e) { 
                 e.preventDefault();
                 $("#form-filter").attr('action', 'traitement.php');
                 var form = $('#form-filter').get(0);
@@ -1834,7 +1808,7 @@
                     {
                         if (server_response === "succes")
                         {
-                            window.location.href = "content.php";
+                            window.location.href = "page.php";
                         }
                         else
                         {
@@ -1854,7 +1828,7 @@
                         }, 4000);
                     }
                 });
-                 
+                
                 setTimeout(function(){
                     $("#form-filter").attr('action', 'content.php');
                     $("#form-filter").submit();
