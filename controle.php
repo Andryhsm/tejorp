@@ -130,8 +130,8 @@ require './protection.php';
 
                                     <tr>
                                         <td style="width: 20%;"><?php echo $donnees['nompatient']; ?></td>
-                                        <td style="width: 30%;"><?php echo $donnees['prenompatient']; ?></td>
-                                        <td style="width: 30%;"><?php echo $donnees['adressepatient']; ?></td>
+                                        <td style="width: 20%;"><?php echo $donnees['prenompatient']; ?></td>
+                                        <td style="width: 40%;"><?php echo $donnees['adressepatient']; ?></td>
                                         <td style="width: 20%;"><?php echo $donnees['mobilepatient']; ?></td>
                                     </tr>
 
