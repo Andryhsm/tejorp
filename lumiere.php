@@ -35,31 +35,36 @@ require './protection.php';
                     </button>
                     <a class="navbar-brand" href="./utilisateur.php">Insulinothérapie</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <!--<li class="active"><a href="#">Inscription Patient</a></li>-->
-                        <!--                        <li><a href="#about">About</a></li>
-                                                <li><a href="#contact">Contact</a></li>-->
 
-                    </ul>
+                <!-- <div id="navbar" class="navbar-collapse collapse">
+                    
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="./lumiere.php"><img width="33px" src="./img/help.png" /></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img width="33px" src="./img/pignon.png" /> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="./modification.php">Modifier mon profil</a></li>
+                                <li><a href="./utilisateur.php">Accueil</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="./logout.php">Déconnexion</a></li>
                             </ul>
                         </li>
                     </ul>
+                </div> -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./utilisateur.php">Accueil</a></li>
+                    <li><a href="./modification.php">Modifier mon profil</a></li>
+                    <li><a href="./logout.php">Déconnexion</a></li>
+                  </ul>
                 </div>
+
             </div>
         </nav>
         <div class="container">
             <div class="well" style="margin-top: 50px;">
                 <center><h2 style="color: white;"> Rappel de la méthode / Gestion des données / Gestion des déchets </h2></center>
-                <ul style="list-style: none;">
+                <ul style="list-style: none; align:justify;">
                     <li>1- Avant tout prélèvement, vérifier l'état du matériel :
                         Fonctionnement du lecteur, date de péremption des bandelettes ou électrodes, le fonctionnement de l'auto piqueur, propreté du matériel...</li>
                     <li>2- Se laver les mains au savon et à l’eau chaude (pour favoriser l’arrivée du sang). Ne pas utiliser de désinfectant, de crème ou de lotion, cela fausserait les résultats.</li>

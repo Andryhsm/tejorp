@@ -209,19 +209,6 @@
         <script>
             $(document).ready(function () {
 
-                /*
-                $(window).load(function(){
-                  $(window).scroll(function() {
-                    var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
-                    console.log(wintop);
-                    var totalScroll = (wintop/(docheight-winheight))*100;
-                    console.log("total scroll" + totalScroll);
-                    $(".progressbar").css("width",totalScroll+"%");
-                  });
-
-                });
-                */
-
                 $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div id='12' class='rouge'>Etape 2</div><div id='13' class='verte'>Etape 3</div><div id='14' class='orangee'>Etape 4</div><div id='15' class='violette'>Etape 5</div><div id='16' class='jaune'>Etape 6</div></div>");
 
                 $("#insulinelentematin").change(function (event) {
@@ -577,282 +564,50 @@
                     $("#36").click(function () {
                         $('#6').trigger('click');
                     });
+
                     var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
                     var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
                     var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
                     var imc1 = 0, imc2 = 0, imc3 = 0, imc4 = 0, imc5 = 0, imc6 = 0, imc7 = 0, imc8 = 0, imc9 = 0;
                     jQuery(document).ready(function ($) {
-                        $("#date1").change(function (event) {
-                            date1 = $('#date1').val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                        });
-                        $("#poids1").change(function (event) {
-                            date1 = get_val('date1');
-                            taille1 = get_val('taille1');
-                            poids1 = get_val('poids1');
-                            if(taille1 != 0 && date1 != 0){  
-                                var taille = Math.pow((taille1 * 0.01), 2);
-                                imc1 = poids1 / taille;
-                                imc1 = imc1.toFixed(1);
-                                $("#imc1").val(imc1);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#taille1").change(function (event) {
-                            date1 = get_val('date1');
-                            taille1 = get_val('taille1');
-                            poids1 = get_val('poids1');
-                            if(taille1 != 0 && date1 != 0){  
-                                var taille = Math.pow((taille1 * 0.01), 2);
-                                imc1 = poids1 / taille;
-                                imc1 = imc1.toFixed(1);
-                                $("#imc1").val(imc1);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                         $("#date2").change(function (event) {
-                            date2 = $('#date2').val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                        });
-                        $("#poids2").change(function (event) {
-                            date2 = get_val('date2');
-                            taille2 = get_val('taille2');
-                            poids2 = get_val('poids2');
-                            if(taille2 != 0 && poids2 != 0){
-                                var taille = Math.pow((taille2 * 0.01), 2);
-                                imc2 = poids2 / taille;
-                                imc2 = imc2.toFixed(1);
-                                $("#imc2").val(imc2);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                         $("#taille2").change(function (event) {
-                            date2 = get_val('date2');
-                            taille2 = get_val('taille2');
-                            poids2 = get_val('poids2');
-                            if(taille2 != 0 && poids2 != 0){
-                                var taille = Math.pow((taille2 * 0.01), 2);
-                                imc2 = poids2 / taille;
-                                imc2 = imc2.toFixed(1);
-                                $("#imc2").val(imc2);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#date3").change(function (event) {
-                            date3 = $("#date3").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                        });
-                        $("#poids3").change(function (event) {
-                            date3 = $("#date3").val();
-                            taille3 = get_val('taille3');
-                            poids3 = get_val('poids3');
-                            if(taille3 != 0 && poids3 != 0){ 
-                                var taille = Math.pow((taille3 * 0.01), 2);
-                                imc3 = poids3 / taille;
-                                imc3 = imc3.toFixed(1);
-                                $("#imc3").val(imc3);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#taille3").change(function (event) {
-                            date3 = $("#date3").val();
-                            taille3 = get_val('taille3');
-                            poids3 = get_val('poids3');
-                            if(taille3 != 0 && poids3 != 0){ 
-                                var taille = Math.pow((taille3 * 0.01), 2);
-                                imc3 = poids3 / taille;
-                                imc3 = imc3.toFixed(1);
-                                $("#imc3").val(imc3);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#date4").change(function (event) {
-                            date4 = $("#date4").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                        });
-                        $("#poids4").change(function (event) {
-                            date4 = $("#date4").val();
-                            taille4 = get_val('taille4');
-                            poids4 = get_val('poids4');
-                            if(taille4 != 0 && poids4 != 0){ 
-                                var taille = Math.pow((taille4 * 0.01), 2);
-                                imc4 = poids4 / taille;
-                                imc4 = imc4.toFixed(1);
-                                $("#imc4").val(imc4);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                         $("#taille4").change(function (event) {
-                            date4 = $("#date4").val();
-                            taille4 = get_val('taille4');
-                            poids4 = get_val('poids4');
-                            if(taille4 != 0 && poids4 != 0){ 
-                                var taille = Math.pow((taille4 * 0.01), 2);
-                                imc4 = poids4 / taille;
-                                imc4 = imc4.toFixed(1);
-                                $("#imc4").val(imc4);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#date5").change(function (event) {
-                            date5 = $("#date5").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                        });
-                        $("#poids5").change(function (event) {
-                            date5 = $("#date5").val();
-                            taille5 = get_val('taille5');
-                            poids5 = get_val('poids5');
-                            if(taille5 != 0 && poids5 != 0){    
-                                var taille = Math.pow((taille5 * 0.01), 2);
-                                imc5 = poids5 / taille;
-                                imc5 = imc5.toFixed(1);
-                                $("#imc5").val(imc5);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#taille5").change(function (event) {
-                            date5 = $("#date5").val();
-                            taille5 = get_val('taille5');
-                            poids5 = get_val('poids5');
-                            if(taille5 != 0 && poids5 != 0){    
-                                var taille = Math.pow((taille5 * 0.01), 2);
-                                imc5 = poids5 / taille;
-                                imc5 = imc5.toFixed(1);
-                                $("#imc5").val(imc5);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#date6").change(function (event) {
-                            date6 = $("#date6").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                        });
-                        $("#poids6").change(function (event) {
-                            date6 = $("#date6").val();
-                            taille6 = get_val('taille6');
-                            poids6 = get_val('poids6');
-                            if(taille6 != 0 && poids6 != 0){     
-                                var taille = Math.pow((taille6 * 0.01), 2);
-                                imc6 = poids6 / taille;
-                                imc6 = imc6.toFixed(1);
-                                $("#imc6").val(imc6);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#taille6").change(function (event) {
-                            date6 = $("#date6").val();
-                            taille6 = get_val('taille6');
-                            poids6 = get_val('poids6');
-                            if(taille6 != 0 && poids6 != 0){     
-                                var taille = Math.pow((taille6 * 0.01), 2);
-                                imc6 = poids6 / taille;
-                                imc6 = imc6.toFixed(1);
-                                $("#imc6").val(imc6);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#date7").change(function (event) {
-                            date7 = $("#date7").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9)
-                        });
-                        $("#poids7").change(function (event) {
-                            date7 = $("#date7").val();
-                            taille7 = get_val('taille7');
-                            poids7 = get_val('poids7');
-                            if(taille7 != 0 && poids7 != 0){      
-                                var taille = Math.pow((taille7 * 0.01), 2);
-                                imc7 = poids7 / taille;
-                                imc7 = imc7.toFixed(1);
-                                $("#imc7").val(imc7);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                         $("#taille7").change(function (event) {
-                            date7 = $("#date7").val();
-                            taille7 = get_val('taille7');
-                            poids7 = get_val('poids7');
-                            if(taille7 != 0 && poids7 != 0){      
-                                var taille = Math.pow((taille7 * 0.01), 2);
-                                imc7 = poids7 / taille;
-                                imc7 = imc7.toFixed(1);
-                                $("#imc7").val(imc7);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#date8").change(function (event) {
-                            date8 = $("#date8").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9)
-                        });
-                        $("#poids8").change(function (event) {
-                            date8 = $("#date8").val();
-                            taille8 = get_val('taille8');
-                            poids8 = get_val('poids8');
-                            if(taill8 != 0 && poids8 != 0){  
-                                var taille = Math.pow((taille8 * 0.01), 2);
-                                imc8 = poids8 / taille;
-                                imc8 = imc8.toFixed(1);
-                                $("#imc8").val(imc8);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                         $("#taille8").change(function (event) {
-                            date8 = $("#date8").val();
-                            taille8 = get_val('taille8');
-                            poids8 = get_val('poids8');
-                            if(taill8 != 0 && poids8 != 0){  
-                                var taille = Math.pow((taille8 * 0.01), 2);
-                                imc8 = poids8 / taille;
-                                imc8 = imc8.toFixed(1);
-                                $("#imc8").val(imc8);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                            }
-                        });
-                        $("#date9").change(function (event) {
-                            date9 = $("#date9").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
 
-                        });
-                        $("#poids9").change(function (event) {
-                            date9 = $("#date9").val();
-                            taille9 = get_val('taille9');
-                            poids9 = get_val('poids9');
-                            if(poids9 != 0 && taille9 != 0){  
-                                var taille = Math.pow((taille9 * 0.01), 2);
-                                imc9 = poids9 / taille;
-                                imc9 = imc9.toFixed(1);
-                                $("#imc9").val(imc9);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                           }
-                        });
-                         $("#taille9").change(function (event) {
-                            date9 = $("#date9").val();
-                            taille9 = get_val('taille9');
-                            poids9 = get_val('poids9');
-                            if(poids9 != 0 && taille9 != 0){  
-                                var taille = Math.pow((taille9 * 0.01), 2);
-                                imc9 = poids9 / taille;
-                                imc9 = imc9.toFixed(1);
-                                $("#imc9").val(imc9);
-                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                                capturer_img("bar");
-                           }
-                        });
+                      <?php 
+
+                        for($i = 1; $i < 9; $i++){
+                            echo "$('#date".$i."').change(function (event) {
+                                    date".$i." = $('#date".$i."').val();
+                                    dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                });
+                                $('#poids".$i."').change(function (event) {
+                                    date".$i." = $('#date".$i."').val();
+                                    taille".$i." = get_val('taille".$i."');
+                                    poids".$i." = get_val('poids".$i."');
+                                    if(taille".$i." != 0 && poids".$i." != 0){
+                                        var taille = Math.pow((taille".$i." * 0.01), 2);
+                                        imc".$i." = poids".$i." / taille;
+                                        imc".$i." = imc".$i.".toFixed(1);
+                                        $('#imc".$i."').val(imc".$i.");
+                                        dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                        capturer_img('bar');
+                                    }
+                                });
+                                 $('#taille".$i."').change(function (event) {
+                                    date".$i." = $('#date".$i."').val();
+                                    taille".$i." = get_val('taille".$i."');
+                                    poids".$i." = get_val('poids".$i."');
+                                    if(taille".$i." != 0 && poids".$i." != 0){
+                                        var taille = Math.pow((taille".$i." * 0.01), 2);
+                                        imc".$i." = poids".$i." / taille;
+                                        imc".$i." = imc".$i.".toFixed(1);
+                                        $('#imc".$i."').val(imc".$i.");
+                                        dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                        capturer_img('bar');
+                                    }
+                                });";
+                        }
+                      ?> 
+                       
+                      
                         var barData = {
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
                             datasets: [
@@ -1775,22 +1530,15 @@
                     <a class="navbar-brand" href="#">
                         <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?></a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <!--                        <li><a href="./essai.php">essai</a></li>-->
-                        <li><a href="./lumiere.php"><img width="33px" src="./img/help.png" /></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img width="33px" src="./img/pignon.png" /> <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./modification.php">Modifier mon profil</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="./logout.php">Déconnexion</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./utilisateur.php">Accueil</a></li>
+                    <li><a href="./modification.php">Modifier mon profil</a></li>
+                    <li><a href="./lumiere.php">Conseil</a></li>
+                    <li><a href="./logout.php">Déconnexion</a></li>
+                  </ul>
                 </div>
+
             </div>
         </nav>
         </div>
@@ -1819,7 +1567,8 @@
                 <div class="item" id="etape2" style="display: none;">
                     <?php require './etape2.php'; ?>
                 </div>
-                <div class="item"  id="etape3" style="display: none;">
+                <div cl
+                ass="item"  id="etape3" style="display: none;">
                     <?php require './etape3.php'; ?>
                 </div>
                 <div class="item" id="etape4" style="display: none;">
@@ -2042,7 +1791,7 @@
                 }
             });
 
-            $('#save').click(function (e) {
+            $('#save').click(function (e) { 
                 e.preventDefault();
                 $("#form-filter").attr('action', 'traitement.php');
                 var form = $('#form-filter').get(0);
@@ -2059,7 +1808,7 @@
                     {
                         if (server_response === "succes")
                         {
-                            window.location.href = "content.php";
+                            window.location.href = "page.php";
                         }
                         else
                         {
@@ -2079,7 +1828,7 @@
                         }, 4000);
                     }
                 });
-                 
+                
                 setTimeout(function(){
                     $("#form-filter").attr('action', 'content.php');
                     $("#form-filter").submit();
