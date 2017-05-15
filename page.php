@@ -1796,7 +1796,7 @@
                     <li><a href="./utilisateur.php">Accueil</a></li>
                     <li><a href="./modification.php">Modifier mon profil</a></li>
                     <li><a href="./lumiere.php">Conseil</a></li>
-                    <li><a href="./logout.php">Deconnexion</a></li>
+                    <li><a href="./logout.php">Déconnexion</a></li>
                   </ul>
                 </div>
 

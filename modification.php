@@ -67,9 +67,9 @@ require './protection.php';
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./utilisateur.php"><span class ="glyphicon glyphicon-home"></span>&nbsp; Accueil</a></li>
+                    <li><a href="./utilisateur.php">Accueil</a></li>
                      <li><a href="./lumiere.php">Conseil</a></li>
-                    <li><a href="./logout.php">Deconnexion</a></li>
+                    <li><a href="./logout.php">Déconnexion</a></li>
                   </ul>
                 </div>
 
