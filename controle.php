@@ -109,7 +109,7 @@ require './protection.php';
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table table-hover">
                             <thead>
                                 <tr class="filters">
                                     <th><input type="text" class="form-control" placeholder="Nom" disabled></th>
@@ -138,10 +138,16 @@ require './protection.php';
                                 <?php } ?>
 
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4" class="bg-primary">
+                                        <div class="col-md-12 text-center">
+                                            <ul class="pagination pager" id="myPager"></ul>
+                                        </div>
+                                    </td> 
+                                </tr>
+                            </tfoot>
                         </table>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <ul class="pagination pagination-lg pager" id="myPager"></ul>
                     </div>
                 </div>
             </div>
