@@ -159,6 +159,7 @@
                     echo  "$(\"#".$value."\").change(function(){
                                 ".$value." = $(\"#".$value."\").val();
                                 Debit_graphe1();
+                                capturer2('bardate2');
                               });";
                 }
 
@@ -167,6 +168,7 @@
   									echo 	"$(\"#".$value."\").change(function(){
 					              				".$value." = $(\"#".$value."\").val();
 					              				Debit_graphe2();
+                                capturer2('bardate2');
 					              			});";
 								}
 
@@ -177,32 +179,34 @@
   								for($i = 0; $i < 5 ; $i++){
 	                        		echo	"$(\"#Debit_".$i."\").change(function (event) {";
 			                        echo    	"Debit_".$i." = $('#Debit_".$i."').val();";
-			                        echo    	"Debit_graphe2();";
+			                        echo    	"Debit_graphe2();
+                                         capturer2('bardate2');";
 			                        echo 	"});";
   								}
   	                        	for($i = 0; $i < 5 ; $i++){
   	                        		echo	"$(\"#Debit_N".$i."\").change(function (event) {";
   			                        echo    	"Debit_N".$i." = $('#Debit_N".$i."').val();";
-  			                        echo    	"Debit_graphe2();"	;
+  			                        echo    	"Debit_graphe2();
+                                           capturer2('bardate2');"	;
   			                        echo 	"});";
 
 
                               if($i == 4){
                                 echo  "$(\"#Debit_N".$i."\").change(function (event) {";
                                 echo      "Debit_N".$i." = $('#Debit_N".$i."').val();";
-                                echo      "Debit_graphe2();"  ;
-                                echo      "setTimeout(function () {
-                                              capture('bardate2');
-                                          }, 800);";
+                                echo      "Debit_graphe2();
+                                          capturer2('bardate2');"  ;
                                 echo  "});";
                               }
   								}
     								echo $initialiser;
     								echo $tracer_graphe2;
   							}
-  						
-
-
+  	
               ?>
 
-
+            function capturer2(img){
+                  setTimeout(function() {
+                        capture(img);
+                  }, 800);;
+            }

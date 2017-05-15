@@ -331,7 +331,13 @@ ob_start();
         </table 
         <br/>
         <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
-            <?php echo '<img src="img/image'.$id_.'bardate1.png" style="width: 700px;" />';?>
+            <?php
+            	$image = 'img/image'.$id_.'bardate1.png';
+
+            		if(file_exists($image))
+             			echo '<img src="'.$image.'" style="width: 700px;" />'
+
+             	;?>
         <br/><br/>
     </div>
     <div class="dec">
@@ -421,7 +427,13 @@ ob_start();
         </table
         <br/>
 
-  <?php echo '<img src="img/image'.$id_.'bardate2.png" style="width: 700px;" />';?>
+    <?php
+            	$image = 'img/image'.$id_.'bardate2.png';
+
+            		if(file_exists($image))
+             			echo '<img src="'.$image.'" style="width: 700px;" />'
+
+             	;?>
         <br/><br/>
     </div>
 
@@ -673,7 +685,13 @@ ob_start();
         </table>
         <br>
         <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
-         <?php echo '<img src="img/image'.$id_.'barhg.png" style="width: 700px;" />';?>
+          <?php
+            	$image = 'img/image'.$id_.'barhg.png';
+
+            		if(file_exists($image))
+             			echo '<img src="'.$image.'" style="width: 700px;" />'
+
+             	;?>
         <br/><br/>
     </div>
 
@@ -812,7 +830,13 @@ ob_start();
         </table>
     </div><br/><br/>
 
-       <?php echo '<img src="img/image'.$id_.'bar.png" style="width: 700px;" />';?>
+         <?php
+            	$image = 'img/image'.$id_.'bar.png';
+
+            		if(file_exists($image))
+             			echo '<img src="'.$image.'" style="width: 700px;" />'
+
+             	;?>
 
     <div class="dec">
         <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
@@ -1352,10 +1376,17 @@ try {
 }
 
 //Suppression des fichiers
-
-  unlink("img/image".$id_."bardate1.png");
-  unlink("img/image".$id_."bardate2.png");
-  unlink("img/image".$id_."barhg.png");
-  unlink("img/image".$id_."bar.png");
+ $image1 = "img/image".$id_."bardate1.png"; 
+  	if(file_exists($image1))
+  		unlink($image1);
+ $image2 = "img/image".$id_."bardate2.png"; 
+  	if(file_exists($image2))
+  		unlink($image2);
+ $image3 = "img/image".$id_."barhg.png"; 
+  	if(file_exists($image3))
+  		unlink($image3);
+ $image4 = "img/image".$id_."bar.png"; 
+  	if(file_exists($image4))
+  		unlink($image4);
  
 ?>

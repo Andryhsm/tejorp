@@ -198,35 +198,6 @@
                 margin-left: 20px;
             }
 
-            /*
-            .progress
-            {
-                left:0;
-                width: 100%;
-                height: 0.4em;
-                margin-bottom: 0px;
-                position: fixed;
-                top: 0;
-                overflow: hidden;
-                background-color: white;
-                content: "";
-                display: table;
-                table-layout: fixed;
-                z-index:99;
-            }
-
-            .progressbar 
-            {
-                width: 0%;
-                float: left;
-                height: 100%;
-                max-width: 100%;
-                background-color:yellowgreen;
-                -webkit-transition: width .6s ease;
-                -o-transition: width .6s ease;
-                transition: width .6s ease;
-            }
-            */
             
         </style>
 
@@ -497,42 +468,49 @@
                         $("#ValHbA1cHemGlyc1").change(function (event) {
                             ValHbA1cHemGlyc1 = $('#ValHbA1cHemGlyc1').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc2").change(function (event) {
                             ValHbA1cHemGlyc2 = $('#ValHbA1cHemGlyc2').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc3").change(function (event) {
                             ValHbA1cHemGlyc3 = $('#ValHbA1cHemGlyc3').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc4").change(function (event) {
                             ValHbA1cHemGlyc4 = $('#ValHbA1cHemGlyc4').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc5").change(function (event) {
                             ValHbA1cHemGlyc5 = $('#ValHbA1cHemGlyc5').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc6").change(function (event) {
                             ValHbA1cHemGlyc6 = $('#ValHbA1cHemGlyc6').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc7").change(function (event) {
                             ValHbA1cHemGlyc7 = $('#ValHbA1cHemGlyc7').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc8").change(function (event) {
                             ValHbA1cHemGlyc8 = $('#ValHbA1cHemGlyc8').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
+                            capturer_img("barhg");
                         });
                         $("#ValHbA1cHemGlyc9").change(function (event) {
                             ValHbA1cHemGlyc9 = $('#ValHbA1cHemGlyc9').val();
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
                             setTimeout(function () {
                                 capture('barhg');
-                            }, 800);
-
+                            }, 800);    
                         });
                         // recup data table HbA1c
                         initialiser();
@@ -609,28 +587,60 @@
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
                         $("#poids1").change(function (event) {
-                            date1 = $("#date1").val();
-                            taille1 = $("#taille1").val();
-                            poids1 = $("#poids1").val();
-                            var taille = Math.pow((taille1 * 0.01), 2);
-                            imc1 = poids1 / taille;
-                            imc1 = imc1.toFixed(1);
-                            $("#imc1").val(imc1);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            date1 = get_val('date1');
+                            taille1 = get_val('taille1');
+                            poids1 = get_val('poids1');
+                            if(taille1 != 0 && date1 != 0){  
+                                var taille = Math.pow((taille1 * 0.01), 2);
+                                imc1 = poids1 / taille;
+                                imc1 = imc1.toFixed(1);
+                                $("#imc1").val(imc1);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
-                        $("#date2").change(function (event) {
-                            date2 = $("#date2").val();
+                        $("#taille1").change(function (event) {
+                            date1 = get_val('date1');
+                            taille1 = get_val('taille1');
+                            poids1 = get_val('poids1');
+                            if(taille1 != 0 && date1 != 0){  
+                                var taille = Math.pow((taille1 * 0.01), 2);
+                                imc1 = poids1 / taille;
+                                imc1 = imc1.toFixed(1);
+                                $("#imc1").val(imc1);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                         $("#date2").change(function (event) {
+                            date2 = $('#date2').val();
                             dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
                         $("#poids2").change(function (event) {
-                            date2 = $("#date2").val();
-                            taille2 = $("#taille2").val();
-                            poids2 = $("#poids2").val();
-                            var taille = Math.pow((taille2 * 0.01), 2);
-                            imc2 = poids2 / taille;
-                            imc2 = imc2.toFixed(1);
-                            $("#imc2").val(imc2);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            date2 = get_val('date2');
+                            taille2 = get_val('taille2');
+                            poids2 = get_val('poids2');
+                            if(taille2 != 0 && poids2 != 0){
+                                var taille = Math.pow((taille2 * 0.01), 2);
+                                imc2 = poids2 / taille;
+                                imc2 = imc2.toFixed(1);
+                                $("#imc2").val(imc2);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                         $("#taille2").change(function (event) {
+                            date2 = get_val('date2');
+                            taille2 = get_val('taille2');
+                            poids2 = get_val('poids2');
+                            if(taille2 != 0 && poids2 != 0){
+                                var taille = Math.pow((taille2 * 0.01), 2);
+                                imc2 = poids2 / taille;
+                                imc2 = imc2.toFixed(1);
+                                $("#imc2").val(imc2);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
                         $("#date3").change(function (event) {
                             date3 = $("#date3").val();
@@ -638,13 +648,29 @@
                         });
                         $("#poids3").change(function (event) {
                             date3 = $("#date3").val();
-                            taille3 = $("#taille3").val();
-                            poids3 = $("#poids3").val();
-                            var taille = Math.pow((taille3 * 0.01), 2);
-                            imc3 = poids3 / taille;
-                            imc3 = imc3.toFixed(1);
-                            $("#imc3").val(imc3);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            taille3 = get_val('taille3');
+                            poids3 = get_val('poids3');
+                            if(taille3 != 0 && poids3 != 0){ 
+                                var taille = Math.pow((taille3 * 0.01), 2);
+                                imc3 = poids3 / taille;
+                                imc3 = imc3.toFixed(1);
+                                $("#imc3").val(imc3);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                        $("#taille3").change(function (event) {
+                            date3 = $("#date3").val();
+                            taille3 = get_val('taille3');
+                            poids3 = get_val('poids3');
+                            if(taille3 != 0 && poids3 != 0){ 
+                                var taille = Math.pow((taille3 * 0.01), 2);
+                                imc3 = poids3 / taille;
+                                imc3 = imc3.toFixed(1);
+                                $("#imc3").val(imc3);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
                         $("#date4").change(function (event) {
                             date4 = $("#date4").val();
@@ -652,41 +678,89 @@
                         });
                         $("#poids4").change(function (event) {
                             date4 = $("#date4").val();
-                            taille4 = $("#taille4").val();
-                            poids4 = $("#poids4").val();
-                            var taille = Math.pow((taille4 * 0.01), 2);
-                            imc4 = poids4 / taille;
-                            imc4 = imc4.toFixed(1);
-                            $("#imc4").val(imc4);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            taille4 = get_val('taille4');
+                            poids4 = get_val('poids4');
+                            if(taille4 != 0 && poids4 != 0){ 
+                                var taille = Math.pow((taille4 * 0.01), 2);
+                                imc4 = poids4 / taille;
+                                imc4 = imc4.toFixed(1);
+                                $("#imc4").val(imc4);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                         $("#taille4").change(function (event) {
+                            date4 = $("#date4").val();
+                            taille4 = get_val('taille4');
+                            poids4 = get_val('poids4');
+                            if(taille4 != 0 && poids4 != 0){ 
+                                var taille = Math.pow((taille4 * 0.01), 2);
+                                imc4 = poids4 / taille;
+                                imc4 = imc4.toFixed(1);
+                                $("#imc4").val(imc4);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
                         $("#date5").change(function (event) {
                             date5 = $("#date5").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9)
+                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
                         $("#poids5").change(function (event) {
                             date5 = $("#date5").val();
-                            taille5 = $("#taille5").val();
-                            poids5 = $("#poids5").val();
-                            var taille = Math.pow((taille5 * 0.01), 2);
-                            imc5 = poids5 / taille;
-                            imc5 = imc5.toFixed(1);
-                            $("#imc5").val(imc5);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            taille5 = get_val('taille5');
+                            poids5 = get_val('poids5');
+                            if(taille5 != 0 && poids5 != 0){    
+                                var taille = Math.pow((taille5 * 0.01), 2);
+                                imc5 = poids5 / taille;
+                                imc5 = imc5.toFixed(1);
+                                $("#imc5").val(imc5);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                        $("#taille5").change(function (event) {
+                            date5 = $("#date5").val();
+                            taille5 = get_val('taille5');
+                            poids5 = get_val('poids5');
+                            if(taille5 != 0 && poids5 != 0){    
+                                var taille = Math.pow((taille5 * 0.01), 2);
+                                imc5 = poids5 / taille;
+                                imc5 = imc5.toFixed(1);
+                                $("#imc5").val(imc5);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
                         $("#date6").change(function (event) {
                             date6 = $("#date6").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9)
+                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                         });
                         $("#poids6").change(function (event) {
                             date6 = $("#date6").val();
-                            taille6 = $("#taille6").val();
-                            poids6 = $("#poids6").val();
-                            var taille = Math.pow((taille6 * 0.01), 2);
-                            imc6 = poids6 / taille;
-                            imc6 = imc6.toFixed(1);
-                            $("#imc6").val(imc6);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            taille6 = get_val('taille6');
+                            poids6 = get_val('poids6');
+                            if(taille6 != 0 && poids6 != 0){     
+                                var taille = Math.pow((taille6 * 0.01), 2);
+                                imc6 = poids6 / taille;
+                                imc6 = imc6.toFixed(1);
+                                $("#imc6").val(imc6);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                        $("#taille6").change(function (event) {
+                            date6 = $("#date6").val();
+                            taille6 = get_val('taille6');
+                            poids6 = get_val('poids6');
+                            if(taille6 != 0 && poids6 != 0){     
+                                var taille = Math.pow((taille6 * 0.01), 2);
+                                imc6 = poids6 / taille;
+                                imc6 = imc6.toFixed(1);
+                                $("#imc6").val(imc6);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
                         $("#date7").change(function (event) {
                             date7 = $("#date7").val();
@@ -694,13 +768,29 @@
                         });
                         $("#poids7").change(function (event) {
                             date7 = $("#date7").val();
-                            taille7 = $("#taille7").val();
-                            poids7 = $("#poids7").val();
-                            var taille = Math.pow((taille7 * 0.01), 2);
-                            imc7 = poids7 / taille;
-                            imc7 = imc7.toFixed(1);
-                            $("#imc7").val(imc7);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            taille7 = get_val('taille7');
+                            poids7 = get_val('poids7');
+                            if(taille7 != 0 && poids7 != 0){      
+                                var taille = Math.pow((taille7 * 0.01), 2);
+                                imc7 = poids7 / taille;
+                                imc7 = imc7.toFixed(1);
+                                $("#imc7").val(imc7);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                         $("#taille7").change(function (event) {
+                            date7 = $("#date7").val();
+                            taille7 = get_val('taille7');
+                            poids7 = get_val('poids7');
+                            if(taille7 != 0 && poids7 != 0){      
+                                var taille = Math.pow((taille7 * 0.01), 2);
+                                imc7 = poids7 / taille;
+                                imc7 = imc7.toFixed(1);
+                                $("#imc7").val(imc7);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
                         $("#date8").change(function (event) {
                             date8 = $("#date8").val();
@@ -708,31 +798,60 @@
                         });
                         $("#poids8").change(function (event) {
                             date8 = $("#date8").val();
-                            taille8 = $("#taille8").val();
-                            poids8 = $("#poids8").val();
-                            var taille = Math.pow((taille8 * 0.01), 2);
-                            imc8 = poids8 / taille;
-                            imc8 = imc8.toFixed(1);
-                            $("#imc8").val(imc8);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                            taille8 = get_val('taille8');
+                            poids8 = get_val('poids8');
+                            if(taill8 != 0 && poids8 != 0){  
+                                var taille = Math.pow((taille8 * 0.01), 2);
+                                imc8 = poids8 / taille;
+                                imc8 = imc8.toFixed(1);
+                                $("#imc8").val(imc8);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
+                        });
+                         $("#taille8").change(function (event) {
+                            date8 = $("#date8").val();
+                            taille8 = get_val('taille8');
+                            poids8 = get_val('poids8');
+                            if(taill8 != 0 && poids8 != 0){  
+                                var taille = Math.pow((taille8 * 0.01), 2);
+                                imc8 = poids8 / taille;
+                                imc8 = imc8.toFixed(1);
+                                $("#imc8").val(imc8);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                            }
                         });
                         $("#date9").change(function (event) {
                             date9 = $("#date9").val();
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9)
+                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+
                         });
                         $("#poids9").change(function (event) {
                             date9 = $("#date9").val();
-                            taille9 = $("#taille9").val();
-                            poids9 = $("#poids9").val();
-                            var taille = Math.pow((taille9 * 0.01), 2);
-                            imc9 = poids9 / taille;
-                            imc9 = imc9.toFixed(1);
-                            $("#imc9").val(imc9);
-                            dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
-                            setTimeout(function () {
-                                capture("bar");
-                            }, 800);
-
+                            taille9 = get_val('taille9');
+                            poids9 = get_val('poids9');
+                            if(poids9 != 0 && taille9 != 0){  
+                                var taille = Math.pow((taille9 * 0.01), 2);
+                                imc9 = poids9 / taille;
+                                imc9 = imc9.toFixed(1);
+                                $("#imc9").val(imc9);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                           }
+                        });
+                         $("#taille9").change(function (event) {
+                            date9 = $("#date9").val();
+                            taille9 = get_val('taille9');
+                            poids9 = get_val('poids9');
+                            if(poids9 != 0 && taille9 != 0){  
+                                var taille = Math.pow((taille9 * 0.01), 2);
+                                imc9 = poids9 / taille;
+                                imc9 = imc9.toFixed(1);
+                                $("#imc9").val(imc9);
+                                dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
+                                capturer_img("bar");
+                           }
                         });
                         var barData = {
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
@@ -766,6 +885,10 @@
                         var bar = document.getElementById('bar').getContext('2d');
                         new Chart(bar).Line(barData, barOptions);
                     });
+                    function get_val(target){
+                        var val = $("#"+target).val();
+                        return (val != "" && !isNaN(val)) ? val : 0;
+                    }
                     function dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9) {
                         var barData = {
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
@@ -1741,14 +1864,6 @@
 
 
         <div class="container" id = "bouton">
-            <!--
-            <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="1" onClick="enHaut();">Etape 1</button>
-            <button class="btn btn-primary col-md-2 col-lg-2 col-sm-12 col-xs-12" id="2" onClick="enHaut();">Etape 2</button>
-            <button class="btn btn-success col-md-2 col-lg-2 col-sm-12 col-xs-12" id="3" onClick="enHaut();">Etape 3</button>
-            <button class="btn btn-default col-md-2 col-lg-2 col-sm-12 col-xs-12" id="4" onClick="enHaut();">Etape 4</button>
-            <button class="btn btn-info col-md-2 col-lg-2 col-sm-12 col-xs-12" id="5" onClick="enHaut();">Etape 5</button>
-            <button class="btn btn-warning col-md-2 col-lg-2 col-sm-12 col-xs-12" id="6" onClick="enHaut();">Etape 6</button>
-            -->
             <ul>
                 <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
                         <span class="round">
@@ -1814,9 +1929,12 @@
         <script src="assets/js/ie-emulation-modes-warning.js"></script>
         <script src="assets/js/Chart.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+        <script type="text/javascript" src="assets/js/html2canvas.min.js"></script>
 
         <script type="text/javascript">
+                    function onCapture(){
+                        alert("On capture ! ");
+                    }
                     $(document).ready(function () {
                         $('.round').click(function () {
                             $('.round').removeClass('active');
@@ -1826,13 +1944,23 @@
 
                     function enHaut()
                     {
+
                         $('html,body').animate({scrollTop: 0}, 'slow');
                     }
         </script>
 
         <script type="text/javascript">
+        	function capturer_img(img){
+                 setTimeout(function () {
+                                capture(img);
+                }, 800);
+
+            }
+
+            // Pour l'autocompletion
         	// Pour l'autocompletion
-        	// Pour l'autocompletion
+
+
                 var ville = [];
                 var code_postal  = [];
                 var complet = [];
@@ -1872,10 +2000,17 @@
                 $('#save').trigger('click');
             });
 
+/*
+            function capture(target){
+                alert("On capture ! ");
+            }
+  */
+            
             function capture(target) {
+                var scrolL =  $('html,body').scrollTop();   
                 var capture = {};
                 var trg = $('#' + target);
-<?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+            <?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
                 html2canvas(trg, {
                     onrendered: function (canvas) {
                         capture.img = canvas.toDataURL("image/png");
@@ -1885,14 +2020,6 @@
                             data: capture.data,
                             type: 'post',
                             success: function (result) {
-                                if (target === "bardate1")
-                                    $('html,body').scrollTop(2400);
-                                if (target === "bardate2")
-                                    $('html,body').scrollTop(3400);
-                                if (target === "barhg")
-                                    $('html,body').scrollTop(5000);
-                                if (target === "bar")
-                                    $('html,body').scrollTop(2000);
 
                             }
                         });
@@ -1952,7 +2079,11 @@
                         }, 4000);
                     }
                 });
-
+                 
+                setTimeout(function(){
+                    $("#form-filter").attr('action', 'content.php');
+                    $("#form-filter").submit();
+                }, 800);   
             });
 
 

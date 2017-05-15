@@ -159,42 +159,41 @@
   									echo 	"$(\"#".$value."\").change(function(){
 					              				".$value." = $(\"#".$value."\").val();
 					              				Debit_graphe1();
-
+                                capturer('bardate1');
 					              			});";
-
-
 								}
 
 								tracer_graphe1($datasets);
-  							}else{
-  								for($i = 0; $i < 5 ; $i++){
+  							
+                }else{
+                	for($i = 0; $i < 5 ; $i++){
 	                        		echo	"$(\"#Debit".$i."\").change(function (event) {";
 			                        echo    	"Debit".$i." = $('#Debit".$i."').val();";
 			                        echo    	"Debit_graphe1();";
+                              echo      "capturer('bardate1');";
 			                        echo 	"});";
-								}
+                    }
 	                        	for($i = 0; $i < 5 ; $i++){
 	                        		echo	"$(\"#Debit".$i."N\").change(function (event) {";
 			                        echo    	"Debit".$i."N = $('#Debit".$i."N').val();";
 			                        echo    	"Debit_graphe1();"	;
+                              echo      "capturer('bardate1');";
 			                        echo 	"});";
-
-                              if($i == 4){
+                              if($i == 4){   
                                 echo  "$(\"#Debit".$i."N\").change(function (event) {";
                                 echo      "Debit".$i."N = $('#Debit".$i."N').val();";
                                 echo      "Debit_graphe1();"  ;
-                                echo      "setTimeout(function () {
-                                              capture('bardate1');
-                                          }, 800);";
+                                echo      "capturer('bardate1');";
                                 echo  "});";
-                              }
-								}	
+                              }   
+								            }
   								echo $initialiser;
   								echo $tracer_graphe1;
-  							}
-  						
-
-
+  							}  						
               ?>
 
-
+              function capturer(img){
+                  setTimeout(function() {
+                        capture(img);
+                  }, 800);;
+              }
