@@ -2059,7 +2059,7 @@
                     {
                         if (server_response === "succes")
                         {
-                            window.location.href = "page.php";
+                            window.location.href = "content.php";
                         }
                         else
                         {
