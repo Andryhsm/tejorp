@@ -48,7 +48,7 @@
             }
             body
             {
-                background: url("img/bg5.jpg") no-repeat center fixed;
+                background: url("img/bg.jpg") no-repeat center fixed;
                 background-size: cover;
                 -webkit-background-size: cover;
             }
