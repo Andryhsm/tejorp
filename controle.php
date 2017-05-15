@@ -4,7 +4,6 @@
 <html>
 <head>
 	<title>Contrôle</title>
-
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
