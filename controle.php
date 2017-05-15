@@ -167,7 +167,7 @@ require './protection.php';
             $.fn.pageMe = function (opts) {
                 var $this = this,
                         defaults = {
-                            perPage: 7,
+                            perPage: 10,
                             showPrevNext: false,
                             hidePageNumbers: false
                         },
