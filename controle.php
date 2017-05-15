@@ -253,7 +253,7 @@ require './protection.php';
 
             $(document).ready(function () {
 
-                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 9});
+                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 10});
 
             });
         </script>
@@ -298,7 +298,7 @@ require './protection.php';
                     $filteredRows.hide();
                     /* Prepend no-result row if all rows are filtered */
                     if ($filteredRows.length === $rows.length) {
-                        $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="' + $table.find('.filters th').length + '">No result found</td></tr>'));
+                        $table.find('tbody').prepend($('<tr class="no-result text-center"><td colspan="' + $table.find('.filters th').length + '">Aucun patient ne correspond a votre recheche</td></tr>'));
                     }
                 });
             });
