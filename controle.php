@@ -132,9 +132,14 @@ require './protection.php';
                                 <?php
                                 require 'cnx.php';
 
+                                $b = false;
+                                
                                 $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "'");
 
                                 while ($donnees = $reponse->fetch()) {
+                                    
+                                    $b = true;
+                                    
                                     ?>
 
                                     <tr>
@@ -144,7 +149,14 @@ require './protection.php';
                                         <td style="width: 20%;"><?php echo $donnees['mobilepatient']; ?></td>
                                     </tr>
 
-                                <?php } ?>
+                                <?php }
+                                if($b == false){ ?>
+                                    <tr>
+                                        <td colspan="4" class="text-center">Vous n'avez pas encore de patient</td>
+                                    </tr>
+                                <?php
+                                    }
+                                ?>
 
                             </tbody>
                             <tfoot>
