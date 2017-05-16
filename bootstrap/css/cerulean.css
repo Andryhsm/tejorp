@@ -4512,7 +4512,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     color: #dddddd;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #ffffff;
+    color: #fdd200;
+    font-size: 15px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -6771,6 +6772,9 @@ button.close {
     filter: none;
     -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: #efb121 4px solid;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .navbar-default .badge {
     background-color: #fff;
