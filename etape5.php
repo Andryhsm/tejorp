@@ -32,26 +32,26 @@
                     <td>
                         <select class="form-control" id="cathselect1" name="cathselect1">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect2" name="cathselect2">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect3" name="cathselect3">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect4" name="cathselect4">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire1" id = "cathcommentaire1"></td>
                 </tr>
@@ -60,26 +60,26 @@
                     <td>
                         <select class="form-control" id="cathselect5" name="cathselect5">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect6" name="cathselect6">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect7" name="cathselect7">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect8" name="cathselect8">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire2" id = "cathcommentaire2"></td>
                 </tr>
@@ -88,26 +88,26 @@
                     <td>
                         <select class="form-control" id="cathselect9" name="cathselect9">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect10" name="cathselect10">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect11" name="cathselect11">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect12" name="cathselect12">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire3" id = "cathcommentaire3"></td>
                 </tr> 
@@ -116,26 +116,26 @@
                     <td>
                         <select class="form-control" id="cathselect13" name="cathselect13">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect14" name="cathselect14">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect15" name="cathselect15">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect16" name="cathselect16">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire4" id = "cathcommentaire4"></td>
                 </tr>
@@ -144,26 +144,26 @@
                     <td>
                         <select class="form-control" id="cathselect17" name="cathselect17">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect18" name="cathselect18">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect19" name="cathselect19">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect20" name="cathselect20">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire5" id = "cathcommentaire5"></td>
                 </tr>
@@ -172,26 +172,26 @@
                     <td>
                         <select class="form-control" id="cathselect21" name="cathselect21">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect22" name="cathselect22">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect23" name="cathselect23">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect24" name="cathselect24">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire6" id = "cathcommentaire6"></td>
                 </tr>
@@ -200,26 +200,26 @@
                     <td>
                         <select class="form-control" id="cathselect25" name="cathselect25">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect26" name="cathselect26">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect27" name="cathselect27">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect28" name="cathselect28">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire7" id = "cathcommentaire7"></td>
                 </tr>
@@ -228,26 +228,26 @@
                     <td>
                         <select class="form-control" id="cathselect29" name="cathselect29">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect211" name="cathselect211">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect212" name="cathselect212">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect213" name="cathselect213">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire8" id = "cathcommentaire8"></td>
                 </tr>
@@ -256,26 +256,26 @@
                     <td>
                         <select class="form-control" id="cathselect214" name="cathselect214">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect215" name="cathselect215">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect216" name="cathselect216">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect217" name="cathselect217">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire9" id = "cathcommentaire9"></td>
                 </tr>
@@ -284,26 +284,26 @@
                     <td>
                         <select class="form-control" id="cathselect218" name="cathselect218">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect219" name="cathselect219">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect221" name="cathselect221">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect222" name="cathselect222">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire10" id = "cathcommentaire10"></td>
                 </tr>
@@ -312,26 +312,26 @@
                     <td>
                         <select class="form-control" id="cathselect223" name="cathselect223">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect224" name="cathselect224">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect225" name="cathselect225">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td>
                         <select class="form-control" id="cathselect226" name="cathselect226">                                 
                             <option value="acquis">Acquis</option>
-                            <option value="non_acquis">Non acquis</option>
-                            <option value="en_cours">En cours d'acquisition</option>
+                            <option value="en cours">En cours d'acquisition</option>
+                            <option value="non acquis">Non acquis</option>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire11" id = "cathcommentaire11"></td>
                 </tr>
@@ -507,7 +507,7 @@
 
                         <div class="radio">
 
-                            <input type="text" class="form-control datepickerAll" id="perempdate5" name="perempdate5" placeholder = "Date de péremption">
+                            <input type="text" class="form-control input-sm datepickerAll" id="perempdate5" name="perempdate5" placeholder = "Date de péremption">
 
                         </div>
 

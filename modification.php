@@ -11,6 +11,7 @@ require './protection.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
         <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
         <style>
             body
@@ -22,7 +23,6 @@ require './protection.php';
             }
             li>a:hover
             {
-                font-size: 1.1em;
                 color:  #fff;
                 text-decoration: none;
             }
@@ -30,7 +30,6 @@ require './protection.php';
             li>a
             {
                 background-color: transparent;
-                font-size: 1.1em;
                 color: #fff;
                 text-decoration: none;
             }
@@ -67,9 +66,11 @@ require './protection.php';
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./utilisateur.php"><span class ="glyphicon glyphicon-home"></span>&nbsp; Accueil</a></li>
+                    <li><a href="./utilisateur.php">Accueil</a></li>
+                    <li><a href="./page.php">Installation</a></li>
+                    <li><a href="./controle.php">Contrôle</a></li>
                      <li><a href="./lumiere.php">Conseil</a></li>
-                    <li><a href="./logout.php">Deconnexion</a></li>
+                    <li><a href="./logout.php">Déconnexion</a></li>
                   </ul>
                 </div>
 
@@ -124,12 +125,7 @@ require './protection.php';
                                 <input type="number" placeholder="téléphone" required="" class="form-control" name="tel" id="tel" value="<?php echo $donnees['tel']; ?>">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="adresse" class="col-sm-3 control-label">Adresse:</label>
-                            <div class="col-sm-8">
-                                <input type="text" placeholder="adresse" required="" class="form-control" name="adresse" id="adresse" value="<?php echo $donnees['adresse']; ?>">
-                            </div>
-                        </div>
+                        
                         <div class="form-group">
                             <label for="rue" class="col-sm-3 control-label">Numéro et nom de rue:</label>
                             <div class="col-sm-8">

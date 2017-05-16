@@ -40,7 +40,16 @@ for ($i = 5; $i < 45; $i++) {
 
 ob_start();
 ?>
+<style>
+		td{
+			text-align: center;
+		}
+		th{
+			background: #249c97;
+			color: #222;
+		}
 
+</style>
 <div id='content'>
     <div>
     	<table style="border: none;">
@@ -54,9 +63,9 @@ ob_start();
     		</tr>
     	</table>
     </div>
-   	<div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de Pompe à insuline</h3></div><br/><br/><br/></div>
+   	<div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
     <div class="dec">
-        <h4><u>UTILISATEUR BASTIDE MEDICAL</u></h4>
+        <h4><u>INFIRMIERE BASTIDE MEDICAL</u></h4>
         <p>
             <strong>Nom IDE Responsable :</strong> <?php echo $nomresp; ?>  <br/>   
             <strong>Prénom : </strong> <?php echo $prenomresp; ?>  <br/>
@@ -146,10 +155,10 @@ ob_start();
     <table style="margin: 0px 30px 0px 50px;">
         <thead>
             <tr>
-                <th style="width: 20% ; text-align: center;"><strong>Poids actuel (kg) </strong></th>
-                <th style="width: 20% ; text-align: center;"><strong>Poids de forme (kg)</strong></th>
-                <th style="width: 20% ; text-align: center;"><strong>Taille (cm)</strong></th>
-                <th style="width: 20% ; text-align: center;"><strong>IMC</strong></th>
+                <th style="width: 20% ; text-align: center;">Poids actuel (kg)</th>
+                <th style="width: 20% ; text-align: center;">Poids de forme (kg)</th>
+                <th style="width: 20% ; text-align: center;">Taille (cm)</th>
+                <th style="width: 20% ; text-align: center;">IMC</th>
             </tr>
         </thead>
         <tbody>
@@ -171,20 +180,21 @@ ob_start();
       	</p>  
         <h4><u>Insulinothérapie :</u></h4>
         <p>
-            <strong>Nombre d’injection par jour :</strong> <?php echo $nombreinjectionjour; ?>           <strong>Schéma multi injection :</strong><br/>
-            <strong>Stylo :</strong> <?php echo $stylo; ?>      <strong>Autre : </strong> <?php echo $autrestylo; ?>         
+            <strong>Nombre d’injection par jour :</strong> <?php echo $nombreinjectionjour; ?> <br/>          <strong>Schéma multi injection :</strong><br/>
+            <strong>Stylo :</strong> <?php echo $stylo; ?>   <br/>   
+            <strong>Autre : </strong> <?php echo $autrestylo; ?><br/>         
             <strong>Aiguille pour stylo : </strong><?php echo $aiguillestylo; ?> <br/>
             <strong>Autre : </strong>  <?php echo $autreaiguille; ?> <br/><br/><br/>    
-      	</p>s
+      	</p>
     </div>
     <div class="dec">
         <table class="table " style="margin-left: 110px;">
             <thead>
                 <tr>
                     <th style="width:100px ; text-align: center;"></th>
-                    <th style="width:100px ; text-align: center;"><strong>Insuline lente (UI)</strong></th>
-                    <th style="width:100px ; text-align: center;"><strong>Insuline rapide (UI)</strong></th>
-                    <th style="width:100px ; text-align: center;"><strong>Quantité totale (UI)</strong></th>
+                    <th style="width:100px ; text-align: center;">Insuline lente (UI)</th>
+                    <th style="width:100px ; text-align: center;">Insuline rapide (UI)</th>
+                    <th style="width:100px ; text-align: center;">Quantité totale (UI)</th>
                 </tr>
             </thead>
             <tbody>
@@ -231,8 +241,8 @@ ob_start();
         <table class="table" style="margin-left: 70px;">
             <thead>
                 <tr>
-                    <th style="width: 35% ; text-align: center;"><strong>Spécialité</strong></th>
-                    <th style="width: 35% ; text-align: center;"><strong>Posologie</strong></th>
+                    <th style="width: 35% ; text-align: center;">Spécialité</th>
+                    <th style="width: 35% ; text-align: center;">Posologie</th>
                 </tr>
             </thead>
             <tbody>
@@ -260,7 +270,7 @@ ob_start();
         <table class="table" style="margin-right: 20px;">
             <tbody>
                 <tr>
-                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 1:</strong><?php echo $datebasal1; ?></td>
+                    <th colspan=12 style="text-align: center;">Schéma basal date 1:<?php echo $datebasal1; ?></th>
                 </tr>
                 <tr>
                     <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
@@ -356,7 +366,7 @@ ob_start();
         <table class="table">
             <tbody>
                 <tr>
-                    <td colspan=12 style="text-align: center;"><strong>Schémas basals date 2:</strong><?php echo $datebasal2; ?></td>
+                    <th colspan=12 style="text-align: center;"><strong>Schéma basal date 2:</strong><?php echo $datebasal2; ?></th>
                 </tr>
                 <tr>
                     <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
@@ -367,16 +377,16 @@ ob_start();
                 <tr>
                     <td>De</td>
                     <td>A</td>
-                    <td>Débit</td>
+                    <td>Débit (UI)</td>
                     <td>De</td>
                     <td>A</td>
-                    <td>Débit</td>
+                    <td>Débit (UI)</td>
                     <td>De</td>
                     <td>A</td>
-                    <td>Débit</td>
+                    <td>Débit (UI)</td>
                     <td>De</td>
                     <td>A</td>
-                    <td>Débit</td>
+                    <td>Débit (UI)</td>
                 </tr>
                 <tr>
                     <td>00:00</td>
@@ -670,7 +680,7 @@ ob_start();
         <table class="table">
             <tbody>
                 <tr>
-                    <td style="width: 10%;">Dates</td>
+                    <td style="width: 10%; background: #249c97;">Dates</td>
                     <td style="width: 10%;"><?php echo $ValDatesHemGlyc1; ?></td>
                     <td style="width: 10%;"><?php echo $ValDatesHemGlyc2; ?></td>
                     <td style="width: 10%;"><?php echo $ValDatesHemGlyc3; ?></td>
@@ -682,7 +692,7 @@ ob_start();
                     <td style="width: 9%;"><?php echo $ValDatesHemGlyc9; ?></td>
                 </tr>
                 <tr>
-                    <td style="width: 10%;">HbA1c (%)</td>
+                    <td style="width: 10%; background: #249c97;">HbA1c (%)</td>
                     <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc1; ?></td>
                     <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc2; ?></td>
                     <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc3; ?></td>
@@ -730,9 +740,9 @@ ob_start();
                     <th style="width:16%; text-align: center;"></th>
                     <th style="width:16%; text-align: center;"><strong>De</strong></th>
                     <th style="width:16%; text-align: center;"><strong>A</strong></th>
-                    <th style="width:16%; text-align: center;"><strong>Ration Insuline/glucide</strong></th>
-                    <th style="width:16%; text-align: center;"><strong>Objectif glicémique</strong></th>
-                    <th style="width:16%; text-align: center;"><strong>Sensibilité à l'insuline</strong></th>
+                    <th style="width:16%; text-align: center;"><strong>Ratio Insuline (UI)/glucide (g)</strong></th>
+                    <th style="width:16%; text-align: center;"><strong>Objectif glycémique (g/L)</strong></th>
+                    <th style="width:16%; text-align: center;"><strong>Sensibilité à l'insuline (...UI/...g)</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -790,7 +800,7 @@ ob_start();
         <table class="table " style="margin-left: 8px;">
             <tbody>
                 <tr>
-                    <td style="width:10%">Date</td>
+                    <td style="width:10% ;background: #249c97;">Date</td>
                     <td style="width:10%"><?php echo $date1; ?></td>
                     <td style="width:10%"><?php echo $date2; ?></td>
                     <td style="width:10%"><?php echo $date3; ?></td>
@@ -802,7 +812,7 @@ ob_start();
                     <td style="width:9%"><?php echo $date9; ?></td>
                 </tr>
                 <tr>
-                    <td>Taille</td>
+                    <td style="background: #249c97;">Taille (cm)</td>
                     <td><?php echo $taille1; ?></td>
                     <td><?php echo $taille2; ?></td>
                     <td><?php echo $taille3; ?></td>
@@ -814,7 +824,7 @@ ob_start();
                     <td><?php echo $taille9; ?></td>
                 </tr>
                 <tr>
-                    <td>Poids</td>
+                    <td style="background: #249c97;">Poids (kg)</td>
                     <td><?php echo $poids1; ?></td>
                     <td><?php echo $poids2; ?></td>
                     <td><?php echo $poids3; ?></td>
@@ -826,16 +836,16 @@ ob_start();
                     <td><?php echo $poids9; ?></td>
                 </tr>
                 <tr>
-                    <td>IMC</td>
-                    <td><?php echo ($imc1 != 0 ) ? round($imc1, 2) : 0; ?></td>
-                    <td><?php echo ($imc2 != 0 ) ? round($imc2, 2) : 0; ?></td>
-                    <td><?php echo ($imc3 != 0 ) ? round($imc3, 2) : 0; ?></td>
-                    <td><?php echo ($imc4 != 0 ) ? round($imc4, 2) : 0; ?></td>
-                    <td><?php echo ($imc5 != 0 ) ? round($imc5, 2) : 0; ?></td>
-                    <td><?php echo ($imc6 != 0 ) ? round($imc6, 2) : 0; ?></td>
-                    <td><?php echo ($imc7 != 0 ) ? round($imc7, 2) : 0; ?></td>
-                    <td><?php echo ($imc8 != 0 ) ? round($imc8, 2) : 0; ?></td>
-                    <td><?php echo ($imc9 != 0 ) ? round($imc9, 2) : 0; ?></td>
+                    <td style="background: #249c97;">IMC</td>
+                    <td><?php echo ($imc1 != 0 ) ? round($imc1, 2) : ""; ?></td>
+                    <td><?php echo ($imc2 != 0 ) ? round($imc2, 2) : ""; ?></td>
+                    <td><?php echo ($imc3 != 0 ) ? round($imc3, 2) : ""; ?></td>
+                    <td><?php echo ($imc4 != 0 ) ? round($imc4, 2) : ""; ?></td>
+                    <td><?php echo ($imc5 != 0 ) ? round($imc5, 2) : ""; ?></td>
+                    <td><?php echo ($imc6 != 0 ) ? round($imc6, 2) : ""; ?></td>
+                    <td><?php echo ($imc7 != 0 ) ? round($imc7, 2) : ""; ?></td>
+                    <td><?php echo ($imc8 != 0 ) ? round($imc8, 2) : ""; ?></td>
+                    <td><?php echo ($imc9 != 0 ) ? round($imc9, 2) : ""; ?></td>
                 </tr>
 
             </tbody>
@@ -1193,9 +1203,9 @@ ob_start();
         <table style="margin-left: 5px;">
 
             <tr>
-                <td style="text-align: center; width: 400px;"></td>
-                <td style="text-align: center; width: 80px;">OUI / NON</td>
-                <td style="text-align: center; width: 190px;"><strong>Observation</strong></td>                            
+                <th style="text-align: center; width: 400px;"></th>
+                <th style="text-align: center; width: 80px;">OUI / NON</th>
+                <th style="text-align: center; width: 190px;"><strong>Observation</strong></th>                            
             </tr>
 
 
@@ -1266,7 +1276,7 @@ ob_start();
                 <td><?php echo $cnsobservation6; ?></td>
             </tr>
             <tr>
-                <td><strong>Maitrise de l'acceptation du bolus de correction</strong></td>
+                <td><strong>Maitrise de l'adaptation du bolus de correction</strong></td>
                 <td><?php echo $connaissance12; ?></td>
                 <td><?php echo $cnsobservation7; ?></td>
             </tr>
@@ -1276,7 +1286,7 @@ ob_start();
                 <td><?php echo $cnsobservation8; ?></td>
             </tr>
             <tr>
-                <td><strong>CAT en cas d'accétonémie</strong></td>
+                <td><strong>CAT en cas de cétone</strong></td>
                 <td><?php echo $connaissance14; ?></td>
                 <td><?php echo $cnsobservation9; ?></td>
             </tr>                     
@@ -1285,13 +1295,13 @@ ob_start();
 
 
 
-        <h4><u>AUTO SURVEILLANCE GLYCEMIQUE</u></h4><br/>
+        <h4><u>AUTO SURVEILLANCE GLYCEMIQUE (ASG)</u></h4><br/>
         <table style="margin-left: 5px;">
 
             <tr>
-                <td style="width: 400px;"></td>
-                <td style="text-align: center; width: 130px;"><strong>Détails</strong></td>
-                <td style="text-align: center; width: 140px;"><strong>Observations</strong></td>                            
+                <th style="width: 400px;"></th>
+                <th style="text-align: center; width: 130px;"><strong>Détails</strong></th>
+                <th style="text-align: center; width: 140px;"><strong>Observations</strong></th>                            
             </tr>
 
             <tbody>                      
@@ -1324,9 +1334,9 @@ ob_start();
         <table>
 
             <tr>
-                <td style="text-align: center; width: 400px;"></td>
-                <td style="text-align: center; width: 130px;"><strong>Prescription</strong></td>
-                <td style="text-align: center; width: 140px;"><strong>Réalisation réelle</strong></td>                            
+                <th style="text-align: center; width: 400px;"></th>
+                <th style="text-align: center; width: 130px;"><strong>Prescription</strong></th>
+                <th style="text-align: center; width: 140px;"><strong>Réalisation réelle</strong></th>                            
             </tr>
 
             <tbody>                      
@@ -1342,8 +1352,6 @@ ob_start();
                 </tr>                                      
             </tbody>
         </table>
-
-
     </div>
 </div>
 
@@ -1379,7 +1387,7 @@ require_once(dirname(__FILE__) . '/html2pdf-4.4.0/html2pdf.class.php');
 
 try {
     $html2pdf = new HTML2PDF('P', 'A4', 'fr');
-    $html2pdf->setDefaultFont('Arial');
+    $html2pdf->setDefaultFont('Times');
     $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
     $html2pdf->Output('pdf/content.pdf');
 } catch (HTML2PDF_exception $e) {
@@ -1387,18 +1395,4 @@ try {
     exit;
 }
 
-//Suppression des fichiers
- $image1 = "img/image".$id_."bardate1.png"; 
-  	if(file_exists($image1))
-  		unlink($image1);
- $image2 = "img/image".$id_."bardate2.png"; 
-  	if(file_exists($image2))
-  		unlink($image2);
- $image3 = "img/image".$id_."barhg.png"; 
-  	if(file_exists($image3))
-  		unlink($image3);
- $image4 = "img/image".$id_."bar.png"; 
-  	if(file_exists($image4))
-  		unlink($image4);
- 
 ?>

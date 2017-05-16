@@ -7,6 +7,8 @@ if ($statut == "Médecin traitant") {
     <script type="text/javascript">
         $(document).ready(function () {
             $('.medecintraitant').removeClass('hidden');
+            $('#ruemt').attr('value', "<?php echo($_SESSION['rue']); ?>");
+            $('#codepostalmt').attr('value', "<?php echo($_SESSION['code-postal']); ?>");
             $('#telmt').attr('value', "<?php echo($_SESSION['tel']); ?>");
             $('#villemt').attr('value', "<?php echo($_SESSION['ville']); ?>");
             $('#mailmt').attr('value', "<?php echo($_SESSION['email']); ?>");
@@ -19,6 +21,8 @@ if ($statut == "Médecin traitant") {
     <script type="text/javascript">
         $(document).ready(function () {
             $('.diabetologueliberal').removeClass('hidden');
+            $('#ruedl').attr('value', "<?php echo($_SESSION['rue']); ?>");
+            $('#codepostaldl').attr('value', "<?php echo($_SESSION['code-postal']); ?>");
             $('#teldl').attr('value', "<?php echo($_SESSION['tel']); ?>");
             $('#villedl').attr('value', "<?php echo($_SESSION['ville']); ?>");
             $('#maildl').attr('value', "<?php echo($_SESSION['email']); ?>");
@@ -32,6 +36,8 @@ if ($statut == "Médecin traitant") {
     <script type="text/javascript">
         $(document).ready(function () {
             $('.prescripteur').removeClass('hidden');
+            $('#ruep').attr('value', "<?php echo($_SESSION['rue']); ?>");
+            $('#codepostalp').attr('value', "<?php echo($_SESSION['code-postal']); ?>");
             $('#teldp').attr('value', "<?php echo($_SESSION['tel']); ?>");
             $('#villedp').attr('value', "<?php echo($_SESSION['ville']); ?>");
             $('#maildp').attr('value', "<?php echo($_SESSION['email']); ?>");
@@ -44,6 +50,8 @@ if ($statut == "Médecin traitant") {
     <script type="text/javascript">
         $(document).ready(function () {
             $('.dieteticienne').removeClass('hidden');
+            $('#rued').attr('value', "<?php echo($_SESSION['rue']); ?>");
+            $('#codepostald').attr('value', "<?php echo($_SESSION['code-postal']); ?>");
             $('#teld').attr('value', "<?php echo($_SESSION['tel']); ?>");
             $('#villed').attr('value', "<?php echo($_SESSION['ville']); ?>");
             $('#maild').attr('value', "<?php echo($_SESSION['email']); ?>");
@@ -160,9 +168,15 @@ if ($statut == "Médecin traitant") {
                 </div>
             </div>
             <div class="form-group">
-                <label for="adresse" class="col-sm-4 control-label"> Adresse: </label>
+                <label for="email" class="col-sm-4 control-label"> Email: </label>
                 <div class="col-sm-7">
-                    <input type="text" placeholder="Adresse"  class="form-control" name="adressepatient" id="adressepatient">
+                    <input type="text" placeholder="email"  class="form-control" name="emailpatient" id="emailpatient">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adresse" class="col-sm-4 control-label"> Numéro et nom de rue: </label>
+                <div class="col-sm-7">
+                    <input type="text" placeholder="numéro et nom de rue"  class="form-control" name="adressepatient" id="adressepatient">
                 </div>
             </div>
             <div class="form-group">
@@ -217,6 +231,21 @@ if ($statut == "Médecin traitant") {
                         <input type="number" placeholder="Mobile" class="form-control" name="mobiledp" id="mobiledp">
                     </div>
                 </div>
+                
+                <div class="form-group col-sm-6">
+                    <label for="tel" class="col-sm-3 control-label">Rue:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="numéro et nom de rue" class="form-control" name="ruedp" id="ruedp" value="" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="mobile" class="col-sm-3 control-label">Code postal:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="code postal" class="form-control" name="codepostaldp" id="codepostaldp" readonly>
+                    </div>
+                </div>
+                
                 <div class="form-group col-sm-6">
                     <label for="ville" class="col-sm-3 control-label">Ville:</label>
                     <div class="col-sm-9">
@@ -253,6 +282,21 @@ if ($statut == "Médecin traitant") {
                         <input type="number" placeholder="Mobile" class="form-control" name="mobiledl" id="mobiledl">
                     </div>
                 </div>
+                
+                <div class="form-group col-sm-6">
+                    <label for="tel" class="col-sm-3 control-label">Rue:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="numéro et nom de rue" class="form-control" name="ruedl" id="ruedl" value="" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="mobile" class="col-sm-3 control-label">Code postal:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="code postal" class="form-control" name="codepostaldl" id="codepostaldl" readonly>
+                    </div>
+                </div>
+                
                 <div class="form-group col-sm-6">
                     <label for="ville" class="col-sm-3 control-label">Ville:</label>
                     <div class="col-sm-9">
@@ -289,6 +333,21 @@ if ($statut == "Médecin traitant") {
                         <input type="number" placeholder="Mobile" class="form-control" name="mobilemt" id="mobilemt">
                     </div>
                 </div>
+                
+                <div class="form-group col-sm-6">
+                    <label for="tel" class="col-sm-3 control-label">Rue:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="numéro et nom de rue" class="form-control" name="ruemt" id="ruemt" value="" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="mobile" class="col-sm-3 control-label">Code postal:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="code postal" class="form-control" name="codepostalmt" id="codepostalmt" readonly>
+                    </div>
+                </div>
+                
                 <div class="form-group col-sm-6">
                     <label for="ville" class="col-sm-3 control-label">Ville:</label>
                     <div class="col-sm-9">
@@ -327,6 +386,21 @@ if ($statut == "Médecin traitant") {
                         <input type="number" placeholder="Mobile" class="form-control" name="mobiled" id="mobiled">
                     </div>
                 </div>
+                
+                <div class="form-group col-sm-6">
+                    <label for="tel" class="col-sm-3 control-label">Rue:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="numéro et nom de rue" class="form-control" name="rued" id="rued" value="" readonly>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="mobile" class="col-sm-3 control-label">Code postal:</label>
+                    <div class="col-sm-9">
+                        <input type="text" placeholder="code postal" class="form-control" name="codepostald" id="codepostald" readonly>
+                    </div>
+                </div>
+                
                 <div class="form-group col-sm-6">
                     <label for="ville" class="col-sm-3 control-label">Ville:</label>
                     <div class="col-sm-9">
