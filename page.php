@@ -1533,6 +1533,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="./utilisateur.php">Accueil</a></li>
+                    <li><a href="./controle.php">Contrôle</a></li>
                     <li><a href="./modification.php">Modifier mon profil</a></li>
                     <li><a href="./lumiere.php">Conseil</a></li>
                     <li><a href="./logout.php">Déconnexion</a></li>

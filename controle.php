@@ -103,6 +103,7 @@ require './protection.php';
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="./utilisateur.php">Accueil</a></li>
+                    <li><a href="./page.php">Installation</a></li>
                     <li><a href="./modification.php">Modifier mon profil</a></li>
                     <li><a href="./lumiere.php">Conseil</a></li>
                     <li><a href="./logout.php">Déconnexion</a></li>
@@ -136,10 +137,15 @@ require './protection.php';
                                 <?php
                                 require 'cnx.php';
 
+                                $b = false;
+                                
                                 $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "'");
 
                                 while ($donnees = $reponse->fetch()) {
                                 	$id = $donnees['nompatient']."-".$donnees['prenompatient'];
+
+                                    
+                                    $b = true;
                                     ?>
 
                                     <tr onClick="location='patient_controle.php?id=<?php echo($id); ?>'" style="cursor: pointer;">
@@ -149,7 +155,14 @@ require './protection.php';
                                         <td style="width: 20%;"><?php echo $donnees['mobilepatient']; ?></td>
                                     </tr>
 
-                                <?php } ?>
+                                <?php }
+                                if($b == false){ ?>
+                                    <tr>
+                                        <td colspan="4" class="text-center">Vous n'avez pas encore de patient</td>
+                                    </tr>
+                                <?php
+                                    }
+                                ?>
 
                             </tbody>
                             <tfoot>

@@ -11,10 +11,11 @@ require './protection.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
         <style>
             body
             {
-                background: url("img/bg5.jpg") no-repeat fixed;
+                background: url("img/bg.jpg") no-repeat fixed;
                 background-size: cover;    
                 color: #fff;
                 font-family: "Calibri"; 
@@ -54,6 +55,8 @@ require './protection.php';
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                     <li><a href="./utilisateur.php">Accueil</a></li>
+                    <li><a href="./page.php">Installation</a></li>
+                    <li><a href="./controle.php">Contrôle</a></li>
                     <li><a href="./modification.php">Modifier mon profil</a></li>
                     <li><a href="./logout.php">Déconnexion</a></li>
                   </ul>
