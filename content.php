@@ -42,8 +42,19 @@ ob_start();
 ?>
 
 <div id='content'>
-    <div><img style="position: relative; margin-left: 600px; width: 120px;" src="img/basitide.png"></div>
-    <div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de Pompe à insuline</h3></div><br/><br/><br/></div>
+    <div>
+    	<table style="border: none;">
+    		<tr style="border: none;">
+    			<td style="border: none;">
+    				<img style="position: relative; margin-right: 250px; margin-left: 10px; width: 120px;" src="img/logo_diabete.jpg">
+				</td>
+    			<td  style="border: none;">
+    				<img style="position: relative; margin-left: 245px; width: 120px;" src="img/basitide.png">
+				</td>
+    		</tr>
+    	</table>
+    </div>
+   	<div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Installation de Pompe à insuline</h3></div><br/><br/><br/></div>
     <div class="dec">
         <h4><u>UTILISATEUR BASTIDE MEDICAL</u></h4>
         <p>
@@ -59,35 +70,35 @@ ob_start();
         <strong>Age :</strong> <?php echo $agepatient; ?><br/>
         <strong>Tel : </strong> <?php echo $telpatient; ?><br/>
         <strong>Mobile :</strong><?php echo $mobilepatient; ?><br/>
+        <strong>Mail :</strong><?php echo $emailpatient; ?><br/>
         <strong>Adresse :</strong><?php echo $adressepatient; ?><br/>
         <strong>Code postal :</strong><?php echo $codepostalpatient; ?><br/>    
         <strong>Ville :</strong><?php echo $villepatient; ?><br/>
-
         <h4><u>RENSEIGNEMENTS PRESCRIPTEUR</u></h4>
 
         <strong>Etablissement prescripteur:</strong> <?php echo $etablissementprescripteur; ?> <br/>
         <strong>Service :</strong> <?php echo $serviceep; ?> <br/><br/> 
 
         <?php if ($statut == "Médecin traitant") { ?>            
-            <h4><u> Médecin traitant : <?php $medecintraitant; ?></u></h4>
+            <strong>Médecin traitant : </strong><?php echo $medecintraitant; ?><br/>
             <strong>Tel :</strong>  <?php echo $telmt; ?><br/>   
             <strong>Mobile :</strong>  <?php echo $mobilemt; ?><br/>      
             <strong>Ville :</strong><?php echo $villemt; ?><br/>
             <strong>Mail :</strong><?php echo $mailmt; ?><br/><br/>    
         <?php } elseif ($statut == "Diabétologue libéral") { ?>
-            <h4><u> Diabétologue prescripteur : <?php $diabetologueliberal; ?></u></h4>
+            <strong> Diabétologue prescripteur :</strong> <?php echo $diabetologueliberal; ?>
             <strong>Tel :</strong>  <?php echo $teldl; ?><br/>   
             <strong>Mobile :</strong>  <?php echo $mobiledl; ?><br/>      
             <strong>Ville :</strong><?php echo $villedl; ?><br/>
             <strong>Mail :</strong><?php echo $maildl; ?><br/><br/>  
         <?php } elseif ($statut == "Diabétologue prescripteur") { ?>
-            <h4><u> Diabétologue prescripteur : <?php $diabetologueprescripteur; ?></u></h4>
+            <strong> Diabétologue prescripteur : </strong><?php echo $diabetologueprescripteur; ?>
             <strong>Tel :</strong>  <?php echo $teldp; ?><br/>   
             <strong>Mobile :</strong>  <?php echo $mobiledp; ?><br/>      
             <strong>Ville :</strong><?php echo $villedp; ?><br/>
             <strong>Mail :</strong><?php echo $maildp; ?><br/><br/>  
         <?php } elseif ($statut == "Diététicienne") { ?>
-            <h4><u> Diabétologue prescripteur : <?php $dieteticienne; ?></u></h4>
+            <strong> Diabétologue prescripteur : </strong><?php echo $dieteticienne; ?>
             <strong>Tel :</strong>  <?php echo $teld; ?><br/>   
             <strong>Mobile :</strong>  <?php echo $mobiled; ?><br/>      
             <strong>Ville :</strong><?php echo $villed; ?><br/>
@@ -103,22 +114,21 @@ ob_start();
         <h4><u>CHOIX DU MATERIEL</u></h4>
         <p>   
             <strong>Pompe :</strong> <?php echo $Pompe; ?> <br/>
-            <strong>Date d’installation :</strong> <?php echo $dateinstallation; ?> <br/>
-
+            <strong>Date d’installation :</strong> <?php echo $dateinstallation; ?> <br/><br/>
 
             <strong>Type de cathéter 1 :</strong> <?php echo $catheter; ?><br/>
             <strong>Modèle :</strong> <?php echo $modele; ?> <br/>
-            <strong>Longueur de canule :</strong> <?php echo $longueurcanule; ?> mm              
+            <strong>Longueur de canule :</strong> <?php echo $longueurcanule; ?> mm    <br/>          
             <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure; ?> cm
             <br><br>
             <strong>Type de cathéter 2 :</strong> <?php echo $catheter2; ?><br/>
             <strong>Modèle :</strong> <?php echo $modele2; ?> <br/>
-            <strong>Longueur de canule :</strong> <?php echo $longueurcanule2; ?> mm              
+            <strong>Longueur de canule :</strong> <?php echo $longueurcanule2; ?> mm  <br/>            
             <strong>Longueur de tubulure :</strong>   <?php echo $longueurtubulure2; ?> cm            
             <br><br>
             <strong>Inserteur :</strong> <?php echo $inserteur; ?><br/><br/>
             <strong>Réservoir :</strong> <?php echo $reservoir; ?> <br/>                      
-            <strong>Système de portage de la Pompe (qql lignes) : </strong> <?php echo $spp; ?>  <br/>    
+            <strong>Système de portage de la Pompe : </strong> <?php echo $spp; ?>  <br/><br/> 
 
             <strong>Observations et commentaires :</strong> <?php echo $observation; ?>  
         </p>
@@ -144,7 +154,7 @@ ob_start();
         </thead>
         <tbody>
             <tr>
-                <td><?php echo $poidsactuel; ?></td>
+                <td><span style="color: white;">a</span><?php echo $poidsactuel; ?></td>
                 <td><?php echo $poidsforme; ?></td>
                 <td><?php echo $taille; ?></td>
                 <td><?php echo $imc; ?></td>
@@ -158,21 +168,23 @@ ob_start();
             <strong>Nombre de glycémies par jour :</strong> <?php echo $nombreglycemieparjour; ?> <br/>
             <strong>Type de lecteur :</strong> <?php echo $typelecteur; ?>           <strong>Date de prescription : </strong> <?php echo $dateprescription; ?><br/>      
             <strong>Stylo auto piqueur/lancette :</strong> <?php echo $styloautopiqueur; ?> <br/>     
-            <strong>Insulinothérapie :</strong><br/>
+      	</p>  
+        <h4><u>Insulinothérapie :</u></h4>
+        <p>
             <strong>Nombre d’injection par jour :</strong> <?php echo $nombreinjectionjour; ?>           <strong>Schéma multi injection :</strong><br/>
             <strong>Stylo :</strong> <?php echo $stylo; ?>      <strong>Autre : </strong> <?php echo $autrestylo; ?>         
             <strong>Aiguille pour stylo : </strong><?php echo $aiguillestylo; ?> <br/>
             <strong>Autre : </strong>  <?php echo $autreaiguille; ?> <br/><br/><br/>    
-        </p>
+      	</p>s
     </div>
     <div class="dec">
         <table class="table " style="margin-left: 110px;">
             <thead>
                 <tr>
                     <th style="width:100px ; text-align: center;"></th>
-                    <th style="width:100px ; text-align: center;"><strong>Insuline lente</strong></th>
-                    <th style="width:100px ; text-align: center;"><strong>Insuline rapide</strong></th>
-                    <th style="width:100px ; text-align: center;"><strong>Quantité totale</strong></th>
+                    <th style="width:100px ; text-align: center;"><strong>Insuline lente (UI)</strong></th>
+                    <th style="width:100px ; text-align: center;"><strong>Insuline rapide (UI)</strong></th>
+                    <th style="width:100px ; text-align: center;"><strong>Quantité totale (UI)</strong></th>
                 </tr>
             </thead>
             <tbody>
@@ -225,19 +237,19 @@ ob_start();
             </thead>
             <tbody>
                 <tr>
-                    <td><?php echo $specialite1; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $specialite1; ?></td>
                     <td><?php echo $posologie1; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $specialite2; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $specialite2; ?></td>
                     <td><?php echo $posologie2; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $specialite3; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $specialite3; ?></td>
                     <td><?php echo $posologie3; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $specialite4; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $specialite4; ?></td>
                     <td><?php echo $posologie4; ?></td>
                 </tr>
             </tbody>
@@ -259,16 +271,16 @@ ob_start();
                 <tr>
                     <td>De</td>
                     <td>A</td>
-                    <td>Débit</td>
+                    <td>Débit (UI)</td>
+                    <td>De (UI)</td>
+                    <td>A</td>
+                    <td>Débit (UI)</td>
                     <td>De</td>
                     <td>A</td>
-                    <td>Débit</td>
+                    <td>Débit (UI)</td>
                     <td>De</td>
                     <td>A</td>
-                    <td>Débit</td>
-                    <td>De</td>
-                    <td>A</td>
-                    <td>Débit</td>
+                    <td>Débit (UI)</td>
                 </tr>
                 <tr>
                     <td>00:00</td>
@@ -291,7 +303,7 @@ ob_start();
                 for ($i = 0; $i < 10; $i++) {
 
 
-                    eval("  if(\$Horaire" . $inc . " != \"\"){
+                     eval("  if(\$Horaire" . $inc . " != \"\"){
 			                    echo   \"<tr>
 			                              <td> \".\$Horaire" . $inc . ". \" </td>
 			                              <td> \".\$Horaire" . ($inc + 1) . ". \" </td>
@@ -456,7 +468,7 @@ ob_start();
                     <td style="width:16%; text-align: center;">Autre (UI)</td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique1; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $ValGlycemique1; ?></td>
                     <td><?php echo $ValGlyMatin1; ?></td>
                     <td><?php echo $ValGlyMid1; ?></td>
                     <td><?php echo $ValGlyCollation1; ?></td>
@@ -464,7 +476,7 @@ ob_start();
                     <td><?php echo $ValGlyAutre1; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique2; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $ValGlycemique2; ?></td>
                     <td><?php echo $ValGlyMatin2; ?></td>
                     <td><?php echo $ValGlyMid2; ?></td>
                     <td><?php echo $ValGlyCollation2; ?></td>
@@ -472,7 +484,7 @@ ob_start();
                     <td><?php echo $ValGlyAutre2; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique3; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $ValGlycemique3; ?></td>
                     <td><?php echo $ValGlyMatin3; ?></td>
                     <td><?php echo $ValGlyMid3; ?></td>
                     <td><?php echo $ValGlyCollation3; ?></td>
@@ -480,7 +492,7 @@ ob_start();
                     <td><?php echo $ValGlyAutre3; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique4; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $ValGlycemique4; ?></td>
                     <td><?php echo $ValGlyMatin4; ?></td>
                     <td><?php echo $ValGlyMid4; ?></td>
                     <td><?php echo $ValGlyCollation4; ?></td>
@@ -488,7 +500,7 @@ ob_start();
                     <td><?php echo $ValGlyAutre4; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique5; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $ValGlycemique5; ?></td>
                     <td><?php echo $ValGlyMatin5; ?></td>
                     <td><?php echo $ValGlyMid5; ?></td>
                     <td><?php echo $ValGlyCollation5; ?></td>
@@ -496,7 +508,7 @@ ob_start();
                     <td><?php echo $ValGlyAutre5; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique6; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $ValGlycemique6; ?></td>
                     <td><?php echo $ValGlyMatin6; ?></td>
                     <td><?php echo $ValGlyMid6; ?></td>
                     <td><?php echo $ValGlyCollation6; ?></td>
@@ -504,7 +516,7 @@ ob_start();
                     <td><?php echo $ValGlyAutre6; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $ValGlycemique7; ?></td>
+                    <td><span style="color: white;">a</span><?php echo $ValGlycemique7; ?></td>
                     <td><?php echo $ValGlyMatin7; ?></td>
                     <td><?php echo $ValGlyMid7; ?></td>
                     <td><?php echo $ValGlyCollation7; ?></td>
@@ -547,7 +559,7 @@ ob_start();
                     <td></td>
                 </tr>
                 <tr>
-                    <td><strong><?php echo $glycemie1; ?></strong></td>
+                    <td><strong><span style="color: white;">a</span><?php echo $glycemie1; ?></strong></td>
                     <td><strong><?php echo $glycemie2; ?></strong></td>
                     <td><strong><?php echo $glycemie3; ?></strong></td>
                     <td><strong><?php echo $glycemie4; ?></strong></td>
@@ -561,7 +573,7 @@ ob_start();
                     <td><strong><?php echo $glycemie12; ?></strong></td>
                 </tr>
                 <tr>
-                    <td><strong><?php echo $glycemie13; ?></strong></td>
+                    <td><strong><span style="color: white;">a</span><?php echo $glycemie13; ?></strong></td>
                     <td><strong><?php echo $glycemie14; ?></strong></td>
                     <td><strong><?php echo $glycemie15; ?></strong></td>
                     <td><strong><?php echo $glycemie16; ?></strong></td>
@@ -575,7 +587,7 @@ ob_start();
                     <td><strong><?php echo $glycemie24; ?></strong></td>
                 </tr>
                 <tr>
-                    <td><strong><?php echo $glycemie25; ?></strong></td>
+                    <td><strong><span style="color: white;">a</span><?php echo $glycemie25; ?></strong></td>
                     <td><strong><?php echo $glycemie26; ?></strong></td>
                     <td><strong><?php echo $glycemie27; ?></strong></td>
                     <td><strong><?php echo $glycemie28; ?></strong></td>
@@ -589,7 +601,7 @@ ob_start();
                     <td><strong><?php echo $glycemie36; ?></strong></td>
                 </tr>
                 <tr>
-                    <td><strong><?php echo $glycemie37; ?></strong></td>
+                    <td><strong><span style="color: white;">a</span><?php echo $glycemie37; ?></strong></td>
                     <td><strong><?php echo $glycemie38; ?></strong></td>
                     <td><strong><?php echo $glycemie39; ?></strong></td>
                     <td><strong><?php echo $glycemie40; ?></strong></td>
@@ -603,7 +615,7 @@ ob_start();
                     <td><strong><?php echo $glycemie48; ?></strong></td>
                 </tr>
                 <tr>
-                    <td><strong><?php echo $glycemie49; ?></strong></td>
+                    <td><strong><span style="color: white;">a</span><?php echo $glycemie49; ?></strong></td>
                     <td><strong><?php echo $glycemie50; ?></strong></td>
                     <td><strong><?php echo $glycemie51; ?></strong></td>
                     <td><strong><?php echo $glycemie52; ?></strong></td>
@@ -617,7 +629,7 @@ ob_start();
                     <td><strong><?php echo $glycemie60; ?></strong></td>
                 </tr>
                 <tr>
-                    <td><strong><?php echo $glycemie61; ?></strong></td>
+                    <td><strong><span style="color: white;">a</span><?php echo $glycemie61; ?></strong></td>
                     <td><strong><?php echo $glycemie62; ?></strong></td>
                     <td><strong><?php echo $glycemie63; ?></strong></td>
                     <td><strong><?php echo $glycemie64; ?></strong></td>
@@ -631,7 +643,7 @@ ob_start();
                     <td><strong><?php echo $glycemie72; ?></strong></td>
                 </tr>
                 <tr>
-                    <td><strong><?php echo $glycemie73; ?></strong></td>
+                    <td><strong><span style="color: white;">a</span><?php echo $glycemie73; ?></strong></td>
                     <td><strong><?php echo $glycemie74; ?></strong></td>
                     <td><strong><?php echo $glycemie75; ?></strong></td>
                     <td><strong><?php echo $glycemie76; ?></strong></td>
@@ -815,15 +827,15 @@ ob_start();
                 </tr>
                 <tr>
                     <td>IMC</td>
-                    <td><?php echo round($imc1, 2); ?></td>
-                    <td><?php echo round($imc2, 2); ?></td>
-                    <td><?php echo round($imc3, 2); ?></td>
-                    <td><?php echo round($imc4, 2); ?></td>
-                    <td><?php echo round($imc5, 2); ?></td>
-                    <td><?php echo round($imc6, 2); ?></td>
-                    <td><?php echo round($imc7, 2); ?></td>
-                    <td><?php echo round($imc8, 2); ?></td>
-                    <td><?php echo round($imc9, 2); ?></td>
+                    <td><?php echo ($imc1 != 0 ) ? round($imc1, 2) : 0; ?></td>
+                    <td><?php echo ($imc2 != 0 ) ? round($imc2, 2) : 0; ?></td>
+                    <td><?php echo ($imc3 != 0 ) ? round($imc3, 2) : 0; ?></td>
+                    <td><?php echo ($imc4 != 0 ) ? round($imc4, 2) : 0; ?></td>
+                    <td><?php echo ($imc5 != 0 ) ? round($imc5, 2) : 0; ?></td>
+                    <td><?php echo ($imc6 != 0 ) ? round($imc6, 2) : 0; ?></td>
+                    <td><?php echo ($imc7 != 0 ) ? round($imc7, 2) : 0; ?></td>
+                    <td><?php echo ($imc8 != 0 ) ? round($imc8, 2) : 0; ?></td>
+                    <td><?php echo ($imc9 != 0 ) ? round($imc9, 2) : 0; ?></td>
                 </tr>
 
             </tbody>
