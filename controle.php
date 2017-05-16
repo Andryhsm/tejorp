@@ -62,7 +62,7 @@ require './protection.php';
 	
 			tr :hover
 			{
-				box-shadow: 1px 1px 100px #555;
+				box-shadow: 1px 1px 12px #555;
 			}
         </style>
 

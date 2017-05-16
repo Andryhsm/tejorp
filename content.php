@@ -166,7 +166,7 @@ ob_start();
         </p>
     </div>
     <div class="dec">
-        <table class="table " style="margin-left: 110px;">
+        <table class="table " style="margin-left: 110px; text-align: center;" >
             <thead>
                 <tr>
                     <th style="width:100px ; text-align: center;"></th>
