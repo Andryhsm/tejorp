@@ -68,7 +68,7 @@ ob_start();
             </div>
         </page_header>
         
-       	<div ><br/><br/><div style="margin-left: 170px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
+       	<div ><br/><br/><div style="margin-left: 130px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
         <div >
             <h4><u>INFIRMIERE BASTIDE MEDICAL</u></h4>
             <p>
@@ -78,16 +78,16 @@ ob_start();
                 <strong>Coordonnées :</strong> <?php echo $coordonnee; ?> 
 
             <h4><u>RENSEIGNEMENTS PATIENT</u></h4>
-            <strong>Nom :</strong> <?php echo $nompatient; ?>  <br/>
-            <strong>Prénom :</strong><?php echo $prenompatient; ?><br/>
-            <strong>Né(e) le : </strong><?php echo $datenaissance; ?> <br/>
-            <strong>Age :</strong> <?php echo $agepatient; ?><br/>
-            <strong>Tel : </strong> <?php echo $telpatient; ?><br/>
-            <strong>Mobile :</strong><?php echo $mobilepatient; ?><br/>
-            <strong>Mail :</strong><?php echo $emailpatient; ?><br/>
-            <strong>Adresse :</strong><?php echo $adressepatient; ?><br/>
-            <strong>Code postal :</strong><?php echo $codepostalpatient; ?><br/>    
-            <strong>Ville :</strong><?php echo $villepatient; ?><br/>
+            <strong>Nom : <?php echo $nompatient; ?></strong>  <br/>
+            <strong>Prénom :<?php echo $prenompatient; ?></strong><br/>
+            <strong>Né(e) le : <?php echo $datenaissance; ?> </strong><br/>
+            <strong>Age : <?php echo $agepatient; ?></strong><br/>
+            <strong>Tel :  <?php echo $telpatient; ?></strong><br/>
+            <strong>Mobile :<?php echo $mobilepatient; ?></strong><br/>
+            <strong>Mail :<?php echo $emailpatient; ?></strong><br/>
+            <strong>Adresse :<?php echo $adressepatient; ?></strong><br/>
+            <strong>Code postal :<?php echo $codepostalpatient; ?></strong><br/>    
+            <strong>Ville :<?php echo $villepatient; ?></strong><br/>
             <h4><u>RENSEIGNEMENTS PRESCRIPTEUR</u></h4>
 
             <strong>Etablissement prescripteur:</strong> <?php echo $etablissementprescripteur; ?> <br/>
