@@ -79,7 +79,7 @@ if ($statut == "Médecin traitant") {
 <div class="container-fluid">
     <fieldset class="field1">
 
-        <center><h4>UTILISATEUR BASTIDE MEDICAL</h4></center>
+        <center><h4>INFIRMIERE BASTIDE MEDICAL</h4></center>
         <div class="form-group">
             <label for="nom" class="col-sm-4 control-label">Nom IDE Responsable:</label>
             <div class="col-sm-7">
@@ -200,7 +200,7 @@ if ($statut == "Médecin traitant") {
             <div class="form-group">
                 <label for="prescripteur" class="col-sm-4 control-label">Etablissement prescripteur:</label>
                 <div class="col-sm-7">
-                    <input type="text" readonly="" placeholder="Etablissement prescripteur" class="form-control" name="etablissementprescripteur" id="etablissementprescripteur" value="<?php echo utf8_encode($_SESSION['etablissement']); ?>">
+                    <input type="text" placeholder="Etablissement prescripteur" class="form-control" name="etablissementprescripteur" id="etablissementprescripteur">
                 </div>
             </div>
             <div class="form-group">
@@ -208,9 +208,32 @@ if ($statut == "Médecin traitant") {
                 <div class="col-sm-7">
                     <input type="text" placeholder="Service" class="form-control" name="serviceep" id="serviceep">
                 </div>
-            </div><br>
-
-
+            </div>
+            <div class="form-group">
+                <label for="npp" class="col-sm-4 control-label">Nom et prénom:</label>
+                <div class="col-sm-7">
+                    <input type="text" placeholder="nom et prénom du prescripteur" class="form-control" name="npp" id="npp">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tel" class="col-sm-4 control-label">Tél:</label>
+                <div class="col-sm-7">
+                    <input type="text" placeholder="téléphone" class="form-control" name="telep" id="telep">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mail" class="col-sm-4 control-label">Mail:</label>
+                <div class="col-sm-7">
+                    <input type="text" placeholder="mail" class="form-control" name="mailep" id="mailep">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adresse" class="col-sm-4 control-label">Adresse:</label>
+                <div class="col-sm-7">
+                    <input type="text" placeholder="adresse de l’Etablissement" class="form-control" name="adressep" id="adressep">
+                </div>
+            </div>
+            <br>
             <div class="prescripteur hidden">
                 <div class="form-group">
                     <label for="diabetologueprescripteur" class="col-sm-4 control-label">Diabétologue prescripteur:</label>
@@ -219,7 +242,7 @@ if ($statut == "Médecin traitant") {
                     </div>
                 </div>
                 <div class="form-group col-sm-6">
-                    <label for="tel" class="col-sm-3 control-label">Tel:</label>
+                    <label for="tel" class="col-sm-3 control-label">Tél:</label>
                     <div class="col-sm-9">
                         <input type="number" placeholder="Téléphone" class="form-control" name="teldp" id="teldp" value="" readonly>
                     </div>
