@@ -4512,12 +4512,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     color: #dddddd;
 }
 .navbar-default .navbar-nav > li > a {
-    color: #fdd200;
+    color: #ffffff;
     font-size: 15px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
+    color: #fdd200;
     background-color: #178acc;
 }
 .navbar-default .navbar-nav > .active > a,
