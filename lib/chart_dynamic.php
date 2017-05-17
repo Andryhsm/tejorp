@@ -21,7 +21,7 @@
 
           	$initialiser =  "function initialiser(){
           			var barData1 = {
-                           labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
+                           labels: [\"Schéma 1\", \"Schéma 2\", \"Schéma 3\", \"Schéma 4\"],
                             datasets: [{
                                     fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
                                     strokeColor: \"rgba(220,220,220,0.9)\",
@@ -47,7 +47,7 @@
 
             $tracer_graphe1 = "function Debit_graphe1() {
                         var barData1 = {
-                            labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
+                            labels: [\"Schéma 1\", \"Schéma 2\", \"Schéma 3\", \"Schéma 4\"],
                             datasets: [{
                                     fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",1)\",
                                     strokeColor: \"rgba(220,220,220,0.9)\",
@@ -73,7 +73,7 @@
                function tracer_graphe1($datasets){
 	               	echo "function Debit_graphe1() {
 								var barData1 = {
-								labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
+								labels: [\"Schéma 1\", \"Schéma 2\", \"Schéma 3\", \"Schéma 4\"],
 								datasets: [{
 										fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",1)\",
 										strokeColor: \"rgba(220,220,220,0.9)\",
