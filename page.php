@@ -524,13 +524,19 @@
 
 
                     function Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9) {
+                        var barHbA1c = document.getElementById('barhg').getContext('2d');
+                        var gradient = barHbA1c.createLinearGradient(0, 0, 100, 400);
+                        gradient.addColorStop(0, 'rgba(255,255,255,0.8)');   
+                        gradient.addColorStop(1, 'rgba(255,255,0,1)');
+
                         var barDataHG = {
                             labels: [ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9],
                             datasets: [{
-                                    fillColor: "rgba(147,163,244,1)",
-                                    strokeColor: "rgba(147,163,244,0.8)",
-                                    highlightFill: "rgba(147,163,244,0.75)",
-                                    highlightStroke: "rgba(147,163,244,1)",
+                                    fillColor: "rgba(240, 240, 0,0.9)",
+                                    strokeColor: "rgba(240,240,0,0.6)",
+                                    highlightFill: "rgba(255, 255, 40,0.7)",
+                                    highlightStroke: "rgba(0,220, 0,0.4)",
+                                  
                                     data: [ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9]
                                 }]
                         }
@@ -573,7 +579,7 @@
 
                       <?php 
 
-                        for($i = 1; $i < 9; $i++){
+                        for($i = 1; $i <= 9; $i++){
                             echo "$('#date".$i."').change(function (event) {
                                     date".$i." = $('#date".$i."').val();
                                     dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
@@ -644,26 +650,39 @@
                         var val = $("#"+target).val();
                         return (val != "" && !isNaN(val)) ? val : 0;
                     }
-                    function dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9) {
+                    function dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9) { 
+                        var bar = document.getElementById('bar').getContext('2d');
+                        var gradient = bar.createLinearGradient(0, 0, 100, 400);
+                        gradient.addColorStop(0, 'rgba(255,255,255,0.8)');   
+                        gradient.addColorStop(1, 'rgba(255,255,0,1)');
+
+                        var gradient2 = bar.createLinearGradient(0, 0, 100, 400);
+                        gradient2.addColorStop(0, 'rgba(255,255,255,0.8)');   
+                        gradient2.addColorStop(1, 'rgba(255,255,43,1)');
+
+                        var gradient3 = bar.createLinearGradient(0, 0, 100, 400);
+                        gradient3.addColorStop(0, 'rgba(0,234,0,0.8)');   
+                        gradient3.addColorStop(1, 'rgba(255,255,80,1)');
+
                         var barData = {
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
                             datasets: [
                                 {
-                                    fillColor: "rgba(81, 255, 81,1)",
+                                    fillColor: gradient3,
                                     strokeColor: "rgba(81, 255, 81,0.8)",
                                     highlightFill: "rgba(81, 255, 81,0.75)",
                                     highlightStroke: "rgba(81, 255, 81,1)",
                                     data: [taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9]
                                 },
                                 {
-                                    fillColor: "rgba(0, 215, 0,1)",
+                                    fillColor: gradient2,
                                     strokeColor: "rgba(0, 215, 0, 0.8)",
                                     highlightFill: "rgba(0, 215, 0,0.75)",
                                     highlightStroke: "rgba(0, 215, 0, 1)",
                                     data: [poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9]
                                 },
                                 {
-                                    fillColor: "rgba(0, 128, 0,1)",
+                                    fillColor: gradient,
                                     strokeColor: "rgba(0, 128, 0,0.8)",
                                     highlightFill: "rgba(0, 128, 0,0.75)",
                                     highlightStroke: "rgba(0, 128, 0, 0,1)",
@@ -674,7 +693,7 @@
                         var barOptions = {
                             responsive: true
                         }
-                        var bar = document.getElementById('bar').getContext('2d');
+                        
                         new Chart(bar).Line(barData, barOptions);
                     }
                 });

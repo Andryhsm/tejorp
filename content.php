@@ -50,76 +50,81 @@ ob_start();
 		}
 
 </style>
+<page  backtop="15mm" backleft="10mm" backright="10mm" backbottom="10mm" footer="page;">
 <div id='content'>
-    <div>
-    	<table style="border: none;">
-    		<tr style="border: none;">
-    			<td style="border: none;">
-    				<img style="position: relative; margin-right: 250px; margin-left: 10px; width: 120px;" src="img/logo_diabete.jpg">
-				</td>
-    			<td  style="border: none;">
-    				<img style="position: relative; margin-left: 245px; width: 120px;" src="img/basitide.png">
-				</td>
-    		</tr>
-    	</table>
-    </div>
-   	<div class="dec"><br/><br/><div style="margin-left: 170px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
-    <div class="dec">
-        <h4><u>INFIRMIERE BASTIDE MEDICAL</u></h4>
-        <p>
-            <strong>Nom IDE Responsable :</strong> <?php echo $nomresp; ?>  <br/>   
-            <strong>Prénom : </strong> <?php echo $prenomresp; ?>  <br/>
-            <strong>Mobile : </strong> <?php echo $mobileresp; ?>  <br/>
-            <strong>Coordonnées :</strong> <?php echo $coordonnee; ?> 
+    
+        <page_header>
+            <div>
+                <table style="border: none;">
+                    <tr style="border: none;">
+                        <td style="border: none;">
+                            <img style="position: relative; margin-right: 250px; margin-left: 10px; width: 120px;" src="img/logo_diabete.jpg">
+                        </td>
+                        <td  style="border: none;">
+                            <img style="position: relative; margin-left: 245px; width: 120px;" src="img/basitide.png">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </page_header>
+        
+       	<div ><br/><br/><div style="margin-left: 130px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
+        <div >
+            <h4><u>INFIRMIERE BASTIDE MEDICAL</u></h4>
+            <p>
+                <strong>Nom IDE Responsable :</strong> <?php echo $nomresp; ?>  <br/>   
+                <strong>Prénom : </strong> <?php echo $prenomresp; ?>  <br/>
+                <strong>Mobile : </strong> <?php echo $mobileresp; ?>  <br/>
+                <strong>Coordonnées :</strong> <?php echo $coordonnee; ?> 
 
-        <h4><u>RENSEIGNEMENTS PATIENT</u></h4>
-        <strong>Nom :</strong> <?php echo $nompatient; ?>  <br/>
-        <strong>Prénom :</strong><?php echo $prenompatient; ?><br/>
-        <strong>Né(e) le : </strong><?php echo $datenaissance; ?> <br/>
-        <strong>Age :</strong> <?php echo $agepatient; ?><br/>
-        <strong>Tel : </strong> <?php echo $telpatient; ?><br/>
-        <strong>Mobile :</strong><?php echo $mobilepatient; ?><br/>
-        <strong>Mail :</strong><?php echo $emailpatient; ?><br/>
-        <strong>Adresse :</strong><?php echo $adressepatient; ?><br/>
-        <strong>Code postal :</strong><?php echo $codepostalpatient; ?><br/>    
-        <strong>Ville :</strong><?php echo $villepatient; ?><br/>
-        <h4><u>RENSEIGNEMENTS PRESCRIPTEUR</u></h4>
+            <h4><u>RENSEIGNEMENTS PATIENT</u></h4>
+            <strong>Nom : <?php echo $nompatient; ?></strong>  <br/>
+            <strong>Prénom :<?php echo $prenompatient; ?></strong><br/>
+            <strong>Né(e) le : <?php echo $datenaissance; ?> </strong><br/>
+            <strong>Age : <?php echo $agepatient; ?></strong><br/>
+            <strong>Tel :  <?php echo $telpatient; ?></strong><br/>
+            <strong>Mobile :<?php echo $mobilepatient; ?></strong><br/>
+            <strong>Mail :<?php echo $emailpatient; ?></strong><br/>
+            <strong>Adresse :<?php echo $adressepatient; ?></strong><br/>
+            <strong>Code postal :<?php echo $codepostalpatient; ?></strong><br/>    
+            <strong>Ville :<?php echo $villepatient; ?></strong><br/>
+            <h4><u>RENSEIGNEMENTS PRESCRIPTEUR</u></h4>
 
-        <strong>Etablissement prescripteur:</strong> <?php echo $etablissementprescripteur; ?> <br/>
-        <strong>Service :</strong> <?php echo $serviceep; ?> <br/><br/> 
+            <strong>Etablissement prescripteur:</strong> <?php echo $etablissementprescripteur; ?> <br/>
+            <strong>Service :</strong> <?php echo $serviceep; ?> <br/><br/> 
 
-        <?php if ($statut == "Médecin traitant") { ?>            
-            <strong>Médecin traitant : </strong><?php echo $medecintraitant; ?><br/>
-            <strong>Tel :</strong>  <?php echo $telmt; ?><br/>   
-            <strong>Mobile :</strong>  <?php echo $mobilemt; ?><br/>      
-            <strong>Ville :</strong><?php echo $villemt; ?><br/>
-            <strong>Mail :</strong><?php echo $mailmt; ?><br/><br/>    
-        <?php } elseif ($statut == "Diabétologue libéral") { ?>
-            <strong> Diabétologue prescripteur :</strong> <?php echo $diabetologueliberal; ?>
-            <strong>Tel :</strong>  <?php echo $teldl; ?><br/>   
-            <strong>Mobile :</strong>  <?php echo $mobiledl; ?><br/>      
-            <strong>Ville :</strong><?php echo $villedl; ?><br/>
-            <strong>Mail :</strong><?php echo $maildl; ?><br/><br/>  
-        <?php } elseif ($statut == "Diabétologue prescripteur") { ?>
-            <strong> Diabétologue prescripteur : </strong><?php echo $diabetologueprescripteur; ?>
-            <strong>Tel :</strong>  <?php echo $teldp; ?><br/>   
-            <strong>Mobile :</strong>  <?php echo $mobiledp; ?><br/>      
-            <strong>Ville :</strong><?php echo $villedp; ?><br/>
-            <strong>Mail :</strong><?php echo $maildp; ?><br/><br/>  
-        <?php } elseif ($statut == "Diététicienne") { ?>
-            <strong> Diabétologue prescripteur : </strong><?php echo $dieteticienne; ?>
-            <strong>Tel :</strong>  <?php echo $teld; ?><br/>   
-            <strong>Mobile :</strong>  <?php echo $mobiled; ?><br/>      
-            <strong>Ville :</strong><?php echo $villed; ?><br/>
-            <strong>Mail :</strong><?php echo $maild; ?><br/><br/>  
-        <?php } ?>
+            <?php if ($statut == "Médecin traitant") { ?>            
+                <strong>Médecin traitant : </strong><?php echo $medecintraitant; ?><br/>
+                <strong>Tel :</strong>  <?php echo $telmt; ?><br/>   
+                <strong>Mobile :</strong>  <?php echo $mobilemt; ?><br/>      
+                <strong>Ville :</strong><?php echo $villemt; ?><br/>
+                <strong>Mail :</strong><?php echo $mailmt; ?><br/><br/>    
+            <?php } elseif ($statut == "Diabétologue libéral") { ?>
+                <strong> Diabétologue prescripteur :</strong> <?php echo $diabetologueliberal; ?>
+                <strong>Tel :</strong>  <?php echo $teldl; ?><br/>   
+                <strong>Mobile :</strong>  <?php echo $mobiledl; ?><br/>      
+                <strong>Ville :</strong><?php echo $villedl; ?><br/>
+                <strong>Mail :</strong><?php echo $maildl; ?><br/><br/>  
+            <?php } elseif ($statut == "Diabétologue prescripteur") { ?>
+                <strong> Diabétologue prescripteur : </strong><?php echo $diabetologueprescripteur; ?>
+                <strong>Tel :</strong>  <?php echo $teldp; ?><br/>   
+                <strong>Mobile :</strong>  <?php echo $mobiledp; ?><br/>      
+                <strong>Ville :</strong><?php echo $villedp; ?><br/>
+                <strong>Mail :</strong><?php echo $maildp; ?><br/><br/>  
+            <?php } elseif ($statut == "Diététicienne") { ?>
+                <strong> Diabétologue prescripteur : </strong><?php echo $dieteticienne; ?>
+                <strong>Tel :</strong>  <?php echo $teld; ?><br/>   
+                <strong>Mobile :</strong>  <?php echo $mobiled; ?><br/>      
+                <strong>Ville :</strong><?php echo $villed; ?><br/>
+                <strong>Mail :</strong><?php echo $maild; ?><br/><br/>  
+            <?php } ?>
 
 
-        <strong>Membre réseau :</strong> <?php echo $membrereseau; ?> <br/> 
-        </p>
-    </div>
+            <strong>Membre réseau :</strong> <?php echo $membrereseau; ?> <br/> 
+            </p>
+        </div>
 
-    <div class="dec">
+    <div >
         <h4><u>CHOIX DU MATERIEL</u></h4>
         <p>   
             <strong>Pompe :</strong> <?php echo $Pompe; ?> <br/>
@@ -171,7 +176,7 @@ ob_start();
         </tbody>
     </table>
     <br/><br/><br/>
-    <div class="dec">
+    <div >
         <h4><u>Auto surveillance glycémique :</u></h4>
         <p>
             <strong>Nombre de glycémies par jour :</strong> <?php echo $nombreglycemieparjour; ?> <br/>
@@ -187,7 +192,8 @@ ob_start();
             <strong>Autre : </strong>  <?php echo $autreaiguille; ?> <br/><br/><br/>    
       	</p>
     </div>
-    <div class="dec">
+
+    <div >
         <table class="table " style="margin-left: 110px;">
             <thead>
                 <tr>
@@ -266,7 +272,7 @@ ob_start();
         </table><br/>
         <br/><br/>
     </div>
-    <div class="dec">
+    <div >
         <table class="table" style="margin-right: 20px;">
             <tbody>
                 <tr>
@@ -350,7 +356,7 @@ ob_start();
                 </tr>
 
             </tbody>
-        </table 
+        </table >
         <br/>
         <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
             <?php
@@ -362,7 +368,7 @@ ob_start();
              	;?>
         <br/><br/>
     </div>
-    <div class="dec">
+    <div ><br/><br/>
         <table class="table">
             <tbody>
                 <tr>
@@ -446,10 +452,10 @@ ob_start();
                     <td><?php echo $Debit_N4; ?></td>
                 </tr>
             </tbody>
-        </table
+        </table>
         <br/>
-
-    <?php
+        <h4>Histogrammes des débits suivant le Schémas basals date 2</h4>
+        <?php
             	$image = 'img/image'.$id_.'bardate2.png';
 
             		if(file_exists($image))
@@ -459,7 +465,7 @@ ob_start();
         <br/><br/>
     </div>
 
-    <div class="dec">
+    <div >
 
 
         <table class="table">
@@ -672,7 +678,7 @@ ob_start();
         <br/>
 
     </div>
-    <div class="dec">
+    <div >
         <strong>Synthèse/Commentaire : </strong> <?php echo $synthesecommentaire; ?> <br/>
         <strong>Objectif glycémique pré prandial (g/l) :</strong><?php echo $objectifglycemiquepreprandial; ?> <br/>
         <strong>Objectif glycémique post prandial (g/l) :</strong><?php echo $objectifglycemiquepostprandial; ?> <br/>
@@ -717,7 +723,7 @@ ob_start();
         <br/><br/>
     </div>
 
-    <div class="dec">
+    <div >
         <h4><u>HABITUDE DE VIE</u></h4>
 
         <strong>Activité physique (type/frequence) :</strong> <?php echo $activitephysique; ?><br>
@@ -732,7 +738,7 @@ ob_start();
         <strong>Choix des points d'injection : </strong> <?php echo $choixpoint; ?> <br>
 
     </div>
-    <div class="dec">
+    <div >
         <h4><u>INSULINOTHERAPIE FONCTIONNELLE </u></h4>
         <table class="table " style="margin-left: 9px;">
             <thead>
@@ -790,7 +796,7 @@ ob_start();
 
         </table>
     </div>
-    <div class="dec">
+    <div >
         <h4><u>HABITUDES ALIMENTAIRES</u></h4>
         <strong>SUIVI DE POIDS : </strong> <?php echo $regime; ?> <br>
         <strong>Observation : </strong> <?php echo $observation2; ?> <br>
@@ -856,11 +862,11 @@ ob_start();
             	$image = 'img/image'.$id_.'bar.png';
 
             		if(file_exists($image))
-             			echo '<img src="'.$image.'" style="width: 700px;" />'
+             			echo '<img src="'.$image.'" style="width: 700px;" /><br/>';
 
-             	;?>
+             	?>
 
-    <div class="dec">
+    <div >
         <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
 
         <table style="width: 1200px;">
@@ -1089,7 +1095,7 @@ ob_start();
             </tbody>
         </table>
     </div>
-    <div class="dec">
+    <div >
 
         <h4><u>POSE DU CATHETER</u></h4><br/>
 
@@ -1353,8 +1359,17 @@ ob_start();
             </tbody>
         </table>
     </div>
-</div>
 
+</div>
+        <page_footer>
+            <!-- ?php
+                $i = 1;
+                echo $i;
+                $i++;
+            ? -->  
+        </page_footer>
+
+</page>
 
 <style>
     table
