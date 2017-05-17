@@ -336,6 +336,5 @@ require './protection.php';
                 });
             });
         </script>
-
     </body>
 </html>
