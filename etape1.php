@@ -792,12 +792,7 @@ if ($statut == "Médecin traitant") {
 </div>
 <script type="text/javascript">
     $(document).ready(function(e) {
-        try {
             $("body #webmenu").msDropDown();
-        } catch(e) 
-        {
-            alert(e.message);
-        }
     });
 
     $('#webmenu').change(function()
