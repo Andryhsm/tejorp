@@ -21,19 +21,19 @@
 
           	$initialiser =  "function initialiser(){
           			var barData1 = {
-                           labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
-                            datasets: [{
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
-                                    strokeColor: \"rgba(220,220,220,0.9)\",
-                                    highlightFill: \"rgba(220,220,220,0.75)\",
-                                    highlightStroke: \"rgba(220,220,220,1)\",
+                           labels: [\"Schéma 1\", \"Schéma 2\", \"Schéma 3\", \"Schéma 4\"],
+                             datasets: [{
+                                    fillColor: \"rgba(240, 240, 0,0.9)\",
+                                    strokeColor: \"rgba(240,240,0,0.6)\",
+                                    highlightFill: \"rgba(255, 255, 40,0.7)\",
+                                    highlightStroke: \"rgba(0,220, 0,0.4)\",
                                     data: [Debit1, Debit2, Debit3, Debit4]
                                 }, {
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",0.8)\",
-                                    strokeColor: \"rgba(151,187,205,0.9)\",
-                                    highlightFill: \"rgba(151,187,205,0.75)\",
-                                    highlightStroke: \"rgba(151,187,205,1)\",
-                                     data: [Debit1N, Debit2N, Debit3N, Debit4N]
+                                    fillColor: \"rgba(255, 255, 0, 0.7 )\",
+                                    strokeColor: \"rgba(255,255, 0,0.6)\",
+                                    highlightFill:\"rgba(255, 255, 0,0.5)\",
+                                    highlightStroke: \"rgba(255,255,0,0.4)\",
+                                    data: [Debit1N, Debit2N, Debit3N, Debit4N]
                                 }]
                         }
                         var barOptions = {
@@ -47,18 +47,18 @@
 
             $tracer_graphe1 = "function Debit_graphe1() {
                         var barData1 = {
-                            labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
-                            datasets: [{
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",1)\",
-                                    strokeColor: \"rgba(220,220,220,0.9)\",
-                                    highlightFill: \"rgba(220,220,220,0.75)\",
-                                    highlightStroke: \"rgba(220,220,220,1)\",
+                            labels: [\"Schéma 1\", \"Schéma 2\", \"Schéma 3\", \"Schéma 4\"],
+                             datasets: [{
+                                    fillColor: \"rgba(240, 240, 0,0.9)\",
+                                    strokeColor: \"rgba(240,240,0,0.6)\",
+                                    highlightFill: \"rgba(255, 255, 40,0.7)\",
+                                    highlightStroke: \"rgba(0,220, 0,0.4)\",
                                     data: [Debit1, Debit2, Debit3, Debit4]
                                 }, {
-                                    fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",1)\",
-                                    strokeColor: \"rgba(151,187,205,0.9)\",
-                                    highlightFill: \"rgba(151,187,205,0.75)\",
-                                    highlightStroke: \"rgba(151,187,205,1)\",
+                                    fillColor: \"rgba(255, 255, 0, 0.7 )\",
+                                    strokeColor: \"rgba(255,255, 0,0.6)\",
+                                    highlightFill:\"rgba(255, 255, 0,0.5)\",
+                                    highlightStroke: \"rgba(255,255,0,0.4)\",
                                     data: [Debit1N, Debit2N, Debit3N, Debit4N]
                                 }]
                         }
@@ -73,24 +73,24 @@
                function tracer_graphe1($datasets){
 	               	echo "function Debit_graphe1() {
 								var barData1 = {
-								labels: [\"Schémas 1\", \"Schémas 2\", \"Schémas 3\", \"Schémas 4\"],
+								labels: [\"Schéma 1\", \"Schéma 2\", \"Schéma 3\", \"Schéma 4\"],
 								datasets: [{
-										fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",1)\",
-										strokeColor: \"rgba(220,220,220,0.9)\",
-										highlightFill: \"rgba(220,220,220,0.75)\",
-										highlightStroke: \"rgba(220,220,220,1)\",
-										data: [Debit1, Debit2, Debit3, Debit4]
-										},";
+                                    fillColor: \"rgba(240, 240, 0,0.9)\",
+                                    strokeColor: \"rgba(240,240,0,0.6)\",
+                                    highlightFill: \"rgba(255, 255, 40,0.7)\",
+                                    highlightStroke: \"rgba(0,220, 0,0.4)\",
+                                    data: [Debit1, Debit2, Debit3, Debit4]
+                                },";
 	  							foreach ($datasets as $key => $value) {
 	  											echo $value;
 	  							}
 	  				echo			"{
-										fillColor: \"rgba(".rand(0, 225).", ".rand(0, 225).", ".rand(0, 225).",1)\",
-										strokeColor: \"rgba(151,187,205,0.9)\",
-										highlightFill: \"rgba(151,187,205,0.75)\",
-										highlightStroke: \"rgba(151,187,205,1)\",
-										data: [Debit1N, Debit2N, Debit3N, Debit4N]
-									}]
+                                    fillColor: \"rgba(255, 255, 0, 0.7 )\",
+                                    strokeColor: \"rgba(255,255, 0,0.6)\",
+                                    highlightFill:\"rgba(255, 255, 0,0.5)\",
+                                    highlightStroke: \"rgba(255,255,0,0.4)\",
+                                    data: [Debit1N, Debit2N, Debit3N, Debit4N]
+                                }]
 								}
 								var barOptions = {
 									responsive: true
