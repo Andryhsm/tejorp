@@ -1519,7 +1519,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").show();
-                    $('#titreEtape').html("<div class='decale'><div id='61' class='bleu'>Etape 1</div><div id='62' class='rouge'>Etape 2</div><div id='63' class='verte'>Etape 3</div><div id='64' class='orangee'>Etape 4</div><div id='65' class='violette'>Etape 5</div></div><div class='jaunegrand'>Etape 6</div>");
+                    $('#titreEtape').html("");
 
                     $("#61").click(function () {
                         $('#1').trigger('click');
