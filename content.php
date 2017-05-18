@@ -48,9 +48,12 @@ ob_start();
 			background: #249c97;
 			color: #222;
 		}
+        h4{
+            text-align: center;
+        }
 
 </style>
-<page  backtop="15mm" backleft="10mm" backright="10mm" backbottom="10mm" footer="page;">
+<page  backtop="20mm" backleft="10mm" backright="20%" backbottom="10mm" footer="page;">
 <div id='content'>
     
         <page_header>
@@ -100,19 +103,19 @@ ob_start();
                 <strong>Ville :</strong><?php echo $villemt; ?><br/>
                 <strong>Mail :</strong><?php echo $mailmt; ?><br/><br/>    
             <?php } elseif ($statut == "Diabétologue libéral") { ?>
-                <strong> Diabétologue prescripteur :</strong> <?php echo $diabetologueliberal; ?>
+                <strong>Diabétologue prescripteur :</strong> <?php echo $diabetologueliberal; ?><br/>
                 <strong>Tel :</strong>  <?php echo $teldl; ?><br/>   
                 <strong>Mobile :</strong>  <?php echo $mobiledl; ?><br/>      
                 <strong>Ville :</strong><?php echo $villedl; ?><br/>
                 <strong>Mail :</strong><?php echo $maildl; ?><br/><br/>  
             <?php } elseif ($statut == "Diabétologue prescripteur") { ?>
-                <strong> Diabétologue prescripteur : </strong><?php echo $diabetologueprescripteur; ?>
+                <strong>Diabétologue prescripteur : </strong><?php echo $diabetologueprescripteur; ?><br>
                 <strong>Tel :</strong>  <?php echo $teldp; ?><br/>   
                 <strong>Mobile :</strong>  <?php echo $mobiledp; ?><br/>      
                 <strong>Ville :</strong><?php echo $villedp; ?><br/>
                 <strong>Mail :</strong><?php echo $maildp; ?><br/><br/>  
             <?php } elseif ($statut == "Diététicienne") { ?>
-                <strong> Diabétologue prescripteur : </strong><?php echo $dieteticienne; ?>
+                <strong>Diabétologue prescripteur : </strong><?php echo $dieteticienne; ?><br>
                 <strong>Tel :</strong>  <?php echo $teld; ?><br/>   
                 <strong>Mobile :</strong>  <?php echo $mobiled; ?><br/>      
                 <strong>Ville :</strong><?php echo $villed; ?><br/>
@@ -157,13 +160,13 @@ ob_start();
             <strong>HbA1C de référence avant la mise sous Pompe :</strong>   <?php echo $hba1c; ?> <br/>     
         </p><br/>
     </div>
-    <table style="margin: 0px 30px 0px 50px;">
+    <table>
         <thead>
             <tr>
-                <th style="width: 20% ; text-align: center;">Poids actuel (kg)</th>
-                <th style="width: 20% ; text-align: center;">Poids de forme (kg)</th>
-                <th style="width: 20% ; text-align: center;">Taille (cm)</th>
-                <th style="width: 20% ; text-align: center;">IMC</th>
+                <th style="width: 24.25% ; text-align: center;">Poids actuel (kg)</th>
+                <th style="width: 24.25% ; text-align: center;">Poids de forme (kg)</th>
+                <th style="width: 24.25% ; text-align: center;">Taille (cm)</th>
+                <th style="width: 24.25% ; text-align: center;">IMC</th>
             </tr>
         </thead>
         <tbody>
@@ -193,13 +196,13 @@ ob_start();
       	</p>
     </div>
     <div >
-        <table class="table " style="margin-left: 110px;">
+        <table class="table ">
             <thead>
                 <tr>
-                    <th style="width:100px ; text-align: center;"></th>
-                    <th style="width:100px ; text-align: center;">Insuline lente (UI)</th>
-                    <th style="width:100px ; text-align: center;">Insuline rapide (UI)</th>
-                    <th style="width:100px ; text-align: center;">Quantité totale (UI)</th>
+                    <th style="width:24.25%; ; text-align: center;"></th>
+                    <th style="width:24.25%; ; text-align: center;">Insuline lente (UI)</th>
+                    <th style="width:24.25%; ; text-align: center;">Insuline rapide (UI)</th>
+                    <th style="width:24.25%; ; text-align: center;">Quantité totale (UI)</th>
                 </tr>
             </thead>
             <tbody>
@@ -243,11 +246,11 @@ ob_start();
         </table><br/>
 
         <h4><u>Traitements complémentaires :</u></h4>
-        <table class="table" style="margin-left: 70px;">
+        <table class="table">
             <thead>
                 <tr>
-                    <th style="width: 35% ; text-align: center;">Spécialité</th>
-                    <th style="width: 35% ; text-align: center;">Posologie</th>
+                    <th style="width: 48.5%; text-align: center;">Spécialité</th>
+                    <th style="width: 48.5%; text-align: center;">Posologie</th>
                 </tr>
             </thead>
             <tbody>
@@ -272,16 +275,16 @@ ob_start();
         <br/><br/>
     </div>
     <div >
-        <table class="table" style="margin-right: 20px;">
+        <table class="table">
             <tbody>
                 <tr>
-                    <th colspan=12 style="text-align: center;">Schéma basal date 1:<?php echo $datebasal1; ?></th>
+                    <th colspan=12 style="text-align: center; width: 97%;">Schéma basal date 1:<?php echo $datebasal1; ?></th>
                 </tr>
                 <tr>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
                 </tr>
                 <tr>
                     <td>De</td>
@@ -371,13 +374,13 @@ ob_start();
         <table class="table">
             <tbody>
                 <tr>
-                    <th colspan=12 style="text-align: center;"><strong>Schéma basal date 2:</strong><?php echo $datebasal2; ?></th>
+                    <th colspan=12 style="text-align: center; width:97%;"><strong>Schéma basal date 2:</strong><?php echo $datebasal2; ?></th>
                 </tr>
                 <tr>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
-                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
+                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
                 </tr>
                 <tr>
                     <td>De</td>
@@ -470,17 +473,17 @@ ob_start();
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6" style="text-align: center;">Schéma des bolus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo $datebolus; ?> </th>
+                    <th colspan="6" style="text-align: center; width: 97%;">Schéma des bolus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo $datebolus; ?> </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="width:16%; text-align: center;">Petit déjeuner (UI)</td>
-                    <td style="width:16%; text-align: center;">Déjeuner (UI)</td>
-                    <td style="width:16%; text-align: center;">Goûter (UI)</td>
-                    <td style="width:16%; text-align: center;">Dîner (UI)</td>
-                    <td style="width:16%; text-align: center;">Collation (UI)</td>
-                    <td style="width:16%; text-align: center;">Autre (UI)</td>
+                    <td style="width:16.666666666667%; text-align: center;">Petit déjeuner (UI)</td>
+                    <td style="width:16.666666666667%; text-align: center;">Déjeuner (UI)</td>
+                    <td style="width:16.666666666667%; text-align: center;">Goûter (UI)</td>
+                    <td style="width:16.666666666667%; text-align: center;">Dîner (UI)</td>
+                    <td style="width:16.666666666667%; text-align: center;">Collation (UI)</td>
+                    <td style="width:16.666666666667%; text-align: center;">Autre (UI)</td>
                 </tr>
                 <tr>
                     <td><span style="color: white;">a</span><?php echo $ValGlycemique1; ?></td>

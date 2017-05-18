@@ -197,7 +197,14 @@
             .decale{
                 margin-left: 20px;
             }
-
+            #etape6{
+                background: #39382e66;
+                margin-top: 0%;
+                padding-top: 1%;
+                border-radius: 31px;
+                width: ;
+                height: ;
+            }
             
         </style>
 
@@ -1599,7 +1606,7 @@
                 </div>
                 <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
                 <div class="item" id="etape6" style="display: none;">
-                    <div class="container"  style="margin-top: 230px;">
+                    <div class="container"  style="margin-top: 80px; margin-bottom: -80px;">
                         <div class="col-lg-3 col-md-offset-1">
                             <center>  
 
