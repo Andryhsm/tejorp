@@ -279,13 +279,13 @@ ob_start();
         <table class="table">
             <tbody>
                 <tr>
-                    <th colspan=12 style="text-align: center; width: 97%;">Schéma basal date 1:<?php echo $datebasal1; ?></th>
+                    <th colspan=12 style="text-align: center; width: 94%;">Schéma basal date 1:<?php echo $datebasal1; ?></th>
                 </tr>
                 <tr>
-                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
-                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
-                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
-                    <td style="width:24.25%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 1</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 2</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 3</strong></td>
+                    <td style="width:24%; text-align: center;" colspan=3><strong>Schéma 4</strong></td>
                 </tr>
                 <tr>
                     <td>De</td>
@@ -474,17 +474,17 @@ ob_start();
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6" style="text-align: center; width: 97%;">Schéma des bolus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo $datebolus; ?> </th>
+                    <th colspan="6" style="text-align: center; width: 94%;">Schéma des bolus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date de MAJ: <?php echo $datebolus; ?> </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="width:16.666666666667%; text-align: center;">Petit déjeuner (UI)</td>
-                    <td style="width:16.666666666667%; text-align: center;">Déjeuner (UI)</td>
-                    <td style="width:16.666666666667%; text-align: center;">Goûter (UI)</td>
-                    <td style="width:16.666666666667%; text-align: center;">Dîner (UI)</td>
-                    <td style="width:16.666666666667%; text-align: center;">Collation (UI)</td>
-                    <td style="width:16.666666666667%; text-align: center;">Autre (UI)</td>
+                    <td style="width:16%; text-align: center;">Petit déjeuner (UI)</td>
+                    <td style="width:16%; text-align: center;">Déjeuner (UI)</td>
+                    <td style="width:16%; text-align: center;">Goûter (UI)</td>
+                    <td style="width:16%; text-align: center;">Dîner (UI)</td>
+                    <td style="width:16%; text-align: center;">Collation (UI)</td>
+                    <td style="width:16%; text-align: center;">Autre (UI)</td>
                 </tr>
                 <tr>
                     <td><span style="color: white;">a</span><?php echo $ValGlycemique1; ?></td>
@@ -809,16 +809,16 @@ ob_start();
         <table class="table " style="margin-left: 8px;">
             <tbody>
                 <tr>
-                    <td style="width:10% ;background: #249c97;">Date</td>
-                    <td style="width:10%"><?php echo $date1; ?></td>
-                    <td style="width:10%"><?php echo $date2; ?></td>
-                    <td style="width:10%"><?php echo $date3; ?></td>
-                    <td style="width:10%"><?php echo $date4; ?></td>
-                    <td style="width:9%"><?php echo $date5; ?></td>
-                    <td style="width:9%"><?php echo $date6; ?></td>
-                    <td style="width:9%"><?php echo $date7; ?></td>
-                    <td style="width:9%"><?php echo $date8; ?></td>
-                    <td style="width:9%"><?php echo $date9; ?></td>
+                    <td style="width:9.6%;background: #249c97;">Date</td>
+                    <td style="width:9.6%"><?php echo $date1; ?></td>
+                    <td style="width:9.6%"><?php echo $date2; ?></td>
+                    <td style="width:9.6%"><?php echo $date3; ?></td>
+                    <td style="width:9.6%"><?php echo $date4; ?></td>
+                    <td style="width:9.6%"><?php echo $date5; ?></td>
+                    <td style="width:9.6%"><?php echo $date6; ?></td>
+                    <td style="width:9.6%"><?php echo $date7; ?></td>
+                    <td style="width:9.6%"><?php echo $date8; ?></td>
+                    <td style="width:9.6%"><?php echo $date9; ?></td>
                 </tr>
                 <tr>
                     <td style="background: #249c97;">Taille (cm)</td>
@@ -969,7 +969,7 @@ ob_start();
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th style="text-align: center; width: 240px;">Etapes</th>
+                    <th style="text-align: center; width: 210px;">Etapes</th>
                     <th style="text-align: center; width:60px; "><?php echo $alarmedate1; ?></th>
                     <th style="text-align: center; width:60px; "><?php echo $alarmedate2; ?></th>
                     <th style="text-align: center; width:60px; "><?php echo $alarmedate3; ?></th>
@@ -1046,7 +1046,7 @@ ob_start();
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th style="text-align: center; width: 240px">Etapes</th>
+                    <th style="text-align: center; width: 210px">Etapes</th>
                     <th style="text-align: center; width:60px;  "><?php echo $manipdate1; ?></th>
                     <th style="text-align: center; width:60px;  "><?php echo $manipdate2; ?></th>
                     <th style="text-align: center; width:60px;  "><?php echo $manipdate3; ?></th>
@@ -1110,7 +1110,7 @@ ob_start();
                     <th style="width: 60px;" ><?php echo $cathdate2; ?></th>
                     <th style="width: 60px;" ><?php echo $cathdate3; ?></th>
                     <th style="width: 60px;" ><?php echo $cathdate4; ?></th>
-                    <th style="text-align: center; width: 145px;">Commentaire</th>
+                    <th style="text-align: center; width: 155px;">Commentaire</th>
                 </tr>
             </thead>
             <tbody>
@@ -1345,7 +1345,7 @@ ob_start();
             <tr>
                 <th style="text-align: center; width: 400px;"></th>
                 <th style="text-align: center; width: 130px;"><strong>Prescription</strong></th>
-                <th style="text-align: center; width: 140px;"><strong>Réalisation réelle</strong></th>                            
+                <th style="text-align: center; width: 145px;"><strong>Réalisation réelle</strong></th>                            
             </tr>
 
             <tbody>                      
