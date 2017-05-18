@@ -586,7 +586,7 @@
 
                       <?php 
 
-                        for($i = 1; $i < 9; $i++){
+                        for($i = 1; $i <= 9; $i++){
                             echo "$('#date".$i."').change(function (event) {
                                     date".$i." = $('#date".$i."').val();
                                     dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);

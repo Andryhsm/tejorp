@@ -195,6 +195,7 @@ ob_start();
             <strong>Autre : </strong>  <?php echo $autreaiguille; ?> <br/><br/><br/>    
       	</p>
     </div>
+
     <div >
         <table class="table ">
             <thead>

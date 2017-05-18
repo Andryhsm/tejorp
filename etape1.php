@@ -74,7 +74,8 @@ if ($statut == "Médecin traitant") {
     box-shadow: inset 0 1px 1px rgba(0,63,71,.5);
 }
 </style>
-
+<script src="dropdown_master/js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="dropdown_master/css/msdropdown/dd.css" />
 
 <div class="container-fluid">
     <fieldset class="field1">
@@ -483,7 +484,7 @@ if ($statut == "Médecin traitant") {
 
     <fieldset class="field1 col-sm-12">
         <center><h4>CHOIX DU MATERIEL</h4></center>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="nom" class="col-sm-4 control-label">Pompe:</label>
             <div class="col-sm-7">
                 <select name="Pompe" class="form-control">
@@ -492,6 +493,51 @@ if ($statut == "Médecin traitant") {
                     <option value="Pompe3">Pompe3</option>
                     <option value="Pompe4">Pompe4</option>
                 </select>
+            </div>
+        </div> -->
+
+        <div class="form-group">
+            <label for="img" class="col-sm-4 control-label">Pompe :</label>
+            <div class="col-sm-7">
+                <select id="webmenu" class="form-control" name="Pompe">
+                        <option disabled>Laboratoire MEDTRONIC</option>
+                            <option value="Paradigm véo série 5 noir" data-image="img/paradigm_veo_serie5_noir.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 noir</option>
+                            <option value="Paradigm véo série 5 gris" data-image="img/paradigm_veo_serie5.png">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 gris</option>
+                            <option value="Paradigm véo série 5 bleu" data-image="img/paradigm_veo_serie5_bleu.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 bleu</option>
+                            <option value="Paradigm véo série 5 violet" data-image="img/paradigm_veo_serie5_violet.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 violet</option>
+                            <option value="Paradigm véo série 5 rose" data-image="img/paradigm_veo_serie5_rose.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 rose</option>
+
+                            <option value="Paradigm véo série 7 noir" data-image="img/640G_noir.jpg">&nbsp;&nbsp;&nbsp;640G Noir</option>
+                            <option value="Paradigm véo série 7 gris" data-image="img/640G_bleu.jpg">&nbsp;&nbsp;&nbsp;640G Bleu</option>
+                            <option value="Paradigm véo série 7 bleu" data-image="img/640G_blanc.jpg">&nbsp;&nbsp;&nbsp;640G Blanc</option>
+                            <option value="Paradigm véo série 7 violet" data-image="img/640G_violet.jpg">&nbsp;&nbsp;&nbsp;640G Violet</option>
+                            <option value="Paradigm véo série 7 rose" data-image="img/640G_fuschia.jpg">&nbsp;&nbsp;&nbsp;640G Fuschia</option>
+
+                        <option disabled>Laboratoire ROCHE</option> 
+                            <option value="ACCU-CHEK Spirit Combo" data-image="img/ACCU-CHEK_Spirit_Combo.jpg">&nbsp;&nbsp;&nbsp;ACCU-CHEK Spirit Combo</option>
+                            <option value="ACCU-CHEK Insight" data-image="img/ACCU-CHEK_insight.jpg">&nbsp;&nbsp;&nbsp;ACCU-CHEK Insight</option>
+
+                        <option disabled>Laboratoire JOHNSON &amp; JOHNSON</option>
+                            <option value="Animas vibe noir" data-image="img/animas_vibe_noir.jpg">&nbsp;&nbsp;&nbsp;ANIMAS vibe noir</option>
+                            <option value="Animas vibe bleu" data-image="img/animas_vibe_bleu.jpg">&nbsp;&nbsp;&nbsp;ANIMAS vibe bleu</option>
+                            <option value="Animas vibe vert" data-image="img/animas_vibe_vert.jpg">&nbsp;&nbsp;&nbsp;ANIMAS vibe vert</option>
+                            <option value="Animas vibe gris" data-image="img/animas_vibe_gris.jpg">&nbsp;&nbsp;&nbsp;ANIMAS vibe gris</option>
+                            <option value="Animas vibe rose" data-image="img/animas_vibe_rose.jpg">&nbsp;&nbsp;&nbsp;ANIMAS vibe rose</option>
+
+                        <option disabled>Laboratoire YPSOMED</option>
+                            <option value="OMNIPOD" data-image="img/omnipod.jpg">OMNIPOD</option>
+
+                        <option disabled></option>
+                            <option value="autres" data-image="img/autres.jpg" id="autres">Autres...</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="form-group hidden" id="autrespompe">
+            <label for="pompeautres" class="col-sm-4 control-label"></label>
+            <div class="col-sm-7">
+                <input type="text"  placeholder="Pompe" class="form-control" name="pompeautres" id="pompeautres">
             </div>
         </div>
 
@@ -520,10 +566,40 @@ if ($statut == "Médecin traitant") {
                 <div class="form-group">
                     <label for="modele" class="col-sm-4 control-label">Modèle:</label>
                     <div class="col-sm-7">
-                        <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele">
+                        <!-- <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele"> -->
+                        <select name="modele" class="form-control" id="modelecatheter1">
+                            <option value="" selected disabled hidden>---- Choisir le modèle de Cathéter ----</option>
+                            <optgroup label="Laboratoire MEDTRONIC">
+                                <option value="Réservoir Medtronic 1,8ml">Réservoir Medtronic 1,8ml</option>
+                                <option value="Réservoir Medtronic 3ml">Réservoir Medtronic 3ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire ROCHE">
+                                <option value="Réservoir Roche 3,15 ml">Réservoir Roche 3,15 ml</option>
+                                <option value="Réservoir Roche (Insight) Pré-rempli 1,6 ml">Réservoir Roche (Insight) Pré-rempli 1,6 ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratiore JONHSON &amp; JOHNSON">
+                                <option value="Réservoir Animas 2 ml">Réservoir Animas 2 ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire YPSOMED">
+                                <option value="POD">POD</option>
+                            </optgroup>
+                            <optgroup label="Autres">
+                                <option value="autres" id="autrescatheter1">Autres...</option>
+                            </optgroup>
+                        </select>
                     </div>
                 </div>
 
+                <!-- Autres modèle de cathéter 1 -->
+
+                    <div class="form-group hidden" id="autresmodele">
+                        <label for="catheter1autres" class="col-sm-4 control-label"></label>
+                        <div class="col-sm-7">
+                            <input type="text"  placeholder="Cathéter 1" class="form-control" name="catheter1autres" id="catheter1autres">
+                        </div>
+                    </div>
+
+                <!-- Autres modèle de cathéter 1 -->
 
                 <div class="form-group">
                     <label for="longueurcanule" class="col-sm-4 control-label">Longueur de canule:</label>
@@ -566,9 +642,42 @@ if ($statut == "Médecin traitant") {
                 <div class="form-group">
                     <label for="modele" class="col-sm-4 control-label">Modèle:</label>
                     <div class="col-sm-7">
-                        <input type="text" placeholder="Modèle" class="form-control" name="modele2" id="modele2">
+                        <!-- <input type="text" placeholder="Modèle" class="form-control" name="modele2" id="modele2">
+                    </div> -->
+                        <select name="modele2" class="form-control" id="modelecatheter2">
+                            <option value="" selected disabled hidden>---- Choisir le modèle de Cathéter ----</option>
+                            <optgroup label="Laboratoire MEDTRONIC">
+                                <option value="Réservoir Medtronic 1,8ml">Réservoir Medtronic 1,8ml</option>
+                                <option value="Réservoir Medtronic 3ml">Réservoir Medtronic 3ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire ROCHE">
+                                <option value="Réservoir Roche 3,15 ml">Réservoir Roche 3,15 ml</option>
+                                <option value="Réservoir Roche (Insight) Pré-rempli 1,6 ml">Réservoir Roche (Insight) Pré-rempli 1,6 ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratiore JONHSON &amp; JOHNSON">
+                                <option value="Réservoir Animas 2 ml">Réservoir Animas 2 ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire YPSOMED">
+                                <option value="POD">POD</option>
+                            </optgroup>
+                            <optgroup label="Autres">
+                                <option value="autres" id="autrescatheter2">Autres...</option>
+                            </optgroup>
+                        </select>
                     </div>
                 </div>
+
+                <!-- Autres modèle de cathéter 2 -->
+
+                    <div class="form-group hidden" id="autresmodele2">
+                        <label for="catheter2autres" class="col-sm-4 control-label"></label>
+                        <div class="col-sm-7">
+                            <input type="text"  placeholder="Cathéter 2" class="form-control" name="catheter2autres" id="catheter2autres">
+                        </div>
+                    </div>
+
+                <!-- Autres modèle de cathéter 2 -->
+
                 <div class="form-group">
                     <label for="longueurcanule" class="col-sm-4 control-label">Longueur de canule:</label>
                     <div class="col-sm-7">
@@ -616,15 +725,56 @@ if ($statut == "Médecin traitant") {
         <div class="form-group">
             <label for="reservoir" class="col-sm-4 control-label">Réservoir:</label>
             <div class="col-sm-7">
-                <select name="reservoir" class="form-control">
-                    <option value="Réservoir 1">Réservoir 1</option>
-                    <option value="Réservoir 2">Réservoir 2</option>
-                    <option value="Réservoir 3">Réservoir 3</option>
-                    <option value="Réservoir 4">Réservoir 4</option>
+                <select name="reservoir" class="form-control" id="reservoir">
+                    <option value="" selected disabled hidden>---- Choisir le modèle de Réservoir ----</option>
+                            <optgroup label="Laboratoire MEDTRONIC">
+                                <option value="QUICKSET Connexion Luer Lock">QUICKSET Connexion Luer Lock</option>
+                                <option value="QUICKSET Connexion Paradigm">QUICKSET Connexion Paradigm</option>
+                                <option value="SILHOUETTE Connexion Luer Lock">SILHOUETTE Connexion Luer Lock</option>
+                                <option value="SILHOUETTE Connexion Paradigm">SILHOUETTE Connexion Paradigm</option>
+                                <option value="SURE-T Connexion Luer Lock">SURE-T Connexion Luer Lock</option>
+                                <option value="SURE-T Connexion Paradigm">SURE-T Connexion Paradigm</option>
+                                <option value="MIO Connexion Paradigm">MIO Connexion Paradigm</option>
+                                <option value="MIO 30 Connexion Paradigm">MIO 30 Connexion Paradigm</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire ROCHE">
+                                <option value="Flex Link">Flex Link</option>
+                                <option value="Rapid-D Link">Rapid-D Link</option>
+                                <option value="Tender Link">Tender Link</option>
+                                <option value="Flex Link Plus">Flex Link Plus</option>
+                                <option value="Insight Flex">Insight Flex</option>
+                            </optgroup>
+                            <optgroup label="Laboratiore JONHSON &amp; JOHNSON">
+                                <option value="INSET 2">INSET 2</option>
+                                <option value="INSET 30">INSET 30</option>
+                                <option value="Contact Detach">Contact Detach</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire ALPHADIAB">
+                                <option value="Comfort">Comfort</option>
+                                <option value="Comfort Short">Comfort Short</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire YPSOMED">
+                                <option value="ORBIT Soft">ORBIT Soft</option>
+                                <option value="ORBIT Micro">ORBIT Micro</option>
+                            </optgroup>
+                            <optgroup label="Autres">
+                                <option value="autres" id="reservoir_autres">Autres...</option>
+                            </optgroup>
                 </select>
-
             </div>
         </div>
+
+                <!-- Autres modèle de cathéter 2 -->
+
+                    <div class="form-group hidden" id="autrereservoir">
+                        <label for="reservoirautres" class="col-sm-4 control-label"></label>
+                        <div class="col-sm-7">
+                            <input type="text"  placeholder="Autres modèle de réservoir" class="form-control" name="reservoirautres" id="reservoirautres">
+                        </div>
+                    </div>
+
+                <!-- Autres modèle de cathéter 2 -->
+
         <div class="form-group">
             <label for="spp" class="col-sm-4 control-label">Système de portage de la Pompe:</label>
             <div class="col-sm-7">
@@ -637,7 +787,86 @@ if ($statut == "Médecin traitant") {
                 <textarea rows="3" type="text" placeholder="Observations" class="form-control" name="observatiom" id="observatiom"></textarea>
             </div>
         </div>
-
     </fieldset>
 
 </div>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+            $("body #webmenu").msDropDown();
+    });
+
+    $('#webmenu').change(function()
+    {
+        var valeur = document.getElementById('webmenu').options[document.getElementById('webmenu').selectedIndex].value;
+        //alert(valeur);
+        if (valeur === "autres") 
+        {
+            $('#autrespompe').removeClass('hidden');
+                $('#pompeautres').blur(function() {
+                    var pompe = $('#pompeautres').val();
+                    $('#autres').attr('value', pompe);
+                    /*console.log(pompe);
+                    console.log($('#autres').attr('value'));*/
+                });
+        } else {
+            $('#autrespompe').addClass('hidden');
+        }
+    });
+
+    // Modele cathéter : si la valeur est à autres
+    $('#modelecatheter1').change(function()
+        {
+            var valeur = document.getElementById('modelecatheter1').options[document.getElementById('modelecatheter1').selectedIndex].value;
+            //alert(valeur);
+            if (valeur === "autres") 
+            {
+                $('#autresmodele').removeClass('hidden');
+                    $('#catheter1autres').blur(function() {
+                        var catheter1 = $('#catheter1autres').val();
+                        $('#autrescatheter1').attr('value', catheter1);
+                        /*console.log(catheter1);
+                        console.log($('#autrescatheter1').attr('value'));*/
+                    });
+            } else {
+                $('#autresmodele').addClass('hidden');
+            }
+        });
+
+    // Modele cathéter : si la valeur est à autres
+        $('#modelecatheter2').change(function()
+            {
+                var valeur = document.getElementById('modelecatheter2').options[document.getElementById('modelecatheter2').selectedIndex].value;
+                //alert(valeur);
+                if (valeur === "autres") 
+                {
+                    $('#autresmodele2').removeClass('hidden');
+                        $('#catheter2autres').blur(function() {
+                            var catheter2 = $('#catheter2autres').val();
+                            $('#autrescatheter2').attr('value', catheter2);
+                            /*console.log(catheter2);
+                            console.log($('#autrescatheter2').attr('value'));*/
+                        });
+                } else {
+                    $('#autresmodele2').addClass('hidden');
+                }
+            });
+
+        // Modele de réservoir : si la valeur est à autres
+        $('#reservoir').change(function()
+            {
+                var valeur = document.getElementById('reservoir').options[document.getElementById('reservoir').selectedIndex].value;
+                //alert(valeur);
+                if (valeur === "autres") 
+                {
+                    $('#autrereservoir').removeClass('hidden');
+                        $('#reservoirautres').blur(function() {
+                            var autresreservoir = $('#reservoirautres').val();
+                            $('#reservoir_autres').attr('value', autresreservoir);
+                            console.log(autresreservoir);
+                            console.log($('#reservoir_autres').attr('value'));
+                        });
+                } else {
+                    $('#autrereservoir').addClass('hidden');
+                }
+            });
+</script>
