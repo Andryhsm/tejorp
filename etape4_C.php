@@ -11,18 +11,31 @@
 }
 </style>
 
+<?php
+    $reponsepmp = $bdd->query("SELECT * FROM manipulationdelapompe WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
+    $donneespmp = $reponsepmp->fetch();
+
+    $reponsealarme = $bdd->query("SELECT * FROM alarmesetprecautions WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
+    $donneesalarme = $reponsealarme->fetch();
+
+    $reponsemanip = $bdd->query("SELECT * FROM manipulations WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
+    $donneesmanip = $reponsemanip->fetch();
+?>
+
 <div class="container-fluid">                        
 	<fieldset class="field4" id="field">
 		<center><font><h4>MANIPULATION DE LA POMPE</h4></font></center><br/>
+
+                
 
 			<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date1']; ?>" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date2']; ?>" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date3']; ?>" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date4']; ?>" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -53,7 +66,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire1" id="pmpcommentaire1"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire1']; ?>" name="pmpcommentaire1" id="pmpcommentaire1"></td>
                         </tr>
                         <tr>
                             <td>Marche/Arrêt</td>
@@ -81,7 +94,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire2" id="pmpcommentaire2"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire2']; ?>" name="pmpcommentaire2" id="pmpcommentaire2"></td>
                         </tr>
                         <tr>
                             <td>Réglage Date/heure</td>
@@ -109,7 +122,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire3" id="pmpcommentaire3"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire3']; ?>" name="pmpcommentaire3" id="pmpcommentaire3"></td>
                         </tr> 
                         <tr>
                             <td>Réglage du bolus</td>
@@ -137,7 +150,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire4" id="pmpcommentaire4"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire4']; ?>" name="pmpcommentaire4" id="pmpcommentaire4"></td>
                         </tr>
                         <tr>
                             <td>Arrêt du bolus en cours</td>
@@ -165,7 +178,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire5" id="pmpcommentaire5"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire5']; ?>" name="pmpcommentaire5" id="pmpcommentaire5"></td>
                         </tr>
                         <tr>
                             <td>Historique des bolus</td>
@@ -193,7 +206,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire6" id="pmpcommentaire6"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire6']; ?>" name="pmpcommentaire6" id="pmpcommentaire6"></td>
                         </tr>
                         <tr>
                             <td>Programmation du débit basal</td>
@@ -221,7 +234,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire7" id="pmpcommentaire7"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire7']; ?>" name="pmpcommentaire7" id="pmpcommentaire7"></td>
                         </tr>
                         <tr>
                             <td>Consulter les débits de base</td>
@@ -249,7 +262,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire8" id="pmpcommentaire8"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire8']; ?>" name="pmpcommentaire8" id="pmpcommentaire8"></td>
                         </tr>
                         <tr>
                             <td>Programmer et arrêter le débit de base temporaire</td>
@@ -277,7 +290,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire9" id="pmpcommentaire9"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire9']; ?>" name="pmpcommentaire9" id="pmpcommentaire9"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -298,10 +311,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -332,7 +345,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire1" name="alarmecommentaire1"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire1']; ?>" id="alarmecommentaire1" name="alarmecommentaire1"></td>
                         </tr>
                         <tr>
                             <td>Pile faible</td>
@@ -360,7 +373,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire2" name="alarmecommentaire2"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire2']; ?>" id="alarmecommentaire2" name="alarmecommentaire2"></td>
                         </tr>
                         <tr>
                             <td>Pile épuisée</td>
@@ -388,7 +401,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire3" name="alarmecommentaire3"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire3']; ?>" id="alarmecommentaire3" name="alarmecommentaire3"></td>
                         </tr> 
                         <tr>
                             <td>Réservoire vide</td>
@@ -416,7 +429,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire4" name="alarmecommentaire4"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire4']; ?>" id="alarmecommentaire4" name="alarmecommentaire4"></td>
                         </tr>
                         <tr>
                             <td>Occlusion/pas d'injection</td>
@@ -444,7 +457,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire5" name="alarmecommentaire5"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire5']; ?>" id="alarmecommentaire5" name="alarmecommentaire5"></td>
                         </tr>
                         <tr>
                             <td>Historique des alarmes</td>
@@ -472,7 +485,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire6" name="alarmecommentaire6"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire6']; ?>" id="alarmecommentaire6" name="alarmecommentaire6"></td>
                         </tr>
                         <tr>
                             <td>Entretien de la Pompe</td>
@@ -500,7 +513,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire7" name="alarmecommentaire7"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire7']; ?>" id="alarmecommentaire7" name="alarmecommentaire7"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -521,10 +534,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -555,7 +568,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire1" name="manipcommentaire1"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire1']; ?>" id="manipcommentaire1" name="manipcommentaire1"></td>
                         </tr>
                         <tr>
                             <td>Remplissage du réservoir</td>
@@ -583,7 +596,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire2" name="manipcommentaire2"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire2']; ?>" id="manipcommentaire2" name="manipcommentaire2"></td>
                         </tr>
                         <tr>
                             <td>Connexion réservoir/tubulaire</td>
@@ -611,7 +624,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire3" name="manipcommentaire3"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire3']; ?>" id="manipcommentaire3" name="manipcommentaire3"></td>
                         </tr> 
                         <tr>
                             <td>Retour du piston</td>
@@ -639,7 +652,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire4" name="manipcommentaire4"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire4']; ?>" id="manipcommentaire4" name="manipcommentaire4"></td>
                         </tr>
                         <tr>
                             <td>Purge de la tubulure</td>
@@ -667,11 +680,111 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire5" name="manipcommentaire5"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire5']; ?>" id="manipcommentaire5" name="manipcommentaire5"></td>
                         </tr>
                     </tbody>
                 </table>
 
     </fieldset>
+
+                <script>
+                    $(document).ready(function ()
+                    {
+                        /*Manipulation de la pompe*/
+                        $('[name="pmpselect1"]').val("<?php echo utf8_encode($donneespmp['etat1']); ?>");
+                        $('[name="pmpselect2"]').val("<?php echo utf8_encode($donneespmp['etat2']); ?>");
+                        $('[name="pmpselect3"]').val("<?php echo utf8_encode($donneespmp['etat3']); ?>");
+                        $('[name="pmpselect4"]').val("<?php echo utf8_encode($donneespmp['etat4']); ?>");
+                        $('[name="pmpselect5"]').val("<?php echo utf8_encode($donneespmp['etat5']); ?>");
+                        $('[name="pmpselect6"]').val("<?php echo utf8_encode($donneespmp['etat6']); ?>");
+                        $('[name="pmpselect7"]').val("<?php echo utf8_encode($donneespmp['etat7']); ?>");
+                        $('[name="pmpselect8"]').val("<?php echo utf8_encode($donneespmp['etat8']); ?>");
+                        $('[name="pmpselect9"]').val("<?php echo utf8_encode($donneespmp['etat9']); ?>");
+                        $('[name="pmpselect10"]').val("<?php echo utf8_encode($donneespmp['etat10']); ?>");
+                        $('[name="pmpselect11"]').val("<?php echo utf8_encode($donneespmp['etat11']); ?>");
+                        $('[name="pmpselect12"]').val("<?php echo utf8_encode($donneespmp['etat12']); ?>");
+                        $('[name="pmpselect13"]').val("<?php echo utf8_encode($donneespmp['etat13']); ?>");
+                        $('[name="pmpselect14"]').val("<?php echo utf8_encode($donneespmp['etat14']); ?>");
+                        $('[name="pmpselect15"]').val("<?php echo utf8_encode($donneespmp['etat15']); ?>");
+                        $('[name="pmpselect16"]').val("<?php echo utf8_encode($donneespmp['etat16']); ?>");
+                        $('[name="pmpselect17"]').val("<?php echo utf8_encode($donneespmp['etat17']); ?>");
+                        $('[name="pmpselect18"]').val("<?php echo utf8_encode($donneespmp['etat18']); ?>");
+                        $('[name="pmpselect19"]').val("<?php echo utf8_encode($donneespmp['etat19']); ?>");
+                        $('[name="pmpselect20"]').val("<?php echo utf8_encode($donneespmp['etat20']); ?>");
+                        $('[name="pmpselect21"]').val("<?php echo utf8_encode($donneespmp['etat21']); ?>");
+                        $('[name="pmpselect22"]').val("<?php echo utf8_encode($donneespmp['etat22']); ?>");
+                        $('[name="pmpselect23"]').val("<?php echo utf8_encode($donneespmp['etat23']); ?>");
+                        $('[name="pmpselect24"]').val("<?php echo utf8_encode($donneespmp['etat24']); ?>");
+                        $('[name="pmpselect25"]').val("<?php echo utf8_encode($donneespmp['etat25']); ?>");
+                        $('[name="pmpselect26"]').val("<?php echo utf8_encode($donneespmp['etat26']); ?>");
+                        $('[name="pmpselect27"]').val("<?php echo utf8_encode($donneespmp['etat27']); ?>");
+                        $('[name="pmpselect28"]').val("<?php echo utf8_encode($donneespmp['etat28']); ?>");
+                        $('[name="pmpselect29"]').val("<?php echo utf8_encode($donneespmp['etat29']); ?>");
+                        $('[name="pmpselect291"]').val("<?php echo utf8_encode($donneespmp['etat30']); ?>");
+                        $('[name="pmpselect292"]').val("<?php echo utf8_encode($donneespmp['etat31']); ?>");
+                        $('[name="pmpselect293"]').val("<?php echo utf8_encode($donneespmp['etat32']); ?>");
+                        $('[name="pmpselect294"]').val("<?php echo utf8_encode($donneespmp['etat33']); ?>");
+                        $('[name="pmpselect295"]').val("<?php echo utf8_encode($donneespmp['etat34']); ?>");
+                        $('[name="pmpselect296"]').val("<?php echo utf8_encode($donneespmp['etat35']); ?>");
+                        $('[name="pmpselect297"]').val("<?php echo utf8_encode($donneespmp['etat36']); ?>");
+
+                        $('[name="pmpautre"]').val("<?php echo utf8_encode($donneespmp['autre']); ?>");
+
+                        /*Alarmes et précautions*/
+
+                        $('[name="alarmeselect1"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat1']); ?>");
+                        $('[name="alarmeselect2"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat2']); ?>");
+                        $('[name="alarmeselect3"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat3']); ?>");
+                        $('[name="alarmeselect4"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat4']); ?>");
+                        $('[name="alarmeselect5"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat5']); ?>");
+                        $('[name="alarmeselect6"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat6']); ?>");
+                        $('[name="alarmeselect7"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat7']); ?>");
+                        $('[name="alarmeselect8"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat8']); ?>");
+                        $('[name="alarmeselect9"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat9']); ?>");
+                        $('[name="alarmeselect10"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat10']); ?>");
+                        $('[name="alarmeselect11"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat11']); ?>");
+                        $('[name="alarmeselect12"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat12']); ?>");
+                        $('[name="alarmeselect13"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat13']); ?>");
+                        $('[name="alarmeselect14"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat14']); ?>");
+                        $('[name="alarmeselect15"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat15']); ?>");
+                        $('[name="alarmeselect16"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat16']); ?>");
+                        $('[name="alarmeselect17"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat17']); ?>");
+                        $('[name="alarmeselect18"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat18']); ?>");
+                        $('[name="alarmeselect19"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat19']); ?>");
+                        $('[name="alarmeselect20"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat20']); ?>");
+                        $('[name="alarmeselect21"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat21']); ?>");
+                        $('[name="alarmeselect22"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat22']); ?>");
+                        $('[name="alarmeselect23"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat23']); ?>");
+                        $('[name="alarmeselect24"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat24']); ?>");
+                        $('[name="alarmeselect25"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat25']); ?>");
+                        $('[name="alarmeselect26"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat26']); ?>");
+                        $('[name="alarmeselect27"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat27']); ?>");
+                        $('[name="alarmeselect28"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat28']); ?>");
+
+                        $('[name="alarmeautre"]').val("<?php echo utf8_encode($donneesalarme['autre']); ?>");
+
+                        /*Manipulations*/
+                        $('[name="manipselect1"]').val("<?php echo utf8_encode($donneesmanip['etat1']); ?>");
+                        $('[name="manipselect2"]').val("<?php echo utf8_encode($donneesmanip['etat2']); ?>");
+                        $('[name="manipselect3"]').val("<?php echo utf8_encode($donneesmanip['etat3']); ?>");
+                        $('[name="manipselect4"]').val("<?php echo utf8_encode($donneesmanip['etat4']); ?>");
+                        $('[name="manipselect5"]').val("<?php echo utf8_encode($donneesmanip['etat5']); ?>");
+                        $('[name="manipselect6"]').val("<?php echo utf8_encode($donneesmanip['etat6']); ?>");
+                        $('[name="manipselect7"]').val("<?php echo utf8_encode($donneesmanip['etat7']); ?>");
+                        $('[name="manipselect8"]').val("<?php echo utf8_encode($donneesmanip['etat8']); ?>");
+                        $('[name="manipselect9"]').val("<?php echo utf8_encode($donneesmanip['etat9']); ?>");
+                        $('[name="manipselect10"]').val("<?php echo utf8_encode($donneesmanip['etat10']); ?>");
+                        $('[name="manipselect11"]').val("<?php echo utf8_encode($donneesmanip['etat11']); ?>");
+                        $('[name="manipselect12"]').val("<?php echo utf8_encode($donneesmanip['etat12']); ?>");
+                        $('[name="manipselect13"]').val("<?php echo utf8_encode($donneesmanip['etat13']); ?>");
+                        $('[name="manipselect14"]').val("<?php echo utf8_encode($donneesmanip['etat14']); ?>");
+                        $('[name="manipselect15"]').val("<?php echo utf8_encode($donneesmanip['etat15']); ?>");
+                        $('[name="manipselect16"]').val("<?php echo utf8_encode($donneesmanip['etat16']); ?>");
+                        $('[name="manipselect17"]').val("<?php echo utf8_encode($donneesmanip['etat17']); ?>");
+                        $('[name="manipselect18"]').val("<?php echo utf8_encode($donneesmanip['etat18']); ?>");
+                        $('[name="manipselect19"]').val("<?php echo utf8_encode($donneesmanip['etat19']); ?>");
+                        $('[name="manipselect20"]').val("<?php echo utf8_encode($donneesmanip['etat20']); ?>");
+                    });
+                </script>
 
 </div>
