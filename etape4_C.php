@@ -11,18 +11,31 @@
 }
 </style>
 
+<?php
+    $reponsepmp = $bdd->query("SELECT * FROM manipulationdelapompe WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
+    $donneespmp = $reponsepmp->fetch();
+
+    $reponsealarme = $bdd->query("SELECT * FROM alarmesetprecautions WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
+    $donneesalarme = $reponsealarme->fetch();
+
+    $reponsemanip = $bdd->query("SELECT * FROM manipulations WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
+    $donneesmanip = $reponsemanip->fetch();
+?>
+
 <div class="container-fluid">                        
 	<fieldset class="field4" id="field">
 		<center><font><h4>MANIPULATION DE LA POMPE</h4></font></center><br/>
+
+                
 
 			<table class="table table-bordered" style="color: white;">
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date1']; ?>" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date2']; ?>" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date3']; ?>" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneespmp['date4']; ?>" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -53,7 +66,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire1" id="pmpcommentaire1"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire1']; ?>" name="pmpcommentaire1" id="pmpcommentaire1"></td>
                         </tr>
                         <tr>
                             <td>Marche/Arrêt</td>
@@ -81,7 +94,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire2" id="pmpcommentaire2"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire2']; ?>" name="pmpcommentaire2" id="pmpcommentaire2"></td>
                         </tr>
                         <tr>
                             <td>Réglage Date/heure</td>
@@ -109,7 +122,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire3" id="pmpcommentaire3"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire3']; ?>" name="pmpcommentaire3" id="pmpcommentaire3"></td>
                         </tr> 
                         <tr>
                             <td>Réglage du bolus</td>
@@ -137,7 +150,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire4" id="pmpcommentaire4"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire4']; ?>" name="pmpcommentaire4" id="pmpcommentaire4"></td>
                         </tr>
                         <tr>
                             <td>Arrêt du bolus en cours</td>
@@ -165,7 +178,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire5" id="pmpcommentaire5"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire5']; ?>" name="pmpcommentaire5" id="pmpcommentaire5"></td>
                         </tr>
                         <tr>
                             <td>Historique des bolus</td>
@@ -193,7 +206,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire6" id="pmpcommentaire6"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire6']; ?>" name="pmpcommentaire6" id="pmpcommentaire6"></td>
                         </tr>
                         <tr>
                             <td>Programmation du débit basal</td>
@@ -221,7 +234,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire7" id="pmpcommentaire7"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire7']; ?>" name="pmpcommentaire7" id="pmpcommentaire7"></td>
                         </tr>
                         <tr>
                             <td>Consulter les débits de base</td>
@@ -232,52 +245,52 @@
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect291" id = "pmpselect291">                                 
+                                <select class="form-control" name = "pmpselect30" id = "pmpselect291">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect292" id = "pmpselect292">                                 
+                                <select class="form-control" name = "pmpselect31" id = "pmpselect292">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect293" id = "pmpselect293">                                 
+                                <select class="form-control" name = "pmpselect32" id = "pmpselect293">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire8" id="pmpcommentaire8"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire8']; ?>" name="pmpcommentaire8" id="pmpcommentaire8"></td>
                         </tr>
                         <tr>
                             <td>Programmer et arrêter le débit de base temporaire</td>
                             <td>
-                                <select class="form-control" name = "pmpselect294" id = "pmpselect294">                                 
+                                <select class="form-control" name = "pmpselect33" id = "pmpselect294">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect295" id = "pmpselect295">                                 
+                                <select class="form-control" name = "pmpselect34" id = "pmpselect295">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect296" id = "pmpselect296">                                 
+                                <select class="form-control" name = "pmpselect35" id = "pmpselect296">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect297" id = "pmpselect297">                                 
+                                <select class="form-control" name = "pmpselect36" id = "pmpselect297">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" name="pmpcommentaire9" id="pmpcommentaire9"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneespmp['commentaire9']; ?>" name="pmpcommentaire9" id="pmpcommentaire9"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -298,10 +311,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate2']; ?>" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate3']; ?>" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate4']; ?>" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -332,7 +345,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire1" name="alarmecommentaire1"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire1']; ?>" id="alarmecommentaire1" name="alarmecommentaire1"></td>
                         </tr>
                         <tr>
                             <td>Pile faible</td>
@@ -360,7 +373,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire2" name="alarmecommentaire2"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire2']; ?>" id="alarmecommentaire2" name="alarmecommentaire2"></td>
                         </tr>
                         <tr>
                             <td>Pile épuisée</td>
@@ -388,7 +401,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire3" name="alarmecommentaire3"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire3']; ?>" id="alarmecommentaire3" name="alarmecommentaire3"></td>
                         </tr> 
                         <tr>
                             <td>Réservoire vide</td>
@@ -416,7 +429,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire4" name="alarmecommentaire4"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire4']; ?>" id="alarmecommentaire4" name="alarmecommentaire4"></td>
                         </tr>
                         <tr>
                             <td>Occlusion/pas d'injection</td>
@@ -444,7 +457,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire5" name="alarmecommentaire5"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire5']; ?>" id="alarmecommentaire5" name="alarmecommentaire5"></td>
                         </tr>
                         <tr>
                             <td>Historique des alarmes</td>
@@ -472,7 +485,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire6" name="alarmecommentaire6"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire6']; ?>" id="alarmecommentaire6" name="alarmecommentaire6"></td>
                         </tr>
                         <tr>
                             <td>Entretien de la Pompe</td>
@@ -500,7 +513,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="alarmecommentaire7" name="alarmecommentaire7"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesalarme['commentaire7']; ?>" id="alarmecommentaire7" name="alarmecommentaire7"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -521,10 +534,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date2']; ?>" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date3']; ?>" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date4']; ?>" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -555,7 +568,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire1" name="manipcommentaire1"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire1']; ?>" id="manipcommentaire1" name="manipcommentaire1"></td>
                         </tr>
                         <tr>
                             <td>Remplissage du réservoir</td>
@@ -583,7 +596,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire2" name="manipcommentaire2"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire2']; ?>" id="manipcommentaire2" name="manipcommentaire2"></td>
                         </tr>
                         <tr>
                             <td>Connexion réservoir/tubulaire</td>
@@ -611,7 +624,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire3" name="manipcommentaire3"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire3']; ?>" id="manipcommentaire3" name="manipcommentaire3"></td>
                         </tr> 
                         <tr>
                             <td>Retour du piston</td>
@@ -639,7 +652,7 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire4" name="manipcommentaire4"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire4']; ?>" id="manipcommentaire4" name="manipcommentaire4"></td>
                         </tr>
                         <tr>
                             <td>Purge de la tubulure</td>
@@ -667,11 +680,77 @@
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
-                            <td><input type="text" class="form-control" id="manipcommentaire5" name="manipcommentaire5"></td>
+                            <td><input type="text" class="form-control" value="<?php echo $donneesmanip['commentaire5']; ?>" id="manipcommentaire5" name="manipcommentaire5"></td>
                         </tr>
                     </tbody>
                 </table>
 
     </fieldset>
+                <script type="text/javascript" src="test2.php"></script>
+                <script>
+                    $(document).ready(function ()
+                    {
+
+                        <?php
+                            for($h = 1 ; $h <= 4; $h ++){
+                                echo "
+                                   if(\"".$donneespmp["date".$h.""]."\" != '')
+                                    {
+                                        $('form #pmpdate".$h."').attr('readonly', true);
+                                        $('#pmpdate".$h."').datepicker(\"destroy\");
+                                    }\n
+                                    ";
+
+                                    echo "
+                                   if(\"".$donneesalarme["alarmedate".$h.""]."\" != '')
+                                    {
+                                        $('form #alarmedate".$h."').attr('readonly', true);
+                                        $('#alarmedate".$h."').datepicker(\"destroy\");
+                                    }\n
+                                    ";
+
+                                    echo "
+                                   if(\"".$donneesmanip["date".$h.""]."\" != '')
+                                    {
+                                        $('form #manipdate".$h."').attr('readonly', true);
+                                        $('#manipdate".$h."').datepicker(\"destroy\");
+                                    }\n
+                                    ";
+                            }
+                        ?>
+
+                        /*Manipulation de la pompe*/
+
+                        <?php
+                            for ($i = 1; $i<=36; $i++)
+                            {  
+                              echo "$('[name=\"pmpselect".$i."\"]').val(\"".$donneespmp['etat'.$i]."\");";
+                            }
+                        ?>
+                        
+                        $('[name="pmpautre"]').val("<?php echo utf8_encode($donneespmp['autre']); ?>"); 
+                    
+                        /*Alarmes et précautions*/
+
+                        <?php
+                            for ($i = 1; $i<=28; $i++)
+                            {  
+                              echo "$('[name=\"alarmeselect".$i."\"]').val(\"".$donneesalarme['alarmeetat'.$i]."\");";
+                            }
+                        ?>
+
+                        $('[name="alarmeautre"]').val("<?php echo utf8_encode($donneesalarme['autre']); ?>");
+
+                        /*Manipulations*/
+
+                        <?php
+                            for ($i = 1; $i<=20; $i++)
+                            {  
+                              echo "$('[name=\"manipselect".$i."\"]').val(\"".$donneesmanip['etat'.$i]."\");";
+                            }
+                        ?>
+
+                    });
+                </script>
 
 </div>
