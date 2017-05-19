@@ -3,29 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/wamp64/www/tejorp/index.html</file>
-=======
-<<<<<<< HEAD
-            <file>file:/C:/xampp/htdocs/BASTIDE/tejorp/assets/js/Chart.min.js</file>
-            <file>file:/C:/xampp/htdocs/BASTIDE/tejorp/page.php</file>
-=======
-            <file>file:/C:/wamp64/www/tejorp/insert-prescripteur.php</file>
-            <file>file:/C:/wamp64/www/tejorp/page.php</file>
-            <file>file:/C:/wamp64/www/tejorp/etape2.php</file>
-            <file>file:/C:/wamp64/www/tejorp/modification.php</file>
-            <file>file:/C:/wamp64/www/tejorp/phash.php</file>
-            <file>file:/C:/wamp64/www/tejorp/content.php</file>
-            <file>file:/C:/wamp64/www/tejorp/login.php</file>
-            <file>file:/C:/wamp64/www/tejorp/traitement.php</file>
             <file>file:/C:/wamp64/www/tejorp/etape1.php</file>
-            <file>file:/C:/wamp64/www/tejorp/cnx.php</file>
             <file>file:/C:/wamp64/www/tejorp/controle.php</file>
-            <file>file:/C:/wamp64/www/tejorp/inscription.php</file>
-            <file>file:/C:/wamp64/www/tejorp/etape5.php</file>
-            <file>file:/C:/wamp64/www/tejorp/utilisateur.php</file>
->>>>>>> 6f9239833125b5f1f8096fceaf16052a66ee2a60
->>>>>>> 68146be5a78a80882d1913a041a42647328059d2
+            <file>file:/C:/wamp64/www/tejorp/patient_controle.php</file>
+            <file>file:/C:/wamp64/www/tejorp/etape1_C.php</file>
+            <file>file:/C:/wamp64/www/tejorp/traitement.php</file>
         </group>
     </open-files>
 </project-private>

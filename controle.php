@@ -10,6 +10,7 @@ require './protection.php';
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+        <link rel="stylesheet" href="bootstrap/css/jquery-ui.css">
         <style type="text/css">
 
             body
@@ -59,15 +60,83 @@ require './protection.php';
             .filterable .filters input[disabled]:-ms-input-placeholder {
                 color: #333;
             }
-	
-			tr :hover
-			{
-				box-shadow: 1px 1px 12px #555;
-			}
+
+            #slider label {
+                position: absolute;
+                width: 60px;
+                margin-left: -35px;
+                text-align: center;
+                margin-top: -75px;
+                color: white;
+            }
+
+            /* below is not necessary, just for style */
+            #slider {
+                width: 80%;
+                margin: 2em auto;
+            }
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
         <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#slider").slider({
+                    value: 2,
+                    min: 1,
+                    max: 7,
+                    step: 1
+                })
+                        .each(function () {
+
+                            //
+                            // Add labels to slider whose values 
+                            // are specified by min, max and whose
+                            // step is set to 1
+                            //
+
+                            // Get the options for this slider
+                            var opt = $(this).data().uiSlider.options;
+
+                            // Get the number of possible values
+                            var vals = opt.max - opt.min;
+
+                            // Space out values
+                            for (var i = 0; i <= vals; i++) {
+
+                                if (i === 0) {
+                                    var el = $('<label>Changement cathéter</label>').css('left', (i / vals * 100) + '%');
+                                }
+                                if (i === 1) {
+                                    var el = $('<label>Bilan d’étape 1 mois</label>').css('left', (i / vals * 100) + '%');
+                                }
+                                if (i === 2) {
+                                    var el = $('<label>Observance 3 mois</label>').css('left', (i / vals * 100) + '%');
+                                }
+                                if (i === 3) {
+                                    var el = $('<label>Bilan d’étape 6 mois</label>').css('left', (i / vals * 100) + '%');
+                                }
+                                if (i === 4) {
+                                    var el = $('<label>Observance 9 mois</label>').css('left', (i / vals * 100) + '%');
+                                }
+                                if (i === 5) {
+                                    var el = $('<label>Point étape intermédiaire</label>').css('left', (i / vals * 100) + '%');
+                                }
+                                if (i === 6) {
+                                    var el = $('<label>Observance semestrielle</label>').css('left', (i / vals * 100) + '%');
+                                }
+
+                                $("#slider").append(el);
+
+                            }
+
+                        });
+            });
+        </script>
+
     </head>
 
     <body>
@@ -85,35 +154,27 @@ require './protection.php';
                         <?php echo $_SESSION['prenom'] . " " . $_SESSION['nom']; ?></a>
                 </div>
 
-                <!-- <div id="navbar" class="navbar-collapse collapse">
-                    
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="./lumiere.php"><img width="33px" src="./img/help.png" /></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img width="33px" src="./img/pignon.png" /> <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="./utilisateur.php">Accueil</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="./logout.php">Déconnexion</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div> -->
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./utilisateur.php">Accueil</a></li>
-                    <li><a href="./page.php">Installation</a></li>
-                    <li><a href="./modification.php">Modifier mon profil</a></li>
-                    <li><a href="./lumiere.php">Conseil</a></li>
-                    <li><a href="./logout.php">Déconnexion</a></li>
-                  </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="./utilisateur.php">Accueil</a></li>
+                        <li><a href="./page.php">Installation</a></li>
+                        <li><a href="./modification.php">Modifier mon profil</a></li>
+                        <li><a href="./lumiere.php">Conseil</a></li>
+                        <li><a href="./logout.php">Déconnexion</a></li>
+                    </ul>
                 </div>
-                
+
             </div>
         </nav>
 
-        <div class="container" style="margin-top: 70px;">
+        <div class="container" style="margin-top: 80px;">
+            
+            <div class="well">
+                <br><br><br><br>
+                <div id="slider"></div>
+            </div>
+
             <div class="row">
                 <div class="panel panel-primary filterable">
                     <div class="panel-heading">
@@ -136,32 +197,31 @@ require './protection.php';
                             <tbody id="myTable">
                                 <?php
                                 require 'cnx.php';
-
                                 $b = false;
-                                
                                 $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "'");
 
                                 while ($donnees = $reponse->fetch()) {
-                                	$id = $donnees['nompatient']."-".$donnees['prenompatient'];
+                                    $id = $donnees['nompatient'] . "-" . $donnees['prenompatient'];
 
-                                    
                                     $b = true;
                                     ?>
 
-                                    <tr onClick="location='patient_controle.php?id=<?php echo($id); ?>'" style="cursor: pointer;">
+                                    <tr onClick="location = 'patient_controle.php?id=<?php echo($id); ?>'" style="cursor: pointer;">
                                         <td style="width: 20%;"><?php echo $donnees['nompatient']; ?></td>
                                         <td style="width: 20%;"><?php echo $donnees['prenompatient']; ?></td>
                                         <td style="width: 40%;"><?php echo $donnees['adressepatient']; ?></td>
                                         <td style="width: 20%;"><?php echo $donnees['mobilepatient']; ?></td>
                                     </tr>
 
-                                <?php }
-                                if($b == false){ ?>
+                                    <?php
+                                }
+                                if ($b == false) {
+                                    ?>
                                     <tr>
                                         <td colspan="4" class="text-center">Vous n'avez pas encore de patient</td>
                                     </tr>
-                                <?php
-                                    }
+                                    <?php
+                                }
                                 ?>
 
                             </tbody>
@@ -185,7 +245,7 @@ require './protection.php';
             $.fn.pageMe = function (opts) {
                 var $this = this,
                         defaults = {
-                            perPage: 10,
+                            perPage: 5,
                             showPrevNext: false,
                             hidePageNumbers: false
                         },
@@ -286,7 +346,7 @@ require './protection.php';
 
             $(document).ready(function () {
 
-                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 10});
+                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 5});
 
             });
         </script>
