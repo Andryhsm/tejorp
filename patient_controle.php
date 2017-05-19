@@ -574,10 +574,10 @@ require 'cnx.php';
                         $('#6').trigger('click');
                     });
 
-                    var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
-                    var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
-                    var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
-                    var imc1 = 0, imc2 = 0, imc3 = 0, imc4 = 0, imc5 = 0, imc6 = 0, imc7 = 0, imc8 = 0, imc9 = 0;
+                    var date1 = ($("#date1").val()) ? $("#date1").val() : "", date2 = ($("#date2").val()) ? $("#date2").val() : "", date3 = ($("#date3").val()) ? $("#date3").val() : "", date4 = ($("#date4").val()) ? $("#date4").val() : "", date5 = ($("#date5").val()) ? $("#date5").val() : "", date6 = ($("#date6").val()) ? $("#date6").val() : "", date7 = ($("#date7").val()) ? $("#date7").val() : "", date8 = ($("#date8").val()) ? $("#date8").val() : "", date9 = ($("#date9").val()) ? $("#date9").val() : "";
+                    var taille1 = ($("#taille1").val()) ? $("#taille1").val() : 0, taille2 = ($("#taille2").val()) ? $("#taille2").val() : 0, taille3 = ($("#taille3").val()) ? $("#taille3").val() : 0, taille4 = ($("#taille4").val()) ? $("#taille4").val() : 0, taille5 = ($("#taille5").val()) ? $("#taille5").val() : 0, taille6 = ($("#taille6").val()) ? $("#taille6").val() : 0, taille7 = ($("#taille7").val()) ? $("#taille7").val() : 0, taille8 = ($("#taille8").val()) ? $("#taille8").val() : 0, taille9 = ($("#taille9").val()) ? $("#taille9").val() : 0;
+                    var poids1 = ($("#poids1").val()) ? $("#poids1").val() : 0, poids2 = ($("#poids2").val()) ? $("#poids2").val() : 0, poids3 = ($("#poids3").val()) ? $("#poids3").val() : 0, poids4 = ($("#poids4").val()) ? $("#poids4").val() : 0, poids5 = ($("#poids5").val()) ? $("#poids5").val() : 0, poids6 = ($("#poids6").val()) ? $("#poids6").val() : 0, poids7 = ($("#poids7").val()) ? $("#poids7").val() : 0, poids8 = ($("#poids8").val()) ? $("#poids8").val() : 0, poids9 = ($("#poids9").val()) ? $("#poids9").val() : 0;
+                    var imc1 = ($("#imc1").val()) ? $("#imc1").val() : 0, imc2 = ($("#imc2").val()) ? $("#imc2").val() : ($("#imc2").val()) ? $("#imc2").val() : 0, imc3 = ($("#imc3").val()) ? $("#imc3").val() : 0, imc4 = ($("#imc4").val()) ? $("#imc4").val() : 0, imc5 = ($("#imc5").val()) ? $("#imc5").val() : 0, imc6 = ($("#imc6").val()) ? $("#imc6").val() : 0, imc7 = ($("#imc7").val()) ? $("#imc7").val() : 0, imc8 = ($("#imc8").val()) ? $("#imc8").val() : 0, imc9 = ($("#imc9").val()) ? $("#imc9").val() : 0;
                     jQuery(document).ready(function ($) {
 
                       <?php 
