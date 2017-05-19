@@ -1,3 +1,6 @@
+<?php
+    include "tab_dynamic.php";
+?>
 <style type="text/css">
     .field2
     {
@@ -10,7 +13,7 @@
         box-shadow: inset 0 1px 1px rgba(133,32,28,.4);
     }
 </style>
-
+<script type="text/javascript" src="etape2_C_js.php"></script>
 <section class="container-fluid">
     <div>
         <div class="field2">
@@ -343,6 +346,9 @@
                             <td><input type="number" class="form-control" name="Debit4" id="Debit4"></td>
                         </tr>
 
+                        <?php
+                            print_data($Debits1);
+                        ?>
                         <tr  id="ligne4">
                             <td><input type="text" class="form-control datetimepicker" name="Horaire1N" id="Horaire1N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>                            
@@ -431,6 +437,11 @@
                             <td><input type="text" class="form-control datetimepicker" name="Horaire_4" id="Horaire_4"></td>
                             <td><input type="number" class="form-control" name="Debit_4" id="Debit_4"></td>
                         </tr>
+
+                        <?php
+                            print_data($Debits2, "_");
+                        ?>
+
                         <tr id="ligne24">
                             <td><input type="text" class="form-control datetimepicker"  name="Horaire_N1" id="Horaire_N1"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
@@ -451,16 +462,12 @@
 
                 <!-- chart -->
                 <div>
-                    <!-- Row and col -->
                     <div class="row">
 
                         <div>
                             <center><h4>Histogrammes des débits suivant le Schémas basals date 2</h4></center>
                             <canvas id="bardate2" />
-
-
                         </div>
-
                     </div>
                 </div>
                 <!-- chart -->

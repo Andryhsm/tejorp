@@ -391,7 +391,14 @@
                         $('#6').trigger('click');
                     });
                 });
+
+                $("body").scroll(function(event) {
+                    
+                });
+
                 $("#2").click(function () {
+                    alert("On doit grapher");
+                     Debit_grapheHG();
                     $("#etape1").hide();
                     $("#etape2").show();
                     $("#etape3").hide();
@@ -416,8 +423,11 @@
                     });
                     var ValDatesHemGlyc1 = 0, ValDatesHemGlyc2 = 0, ValDatesHemGlyc3 = 0, ValDatesHemGlyc4 = 0, ValDatesHemGlyc5 = 0, ValDatesHemGlyc6 = 0, ValDatesHemGlyc7 = 0, ValDatesHemGlyc8 = 0, ValDatesHemGlyc9 = 0;
                     var ValHbA1cHemGlyc1 = 0, ValHbA1cHemGlyc2 = 0, ValHbA1cHemGlyc3 = 0, ValHbA1cHemGlyc4 = 0, ValHbA1cHemGlyc5 = 0, ValHbA1cHemGlyc6 = 0, ValHbA1cHemGlyc7 = 0, ValHbA1cHemGlyc8 = 0, ValHbA1cHemGlyc9 = 0;
-                    jQuery(document).ready(function ($) {
 
+
+
+
+                    jQuery(document).ready(function ($) {
 
                         // recup data table02
                         // recup data table Dates
@@ -555,6 +565,7 @@
                     }
                 });
                 $("#3").click(function () {
+
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").show();
