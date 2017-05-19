@@ -410,11 +410,18 @@ require 'cnx.php';
                     $("#26").click(function () {
                         $('#6').trigger('click');
                     });
-                    var ValDatesHemGlyc1 = 0, ValDatesHemGlyc2 = 0, ValDatesHemGlyc3 = 0, ValDatesHemGlyc4 = 0, ValDatesHemGlyc5 = 0, ValDatesHemGlyc6 = 0, ValDatesHemGlyc7 = 0, ValDatesHemGlyc8 = 0, ValDatesHemGlyc9 = 0;
-                    var ValHbA1cHemGlyc1 = 0, ValHbA1cHemGlyc2 = 0, ValHbA1cHemGlyc3 = 0, ValHbA1cHemGlyc4 = 0, ValHbA1cHemGlyc5 = 0, ValHbA1cHemGlyc6 = 0, ValHbA1cHemGlyc7 = 0, ValHbA1cHemGlyc8 = 0, ValHbA1cHemGlyc9 = 0;
+
+                    <?php
+                        for($i = 0; $i < 10; $i++){
+                             echo "var ValDatesHemGlyc".$i." = $('#ValDatesHemGlyc1').val();";
+
+                        }
+                        for($i = 0; $i < 10; $i++){
+                            echo "var ValHbA1cHemGlyc".$i." = ($(\"#ValHbA1cHemGlyc".$i."\").val() != \"\") ? $(\"#ValHbA1cHemGlyc".$i."\").val() : 0;\n";        
+                        }
+                    ?>
+                    
                     jQuery(document).ready(function ($) {
-
-
                         // recup data table02
                         // recup data table Dates
                         $("#ValDatesHemGlyc1").change(function (event) {
