@@ -113,7 +113,7 @@ $donneesp = $reponsep->fetch();
         <div class="form-group">
             <label for="mobile" class="col-sm-4 control-label">Mobile:</label>
             <div class="col-sm-7">
-                <input type="number" placeholder="Mobile"  class="form-control" readonly="" value="<?php echo $donnees['mobileresp']; ?>" name="mobileresp" id="mobileresp">
+                <input type="number" placeholder="Mobile"  class="form-control" value="<?php echo $donnees['mobileresp']; ?>" name="mobileresp" id="mobileresp">
             </div>
         </div>
 
@@ -145,30 +145,16 @@ $donneesp = $reponsep->fetch();
             <div class="form-group">
                 <label for="datenaissance" class="col-sm-4 control-label">Né(e) le:</label>
                 <div class="col-sm-7">
-                    <input type="text" onchange="calcul_age(this.value)" value="<?php echo $donneesp['datenaissance']; ?>" placeholder="Date de naissance"  class="form-control date datepicker" name="datenaissance" id="datenaissance">
+                    <input type="text" readonly="" placeholder="Date de naissance"  class="form-control date datepickery" name="datenaissance" id="datenaissance">
                 </div>
             </div>
-
-            <script>
-                function calcul_age(id_naissance) {
-
-                    var tabEN = id_naissance.split('-');
-                    tabEN.reverse();
-//                    alert(tabEN.join('-'));
-                    var d = new Date(tabEN.join('-'));
-                    var date_day = new Date();
-                    var rep = date_day.getFullYear() - d.getFullYear();
-//                    alert (rep);
-                    document.getElementById('agepatient').value = rep;
-                }
-            </script>
 
 
             <div class="form-group">
                 <label for="age" class="col-sm-4 control-label"> Age: </label>
                 <div class="col-sm-7">
                     <div class="input-group">
-                        <input type="number" readonly=""  value="<?php echo $donneesp['agepatient']; ?>" class="form-control" name="agepatient" id="agepatient">
+                        <input type="number" value="<?php echo $donneesp['agepatient']; ?>" class="form-control" name="agepatient" id="agepatient">
                         <span class="input-group-addon">ans</span>
                     </div>
                 </div>
@@ -176,19 +162,19 @@ $donneesp = $reponsep->fetch();
             <div class="form-group">
                 <label for="tel" class="col-sm-4 control-label"> Tel: </label>
                 <div class="col-sm-7">
-                    <input type="number" readonly="" placeholder="Téléphone"  value="<?php echo $donneesp['telpatient']; ?>" class="form-control" name="telpatient" id="telpatient">
+                    <input type="number" placeholder="Téléphone"  value="<?php echo $donneesp['telpatient']; ?>" class="form-control" name="telpatient" id="telpatient">
                 </div>
             </div>
             <div class="form-group">
                 <label for="mobile" class="col-sm-4 control-label"> Mobile: </label>
                 <div class="col-sm-7">
-                    <input type="number" readonly="" placeholder="Mobile"  value="<?php echo $donneesp['mobilepatient']; ?>" class="form-control" name="mobilepatient" id="mobilepatient">
+                    <input type="number" placeholder="Mobile"  value="<?php echo $donneesp['mobilepatient']; ?>" class="form-control" name="mobilepatient" id="mobilepatient">
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-4 control-label"> Email: </label>
                 <div class="col-sm-7">
-                    <input type="text" readonly="" placeholder="email"  value="<?php echo $donneesp['emailpatient']; ?>" class="form-control" name="emailpatient" id="emailpatient">
+                    <input type="text" placeholder="email"  value="<?php echo $donneesp['emailpatient']; ?>" class="form-control" name="emailpatient" id="emailpatient">
                 </div>
             </div>
             <div class="form-group">
@@ -238,13 +224,13 @@ $donneesp = $reponsep->fetch();
             <div class="form-group">
                 <label for="tel" class="col-sm-4 control-label">Tél:</label>
                 <div class="col-sm-7">
-                    <input type="text" readonly="" value="<?php echo $donneespre['telep']; ?>" placeholder="téléphone" class="form-control" name="telep" id="telep">
+                    <input type="text" value="<?php echo $donneespre['telep']; ?>" placeholder="téléphone" class="form-control" name="telep" id="telep">
                 </div>
             </div>
             <div class="form-group">
                 <label for="mail" class="col-sm-4 control-label">Mail:</label>
                 <div class="col-sm-7">
-                    <input type="text" readonly="" value="<?php echo $donneespre['mailep']; ?>" placeholder="mail" class="form-control" name="mailep" id="mailep">
+                    <input type="text" value="<?php echo $donneespre['mailep']; ?>" placeholder="mail" class="form-control" name="mailep" id="mailep">
                 </div>
             </div>
             <div class="form-group">
@@ -460,57 +446,31 @@ $donneesp = $reponsep->fetch();
 
             </div>
 
-            <?php if ($donneespre['membrereseau'] == "Oui") { ?>
-                <div class="form-group">
-                    <label for="membrereseau" class="col-sm-4 control-label">Membre réseau:</label>
-                    <div class="col-sm-7">        
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="membrereseau" id="optionsRadios1" value="Oui" checked="">
-                                Oui
-                            </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <label>
-                                <input type="radio" name="membrereseau" id="optionsRadios2" value="Non">
-                                Non
-                            </label>
-                        </div>
+
+            <div class="form-group">
+                <label for="membrereseau" class="col-sm-4 control-label">Membre réseau:</label>
+                <div class="col-sm-7">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="membrereseau" id="optionsRadios11" value="Oui">
+                            Oui
+                        </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label>
+                            <input type="radio" name="membrereseau" id="optionsRadios12" value="Non">
+                            Non
+                        </label>
                     </div>
                 </div>
+            </div>
 
-                <div class="form-group" id="reseau">
-                    <label for="nomreseau" class="col-sm-4 control-label">Nom du réseau:</label>
-                    <div class="col-sm-7">
-                        <input type="text" readonly="" value="<?php echo $donneespre['nomreseau']; ?>" placeholder="Nom du réseau" class="form-control" name="nomreseau" id="nomreseau">
-                    </div>
-                </div> 
 
-            <?php } else { ?>
-                <div class="form-group">
-                    <label for="membrereseau" class="col-sm-4 control-label">Membre réseau:</label>
-                    <div class="col-sm-7">    
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="membrereseau" id="optionsRadios1" value="Oui">
-                                Oui
-                            </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <label>
-                                <input type="radio" name="membrereseau" id="optionsRadios2" value="Non" checked="">
-                                Non
-                            </label>
-                        </div>
-                    </div> 
+            <div class="form-group" id="reseau" style="display:none;">
+                <label for="nomreseau" class="col-sm-4 control-label">Nom du réseau:</label>
+                <div class="col-sm-7">
+                    <input type="text" readonly="" value="<?php echo $donneespre['nomreseau']; ?>"  placeholder="Nom du réseau" class="form-control" name="nomreseau" id="nomreseau">
                 </div>
-                <div class="form-group hidden" id="reseau">
-                    <label for="nomreseau" class="col-sm-4 control-label">Nom du réseau:</label>
-                    <div class="col-sm-7">
-                        <input type="text" readonly="" value="<?php echo $donneespre['nomreseau']; ?>" placeholder="Nom du réseau" class="form-control" name="nomreseau" id="nomreseau">
-                    </div>
-                </div>
-            <?php } ?>
-
-
+            </div>
 
         </div>
     </fieldset>
@@ -525,15 +485,32 @@ $donneesp = $reponsep->fetch();
                 <script>
                     $(document).ready(function ()
                     {
+                        
+                        $('[name="datenaissance"]').val("<?php echo $donneesp['datenaissance']; ?>");
+                        $('#datenaissance').datepicker("destroy");
+                        
                         $('[name="Pompe"]').val("<?php echo utf8_encode($donneescm['pompe']); ?>");
                         $('[name="modele"]').val("<?php echo utf8_encode($donneescm['modele']); ?>");
                         $('[name="modele2"]').val("<?php echo utf8_encode($donneescm['modele2']); ?>");
                         $('[name="reservoir"]').val("<?php echo utf8_encode($donneescm['reservoir']); ?>");
                         $('[name="catheter"]').val("<?php echo utf8_encode($donneescm['typecatheter']); ?>");
-                        $('[name="catheter2"]').val("<?php echo utf8_encode($donneescm['typecatheter2']); ?>");   
+                        $('[name="catheter2"]').val("<?php echo utf8_encode($donneescm['typecatheter2']); ?>");
+
+
+                        if ("<?php echo $donneescm['inserteur']; ?>" === "Oui") {
+                            $("form #optionsRadios1").attr("checked", true);
+                        } else {
+                            $("form #optionsRadios2").attr("checked", true);
+                        }
                         
-                        $( "#optionsRadios1" ).prop( "checked", true );
-                                                
+                        if ("<?php echo $donneespre['membrereseau']; ?>" === "Oui"){
+                            $("form #optionsRadios11").attr("checked", true);
+                            document.querySelector("#reseau").style.display = (window.getComputedStyle(document.querySelector('#reseau')).display == 'none') ? "block" : "hide";
+                        } else {
+                            $("form #optionsRadios12").attr("checked", true);
+                            document.querySelector("#reseau").style.display = (window.getComputedStyle(document.querySelector('#reseau')).display == 'hide') ? "block" : "none";
+                        }
+
                     });
                 </script>
                 <select id="webmenu" class="form-control" name="Pompe">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
     require './protection.php'; 
     require 'cnx.php';
@@ -7,6 +8,11 @@
     $id = $_GET['id'];
     $_SESSION['idPatient'] = $id;
 
+=======
+<?php
+require './protection.php';
+require 'cnx.php';
+>>>>>>> 3e7e6b34d45a7dab4565c2881b8cd9633912475a
 ?>
 
 <!DOCTYPE html>
@@ -207,7 +213,7 @@
                 margin-left: 20px;
             }
 
-            
+
         </style>
 
         <script src="jquery/jquery-2.1.4.min.js"></script>
@@ -320,7 +326,7 @@
                     var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
-                $('.datepicker').datepicker({
+                $('.datepickery').datepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
@@ -342,7 +348,7 @@
                     todayBtn: true
                 });
 
-                $('.datetimepicker').datetimepicker({
+                $('.datetimepickery').datetimepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
@@ -417,16 +423,15 @@
                         $('#6').trigger('click');
                     });
 
-                    <?php
-                        for($i = 0; $i < 10; $i++){
-                             echo "var ValDatesHemGlyc".$i." = $('#ValDatesHemGlyc1').val();";
+<?php
+for ($i = 0; $i < 10; $i++) {
+    echo "var ValDatesHemGlyc" . $i . " = $('#ValDatesHemGlyc1').val();";
+}
+for ($i = 0; $i < 10; $i++) {
+    echo "var ValHbA1cHemGlyc" . $i . " = ($(\"#ValHbA1cHemGlyc" . $i . "\").val() != \"\") ? $(\"#ValHbA1cHemGlyc" . $i . "\").val() : 0;\n";
+}
+?>
 
-                        }
-                        for($i = 0; $i < 10; $i++){
-                            echo "var ValHbA1cHemGlyc".$i." = ($(\"#ValHbA1cHemGlyc".$i."\").val() != \"\") ? $(\"#ValHbA1cHemGlyc".$i."\").val() : 0;\n";        
-                        }
-                    ?>
-                    
                     jQuery(document).ready(function ($) {
                         // recup data table02
                         // recup data table Dates
@@ -513,7 +518,7 @@
                             Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9);
                             setTimeout(function () {
                                 capture('barhg');
-                            }, 800);    
+                            }, 800);
                         });
                         // recup data table HbA1c
                         initialiser();
@@ -542,7 +547,7 @@
                     function Debit_grapheHG(ValDatesHemGlyc1, ValDatesHemGlyc2, ValDatesHemGlyc3, ValDatesHemGlyc4, ValDatesHemGlyc5, ValDatesHemGlyc6, ValDatesHemGlyc7, ValDatesHemGlyc8, ValDatesHemGlyc9, ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9) {
                         var barHbA1c = document.getElementById('barhg').getContext('2d');
                         var gradient = barHbA1c.createLinearGradient(0, 0, 100, 400);
-                        gradient.addColorStop(0, 'rgba(255,255,255,0.8)');   
+                        gradient.addColorStop(0, 'rgba(255,255,255,0.8)');
                         gradient.addColorStop(1, 'rgba(255,255,0,1)');
 
                         var barDataHG = {
@@ -552,7 +557,6 @@
                                     strokeColor: "rgba(240,240,0,0.6)",
                                     highlightFill: "rgba(255, 255, 40,0.7)",
                                     highlightStroke: "rgba(0,220, 0,0.4)",
-                                  
                                     data: [ValHbA1cHemGlyc1, ValHbA1cHemGlyc2, ValHbA1cHemGlyc3, ValHbA1cHemGlyc4, ValHbA1cHemGlyc5, ValHbA1cHemGlyc6, ValHbA1cHemGlyc7, ValHbA1cHemGlyc8, ValHbA1cHemGlyc9]
                                 }]
                         }
@@ -587,49 +591,48 @@
                         $('#6').trigger('click');
                     });
 
-                    var date1 = "", date2 = "", date3 = "", date4 = "", date5 = "", date6 = "", date7 = "", date8 = "", date9 = "";
-                    var taille1 = 0, taille2 = 0, taille3 = 0, taille4 = 0, taille5 = 0, taille6 = 0, taille7 = 0, taille8 = 0, taille9 = 0;
-                    var poids1 = 0, poids2 = 0, poids3 = 0, poids4 = 0, poids5 = 0, poids6 = 0, poids7 = 0, poids8 = 0, poids9 = 0;
-                    var imc1 = 0, imc2 = 0, imc3 = 0, imc4 = 0, imc5 = 0, imc6 = 0, imc7 = 0, imc8 = 0, imc9 = 0;
+                    var date1 = ($("#date1").val()) ? $("#date1").val() : "", date2 = ($("#date2").val()) ? $("#date2").val() : "", date3 = ($("#date3").val()) ? $("#date3").val() : "", date4 = ($("#date4").val()) ? $("#date4").val() : "", date5 = ($("#date5").val()) ? $("#date5").val() : "", date6 = ($("#date6").val()) ? $("#date6").val() : "", date7 = ($("#date7").val()) ? $("#date7").val() : "", date8 = ($("#date8").val()) ? $("#date8").val() : "", date9 = ($("#date9").val()) ? $("#date9").val() : "";
+                    var taille1 = ($("#taille1").val()) ? $("#taille1").val() : 0, taille2 = ($("#taille2").val()) ? $("#taille2").val() : 0, taille3 = ($("#taille3").val()) ? $("#taille3").val() : 0, taille4 = ($("#taille4").val()) ? $("#taille4").val() : 0, taille5 = ($("#taille5").val()) ? $("#taille5").val() : 0, taille6 = ($("#taille6").val()) ? $("#taille6").val() : 0, taille7 = ($("#taille7").val()) ? $("#taille7").val() : 0, taille8 = ($("#taille8").val()) ? $("#taille8").val() : 0, taille9 = ($("#taille9").val()) ? $("#taille9").val() : 0;
+                    var poids1 = ($("#poids1").val()) ? $("#poids1").val() : 0, poids2 = ($("#poids2").val()) ? $("#poids2").val() : 0, poids3 = ($("#poids3").val()) ? $("#poids3").val() : 0, poids4 = ($("#poids4").val()) ? $("#poids4").val() : 0, poids5 = ($("#poids5").val()) ? $("#poids5").val() : 0, poids6 = ($("#poids6").val()) ? $("#poids6").val() : 0, poids7 = ($("#poids7").val()) ? $("#poids7").val() : 0, poids8 = ($("#poids8").val()) ? $("#poids8").val() : 0, poids9 = ($("#poids9").val()) ? $("#poids9").val() : 0;
+                    var imc1 = ($("#imc1").val()) ? $("#imc1").val() : 0, imc2 = ($("#imc2").val()) ? $("#imc2").val() : ($("#imc2").val()) ? $("#imc2").val() : 0, imc3 = ($("#imc3").val()) ? $("#imc3").val() : 0, imc4 = ($("#imc4").val()) ? $("#imc4").val() : 0, imc5 = ($("#imc5").val()) ? $("#imc5").val() : 0, imc6 = ($("#imc6").val()) ? $("#imc6").val() : 0, imc7 = ($("#imc7").val()) ? $("#imc7").val() : 0, imc8 = ($("#imc8").val()) ? $("#imc8").val() : 0, imc9 = ($("#imc9").val()) ? $("#imc9").val() : 0;
                     jQuery(document).ready(function ($) {
 
-                      <?php 
-
-                        for($i = 1; $i <= 9; $i++){
-                            echo "$('#date".$i."').change(function (event) {
-                                    date".$i." = $('#date".$i."').val();
+<?php
+for ($i = 1; $i <= 9; $i++) {
+    echo "$('#date" . $i . "').change(function (event) {
+                                    date" . $i . " = $('#date" . $i . "').val();
                                     dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                                 });
-                                $('#poids".$i."').change(function (event) {
-                                    date".$i." = $('#date".$i."').val();
-                                    taille".$i." = get_val('taille".$i."');
-                                    poids".$i." = get_val('poids".$i."');
-                                    if(taille".$i." != 0 && poids".$i." != 0){
-                                        var taille = Math.pow((taille".$i." * 0.01), 2);
-                                        imc".$i." = poids".$i." / taille;
-                                        imc".$i." = imc".$i.".toFixed(1);
-                                        $('#imc".$i."').val(imc".$i.");
+                                $('#poids" . $i . "').change(function (event) {
+                                    date" . $i . " = $('#date" . $i . "').val();
+                                    taille" . $i . " = get_val('taille" . $i . "');
+                                    poids" . $i . " = get_val('poids" . $i . "');
+                                    if(taille" . $i . " != 0 && poids" . $i . " != 0){
+                                        var taille = Math.pow((taille" . $i . " * 0.01), 2);
+                                        imc" . $i . " = poids" . $i . " / taille;
+                                        imc" . $i . " = imc" . $i . ".toFixed(1);
+                                        $('#imc" . $i . "').val(imc" . $i . ");
                                         dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                                         capturer_img('bar');
                                     }
                                 });
-                                 $('#taille".$i."').change(function (event) {
-                                    date".$i." = $('#date".$i."').val();
-                                    taille".$i." = get_val('taille".$i."');
-                                    poids".$i." = get_val('poids".$i."');
-                                    if(taille".$i." != 0 && poids".$i." != 0){
-                                        var taille = Math.pow((taille".$i." * 0.01), 2);
-                                        imc".$i." = poids".$i." / taille;
-                                        imc".$i." = imc".$i.".toFixed(1);
-                                        $('#imc".$i."').val(imc".$i.");
+                                 $('#taille" . $i . "').change(function (event) {
+                                    date" . $i . " = $('#date" . $i . "').val();
+                                    taille" . $i . " = get_val('taille" . $i . "');
+                                    poids" . $i . " = get_val('poids" . $i . "');
+                                    if(taille" . $i . " != 0 && poids" . $i . " != 0){
+                                        var taille = Math.pow((taille" . $i . " * 0.01), 2);
+                                        imc" . $i . " = poids" . $i . " / taille;
+                                        imc" . $i . " = imc" . $i . ".toFixed(1);
+                                        $('#imc" . $i . "').val(imc" . $i . ");
                                         dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9);
                                         capturer_img('bar');
                                     }
                                 });";
-                        }
-                      ?> 
-                       
-                      
+}
+?>
+
+
                         var barData = {
                             labels: [date1, date2, date3, date4, date5, date6, date7, date8, date9],
                             datasets: [
@@ -662,22 +665,22 @@
                         var bar = document.getElementById('bar').getContext('2d');
                         new Chart(bar).Line(barData, barOptions);
                     });
-                    function get_val(target){
-                        var val = $("#"+target).val();
+                    function get_val(target) {
+                        var val = $("#" + target).val();
                         return (val != "" && !isNaN(val)) ? val : 0;
                     }
-                    function dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9) { 
+                    function dater_graphe(date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9) {
                         var bar = document.getElementById('bar').getContext('2d');
                         var gradient = bar.createLinearGradient(0, 0, 100, 400);
-                        gradient.addColorStop(0, 'rgba(255,255,255,0.8)');   
+                        gradient.addColorStop(0, 'rgba(255,255,255,0.8)');
                         gradient.addColorStop(1, 'rgba(255,255,0,1)');
 
                         var gradient2 = bar.createLinearGradient(0, 0, 100, 400);
-                        gradient2.addColorStop(0, 'rgba(255,255,255,0.8)');   
+                        gradient2.addColorStop(0, 'rgba(255,255,255,0.8)');
                         gradient2.addColorStop(1, 'rgba(255,255,43,1)');
 
                         var gradient3 = bar.createLinearGradient(0, 0, 100, 400);
-                        gradient3.addColorStop(0, 'rgba(0,234,0,0.8)');   
+                        gradient3.addColorStop(0, 'rgba(0,234,0,0.8)');
                         gradient3.addColorStop(1, 'rgba(255,255,80,1)');
 
                         var barData = {
@@ -709,7 +712,7 @@
                         var barOptions = {
                             responsive: true
                         }
-                        
+
                         new Chart(bar).Line(barData, barOptions);
                     }
                 });
@@ -1550,302 +1553,316 @@
         </script>
     </head>
     <body>
-    <article>
-        
-        <div>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-            Controle sur <?php $id = $_GET['id']; echo $id; ?></a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./utilisateur.php">Accueil</a></li>
-                    <li><a href="./controle.php">Contrôle</a></li>
-                    <li><a href="./modification.php">Modifier mon profil</a></li>
-                    <li><a href="./lumiere.php">Conseil</a></li>
-                    <li><a href="./logout.php">Déconnexion</a></li>
-                  </ul>
-                </div>
+        <article>
 
-            </div>
-        </nav>
-        </div>
-
-        <!--
-        <div class="progress">
-            <div class="progressbar">
-
-            </div>
-        </div>
-        -->
-
-        <div class="etapesIndication">
-            <div class="list-group" id="titreEtape">
-            </div>
-        </div>
-
-        <form method="POST" action="" id="form-filter" class="form-horizontal" enctype="multipart/form-data">
-
-            <div class="container" style="margin-top: 82px;">
-                <div class="item active" id="etape1">
-                    <?php require './etape1_C.php'; ?>
-
-                </div>
-                <div class="item" id="etape2" style="display: none;">
-                    <?php require './etape2_C.php'; ?>
-                </div>
-                <div cl
-                ass="item"  id="etape3" style="display: none;">
-                    <?php require './etape3_C.php'; ?>
-                </div>
-                <div class="item" id="etape4" style="display: none;">
-                    <?php require './etape4_C.php'; ?>
-                </div>
-                <div class="item"  id="etape5" style="display: none;">
-                    <?php require './etape5_C.php'; ?>
-                </div>
-                <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
-                <div class="item" id="etape6" style="display: none;">
-                    <div class="container"  style="margin-top: 230px;">
-                        <div class="col-lg-3 col-md-offset-1">
-                            <center>  
-
-                                <img class="zoomEffect" src="./img/save.png" width="120" alt="" id="enregistrer">
-                                <h3 style="color: black; text-align: center;">ENREGISTRER</h3> 
-
-                            </center>
+            <div>
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                Controle sur <?php
+$id = $_POST['id'];
+$p = explode("-", $id);
+echo $p[0] . " " . $p[1];
+?>
+                            </a>
                         </div>
-                        <div class="col-lg-3">
-                            <center>
-
-                                <img class="zoomEffect" src="./img/share.png" width="160" alt="">
-                                <h3 style="color: black; text-align: center;">PARTAGER</h3>
-
-                            </center>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="./utilisateur.php">Accueil</a></li>
+                                <li><a href="./controle.php">Contrôle</a></li>
+                                <li><a href="./modification.php">Modifier mon profil</a></li>
+                                <li><a href="./lumiere.php">Conseil</a></li>
+                                <li><a href="./logout.php">Déconnexion</a></li>
+                            </ul>
                         </div>
-                        <div class="col-lg-3">
-                            <center>
 
-                                <img class="zoomEffect" src="./img/print.png"  width="160" alt="" id="imprimer">
-                                <h3 style="color: black; text-align: center;">IMPRIMER</h3>
-
-                            </center>
-                        </div>        
                     </div>
-                    <br><br><br><br><br><br><br><br>
+                </nav>
+            </div>
+
+            <!--
+            <div class="progress">
+                <div class="progressbar">
+    
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary hidden" id="save">Enregistrement</button>
-        </form>
+            -->
 
+            <div class="etapesIndication">
+                <div class="list-group" id="titreEtape">
+                </div>
+            </div>
 
-        <div class="container" id = "bouton">
-            <ul>
-                <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
-                        <span class="round">
-                            Renseignements<br>
-                            Choix du matériel
-                        </span>
-                    </a></li>
+            <form method="POST" action="" id="form-filter" class="form-horizontal" enctype="multipart/form-data">
 
-                <li><a class="round red" onClick="enHaut();" id = "2">Etape 2
-                        <span class="round">
-                            Données médicale </br>
-                            Insulinothérapie </br>
-                        </span>
-                    </a></li>
-                <li><a class="round vert" onClick="enHaut();" id = "3">Etape 3
-                        <span class="round">
-                            Habitude de vie <br>
-                            Habitude alimentaire
-                        </span>
-                    </a></li>
-                <li><a class="round orange" onClick="enHaut();" id = "4">Etape 4
-                        <span class="round">
-                            Manipulation de la Pompe <br>
-                            Alarme
-                        </span>
-                    </a></li>
-                <li><a class="round violet" onClick="enHaut();" id = "5">Etape 5
-                        <span class="round">
-                            Pose du cathéter <br>
-                            Manipulation <br>
-                            ASG
-                        </span>
-                    </a></li>
-                <li><a class="round yellow" onClick="enHaut();" id = "6">Etape 6
-                        <span class="round">
-                            Enregistrer<br>
-                            Partager<br>
-                            Imprimer
-                        </span>
-                    </a></li>
-            </ul>
+                <div class="container" style="margin-top: 82px;">
+                    <div class="item active" id="etape1">
+                        <?php require './etape1_C.php'; ?>
 
-        </div>
-
-        <button class="btn btn-primary btn-lg hidden" id="triggerwarning" data-toggle="modal" data-target="#loginerror"></button>
-        <div class="modal" id="loginerror">
-            <div class="modal-dialog">
-                <div class="modal-content alert alert-dismissible alert-info col-lg-12">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="ferme">&times;</button>
-                        <h4 class="modal-title" style="text-align: center;">Message</h4>
                     </div>
-                    <div class="modal-body">
-                        <div class="warning" id="erreur_inscription"></div>
+                    <div class="item" id="etape2" style="display: none;">
+                        <?php require './etape2_C.php'; ?>
                     </div>
-                    <div class="modal-footer">
+                    <div cl
+                         ass="item"  id="etape3" style="display: none;">
+                             <?php require './etape3_C.php'; ?>
+                    </div>
+                    <div class="item" id="etape4" style="display: none;">
+                        <?php require './etape4_C.php'; ?>
+                    </div>
+                    <div class="item"  id="etape5" style="display: none;">
+                        <?php require './etape5_C.php'; ?>
+                    </div>
+                    <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
+                    <div class="item" id="etape6" style="display: none;">
+                        <div class="container"  style="margin-top: 230px;">
+                            <div class="col-lg-3 col-md-offset-1">
+                                <center>  
+
+                                    <img class="zoomEffect" src="./img/save.png" width="120" alt="" id="enregistrer">
+                                    <h3 style="color: black; text-align: center;">ENREGISTRER</h3> 
+
+                                </center>
+                            </div>
+                            <div class="col-lg-3">
+                                <center>
+
+                                    <img class="zoomEffect" src="./img/share.png" width="160" alt="">
+                                    <h3 style="color: black; text-align: center;">PARTAGER</h3>
+
+                                </center>
+                            </div>
+                            <div class="col-lg-3">
+                                <center>
+
+                                    <img class="zoomEffect" src="./img/print.png"  width="160" alt="" id="imprimer">
+                                    <h3 style="color: black; text-align: center;">IMPRIMER</h3>
+
+                                </center>
+                            </div>        
+                        </div>
+                        <br><br><br><br><br><br><br><br>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary hidden" id="save">Enregistrement</button>
+            </form>
+
+
+            <div class="container" id = "bouton">
+                <ul>
+                    <li><a class="round green" onClick="enHaut();" id = "1">Etape 1
+                            <span class="round">
+                                Renseignements<br>
+                                Choix du matériel
+                            </span>
+                        </a></li>
+
+                    <li><a class="round red" onClick="enHaut();" id = "2">Etape 2
+                            <span class="round">
+                                Données médicale </br>
+                                Insulinothérapie </br>
+                            </span>
+                        </a></li>
+                    <li><a class="round vert" onClick="enHaut();" id = "3">Etape 3
+                            <span class="round">
+                                Habitude de vie <br>
+                                Habitude alimentaire
+                            </span>
+                        </a></li>
+                    <li><a class="round orange" onClick="enHaut();" id = "4">Etape 4
+                            <span class="round">
+                                Manipulation de la Pompe <br>
+                                Alarme
+                            </span>
+                        </a></li>
+                    <li><a class="round violet" onClick="enHaut();" id = "5">Etape 5
+                            <span class="round">
+                                Pose du cathéter <br>
+                                Manipulation <br>
+                                ASG
+                            </span>
+                        </a></li>
+                    <li><a class="round yellow" onClick="enHaut();" id = "6">Etape 6
+                            <span class="round">
+                                Enregistrer<br>
+                                Partager<br>
+                                Imprimer
+                            </span>
+                        </a></li>
+                </ul>
+
+            </div>
+
+            <button class="btn btn-primary btn-lg hidden" id="triggerwarning" data-toggle="modal" data-target="#loginerror"></button>
+            <div class="modal" id="loginerror">
+                <div class="modal-dialog">
+                    <div class="modal-content alert alert-dismissible alert-info col-lg-12">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="ferme">&times;</button>
+                            <h4 class="modal-title" style="text-align: center;">Message</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="warning" id="erreur_inscription"></div>
+                        </div>
+                        <div class="modal-footer">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-        <script src="./bootstrap/js/bootstrap.min.js"></script> 
-        <script src="assets/js/ie-emulation-modes-warning.js"></script>
-        <script src="assets/js/Chart.min.js"></script>
-        <script src="assets/js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="assets/js/html2canvas.min.js"></script>
+            <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+            <script src="./bootstrap/js/bootstrap.min.js"></script> 
+            <script src="assets/js/ie-emulation-modes-warning.js"></script>
+            <script src="assets/js/Chart.min.js"></script>
+            <script src="assets/js/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="assets/js/html2canvas.min.js"></script>
 
-        <script type="text/javascript">
-                    function onCapture(){
-                        alert("On capture ! ");
-                    }
-                    $(document).ready(function () {
-                        $('.round').click(function () {
-                            $('.round').removeClass('active');
-                            $(this).addClass('active');
+            <script type="text/javascript">
+                        function onCapture() {
+                            alert("On capture ! ");
+                        }
+                        $(document).ready(function () {
+                            $('.round').click(function () {
+                                $('.round').removeClass('active');
+                                $(this).addClass('active');
+                            });
                         });
-                    });
 
-                    function enHaut()
-                    {
+                        function enHaut()
+                        {
 
-                        $('html,body').animate({scrollTop: 0}, 'slow');
-                    }
-        </script>
+                            $('html,body').animate({scrollTop: 0}, 'slow');
+                        }
+            </script>
 
-        <script type="text/javascript">
-        	function capturer_img(img){
-                 setTimeout(function () {
-                                capture(img);
-                }, 800);
+            <script type="text/javascript">
+                function capturer_img(img) {
+                    setTimeout(function () {
+                        capture(img);
+                    }, 800);
 
-            }
+                }
 
-            // Pour l'autocompletion
-        	// Pour l'autocompletion
+                // Pour l'autocompletion
+                // Pour l'autocompletion
 
 
                 var ville = [];
-                var code_postal  = [];
+                var code_postal = [];
                 var complet = [];
                 var complet2 = [];
                 $.ajax({
-                  url: 'lib/ville_cp.json',
-                  type: 'POST',
-                  dataType: "json",
-                  success: function(data){
-                    for(var i = 0; i < data.length; i++){
-                      complet.push({ value : data[i].ville_nom_reel, desc: data[i].ville_code_postal});
-                      complet2.push({ value : data[i].ville_code_postal, desc: data[i].ville_nom_reel});
+                    url: 'lib/ville_cp.json',
+                    type: 'POST',
+                    dataType: "json",
+                    success: function (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            complet.push({value: data[i].ville_nom_reel, desc: data[i].ville_code_postal});
+                            complet2.push({value: data[i].ville_code_postal, desc: data[i].ville_nom_reel});
+                        }
+                    },
+                    error: function (xhr) {
+                        alert("Erreur de recuperation");
                     }
-                  },
-                  error: function(xhr){
-                    alert("Erreur de recuperation");
-                  }
                 });
                 $('#villepatient').autocomplete({
-                    source : complet,
+                    source: complet,
                     minLength: 3,
-                    select : function(event, ui){
+                    select: function (event, ui) {
                         $("#codepostalpatient").val(ui.item.desc);
                     }
                 });
                 $('#codepostalpatient').autocomplete({
-                    source : complet2,
+                    source: complet2,
                     minLength: 3,
-                    select: function(event, ui){
+                    select: function (event, ui) {
                         $("#villepatient").val(ui.item.desc);
                     }
                 });
 
 
 
-            $('#enregistrer').click(function () {
-                $('#save').trigger('click');
-            });
+                $('#enregistrer').click(function () {
+                    $('#save').trigger('click');
+                });
 
-/*
-            function capture(target){
-                alert("On capture ! ");
-            }
-  */
-            
-            function capture(target) {
-                var scrolL =  $('html,body').scrollTop();   
-                var capture = {};
-                var trg = $('#' + target);
-            <?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
-                html2canvas(trg, {
-                    onrendered: function (canvas) {
-                        capture.img = canvas.toDataURL("image/png");
-                        capture.data = {'image': capture.img, 'id': id};
-                        $.ajax({
-                            url: "pdf/ajax.php",
-                            data: capture.data,
-                            type: 'post',
-                            success: function (result) {
+                /*
+                 function capture(target){
+                 alert("On capture ! ");
+                 }
+                 */
 
-                            }
-                        });
+                function capture(target) {
+                    var scrolL = $('html,body').scrollTop();
+                    var capture = {};
+                    var trg = $('#' + target);
+<?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+                    html2canvas(trg, {
+                        onrendered: function (canvas) {
+                            capture.img = canvas.toDataURL("image/png");
+                            capture.data = {'image': capture.img, 'id': id};
+                            $.ajax({
+                                url: "pdf/ajax.php",
+                                data: capture.data,
+                                type: 'post',
+                                success: function (result) {
+
+                                }
+                            });
+                        }
+                    });
+                }
+
+
+                $('#imprimer').click(function () {
+                    $("#form-filter").attr('action', 'content.php');
+                    $("#form-filter").attr('target', '_blank');
+                    $("#form-filter").submit();
+                });
+
+                $("input").keypress(function (event)
+                {
+                    if (event.which == 13)
+                    {
+                        event.preventDefault();
                     }
                 });
-            }
 
-
-            $('#imprimer').click(function () {
-                $("#form-filter").attr('action', 'content.php');
-                $("#form-filter").attr('target', '_blank');
-                $("#form-filter").submit();
-            });
-
-            $("input").keypress(function(event) 
-            {
-                if(event.which == 13)
-                {
-                    event.preventDefault();
-                }
-            });
-
-            $('#save').click(function (e) { 
-                e.preventDefault();
-                $("#form-filter").attr('action', 'traitement.php');
-                var form = $('#form-filter').get(0);
-                var formData = new FormData(form);// get the form data
-                // on envoi formData vers mail.php
-                $.ajax({
-                    type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                    url: 'traitement.php', // the url where we want to POST
-                    data: formData, // our data object
-                    dataType: 'text', // what type of data do we expect back from the server
-                    processData: false,
-                    contentType: false,
-                    success: function (server_response)
-                    {
-                        if (server_response === "succes")
+                $('#save').click(function (e) {
+                    e.preventDefault();
+                    $("#form-filter").attr('action', 'traitement.php');
+                    var form = $('#form-filter').get(0);
+                    var formData = new FormData(form);// get the form data
+                    // on envoi formData vers mail.php
+                    $.ajax({
+                        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+                        url: 'traitement.php', // the url where we want to POST
+                        data: formData, // our data object
+                        dataType: 'text', // what type of data do we expect back from the server
+                        processData: false,
+                        contentType: false,
+                        success: function (server_response)
                         {
-                            window.location.href = "page.php";
-                        }
-                        else
+                            if (server_response === "succes")
+                            {
+                                window.location.href = "page.php";
+                            }
+                            else
+                            {
+                                $('#erreur_inscription').html('<p>' + server_response + '</p>');
+                                $('#triggerwarning').trigger('click');
+                                setTimeout(function () {
+                                    $('#ferme').trigger('click');
+                                }, 4000);
+                            }
+                        },
+                        error: function (server_response)
                         {
                             $('#erreur_inscription').html('<p>' + server_response + '</p>');
                             $('#triggerwarning').trigger('click');
@@ -1853,28 +1870,19 @@
                                 $('#ferme').trigger('click');
                             }, 4000);
                         }
-                    },
-                    error: function (server_response)
-                    {
-                        $('#erreur_inscription').html('<p>' + server_response + '</p>');
-                        $('#triggerwarning').trigger('click');
-                        setTimeout(function () {
-                            $('#ferme').trigger('click');
-                        }, 4000);
-                    }
+                    });
+
+                    setTimeout(function () {
+                        $("#form-filter").attr('action', 'content.php');
+                        $("#form-filter").submit();
+                    }, 800);
                 });
-                
-                setTimeout(function(){
-                    $("#form-filter").attr('action', 'content.php');
-                    $("#form-filter").submit();
-                }, 800);   
-            });
 
 
 
-        </script>
+            </script>
 
-    </article>
+        </article>
     </body>
 
 </html>
