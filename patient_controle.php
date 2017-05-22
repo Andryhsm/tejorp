@@ -1559,6 +1559,7 @@ for ($i = 1; $i <= 9; $i++) {
                                 Contrôle sur 
                                 <?php
                                     $id = $_POST['id'];
+                                    $_SESSION['idPatient'] = $id;
                                     $p = explode("-", $id);
                                     echo $p[1] . " " . $p[0];
                                 ?>
