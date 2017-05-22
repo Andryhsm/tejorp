@@ -1,18 +1,9 @@
-<<<<<<< HEAD
+
 <?php 
     require './protection.php'; 
     require 'cnx.php';
 
     session_start();
-
-    $id = $_GET['id'];
-    $_SESSION['idPatient'] = $id;
-
-=======
-<?php
-require './protection.php';
-require 'cnx.php';
->>>>>>> 3e7e6b34d45a7dab4565c2881b8cd9633912475a
 ?>
 
 <!DOCTYPE html>
@@ -1568,6 +1559,7 @@ for ($i = 1; $i <= 9; $i++) {
                             <a class="navbar-brand" href="#">
                                 Controle sur <?php
 $id = $_POST['id'];
+$_SESSION['idPatient'] = $id;
 $p = explode("-", $id);
 echo $p[0] . " " . $p[1];
 ?>
