@@ -24,8 +24,7 @@ session_start();
 
             .well
             {
-                //eto msolo black am pdf
-                background: rgba(10, 10, 10, 0.51);
+                background: #fffc;
                 min-height: 20px;
                 padding: 19px;
                 margin-bottom: 20px;
@@ -33,11 +32,6 @@ session_start();
                 -webkit-box-shadow: inset 0 1px 1px rgba(233,101,25,.3);
                 box-shadow: inset 0 1px 1px rgba(233,101,25,.3);
             }
-
-            //ilaina am pdf 
-            /*            #slider label {
-                            color: black !important;
-                        }*/
 
             h4
             {
@@ -75,7 +69,7 @@ session_start();
                 margin-left: -35px;
                 text-align: center;
                 margin-top: -75px;
-                color: white;
+                color: black;
             }
 
             /* below is not necessary, just for style */
@@ -88,7 +82,7 @@ session_start();
         <script src="jquery/jquery-2.1.4.min.js"></script>
         <script src="./bootstrap/js/bootstrap.min.js"></script>
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="./jquery/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="assets/js/Chart.min.js"></script>
         <script>
@@ -140,26 +134,29 @@ session_start();
                             // Space out values
                             for (var i = 0; i <= vals; i++) {
 
+//                                if (i === 0) {
+//                                    var el = $('<label><br><br>Installation</label>').css('left', (i / vals * 100) + '%');
+//                                }
                                 if (i === 0) {
-                                    var el = $('<label>Changement cathéter</label>').css('left', (i / vals * 100) + '%');
+                                    var el = $('<label><br>Changement cathéter</label>').css('left', (i / vals * 100) + '%');
                                 }
                                 if (i === 1) {
                                     var el = $('<label>Bilan d’étape 1 mois</label>').css('left', (i / vals * 100) + '%');
                                 }
                                 if (i === 2) {
-                                    var el = $('<label>Observance 3 mois</label>').css('left', (i / vals * 100) + '%');
+                                    var el = $('<label><br>Observance 3 mois</label>').css('left', (i / vals * 100) + '%');
                                 }
                                 if (i === 3) {
                                     var el = $('<label>Bilan d’étape 6 mois</label>').css('left', (i / vals * 100) + '%');
                                 }
                                 if (i === 4) {
-                                    var el = $('<label>Observance 9 mois</label>').css('left', (i / vals * 100) + '%');
+                                    var el = $('<label><br>Observance 9 mois</label>').css('left', (i / vals * 100) + '%');
                                 }
                                 if (i === 5) {
                                     var el = $('<label>Point étape intermédiaire</label>').css('left', (i / vals * 100) + '%');
                                 }
                                 if (i === 6) {
-                                    var el = $('<label>Observance semestrielle</label>').css('left', (i / vals * 100) + '%');
+                                    var el = $('<label><br>Observance semestrielle</label>').css('left', (i / vals * 100) + '%');
                                 }
 
                                 $("#slider").append(el);
@@ -201,7 +198,7 @@ session_start();
             </div>
         </nav>
 
-        <div class="container" style="margin-top: 80px;">
+        <div class="container" style="margin-top: 90px;">
 
             <div class="well">
                 <br><br><br><br>
@@ -444,10 +441,10 @@ session_start();
             });
         </script>
         <script type="text/javascript">
-        function loadcontrol(id){
+            function loadcontrol(id) {
 //            alert(id);
-            $('#'+id+'').trigger('click');
-        }
+                $('#' + id + '').trigger('click');
+            }
         </script>
     </body>
 </html>!!

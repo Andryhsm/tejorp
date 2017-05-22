@@ -730,7 +730,7 @@
                               echo "
                                    if(\"".$donneespmp["etat".$i.""]."\" != '')
                                     {
-                                        $('form #pmpselect".$i."').attr('disabled', true);
+                                        $('form #pmpselect".$i." option:not(:selected)').attr('disabled', true);
                                     }
                                     ";
                             }
@@ -748,7 +748,7 @@
                               echo "
                                    if(\"".$donneesalarme["alarmeetat".$i.""]."\" != '')
                                     {
-                                        $('form #alarmeselect".$i."').attr('disabled', true);
+                                        $('form #alarmeselect".$i." option:not(:selected)').attr('disabled', true);
                                     }
                                     ";
                             }
@@ -766,7 +766,7 @@
                               echo "
                                    if(\"".$donneesmanip["etat".$i.""]."\" != '')
                                     {
-                                        $('form #manipselect".$i."').attr('disabled', true);
+                                        $('form #manipselect".$i." option:not(:selected)').attr('disabled', true);
                                     }
                                     ";
                             }
