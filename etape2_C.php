@@ -816,30 +816,40 @@
 <script id="chart" type="text/javascript"></script>
 <script id="chart2" type="text/javascript"></script>
 <script language="javascript">
-    $(document).ready(function () {
+    <?php
+        echo "var idPatient = '".$_SESSION["idPatient"]."';";
+        echo "var idPrescripteur = '".$_SESSION["id"]."';";
+    ?>
+
+    $(document).ready(function (){
         $.ajax({
-            url: 'lib/chart_dynamic.php',
+            url: 'lib/chart_dynamic_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             success: function (data) {
                 $("#chart").html(data);
             },
-            error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic.php");
+            error: function (xhr) {
+                alert("Erreur de chargement de lib/chart_dynamic_.php");
+                console.log(xhr);
             }
         });
         $.ajax({
-            url: 'lib/chart_dynamic2.php',
+            url: 'lib/chart_dynamic2_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             success: function (data) {
                 $("#chart2").html(data);
             },
             error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic2.php");
+                alert("Erreur de chargement de lib/chart_dynamic2_.php");
             }
         });
     });</script>
 <script type="text/javascript">
-    var i = 0, inc = 4, incD = 4, len = 0, content = "", len2, name;
+    var len_basal = $("#contentBasal1").children().length;
+    var basals = ((len_basal - 1) * 4) ;
+        
+    var i = 0, inc = 4, incD = basals, len = 0, content = "", len2, name;
+
     $('#btnAdd').click(function (e)
     {
         e.preventDefault();
@@ -882,14 +892,14 @@
         var dataD = JSON.stringify(arr_Debit);
         var dataH = JSON.stringify(arr_Horaire);
         $.ajax({
-            url: 'lib/chart_dynamic.php',
+            url: 'lib/chart_dynamic_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             data: {dataD: dataD, dataH: dataH},
             success: function (data) {
                 $("#chart").html(data);
             },
             error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic.php");
+                alert("Erreur de chargement de lib/chart_dynamic_.php");
             }
         });
         Debit_graphe1();
@@ -909,7 +919,10 @@
         });
     });</script>
 <script type="text/javascript">
-    var m = 0, inc2 = 4, incD2 = 4, len_ = 0, content = "", len_2, name_;
+    var len_basal2 = $("#contentBasal2").children().length;
+    var basals2 = ((len_basal2 - 1) * 4) ;
+    
+    var m = 0, inc2 = 4, incD2 = basals2, len_ = 0, content = "", len_2, name_;
     $('#btnAdd2').click(function (e)
     {
         e.preventDefault();
@@ -964,7 +977,7 @@
         var dataD = JSON.stringify(arr_Debit2);
         var dataH = JSON.stringify(arr_Horaire2);
         $.ajax({
-            url: 'lib/chart_dynamic2.php',
+            url: 'lib/chart_dynamic2_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             data: {dataD: dataD, dataH: dataH},
             success: function (data) {
@@ -972,7 +985,7 @@
                 //alert(data);
             },
             error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic2.php");
+                alert("Erreur de chargement de lib/chart_dynamic2_.php");
             }
         });
         console.log(arr_Horaire2);

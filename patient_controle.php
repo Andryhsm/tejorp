@@ -1,6 +1,18 @@
+<<<<<<< HEAD
+<?php 
+    require './protection.php'; 
+    require 'cnx.php';
+
+    session_start();
+
+    $id = $_GET['id'];
+    $_SESSION['idPatient'] = $id;
+
+=======
 <?php
 require './protection.php';
 require 'cnx.php';
+>>>>>>> 3e7e6b34d45a7dab4565c2881b8cd9633912475a
 ?>
 
 <!DOCTYPE html>
