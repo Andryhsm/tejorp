@@ -73,6 +73,9 @@ ob_start();
         
        	<div ><br/><br/><div style="margin-left: 130px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
         <div >
+            
+            <img src="img/instal.PNG">
+            
             <h4><u>INFIRMIERE BASTIDE MEDICAL</u></h4>
             <p>
                 <strong>Nom IDE Responsable :</strong> <?php echo $nomresp; ?>  <br/>   
