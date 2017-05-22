@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> a915c35a63cfce218b7a4d84c6c4550ded4f731e
 <?php 
     require './protection.php'; 
     require 'cnx.php';
 
     session_start();
-<<<<<<< HEAD
-=======
-
->>>>>>> a915c35a63cfce218b7a4d84c6c4550ded4f731e
 ?>
-
 <!DOCTYPE html>
 
 <html>
@@ -1565,19 +1557,11 @@ for ($i = 1; $i <= 9; $i++) {
                             </button>
                             <a class="navbar-brand" href="#">
                                 Controle sur <?php
-<<<<<<< HEAD
 $id = $_POST['id'];
 $_SESSION['idPatient'] = $id;
 $p = explode("-", $id);
 echo $p[0] . " " . $p[1];
 ?>
-=======
-                                        $id = $_POST['id'];
-                                        $_SESSION["idPatient"] = $id;
-                                        $p = explode("-", $id);
-                                        echo $p[0] . " " . $p[1];
-                                ?>
->>>>>>> a915c35a63cfce218b7a4d84c6c4550ded4f731e
                             </a>
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
