@@ -1,4 +1,4 @@
-<?php require './protection.php'; ?>
+        <?php require './protection.php'; ?>
 
 <!DOCTYPE html>
 
@@ -1792,7 +1792,7 @@ for ($i = 1; $i <= 9; $i++) {
                     var scrolL = $('html,body').scrollTop();
                     var capture = {};
                     var trg = $('#' + target);
-<?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+                    <?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
                     html2canvas(trg, {
                         onrendered: function (canvas) {
                             capture.img = canvas.toDataURL("image/png");

@@ -1,5 +1,7 @@
+
 <?php
 require './protection.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -88,7 +90,32 @@ require './protection.php';
 
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="assets/js/Chart.min.js"></script>
         <script>
+                
+            function capture_class(target) {
+                    var scrolL = $('html,body').scrollTop();
+                    var capture = {};
+                    var trg = $('.' + target);
+                    
+                    <?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+
+                    html2canvas(trg, {
+                        onrendered: function (canvas) {
+                            capture.img = canvas.toDataURL("image/png");
+                            capture.data = {'image': capture.img, 'id': id};
+                            $.ajax({
+                                url: "pdf/ajax.php",
+                                data: capture.data,
+                                type: 'post',
+                                success: function (result) {
+                                        alert("kmlklmfkdlkfldkfd");
+                                }       
+                            });
+                        }
+                    });
+            }
+
             $(function () {
                 $("#slider").slider({
                     value: 2,
@@ -367,6 +394,12 @@ require './protection.php';
 
         <script type="text/javascript">
             $(document).ready(function () {
+
+            setTimeout(function () {
+                capture_class('well');
+            }, 800);
+
+
                 $('.filterable .btn-filter').click(function () {
                     var $panel = $(this).parents('.filterable'),
                             $filters = $panel.find('.filters input'),
@@ -417,4 +450,4 @@ require './protection.php';
         }
         </script>
     </body>
-</html>
+</html>!!

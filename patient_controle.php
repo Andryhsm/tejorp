@@ -364,7 +364,7 @@
                 $("#16").click(function () {
                     $('#6').trigger('click');
                 });
-                $("#1").click(function () {
+                $("#1").click(function () {     
                     $("#etape1").show();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -417,7 +417,7 @@ for ($i = 0; $i < 10; $i++) {
     echo "var ValDatesHemGlyc" . $i . " = $('#ValDatesHemGlyc1').val();";
 }
 for ($i = 0; $i < 10; $i++) {
-    echo "var ValHbA1cHemGlyc" . $i . " = ($(\"#ValHbA1cHemGlyc" . $i . "\").val() != \"\") ? $(\"#ValHbA1cHemGlyc" . $i . "\").val() : 0;\n";
+    echo "var ValHbA1cHemGlyc" . $i . " = ($(\"#ValHbA1cHemGlyc" . $i . "\").val() != \"\") ? $(\"#ValHbA1cHemGlyc" . $i . "\").val() : 0;\n";      
 }
 ?>
 
@@ -1559,7 +1559,6 @@ for ($i = 1; $i <= 9; $i++) {
                                 Contrôle sur 
                                 <?php
                                     $id = $_POST['id'];
-                                    $_SESSION['idPatient'] = $id;
                                     $p = explode("-", $id);
                                     echo $p[1] . " " . $p[0];
                                 ?>
@@ -1811,6 +1810,26 @@ for ($i = 1; $i <= 9; $i++) {
                     });
                 }
 
+                function capture_class(target) {
+                    var scrolL = $('html,body').scrollTop();
+                    var capture = {};
+                    var trg = $('.' + target);
+                    <?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+                    html2canvas(trg, {
+                        onrendered: function (canvas) {
+                            capture.img = canvas.toDataURL("image/png");
+                            capture.data = {'image': capture.img, 'id': id};
+                            $.ajax({
+                                url: "pdf/ajax.php",
+                                data: capture.data,
+                                type: 'post',
+                                success: function (result) {
+                                        alert("kmlklmfkdlkfldkfd");
+                                }       
+                            });
+                        }
+                    });
+                }
 
                 $('#imprimer').click(function () {
                     $("#form-filter").attr('action', 'content.php');
