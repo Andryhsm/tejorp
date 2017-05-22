@@ -145,23 +145,10 @@ $donneesp = $reponsep->fetch();
             <div class="form-group">
                 <label for="datenaissance" class="col-sm-4 control-label">Né(e) le:</label>
                 <div class="col-sm-7">
-                    <input type="text" readonly="" onchange="calcul_age(this.value)" value="<?php echo $donneesp['datenaissance']; ?>" placeholder="Date de naissance"  class="form-control date datepicker" name="datenaissance" id="datenaissance">
+                    <input type="text" readonly="" placeholder="Date de naissance"  class="form-control date datepickery" name="datenaissance" id="datenaissance">
                 </div>
             </div>
 
-            <script>
-                function calcul_age(id_naissance) {
-
-                    var tabEN = id_naissance.split('-');
-                    tabEN.reverse();
-//                    alert(tabEN.join('-'));
-                    var d = new Date(tabEN.join('-'));
-                    var date_day = new Date();
-                    var rep = date_day.getFullYear() - d.getFullYear();
-//                    alert (rep);
-                    document.getElementById('agepatient').value = rep;
-                }
-            </script>
 
 
             <div class="form-group">
@@ -499,6 +486,10 @@ $donneesp = $reponsep->fetch();
                 <script>
                     $(document).ready(function ()
                     {
+                        
+                        $('[name="datenaissance"]').val("<?php echo $donneesp['datenaissance']; ?>");
+                        $('#datenaissance').datepicker("destroy");
+                        
                         $('[name="Pompe"]').val("<?php echo utf8_encode($donneescm['pompe']); ?>");
                         $('[name="modele"]').val("<?php echo utf8_encode($donneescm['modele']); ?>");
                         $('[name="modele2"]').val("<?php echo utf8_encode($donneescm['modele2']); ?>");
