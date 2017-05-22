@@ -1554,11 +1554,12 @@ for ($i = 1; $i <= 9; $i++) {
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="#">
-                                Controle sur <?php
-$id = $_POST['id'];
-$p = explode("-", $id);
-echo $p[0] . " " . $p[1];
-?>
+                                Contrôle sur 
+                                <?php
+                                    $id = $_POST['id'];
+                                    $p = explode("-", $id);
+                                    echo $p[1] . " " . $p[0];
+                                ?>
                             </a>
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
