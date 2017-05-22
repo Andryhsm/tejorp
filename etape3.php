@@ -64,7 +64,7 @@
         <div class="col-lg-10">
             <div class="radio">
                 <label>
-                    <input type="radio" value="rougeur" name="rougeur">
+                    <input type="radio" value="rougeur" name="rougeur" checked="">
                     : Rougeur /
                 </label>
                 <label>
