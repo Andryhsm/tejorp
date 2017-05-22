@@ -15,8 +15,8 @@
     $req = $bdd->query("SELECT * FROM asg1 WHERE idPrescripteur = '" . $_SESSION['id'] . "' AND idPatient = '" . $id . "'");
     $asg1 = $req->fetch();
 
-    $req = $bdd->query("SELECT * FROM asg2 WHERE idPrescripteur = '" . $_SESSION['id'] . "' AND idPatient = '" . $id . "'");
-    $asg2 = $req->fetch();
+    $req2 = $bdd->query("SELECT * FROM asg2 WHERE idPrescripteur = '" . $_SESSION['id'] . "' AND idPatient = '" . $id . "'");
+    $asg2 = $req2->fetch();
 
     $requete = $bdd->query("SELECT * FROM connaissances WHERE idPrescripteur = '" . $_SESSION['id'] . "' AND idPatient = '" . $id . "'");
     $connaissances = $requete->fetch();
@@ -31,7 +31,9 @@
         /*Date Pose du cathéter*/
 
         <?php
-            for($h = 1 ; $h <= 4; $h ++){
+            for($h = 1 ; $h <= 4; $h ++)
+            {
+                echo "$('[name=\"cathdate".$h."\"]').val(\"".$poseducatheter['date'.$h]."\");";
                 echo "
                    if(\"".$poseducatheter["date".$h.""]."\" != '')
                     {
