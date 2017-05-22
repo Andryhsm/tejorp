@@ -115,40 +115,40 @@ $donneesha = $reponseha->fetch();
                         <tbody>
                             <tr>
                                 <td>Petit déjeuner</td>
-                                <td><input type="time" class="form-control datetimepicker" name="petitdejeunerDe" id="petitdejeunerDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="petitdejeunerA" id="petitdejeunerA"></td>
+                                <td><input type="time" class="form-control" name="petitdejeunerDe" id="petitdejeunerDe"></td>
+                                <td><input type="time" class="form-control" name="petitdejeunerA" id="petitdejeunerA"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerRotation" id="petitdejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerObjectif" id="petitdejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerSensibilite" id="petitdejeunerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Déjeuner</td>
-                                <td><input type="time" class="form-control datetimepicker" name="dejeunerDe" id="dejeunerDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="dejeunerA" id="dejeunerA"></td>
+                                <td><input type="time" class="form-control" name="dejeunerDe" id="dejeunerDe"></td>
+                                <td><input type="time" class="form-control" name="dejeunerA" id="dejeunerA"></td>
                                 <td><input type="text" class="form-control" name="dejeunerRotation" id="dejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="dejeunerObjectif" id="dejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dejeunerSensibilite" id="dejeunerSensibilite"></td> 
                             </tr>
                             <tr>
                                 <td>Goûter</td>
-                                <td><input type="time" class="form-control datetimepicker" name="gouterDe" id="gouterDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="gouterA" id="gouterA"></td>
+                                <td><input type="time" class="form-control" name="gouterDe" id="gouterDe"></td>
+                                <td><input type="time" class="form-control" name="gouterA" id="gouterA"></td>
                                 <td><input type="text" class="form-control" name="gouterRotation" id="gouterRotation"></td>
                                 <td><input type="text" class="form-control" name="gouterObjectif" id="gouterObjectif"></td>
                                 <td><input type="text" class="form-control" name="gouterSensibilite" id="gouterSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Dîner</td>
-                                <td><input type="time" class="form-control datetimepicker" name="dinerDe" id="dinerDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="dinerA" id="dinerA"></td>
+                                <td><input type="time" class="form-control" name="dinerDe" id="dinerDe"></td>
+                                <td><input type="time" class="form-control" name="dinerA" id="dinerA"></td>
                                 <td><input type="text" class="form-control" name="dinerRotation" id="dinerRotation"></td>
                                 <td><input type="text" class="form-control" name="dinerObjectif" id="dinerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dinerSensibilite" id="dinerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Collation</td>
-                                <td><input type="time" class="form-control datetimepicker" name="collationDe" id="collationDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="collationA" id="collationA"></td>
+                                <td><input type="time" class="form-control" name="collationDe" id="collationDe"></td>
+                                <td><input type="time" class="form-control" name="collationA" id="collationA"></td>
                                 <td><input type="text" class="form-control" name="collationRotation" id="collationRotation"></td>
                                 <td><input type="text" class="form-control" name="collationObjectif" id="collationObjectif"></td>
                                 <td><input type="text" class="form-control" name="collationSensibilite" id="collationSensibilite"></td>
@@ -385,74 +385,195 @@ $donneesha = $reponseha->fetch();
         {
             $('[name="petitdejeunerDe"]').val("<?php echo $donneesif['petitdejeunerDe']; ?>");
             $('form #petitdejeunerDe').attr('readonly', true);
-            //mbola misy erreur
-            $('#petitdejeunerDe').datetimepicker("destroy");
+            $("#petitdejeunerDe").removeClass("datetimepicker");
+        }else{
+            $("#petitdejeunerDe").addClass("datetimepicker1");
+            $('.datetimepicker1').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['dejeunerDe']; ?>" != "")
         {
             $('[name="dejeunerDe"]').val("<?php echo $donneesif['dejeunerDe']; ?>");
             $('form #dejeunerDe').attr('readonly', true);
-            //mbola misy erreur
-            $('#dejeunerDe').datepicker("destroy");
+        }else{
+            $("#dejeunerDe").addClass("datetimepicker2");
+            $('.datetimepicker2').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['gouterDe']; ?>" != "")
         {
             $('[name="gouterDe"]').val("<?php echo $donneesif['gouterDe']; ?>");
             $('form #gouterDe').attr('readonly', true);
-            //mbola misy erreur
-            $('#gouterDe').datepicker("destroy");
+        }else{
+            $("#gouterDe").addClass("datetimepicker3");
+            $('.datetimepicker3').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['dinerDe']; ?>" != "")
         {
             $('[name="dinerDe"]').val("<?php echo $donneesif['dinerDe']; ?>");
             $('form #dinerDe').attr('readonly', true);
-            //mbola misy erreur
-            $('#dinerDe').datepicker("destroy");
+        }else{
+            $("#dinerDe").addClass("datetimepicker4");
+            $('.datetimepicker4').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['collationDe']; ?>" != "")
         {
             $('[name="collationDe"]').val("<?php echo $donneesif['collationDe']; ?>");
             $('form #collationDe').attr('readonly', true);
-            //mbola misy erreur
-            $('#collationDe').datepicker("destroy");
+        }else{
+            $("#collationDe").addClass("datetimepicker5");
+            $('.datetimepicker5').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
 
         if ("<?php echo $donneesif['petitdejeunerA']; ?>" != "")
         {
             $('[name="petitdejeunerA"]').val("<?php echo $donneesif['petitdejeunerA']; ?>");
             $('form #petitdejeunerA').attr('readonly', true);
-            //mbola misy erreur
-            $('#petitdejeunerA').datepicker("destroy");
+        }else{
+            $("#petitdejeunerA").addClass("datetimepicker6");
+            $('.datetimepicker6').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['dejeunerA']; ?>" != "")
         {
             $('[name="dejeunerA"]').val("<?php echo $donneesif['dejeunerA']; ?>");
             $('form #dejeunerA').attr('readonly', true);
-            //mbola misy erreur
-            $('#dejeunerA').datepicker("destroy");
+        }else{
+            $("#dejeunerA").addClass("datetimepicker7");
+            $('.datetimepicker7').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['gouterA']; ?>" != "")
         {
             $('[name="gouterA"]').val("<?php echo $donneesif['gouterA']; ?>");
             $('form #gouterA').attr('readonly', true);
-            //mbola misy erreur
-            $('#gouterA').datepicker("destroy");
+        }else{
+            $("#gouterA").addClass("datetimepicker8");
+            $('.datetimepicker8').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['dinerA']; ?>" != "")
         {
             $('[name="dinerA"]').val("<?php echo $donneesif['dinerA']; ?>");
             $('form #dinerA').attr('readonly', true);
-            //mbola misy erreur
-            $('#dinerA').datepicker("destroy");
+        }else{
+            $("#dinerA").addClass("datetimepicker9");
+            $('.datetimepicker9').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
         if ("<?php echo $donneesif['collationA']; ?>" != "")
         {
             $('[name="collationA"]').val("<?php echo $donneesif['collationA']; ?>");
             $('form #collationA').attr('readonly', true);
-            //mbola misy erreur
-            $('#collationA').datepicker("destroy");
+        }else{
+            $("#collationA").addClass("datetimepicker10");
+            $('.datetimepicker10').datetimepicker({
+                    language: 'fr',
+                    weekStart: 1,
+                    todayBtn: 1,
+                    format: "hh:ii",
+                    autoclose: 1,
+                    todayHighlight: 1,
+                    startView: 1,
+                    minView: 0,
+                    maxView: 1,
+                    forceParse: 0
+                });
         }
-
+        
 //rotation
 
         if ("<?php echo $donneesif['petitdejeunerRotation']; ?>" != "")
@@ -538,8 +659,7 @@ $donneesha = $reponseha->fetch();
         }
 
 
-//date ao am habitude alimentaire
-
+//tableau ao am habitude alimentaire
 
 <?php
 for ($i = 1; $i <= 9; $i++) {
