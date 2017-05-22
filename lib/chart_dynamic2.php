@@ -27,13 +27,13 @@
                                     strokeColor: \"rgba(240,240,0,0.6)\",
                                     highlightFill: \"rgba(255, 255, 40,0.7)\",
                                     highlightStroke: \"rgba(0,220, 0,0.4)\",
-                                    data: [Debit1, Debit2, Debit3, Debit4]
+                                    data: [Debit_1, Debit_2, Debit_3, Debit_4]
                                 }, {
                                     fillColor: \"rgba(255, 255, 0, 0.7 )\",
                                     strokeColor: \"rgba(255,255, 0,0.6)\",
                                     highlightFill:\"rgba(255, 255, 0,0.5)\",
                                     highlightStroke: \"rgba(255,255,0,0.4)\",
-                                    data: [Debit1N, Debit2N, Debit3N, Debit4N]
+                                    data: [Debit_N1, Debit_N2, Debit_N3, Debit_N4]
                                 }]
                         }
                         var barOptions = {
@@ -53,13 +53,13 @@
                                     strokeColor: \"rgba(240,240,0,0.6)\",
                                     highlightFill: \"rgba(255, 255, 40,0.7)\",
                                     highlightStroke: \"rgba(0,220, 0,0.4)\",
-                                    data: [Debit1, Debit2, Debit3, Debit4]
+                                    data: [Debit_1, Debit_2, Debit_3, Debit_4]
                                 }, {
                                     fillColor: \"rgba(255, 255, 0, 0.7 )\",
                                     strokeColor: \"rgba(255,255, 0,0.6)\",
                                     highlightFill:\"rgba(255, 255, 0,0.5)\",
                                     highlightStroke: \"rgba(255,255,0,0.4)\",
-                                    data: [Debit1N, Debit2N, Debit3N, Debit4N]
+                                    data: [Debit_N1, Debit_N2, Debit_N3, Debit_N4]
                                 }]
                         }
                         var barOptions = {
@@ -79,7 +79,7 @@
                                     strokeColor: \"rgba(240,240,0,0.6)\",
                                     highlightFill: \"rgba(255, 255, 40,0.7)\",
                                     highlightStroke: \"rgba(0,220, 0,0.4)\",
-                                    data: [Debit1, Debit2, Debit3, Debit4]
+                                    data: [Debit_1, Debit_2, Debit_3, Debit_4]
                                 },";
 	  							foreach ($datasets as $key => $value) {
 	  											echo $value;
@@ -89,7 +89,7 @@
                                     strokeColor: \"rgba(255,255, 0,0.6)\",
                                     highlightFill:\"rgba(255, 255, 0,0.5)\",
                                     highlightStroke: \"rgba(255,255,0,0.4)\",
-                                    data: [Debit1N, Debit2N, Debit3N, Debit4N]
+                                    data: [Debit_N1, Debit_N2, Debit_N3, Debit_N4]
                                 }]
 								}
 								var barOptions = {
