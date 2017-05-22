@@ -690,6 +690,7 @@
                 <script>
                     $(document).ready(function ()
                     {
+                        /*Date*/
 
                         <?php
                             for($h = 1 ; $h <= 4; $h ++){

@@ -28,202 +28,101 @@
 <script type="text/javascript">
     $(document).ready(function ()
     {
-        /*Manipulation de la pompe*/
+        /*Date Pose du cathéter*/
 
-        $('[name="cathdate1"]').val("<?php echo utf8_encode($poseducatheter['date1']); ?>");
-        $('[name="cathdate2"]').val("<?php echo utf8_encode($poseducatheter['date2']); ?>");
-        $('[name="cathdate3"]').val("<?php echo utf8_encode($poseducatheter['date3']); ?>");
-        $('[name="cathdate4"]').val("<?php echo utf8_encode($poseducatheter['date4']); ?>");
+        <?php
+            for($h = 1 ; $h <= 4; $h ++){
+                echo "
+                   if(\"".$poseducatheter["date".$h.""]."\" != '')
+                    {
+                        $('form #cathdate".$h."').attr('readonly', true);
+                        $('#cathdate".$h."').datepicker(\"destroy\");
+                    }\n
+                    ";
+            }
+        ?>
 
-        $('[name="cathselect1"]').val("<?php echo utf8_encode($poseducatheter['etat1']); ?>");
-        $('[name="cathselect2"]').val("<?php echo utf8_encode($poseducatheter['etat2']); ?>");
-        $('[name="cathselect3"]').val("<?php echo utf8_encode($poseducatheter['etat3']); ?>");
-        $('[name="cathselect4"]').val("<?php echo utf8_encode($poseducatheter['etat4']); ?>");
-        $('[name="cathcommentaire1"]').val("<?php echo utf8_encode($poseducatheter['commentaire1']); ?>");
+        /*Pose du cathéter*/
 
-        $('[name="cathselect5"]').val("<?php echo utf8_encode($poseducatheter['etat5']); ?>");
-        $('[name="cathselect6"]').val("<?php echo utf8_encode($poseducatheter['etat6']); ?>");
-        $('[name="cathselect7"]').val("<?php echo utf8_encode($poseducatheter['etat7']); ?>");
-        $('[name="cathselect8"]').val("<?php echo utf8_encode($poseducatheter['etat8']); ?>");
-        $('[name="cathcommentaire2"]').val("<?php echo utf8_encode($poseducatheter['commentaire2']); ?>");
+        <?php
+            for ($i = 1; $i<=44; $i++)
+            {  
+              echo "$('[name=\"cathselect".$i."\"]').val(\"".$poseducatheter['etat'.$i]."\");";
 
-        $('[name="cathselect9"]').val("<?php echo utf8_encode($poseducatheter['etat9']); ?>");
-        $('[name="cathselect10"]').val("<?php echo utf8_encode($poseducatheter['etat10']); ?>");
-        $('[name="cathselect11"]').val("<?php echo utf8_encode($poseducatheter['etat11']); ?>");
-        $('[name="cathselect12"]').val("<?php echo utf8_encode($poseducatheter['etat12']); ?>");
-        $('[name="cathcommentaire3"]').val("<?php echo utf8_encode($poseducatheter['commentaire3']); ?>");
+              echo "
+                   if(\"".$poseducatheter["etat".$i.""]."\" != '')
+                    {
+                        $('form #cathselect".$i."').attr('disabled', true);
+                    }
+                    ";
+            }
+        ?>
 
-        $('[name="cathselect13"]').val("<?php echo utf8_encode($poseducatheter['etat13']); ?>");
-        $('[name="cathselect14"]').val("<?php echo utf8_encode($poseducatheter['etat14']); ?>");
-        $('[name="cathselect15"]').val("<?php echo utf8_encode($poseducatheter['etat15']); ?>");
-        $('[name="cathselect16"]').val("<?php echo utf8_encode($poseducatheter['etat16']); ?>");
-        $('[name="cathcommentaire4"]').val("<?php echo utf8_encode($poseducatheter['commentaire4']); ?>");
+        /*Commentaires*/
 
-        $('[name="cathselect17"]').val("<?php echo utf8_encode($poseducatheter['etat17']); ?>");
-        $('[name="cathselect18"]').val("<?php echo utf8_encode($poseducatheter['etat18']); ?>");
-        $('[name="cathselect19"]').val("<?php echo utf8_encode($poseducatheter['etat19']); ?>");
-        $('[name="cathselect20"]').val("<?php echo utf8_encode($poseducatheter['etat20']); ?>");
-        $('[name="cathcommentaire5"]').val("<?php echo utf8_encode($poseducatheter['commentaire5']); ?>");
+        <?php
+            for ($k = 1; $k<=11; $k++)
+            {  
+              echo "$('[name=\"cathcommentaire".$k."\"]').val(\"".$poseducatheter['commentaire'.$k]."\");";
+            }
+        ?>
 
-        $('[name="cathselect21"]').val("<?php echo utf8_encode($poseducatheter['etat21']); ?>");
-        $('[name="cathselect22"]').val("<?php echo utf8_encode($poseducatheter['etat22']); ?>");
-        $('[name="cathselect23"]').val("<?php echo utf8_encode($poseducatheter['etat23']); ?>");
-        $('[name="cathselect24"]').val("<?php echo utf8_encode($poseducatheter['etat24']); ?>");
-        $('[name="cathcommentaire6"]').val("<?php echo utf8_encode($poseducatheter['commentaire6']); ?>");
+        /*Connaissances Options Radios*/
 
-        $('[name="cathselect25"]').val("<?php echo utf8_encode($poseducatheter['etat25']); ?>");
-        $('[name="cathselect26"]').val("<?php echo utf8_encode($poseducatheter['etat26']); ?>");
-        $('[name="cathselect27"]').val("<?php echo utf8_encode($poseducatheter['etat27']); ?>");
-        $('[name="cathselect28"]').val("<?php echo utf8_encode($poseducatheter['etat28']); ?>");
-        $('[name="cathcommentaire7"]').val("<?php echo utf8_encode($poseducatheter['commentaire7']); ?>");
+        <?php
+            for($m = 1 ; $m <= 14; $m ++)
+            {
+                $valn = ($m * 2) - 1;
+                $valn2 = $m * 2;
+                echo "
+                   if(\"".$connaissances["reponse".$m.""]."\" === 'Oui')
+                    {
+                        $('form #optionsRadios".$valn."').attr('checked', true);
+                    }
+                    else
+                    {
+                        $('form #optionsRadios".$valn2."').attr('checked', true);
+                    }
+                    ";
+            }
+        ?>
 
-        $('[name="cathselect29"]').val("<?php echo utf8_encode($poseducatheter['etat29']); ?>");
-        $('[name="cathselect211"]').val("<?php echo utf8_encode($poseducatheter['etat30']); ?>");
-        $('[name="cathselect212"]').val("<?php echo utf8_encode($poseducatheter['etat31']); ?>");
-        $('[name="cathselect213"]').val("<?php echo utf8_encode($poseducatheter['etat32']); ?>");
-        $('[name="cathcommentaire8"]').val("<?php echo utf8_encode($poseducatheter['commentaire8']); ?>");
+        /*Connaissances Observations*/
 
-        $('[name="cathselect214"]').val("<?php echo utf8_encode($poseducatheter['etat33']); ?>");
-        $('[name="cathselect215"]').val("<?php echo utf8_encode($poseducatheter['etat34']); ?>");
-        $('[name="cathselect216"]').val("<?php echo utf8_encode($poseducatheter['etat35']); ?>");
-        $('[name="cathselect217"]').val("<?php echo utf8_encode($poseducatheter['etat36']); ?>");
-        $('[name="cathcommentaire9"]').val("<?php echo utf8_encode($poseducatheter['commentaire9']); ?>");
+        <?php
+            for($j = 1 ; $j <= 9; $j ++)
+            {
+                echo "$('[name=\"cnsobservation".$j."\"]').val(\"".$connaissances['observation'.$j]."\");";
+            }
+        ?>
 
-        $('[name="cathselect218"]').val("<?php echo utf8_encode($poseducatheter['etat37']); ?>");
-        $('[name="cathselect219"]').val("<?php echo utf8_encode($poseducatheter['etat38']); ?>");
-        $('[name="cathselect221"]').val("<?php echo utf8_encode($poseducatheter['etat39']); ?>");
-        $('[name="cathselect222"]').val("<?php echo utf8_encode($poseducatheter['etat40']); ?>");
-        $('[name="cathcommentaire10"]').val("<?php echo utf8_encode($poseducatheter['commentaire10']); ?>");
+        /*Date Connaissance*/
 
-        $('[name="cathselect223"]').val("<?php echo utf8_encode($poseducatheter['etat41']); ?>");
-        $('[name="cathselect224"]').val("<?php echo utf8_encode($poseducatheter['etat42']); ?>");
-        $('[name="cathselect225"]').val("<?php echo utf8_encode($poseducatheter['etat43']); ?>");
-        $('[name="cathselect226"]').val("<?php echo utf8_encode($poseducatheter['etat44']); ?>");
-        $('[name="cathcommentaire11"]').val("<?php echo utf8_encode($poseducatheter['commentaire11']); ?>");
+        <?php
+            for($h = 1 ; $h <= 5; $h ++)
+            {
+                echo "$('[name=\"perempdate".$h."\"]').val(\"".$connaissances['date'.$h]."\");";
 
-        if ("<?php echo $connaissances['reponse1']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios1").attr("checked", true);
-        } else {
-            $("form #optionsRadios2").attr("checked", true);
-        }
+                echo "
+                   if(\"".$connaissances["date".$h.""]."\" != '')
+                    {
+                        $('form #perempdate".$h."').attr('readonly', true);
+                        $('#perempdate".$h."').datepicker(\"destroy\");
+                    }\n
+                    ";
+            }
+        ?>
 
-        if ("<?php echo $connaissances['reponse2']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios3").attr("checked", true);
-        } else {
-            $("form #optionsRadios4").attr("checked", true);
-        }
+        /*ASG Détail et observation*/
 
-        if ("<?php echo $connaissances['reponse3']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios5").attr("checked", true);
-        } else {
-            $("form #optionsRadios6").attr("checked", true);
-        }
+        <?php
+            for($l = 1 ; $l <= 4; $l ++)
+            {
+                echo "$('[name=\"asgdetail".$l."\"]').val(\"".$asg1['asgdetail'.$l]."\");";
 
-        if ("<?php echo $connaissances['reponse4']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios7").attr("checked", true);
-        } else {
-            $("form #optionsRadios8").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse5']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios9").attr("checked", true);
-        } else {
-            $("form #optionsRadios10").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse6']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios11").attr("checked", true);
-        } else {
-            $("form #optionsRadios12").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse7']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios13").attr("checked", true);
-        } else {
-            $("form #optionsRadios14").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse8']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios15").attr("checked", true);
-        } else {
-            $("form #optionsRadios16").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse9']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios17").attr("checked", true);
-        } else {
-            $("form #optionsRadios18").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse10']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios19").attr("checked", true);
-        } else {
-            $("form #optionsRadios20").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse11']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios21").attr("checked", true);
-        } else {
-            $("form #optionsRadios22").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse12']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios23").attr("checked", true);
-        } else {
-            $("form #optionsRadios24").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse13']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios25").attr("checked", true);
-        } else {
-            $("form #optionsRadios26").attr("checked", true);
-        }
-
-        if ("<?php echo $connaissances['reponse14']; ?>" === "Oui") 
-        {
-            $("form #optionsRadios27").attr("checked", true);
-        } else {
-            $("form #optionsRadios28").attr("checked", true);
-        }
-
-
-        $('[name="cnsobservation1"]').val("<?php echo utf8_encode($connaissances['observation1']); ?>");
-        $('[name="cnsobservation2"]').val("<?php echo utf8_encode($connaissances['observation2']); ?>");
-        $('[name="cnsobservation3"]').val("<?php echo utf8_encode($connaissances['observation3']); ?>");
-        $('[name="cnsobservation4"]').val("<?php echo utf8_encode($connaissances['observation4']); ?>");
-        $('[name="cnsobservation5"]').val("<?php echo utf8_encode($connaissances['observation5']); ?>");
-        $('[name="cnsobservation6"]').val("<?php echo utf8_encode($connaissances['observation6']); ?>");
-        $('[name="cnsobservation7"]').val("<?php echo utf8_encode($connaissances['observation7']); ?>");
-        $('[name="cnsobservation8"]').val("<?php echo utf8_encode($connaissances['observation8']); ?>");
-        $('[name="cnsobservation9"]').val("<?php echo utf8_encode($connaissances['observation9']); ?>");
-
-        $('[name="perempdate1"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
-        $('[name="perempdate2"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
-        $('[name="perempdate3"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
-        $('[name="perempdate4"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
-        $('[name="perempdate5"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
-
-        $('[name="asgdetail1"]').val("<?php echo utf8_encode($asg1['asgdetail1']); ?>");
-        $('[name="asgdetail2"]').val("<?php echo utf8_encode($asg1['asgdetail2']); ?>");
-        $('[name="asgdetail3"]').val("<?php echo utf8_encode($asg1['asgdetail3']); ?>");
-        $('[name="asgdetail4"]').val("<?php echo utf8_encode($asg1['asgdetail4']); ?>");
-        $('[name="asgobservation1"]').val("<?php echo utf8_encode($asg1['asgobservation1']); ?>");
-        $('[name="asgobservation2"]').val("<?php echo utf8_encode($asg1['asgobservation2']); ?>");
-        $('[name="asgobservation3"]').val("<?php echo utf8_encode($asg1['asgobservation3']); ?>");
-        $('[name="asgobservation4"]').val("<?php echo utf8_encode($asg1['asgobservation4']); ?>");
+                echo "$('[name=\"asgobservation".$l."\"]').val(\"".$asg1['asgobservation'.$l]."\");";
+            }
+        ?>
 
         $('[name="asgfrequence1"]').val("<?php echo utf8_encode($asg2['asgfrequence1']); ?>");
         $('[name="asgfrequence2"]').val("<?php echo utf8_encode($asg2['asgfrequence2']); ?>");
@@ -245,10 +144,10 @@
             <thead>
                 <tr>
                     <td style="text-align: center;">Etapes</td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate1" name="cathdate1" placeholder = "Date" value="<?php echo utf8_encode($poseducatheter['date1']); ?>"></td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate2" name="cathdate2" placeholder = "Date" value="<?php echo utf8_encode($poseducatheter['date2']); ?>"></td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate3" name="cathdate3" placeholder = "Date" value="<?php echo utf8_encode($poseducatheter['date3']); ?>"></td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate4" name="cathdate4" placeholder = "Date" value="<?php echo utf8_encode($poseducatheter['date4']); ?>"></td>
+                    <td><input type="text" class="form-control datepickerAll" id="cathdate1" name="cathdate1" placeholder = "Date"></td>
+                    <td><input type="text" class="form-control datepickerAll" id="cathdate2" name="cathdate2" placeholder = "Date"></td>
+                    <td><input type="text" class="form-control datepickerAll" id="cathdate3" name="cathdate3" placeholder = "Date"></td>
+                    <td><input type="text" class="form-control datepickerAll" id="cathdate4" name="cathdate4" placeholder = "Date"></td>
                     <td style="text-align: center;">Commentaire</td>
                 </tr>
             </thead>
@@ -487,21 +386,21 @@
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect211" name="cathselect211">                                 
+                        <select class="form-control" id="cathselect30" name="cathselect30">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect212" name="cathselect212">                                 
+                        <select class="form-control" id="cathselect31" name="cathselect31">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect213" name="cathselect213">                                 
+                        <select class="form-control" id="cathselect32" name="cathselect32">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
@@ -512,28 +411,28 @@
                 <tr>
                     <td>Contrôle glycémique 2h après la pose</td>
                     <td>
-                        <select class="form-control" id="cathselect214" name="cathselect214">                                 
+                        <select class="form-control" id="cathselect33" name="cathselect33">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect215" name="cathselect215">                                 
+                        <select class="form-control" id="cathselect34" name="cathselect34">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect216" name="cathselect216">                                 
+                        <select class="form-control" id="cathselect35" name="cathselect35">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect217" name="cathselect217">                                 
+                        <select class="form-control" id="cathselect36" name="cathselect36">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
@@ -544,28 +443,28 @@
                 <tr>
                     <td>Conservation de l'insuline</td>
                     <td>
-                        <select class="form-control" id="cathselect218" name="cathselect218">                                 
+                        <select class="form-control" id="cathselect37" name="cathselect37">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect219" name="cathselect219">                                 
+                        <select class="form-control" id="cathselect38" name="cathselect38">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect221" name="cathselect221">                                 
+                        <select class="form-control" id="cathselect39" name="cathselect39">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect222" name="cathselect222">                                 
+                        <select class="form-control" id="cathselect40" name="cathselect40">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
@@ -576,28 +475,28 @@
                 <tr>
                     <td>Fréquence de changement des cathéters</td>
                     <td>
-                        <select class="form-control" id="cathselect223" name="cathselect223">                                 
+                        <select class="form-control" id="cathselect41" name="cathselect41">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect224" name="cathselect224">                                 
+                        <select class="form-control" id="cathselect42" name="cathselect42">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect225" name="cathselect225">                                 
+                        <select class="form-control" id="cathselect43" name="cathselect43">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
                         </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect226" name="cathselect226">                                 
+                        <select class="form-control" id="cathselect44" name="cathselect44">                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
