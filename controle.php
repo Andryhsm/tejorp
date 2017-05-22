@@ -22,6 +22,7 @@ require './protection.php';
 
             .well
             {
+                //eto msolo black am pdf
                 background: rgba(10, 10, 10, 0.51);
                 min-height: 20px;
                 padding: 19px;
@@ -30,6 +31,11 @@ require './protection.php';
                 -webkit-box-shadow: inset 0 1px 1px rgba(233,101,25,.3);
                 box-shadow: inset 0 1px 1px rgba(233,101,25,.3);
             }
+
+            //ilaina am pdf 
+            /*            #slider label {
+                            color: black !important;
+                        }*/
 
             h4
             {
@@ -169,7 +175,7 @@ require './protection.php';
         </nav>
 
         <div class="container" style="margin-top: 80px;">
-            
+
             <div class="well">
                 <br><br><br><br>
                 <div id="slider"></div>
@@ -183,7 +189,9 @@ require './protection.php';
                             <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filtrer </button>
                         </div>
                     </div>
+
                     <div class="table-responsive">
+
                         <table class="table table-hover">
                             <thead>
                                 <tr class="filters">
@@ -206,23 +214,29 @@ require './protection.php';
                                     $b = true;
                                     ?>
 
-                                    <tr onClick="location = 'patient_controle.php?id=<?php echo($id); ?>'" style="cursor: pointer;">
-                                        <td style="width: 20%;"><?php echo $donnees['nompatient']; ?></td>
-                                        <td style="width: 20%;"><?php echo $donnees['prenompatient']; ?></td>
-                                        <td style="width: 40%;"><?php echo $donnees['adressepatient']; ?></td>
-                                        <td style="width: 20%;"><?php echo $donnees['mobilepatient']; ?></td>
-                                    </tr>
+                                    <tr onClick="loadcontrol('<?php echo $id; ?>')" style="cursor: pointer;">
 
-                                    <?php
-                                }
-                                if ($b == false) {
-                                    ?>
-                                    <tr>
-                                        <td colspan="4" class="text-center">Vous n'avez pas encore de patient</td>
-                                    </tr>
-                                    <?php
-                                }
+                                <form method="POST" action="./patient_controle.php" class="form-horizontal well" >
+                                    <input type="hidden" class="form-control" value="<?php echo $id; ?>" name="id" id="id">
+                                    <button type="submit" id="<?php echo $id; ?>" class="btn btn-success col-sm-12 hidden"> Tsindrio </button>
+                                </form>
+
+                                <td style="width: 20%;"><?php echo $donnees['nompatient']; ?></td>
+                                <td style="width: 20%;"><?php echo $donnees['prenompatient']; ?></td>
+                                <td style="width: 40%;"><?php echo $donnees['adressepatient']; ?></td>
+                                <td style="width: 20%;"><?php echo $donnees['mobilepatient']; ?></td>
+                                </tr>
+
+                                <?php
+                            }
+                            if ($b == false) {
                                 ?>
+                                <tr>
+                                    <td colspan="4" class="text-center">Vous n'avez pas encore de patient</td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
 
                             </tbody>
                             <tfoot>
@@ -395,6 +409,12 @@ require './protection.php';
                     }
                 });
             });
+        </script>
+        <script type="text/javascript">
+        function loadcontrol(id){
+//            alert(id);
+            $('#'+id+'').trigger('click');
+        }
         </script>
     </body>
 </html>

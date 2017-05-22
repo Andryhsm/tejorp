@@ -1557,7 +1557,7 @@ require 'cnx.php';
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-            Controle sur <?php $id = $_GET['id']; echo $id; ?></a>
+            Controle sur <?php $id = $_POST['id']; echo $id; ?></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
