@@ -3,7 +3,6 @@
     require './protection.php'; 
     require 'cnx.php';
 
-    session_start();
 ?>
 <!DOCTYPE html>
 
