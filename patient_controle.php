@@ -1555,11 +1555,13 @@ for ($i = 1; $i <= 9; $i++) {
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="#">
-                                Controle sur <?php
+
+                                Contrôle sur 
+                                <?php
                                     $id = $_POST['id'];
                                     $_SESSION['idPatient'] = $id;
                                     $p = explode("-", $id);
-                                    echo $p[0] . " " . $p[1];
+                                    echo $p[1] . " " . $p[0];
                                 ?>
                             </a>
                         </div>
