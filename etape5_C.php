@@ -54,7 +54,7 @@
               echo "
                    if(\"".$poseducatheter["etat".$i.""]."\" != '')
                     {
-                        $('form #cathselect".$i."').attr('disabled', true);
+                        $('form #cathselect".$i." option:not(:selected)').attr('disabled', true);
                     }
                     ";
             }
