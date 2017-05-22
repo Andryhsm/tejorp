@@ -395,7 +395,6 @@
                 });
 
                 $("#2").click(function () {
-                    alert("On doit grapher");
                      Debit_grapheHG();
                     $("#etape1").hide();
                     $("#etape2").show();
