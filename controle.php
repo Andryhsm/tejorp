@@ -84,7 +84,8 @@ session_start();
 
         <script src="./jquery/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="assets/js/Chart.min.js"></script>
+        <script type="text/javascript" src="assets/js/html2canvas.min.js"></script>
+        
         <script>
                 
             function capture_class(target) {
