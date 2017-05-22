@@ -78,28 +78,163 @@
         $('[name="cathcommentaire7"]').val("<?php echo utf8_encode($poseducatheter['commentaire7']); ?>");
 
         $('[name="cathselect29"]').val("<?php echo utf8_encode($poseducatheter['etat29']); ?>");
-        $('[name="cathselect211"]').val("<?php echo utf8_encode($poseducatheter['etat211']); ?>");
-        $('[name="cathselect212"]').val("<?php echo utf8_encode($poseducatheter['etat212']); ?>");
-        $('[name="cathselect213"]').val("<?php echo utf8_encode($poseducatheter['etat213']); ?>");
+        $('[name="cathselect211"]').val("<?php echo utf8_encode($poseducatheter['etat30']); ?>");
+        $('[name="cathselect212"]').val("<?php echo utf8_encode($poseducatheter['etat31']); ?>");
+        $('[name="cathselect213"]').val("<?php echo utf8_encode($poseducatheter['etat32']); ?>");
         $('[name="cathcommentaire8"]').val("<?php echo utf8_encode($poseducatheter['commentaire8']); ?>");
 
-        $('[name="cathselect214"]').val("<?php echo utf8_encode($poseducatheter['etat214']); ?>");
-        $('[name="cathselect215"]').val("<?php echo utf8_encode($poseducatheter['etat215']); ?>");
-        $('[name="cathselect216"]').val("<?php echo utf8_encode($poseducatheter['etat216']); ?>");
-        $('[name="cathselect217"]').val("<?php echo utf8_encode($poseducatheter['etat217']); ?>");
+        $('[name="cathselect214"]').val("<?php echo utf8_encode($poseducatheter['etat33']); ?>");
+        $('[name="cathselect215"]').val("<?php echo utf8_encode($poseducatheter['etat34']); ?>");
+        $('[name="cathselect216"]').val("<?php echo utf8_encode($poseducatheter['etat35']); ?>");
+        $('[name="cathselect217"]').val("<?php echo utf8_encode($poseducatheter['etat36']); ?>");
         $('[name="cathcommentaire9"]').val("<?php echo utf8_encode($poseducatheter['commentaire9']); ?>");
 
-        $('[name="cathselect218"]').val("<?php echo utf8_encode($poseducatheter['etat218']); ?>");
-        $('[name="cathselect219"]').val("<?php echo utf8_encode($poseducatheter['etat219']); ?>");
-        $('[name="cathselect221"]').val("<?php echo utf8_encode($poseducatheter['etat221']); ?>");
-        $('[name="cathselect222"]').val("<?php echo utf8_encode($poseducatheter['etat222']); ?>");
+        $('[name="cathselect218"]').val("<?php echo utf8_encode($poseducatheter['etat37']); ?>");
+        $('[name="cathselect219"]').val("<?php echo utf8_encode($poseducatheter['etat38']); ?>");
+        $('[name="cathselect221"]').val("<?php echo utf8_encode($poseducatheter['etat39']); ?>");
+        $('[name="cathselect222"]').val("<?php echo utf8_encode($poseducatheter['etat40']); ?>");
         $('[name="cathcommentaire10"]').val("<?php echo utf8_encode($poseducatheter['commentaire10']); ?>");
 
-        $('[name="cathselect223"]').val("<?php echo utf8_encode($poseducatheter['etat223']); ?>");
-        $('[name="cathselect224"]').val("<?php echo utf8_encode($poseducatheter['etat224']); ?>");
-        $('[name="cathselect225"]').val("<?php echo utf8_encode($poseducatheter['etat225']); ?>");
-        $('[name="cathselect226"]').val("<?php echo utf8_encode($poseducatheter['etat226']); ?>");
+        $('[name="cathselect223"]').val("<?php echo utf8_encode($poseducatheter['etat41']); ?>");
+        $('[name="cathselect224"]').val("<?php echo utf8_encode($poseducatheter['etat42']); ?>");
+        $('[name="cathselect225"]').val("<?php echo utf8_encode($poseducatheter['etat43']); ?>");
+        $('[name="cathselect226"]').val("<?php echo utf8_encode($poseducatheter['etat44']); ?>");
         $('[name="cathcommentaire11"]').val("<?php echo utf8_encode($poseducatheter['commentaire11']); ?>");
+
+        if ("<?php echo $connaissances['reponse1']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios1").attr("checked", true);
+        } else {
+            $("form #optionsRadios2").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse2']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios3").attr("checked", true);
+        } else {
+            $("form #optionsRadios4").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse3']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios5").attr("checked", true);
+        } else {
+            $("form #optionsRadios6").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse4']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios7").attr("checked", true);
+        } else {
+            $("form #optionsRadios8").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse5']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios9").attr("checked", true);
+        } else {
+            $("form #optionsRadios10").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse6']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios11").attr("checked", true);
+        } else {
+            $("form #optionsRadios12").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse7']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios13").attr("checked", true);
+        } else {
+            $("form #optionsRadios14").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse8']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios15").attr("checked", true);
+        } else {
+            $("form #optionsRadios16").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse9']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios17").attr("checked", true);
+        } else {
+            $("form #optionsRadios18").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse10']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios19").attr("checked", true);
+        } else {
+            $("form #optionsRadios20").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse11']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios21").attr("checked", true);
+        } else {
+            $("form #optionsRadios22").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse12']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios23").attr("checked", true);
+        } else {
+            $("form #optionsRadios24").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse13']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios25").attr("checked", true);
+        } else {
+            $("form #optionsRadios26").attr("checked", true);
+        }
+
+        if ("<?php echo $connaissances['reponse14']; ?>" === "Oui") 
+        {
+            $("form #optionsRadios27").attr("checked", true);
+        } else {
+            $("form #optionsRadios28").attr("checked", true);
+        }
+
+
+        $('[name="cnsobservation1"]').val("<?php echo utf8_encode($connaissances['observation1']); ?>");
+        $('[name="cnsobservation2"]').val("<?php echo utf8_encode($connaissances['observation2']); ?>");
+        $('[name="cnsobservation3"]').val("<?php echo utf8_encode($connaissances['observation3']); ?>");
+        $('[name="cnsobservation4"]').val("<?php echo utf8_encode($connaissances['observation4']); ?>");
+        $('[name="cnsobservation5"]').val("<?php echo utf8_encode($connaissances['observation5']); ?>");
+        $('[name="cnsobservation6"]').val("<?php echo utf8_encode($connaissances['observation6']); ?>");
+        $('[name="cnsobservation7"]').val("<?php echo utf8_encode($connaissances['observation7']); ?>");
+        $('[name="cnsobservation8"]').val("<?php echo utf8_encode($connaissances['observation8']); ?>");
+        $('[name="cnsobservation9"]').val("<?php echo utf8_encode($connaissances['observation9']); ?>");
+
+        $('[name="perempdate1"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
+        $('[name="perempdate2"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
+        $('[name="perempdate3"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
+        $('[name="perempdate4"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
+        $('[name="perempdate5"]').val("<?php echo utf8_encode($connaissances['date1']); ?>");
+
+        $('[name="asgdetail1"]').val("<?php echo utf8_encode($asg1['asgdetail1']); ?>");
+        $('[name="asgdetail2"]').val("<?php echo utf8_encode($asg1['asgdetail2']); ?>");
+        $('[name="asgdetail3"]').val("<?php echo utf8_encode($asg1['asgdetail3']); ?>");
+        $('[name="asgdetail4"]').val("<?php echo utf8_encode($asg1['asgdetail4']); ?>");
+        $('[name="asgobservation1"]').val("<?php echo utf8_encode($asg1['asgobservation1']); ?>");
+        $('[name="asgobservation2"]').val("<?php echo utf8_encode($asg1['asgobservation2']); ?>");
+        $('[name="asgobservation3"]').val("<?php echo utf8_encode($asg1['asgobservation3']); ?>");
+        $('[name="asgobservation4"]').val("<?php echo utf8_encode($asg1['asgobservation4']); ?>");
+
+        $('[name="asgfrequence1"]').val("<?php echo utf8_encode($asg2['asgfrequence1']); ?>");
+        $('[name="asgfrequence2"]').val("<?php echo utf8_encode($asg2['asgfrequence2']); ?>");
+        $('[name="asgcommentaire"]').val("<?php echo utf8_encode($asg2['asgcommentaire']); ?>");
+
+        if ("<?php echo $asg2['asgconnaissance']; ?>" === "Oui") 
+        {
+            $("form #asgconnaissance1").attr("checked", true);
+        } else {
+            $("form #asgconnaissance2").attr("checked", true);
+        }
     });
 </script>
 <div class ="container-fluid">
