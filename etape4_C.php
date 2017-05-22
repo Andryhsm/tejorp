@@ -245,19 +245,19 @@
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect291" id = "pmpselect291">                                 
+                                <select class="form-control" name = "pmpselect30" id = "pmpselect291">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect292" id = "pmpselect292">                                 
+                                <select class="form-control" name = "pmpselect31" id = "pmpselect292">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect293" id = "pmpselect293">                                 
+                                <select class="form-control" name = "pmpselect32" id = "pmpselect293">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
@@ -267,25 +267,25 @@
                         <tr>
                             <td>Programmer et arrêter le débit de base temporaire</td>
                             <td>
-                                <select class="form-control" name = "pmpselect294" id = "pmpselect294">                                 
+                                <select class="form-control" name = "pmpselect33" id = "pmpselect294">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect295" id = "pmpselect295">                                 
+                                <select class="form-control" name = "pmpselect34" id = "pmpselect295">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect296" id = "pmpselect296">                                 
+                                <select class="form-control" name = "pmpselect35" id = "pmpselect296">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect297" id = "pmpselect297">                                 
+                                <select class="form-control" name = "pmpselect36" id = "pmpselect297">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
@@ -312,9 +312,9 @@
                         <tr>
                             <td style="text-align: center;">Etapes</td>
                             <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate1']; ?>" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate2']; ?>" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate3']; ?>" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesalarme['alarmedate4']; ?>" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -535,9 +535,9 @@
                         <tr>
                             <td style="text-align: center;">Etapes</td>
                             <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date1']; ?>" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date2']; ?>" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date3']; ?>" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
+                            <td><input type="text" class="form-control datepickerAll" value="<?php echo $donneesmanip['date4']; ?>" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -686,104 +686,70 @@
                 </table>
 
     </fieldset>
-
+                <script type="text/javascript" src="test2.php"></script>
                 <script>
                     $(document).ready(function ()
                     {
+
+                        <?php
+                            for($h = 1 ; $h <= 4; $h ++){
+                                echo "
+                                   if(\"".$donneespmp["date".$h.""]."\" != '')
+                                    {
+                                        $('form #pmpdate".$h."').attr('readonly', true);
+                                        $('#pmpdate".$h."').datepicker(\"destroy\");
+                                    }\n
+                                    ";
+
+                                    echo "
+                                   if(\"".$donneesalarme["alarmedate".$h.""]."\" != '')
+                                    {
+                                        $('form #alarmedate".$h."').attr('readonly', true);
+                                        $('#alarmedate".$h."').datepicker(\"destroy\");
+                                    }\n
+                                    ";
+
+                                    echo "
+                                   if(\"".$donneesmanip["date".$h.""]."\" != '')
+                                    {
+                                        $('form #manipdate".$h."').attr('readonly', true);
+                                        $('#manipdate".$h."').datepicker(\"destroy\");
+                                    }\n
+                                    ";
+                            }
+                        ?>
+
                         /*Manipulation de la pompe*/
-                        $('[name="pmpselect1"]').val("<?php echo utf8_encode($donneespmp['etat1']); ?>");
-                        $('[name="pmpselect2"]').val("<?php echo utf8_encode($donneespmp['etat2']); ?>");
-                        $('[name="pmpselect3"]').val("<?php echo utf8_encode($donneespmp['etat3']); ?>");
-                        $('[name="pmpselect4"]').val("<?php echo utf8_encode($donneespmp['etat4']); ?>");
-                        $('[name="pmpselect5"]').val("<?php echo utf8_encode($donneespmp['etat5']); ?>");
-                        $('[name="pmpselect6"]').val("<?php echo utf8_encode($donneespmp['etat6']); ?>");
-                        $('[name="pmpselect7"]').val("<?php echo utf8_encode($donneespmp['etat7']); ?>");
-                        $('[name="pmpselect8"]').val("<?php echo utf8_encode($donneespmp['etat8']); ?>");
-                        $('[name="pmpselect9"]').val("<?php echo utf8_encode($donneespmp['etat9']); ?>");
-                        $('[name="pmpselect10"]').val("<?php echo utf8_encode($donneespmp['etat10']); ?>");
-                        $('[name="pmpselect11"]').val("<?php echo utf8_encode($donneespmp['etat11']); ?>");
-                        $('[name="pmpselect12"]').val("<?php echo utf8_encode($donneespmp['etat12']); ?>");
-                        $('[name="pmpselect13"]').val("<?php echo utf8_encode($donneespmp['etat13']); ?>");
-                        $('[name="pmpselect14"]').val("<?php echo utf8_encode($donneespmp['etat14']); ?>");
-                        $('[name="pmpselect15"]').val("<?php echo utf8_encode($donneespmp['etat15']); ?>");
-                        $('[name="pmpselect16"]').val("<?php echo utf8_encode($donneespmp['etat16']); ?>");
-                        $('[name="pmpselect17"]').val("<?php echo utf8_encode($donneespmp['etat17']); ?>");
-                        $('[name="pmpselect18"]').val("<?php echo utf8_encode($donneespmp['etat18']); ?>");
-                        $('[name="pmpselect19"]').val("<?php echo utf8_encode($donneespmp['etat19']); ?>");
-                        $('[name="pmpselect20"]').val("<?php echo utf8_encode($donneespmp['etat20']); ?>");
-                        $('[name="pmpselect21"]').val("<?php echo utf8_encode($donneespmp['etat21']); ?>");
-                        $('[name="pmpselect22"]').val("<?php echo utf8_encode($donneespmp['etat22']); ?>");
-                        $('[name="pmpselect23"]').val("<?php echo utf8_encode($donneespmp['etat23']); ?>");
-                        $('[name="pmpselect24"]').val("<?php echo utf8_encode($donneespmp['etat24']); ?>");
-                        $('[name="pmpselect25"]').val("<?php echo utf8_encode($donneespmp['etat25']); ?>");
-                        $('[name="pmpselect26"]').val("<?php echo utf8_encode($donneespmp['etat26']); ?>");
-                        $('[name="pmpselect27"]').val("<?php echo utf8_encode($donneespmp['etat27']); ?>");
-                        $('[name="pmpselect28"]').val("<?php echo utf8_encode($donneespmp['etat28']); ?>");
-                        $('[name="pmpselect29"]').val("<?php echo utf8_encode($donneespmp['etat29']); ?>");
-                        $('[name="pmpselect291"]').val("<?php echo utf8_encode($donneespmp['etat30']); ?>");
-                        $('[name="pmpselect292"]').val("<?php echo utf8_encode($donneespmp['etat31']); ?>");
-                        $('[name="pmpselect293"]').val("<?php echo utf8_encode($donneespmp['etat32']); ?>");
-                        $('[name="pmpselect294"]').val("<?php echo utf8_encode($donneespmp['etat33']); ?>");
-                        $('[name="pmpselect295"]').val("<?php echo utf8_encode($donneespmp['etat34']); ?>");
-                        $('[name="pmpselect296"]').val("<?php echo utf8_encode($donneespmp['etat35']); ?>");
-                        $('[name="pmpselect297"]').val("<?php echo utf8_encode($donneespmp['etat36']); ?>");
 
-                        $('[name="pmpautre"]').val("<?php echo utf8_encode($donneespmp['autre']); ?>");
-
+                        <?php
+                            for ($i = 1; $i<=36; $i++)
+                            {  
+                              echo "$('[name=\"pmpselect".$i."\"]').val(\"".$donneespmp['etat'.$i]."\");";
+                            }
+                        ?>
+                        
+                        $('[name="pmpautre"]').val("<?php echo utf8_encode($donneespmp['autre']); ?>"); 
+                    
                         /*Alarmes et précautions*/
 
-                        $('[name="alarmeselect1"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat1']); ?>");
-                        $('[name="alarmeselect2"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat2']); ?>");
-                        $('[name="alarmeselect3"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat3']); ?>");
-                        $('[name="alarmeselect4"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat4']); ?>");
-                        $('[name="alarmeselect5"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat5']); ?>");
-                        $('[name="alarmeselect6"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat6']); ?>");
-                        $('[name="alarmeselect7"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat7']); ?>");
-                        $('[name="alarmeselect8"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat8']); ?>");
-                        $('[name="alarmeselect9"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat9']); ?>");
-                        $('[name="alarmeselect10"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat10']); ?>");
-                        $('[name="alarmeselect11"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat11']); ?>");
-                        $('[name="alarmeselect12"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat12']); ?>");
-                        $('[name="alarmeselect13"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat13']); ?>");
-                        $('[name="alarmeselect14"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat14']); ?>");
-                        $('[name="alarmeselect15"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat15']); ?>");
-                        $('[name="alarmeselect16"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat16']); ?>");
-                        $('[name="alarmeselect17"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat17']); ?>");
-                        $('[name="alarmeselect18"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat18']); ?>");
-                        $('[name="alarmeselect19"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat19']); ?>");
-                        $('[name="alarmeselect20"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat20']); ?>");
-                        $('[name="alarmeselect21"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat21']); ?>");
-                        $('[name="alarmeselect22"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat22']); ?>");
-                        $('[name="alarmeselect23"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat23']); ?>");
-                        $('[name="alarmeselect24"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat24']); ?>");
-                        $('[name="alarmeselect25"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat25']); ?>");
-                        $('[name="alarmeselect26"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat26']); ?>");
-                        $('[name="alarmeselect27"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat27']); ?>");
-                        $('[name="alarmeselect28"]').val("<?php echo utf8_encode($donneesalarme['alarmeetat28']); ?>");
+                        <?php
+                            for ($i = 1; $i<=28; $i++)
+                            {  
+                              echo "$('[name=\"alarmeselect".$i."\"]').val(\"".$donneesalarme['alarmeetat'.$i]."\");";
+                            }
+                        ?>
 
                         $('[name="alarmeautre"]').val("<?php echo utf8_encode($donneesalarme['autre']); ?>");
 
                         /*Manipulations*/
-                        $('[name="manipselect1"]').val("<?php echo utf8_encode($donneesmanip['etat1']); ?>");
-                        $('[name="manipselect2"]').val("<?php echo utf8_encode($donneesmanip['etat2']); ?>");
-                        $('[name="manipselect3"]').val("<?php echo utf8_encode($donneesmanip['etat3']); ?>");
-                        $('[name="manipselect4"]').val("<?php echo utf8_encode($donneesmanip['etat4']); ?>");
-                        $('[name="manipselect5"]').val("<?php echo utf8_encode($donneesmanip['etat5']); ?>");
-                        $('[name="manipselect6"]').val("<?php echo utf8_encode($donneesmanip['etat6']); ?>");
-                        $('[name="manipselect7"]').val("<?php echo utf8_encode($donneesmanip['etat7']); ?>");
-                        $('[name="manipselect8"]').val("<?php echo utf8_encode($donneesmanip['etat8']); ?>");
-                        $('[name="manipselect9"]').val("<?php echo utf8_encode($donneesmanip['etat9']); ?>");
-                        $('[name="manipselect10"]').val("<?php echo utf8_encode($donneesmanip['etat10']); ?>");
-                        $('[name="manipselect11"]').val("<?php echo utf8_encode($donneesmanip['etat11']); ?>");
-                        $('[name="manipselect12"]').val("<?php echo utf8_encode($donneesmanip['etat12']); ?>");
-                        $('[name="manipselect13"]').val("<?php echo utf8_encode($donneesmanip['etat13']); ?>");
-                        $('[name="manipselect14"]').val("<?php echo utf8_encode($donneesmanip['etat14']); ?>");
-                        $('[name="manipselect15"]').val("<?php echo utf8_encode($donneesmanip['etat15']); ?>");
-                        $('[name="manipselect16"]').val("<?php echo utf8_encode($donneesmanip['etat16']); ?>");
-                        $('[name="manipselect17"]').val("<?php echo utf8_encode($donneesmanip['etat17']); ?>");
-                        $('[name="manipselect18"]').val("<?php echo utf8_encode($donneesmanip['etat18']); ?>");
-                        $('[name="manipselect19"]').val("<?php echo utf8_encode($donneesmanip['etat19']); ?>");
-                        $('[name="manipselect20"]').val("<?php echo utf8_encode($donneesmanip['etat20']); ?>");
+
+                        <?php
+                            for ($i = 1; $i<=20; $i++)
+                            {  
+                              echo "$('[name=\"manipselect".$i."\"]').val(\"".$donneesmanip['etat'.$i]."\");";
+                            }
+                        ?>
+
                     });
                 </script>
 

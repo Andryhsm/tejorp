@@ -62,21 +62,21 @@
             </div>
         </div>
         <div class="col-lg-10">
-            <div class="checkbox">
+            <div class="radio">
                 <label>
-                    <input type="checkbox" value="rougeur" name="rougeur">
+                    <input type="radio" value="rougeur" name="rougeur">
                     : Rougeur /
                 </label>
                 <label>
-                    <input type="checkbox" value="lypodystrophie" name="rougeur">
+                    <input type="radio" value="douleur" name="rougeur">
                     : Douleur /
                 </label>
                 <label>
-                    <input type="checkbox" value="lypodystrophie" name="rougeur">
+                    <input type="radio" value="inflammation" name="rougeur">
                     : Inflammation /
                 </label>
                 <label>
-                    <input type="checkbox" value="lypodystrophie" name="rougeur">
+                    <input type="radio" value="lypodystrophie" name="rougeur">
                     : Lypodystrophie 
                 </label>
             </div>
