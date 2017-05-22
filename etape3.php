@@ -102,40 +102,40 @@
                        <tbody>
                             <tr>
                                 <td>Petit déjeuner</td>
-                                <td><input type="time" class="form-control datetimepicker" name="petitdejeunerDe" id="petitdejeunerDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="petitdejeunerA" id="petitdejeunerA"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="petitdejeunerDe" id="petitdejeunerDe"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="petitdejeunerA" id="petitdejeunerA"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerRotation" id="petitdejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerObjectif" id="petitdejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerSensibilite" id="petitdejeunerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Déjeuner</td>
-                                <td><input type="time" class="form-control datetimepicker" name="dejeunerDe" id="dejeunerDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="dejeunerA" id="dejeunerA"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="dejeunerDe" id="dejeunerDe"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="dejeunerA" id="dejeunerA"></td>
                                 <td><input type="text" class="form-control" name="dejeunerRotation" id="dejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="dejeunerObjectif" id="dejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dejeunerSensibilite" id="dejeunerSensibilite"></td> 
                             </tr>
                             <tr>
                                 <td>Goûter</td>
-                                <td><input type="time" class="form-control datetimepicker" name="gouterDe" id="gouterDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="gouterA" id="gouterA"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="gouterDe" id="gouterDe"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="gouterA" id="gouterA"></td>
                                 <td><input type="text" class="form-control" name="gouterRotation" id="gouterRotation"></td>
                                 <td><input type="text" class="form-control" name="gouterObjectif" id="gouterObjectif"></td>
                                 <td><input type="text" class="form-control" name="gouterSensibilite" id="gouterSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Dîner</td>
-                                <td><input type="time" class="form-control datetimepicker" name="dinerDe" id="dinerDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="dinerA" id="dinerA"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="dinerDe" id="dinerDe"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="dinerA" id="dinerA"></td>
                                 <td><input type="text" class="form-control" name="dinerRotation" id="dinerRotation"></td>
                                 <td><input type="text" class="form-control" name="dinerObjectif" id="dinerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dinerSensibilite" id="dinerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Collation</td>
-                                <td><input type="time" class="form-control datetimepicker" name="collationDe" id="collationDe"></td>
-                                <td><input type="time" class="form-control datetimepicker" name="collationA" id="collationA"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="collationDe" id="collationDe"></td>
+                                <td><input type="time" class="form-control datetimepickery" name="collationA" id="collationA"></td>
                                 <td><input type="text" class="form-control" name="collationRotation" id="collationRotation"></td>
                                 <td><input type="text" class="form-control" name="collationObjectif" id="collationObjectif"></td>
                                 <td><input type="text" class="form-control" name="collationSensibilite" id="collationSensibilite"></td>
