@@ -54,17 +54,17 @@
 			if(($val = intval($k)) > $limit){
 				if($val == $deb){
 					  echo  "<tr>
-	                            <td><input type='text' class='form-control datetimepicker' name='Horaire".$plus."".$inc_h."' id='Horaire".$plus."".$inc_h."'></td>
-	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 1)."' id='Horaire".$plus."".($inc_h + 1)."' class='form-control datetimepicker' ></td>                            
+	                            <td><input type='text' class='form-control datetimepickery' name='Horaire".$plus."".$inc_h."' id='Horaire".$plus."".$inc_h."'></td>
+	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 1)."' id='Horaire".$plus."".($inc_h + 1)."' class='form-control datetimepickery' ></td>                            
 	                            <td><input type='number' class='form-control' name='Debit".$plus."".$val."' id='Debit".$plus."".$val."'></td>
-	                            <td><input type='text' class='form-control datetimepicker' name='Horaire".$plus."".($inc_h + 2)."' id='Horaire".$plus."".($inc_h + 2)."'></td>
-	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 3)."' id='Horaire".$plus."".($inc_h + 3)."'class='form-control datetimepicker' ></td>
+	                            <td><input type='text' class='form-control datetimepickery' name='Horaire".$plus."".($inc_h + 2)."' id='Horaire".$plus."".($inc_h + 2)."'></td>
+	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 3)."' id='Horaire".$plus."".($inc_h + 3)."'class='form-control datetimepickery' ></td>
 	                            <td><input type='number' class='form-control' name='Debit".$plus."".($val + 1)."' id='Debit".$plus."".($val + 1)."'></td>
-	                            <td><input type='text' class='form-control datetimepicker' name='Horaire".$plus."".($inc_h + 4)."' id='Horaire".$plus."".($inc_h + 4)."'></td>
-	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 5)."' id='Horaire".$plus."".($inc_h + 5)."'class='form-control datetimepicker' ></td>
+	                            <td><input type='text' class='form-control datetimepickery' name='Horaire".$plus."".($inc_h + 4)."' id='Horaire".$plus."".($inc_h + 4)."'></td>
+	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 5)."' id='Horaire".$plus."".($inc_h + 5)."'class='form-control datetimepickery' ></td>
 	                            <td><input type='number' class='form-control' name='Debit".$plus."".($val + 2)."' id='Debit".$plus."".($val + 2)."'></td>
-	                            <td><input type='text' class='form-control datetimepicker' name='Horaire".$plus."".($inc_h + 6)."' id='Horaire".$plus."".($inc_h + 6)."'></td>
-	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 7)."' id='Horaire".$plus."".($inc_h + 7)."' class='form-control datetimepicker'></td>
+	                            <td><input type='text' class='form-control datetimepickery' name='Horaire".$plus."".($inc_h + 6)."' id='Horaire".$plus."".($inc_h + 6)."'></td>
+	                            <td><input type='text' name='Horaire".$plus."".($inc_h + 7)."' id='Horaire".$plus."".($inc_h + 7)."' class='form-control datetimepickery'></td>
 	                            <td><input type='number' class='form-control' name='Debit".$plus."".($val + 3)."' id='Debit".$plus."".($val + 3)."'></td>
 	                        </tr>";
 					$deb += 4 ;
