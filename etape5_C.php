@@ -60,7 +60,7 @@
             }
         ?>
 
-        /*Commentaires*/
+        /*Commentaires*/ 
 
         <?php
             for ($k = 1; $k<=11; $k++)
