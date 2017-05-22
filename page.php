@@ -338,7 +338,7 @@
                     todayBtn: true
                 });
 
-                $('.datetimepicker').datetimepicker({
+                $('.datetimepickery').datetimepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
@@ -395,7 +395,6 @@
                 });
 
                 $("#2").click(function () {
-                    alert("On doit grapher");
                      Debit_grapheHG();
                     $("#etape1").hide();
                     $("#etape2").show();

@@ -500,7 +500,7 @@ if ($statut == "Médecin traitant") {
             <label for="img" class="col-sm-4 control-label">Pompe :</label>
             <div class="col-sm-7">
                 <select id="webmenu" class="form-control" name="Pompe">
-                    <option value="" selected disabled hidden>---- Choisir la pompe ----</option>
+                    <option value="" selected hidden>---- Choisir la pompe ----</option>
                         <option disabled>Laboratoire MEDTRONIC</option>
                             <option value="Paradigm véo série 5 noir" data-image="img/paradigm_veo_serie5_noir.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 noir</option>
                             <option value="Paradigm véo série 5 gris" data-image="img/paradigm_veo_serie5.png">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 gris</option>
@@ -569,7 +569,7 @@ if ($statut == "Médecin traitant") {
                     <div class="col-sm-7">
                         <!-- <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele"> -->
                         <select name="modele" class="form-control" id="modelecatheter1">
-                            <option value="" selected disabled hidden>---- Choisir le modèle de Cathéter ----</option>
+                            <option value="" selected hidden>---- Choisir le modèle de Cathéter ----</option>
                             <optgroup label="Laboratoire MEDTRONIC">
                                 <option value="Réservoir Medtronic 1,8ml">Réservoir Medtronic 1,8ml</option>
                                 <option value="Réservoir Medtronic 3ml">Réservoir Medtronic 3ml</option>
@@ -646,7 +646,7 @@ if ($statut == "Médecin traitant") {
                         <!-- <input type="text" placeholder="Modèle" class="form-control" name="modele2" id="modele2">
                     </div> -->
                         <select name="modele2" class="form-control" id="modelecatheter2">
-                            <option value="" selected disabled hidden>---- Choisir le modèle de Cathéter ----</option>
+                            <option value="" selected hidden>---- Choisir le modèle de Cathéter ----</option>
                             <optgroup label="Laboratoire MEDTRONIC">
                                 <option value="Réservoir Medtronic 1,8ml">Réservoir Medtronic 1,8ml</option>
                                 <option value="Réservoir Medtronic 3ml">Réservoir Medtronic 3ml</option>
@@ -727,7 +727,7 @@ if ($statut == "Médecin traitant") {
             <label for="reservoir" class="col-sm-4 control-label">Réservoir:</label>
             <div class="col-sm-7">
                 <select name="reservoir" class="form-control" id="reservoir">
-                    <option value="" selected disabled hidden>---- Choisir le modèle de Réservoir ----</option>
+                    <option value="" selected hidden>---- Choisir le modèle de Réservoir ----</option>
                             <optgroup label="Laboratoire MEDTRONIC">
                                 <option value="QUICKSET Connexion Luer Lock">QUICKSET Connexion Luer Lock</option>
                                 <option value="QUICKSET Connexion Paradigm">QUICKSET Connexion Paradigm</option>

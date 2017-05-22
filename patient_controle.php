@@ -1,8 +1,9 @@
-<?php
-require './protection.php';
-require 'cnx.php';
-?>
 
+<?php 
+    require './protection.php'; 
+    require 'cnx.php';
+
+?>
 <!DOCTYPE html>
 
 <html>
@@ -336,7 +337,7 @@ require 'cnx.php';
                     todayBtn: true
                 });
 
-                $('.datetimepicker').datetimepicker({
+                $('.datetimepickery').datetimepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
@@ -1554,6 +1555,7 @@ for ($i = 1; $i <= 9; $i++) {
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="#">
+
                                 Contrôle sur 
                                 <?php
                                     $id = $_POST['id'];

@@ -10,7 +10,8 @@ $observation = (htmlentities(addslashes($_POST["observation"]), ENT_NOQUOTES,'UT
 $hygienealimentaire = (htmlentities(addslashes($_POST["hygienealimentaire"]), ENT_NOQUOTES,'UTF-8', true));
 $stabilitehoraires = (htmlentities(addslashes($_POST["stabilitehoraires"]), ENT_NOQUOTES,'UTF-8', true));
 $details = (htmlentities(addslashes($_POST["details"]), ENT_NOQUOTES,'UTF-8', true));
-$environnement = (htmlentities(addslashes($_POST["rougeur"]), ENT_NOQUOTES,'UTF-8', true));
+//eto
+$environnement = $_POST["rougeur"];
 $etatcutane = (htmlentities(addslashes($_POST["etatcutane"]), ENT_NOQUOTES,'UTF-8', true));
 $choixpoint = (htmlentities(addslashes($_POST["choixpoint"]), ENT_NOQUOTES,'UTF-8', true));
 $regime = (htmlentities(addslashes($_POST["regime"]), ENT_NOQUOTES,'UTF-8', true));

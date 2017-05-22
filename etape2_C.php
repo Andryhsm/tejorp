@@ -333,16 +333,16 @@
                     <tbody id="contentBasal1">
                         <tr>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire1" id="Horaire1"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire1" id="Horaire1"></td>
                             <td><input type="number" class="form-control" name="Debit1" id="Debit1"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire2" id="Horaire2"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire2" id="Horaire2"></td>
                             <td><input type="number" class="form-control" name="Debit2" id="Debit2"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire3" id="Horaire3"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire3" id="Horaire3"></td>
                             <td><input type="number" class="form-control" name="Debit3" id="Debit3"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire4" id="Horaire4"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire4" id="Horaire4"></td>
                             <td><input type="number" class="form-control" name="Debit4" id="Debit4"></td>
                         </tr>
 
@@ -350,16 +350,16 @@
                             print_data($Debits1);
                         ?>
                         <tr  id="ligne4">
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire1N" id="Horaire1N"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire1N" id="Horaire1N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>                            
                             <td><input type="number" class="form-control" name="Debit1N" id="Debit1N"></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire2N" id="Horaire2N"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire2N" id="Horaire2N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit2N" id="Debit2N"></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire3N" id="Horaire3N"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire3N" id="Horaire3N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit3N" id="Debit3N"></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire4N" id="Horaire4N"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire4N" id="Horaire4N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit4N" id="Debit4N"></td>
                         </tr>
@@ -425,16 +425,16 @@
                     <tbody id="contentBasal2">
                         <tr>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire_1" id="Horaire_1"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire_1" id="Horaire_1"></td>
                             <td><input type="number" class="form-control" name="Debit_1" id="Debit_1"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire_2" id="Horaire_2"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire_2" id="Horaire_2"></td>
                             <td><input type="number" class="form-control" name="Debit_2" id="Debit_2"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire_3" id="Horaire_3"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire_3" id="Horaire_3"></td>
                             <td><input type="number" class="form-control" name="Debit_3" id="Debit_3"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire_4" id="Horaire_4"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire_4" id="Horaire_4"></td>
                             <td><input type="number" class="form-control" name="Debit_4" id="Debit_4"></td>
                         </tr>
 
@@ -443,16 +443,16 @@
                         ?>
 
                         <tr id="ligne24">
-                            <td><input type="text" class="form-control datetimepicker"  name="Horaire_N1" id="Horaire_N1"></td>
+                            <td><input type="text" class="form-control datetimepickery"  name="Horaire_N1" id="Horaire_N1"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N1" id="Debit_N1"></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire_N2" id="Horaire_N2"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire_N2" id="Horaire_N2"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N2" id="Debit_N2"></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire_N3" id="Horaire_N3"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire_N3" id="Horaire_N3"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N3" id="Debit_N3"></td>
-                            <td><input type="text" class="form-control datetimepicker" name="Horaire_N4" id="Horaire_N4"></td>
+                            <td><input type="text" class="form-control datetimepickery" name="Horaire_N4" id="Horaire_N4"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N4" id="Debit_N4"></td>
                         </tr>
@@ -816,30 +816,40 @@
 <script id="chart" type="text/javascript"></script>
 <script id="chart2" type="text/javascript"></script>
 <script language="javascript">
-    $(document).ready(function () {
+    <?php
+        echo "var idPatient = '".$_SESSION["idPatient"]."';";
+        echo "var idPrescripteur = '".$_SESSION["id"]."';";
+    ?>
+
+    $(document).ready(function (){
         $.ajax({
-            url: 'lib/chart_dynamic.php',
+            url: 'lib/chart_dynamic_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             success: function (data) {
                 $("#chart").html(data);
             },
-            error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic.php");
+            error: function (xhr) {
+                alert("Erreur de chargement de lib/chart_dynamic_.php");
+                console.log(xhr);
             }
         });
         $.ajax({
-            url: 'lib/chart_dynamic2.php',
+            url: 'lib/chart_dynamic2_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             success: function (data) {
                 $("#chart2").html(data);
             },
             error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic2.php");
+                alert("Erreur de chargement de lib/chart_dynamic2_.php");
             }
         });
     });</script>
 <script type="text/javascript">
-    var i = 0, inc = 4, incD = 4, len = 0, content = "", len2, name;
+    var len_basal = $("#contentBasal1").children().length;
+    var basals = ((len_basal - 1) * 4) ;
+        
+    var i = 0, inc = 4, incD = basals, len = 0, content = "", len2, name;
+
     $('#btnAdd').click(function (e)
     {
         e.preventDefault();
@@ -882,14 +892,14 @@
         var dataD = JSON.stringify(arr_Debit);
         var dataH = JSON.stringify(arr_Horaire);
         $.ajax({
-            url: 'lib/chart_dynamic.php',
+            url: 'lib/chart_dynamic_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             data: {dataD: dataD, dataH: dataH},
             success: function (data) {
                 $("#chart").html(data);
             },
             error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic.php");
+                alert("Erreur de chargement de lib/chart_dynamic_.php");
             }
         });
         Debit_graphe1();
@@ -909,7 +919,10 @@
         });
     });</script>
 <script type="text/javascript">
-    var m = 0, inc2 = 4, incD2 = 4, len_ = 0, content = "", len_2, name_;
+    var len_basal2 = $("#contentBasal2").children().length;
+    var basals2 = ((len_basal2 - 1) * 4) ;
+    
+    var m = 0, inc2 = 4, incD2 = basals2, len_ = 0, content = "", len_2, name_;
     $('#btnAdd2').click(function (e)
     {
         e.preventDefault();
@@ -964,7 +977,7 @@
         var dataD = JSON.stringify(arr_Debit2);
         var dataH = JSON.stringify(arr_Horaire2);
         $.ajax({
-            url: 'lib/chart_dynamic2.php',
+            url: 'lib/chart_dynamic2_.php?idPatient='+idPatient+"&idPrescripteur="+idPrescripteur,
             type: 'POST',
             data: {dataD: dataD, dataH: dataH},
             success: function (data) {
@@ -972,7 +985,7 @@
                 //alert(data);
             },
             error: function () {
-                alert("Erreur de chargement de lib/chart_dynamic2.php");
+                alert("Erreur de chargement de lib/chart_dynamic2_.php");
             }
         });
         console.log(arr_Horaire2);
