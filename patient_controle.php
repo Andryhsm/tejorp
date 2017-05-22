@@ -1,11 +1,10 @@
+
 <?php 
     require './protection.php'; 
     require 'cnx.php';
 
     session_start();
-
 ?>
-
 <!DOCTYPE html>
 
 <html>
@@ -1558,11 +1557,11 @@ for ($i = 1; $i <= 9; $i++) {
                             </button>
                             <a class="navbar-brand" href="#">
                                 Controle sur <?php
-                                        $id = $_POST['id'];
-                                        $_SESSION["idPatient"] = $id;
-                                        $p = explode("-", $id);
-                                        echo $p[0] . " " . $p[1];
-                                ?>
+$id = $_POST['id'];
+$_SESSION['idPatient'] = $id;
+$p = explode("-", $id);
+echo $p[0] . " " . $p[1];
+?>
                             </a>
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
