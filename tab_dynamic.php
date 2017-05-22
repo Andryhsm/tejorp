@@ -2,8 +2,12 @@
 	
 	require "cnx.php";
 
+	$idPatient = $_SESSION["idPatient"];
+	$idPrescripteur = $_SESSION["id"];
 	
-	$query = $bdd->query("SELECT * FROM `donnemedicale`") or die (print_r($bdd->errorInfo()));
+  	$query = $bdd->query("SELECT * FROM `donnemedicale` WHERE idPatient=\"".$idPatient."\" AND idPrescripteur=\"".$idPrescripteur."\"") or die (print_r($bdd->errorInfo()));
+
+
 
 	$Debits1 = array();
 	$val1 = array();
@@ -14,6 +18,7 @@
 	while($data = $query->fetchAll(PDO::FETCH_ASSOC)){
 		$datas[] = $data;
 	}
+
 	$i = 0;
 	$j = 0;
 
@@ -71,7 +76,6 @@
 		}
 	}
 ?>
-	
-     
+        
 	
 	
