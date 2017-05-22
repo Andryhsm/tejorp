@@ -245,19 +245,19 @@
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect30" id = "pmpselect291">                                 
+                                <select class="form-control" name = "pmpselect30" id = "pmpselect30">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect31" id = "pmpselect292">                                 
+                                <select class="form-control" name = "pmpselect31" id = "pmpselect31">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect32" id = "pmpselect293">                                 
+                                <select class="form-control" name = "pmpselect32" id = "pmpselect32">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
@@ -267,25 +267,25 @@
                         <tr>
                             <td>Programmer et arrêter le débit de base temporaire</td>
                             <td>
-                                <select class="form-control" name = "pmpselect33" id = "pmpselect294">                                 
+                                <select class="form-control" name = "pmpselect33" id = "pmpselect33">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect34" id = "pmpselect295">                                 
+                                <select class="form-control" name = "pmpselect34" id = "pmpselect34">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect35" id = "pmpselect296">                                 
+                                <select class="form-control" name = "pmpselect35" id = "pmpselect35">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
                             </td>
                             <td>
-                                <select class="form-control" name = "pmpselect36" id = "pmpselect297">                                 
+                                <select class="form-control" name = "pmpselect36" id = "pmpselect36">                                 
                                     <option value="acquis">Acquis</option>
                                     <option value="en cours">En cours d'acquisition</option>
                                     <option value="non acquis">Non acquis</option>
@@ -686,7 +686,7 @@
                 </table>
 
     </fieldset>
-                <script type="text/javascript" src="test2.php"></script>
+                 
                 <script>
                     $(document).ready(function ()
                     {
@@ -725,6 +725,13 @@
                             for ($i = 1; $i<=36; $i++)
                             {  
                               echo "$('[name=\"pmpselect".$i."\"]').val(\"".$donneespmp['etat'.$i]."\");";
+
+                              echo "
+                                   if(\"".$donneespmp["etat".$i.""]."\" != '')
+                                    {
+                                        $('form #pmpselect".$i."').attr('disabled', true);
+                                    }
+                                    ";
                             }
                         ?>
                         
@@ -736,6 +743,13 @@
                             for ($i = 1; $i<=28; $i++)
                             {  
                               echo "$('[name=\"alarmeselect".$i."\"]').val(\"".$donneesalarme['alarmeetat'.$i]."\");";
+
+                              echo "
+                                   if(\"".$donneesalarme["alarmeetat".$i.""]."\" != '')
+                                    {
+                                        $('form #alarmeselect".$i."').attr('disabled', true);
+                                    }
+                                    ";
                             }
                         ?>
 
@@ -747,6 +761,13 @@
                             for ($i = 1; $i<=20; $i++)
                             {  
                               echo "$('[name=\"manipselect".$i."\"]').val(\"".$donneesmanip['etat'.$i]."\");";
+
+                              echo "
+                                   if(\"".$donneesmanip["etat".$i.""]."\" != '')
+                                    {
+                                        $('form #manipselect".$i."').attr('disabled', true);
+                                    }
+                                    ";
                             }
                         ?>
 
