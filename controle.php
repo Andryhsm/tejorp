@@ -1,7 +1,6 @@
 
 <?php
 require './protection.php';
-session_start();
 ?>
 
 <!DOCTYPE html>
@@ -88,28 +87,28 @@ session_start();
         
         <script>
                 
-            function capture_class(target) {
-                    var scrolL = $('html,body').scrollTop();
-                    var capture = {};
-                    var trg = $('.' + target);
-                    
-                    <?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
-
-                    html2canvas(trg, {
-                        onrendered: function (canvas) {
-                            capture.img = canvas.toDataURL("image/png");
-                            capture.data = {'image': capture.img, 'id': id};
-                            $.ajax({
-                                url: "pdf/ajax.php",
-                                data: capture.data,
-                                type: 'post',
-                                success: function (result) {
-                                        alert("kmlklmfkdlkfldkfd");
-                                }       
-                            });
-                        }
-                    });
-            }
+//            function capture_class(target) {
+//                    var scrolL = $('html,body').scrollTop();
+//                    var capture = {};
+//                    var trg = $('.' + target);
+//                    
+//                    <?php // echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+//
+//                    html2canvas(trg, {
+//                        onrendered: function (canvas) {
+//                            capture.img = canvas.toDataURL("image/png");
+//                            capture.data = {'image': capture.img, 'id': id};
+//                            $.ajax({
+//                                url: "pdf/ajax.php",
+//                                data: capture.data,
+//                                type: 'post',
+//                                success: function (result) {
+//                                        alert("kmlklmfkdlkfldkfd");
+//                                }       
+//                            });
+//                        }
+//                    });
+//            }
 
             $(function () {
                 $("#slider").slider({
