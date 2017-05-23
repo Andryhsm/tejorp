@@ -1559,6 +1559,7 @@ for ($i = 1; $i <= 9; $i++) {
                                 Contrôle sur 
                                 <?php
                                     $id = $_POST['id'];
+                                    $_SESSION['idPatient'] = $id;
                                     $p = explode("-", $id);
                                     echo $p[1] . " " . $p[0];
                                 ?>
@@ -1805,27 +1806,6 @@ for ($i = 1; $i <= 9; $i++) {
                                 success: function (result) {
 
                                 }
-                            });
-                        }
-                    });
-                }
-
-                function capture_class(target) {
-                    var scrolL = $('html,body').scrollTop();
-                    var capture = {};
-                    var trg = $('.' + target);
-                    <?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
-                    html2canvas(trg, {
-                        onrendered: function (canvas) {
-                            capture.img = canvas.toDataURL("image/png");
-                            capture.data = {'image': capture.img, 'id': id};
-                            $.ajax({
-                                url: "pdf/ajax.php",
-                                data: capture.data,
-                                type: 'post',
-                                success: function (result) {
-                                        alert("kmlklmfkdlkfldkfd");
-                                }       
                             });
                         }
                     });
