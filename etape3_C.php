@@ -176,8 +176,8 @@ $donneesha = $reponseha->fetch();
         <label for="observation2">Observation :  </label>
         <textarea readonly="" rows="3" type="text" name="observation2" class="form-control" id="" placeholder="observation"><?php echo $donneesha['observation2']; ?></textarea>
         <br>
-        <label for="survenue">Survenue de compilations :  </label>
-        <textarea readonly="" rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de compilations"><?php echo $donneesha['survenue']; ?></textarea>
+        <label for="survenue">Survenue de complications :  </label>
+        <textarea readonly="" rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de complications"><?php echo $donneesha['survenue']; ?></textarea>
         <br>
         <label for="atcd">ATCD/ autres pathologies :  </label>
         <textarea readonly="" rows="3" type="text" name="atcd" class="form-control" id="" placeholder="ATCD/ autre pathologies"><?php echo $donneesha['atcd']; ?></textarea>

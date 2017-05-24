@@ -166,8 +166,8 @@
         <label for="observation2">Observation :  </label>
         <textarea rows="3" type="text" name="observation2" class="form-control" id="" placeholder="observation"></textarea>
         <br>
-        <label for="survenue">Survenue de compilations :  </label>
-        <textarea rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de compilations"></textarea>
+        <label for="survenue">Survenue de complications :  </label>
+        <textarea rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de complications"></textarea>
         <br>
         <label for="atcd">ATCD/ autres pathologies :  </label>
         <textarea rows="3" type="text" name="atcd" class="form-control" id="" placeholder="ATCD/ autre pathologies"></textarea>

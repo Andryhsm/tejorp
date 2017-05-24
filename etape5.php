@@ -763,6 +763,14 @@
                 </tr>                                      
             </tbody>
         </table>
+
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Commentaire global :</label>
+            <div class="col-sm-7">
+                <textarea rows="3" type="text" placeholder="Commentaire global" class="form-control" name="asg2commentaire" id="asg2commentaire"></textarea>
+            </div>
+        </div>
+
     </fieldset>
 
 </div>
