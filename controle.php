@@ -1,6 +1,9 @@
 
 <?php
 require './protection.php';
+require 'cnx.php';
+$b = false;
+$reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "'");
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,7 @@ require './protection.php';
 
             .well
             {
-                background: #fffc;
+                background: rgba(0,63,71,.5);
                 min-height: 20px;
                 padding: 19px;
                 margin-bottom: 20px;
@@ -68,7 +71,7 @@ require './protection.php';
                 margin-left: -35px;
                 text-align: center;
                 margin-top: -75px;
-                color: black;
+                color: white;
             }
 
             /* below is not necessary, just for style */
@@ -84,38 +87,18 @@ require './protection.php';
         <script src="./jquery/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript" src="assets/js/html2canvas.min.js"></script>
-        
+
         <script>
-                
-//            function capture_class(target) {
-//                    var scrolL = $('html,body').scrollTop();
-//                    var capture = {};
-//                    var trg = $('.' + target);
-//                    
-//                    <?php // echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
-//
-//                    html2canvas(trg, {
-//                        onrendered: function (canvas) {
-//                            capture.img = canvas.toDataURL("image/png");
-//                            capture.data = {'image': capture.img, 'id': id};
-//                            $.ajax({
-//                                url: "pdf/ajax.php",
-//                                data: capture.data,
-//                                type: 'post',
-//                                success: function (result) {
-//                                        alert("kmlklmfkdlkfldkfd");
-//                                }       
-//                            });
-//                        }
-//                    });
-//            }
 
             $(function () {
                 $("#slider").slider({
                     value: 2,
                     min: 1,
                     max: 7,
-                    step: 1
+                    step: 1,
+                    slide: function (event, ui) {
+                        $(".capture").val(ui.value);
+                    }
                 })
                         .each(function () {
 
@@ -139,6 +122,7 @@ require './protection.php';
 //                                }
                                 if (i === 0) {
                                     var el = $('<label><br>Changement cathéter</label>').css('left', (i / vals * 100) + '%');
+//                                    $('[name="capture"]').val("test");
                                 }
                                 if (i === 1) {
                                     var el = $('<label>Bilan d’étape 1 mois</label>').css('left', (i / vals * 100) + '%');
@@ -160,7 +144,7 @@ require './protection.php';
                                 }
 
                                 $("#slider").append(el);
-
+                                $(".capture").val($("#slider").slider("value"));
                             }
 
                         });
@@ -228,19 +212,15 @@ require './protection.php';
 
                             <tbody id="myTable">
                                 <?php
-                                require 'cnx.php';
-                                $b = false;
-                                $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "'");
-
                                 while ($donnees = $reponse->fetch()) {
                                     $id = $donnees['nompatient'] . "-" . $donnees['prenompatient'];
-
                                     $b = true;
                                     ?>
 
                                     <tr onClick="loadcontrol('<?php echo $id; ?>')" style="cursor: pointer;">
 
                                 <form method="POST" action="./patient_controle.php" class="form-horizontal well" >
+                                    <input type="hidden" class="form-control capture" value="" name="capture">
                                     <input type="hidden" class="form-control" value="<?php echo $id; ?>" name="id" id="id">
                                     <button type="submit" id="<?php echo $id; ?>" class="btn btn-success col-sm-12 hidden"> Tsindrio </button>
                                 </form>
@@ -391,10 +371,12 @@ require './protection.php';
 
         <script type="text/javascript">
             $(document).ready(function () {
+                
+//                alert("<?php // echo $isa; ?>")
 
-            setTimeout(function () {
-                capture_class('well');
-            }, 800);
+                setTimeout(function () {
+                    capture_class('well');
+                }, 800);
 
 
                 $('.filterable .btn-filter').click(function () {
@@ -447,4 +429,4 @@ require './protection.php';
             }
         </script>
     </body>
-</html>!!
+</html>
