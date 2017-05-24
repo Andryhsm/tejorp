@@ -1366,6 +1366,7 @@ ob_start();
         </table>
 
         <div>
+            <br><br>
             <strong>Commentaire global :</strong> <?php echo $asg2commentaire; ?>
         </div>
 
