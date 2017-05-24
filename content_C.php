@@ -74,41 +74,41 @@ ob_start();
        	<div ><br/><br/><div style="margin-left: 130px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
         <div >
 
-            
+
             <?php if ($capture == 1) { ?>
                 <img src="img/change.PNG" width="700px;">
-            <?php
+                <?php
             }
             if ($capture == 2) {
                 ?>
                 <img src="img/1mois.PNG" width="700px;">
-            <?php
+                <?php
             }
             if ($capture == 3) {
                 ?>
                 <img src="img/3mois.PNG" width="700px;">
-            <?php
+                <?php
             }
             if ($capture == 4) {
                 ?>
                 <img src="img/6mois.PNG" width="700px;">
-            <?php
+                <?php
             }
             if ($capture == 5) {
                 ?>
                 <img src="img/9mois.PNG" width="700px;">
-            <?php
+                <?php
             }
             if ($capture == 6) {
                 ?>
                 <img src="img/intermediaire.PNG" width="700px;">
-            <?php
+                <?php
             }
             if ($capture == 7) {
                 ?>
                 <img src="img/semestrielle.PNG" width="700px;">
-<?php }
-?>
+            <?php }
+            ?>
 
 
             <br><br><br><br>
@@ -160,7 +160,7 @@ ob_start();
                 <strong>Mobile :</strong>  <?php echo $mobiled; ?><br/>      
                 <strong>Ville :</strong><?php echo $villed; ?><br/>
                 <strong>Mail :</strong><?php echo $maild; ?><br/><br/>  
-<?php } ?>
+            <?php } ?>
 
 
             <strong>Membre réseau :</strong> <?php echo $membrereseau; ?> <br/> 
@@ -252,36 +252,36 @@ ob_start();
                         <td><?php echo $insulinelentematin; ?></td>
                         <td><?php echo $insulinerapidematin; ?></td>
                         <td><?php
-$total_1 = $insulinelentematin + $insulinerapidematin;
-echo $total_1;
-?></td>
+                            $total_1 = $insulinelentematin + $insulinerapidematin;
+                            echo $total_1;
+                            ?></td>
                     </tr>
                     <tr>
                         <td>Midi</td>
                         <td><?php echo $insulinelentemidi; ?></td>
                         <td><?php echo $insulinerapidemidi; ?></td>
                         <td><?php
-$total_2 = $insulinelentemidi + $insulinerapidemidi;
-echo $total_2;
-?></td>
+                            $total_2 = $insulinelentemidi + $insulinerapidemidi;
+                            echo $total_2;
+                            ?></td>
                     </tr>
                     <tr>
                         <td>Soir</td>
                         <td><?php echo $insulinelentesoir; ?></td>
                         <td><?php echo $insulinerapidesoir; ?></td>
                         <td><?php
-$total_3 = $insulinelentesoir + $insulinerapidesoir;
-echo $total_1;
-?></td>
+                            $total_3 = $insulinelentesoir + $insulinerapidesoir;
+                            echo $total_1;
+                            ?></td>
                     </tr>
                     <tr>
                         <td>TOTAL</td>
                         <td><?php echo $totalinsulinelente; ?></td>
                         <td><?php echo $totalinsulinerapide; ?></td>
                         <td><?php
-$total = $total_1 + $total_2 + $total_3;
-echo $total;
-?></td>
+                            $total = $total_1 + $total_2 + $total_3;
+                            echo $total;
+                            ?></td>
                     </tr>
                 </tbody>
             </table><br/>
@@ -403,11 +403,7 @@ echo $total;
             <br/>
             <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
             <?php
-<<<<<<< HEAD
-            	$image = 'img/image'.$id_.'_bardate1.png';
-=======
-            $image = 'img/image' . $id_ . 'bardate1.png';
->>>>>>> 664ca06a62132fc9092b0e12c8a480f2d8449593
+            $image = 'img/image' . $id_ . '_bardate1.png';
 
             if (file_exists($image))
                 echo '<img src="' . $image . '" style="width: 700px;" />'
@@ -504,35 +500,10 @@ echo $total;
             <br/>
             <h4>Histogrammes des débits suivant le Schémas basals date 2</h4>
             <?php
-            $image = 'img/image' . $id_ . 'bardate2.png';
+            $image = 'img/image' . $id_ . '_bardate2.png';
 
-<<<<<<< HEAD
-                <tr>
-                    <td><?php echo $Horaire_N1; ?></td>
-                    <td>23:59</td>
-                    <td><?php echo $Debit_N1; ?></td>
-                    <td><?php echo $Horaire_N2; ?></td>
-                    <td>23:59</td>
-                    <td><?php echo $Debit_N2; ?></td>
-                    <td><?php echo $Horaire_N3; ?></td>
-                    <td>23:59</td>
-                    <td><?php echo $Debit_N3; ?></td>
-                    <td><?php echo $Horaire_N4; ?></td>
-                    <td>23:59</td>
-                    <td><?php echo $Debit_N4; ?></td>
-                </tr>
-            </tbody>
-        </table>
-        <br/>
-        <h4>Histogrammes des débits suivant le Schémas basals date 2</h4>
-        <?php
-            	$image = 'img/image'.$id_.'_bardate2.png';
-=======
             if (file_exists($image))
-                echo '<img src="' . $image . '" style="width: 700px;" />'
->>>>>>> 664ca06a62132fc9092b0e12c8a480f2d8449593
-
-                ;
+                echo '<img src="' . $image . '" style="width: 700px;" />';
             ?>
             <br/><br/>
         </div>
@@ -749,46 +720,7 @@ echo $total;
 
             <br/>
 
-<<<<<<< HEAD
-    </div>
-    <div >
-        <strong>Synthèse/Commentaire : </strong> <?php echo $synthesecommentaire; ?> <br/>
-        <strong>Objectif glycémique pré prandial (g/l) :</strong><?php echo $objectifglycemiquepreprandial; ?> <br/>
-        <strong>Objectif glycémique post prandial (g/l) :</strong><?php echo $objectifglycemiquepostprandial; ?> <br/>
-        <h4><u>Hémoglobine glyquée</u></h4>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td style="width: 10%; background: #249c97;">Dates</td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc1; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc2; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc3; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc4; ?></td>
-                    <td style="width: 10%;"><?php echo $ValDatesHemGlyc5; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc6; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc7; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc8; ?></td>
-                    <td style="width: 9%;"><?php echo $ValDatesHemGlyc9; ?></td>
-                </tr>
-                <tr>
-                    <td style="width: 10%; background: #249c97;">HbA1c (%)</td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc1; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc2; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc3; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc4; ?></td>
-                    <td style="width: 10%;"><?php echo $ValHbA1cHemGlyc5; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc6; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc7; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc8; ?></td>
-                    <td style="width: 9%;"><?php echo $ValHbA1cHemGlyc9; ?></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
-          <?php
-            	$image = 'img/image'.$id_.'_barhg.png';
-=======
+            <<<<<<< HEAD
         </div>
         <div >
             <strong>Synthèse/Commentaire : </strong> <?php echo $synthesecommentaire; ?> <br/>
@@ -824,16 +756,15 @@ echo $total;
                 </tbody>
             </table>
             <br>
-            <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
-            <?php
-            $image = 'img/image' . $id_ . 'barhg.png';
->>>>>>> 664ca06a62132fc9092b0e12c8a480f2d8449593
+            <h4>Evolution chronologique en % des Hémoglobines glyquées</h4>
+<?php
+$image = 'img/image' . $id_ . '_barhg.png';
 
-            if (file_exists($image))
-                echo '<img src="' . $image . '" style="width: 700px;" />'
+if (file_exists($image))
+    echo '<img src="' . $image . '" style="width: 700px;" />'
 
-                ;
-            ?>
+    ;
+?>
             <br/><br/>
         </div>
 
@@ -973,16 +904,10 @@ echo $total;
         </div><br/><br/>
 
 <?php
-$image = 'img/image' . $id_ . 'bar.png';
-
-<<<<<<< HEAD
-         <?php
-            	$image = 'img/image'.$id_.'_bar.png';
-=======
+$image = 'img/image' . $id_ . '_bar.png';
 if (file_exists($image))
     echo '<img src="' . $image . '" style="width: 700px;" /><br/>';
 ?>
->>>>>>> 664ca06a62132fc9092b0e12c8a480f2d8449593
 
         <div >
             <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
