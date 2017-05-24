@@ -1812,7 +1812,7 @@ for ($i = 1; $i <= 9; $i++) {
                 }
 
                 $('#imprimer').click(function () {
-                    $("#form-filter").attr('action', 'content.php');
+                    $("#form-filter").attr('action', 'content_C.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
                 });
@@ -1864,7 +1864,7 @@ for ($i = 1; $i <= 9; $i++) {
                     });
 
                     setTimeout(function () {
-                        $("#form-filter").attr('action', 'content.php');
+                        $("#form-filter").attr('action', 'content_C.php');
                         $("#form-filter").submit();
                     }, 800);
                 });
