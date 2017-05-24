@@ -76,19 +76,15 @@ $donneesha = $reponseha->fetch();
             <div class="radio">
                 <label>
                     <input type="radio" id="r1" value="rougeur" name="rougeur">
-                    : Rougeur /
+                    : Rougeur, douleur, inflammation  /
                 </label>
                 <label>
-                    <input type="radio" id="r2" value="douleur" name="rougeur">
-                    : Douleur /
+                    <input type="radio" id="r2" value="lypodystrophie" name="rougeur">
+                    : Lypodystrophie  /
                 </label>
                 <label>
-                    <input type="radio" id="r3" value="inflammation" name="rougeur">
-                    : Inflammation /
-                </label>
-                <label>
-                    <input type="radio" id="r4" value="lypodystrophie" name="rougeur">
-                    : Lypodystrophie 
+                    <input type="radio" id="r3" value="cicatrice" name="rougeur">
+                    : Présence de cicatrices  
                 </label>
             </div>
         </div>
@@ -362,14 +358,11 @@ $donneesha = $reponseha->fetch();
         if ("<?php echo $donneeshv['rougeur']; ?>" === "rougeur") {
             $("form #r1").attr("checked", true);
         }
-        if ("<?php echo $donneeshv['rougeur']; ?>" === "douleur") {
-            $("form #r2").attr("checked", true);
-        }
-        if ("<?php echo $donneeshv['rougeur']; ?>" === "inflammation") {
+        if ("<?php echo $donneeshv['rougeur']; ?>" === "cicatrice") {
             $("form #r3").attr("checked", true);
         }
         if ("<?php echo $donneeshv['rougeur']; ?>" === "lypodystrophie") {
-            $("form #r4").attr("checked", true);
+            $("form #r2").attr("checked", true);
         }
 
 

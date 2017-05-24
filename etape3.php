@@ -65,20 +65,17 @@
             <div class="radio">
                 <label>
                     <input type="radio" value="rougeur" name="rougeur" checked="">
-                    : Rougeur /
-                </label>
-                <label>
-                    <input type="radio" value="douleur" name="rougeur">
-                    : Douleur /
-                </label>
-                <label>
-                    <input type="radio" value="inflammation" name="rougeur">
-                    : Inflammation /
+                    : Rougeur, douleur, inflammation  /
                 </label>
                 <label>
                     <input type="radio" value="lypodystrophie" name="rougeur">
-                    : Lypodystrophie 
+                    : Lypodystrophie  /
                 </label>
+                <label>
+                    <input type="radio" value="cicatrice" name="rougeur">
+                    : Présence de cicatrices  
+                </label>
+                
             </div>
         </div>
     </fieldset><br/><br/>
