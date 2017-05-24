@@ -64,7 +64,7 @@ ob_start();
                             <img style="position: relative; margin-right: 250px; margin-left: 10px; width: 120px;" src="img/logo_diabete.jpg">
                         </td>
                         <td  style="border: none;">
-                            <img style="position: relative; margin-left: 245px; width: 120px;" src="img/basitide.png">
+                            <img style="position: relative; margin-left: 245px; width: 120px;" src="img/logob.PNG">
                         </td>
                     </tr>
                 </table>
@@ -74,6 +74,7 @@ ob_start();
        	<div ><br/><br/><div style="margin-left: 130px;"><h3>Suivi suite à une installation d'une Pompe à insuline</h3></div><br/><br/><br/></div>
         <div >
 
+            
             <?php if ($capture == 1) { ?>
                 <img src="img/change.PNG" width="700px;">
             <?php
@@ -845,7 +846,7 @@ echo $total;
             <h4><u>HABITUDES ALIMENTAIRES</u></h4>
             <strong>SUIVI DE POIDS : </strong> <?php echo $regime; ?> <br>
             <strong>Observation : </strong> <?php echo $observation2; ?> <br>
-            <strong>Survenue de compilations : </strong> <?php echo $survenue; ?> <br>
+            <strong>Survenue de complications : </strong> <?php echo $survenue; ?> <br>
             <strong>ATCD/ autre pathologies : </strong> <?php echo $atcd; ?> <br>
             <strong>Traitement :</strong> <?php echo $traitement; ?> <br><br/><br/>
             <table class="table " style="margin-left: 8px;">
