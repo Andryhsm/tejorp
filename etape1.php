@@ -128,7 +128,7 @@ if ($statut == "Médecin traitant") {
             <div class="form-group">
                 <label for="datenaissance" class="col-sm-4 control-label">Né(e) le:</label>
                 <div class="col-sm-7">
-                    <input type="text" onchange="calcul_age(this.value)" placeholder="Date de naissance"  class="form-control date datepickery" name="datenaissance" id="datenaissance">
+                    <input type="text" readonly="" onchange="calcul_age(this.value)" placeholder="Date de naissance"  class="form-control date datepickery" name="datenaissance" id="datenaissance">
                 </div>
             </div>
 
@@ -545,7 +545,7 @@ if ($statut == "Médecin traitant") {
         <div class="form-group">
             <label for="dateinstallation" class="col-sm-4 control-label">Date d'installation:</label>
             <div class="col-sm-7">
-                <input type="text"  placeholder="Date d'installation" class="form-control date datepickerAll" name="dateinstallation" id="dateinstallation">
+                <input type="text" readonly="" placeholder="Date d'installation" class="form-control date datepickerAll" name="dateinstallation" id="dateinstallation">
             </div>
         </div>
 

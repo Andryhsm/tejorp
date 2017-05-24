@@ -46,7 +46,7 @@
                     <div class="form-group">
                         <label for="datediagnostic" class="col-lg-4 control-label">Date de diagnostic:</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control datepickerAll" name="datediagnostic" id="datediagnostic" placeholder="Date de diagnostic">
+                            <input type="text" readonly="" class="form-control datepickerAll" name="datediagnostic" id="datediagnostic" placeholder="Date de diagnostic">
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@
                     <div class="form-group">
                         <label for="datepremieremisesousPompe" class="col-lg-4 control-label">Date de première mise sous Pompe:</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control datepickerAll" name="datepremieremisesousPompe" id="datepremieremisesousPompe" placeholder="Date de première mise sous Pompe">
+                            <input type="text" readonly="" class="form-control datepickerAll" name="datepremieremisesousPompe" id="datepremieremisesousPompe" placeholder="Date de première mise sous Pompe">
                         </div>
                     </div>
 
@@ -130,7 +130,7 @@
                     <div class="col-lg-6">
                         <label for="dateprescription" class="col-lg-4 control-label">Date de prescription:</label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control datepickerAll" name="dateprescription" id="dateprescription" placeholder="Date de prescription">
+                            <input type="text" readonly="" class="form-control datepickerAll" name="dateprescription" id="dateprescription" placeholder="Date de prescription">
                         </div>
                     </div>
                 </div>
@@ -300,7 +300,7 @@
 
                                     <label for="nom" class="col-sm-4 control-label">Schémas basals date 1:</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control datepickerAll" name="datebasal1">
+                                        <input type="text" readonly="" class="form-control datepickerAll" name="datebasal1">
                                     </div>
 
                                 </div>
@@ -330,30 +330,30 @@
                     <tbody id="contentBasal1">
                         <tr>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire1" id="Horaire1"></td>
+                            <td><input readonly="" type="text" class="form-control datetimepickery" name="Horaire1" id="Horaire1"></td>
                             <td><input type="number" class="form-control" name="Debit1" id="Debit1"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire2" id="Horaire2"></td>
+                            <td><input readonly="" type="text" class="form-control datetimepickery" name="Horaire2" id="Horaire2"></td>
                             <td><input type="number" class="form-control" name="Debit2" id="Debit2"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire3" id="Horaire3"></td>
+                            <td><input readonly="" type="text" class="form-control datetimepickery" name="Horaire3" id="Horaire3"></td>
                             <td><input type="number" class="form-control" name="Debit3" id="Debit3"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire4" id="Horaire4"></td>
+                            <td><input readonly="" type="text" class="form-control datetimepickery" name="Horaire4" id="Horaire4"></td>
                             <td><input type="number" class="form-control" name="Debit4" id="Debit4"></td>
                         </tr>
 
                         <tr  id="ligne4">
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire1N" id="Horaire1N"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire1N" id="Horaire1N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>                            
                             <td><input type="number" class="form-control" name="Debit1N" id="Debit1N"></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire2N" id="Horaire2N"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire2N" id="Horaire2N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit2N" id="Debit2N"></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire3N" id="Horaire3N"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire3N" id="Horaire3N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit3N" id="Debit3N"></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire4N" id="Horaire4N"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire4N" id="Horaire4N"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit4N" id="Debit4N"></td>
                         </tr>
@@ -389,7 +389,7 @@
 
                                     <label for="nom" class="col-sm-4 control-label">Schémas basals date 2:</label>
                                     <div class="col-sm-5">
-                                        <input type="text" class="form-control datepickerAll" name="datebasal2">
+                                        <input type="text" readonly="" class="form-control datepickerAll" name="datebasal2">
                                     </div>
 
                                 </div>
@@ -419,29 +419,29 @@
                     <tbody id="contentBasal2">
                         <tr>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire_1" id="Horaire_1"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire_1" id="Horaire_1"></td>
                             <td><input type="number" class="form-control" name="Debit_1" id="Debit_1"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire_2" id="Horaire_2"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire_2" id="Horaire_2"></td>
                             <td><input type="number" class="form-control" name="Debit_2" id="Debit_2"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire_3" id="Horaire_3"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire_3" id="Horaire_3"></td>
                             <td><input type="number" class="form-control" name="Debit_3" id="Debit_3"></td>
                             <td><input type="text" class="form-control" value="00:00" readonly></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire_4" id="Horaire_4"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire_4" id="Horaire_4"></td>
                             <td><input type="number" class="form-control" name="Debit_4" id="Debit_4"></td>
                         </tr>
                         <tr id="ligne24">
-                            <td><input type="text" class="form-control datetimepickery"  name="Horaire_N1" id="Horaire_N1"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery"  name="Horaire_N1" id="Horaire_N1"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N1" id="Debit_N1"></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire_N2" id="Horaire_N2"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire_N2" id="Horaire_N2"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N2" id="Debit_N2"></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire_N3" id="Horaire_N3"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire_N3" id="Horaire_N3"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N3" id="Debit_N3"></td>
-                            <td><input type="text" class="form-control datetimepickery" name="Horaire_N4" id="Horaire_N4"></td>
+                            <td><input type="text" readonly="" class="form-control datetimepickery" name="Horaire_N4" id="Horaire_N4"></td>
                             <td><input type="text" class="form-control" value="23:59" readonly></td>
                             <td><input type="number" class="form-control" name="Debit_N4" id="Debit_N4"></td>
                         </tr>
@@ -476,7 +476,7 @@
 
                     <label for="nom" class="col-sm-4 control-label">Date de MAJ :</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control datepickerAll" name="datebolus">
+                        <input type="text" readonly="" class="form-control datepickerAll" name="datebolus">
                     </div>
 
                 </div>
@@ -560,7 +560,7 @@
 
                     <label for="nom" class="col-sm-4 control-label">Date de MAJ :</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control datepickerAll" name="dateglycemie">
+                        <input type="text" readonly="" class="form-control datepickerAll" name="dateglycemie">
                     </div>
 
                 </div>
@@ -731,15 +731,15 @@
                     <tbody>
                         <tr>
                             <th scope="row">Dates</th>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc1" id="ValDatesHemGlyc1"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc2" id="ValDatesHemGlyc2"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc3" id="ValDatesHemGlyc3"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc4" id="ValDatesHemGlyc4"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc5" id="ValDatesHemGlyc5"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc6" id="ValDatesHemGlyc6"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc7" id="ValDatesHemGlyc7"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc8" id="ValDatesHemGlyc8"></td>
-                            <td><input type="text" class="form-control datepickerAll" name="ValDatesHemGlyc9" id="ValDatesHemGlyc9"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc1" id="ValDatesHemGlyc1"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc2" id="ValDatesHemGlyc2"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc3" id="ValDatesHemGlyc3"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc4" id="ValDatesHemGlyc4"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc5" id="ValDatesHemGlyc5"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc6" id="ValDatesHemGlyc6"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc7" id="ValDatesHemGlyc7"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc8" id="ValDatesHemGlyc8"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" name="ValDatesHemGlyc9" id="ValDatesHemGlyc9"></td>
                         </tr>
                         <tr>
                             <th scope="row">HbA1c(%)</th>
@@ -838,17 +838,17 @@
         e.preventDefault();
         i++;
         var c = "<tr>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i) + "' id='Horaire" + (inc + i) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 1) + "' id='Horaire" + (inc + i + 1) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i) + "' id='Horaire" + (inc + i) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i + 1) + "' id='Horaire" + (inc + i + 1) + "'></td>";
         c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i) + "' id='Debit" + (incD + i) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 2) + "' id='Horaire" + (inc + i + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 3) + "' id='Horaire" + (inc + i + 3) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i + 2) + "' id='Horaire" + (inc + i + 2) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i + 3) + "' id='Horaire" + (inc + i + 3) + "'></td>";
         c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i + 1) + "' id='Debit" + (incD + i + 1) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 4) + "' id='Horaire" + (inc + i + 4) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 5) + "' id='Horaire" + (inc + i + 5) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i + 4) + "' id='Horaire" + (inc + i + 4) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i + 5) + "' id='Horaire" + (inc + i + 5) + "'></td>";
         c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i + 2) + "' id='Debit" + (incD + i + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 6) + "' id='Horaire" + (inc + i + 6) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc + i + 7) + "' id='Horaire" + (inc + i + 7) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i + 6) + "' id='Horaire" + (inc + i + 6) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc + i + 7) + "' id='Horaire" + (inc + i + 7) + "'></td>";
         c += "<td><input type='number' class='form-control' onchange='changer_graphe(this.id);' name='Debit" + (incD + i + 3) + "' id='Debit" + (incD + i + 3) + "'></td>";
         c += "</tr>";
         inc += 7;
@@ -908,17 +908,17 @@
         e.preventDefault();
         m++;
         var c = "<tr>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m) + "' id='Horaire_" + (inc2 + m) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 1) + "' id='Horaire_" + (inc2 + m + 1) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire_" + (inc2 + m) + "' id='Horaire_" + (inc2 + m) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 1) + "' id='Horaire_" + (inc2 + m + 1) + "'></td>";
         c += "<td><input type='number' class='form-control' onchange='tracer_graphe();' name='Debit_" + (incD2 + m) + "' id='Debit_" + (incD2 + m) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire" + (inc2 + m + 2) + "' id='Horaire" + (inc2 + m + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 3) + "' id='Horaire_" + (inc2 + m + 3) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire" + (inc2 + m + 2) + "' id='Horaire" + (inc2 + m + 2) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 3) + "' id='Horaire_" + (inc2 + m + 3) + "'></td>";
         c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 1) + "' id='Debit_" + (incD2 + m + 1) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 4) + "' id='Horaire_" + (inc2 + m + 4) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 5) + "' id='Horaire_" + (inc2 + m + 5) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 4) + "' id='Horaire_" + (inc2 + m + 4) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 5) + "' id='Horaire_" + (inc2 + m + 5) + "'></td>";
         c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 2) + "' id='Debit_" + (incD2 + m + 2) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 6) + "' id='Horaire_" + (inc2 + m + 6) + "'></td>";
-        c += "<td><input type='text' class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 7) + "' id='Horaire_" + (inc2 + m + 7) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 6) + "' id='Horaire_" + (inc2 + m + 6) + "'></td>";
+        c += "<td><input type='text' readonly class='form-control datetimepicker1' name='Horaire_" + (inc2 + m + 7) + "' id='Horaire_" + (inc2 + m + 7) + "'></td>";
         c += "<td><input type='number' class='form-control' name='Debit_" + (incD2 + m + 3) + "' id='Debit_" + (incD2 + m + 3) + "'></td>";
         c += "</tr>";
         inc2 += 7;

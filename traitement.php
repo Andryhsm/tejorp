@@ -11,7 +11,8 @@ $hygienealimentaire = (htmlentities(addslashes($_POST["hygienealimentaire"]), EN
 $stabilitehoraires = (htmlentities(addslashes($_POST["stabilitehoraires"]), ENT_NOQUOTES,'UTF-8', true));
 $details = (htmlentities(addslashes($_POST["details"]), ENT_NOQUOTES,'UTF-8', true));
 //eto
-$environnement = $_POST["rougeur"];
+$environnement = $_POST["environnement"];
+$rougeur = $_POST["rougeur"];
 $etatcutane = (htmlentities(addslashes($_POST["etatcutane"]), ENT_NOQUOTES,'UTF-8', true));
 $choixpoint = (htmlentities(addslashes($_POST["choixpoint"]), ENT_NOQUOTES,'UTF-8', true));
 $regime = (htmlentities(addslashes($_POST["regime"]), ENT_NOQUOTES,'UTF-8', true));
@@ -94,7 +95,290 @@ $collationSensibilite = (htmlentities(addslashes($_POST['collationSensibilite'])
 $idPrescripteur = $_SESSION['id'];
 $idPatient = htmlentities(addslashes($_POST["nompatient"]), ENT_NOQUOTES,'UTF-8', true) ."-".htmlentities(addslashes($_POST["prenompatient"]), ENT_NOQUOTES,'UTF-8', true);
 
+<<<<<<< HEAD
+try {
+
+
+    $bdd->exec("INSERT INTO infobastide(nomresp, prenomresp, mobileresp, coordonnee, idPrescripteur, idPatient) VALUES('" . htmlentities(addslashes($_POST["nomresp"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["prenomresp"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["mobileresp"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["coordonnee"]), ENT_NOQUOTES,'UTF-8', true) . "', '".$idPrescripteur."', '".$idPatient."')") or die(print_r($bdd->ErrorInfo()));
+
+
+    $bdd->exec("INSERT INTO infopatient(nompatient, prenompatient, datenaissance, agepatient, telpatient, mobilepatient,emailpatient, adressepatient, codepostalpatient, villepatient, idPrescripteur) VALUES('" . htmlentities(addslashes($_POST["nompatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["prenompatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["datenaissance"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["agepatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["telpatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["mobilepatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["emailpatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["adressepatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["codepostalpatient"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["villepatient"]), ENT_NOQUOTES,'UTF-8', true) . "', '".$idPrescripteur."')")or die(print_r($bdd->ErrorInfo()));
+
+    $bdd->exec("INSERT INTO infoprescripteur(etablissementprescripteur, serviceep, npp, telep, mailep, adressep, mobiledp, mobiledl, mobilemt, mobiled, membrereseau, nomreseau, idPrescripteur, idPatient) VALUES ('" . htmlentities(addslashes($_POST["etablissementprescripteur"]), ENT_NOQUOTES,'UTF-8', true) . "', '" . htmlentities(addslashes($_POST["serviceep"]), ENT_NOQUOTES,'UTF-8', true) . "', '" . htmlentities(addslashes($_POST["npp"]), ENT_NOQUOTES,'UTF-8', true) . "', '" . htmlentities(addslashes($_POST["telep"]), ENT_NOQUOTES,'UTF-8', true) . "', '" . htmlentities(addslashes($_POST["mailep"]), ENT_NOQUOTES,'UTF-8', true) . "', '" . htmlentities(addslashes($_POST["adressep"]), ENT_NOQUOTES,'UTF-8', true) . "' ,'" . htmlentities(addslashes($_POST["mobiledp"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["mobiledl"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["mobilemt"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["mobiled"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["membrereseau"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["nomreseau"]), ENT_NOQUOTES,'UTF-8', true) . "', '" .$idPrescripteur."', '" .$idPatient."')") or die(print_r($bdd->errorInfo()));
+
+
+    $bdd->exec("INSERT INTO choixmateriel(pompe, dateinstallation, typecatheter, modele, longueurcanule, longueurtubulure, typecatheter2, modele2, longueurcanule2, longueurtubulure2, inserteur, reservoir, spp, observation, idPrescripteur, idPatient) VALUES('" . utf8_decode($_POST["Pompe"]) . "','" . htmlentities(addslashes($_POST["dateinstallation"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["catheter"]), ENT_NOQUOTES,'UTF-8', true) . "','" . utf8_decode($_POST["modele"]) . "','" . htmlentities(addslashes($_POST["longueurcanule"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["longueurtubulure"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["catheter2"]), ENT_NOQUOTES,'UTF-8', true) . "','" . utf8_decode($_POST["modele2"]) . "','" . htmlentities(addslashes($_POST["longueurcanule2"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["longueurtubulure2"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["inserteur"]), ENT_NOQUOTES,'UTF-8', true) . "','" . utf8_decode(htmlentities(addslashes($_POST["reservoir"]), ENT_NOQUOTES,'UTF-8', true)) . "','" . htmlentities(addslashes($_POST["spp"]), ENT_NOQUOTES,'UTF-8', true) . "','" . htmlentities(addslashes($_POST["observatiom"]), ENT_NOQUOTES,'UTF-8', true) . "', '".$idPrescripteur."', '".$idPatient."')")or die(print_r($bdd->ErrorInfo()));
+
+
+    $bdd->exec("INSERT INTO habitudevie(activitephysique, profession, situationfamiliale, observation, hygienealimentaire, stabilitehoraires, details, environnement, rougeur, etatcutane, choixpoint, idPrescripteur, idPatient) VALUES('" . $activitephysique . "','" . $profession . "','" . $situationfamiliale . "','" . $observation . "','" . $hygienealimentaire . "','" . $stabilitehoraires . "','" . $details . "','" . $environnement . "','" . $rougeur . "','" . $etatcutane . "','" . $choixpoint . "', '" .$idPrescripteur."', '" .$idPatient."')") or die(print_r($bdd->ErrorInfo()));
+
+    $bdd->exec("INSERT INTO habitudealimentaire(regime, observation2, survenue, atcd, traitement, date1, date2, date3, date4, date5, date6, date7, date8, date9, taille1, taille2, taille3, taille4, taille5, taille6, taille7, taille8, taille9, poids1, poids2, poids3, poids4, poids5, poids6, poids7, poids8, poids9, imc1, imc2, imc3, imc4, imc5, imc6, imc7, imc8, imc9, idPrescripteur, idPatient) VALUES ('" . $regime . "','" . $observation2 . "', '" . $survenue . "', '" . $atcd . "','" . $traitement . "','" . $date1 . "','" . $date2 . "','" . $date3 . "','" . $date4 . "','" . $date5 . "','" . $date6 . "','" . $date7 . "','" . $date8 . "','" . $date9 . "','" . $taille1 . "','" . $taille2 . "','" . $taille3 . "','" . $taille4 . "','" . $taille5 . "','" . $taille6 . "','" . $taille7 . "','" . $taille8 . "','" . $taille9 . "','" . $poids1 . "','" . $poids2 . "','" . $poids3 . "','" . $poids4 . "','" . $poids5 . "','" . $poids6 . "','" . $poids7 . "','" . $poids8 . "','" . $poids9 . "','" . $imc1 . "','" . $imc2 . "','" . $imc3 . "','" . $imc4 . "','" . $imc5 . "','" . $imc6 . "','" . $imc7 . "','" . $imc8 . "','" . $imc9 . "', '" .$idPrescripteur."', '" .$idPatient."')") or die(print_r($bdd->errorInfo()));
+
+    $bdd->exec("INSERT INTO manipulationdelapompe
+      	(
+      		date1, date2, date3, date4,
+      		etat1, etat2, etat3, etat4, commentaire1, 
+      		etat5, etat6, etat7, etat8, commentaire2, 
+      		etat9, etat10, etat11, etat12, commentaire3, 
+      		etat13, etat14, etat15, etat16, commentaire4, 
+      		etat17, etat18, etat19, etat20, commentaire5, 
+      		etat21, etat22, etat23, etat24, commentaire6, 
+      		etat25, etat26, etat27, etat28, commentaire7, 
+      		etat29, etat30, etat31, etat32, commentaire8, 
+      		etat33, etat34, etat35, etat36, commentaire9, 
+      		autre, idPrescripteur, idPatient) 
+		VALUES ('"
+                    . htmlentities(addslashes($_POST["pmpdate1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpdate2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpdate3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpdate4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect5"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect6"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect7"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect8"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect9"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect10"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect11"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect12"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect13"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect14"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect15"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect16"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect17"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect18"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect19"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect20"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire5"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect21"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect22"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect23"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect24"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire6"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect25"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect26"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect27"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect28"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire7"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect29"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect291"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect292"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect293"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire8"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect294"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect295"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect296"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpselect297"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpcommentaire9"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["pmpautre"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    .$idPrescripteur."','"
+                    .$idPatient."')") or die(print_r($bdd->ErrorInfo()));
+
+    $bdd->exec("INSERT INTO alarmesetprecautions
+    	(
+    		alarmedate1, alarmedate2, alarmedate3, alarmedate4,
+    		alarmeetat1, alarmeetat2, alarmeetat3, alarmeetat4, commentaire1, 
+    		alarmeetat5, alarmeetat6, alarmeetat7, alarmeetat8, commentaire2, 
+    		alarmeetat9, alarmeetat10, alarmeetat11, alarmeetat12, commentaire3, 
+    		alarmeetat13, alarmeetat14, alarmeetat15, alarmeetat16, commentaire4, 
+    		alarmeetat17, alarmeetat18, alarmeetat19, alarmeetat20, commentaire5, 
+    		alarmeetat21, alarmeetat22, alarmeetat23, alarmeetat24, commentaire6, 
+    		alarmeetat25, alarmeetat26, alarmeetat27, alarmeetat28, commentaire7, 
+    		autre, idPrescripteur, idPatient) 
+		VALUES ('"
+                    . htmlentities(addslashes($_POST["alarmedate1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmedate2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmedate3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmedate4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmecommentaire1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect5"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect6"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect7"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect8"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmecommentaire2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect9"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect10"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect11"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect12"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmecommentaire3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect13"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect14"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect15"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect16"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmecommentaire4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect17"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect18"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect19"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect20"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmecommentaire5"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect21"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect22"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect23"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect24"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmecommentaire6"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect25"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect26"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect27"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeselect28"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmecommentaire7"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["alarmeautre"]), ENT_NOQUOTES,'UTF-8', true) . "', '" 
+                    .$idPrescripteur."', '" 
+                    .$idPatient."')") or die(print_r($bdd->ErrorInfo()));
+
+
+    $bdd->exec("INSERT INTO manipulations
+		(
+			date1, date2, date3, date4,
+			etat1, etat2, etat3, etat4, 
+			commentaire1, 
+			etat5, etat6, etat7, etat8,
+			commentaire2, 
+			etat9, etat10, etat11, etat12,
+			commentaire3, 
+			etat13, etat14, etat15, etat16,
+			commentaire4, 
+			etat17, etat18, etat19, etat20,
+			commentaire5, idPrescripteur, idPatient
+		) VALUES 
+		('"
+                    . htmlentities(addslashes($_POST["manipdate1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipdate2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipdate3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipdate4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipcommentaire1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect5"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect6"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect7"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect8"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipcommentaire2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect9"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect10"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect11"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect12"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipcommentaire3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect13"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect14"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect15"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect16"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipcommentaire4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect17"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect18"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect19"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipselect20"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["manipcommentaire5"]), ENT_NOQUOTES,'UTF-8', true) . "', '" 
+                    .$idPrescripteur."', '" 
+                    .$idPatient."')") or die(print_r($bdd->ErrorInfo()));
+
+
+    $bdd->exec("INSERT INTO poseducatheter
+		(
+			date1, date2, date3, date4,
+			etat1, etat2, etat3, etat4,
+			commentaire1, 
+			etat5, etat6, etat7, etat8,
+			commentaire2, 
+			etat9, etat10, etat11, etat12,
+			commentaire3, 
+			etat13, etat14, etat15, etat16,
+			commentaire4, 
+			etat17, etat18, etat19, etat20,
+			commentaire5,
+			etat21, etat22, etat23, etat24,
+			commentaire6,
+			etat25, etat26, etat27, etat28,
+			commentaire7,
+			etat29, etat30, etat31, etat32,
+			commentaire8,
+			etat33, etat34, etat35, etat36,
+			commentaire9,
+			etat37, etat38, etat39, etat40,
+			commentaire10,
+			etat41, etat42, etat43, etat44,
+			commentaire11, idPrescripteur, idPatient
+		) VALUES 
+		('"
+                    . htmlentities(addslashes($_POST["cathdate1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathdate2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathdate3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathdate4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect5"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect6"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect7"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect8"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect9"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect10"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect11"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect12"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire3"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect13"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect14"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect15"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect16"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire4"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect17"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect18"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect19"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect20"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire5"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect21"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect22"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect23"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect24"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire6"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect25"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect26"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect27"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect28"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire7"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect29"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect211"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect212"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect213"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire8"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect214"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect215"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect216"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect217"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire9"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect218"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect219"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect221"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect222"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire10"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect223"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect224"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect225"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathselect226"]), ENT_NOQUOTES,'UTF-8', true) . "','"
+                    . htmlentities(addslashes($_POST["cathcommentaire11"]), ENT_NOQUOTES,'UTF-8', true) ."', '" 
+                    .$idPrescripteur."', '" 
+                    .$idPatient."')") or die(print_r($bdd->ErrorInfo()));
+
+
+    $typediabete = (isset($_POST["typediabete"])) ? htmlentities(addslashes($_POST["typediabete"]), ENT_NOQUOTES,'UTF-8', true) : "";
+=======
 $typediabete = (isset($_POST["typediabete"])) ? htmlentities(addslashes($_POST["typediabete"]), ENT_NOQUOTES,'UTF-8', true) : "";
+>>>>>>> 0439026e1326f3e248aaa030470b49509a18cf3b
     $datediagnostic = (isset($_POST["datediagnostic"])) ? htmlentities(addslashes($_POST["datediagnostic"]), ENT_NOQUOTES,'UTF-8', true) : "";
     $circonstancedecouverte = (isset($_POST["circonstancedecouverte"])) ? htmlentities(addslashes($_POST["circonstancedecouverte"]), ENT_NOQUOTES,'UTF-8', true) : "";
     $antecedentfamiliaux = (isset($_POST["antecedentfamiliaux"])) ? htmlentities(addslashes($_POST["antecedentfamiliaux"]), ENT_NOQUOTES,'UTF-8', true) : "";

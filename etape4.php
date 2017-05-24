@@ -19,10 +19,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -372,10 +372,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -653,10 +653,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
+                            <td><input type="text" readonly="" class="form-control datepickerAll" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
