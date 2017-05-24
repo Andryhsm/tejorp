@@ -1,4 +1,5 @@
 <?php
+
 $statut = $_SESSION['statut'];
 $statut = utf8_encode($statut);
 
@@ -74,6 +75,7 @@ $donneespre = $reponsepre->fetch();
 $pieces = explode("-", $id);
 $reponsep = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "' and nompatient = '" . $pieces[0] . "' and prenompatient = '" . $pieces[1] . "'");
 $donneesp = $reponsep->fetch();
+
 ?>
 
 <style type="text/css">

@@ -15,6 +15,7 @@
     <div>
         <div class="field2">
             <h4 style="text-align: center;">DONNEES MEDICALES</h4></br>
+            <form action="update.php" method="post">
             <fieldset>
 
                 <!-- type de diabète -->
@@ -773,7 +774,8 @@
                 </div>
 
             </fieldset>
-
+            <input type="submit" >
+            <form>
         </div>
 
         <!-- 

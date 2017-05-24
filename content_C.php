@@ -366,7 +366,7 @@ ob_start();
         <br/>
         <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
             <?php
-            	$image = 'img/image'.$id_.'bardate1.png';
+            	$image = 'img/image'.$id_.'_bardate1.png';
 
             		if(file_exists($image))
              			echo '<img src="'.$image.'" style="width: 700px;" />'
@@ -462,7 +462,7 @@ ob_start();
         <br/>
         <h4>Histogrammes des débits suivant le Schémas basals date 2</h4>
         <?php
-            	$image = 'img/image'.$id_.'bardate2.png';
+            	$image = 'img/image'.$id_.'_bardate2.png';
 
             		if(file_exists($image))
              			echo '<img src="'.$image.'" style="width: 700px;" />'
@@ -720,7 +720,7 @@ ob_start();
         <br>
         <h4>Evolution chronologique en % desHémoglobines glyquées</h4>
           <?php
-            	$image = 'img/image'.$id_.'barhg.png';
+            	$image = 'img/image'.$id_.'_barhg.png';
 
             		if(file_exists($image))
              			echo '<img src="'.$image.'" style="width: 700px;" />'
@@ -865,7 +865,7 @@ ob_start();
     </div><br/><br/>
 
          <?php
-            	$image = 'img/image'.$id_.'bar.png';
+            	$image = 'img/image'.$id_.'_bar.png';
 
             		if(file_exists($image))
              			echo '<img src="'.$image.'" style="width: 700px;" /><br/>';

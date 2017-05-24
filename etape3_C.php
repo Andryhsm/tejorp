@@ -46,7 +46,7 @@ $donneesha = $reponseha->fetch();
                 <div class="radio">
                     <label for="stabilitehoraires">Stabilités des horaires : </label>
                     <label>
-                        <input type="radio" name="stabilitehoraires" id="radio1" value="oui">
+                        <input type="radio" name="stabilitehoraires" selected id="radio1" value="oui">
                         Oui
                     </label>
                     <label>

@@ -12,6 +12,7 @@
 </style>
 
 <div class ="container-fluid">
+<form action="update.php"  method="post">
     <fieldset class="field5" id="field">
         <center><font><h4>POSE DU CATHETER</h4></font></center><br/>
 
@@ -764,5 +765,6 @@
             </tbody>
         </table>
     </fieldset>
-
+    <input type="submit" value="envoyer">
+    <form>
 </div>

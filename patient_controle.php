@@ -1612,6 +1612,9 @@ for ($i = 1; $i <= 9; $i++) {
                     <div class="item"  id="etape5" style="display: none;">
                         <?php require './etape5_C.php'; ?>
                     </div>
+                    <input type="text" class="hidden" name="idPatient" <?php echo "value='".$_SESSION['idPatient']."'"; ?>">
+                    <input type="text" class="hidden" name="idPrescripteur" <?php echo "value='".$_SESSION['id']."'"; ?>">
+
                     <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
                     <div class="item" id="etape6" style="display: none;">
                         <div class="container"  style="margin-top: 230px;">
@@ -1794,7 +1797,7 @@ for ($i = 1; $i <= 9; $i++) {
                     var scrolL = $('html,body').scrollTop();
                     var capture = {};
                     var trg = $('#' + target);
-<?php echo " var id = '" . $_SESSION["id"] . "' + target;"; ?>
+<?php echo " var id = '" . $_SESSION["id"] . "_' + target;"; ?>
                     html2canvas(trg, {
                         onrendered: function (canvas) {
                             capture.img = canvas.toDataURL("image/png");
@@ -1812,7 +1815,7 @@ for ($i = 1; $i <= 9; $i++) {
                 }
 
                 $('#imprimer').click(function () {
-                    $("#form-filter").attr('action', 'content.php');
+                    $("#form-filter").attr('action', 'content_C.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
                 });
@@ -1826,14 +1829,17 @@ for ($i = 1; $i <= 9; $i++) {
                 });
 
                 $('#save').click(function (e) {
+                    $("#form-filter").attr('action', 'test.php');
+                        $("#form-filter").submit();
+                    /*
                     e.preventDefault();
-                    $("#form-filter").attr('action', 'traitement.php');
+                    $("#form-filter").attr('action', 'update_controle.php');
                     var form = $('#form-filter').get(0);
                     var formData = new FormData(form);// get the form data
                     // on envoi formData vers mail.php
                     $.ajax({
                         type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-                        url: 'traitement.php', // the url where we want to POST
+                        url: 'update_controle.php', // the url where we want to POST
                         data: formData, // our data object
                         dataType: 'text', // what type of data do we expect back from the server
                         processData: false,
@@ -1866,7 +1872,7 @@ for ($i = 1; $i <= 9; $i++) {
                     setTimeout(function () {
                         $("#form-filter").attr('action', 'content.php');
                         $("#form-filter").submit();
-                    }, 800);
+                    }, 800);*/
                 });
 
 

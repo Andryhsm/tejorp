@@ -11,7 +11,8 @@
 }
 </style>
 
-<div class="container-fluid">                        
+<div class="container-fluid">  
+<form action="update.php" method="post">                      
 	<fieldset class="field4" id="field">
 		<center><font><h4>MANIPULATION DE LA POMPE</h4></font></center><br/>
 
@@ -845,5 +846,6 @@
                 </table>
 
     </fieldset>
-
+    <input type="submit" value="envoyer">
+    <form>
 </div>
