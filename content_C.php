@@ -1403,6 +1403,11 @@ if (file_exists($image))
                     </tr>                                      
                 </tbody>
             </table>
+
+            <div>
+                <strong>Commentaire global :</strong> <?php echo $asg2commentaire; ?>
+            </div>
+
         </div>
 
     </div>
