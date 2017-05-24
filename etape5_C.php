@@ -54,7 +54,7 @@
               echo "
                    if(\"".$poseducatheter["etat".$i.""]."\" != '')
                     {
-                        $('form #cathselect".$i." option:not(:selected)').attr('disabled', true);
+                        $('form #cathselect".$i." option:not(:selected)').attr('disabled', false);
                     }
                     ";
             }
@@ -157,352 +157,352 @@
                 <tr>
                     <td>Mise en place du cathéter dans l'Inserteur</td>
                     <td>
-                        <select class="form-control" id="cathselect1" name="cathselect1">                                 
+                        <select class="form-control" id="cathselect1" name="cathselect1">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect2" name="cathselect2">                                 
+                        <select class="form-control" id="cathselect2" name="cathselect2">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect3" name="cathselect3">                                 
+                        <select class="form-control" id="cathselect3" name="cathselect3">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect4" name="cathselect4">                                 
+                        <select class="form-control" id="cathselect4" name="cathselect4">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire1" id = "cathcommentaire1"></td>
                 </tr>
                 <tr>
                     <td>Retrait de l'adhésif et de la protection de l'aiguille</td>
                     <td>
-                        <select class="form-control" id="cathselect5" name="cathselect5">                                 
+                        <select class="form-control" id="cathselect5" name="cathselect5">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect6" name="cathselect6">                                 
+                        <select class="form-control" id="cathselect6" name="cathselect6">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect7" name="cathselect7">                                 
+                        <select class="form-control" id="cathselect7" name="cathselect7">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect8" name="cathselect8">                                 
+                        <select class="form-control" id="cathselect8" name="cathselect8">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire2" id = "cathcommentaire2"></td>
                 </tr>
                 <tr>
                     <td>Armement de l'Inserteur</td>
                     <td>
-                        <select class="form-control" id="cathselect9" name="cathselect9">                                 
+                        <select class="form-control" id="cathselect9" name="cathselect9">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect10" name="cathselect10">                                 
+                        <select class="form-control" id="cathselect10" name="cathselect10">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect11" name="cathselect11">                                 
+                        <select class="form-control" id="cathselect11" name="cathselect11">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect12" name="cathselect12">                                 
+                        <select class="form-control" id="cathselect12" name="cathselect12">
+                            <option value="" selected hidden>--Choisir--</option>                                
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire3" id = "cathcommentaire3"></td>
                 </tr> 
                 <tr>
                     <td>Choix du lieu d'injection</td>
                     <td>
-                        <select class="form-control" id="cathselect13" name="cathselect13">                                 
+                        <select class="form-control" id="cathselect13" name="cathselect13">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect14" name="cathselect14">                                 
+                        <select class="form-control" id="cathselect14" name="cathselect14">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect15" name="cathselect15">                                 
+                        <select class="form-control" id="cathselect15" name="cathselect15">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect16" name="cathselect16">                                 
+                        <select class="form-control" id="cathselect16" name="cathselect16">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire4" id = "cathcommentaire4"></td>
                 </tr>
                 <tr>
                     <td>Désinfection cutanée</td>
                     <td>
-                        <select class="form-control" id="cathselect17" name="cathselect17">                                 
+                        <select class="form-control" id="cathselect17" name="cathselect17">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect18" name="cathselect18">                                 
+                        <select class="form-control" id="cathselect18" name="cathselect18">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect19" name="cathselect19">                                 
+                        <select class="form-control" id="cathselect19" name="cathselect19">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect20" name="cathselect20">                                 
+                        <select class="form-control" id="cathselect20" name="cathselect20">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire5" id = "cathcommentaire5"></td>
                 </tr>
                 <tr>
                     <td>Déclenchement de l'Inserteur</td>
                     <td>
-                        <select class="form-control" id="cathselect21" name="cathselect21">                                 
+                        <select class="form-control" id="cathselect21" name="cathselect21">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect22" name="cathselect22">                                 
+                        <select class="form-control" id="cathselect22" name="cathselect22">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect23" name="cathselect23">                                 
+                        <select class="form-control" id="cathselect23" name="cathselect23">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect24" name="cathselect24">                                 
+                        <select class="form-control" id="cathselect24" name="cathselect24">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire6" id = "cathcommentaire6"></td>
                 </tr>
                 <tr>
                     <td>Retrait de l'aiguille</td>
                     <td>
-                        <select class="form-control" id="cathselect25" name="cathselect25">                                 
+                        <select class="form-control" id="cathselect25" name="cathselect25">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect26" name="cathselect26">                                 
+                        <select class="form-control" id="cathselect26" name="cathselect26">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect27" name="cathselect27">                                 
+                        <select class="form-control" id="cathselect27" name="cathselect27">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect28" name="cathselect28">                                 
+                        <select class="form-control" id="cathselect28" name="cathselect28">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire7" id = "cathcommentaire7"></td>
                 </tr>
                 <tr>
                     <td>Amorce de la canule</td>
                     <td>
-                        <select class="form-control" id="cathselect29" name="cathselect29">                                 
+                        <select class="form-control" id="cathselect29" name="cathselect29">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect30" name="cathselect30">                                 
+                        <select class="form-control" id="cathselect211" name="cathselect211">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect31" name="cathselect31">                                 
+                        <select class="form-control" id="cathselect212" name="cathselect212">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect32" name="cathselect32">                                 
+                        <select class="form-control" id="cathselect213" name="cathselect213">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire8" id = "cathcommentaire8"></td>
                 </tr>
                 <tr>
                     <td>Contrôle glycémique 2h après la pose</td>
                     <td>
-                        <select class="form-control" id="cathselect33" name="cathselect33">                                 
+                        <select class="form-control" id="cathselect214" name="cathselect214">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect34" name="cathselect34">                                 
+                        <select class="form-control" id="cathselect215" name="cathselect215">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect35" name="cathselect35">                                 
+                        <select class="form-control" id="cathselect216" name="cathselect216">
+                            <option value="" selected  hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect36" name="cathselect36">                                 
+                        <select class="form-control" id="cathselect217" name="cathselect217"> 
+                            <option value="" selected  hidden>--Choisir--</option>                                
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire9" id = "cathcommentaire9"></td>
                 </tr>
                 <tr>
                     <td>Conservation de l'insuline</td>
                     <td>
-                        <select class="form-control" id="cathselect37" name="cathselect37">                                 
+                        <select class="form-control" id="cathselect218" name="cathselect218">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect38" name="cathselect38">                                 
+                        <select class="form-control" id="cathselect219" name="cathselect219">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect39" name="cathselect39">                                 
+                        <select class="form-control" id="cathselect221" name="cathselect221">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect40" name="cathselect40">                                 
+                        <select class="form-control" id="cathselect222" name="cathselect222">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire10" id = "cathcommentaire10"></td>
                 </tr>
                 <tr>
                     <td>Fréquence de changement des cathéters</td>
                     <td>
-                        <select class="form-control" id="cathselect41" name="cathselect41">                                 
+                        <select class="form-control" id="cathselect223" name="cathselect223">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect42" name="cathselect42">                                 
+                        <select class="form-control" id="cathselect224" name="cathselect224">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect43" name="cathselect43">                                 
+                        <select class="form-control" id="cathselect225" name="cathselect225">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td>
-                        <select class="form-control" id="cathselect44" name="cathselect44">                                 
+                        <select class="form-control" id="cathselect226" name="cathselect226">
+                            <option value="" selected hidden>--Choisir--</option>                                 
                             <option value="acquis">Acquis</option>
                             <option value="en cours">En cours d'acquisition</option>
                             <option value="non acquis">Non acquis</option>
-                        </select>
                     </td>
                     <td><input type="text" class="form-control" name = "cathcommentaire11" id = "cathcommentaire11"></td>
                 </tr>
@@ -891,6 +891,7 @@
             </tbody>
         </table>
     </fieldset>
+
 
 </div>
 
