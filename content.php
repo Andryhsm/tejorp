@@ -64,7 +64,7 @@ ob_start();
                             <img style="position: relative; margin-right: 250px; margin-left: 10px; width: 120px;" src="img/logo_diabete.jpg">
                         </td>
                         <td  style="border: none;">
-                            <img style="position: relative; margin-left: 245px; width: 120px;" src="img/basitide.png">
+                            <img style="position: relative; margin-left: 245px; width: 120px;" src="img/logob.PNG">
                         </td>
                     </tr>
                 </table>
@@ -806,7 +806,7 @@ ob_start();
         <h4><u>HABITUDES ALIMENTAIRES</u></h4>
         <strong>SUIVI DE POIDS : </strong> <?php echo $regime; ?> <br>
         <strong>Observation : </strong> <?php echo $observation2; ?> <br>
-        <strong>Survenue de compilations : </strong> <?php echo $survenue; ?> <br>
+        <strong>Survenue de complications : </strong> <?php echo $survenue; ?> <br>
         <strong>ATCD/ autre pathologies : </strong> <?php echo $atcd; ?> <br>
         <strong>Traitement :</strong> <?php echo $traitement; ?> <br><br/><br/>
         <table class="table " style="margin-left: 8px;">
@@ -1364,6 +1364,12 @@ ob_start();
                 </tr>                                      
             </tbody>
         </table>
+
+        <div>
+            <br><br>
+            <strong>Commentaire global :</strong> <?php echo $asg2commentaire; ?>
+        </div>
+
     </div>
 
 </div>

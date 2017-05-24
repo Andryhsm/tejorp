@@ -20,10 +20,10 @@
             <thead>
                 <tr>
                     <td style="text-align: center;">Etapes</td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate1" name="cathdate1" placeholder = "Date"></td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate2" name="cathdate2" placeholder = "Date"></td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate3" name="cathdate3" placeholder = "Date"></td>
-                    <td><input type="text" class="form-control datepickerAll" id="cathdate4" name="cathdate4" placeholder = "Date"></td>
+                    <td><input type="text" readonly="" class="form-control datepickerAll" id="cathdate1" name="cathdate1" placeholder = "Date"></td>
+                    <td><input type="text" readonly="" class="form-control datepickerAll" id="cathdate2" name="cathdate2" placeholder = "Date"></td>
+                    <td><input type="text" readonly="" class="form-control datepickerAll" id="cathdate3" name="cathdate3" placeholder = "Date"></td>
+                    <td><input type="text" readonly="" class="form-control datepickerAll" id="cathdate4" name="cathdate4" placeholder = "Date"></td>
                     <td style="text-align: center;">Commentaire</td>
                 </tr>
             </thead>
@@ -509,22 +509,22 @@
                             <ul>
                                 <div class="radio">
 
-                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate1" name="perempdate1">
+                                    <input type="text" readonly="" class="input-sm form-control datepickerAll" id="perempdate1" name="perempdate1">
 
                                 </div>
                                 <div class="radio">
 
-                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate2" name="perempdate2">
+                                    <input type="text" readonly="" class="input-sm form-control datepickerAll" id="perempdate2" name="perempdate2">
 
                                 </div>
                                 <div class="radio">
 
-                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate3" name="perempdate3">
+                                    <input type="text" readonly="" class="input-sm form-control datepickerAll" id="perempdate3" name="perempdate3">
 
                                 </div>
                                 <div class="radio">
 
-                                    <input type="text" class="input-sm form-control datepickerAll" id="perempdate4" name="perempdate4">
+                                    <input type="text" readonly="" class="input-sm form-control datepickerAll" id="perempdate4" name="perempdate4">
 
                                 </div>
                             </ul>
@@ -552,7 +552,7 @@
 
                         <div class="radio">
 
-                            <input type="text" class="form-control input-sm datepickerAll" id="perempdate5" name="perempdate5" placeholder = "Date de péremption">
+                            <input type="text" readonly="" class="form-control input-sm datepickerAll" id="perempdate5" name="perempdate5" placeholder = "Date de péremption">
 
                         </div>
 
@@ -764,6 +764,14 @@
                 </tr>                                      
             </tbody>
         </table>
+
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Commentaire global :</label>
+            <div class="col-sm-7">
+                <textarea rows="3" type="text" placeholder="Commentaire global" class="form-control" name="asg2commentaire" id="asg2commentaire"></textarea>
+            </div>
+        </div>
+
     </fieldset>
     <input type="submit" value="envoyer">
     <form>

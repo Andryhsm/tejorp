@@ -316,7 +316,7 @@
                     var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
-                $('.datepicker').datepicker({
+                $('.datepickery').datepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
@@ -338,7 +338,7 @@
                     todayBtn: true
                 });
 
-                $('.datetimepicker').datetimepicker({
+                $('.datetimepickery').datetimepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
@@ -1834,6 +1834,19 @@
                             if (server_response === "succes")
                             {
                                 window.location.href = "page.php";
+
+                                setTimeout(function () {
+                                    $("#form-filter").attr('action', 'content.php');
+                                    $("#form-filter").submit();
+                                }, 800);
+                            }
+                            else if(server_response === "Le patient existe déjà")
+                            {
+                                $('#erreur_inscription').html('<p>' + server_response + '</p>');
+                                $('#triggerwarning').trigger('click');
+                                setTimeout(function () {
+                                    $('#ferme').trigger('click');
+                                }, 4000);
                             }
                             else
                             {
@@ -1842,6 +1855,11 @@
                                 setTimeout(function () {
                                     $('#ferme').trigger('click');
                                 }, 4000);
+                                
+                                setTimeout(function () {
+                                    $("#form-filter").attr('action', 'content.php');
+                                    $("#form-filter").submit();
+                                }, 800);
                             }
                         },
                         error: function (server_response)
@@ -1853,11 +1871,6 @@
                             }, 4000);
                         }
                     });
-
-                    setTimeout(function () {
-                        $("#form-filter").attr('action', 'content.php');
-                        $("#form-filter").submit();
-                    }, 800);
                 });
 
 

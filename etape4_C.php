@@ -30,10 +30,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="pmpdate1" name="pmpdate1" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="pmpdate2" name="pmpdate2" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="pmpdate3" name="pmpdate3" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="pmpdate4" name="pmpdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -383,10 +383,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="alarmedate1" name="alarmedate1" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="alarmedate2" name="alarmedate2" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="alarmedate3" name="alarmedate3" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="alarmedate4" name="alarmedate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -664,10 +664,10 @@
                     <thead>
                         <tr>
                             <td style="text-align: center;">Etapes</td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
-                            <td><input type="text" class="form-control datepickerAll" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="manipdate1" name="manipdate1" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="manipdate2" name="manipdate2" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="manipdate3" name="manipdate3" placeholder = "Date"></td>
+                            <td><input type="text" readonly class="form-control datepickerAll" id="manipdate4" name="manipdate4" placeholder = "Date"></td>
                             <td style="text-align: center;">Commentaire</td>
                         </tr>
                     </thead>
@@ -865,10 +865,12 @@
 
                         <?php
                             for($h = 1 ; $h <= 4; $h ++){
+                                echo "$('[name=\"pmpdate".$h."\"]').val(\"".$donneespmp['date'.$h]."\");";
+                                echo "$('[name=\"alarmedate".$h."\"]').val(\"".$donneesalarme['alarmedate'.$h]."\");";
+                                echo "$('[name=\"manipdate".$h."\"]').val(\"".$donneesmanip['date'.$h]."\");";
                                 echo "
                                    if(\"".$donneespmp["date".$h.""]."\" != '')
                                     {
-                                        $('form #pmpdate".$h."').attr('readonly', true);
                                         $('#pmpdate".$h."').datepicker(\"destroy\");
                                     }\n
                                     ";
@@ -876,7 +878,6 @@
                                     echo "
                                    if(\"".$donneesalarme["alarmedate".$h.""]."\" != '')
                                     {
-                                        $('form #alarmedate".$h."').attr('readonly', true);
                                         $('#alarmedate".$h."').datepicker(\"destroy\");
                                     }\n
                                     ";
@@ -884,7 +885,6 @@
                                     echo "
                                    if(\"".$donneesmanip["date".$h.""]."\" != '')
                                     {
-                                        $('form #manipdate".$h."').attr('readonly', true);
                                         $('#manipdate".$h."').datepicker(\"destroy\");
                                     }\n
                                     ";

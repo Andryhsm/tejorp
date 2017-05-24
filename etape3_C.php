@@ -29,19 +29,19 @@ $donneesha = $reponseha->fetch();
             <div class="col-lg-6">
 
                 <label for="activitephysique">Activité physique (type/frequence) :</label>
-                <textarea readonly="" type="text" rows="3" class="form-control" id="activitephysique" name="activitephysique" placeholder="activité physique"/><?php echo $donneeshv['activitephysique']; ?></textarea>
+                <textarea type="text" rows="3" class="form-control" id="activitephysique" name="activitephysique" placeholder="activité physique"/><?php echo $donneeshv['activitephysique']; ?></textarea>
                 <label for="profession">Profession : </label>
                 <input readonly="" type="text" value="<?php echo $donneeshv['profession']; ?>" class="form-control" id="profession" name="profession" placeholder="profession"/>
                 <label for="situationfamiliale">Situation familiale :</label>
                 <input readonly="" type="text" value="<?php echo $donneeshv['situationfamiliale']; ?>" class="form-control" id="situationfamiliale" name="situationfamiliale" placeholder="situation familiale"/>
                 <label for="observation">Observations:</label>
-                <textarea readonly="" type="text" rows="3" class="form-control" id="observation" name="observation" placeholder="observations"/><?php echo $donneeshv['observation']; ?></textarea>
+                <textarea type="text" rows="3" class="form-control" id="observation" name="observation" placeholder="observations"/><?php echo $donneeshv['observation']; ?></textarea>
 
             </div>
             <div class="col-lg-6">
 
                 <label for="hygienealimentaire">Hygiène alimentaire (habitude/régime):	</label>
-                <textarea readonly="" type="text" rows="3" class="form-control" id="hygienealimentaire" name="hygienealimentaire" placeholder="hygiène alimentaire"/><?php echo $donneeshv['hygienealimentaire']; ?></textarea>
+                <textarea type="text" rows="3" class="form-control" id="hygienealimentaire" name="hygienealimentaire" placeholder="hygiène alimentaire"/><?php echo $donneeshv['hygienealimentaire']; ?></textarea>
 
                 <div class="radio">
                     <label for="stabilitehoraires">Stabilités des horaires : </label>
@@ -55,9 +55,9 @@ $donneesha = $reponseha->fetch();
                     </label>
                 </div>
                 <label for="details">Détails:	</label>
-                <textarea readonly="" name="details" id="inputDetails" class="form-control" rows="3"><?php echo $donneeshv['details']; ?></textarea>
+                <textarea name="details" id="inputDetails" class="form-control" rows="3"><?php echo $donneeshv['details']; ?></textarea>
                 <label for="environnement">Environnement social :	</label>
-                <textarea readonly="" type="text" rows="3" class="form-control" id="environnement" name="environnement" placeholder="environement social"/><?php echo $donneeshv['environnement']; ?></textarea>
+                <textarea type="text" rows="3" class="form-control" id="environnement" name="environnement" placeholder="environement social"/><?php echo utf8_encode($donneeshv['environnement']); ?></textarea>
 
             </div>
         </div>
@@ -76,19 +76,15 @@ $donneesha = $reponseha->fetch();
             <div class="radio">
                 <label>
                     <input type="radio" id="r1" value="rougeur" name="rougeur">
-                    : Rougeur /
+                    : Rougeur, douleur, inflammation  /
                 </label>
                 <label>
-                    <input type="radio" id="r2" value="douleur" name="rougeur">
-                    : Douleur /
+                    <input type="radio" id="r2" value="lypodystrophie" name="rougeur">
+                    : Lypodystrophie  /
                 </label>
                 <label>
-                    <input type="radio" id="r3" value="inflammation" name="rougeur">
-                    : Inflammation /
-                </label>
-                <label>
-                    <input type="radio" id="r4" value="lypodystrophie" name="rougeur">
-                    : Lypodystrophie 
+                    <input type="radio" id="r3" value="cicatrice" name="rougeur">
+                    : Présence de cicatrices  
                 </label>
             </div>
         </div>
@@ -115,40 +111,40 @@ $donneesha = $reponseha->fetch();
                         <tbody>
                             <tr>
                                 <td>Petit déjeuner</td>
-                                <td><input type="time" class="form-control" name="petitdejeunerDe" id="petitdejeunerDe"></td>
-                                <td><input type="time" class="form-control" name="petitdejeunerA" id="petitdejeunerA"></td>
+                                <td><input readonly type="text" class="form-control" name="petitdejeunerDe" id="petitdejeunerDe"></td>
+                                <td><input readonly type="text" class="form-control" name="petitdejeunerA" id="petitdejeunerA"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerRotation" id="petitdejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerObjectif" id="petitdejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerSensibilite" id="petitdejeunerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Déjeuner</td>
-                                <td><input type="time" class="form-control" name="dejeunerDe" id="dejeunerDe"></td>
-                                <td><input type="time" class="form-control" name="dejeunerA" id="dejeunerA"></td>
+                                <td><input readonly type="text" class="form-control" name="dejeunerDe" id="dejeunerDe"></td>
+                                <td><input readonly type="text" class="form-control" name="dejeunerA" id="dejeunerA"></td>
                                 <td><input type="text" class="form-control" name="dejeunerRotation" id="dejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="dejeunerObjectif" id="dejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dejeunerSensibilite" id="dejeunerSensibilite"></td> 
                             </tr>
                             <tr>
                                 <td>Goûter</td>
-                                <td><input type="time" class="form-control" name="gouterDe" id="gouterDe"></td>
-                                <td><input type="time" class="form-control" name="gouterA" id="gouterA"></td>
+                                <td><input readonly type="text" class="form-control" name="gouterDe" id="gouterDe"></td>
+                                <td><input readonly type="text" class="form-control" name="gouterA" id="gouterA"></td>
                                 <td><input type="text" class="form-control" name="gouterRotation" id="gouterRotation"></td>
                                 <td><input type="text" class="form-control" name="gouterObjectif" id="gouterObjectif"></td>
                                 <td><input type="text" class="form-control" name="gouterSensibilite" id="gouterSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Dîner</td>
-                                <td><input type="time" class="form-control" name="dinerDe" id="dinerDe"></td>
-                                <td><input type="time" class="form-control" name="dinerA" id="dinerA"></td>
+                                <td><input readonly type="text" class="form-control" name="dinerDe" id="dinerDe"></td>
+                                <td><input readonly type="text" class="form-control" name="dinerA" id="dinerA"></td>
                                 <td><input type="text" class="form-control" name="dinerRotation" id="dinerRotation"></td>
                                 <td><input type="text" class="form-control" name="dinerObjectif" id="dinerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dinerSensibilite" id="dinerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Collation</td>
-                                <td><input type="time" class="form-control" name="collationDe" id="collationDe"></td>
-                                <td><input type="time" class="form-control" name="collationA" id="collationA"></td>
+                                <td><input readonly type="text" class="form-control" name="collationDe" id="collationDe"></td>
+                                <td><input readonly type="text" class="form-control" name="collationA" id="collationA"></td>
                                 <td><input type="text" class="form-control" name="collationRotation" id="collationRotation"></td>
                                 <td><input type="text" class="form-control" name="collationObjectif" id="collationObjectif"></td>
                                 <td><input type="text" class="form-control" name="collationSensibilite" id="collationSensibilite"></td>
@@ -178,16 +174,16 @@ $donneesha = $reponseha->fetch();
         </div>
         <br>
         <label for="observation2">Observation :  </label>
-        <textarea readonly="" rows="3" type="text" name="observation2" class="form-control" id="" placeholder="observation"><?php echo $donneesha['observation2']; ?></textarea>
+        <textarea rows="3" type="text" name="observation2" class="form-control" id="" placeholder="observation"><?php echo $donneesha['observation2']; ?></textarea>
         <br>
-        <label for="survenue">Survenue de compilations :  </label>
-        <textarea readonly="" rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de compilations"><?php echo $donneesha['survenue']; ?></textarea>
+        <label for="survenue">Survenue de complications :  </label>
+        <textarea rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de complications"><?php echo $donneesha['survenue']; ?></textarea>
         <br>
         <label for="atcd">ATCD/ autres pathologies :  </label>
-        <textarea readonly="" rows="3" type="text" name="atcd" class="form-control" id="" placeholder="ATCD/ autre pathologies"><?php echo $donneesha['atcd']; ?></textarea>
+        <textarea rows="3" type="text" name="atcd" class="form-control" id="" placeholder="ATCD/ autre pathologies"><?php echo $donneesha['atcd']; ?></textarea>
         <br>
         <label for="traitement">Traitement :  </label>
-        <textarea readonly="" rows="3" type="text" name="traitement" class="form-control" id="traitement" placeholder="traitement"><?php echo $donneesha['traitement']; ?></textarea>
+        <textarea rows="3" type="text" name="traitement" class="form-control" id="traitement" placeholder="traitement"><?php echo $donneesha['traitement']; ?></textarea>
         <br>
         <!-- <label for="observation2">Suivi de poids :  </label>
         <input type="text" name="observation2" class="form-control" id="" placeholder="suivi de poids"> -->
@@ -196,15 +192,15 @@ $donneesha = $reponseha->fetch();
             <table id="table_habitude" class="table table-bordered" style="color: white;">
                 <tr>
                     <th>Date</th>
-                    <th><input type="text" id="date1" class="col-lg-12 form-control datepickerAll" name="date1"></th>
-                    <th><input type="text" id="date2" class="col-lg-12 form-control datepickerAll" name="date2"></th>
-                    <th><input type="text" id="date3" class="col-lg-12 form-control datepickerAll" name="date3"></th>
-                    <th><input type="text" id="date4" class="col-lg-12 form-control datepickerAll" name="date4"></th>
-                    <th><input type="text" id="date5" class="col-lg-12 form-control datepickerAll" name="date5"></th>
-                    <th><input type="text" id="date6" class="col-lg-12 form-control datepickerAll" name="date6"></th>
-                    <th><input type="text" id="date7" class="col-lg-12 form-control datepickerAll" name="date7"></th>
-                    <th><input type="text" id="date8" class="col-lg-12 form-control datepickerAll" name="date8"></th>
-                    <th><input type="text" id="date9" class="col-lg-12 form-control datepickerAll" name="date9"></th>
+                    <th><input type="text" readonly id="date1" class="col-lg-12 form-control datepickerAll" name="date1"></th>
+                    <th><input type="text" readonly id="date2" class="col-lg-12 form-control datepickerAll" name="date2"></th>
+                    <th><input type="text" readonly id="date3" class="col-lg-12 form-control datepickerAll" name="date3"></th>
+                    <th><input type="text" readonly id="date4" class="col-lg-12 form-control datepickerAll" name="date4"></th>
+                    <th><input type="text" readonly id="date5" class="col-lg-12 form-control datepickerAll" name="date5"></th>
+                    <th><input type="text" readonly id="date6" class="col-lg-12 form-control datepickerAll" name="date6"></th>
+                    <th><input type="text" readonly id="date7" class="col-lg-12 form-control datepickerAll" name="date7"></th>
+                    <th><input type="text" readonly id="date8" class="col-lg-12 form-control datepickerAll" name="date8"></th>
+                    <th><input type="text" readonly id="date9" class="col-lg-12 form-control datepickerAll" name="date9"></th>
                 </tr>
                 <tr>
                     <td>Taille</td>
@@ -359,17 +355,14 @@ $donneesha = $reponseha->fetch();
         }
 
 
-        if ("<?php echo $donneeshv['environnement']; ?>" === "rougeur") {
+        if ("<?php echo $donneeshv['rougeur']; ?>" === "rougeur") {
             $("form #r1").attr("checked", true);
         }
-        if ("<?php echo $donneeshv['environnement']; ?>" === "douleur") {
-            $("form #r2").attr("checked", true);
-        }
-        if ("<?php echo $donneeshv['environnement']; ?>" === "inflammation") {
+        if ("<?php echo $donneeshv['rougeur']; ?>" === "cicatrice") {
             $("form #r3").attr("checked", true);
         }
-        if ("<?php echo $donneeshv['environnement']; ?>" === "lypodystrophie") {
-            $("form #r4").attr("checked", true);
+        if ("<?php echo $donneeshv['rougeur']; ?>" === "lypodystrophie") {
+            $("form #r2").attr("checked", true);
         }
 
 
@@ -380,7 +373,7 @@ $donneesha = $reponseha->fetch();
         }
 
 //leresak date am isulinotherapie
-
+        
         if ("<?php echo $donneesif['petitdejeunerDe']; ?>" != "")
         {
             $('[name="petitdejeunerDe"]').val("<?php echo $donneesif['petitdejeunerDe']; ?>");
@@ -666,7 +659,7 @@ for ($i = 1; $i <= 9; $i++) {
     echo "if (" . $donneesha["date".$i.""] . " != '')
         {
             $('[name=\"date".$i."\"]').val(\"" . $donneesha["date".$i.""] . "\");
-            $('form #date" .$i. "').attr('readonly', true);
+            
             $('#date" .$i. "').datepicker(\"destroy\");
         }
         ";

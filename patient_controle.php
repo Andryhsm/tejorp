@@ -1870,7 +1870,7 @@ for ($i = 1; $i <= 9; $i++) {
                     });
 
                     setTimeout(function () {
-                        $("#form-filter").attr('action', 'content.php');
+                        $("#form-filter").attr('action', 'content_C.php');
                         $("#form-filter").submit();
                     }, 800);*/
                 });

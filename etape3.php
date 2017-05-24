@@ -65,20 +65,17 @@
             <div class="radio">
                 <label>
                     <input type="radio" value="rougeur" name="rougeur" checked="">
-                    : Rougeur /
-                </label>
-                <label>
-                    <input type="radio" value="douleur" name="rougeur">
-                    : Douleur /
-                </label>
-                <label>
-                    <input type="radio" value="inflammation" name="rougeur">
-                    : Inflammation /
+                    : Rougeur, douleur, inflammation  /
                 </label>
                 <label>
                     <input type="radio" value="lypodystrophie" name="rougeur">
-                    : Lypodystrophie 
+                    : Lypodystrophie  /
                 </label>
+                <label>
+                    <input type="radio" value="cicatrice" name="rougeur">
+                    : Présence de cicatrices  
+                </label>
+                
             </div>
         </div>
     </fieldset><br/><br/>
@@ -102,40 +99,40 @@
                        <tbody>
                             <tr>
                                 <td>Petit déjeuner</td>
-                                <td><input type="time" class="form-control datetimepickery" name="petitdejeunerDe" id="petitdejeunerDe"></td>
-                                <td><input type="time" class="form-control datetimepickery" name="petitdejeunerA" id="petitdejeunerA"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="petitdejeunerDe" id="petitdejeunerDe"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="petitdejeunerA" id="petitdejeunerA"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerRotation" id="petitdejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerObjectif" id="petitdejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="petitdejeunerSensibilite" id="petitdejeunerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Déjeuner</td>
-                                <td><input type="time" class="form-control datetimepickery" name="dejeunerDe" id="dejeunerDe"></td>
-                                <td><input type="time" class="form-control datetimepickery" name="dejeunerA" id="dejeunerA"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="dejeunerDe" id="dejeunerDe"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="dejeunerA" id="dejeunerA"></td>
                                 <td><input type="text" class="form-control" name="dejeunerRotation" id="dejeunerRotation"></td>
                                 <td><input type="text" class="form-control" name="dejeunerObjectif" id="dejeunerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dejeunerSensibilite" id="dejeunerSensibilite"></td> 
                             </tr>
                             <tr>
                                 <td>Goûter</td>
-                                <td><input type="time" class="form-control datetimepickery" name="gouterDe" id="gouterDe"></td>
-                                <td><input type="time" class="form-control datetimepickery" name="gouterA" id="gouterA"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="gouterDe" id="gouterDe"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="gouterA" id="gouterA"></td>
                                 <td><input type="text" class="form-control" name="gouterRotation" id="gouterRotation"></td>
                                 <td><input type="text" class="form-control" name="gouterObjectif" id="gouterObjectif"></td>
                                 <td><input type="text" class="form-control" name="gouterSensibilite" id="gouterSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Dîner</td>
-                                <td><input type="time" class="form-control datetimepickery" name="dinerDe" id="dinerDe"></td>
-                                <td><input type="time" class="form-control datetimepickery" name="dinerA" id="dinerA"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="dinerDe" id="dinerDe"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="dinerA" id="dinerA"></td>
                                 <td><input type="text" class="form-control" name="dinerRotation" id="dinerRotation"></td>
                                 <td><input type="text" class="form-control" name="dinerObjectif" id="dinerObjectif"></td>
                                 <td><input type="text" class="form-control" name="dinerSensibilite" id="dinerSensibilite"></td>
                             </tr>
                             <tr>
                                 <td>Collation</td>
-                                <td><input type="time" class="form-control datetimepickery" name="collationDe" id="collationDe"></td>
-                                <td><input type="time" class="form-control datetimepickery" name="collationA" id="collationA"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="collationDe" id="collationDe"></td>
+                                <td><input type="text" readonly class="form-control datetimepickery" name="collationA" id="collationA"></td>
                                 <td><input type="text" class="form-control" name="collationRotation" id="collationRotation"></td>
                                 <td><input type="text" class="form-control" name="collationObjectif" id="collationObjectif"></td>
                                 <td><input type="text" class="form-control" name="collationSensibilite" id="collationSensibilite"></td>
@@ -169,8 +166,8 @@
         <label for="observation2">Observation :  </label>
         <textarea rows="3" type="text" name="observation2" class="form-control" id="" placeholder="observation"></textarea>
         <br>
-        <label for="survenue">Survenue de compilations :  </label>
-        <textarea rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de compilations"></textarea>
+        <label for="survenue">Survenue de complications :  </label>
+        <textarea rows="3" type="text" name="survenue" class="form-control" id="" placeholder="survenue de complications"></textarea>
         <br>
         <label for="atcd">ATCD/ autres pathologies :  </label>
         <textarea rows="3" type="text" name="atcd" class="form-control" id="" placeholder="ATCD/ autre pathologies"></textarea>
@@ -185,15 +182,15 @@
             <table id="table_habitude" class="table table-bordered" style="color: white;">
                 <tr>
                     <th>Date</th>
-                    <th><input type="text" id="date1" class="col-lg-12 form-control datepickerAll" name="date1"></th>
-                    <th><input type="text" id="date2" class="col-lg-12 form-control datepickerAll" name="date2"></th>
-                    <th><input type="text" id="date3" class="col-lg-12 form-control datepickerAll" name="date3"></th>
-                    <th><input type="text" id="date4" class="col-lg-12 form-control datepickerAll" name="date4"></th>
-                    <th><input type="text" id="date5" class="col-lg-12 form-control datepickerAll" name="date5"></th>
-                    <th><input type="text" id="date6" class="col-lg-12 form-control datepickerAll" name="date6"></th>
-                    <th><input type="text" id="date7" class="col-lg-12 form-control datepickerAll" name="date7"></th>
-                    <th><input type="text" id="date8" class="col-lg-12 form-control datepickerAll" name="date8"></th>
-                    <th><input type="text" id="date9" class="col-lg-12 form-control datepickerAll" name="date9"></th>
+                    <th><input readonly="" type="text" id="date1" class="col-lg-12 form-control datepickerAll" name="date1"></th>
+                    <th><input readonly="" type="text" id="date2" class="col-lg-12 form-control datepickerAll" name="date2"></th>
+                    <th><input readonly="" type="text" id="date3" class="col-lg-12 form-control datepickerAll" name="date3"></th>
+                    <th><input readonly="" type="text" id="date4" class="col-lg-12 form-control datepickerAll" name="date4"></th>
+                    <th><input readonly="" type="text" id="date5" class="col-lg-12 form-control datepickerAll" name="date5"></th>
+                    <th><input readonly="" type="text" id="date6" class="col-lg-12 form-control datepickerAll" name="date6"></th>
+                    <th><input readonly="" type="text" id="date7" class="col-lg-12 form-control datepickerAll" name="date7"></th>
+                    <th><input readonly="" type="text" id="date8" class="col-lg-12 form-control datepickerAll" name="date8"></th>
+                    <th><input readonly="" type="text" id="date9" class="col-lg-12 form-control datepickerAll" name="date9"></th>
                 </tr>
                 <tr>
                     <td>Taille</td>
