@@ -561,7 +561,7 @@ $donneesp = $reponsep->fetch();
         <div class="form-group">
             <label for="dateinstallation" class="col-sm-4 control-label">Date d'installation:</label>
             <div class="col-sm-7">
-                <input type="text" value="<?php echo $donneescm['dateinstallation']; ?>" placeholder="Date d'installation" class="form-control date datepickerAll" name="dateinstallation" id="dateinstallation">
+                <input type="text" readonly="" value="<?php echo $donneescm['dateinstallation']; ?>" placeholder="Date d'installation" class="form-control date datepickerAll" name="dateinstallation" id="dateinstallation">
             </div>
         </div>
 

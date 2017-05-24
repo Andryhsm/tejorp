@@ -316,7 +316,7 @@
                     var totalR = parseInt(IRmatin) + parseInt(IRmidi) + parseInt(IRsoir) + parseInt(IRdiner) + parseInt(IRcollation);
                     $("#totalinsulinerapide").val(totalR);
                 });
-                $('.datepicker').datepicker({
+                $('.datepickery').datepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
@@ -338,7 +338,7 @@
                     todayBtn: true
                 });
 
-                $('.datetimepicker').datetimepicker({
+                $('.datetimepickery').datetimepicker({
                     language: 'fr',
                     weekStart: 1,
                     todayBtn: 1,
