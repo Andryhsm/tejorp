@@ -1364,6 +1364,11 @@ ob_start();
                 </tr>                                      
             </tbody>
         </table>
+
+        <div>
+            <strong>Commentaire global :</strong> <?php echo $asg2commentaire; ?>
+        </div>
+
     </div>
 
 </div>
