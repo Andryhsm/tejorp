@@ -127,6 +127,7 @@
         $('[name="asgfrequence1"]').val("<?php echo utf8_encode($asg2['asgfrequence1']); ?>");
         $('[name="asgfrequence2"]').val("<?php echo utf8_encode($asg2['asgfrequence2']); ?>");
         $('[name="asgcommentaire"]').val("<?php echo utf8_encode($asg2['asgcommentaire']); ?>");
+        $('[name="asg2commentaire"]').val("<?php echo utf8_encode($asg2['asg2commentaire']); ?>");
 
         if ("<?php echo $asg2['asgconnaissance']; ?>" === "Oui") 
         {

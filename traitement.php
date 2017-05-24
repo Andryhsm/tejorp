@@ -787,13 +787,14 @@ $idPatient = htmlentities(addslashes($_POST["nompatient"]), ENT_NOQUOTES,'UTF-8'
 
             $bdd->exec("INSERT INTO asg2
               (
-                asgfrequence1, asgfrequence2, asgconnaissance, asgcommentaire, idPrescripteur, idPatient)
+                asgfrequence1, asgfrequence2, asgconnaissance, asgcommentaire, asg2commentaire, idPrescripteur, idPatient)
               VALUES 
               ('"
                             . htmlentities(addslashes($_POST["asgfrequence1"]), ENT_NOQUOTES,'UTF-8', true) . "','"
                             . htmlentities(addslashes($_POST["asgfrequence2"]), ENT_NOQUOTES,'UTF-8', true) . "','"
                             . htmlentities(addslashes($_POST["asgconnaissance"]), ENT_NOQUOTES,'UTF-8', true) . "','"
-                            . htmlentities(addslashes($_POST["asgcommentaire"]), ENT_NOQUOTES,'UTF-8', true) . "', '" 
+                            . htmlentities(addslashes($_POST["asgcommentaire"]), ENT_NOQUOTES,'UTF-8', true) . "', '"
+                            . htmlentities(addslashes($_POST["asg2commentaire"]), ENT_NOQUOTES,'UTF-8', true) . "', '"
                             .$idPrescripteur."', '" 
                             .$idPatient."')") or die(print_r($bdd->ErrorInfo()));
 
