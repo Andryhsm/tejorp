@@ -10,6 +10,7 @@ $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_
 <html>
     <head>
         <title>Contrôle</title>
+        <meta Content-Type: text/html; charset=UTF-8>
 
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.miin.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/cerulean.css">

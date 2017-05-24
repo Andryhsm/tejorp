@@ -573,7 +573,7 @@ $donneesp = $reponsep->fetch();
                     <div class="col-sm-7">
                         <select name="catheter" class="form-control">
                             <option value="DROIT">DROIT</option>
-                            <option value="TANGEANTIEL">TANGEANTIEL</option>
+                            <option value="TANGENTIEL">TANGENTIEL</option>
                         </select>
                     </div>
                 </div>
@@ -583,20 +583,36 @@ $donneesp = $reponsep->fetch();
                     <div class="col-sm-7">
                         <!-- <input type="text" placeholder="Modèle" class="form-control" name="modele" id="modele"> -->
                         <select name="modele" class="form-control" id="modelecatheter1">
-                            <option value="" selected disabled hidden>---- Choisir le modèle de Cathéter ----</option>
+                             <option value="" selected hidden>---- Choisir le modèle de Cathéter ----</option>
                             <optgroup label="Laboratoire MEDTRONIC">
-                                <option value="Réservoir Medtronic 1,8ml">Réservoir Medtronic 1,8ml</option>
-                                <option value="Réservoir Medtronic 3ml">Réservoir Medtronic 3ml</option>
+                                <option value="QUICKSET Connexion Luer Lock">QUICKSET Connexion Luer Lock</option>
+                                <option value="QUICKSET Connexion Paradigm">QUICKSET Connexion Paradigm</option>
+                                <option value="SILHOUETTE Connexion Luer Lock">SILHOUETTE Connexion Luer Lock</option>
+                                <option value="SILHOUETTE Connexion Paradigm">SILHOUETTE Connexion Paradigm</option>
+                                <option value="SURE-T Connexion Luer Lock">SURE-T Connexion Luer Lock</option>
+                                <option value="SURE-T Connexion Paradigm">SURE-T Connexion Paradigm</option>
+                                <option value="MIO Connexion Paradigm">MIO Connexion Paradigm</option>
+                                <option value="MIO 30 Connexion Paradigm">MIO 30 Connexion Paradigm</option>
                             </optgroup>
                             <optgroup label="Laboratoire ROCHE">
-                                <option value="Réservoir Roche 3,15 ml">Réservoir Roche 3,15 ml</option>
-                                <option value="Réservoir Roche (Insight) Pré-rempli 1,6 ml">Réservoir Roche (Insight) Pré-rempli 1,6 ml</option>
+                                <option value="Flex Link">Flex Link</option>
+                                <option value="Rapid-D Link">Rapid-D Link</option>
+                                <option value="Tender Link">Tender Link</option>
+                                <option value="Flex Link Plus">Flex Link Plus</option>
+                                <option value="Insight Flex">Insight Flex</option>
                             </optgroup>
                             <optgroup label="Laboratiore JONHSON &amp; JOHNSON">
-                                <option value="Réservoir Animas 2 ml">Réservoir Animas 2 ml</option>
+                                <option value="INSET 2">INSET 2</option>
+                                <option value="INSET 30">INSET 30</option>
+                                <option value="Contact Detach">Contact Detach</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire ALPHADIAB">
+                                <option value="Comfort">Comfort</option>
+                                <option value="Comfort Short">Comfort Short</option>
                             </optgroup>
                             <optgroup label="Laboratoire YPSOMED">
-                                <option value="POD">POD</option>
+                                <option value="ORBIT Soft">ORBIT Soft</option>
+                                <option value="ORBIT Micro">ORBIT Micro</option>
                             </optgroup>
                             <optgroup label="Autres">
                                 <option value="autres" id="autrescatheter1">Autres...</option>
@@ -649,7 +665,7 @@ $donneesp = $reponsep->fetch();
                     <div class="col-sm-7">
                         <select name="catheter2" id="catheter2" class="form-control">
                             <option value="DROIT">DROIT</option>
-                            <option value="TANGEANTIEL">TANGEANTIEL</option>
+                            <option value="TANGENTIEL">TANGENTIEL</option>
                         </select>
                     </div>
                 </div>
@@ -660,20 +676,36 @@ $donneesp = $reponsep->fetch();
                         <!-- <input type="text" placeholder="Modèle" class="form-control" name="modele2" id="modele2">
                     </div> -->
                         <select name="modele2" class="form-control" id="modelecatheter2">
-                            <option value="" selected disabled hidden>---- Choisir le modèle de Cathéter ----</option>
+                            <option value="" selected hidden>---- Choisir le modèle de Cathéter ----</option>
                             <optgroup label="Laboratoire MEDTRONIC">
-                                <option value="Réservoir Medtronic 1,8ml">Réservoir Medtronic 1,8ml</option>
-                                <option value="Réservoir Medtronic 3ml">Réservoir Medtronic 3ml</option>
+                                <option value="QUICKSET Connexion Luer Lock">QUICKSET Connexion Luer Lock</option>
+                                <option value="QUICKSET Connexion Paradigm">QUICKSET Connexion Paradigm</option>
+                                <option value="SILHOUETTE Connexion Luer Lock">SILHOUETTE Connexion Luer Lock</option>
+                                <option value="SILHOUETTE Connexion Paradigm">SILHOUETTE Connexion Paradigm</option>
+                                <option value="SURE-T Connexion Luer Lock">SURE-T Connexion Luer Lock</option>
+                                <option value="SURE-T Connexion Paradigm">SURE-T Connexion Paradigm</option>
+                                <option value="MIO Connexion Paradigm">MIO Connexion Paradigm</option>
+                                <option value="MIO 30 Connexion Paradigm">MIO 30 Connexion Paradigm</option>
                             </optgroup>
                             <optgroup label="Laboratoire ROCHE">
-                                <option value="Réservoir Roche 3,15 ml">Réservoir Roche 3,15 ml</option>
-                                <option value="Réservoir Roche (Insight) Pré-rempli 1,6 ml">Réservoir Roche (Insight) Pré-rempli 1,6 ml</option>
+                                <option value="Flex Link">Flex Link</option>
+                                <option value="Rapid-D Link">Rapid-D Link</option>
+                                <option value="Tender Link">Tender Link</option>
+                                <option value="Flex Link Plus">Flex Link Plus</option>
+                                <option value="Insight Flex">Insight Flex</option>
                             </optgroup>
                             <optgroup label="Laboratiore JONHSON &amp; JOHNSON">
-                                <option value="Réservoir Animas 2 ml">Réservoir Animas 2 ml</option>
+                                <option value="INSET 2">INSET 2</option>
+                                <option value="INSET 30">INSET 30</option>
+                                <option value="Contact Detach">Contact Detach</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire ALPHADIAB">
+                                <option value="Comfort">Comfort</option>
+                                <option value="Comfort Short">Comfort Short</option>
                             </optgroup>
                             <optgroup label="Laboratoire YPSOMED">
-                                <option value="POD">POD</option>
+                                <option value="ORBIT Soft">ORBIT Soft</option>
+                                <option value="ORBIT Micro">ORBIT Micro</option>
                             </optgroup>
                             <optgroup label="Autres">
                                 <option value="autres" id="autrescatheter2">Autres...</option>
@@ -741,40 +773,24 @@ $donneesp = $reponsep->fetch();
             <label for="reservoir" class="col-sm-4 control-label">Réservoir:</label>
             <div class="col-sm-7">
                 <select name="reservoir" class="form-control" id="reservoir">
-                    <option value="" selected disabled hidden>---- Choisir le modèle de Réservoir ----</option>
-                    <optgroup label="Laboratoire MEDTRONIC">
-                        <option value="QUICKSET Connexion Luer Lock">QUICKSET Connexion Luer Lock</option>
-                        <option value="QUICKSET Connexion Paradigm">QUICKSET Connexion Paradigm</option>
-                        <option value="SILHOUETTE Connexion Luer Lock">SILHOUETTE Connexion Luer Lock</option>
-                        <option value="SILHOUETTE Connexion Paradigm">SILHOUETTE Connexion Paradigm</option>
-                        <option value="SURE-T Connexion Luer Lock">SURE-T Connexion Luer Lock</option>
-                        <option value="SURE-T Connexion Paradigm">SURE-T Connexion Paradigm</option>
-                        <option value="MIO Connexion Paradigm">MIO Connexion Paradigm</option>
-                        <option value="MIO 30 Connexion Paradigm">MIO 30 Connexion Paradigm</option>
-                    </optgroup>
-                    <optgroup label="Laboratoire ROCHE">
-                        <option value="Flex Link">Flex Link</option>
-                        <option value="Rapid-D Link">Rapid-D Link</option>
-                        <option value="Tender Link">Tender Link</option>
-                        <option value="Flex Link Plus">Flex Link Plus</option>
-                        <option value="Insight Flex">Insight Flex</option>
-                    </optgroup>
-                    <optgroup label="Laboratiore JONHSON &amp; JOHNSON">
-                        <option value="INSET 2">INSET 2</option>
-                        <option value="INSET 30">INSET 30</option>
-                        <option value="Contact Detach">Contact Detach</option>
-                    </optgroup>
-                    <optgroup label="Laboratoire ALPHADIAB">
-                        <option value="Comfort">Comfort</option>
-                        <option value="Comfort Short">Comfort Short</option>
-                    </optgroup>
-                    <optgroup label="Laboratoire YPSOMED">
-                        <option value="ORBIT Soft">ORBIT Soft</option>
-                        <option value="ORBIT Micro">ORBIT Micro</option>
-                    </optgroup>
-                    <optgroup label="Autres">
-                        <option value="autres" id="reservoir_autres">Autres...</option>
-                    </optgroup>
+                    <option value="" selected hidden>---- Choisir le modèle de Réservoir ----</option>
+                            <optgroup label="Laboratoire MEDTRONIC">
+                                <option value="Réservoir Medtronic 1,8ml">Réservoir Medtronic 1,8ml</option>
+                                <option value="Réservoir Medtronic 3ml">Réservoir Medtronic 3ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire ROCHE">
+                                <option value="Réservoir Roche 3,15 ml">Réservoir Roche 3,15 ml</option>
+                                <option value="Réservoir Roche (Insight) Pré-rempli 1,6 ml">Réservoir Roche (Insight) Pré-rempli 1,6 ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratiore JONHSON &amp; JOHNSON">
+                                <option value="Réservoir Animas 2 ml">Réservoir Animas 2 ml</option>
+                            </optgroup>
+                            <optgroup label="Laboratoire YPSOMED">
+                                <option value="POD">POD</option>
+                            </optgroup>
+                            <optgroup label="Autres">
+                                <option value="autres" id="reservoir_autres">Autres...</option>
+                            </optgroup>
                 </select>
             </div>
         </div>
