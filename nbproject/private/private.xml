@@ -3,8 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/wamp64/www/tejorp/controle.php</file>
             <file>file:/C:/wamp64/www/tejorp/page.php</file>
+=======
+            <file>file:/C:/xampp/htdocs/BASTIDE/tejorp/page.php</file>
+            <file>file:/C:/xampp/htdocs/BASTIDE/tejorp/assets/js/Chart.min.js</file>
+>>>>>>> 13d7cfd6e737b6413d2433319d9c446781af6351
         </group>
     </open-files>
 </project-private>
