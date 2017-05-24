@@ -364,7 +364,7 @@
                 $("#16").click(function () {
                     $('#6').trigger('click');
                 });
-                $("#1").click(function () {
+                $("#1").click(function () {     
                     $("#etape1").show();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -417,7 +417,7 @@ for ($i = 0; $i < 10; $i++) {
     echo "var ValDatesHemGlyc" . $i . " = $('#ValDatesHemGlyc1').val();";
 }
 for ($i = 0; $i < 10; $i++) {
-    echo "var ValHbA1cHemGlyc" . $i . " = ($(\"#ValHbA1cHemGlyc" . $i . "\").val() != \"\") ? $(\"#ValHbA1cHemGlyc" . $i . "\").val() : 0;\n";
+    echo "var ValHbA1cHemGlyc" . $i . " = ($(\"#ValHbA1cHemGlyc" . $i . "\").val() != \"\") ? $(\"#ValHbA1cHemGlyc" . $i . "\").val() : 0;\n";      
 }
 ?>
 
@@ -1810,7 +1810,6 @@ for ($i = 1; $i <= 9; $i++) {
                         }
                     });
                 }
-
 
                 $('#imprimer').click(function () {
                     $("#form-filter").attr('action', 'content.php');

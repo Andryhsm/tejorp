@@ -96,6 +96,9 @@ $donneesp = $reponsep->fetch();
 
         <center><h4>INFIRMIERE BASTIDE MEDICAL</h4></center>
 
+        <?php  $capture = $_POST['capture']; ?>
+
+        <input type="hidden" class="form-control" value="<?php echo $capture; ?>" name="capture" id="capture">
 
         <div class="form-group">
             <label for="nom" class="col-sm-4 control-label">Nom IDE Responsable:</label>
