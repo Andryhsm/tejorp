@@ -864,6 +864,19 @@
                         /*Date*/
 
                         <?php
+                        
+                            for($t = 1 ; $t <= 9; $t ++){
+                                echo "$('[name=\"pmpcommentaire".$t."\"]').val(\"".$donneespmp['commentaire'.$t]."\");";
+                            }
+                            
+                            for($z = 1 ; $z <= 7; $z ++){
+                                echo "$('[name=\"alarmecommentaire".$z."\"]').val(\"".$donneesalarme['commentaire'.$z]."\");";
+                            }
+                            
+                            for($l = 1 ; $l <= 5; $l ++){
+                                echo "$('[name=\"manipcommentaire".$l."\"]').val(\"".$donneesmanip['commentaire'.$l]."\");";
+                            }
+                            
                             for($h = 1 ; $h <= 4; $h ++){
                                 echo "$('[name=\"pmpdate".$h."\"]').val(\"".$donneespmp['date'.$h]."\");";
                                 echo "$('[name=\"alarmedate".$h."\"]').val(\"".$donneesalarme['alarmedate'.$h]."\");";

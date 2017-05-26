@@ -404,11 +404,13 @@ ob_start();
             <h4>Histogrammes des débits suivant le Schémas basals date 1</h4>
             <?php
             $image = 'img/image' . $id_ . '_bardate1.png';
+            $imagee = 'img/image' . $id_ . 'bardate1.png';
 
             if (file_exists($image))
-                echo '<img src="' . $image . '" style="width: 700px;" />'
-
-                ;
+                echo '<img src="' . $image . '" style="width: 700px;" />';
+            else {
+                echo '<img src="' . $imagee . '" style="width: 700px;" />';
+            }
             ?>
             <br/><br/>
         </div>
@@ -501,9 +503,13 @@ ob_start();
             <h4>Histogrammes des débits suivant le Schémas basals date 2</h4>
             <?php
             $image = 'img/image' . $id_ . '_bardate2.png';
+            $images = 'img/image' . $id_ . 'bardate2.png';
 
             if (file_exists($image))
                 echo '<img src="' . $image . '" style="width: 700px;" />';
+            else {
+                echo '<img src="' . $images . '" style="width: 700px;" />';
+            }
             ?>
             <br/><br/>
         </div>
@@ -757,14 +763,16 @@ ob_start();
             </table>
             <br>
             <h4>Evolution chronologique en % des Hémoglobines glyquées</h4>
-<?php
-$image = 'img/image' . $id_ . '_barhg.png';
+            <?php
+            $image = 'img/image' . $id_ . '_barhg.png';
+            $imagen = 'img/image' . $id_ . 'barhg.png';
 
-if (file_exists($image))
-    echo '<img src="' . $image . '" style="width: 700px;" />'
-
-    ;
-?>
+            if (file_exists($image))
+                echo '<img src="' . $image . '" style="width: 700px;" />';
+            else {
+                echo '<img src="' . $imagen . '" style="width: 700px;" />';
+            }
+            ?>
             <br/><br/>
         </div>
 
@@ -903,11 +911,15 @@ if (file_exists($image))
             </table>
         </div><br/><br/>
 
-<?php
-$image = 'img/image' . $id_ . '_bar.png';
-if (file_exists($image))
-    echo '<img src="' . $image . '" style="width: 700px;" /><br/>';
-?>
+        <?php
+        $image = 'img/image' . $id_ . '_bar.png';
+        $imaged = 'img/image' . $id_ . 'bar.png';
+        if (file_exists($image))
+            echo '<img src="' . $image . '" style="width: 700px;" /><br/>';
+        else {
+            echo '<img src="' . $imaged . '" style="width: 700px;" /><br/>';
+        }
+        ?>
 
         <div >
             <h4><u>MANIPULATION DE LA POMPE</u></h4><br/>
