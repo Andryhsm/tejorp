@@ -1,8 +1,6 @@
 <?php
-
 $statut = $_SESSION['statut'];
 $statut = utf8_encode($statut);
-
 if ($statut == "Médecin traitant") {
     ?>
     <script type="text/javascript">
@@ -28,7 +26,6 @@ if ($statut == "Médecin traitant") {
             $('#villedl').attr('value', "<?php echo($_SESSION['ville']); ?>");
             $('#maildl').attr('value', "<?php echo($_SESSION['email']); ?>");
             $('#diabetologueliberal').attr("value", "<?php echo($_SESSION['nom'] . " " . $_SESSION['prenom'] ); ?>");
-
         });
     </script>
     <?php
@@ -61,21 +58,15 @@ if ($statut == "Médecin traitant") {
     </script>
     <?php
 }
-
 $reponsecm = $bdd->query("SELECT * FROM choixmateriel WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
 $donneescm = $reponsecm->fetch();
-
-
 $reponse = $bdd->query("SELECT * FROM infobastide WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
 $donnees = $reponse->fetch();
-
 $reponsepre = $bdd->query("SELECT * FROM infoprescripteur WHERE idPrescripteur = '" . $_SESSION['id'] . "' and idPatient = '" . $id . "'");
 $donneespre = $reponsepre->fetch();
-
 $pieces = explode("-", $id);
 $reponsep = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_SESSION['id'] . "' and nompatient = '" . $pieces[0] . "' and prenompatient = '" . $pieces[1] . "'");
 $donneesp = $reponsep->fetch();
-
 ?>
 
 <style type="text/css">
@@ -91,8 +82,8 @@ $donneesp = $reponsep->fetch();
     }
 </style>
 <script src="dropdown_master/js/msdropdown/jquery.dd.min.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="dropdown_master/css/msdropdown/dd.css" />
 
+<link rel="stylesheet" type="text/css" href="dropdown_master/css/msdropdown/dd.css" />
 <div class="container-fluid">
     <fieldset class="field1">
 
@@ -491,17 +482,70 @@ $donneesp = $reponsep->fetch();
                     $(document).ready(function ()
                     {
                         
+                        var materielpompe = "<?php echo utf8_encode($donneescm['pompe']); ?>";
+                        var modeleCatheter = "<?php echo utf8_encode($donneescm['modele']); ?>";
+                        var modele2Catheter = "<?php echo utf8_encode($donneescm['modele2']); ?>";
+                        var modelereservoir = "<?php echo utf8_encode($donneescm['reservoir']); ?>";
+                        var pompeArray = []; 
+                        var modeleArray = [];
+                        var reservoirArray = [];
                         $('[name="datenaissance"]').val("<?php echo $donneesp['datenaissance']; ?>");
                         $('#datenaissance').datepicker("destroy");
                         
-                        $('[name="Pompe"]').val("<?php echo utf8_encode($donneescm['pompe']); ?>");
-                        $('[name="modele"]').val("<?php echo utf8_encode($donneescm['modele']); ?>");
-                        $('[name="modele2"]').val("<?php echo utf8_encode($donneescm['modele2']); ?>");
-                        $('[name="reservoir"]').val("<?php echo utf8_encode($donneescm['reservoir']); ?>");
+                        $('#webmenu>option').each(function() {
+                            pompeArray.push($(this).val());
+                        });
+                        $('#modelecatheter1>optgroup>option').each(function() {
+                            modeleArray.push($(this).val());
+                            console.log(modeleArray);
+                        });
+                        $('#reservoir>optgroup>option').each(function() {
+                            reservoirArray.push($(this).val());
+                            console.log(reservoirArray);
+                        });
+                            if($.inArray(materielpompe, pompeArray) != -1)
+                            {
+                                $('[name="Pompe"]').val(materielpompe);
+                                $('#autrespompe').addClass('hidden');
+                            } else {
+                                $('#autrespompe').removeClass('hidden');
+                                $('#pompeautres').val(materielpompe);
+                                $('[name="Pompe"]').val("autres");
+                                $('#autres').val(materielpompe);
+                            }
+                            if($.inArray(modeleCatheter, modeleArray) != -1)
+                            {
+                                $('[name="modele"]').val(modeleCatheter);
+                                $('#autresmodele').addClass('hidden');
+                            } else {
+                                $('#autresmodele').removeClass('hidden');
+                                $('#catheter1autres').val(modeleCatheter);
+                                $('[name="modele"]').val("autres");
+                                $('#autrescatheter1').val(modeleCatheter);
+                            }
+                            if($.inArray(modele2Catheter, modeleArray) != -1)
+                            {
+                                $('[name="modele2"]').val(modele2Catheter);
+                                $('#autresmodele2').addClass('hidden');
+                            } else {
+                                $('#autresmodele2').removeClass('hidden');
+                                $('#catheter2autres').val(modele2Catheter);
+                                $('[name="modele2"]').val("autres");
+                                $('#autrescatheter2').val(modele2Catheter);
+                            }
+                            if($.inArray(modelereservoir, reservoirArray) != -1)
+                            {
+                                $('[name="reservoir"]').val(modelereservoir);
+                                $('#autrereservoir').addClass('hidden');
+                            } else {
+                                $('#autrereservoir').removeClass('hidden');
+                                $('#reservoirautres').val(modelereservoir);
+                                $('[name="reservoir"]').val("autres");
+                                $('#reservoir_autres').val(modelereservoir);
+                            }
+                      
                         $('[name="catheter"]').val("<?php echo utf8_encode($donneescm['typecatheter']); ?>");
                         $('[name="catheter2"]').val("<?php echo utf8_encode($donneescm['typecatheter2']); ?>");
-
-
                         if ("<?php echo $donneescm['inserteur']; ?>" === "Oui") {
                             $("form #optionsRadios1").attr("checked", true);
                         } else {
@@ -515,7 +559,6 @@ $donneesp = $reponsep->fetch();
                             $("form #optionsRadios12").attr("checked", true);
                             document.querySelector("#reseau").style.display = (window.getComputedStyle(document.querySelector('#reseau')).display == 'hide') ? "block" : "none";
                         }
-
                     });
                 </script>
                 <select id="webmenu" class="form-control" name="Pompe">
@@ -526,11 +569,17 @@ $donneesp = $reponsep->fetch();
                     <option value="Paradigm véo série 5 violet" data-image="img/paradigm_veo_serie5_violet.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 violet</option>
                     <option value="Paradigm véo série 5 rose" data-image="img/paradigm_veo_serie5_rose.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 rose</option>
 
-                    <option value="Paradigm véo série 7 noir" data-image="img/640G_noir.jpg">&nbsp;&nbsp;&nbsp;640G Noir</option>
-                    <option value="Paradigm véo série 7 gris" data-image="img/640G_bleu.jpg">&nbsp;&nbsp;&nbsp;640G Bleu</option>
-                    <option value="Paradigm véo série 7 bleu" data-image="img/640G_blanc.jpg">&nbsp;&nbsp;&nbsp;640G Blanc</option>
-                    <option value="Paradigm véo série 7 violet" data-image="img/640G_violet.jpg">&nbsp;&nbsp;&nbsp;640G Violet</option>
-                    <option value="Paradigm véo série 7 rose" data-image="img/640G_fuschia.jpg">&nbsp;&nbsp;&nbsp;640G Fuschia</option>
+                    <option value="Paradigm véo série 7 noir" data-image="img/paradigm_veo_serie5_noir.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 noir</option>
+                    <option value="Paradigm véo série 7 gris" data-image="img/paradigm_veo_serie5.png">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 gris</option>
+                    <option value="Paradigm véo série 7 bleu" data-image="img/paradigm_veo_serie5_bleu.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 bleu</option>
+                    <option value="Paradigm véo série 7 violet" data-image="img/paradigm_veo_serie5_violet.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 violet</option>
+                    <option value="Paradigm véo série 7 rose" data-image="img/paradigm_veo_serie5_rose.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 rose</option>
+
+                    <option value="640G Noir" data-image="img/640G_noir.jpg">&nbsp;&nbsp;&nbsp;640G Noir</option>
+                    <option value="640G Bleu" data-image="img/640G_bleu.jpg">&nbsp;&nbsp;&nbsp;640G Bleu</option>
+                    <option value="640G Blanc" data-image="img/640G_blanc.jpg">&nbsp;&nbsp;&nbsp;640G Blanc</option>
+                    <option value="640G Violet" data-image="img/640G_violet.jpg">&nbsp;&nbsp;&nbsp;640G Violet</option>
+                    <option value="640G Fuschia" data-image="img/640G_fuschia.jpg">&nbsp;&nbsp;&nbsp;640G Fuschia</option>
 
                     <option disabled>Laboratoire ROCHE</option> 
                     <option value="ACCU-CHEK Spirit Combo" data-image="img/ACCU-CHEK_Spirit_Combo.jpg">&nbsp;&nbsp;&nbsp;ACCU-CHEK Spirit Combo</option>
@@ -827,7 +876,6 @@ $donneesp = $reponsep->fetch();
     $(document).ready(function (e) {
         $("body #webmenu").msDropDown();
     });
-
     $('#webmenu').change(function ()
     {
         var valeur = document.getElementById('webmenu').options[document.getElementById('webmenu').selectedIndex].value;
@@ -845,7 +893,6 @@ $donneesp = $reponsep->fetch();
             $('#autrespompe').addClass('hidden');
         }
     });
-
     // Modele cathéter : si la valeur est à autres
     $('#modelecatheter1').change(function ()
     {
@@ -864,7 +911,6 @@ $donneesp = $reponsep->fetch();
             $('#autresmodele').addClass('hidden');
         }
     });
-
     // Modele cathéter : si la valeur est à autres
     $('#modelecatheter2').change(function ()
     {
@@ -883,7 +929,6 @@ $donneesp = $reponsep->fetch();
             $('#autresmodele2').addClass('hidden');
         }
     });
-
     // Modele de réservoir : si la valeur est à autres
     $('#reservoir').change(function ()
     {

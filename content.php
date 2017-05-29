@@ -150,7 +150,7 @@ ob_start();
             <strong>Réservoir :</strong> <?php echo $reservoir; ?> <br/>                      
             <strong>Système de portage de la Pompe : </strong> <?php echo $spp; ?>  <br/><br/> 
 
-            <strong>Observations et commentaires :</strong> <?php echo $observation; ?>  
+            <strong>Observations et commentaires :</strong> <?php echo $observatiom; ?>  
         </p>
 
         <h4><u>DONNEES MEDICALES</u></h4>
