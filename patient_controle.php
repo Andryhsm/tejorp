@@ -202,6 +202,13 @@
                 margin-left: 20px;
             }
 
+            #etape6{
+                background: #39382e66;
+                margin-top: 0%;
+                padding-top: 1%;
+                border-radius: 31px;
+            }
+
 
         </style>
 
@@ -372,6 +379,7 @@
                     $("#etape5").hide();
                     $("#etape6").hide();
                     $('#titreEtape').html("<div class='bleugrand'>Etape 1</div><div class='decale'><div id='112' class='rouge'>Etape 2</div><div id='113' class='verte'>Etape 3</div><div id='114' class='orangee'>Etape 4</div><div id='115' class='violette'>Etape 5</div><div id='116' class='jaune'>Etape 6</div></div>");
+                    $(".etapesIndication").css('display', 'block');
                     $("#112").click(function () {
                         $('#2').trigger('click');
                     });
@@ -395,6 +403,7 @@
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
+                    $(".etapesIndication").css('display', 'block');
                     $('#titreEtape').html("<div class='decale'><div id='21' class='bleu'>Etape 1</div></div><div class='rougegrand'>Etape 2</div><div class='decale'><div id='23' class='verte'>Etape 3</div><div id='24' class='orangee'>Etape 4</div><div id='25' class='violette'>Etape 5</div><div id='26' class='jaune'>Etape 6</div></div>");
                     $("#21").click(function () {
                         $('#1').trigger('click');
@@ -563,6 +572,7 @@ for ($i = 0; $i < 10; $i++) {
                     $("#etape4").hide();
                     $("#etape5").hide();
                     $("#etape6").hide();
+                    $(".etapesIndication").css('display', 'block');
                     $('#titreEtape').html("<div class='decale'><div id='31' class='bleu'>Etape 1</div><div id='32' class='rouge'>Etape 2</div></div><div class='vertegrand'>Etape 3</div><div class='decale'><div id='34' class='orangee'>Etape 4</div><div id='35' class='violette'>Etape 5</div><div id='36' class='jaune'>Etape 6</div></div>");
                     $("#31").click(function () {
                         $('#1').trigger('click');
@@ -712,6 +722,7 @@ for ($i = 1; $i <= 9; $i++) {
                     $("#etape4").show();
                     $("#etape5").hide();
                     $("#etape6").hide();
+                    $(".etapesIndication").css('display', 'block');
                     $('#titreEtape').html("<div class='decale'><div id='41' class='bleu'>Etape 1</div><div id='42' class='rouge'>Etape 2</div><div id='43' class='verte'>Etape 3</div></div><div class='orangeegrand'>Etape 4</div><div class='decale'><div id='45' class='violette'>Etape 5</div><div id='46' class='jaune'>Etape 6</div></div>");
 
                     $("#41").click(function () {
@@ -1144,6 +1155,7 @@ for ($i = 1; $i <= 9; $i++) {
                     $("#etape4").hide();
                     $("#etape5").show();
                     $("#etape6").hide();
+                    $(".etapesIndication").css('display', 'block');
                     $('#titreEtape').html("<div class='decale'><div id='51' class='bleu'>Etape 1</div><div id='52' class='rouge'>Etape 2</div><div id='53' class='verte'>Etape 3</div><div id='54' class='orangee'>Etape 4</div></div><div class='violettegrand'>Etape 5</div><div class='decale'><div id='56' class='jaune'>Etape 6</div></div>");
 
                     $("#51").click(function () {
@@ -1521,7 +1533,7 @@ for ($i = 1; $i <= 9; $i++) {
                     $("#etape5").hide();
                     $("#etape6").show();
                     $('#titreEtape').html("<div class='decale'><div id='61' class='bleu'>Etape 1</div><div id='62' class='rouge'>Etape 2</div><div id='63' class='verte'>Etape 3</div><div id='64' class='orangee'>Etape 4</div><div id='65' class='violette'>Etape 5</div></div><div class='jaunegrand'>Etape 6</div>");
-
+                    $(".etapesIndication").css('display', 'none');
                     $("#61").click(function () {
                         $('#1').trigger('click');
                     });
@@ -1611,11 +1623,13 @@ for ($i = 1; $i <= 9; $i++) {
                     </div>
                     <div class="item"  id="etape5" style="display: none;">
                         <?php require './etape5_C.php'; ?>
-                        <input type="text" class="hidden" name="idPatient" value="5-5">
-                        <input type="text" class="hidden" name="idPrescripteur" value="81">
                     </div>
+                    <input type="text" class="hidden" name="idPatient" <?php echo "value='".$_SESSION['idPatient']."'"; ?>">
+                    <input type="text" class="hidden" name="idPrescripteur" <?php echo "value='".$_SESSION['id']."'"; ?>">
+
+                    <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
                     <div class="item" id="etape6" style="display: none;">
-                        <div class="container"  style="margin-top: 230px;">
+                         <div class="container"  style="margin-top: 80px; margin-bottom: -80px;">
                             <div class="col-lg-3 col-md-offset-1">
                                 <center>  
 
@@ -1841,15 +1855,9 @@ for ($i = 1; $i <= 9; $i++) {
                         contentType: false,
                         success: function (server_response)
                         {
-                            if (server_response === "success")
+                            if (server_response === "succes")
                             {
-                                
-                                $('#erreur_inscription').html('<p>' + server_response + '</p>');
-                                $('#triggerwarning').trigger('click');
-                                setTimeout(function () {
-                                    $('#ferme').trigger('click');
-                                }, 4000);
-                                
+                                window.location.href = "page.php";
                             }
                             else
                             {
