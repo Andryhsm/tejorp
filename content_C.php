@@ -1,4 +1,6 @@
 <?php
+
+header("Content-Type: text/html; charset=UTF-8");
 session_start();
 
 $id_ = $_SESSION['id'];
@@ -21,19 +23,19 @@ $statut = utf8_encode($statut);
 //Soloina le post lava be
 
 foreach (array_keys($_POST) as $value) {
-    eval("\$" . $value . " = (isset(\$_POST[\"" . $value . "\"])) ? htmlentities(\$_POST[\"" . $value . "\"], ENT_NOQUOTES,'UTF-8', true) : \"\";");
+    eval("\$" . $value . " = (isset(\$_POST[\"" . $value . "\"])) ? utf8_encode(htmlentities(\$_POST[\"" . $value . "\"], ENT_NOQUOTES,'UTF-8', true)) : \"\";");
 }
 for ($i = 5; $i < 85; $i++) {
-    eval("\$Horaire" . $i . " = (isset(\$_POST[\"Horaire" . $i . "\"])) ? htmlentities(\$_POST[\"Horaire" . $i . "\"], ENT_NOQUOTES,'UTF-8', true) : \"\";");
+    eval("\$Horaire" . $i . " = (isset(\$_POST[\"Horaire" . $i . "\"])) ? utf8_encode(htmlentities(\$_POST[\"Horaire" . $i . "\"], ENT_NOQUOTES,'UTF-8', true)) : \"\";");
 }
 for ($i = 5; $i < 85; $i++) {
-    eval("\$Horaire_" . $i . " = (isset(\$_POST[\"Horaire_" . $i . "\"])) ? htmlentities(\$_POST[\"Horaire_" . $i . "\"], ENT_NOQUOTES,'UTF-8', true) : \"\";");
+    eval("\$Horaire_" . $i . " = (isset(\$_POST[\"Horaire_" . $i . "\"])) ?utf8_encode( htmlentities(\$_POST[\"Horaire_" . $i . "\"], ENT_NOQUOTES,'UTF-8', true) ): \"\";");
 }
 for ($i = 5; $i < 45; $i++) {
-    eval("\$Debit" . $i . " = (isset(\$_POST[\"Debit" . $i . "\"])) ? htmlentities(\$_POST[\"Debit" . $i . "\"], ENT_NOQUOTES,'UTF-8', true) : \"\";");
+    eval("\$Debit" . $i . " = (isset(\$_POST[\"Debit" . $i . "\"])) ? utf8_encode(htmlentities(\$_POST[\"Debit" . $i . "\"], ENT_NOQUOTES,'UTF-8', true) ): \"\";");
 }
 for ($i = 5; $i < 45; $i++) {
-    eval("\$Debit_" . $i . " = (isset(\$_POST[\"Debit_" . $i . "\"])) ? htmlentities(\$_POST[\"Debit_" . $i . "\"], ENT_NOQUOTES,'UTF-8', true) : \"\";");
+    eval("\$Debit_" . $i . " = (isset(\$_POST[\"Debit_" . $i . "\"])) ? utf8_encode(htmlentities(\$_POST[\"Debit_" . $i . "\"], ENT_NOQUOTES,'UTF-8', true)) : \"\";");
 }
 
 /* MODIFS STIAN DECLARATIONS DE VARIABLES */
@@ -725,9 +727,7 @@ ob_start();
             </table>
 
             <br/>
-
-            <<<<<<< HEAD
-        </div>
+		</div>
         <div >
             <strong>Synthèse/Commentaire : </strong> <?php echo $synthesecommentaire; ?> <br/>
             <strong>Objectif glycémique pré prandial (g/l) :</strong><?php echo $objectifglycemiquepreprandial; ?> <br/>

@@ -12,7 +12,7 @@
 	while($data = $query->fetchAll(PDO::FETCH_ASSOC)){
 		foreach ($data as $key2 => $value2) {
 			foreach ($value2 as $key3 => $value3) {
-					echo "$(\"input[name='".$key3."']\").val(\"".$value3."\");\n";			
+					echo "$(\"input[name='".$key3."']\").val(\"".utf8_decode($value3)."\");\n";			
 			}
 		}
 	}
