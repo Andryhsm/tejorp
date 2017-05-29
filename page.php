@@ -1858,6 +1858,7 @@
                                 
                                 setTimeout(function () {
                                     $("#form-filter").attr('action', 'content.php');
+                                    $("#form-filter").attr('target', '_blank');
                                     $("#form-filter").submit();
                                 }, 800);
                             }
