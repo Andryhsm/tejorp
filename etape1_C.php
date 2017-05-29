@@ -524,6 +524,7 @@ $donneesp = $reponsep->fetch();
                                 $('#autrespompe').removeClass('hidden');
                                 $('#pompeautres').val(materielpompe);
                                 $('[name="Pompe"]').val("autres");
+                                $('#autres').val(materielpompe);
                             }
 
                             if($.inArray(modeleCatheter, modeleArray) != -1)
@@ -534,6 +535,7 @@ $donneesp = $reponsep->fetch();
                                 $('#autresmodele').removeClass('hidden');
                                 $('#catheter1autres').val(modeleCatheter);
                                 $('[name="modele"]').val("autres");
+                                $('#autrescatheter1').val(modeleCatheter);
                             }
 
                             if($.inArray(modele2Catheter, modeleArray) != -1)
@@ -544,6 +546,7 @@ $donneesp = $reponsep->fetch();
                                 $('#autresmodele2').removeClass('hidden');
                                 $('#catheter2autres').val(modele2Catheter);
                                 $('[name="modele2"]').val("autres");
+                                $('#autrescatheter2').val(modele2Catheter);
                             }
 
                             if($.inArray(modelereservoir, reservoirArray) != -1)
@@ -554,11 +557,10 @@ $donneesp = $reponsep->fetch();
                                 $('#autrereservoir').removeClass('hidden');
                                 $('#reservoirautres').val(modelereservoir);
                                 $('[name="reservoir"]').val("autres");
+                                $('#reservoir_autres').val(modelereservoir);
                             }
 
-                        /*$('[name="modele"]').val("<?php echo utf8_encode($donneescm['modele']); ?>");
-                        $('[name="modele2"]').val("<?php echo utf8_encode($donneescm['modele2']); ?>");
-                        $('[name="reservoir"]').val("<?php echo utf8_encode($donneescm['reservoir']); ?>");*/
+                      
                         $('[name="catheter"]').val("<?php echo utf8_encode($donneescm['typecatheter']); ?>");
                         $('[name="catheter2"]').val("<?php echo utf8_encode($donneescm['typecatheter2']); ?>");
 
