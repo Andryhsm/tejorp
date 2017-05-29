@@ -1611,11 +1611,9 @@ for ($i = 1; $i <= 9; $i++) {
                     </div>
                     <div class="item"  id="etape5" style="display: none;">
                         <?php require './etape5_C.php'; ?>
+                        <input type="text" class="hidden" name="idPatient" value="5-5">
+                        <input type="text" class="hidden" name="idPrescripteur" value="81">
                     </div>
-                    <input type="text" class="hidden" name="idPatient" <?php echo "value='".$_SESSION['idPatient']."'"; ?>">
-                    <input type="text" class="hidden" name="idPrescripteur" <?php echo "value='".$_SESSION['id']."'"; ?>">
-
-                    <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
                     <div class="item" id="etape6" style="display: none;">
                         <div class="container"  style="margin-top: 230px;">
                             <div class="col-lg-3 col-md-offset-1">
@@ -1829,9 +1827,6 @@ for ($i = 1; $i <= 9; $i++) {
                 });
 
                 $('#save').click(function (e) {
-                    $("#form-filter").attr('action', 'test.php');
-                        $("#form-filter").submit();
-                    /*
                     e.preventDefault();
                     $("#form-filter").attr('action', 'update_controle.php');
                     var form = $('#form-filter').get(0);
@@ -1846,9 +1841,15 @@ for ($i = 1; $i <= 9; $i++) {
                         contentType: false,
                         success: function (server_response)
                         {
-                            if (server_response === "succes")
+                            if (server_response === "success")
                             {
-                                window.location.href = "page.php";
+                                
+                                $('#erreur_inscription').html('<p>' + server_response + '</p>');
+                                $('#triggerwarning').trigger('click');
+                                setTimeout(function () {
+                                    $('#ferme').trigger('click');
+                                }, 4000);
+                                
                             }
                             else
                             {
@@ -1871,8 +1872,9 @@ for ($i = 1; $i <= 9; $i++) {
 
                     setTimeout(function () {
                         $("#form-filter").attr('action', 'content_C.php');
+                        $("#form-filter").attr('target', '_blank');
                         $("#form-filter").submit();
-                    }, 800);*/
+                    }, 800);
                 });
 
 

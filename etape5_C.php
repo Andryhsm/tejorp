@@ -875,8 +875,7 @@
                     <td>
                         <div class="radio" align = "center">
                             <label>
-                                <input type="radio" value="Oui" name="asgconnaissance" id="asgconnaissance1" checked="">
-                                Oui
+                                <input type="radio" value="Oui" name="asgconnaissance" id="asgconnaissance1" checked="">  
                             </label>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <label>
@@ -896,6 +895,7 @@
                 <textarea rows="3" type="text" placeholder="Commentaire global" class="form-control" name="asg2commentaire" id="asg2commentaire"></textarea>
             </div>
         </div>
+
 
     </fieldset>
 

@@ -812,6 +812,9 @@ $donneesp = $reponsep->fetch();
             <label for="spp" class="col-sm-4 control-label">Système de portage de la Pompe:</label>
             <div class="col-sm-7">
                 <input type="text" value="<?php echo $donneescm['spp']; ?>" placeholder="Système de portage de la Pompe" class="form-control" name="spp" id="spp">
+
+                                <input type="radio" value="Oui" name="idPrescripteur" value="81" checked=""> 
+                                <input type="radio" value="Oui" name="idPatient" value="5-5" checked="">  
             </div>
         </div>
         <div class="form-group">
