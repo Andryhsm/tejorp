@@ -508,11 +508,17 @@ if ($statut == "Médecin traitant") {
                             <option value="Paradigm véo série 5 violet" data-image="img/paradigm_veo_serie5_violet.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 violet</option>
                             <option value="Paradigm véo série 5 rose" data-image="img/paradigm_veo_serie5_rose.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 5 rose</option>
 
-                            <option value="Paradigm véo série 7 noir" data-image="img/640G_noir.jpg">&nbsp;&nbsp;&nbsp;640G Noir</option>
-                            <option value="Paradigm véo série 7 gris" data-image="img/640G_bleu.jpg">&nbsp;&nbsp;&nbsp;640G Bleu</option>
-                            <option value="Paradigm véo série 7 bleu" data-image="img/640G_blanc.jpg">&nbsp;&nbsp;&nbsp;640G Blanc</option>
-                            <option value="Paradigm véo série 7 violet" data-image="img/640G_violet.jpg">&nbsp;&nbsp;&nbsp;640G Violet</option>
-                            <option value="Paradigm véo série 7 rose" data-image="img/640G_fuschia.jpg">&nbsp;&nbsp;&nbsp;640G Fuschia</option>
+                            <option value="Paradigm véo série 7 noir" data-image="img/paradigm_veo_serie5_noir.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 noir</option>
+                            <option value="Paradigm véo série 7 gris" data-image="img/paradigm_veo_serie5.png">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 gris</option>
+                            <option value="Paradigm véo série 7 bleu" data-image="img/paradigm_veo_serie5_bleu.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 bleu</option>
+                            <option value="Paradigm véo série 7 violet" data-image="img/paradigm_veo_serie5_violet.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 violet</option>
+                            <option value="Paradigm véo série 7 rose" data-image="img/paradigm_veo_serie5_rose.jpg">&nbsp;&nbsp;&nbsp;Paradigm véo série 7 rose</option>
+
+                            <option value="640G Noir" data-image="img/640G_noir.jpg">&nbsp;&nbsp;&nbsp;640G Noir</option>
+                            <option value="640G Bleu" data-image="img/640G_bleu.jpg">&nbsp;&nbsp;&nbsp;640G Bleu</option>
+                            <option value="640G Blanc" data-image="img/640G_blanc.jpg">&nbsp;&nbsp;&nbsp;640G Blanc</option>
+                            <option value="640G Violet" data-image="img/640G_violet.jpg">&nbsp;&nbsp;&nbsp;640G Violet</option>
+                            <option value="640G Fuschia" data-image="img/640G_fuschia.jpg">&nbsp;&nbsp;&nbsp;640G Fuschia</option>
 
                         <option disabled>Laboratoire ROCHE</option> 
                             <option value="ACCU-CHEK Spirit Combo" data-image="img/ACCU-CHEK_Spirit_Combo.jpg">&nbsp;&nbsp;&nbsp;ACCU-CHEK Spirit Combo</option>
