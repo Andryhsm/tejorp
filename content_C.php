@@ -942,7 +942,12 @@ ob_start();
                         <td><?php echo $pmpselect2; ?></td>
                         <td><?php echo $pmpselect3; ?></td>
                         <td><?php echo $pmpselect4; ?></td>
-                        <td><?php echo $pmpcommentaire1; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc1 = wordwrap($pmpcommentaire1, 15, "<br />\n");
+                        echo $pmpc1; 
+                        ?>
+                        </td>
                     </tr>
                     <tr>
                         <td>Marche/Arrêt</td>
@@ -950,7 +955,11 @@ ob_start();
                         <td><?php echo $pmpselect6; ?></td>
                         <td><?php echo $pmpselect7; ?></td>
                         <td><?php echo $pmpselect8; ?></td>
-                        <td><?php echo $pmpcommentaire2; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc2 = wordwrap($pmpcommentaire2, 15, "<br />\n");
+                        echo $pmpc2; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Réglage Date/heure</td>
@@ -958,7 +967,11 @@ ob_start();
                         <td><?php echo $pmpselect10; ?></td>
                         <td><?php echo $pmpselect11; ?></td>
                         <td><?php echo $pmpselect12; ?></td>
-                        <td><?php echo $pmpcommentaire3; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc3 = wordwrap($pmpcommentaire3, 15, "<br />\n");
+                        echo $pmpc3; 
+                        ?></td>
                     </tr> 
                     <tr>
                         <td>Réglage du bolus</td>
@@ -966,7 +979,11 @@ ob_start();
                         <td><?php echo $pmpselect14; ?></td>
                         <td><?php echo $pmpselect15; ?></td>
                         <td><?php echo $pmpselect16; ?></td>
-                        <td><?php echo $pmpcommentaire4; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc4 = wordwrap($pmpcommentaire4, 15, "<br />\n");
+                        echo $pmpc4; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Arrêt du bolus en cours</td>
@@ -974,7 +991,11 @@ ob_start();
                         <td><?php echo $pmpselect18; ?></td>
                         <td><?php echo $pmpselect19; ?></td>
                         <td><?php echo $pmpselect20; ?></td>
-                        <td><?php echo $pmpcommentaire5; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc5 = wordwrap($pmpcommentaire5, 15, "<br />\n");
+                        echo $pmpc5; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Historique des bolus</td>
@@ -982,7 +1003,11 @@ ob_start();
                         <td><?php echo $pmpselect22; ?></td>
                         <td><?php echo $pmpselect23; ?></td>
                         <td><?php echo $pmpselect24; ?></td>
-                        <td><?php echo $pmpcommentaire6; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc6 = wordwrap($pmpcommentaire6, 15, "<br />\n");
+                        echo $pmpc6; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Programmation du débit basal</td>
@@ -990,7 +1015,11 @@ ob_start();
                         <td><?php echo $pmpselect26; ?></td>
                         <td><?php echo $pmpselect27; ?></td>
                         <td><?php echo $pmpselect28; ?></td>
-                        <td><?php echo $pmpcommentaire7; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc7 = wordwrap($pmpcommentaire7, 15, "<br />\n");
+                        echo $pmpc7; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Consulter les débits de base</td>
@@ -998,7 +1027,11 @@ ob_start();
                         <td><?php echo $pmpselect291; ?></td>
                         <td><?php echo $pmpselect292; ?></td>
                         <td><?php echo $pmpselect293; ?></td>
-                        <td><?php echo $pmpcommentaire8; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc8 = wordwrap($pmpcommentaire8, 15, "<br />\n");
+                        echo $pmpc8; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Programmer et arrêter le débit de base temporaire</td>
@@ -1006,7 +1039,11 @@ ob_start();
                         <td><?php echo $pmpselect295; ?></td>
                         <td><?php echo $pmpselect296; ?></td>
                         <td><?php echo $pmpselect297; ?></td>
-                        <td><?php echo $pmpcommentaire9; ?></td>
+                        <td>
+                            <?php 
+                        $pmpc9 = wordwrap($pmpcommentaire9, 15, "<br />\n");
+                        echo $pmpc9; 
+                        ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -1036,7 +1073,11 @@ ob_start();
                         <td><?php echo $alarmeselect2; ?></td>
                         <td><?php echo $alarmeselect3; ?></td>
                         <td><?php echo $alarmeselect4; ?></td>
-                        <td><?php echo $alarmecommentaire1; ?></td>
+                        <td>
+                            <?php 
+                        $alarmec1 = wordwrap($alarmecommentaire1, 15, "<br />\n");
+                        echo $alarmec1; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Pile faible</td>
@@ -1044,7 +1085,10 @@ ob_start();
                         <td><?php echo $alarmeselect6; ?></td>
                         <td><?php echo $alarmeselect7; ?></td>
                         <td><?php echo $alarmeselect8; ?></td>
-                        <td><?php echo $alarmecommentaire2; ?></td>
+                        <td><?php 
+                        $alarmec2 = wordwrap($alarmecommentaire2, 15, "<br />\n");
+                        echo $alarmec2; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Pile épuisée</td>
@@ -1052,7 +1096,10 @@ ob_start();
                         <td><?php echo $alarmeselect10; ?></td>
                         <td><?php echo $alarmeselect11; ?></td>
                         <td><?php echo $alarmeselect12; ?></td>
-                        <td><?php echo $alarmecommentaire3; ?></td>
+                        <td><?php 
+                        $alarmec3 = wordwrap($alarmecommentaire3, 15, "<br />\n");
+                        echo $alarmec3; 
+                        ?></td>
                     </tr> 
                     <tr>
                         <td>Réservoire vide</td>
@@ -1060,7 +1107,10 @@ ob_start();
                         <td><?php echo $alarmeselect14; ?></td>
                         <td><?php echo $alarmeselect15; ?></td>
                         <td><?php echo $alarmeselect16; ?></td>
-                        <td><?php echo $alarmecommentaire4; ?></td>
+                        <td><?php 
+                        $alarmec4 = wordwrap($alarmecommentaire4, 15, "<br />\n");
+                        echo $alarmec4; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Occlusion/pas d'injection</td>
@@ -1068,7 +1118,10 @@ ob_start();
                         <td><?php echo $alarmeselect18; ?></td>
                         <td><?php echo $alarmeselect19; ?></td>
                         <td><?php echo $alarmeselect20; ?></td>
-                        <td><?php echo $alarmecommentaire5; ?></td>
+                        <td><?php 
+                        $alarmec5 = wordwrap($alarmecommentaire5, 15, "<br />\n");
+                        echo $alarmec5; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Historique des alarmes</td>
@@ -1076,7 +1129,10 @@ ob_start();
                         <td><?php echo $alarmeselect22; ?></td>
                         <td><?php echo $alarmeselect23; ?></td>
                         <td><?php echo $alarmeselect24; ?></td>
-                        <td><?php echo $alarmecommentaire6; ?></td>
+                        <td><?php 
+                        $alarmec6 = wordwrap($alarmecommentaire6, 15, "<br />\n");
+                        echo $alarmec6; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Entretien de la Pompe</td>
@@ -1084,7 +1140,10 @@ ob_start();
                         <td><?php echo $alarmeselect26; ?></td>
                         <td><?php echo $alarmeselect27; ?></td>
                         <td><?php echo $alarmeselect28; ?></td>
-                        <td><?php echo $alarmecommentaire7; ?></td>
+                        <td><?php 
+                        $alarmec7 = wordwrap($alarmecommentaire7, 15, "<br />\n");
+                        echo $alarmec7; 
+                        ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -1113,7 +1172,11 @@ ob_start();
                         <td><?php echo $manipselect2; ?></td>
                         <td><?php echo $manipselect3; ?></td>
                         <td><?php echo $manipselect4; ?></td>
-                        <td><?php echo $manipcommentaire1; ?></td>
+                        <td>
+                            <?php 
+                        $manipc1 = wordwrap($manipcommentaire1, 15, "<br />\n");
+                        echo $manipc1; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Remplissage du réservoir</td>
@@ -1121,7 +1184,10 @@ ob_start();
                         <td><?php echo $manipselect6; ?></td>
                         <td><?php echo $manipselect7; ?></td>
                         <td><?php echo $manipselect8; ?></td>
-                        <td><?php echo $manipcommentaire2; ?></td>
+                        <td><?php 
+                        $manipc2 = wordwrap($manipcommentaire2, 15, "<br />\n");
+                        echo $manipc2; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Connexion réservoir/tubulaire</td>
@@ -1129,7 +1195,10 @@ ob_start();
                         <td><?php echo $manipselect10; ?></td>
                         <td><?php echo $manipselect11; ?></td>
                         <td><?php echo $manipselect12; ?></td>
-                        <td><?php echo $manipcommentaire3; ?></td>
+                        <td><?php 
+                        $manipc3 = wordwrap($manipcommentaire3, 15, "<br />\n");
+                        echo $manipc3; 
+                        ?></td>
                     </tr> 
                     <tr>
                         <td>Retour du piston</td>
@@ -1137,7 +1206,10 @@ ob_start();
                         <td><?php echo $manipselect14; ?></td>
                         <td><?php echo $manipselect15; ?></td>
                         <td><?php echo $manipselect16; ?></td>
-                        <td><?php echo $manipcommentaire4; ?></td>
+                        <td><?php 
+                        $manipc4 = wordwrap($manipcommentaire4, 15, "<br />\n");
+                        echo $manipc4; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Purge de la tubulure</td>
@@ -1145,7 +1217,10 @@ ob_start();
                         <td><?php echo $manipselect18; ?></td>
                         <td><?php echo $manipselect19; ?></td>
                         <td><?php echo $manipselect20; ?></td>
-                        <td><?php echo $manipcommentaire5; ?></td>
+                        <td><?php 
+                        $manipc5 = wordwrap($manipcommentaire5, 15, "<br />\n");
+                        echo $manipc5; 
+                        ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -1172,7 +1247,11 @@ ob_start();
                         <td><?php echo $cathselect2; ?></td>
                         <td><?php echo $cathselect3; ?></td>
                         <td><?php echo $cathselect4; ?></td>
-                        <td><?php echo $cathcommentaire1; ?></td>
+                        <td>
+                            <?php 
+                        $cathc1 = wordwrap($cathcommentaire1, 15, "<br />\n");
+                        echo $cathc1; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Retrait de l'adhésif et de la protection de l'aiguille</td>
@@ -1180,7 +1259,10 @@ ob_start();
                         <td><?php echo $cathselect6; ?></td>
                         <td><?php echo $cathselect7; ?></td>
                         <td><?php echo $cathselect8; ?></td>
-                        <td><?php echo $cathcommentaire2; ?></td>
+                        <td><?php 
+                        $cathc2 = wordwrap($cathcommentaire2, 15, "<br />\n");
+                        echo $cathc2; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Armement de l'Inserteur</td>
@@ -1188,7 +1270,10 @@ ob_start();
                         <td><?php echo $cathselect10; ?></td>
                         <td><?php echo $cathselect11; ?></td>
                         <td><?php echo $cathselect12; ?></td>
-                        <td><?php echo $cathcommentaire3; ?></td>
+                        <td><?php 
+                        $cathc3 = wordwrap($cathcommentaire3, 15, "<br />\n");
+                        echo $cathc3; 
+                        ?></td>
                     </tr> 
                     <tr>
                         <td>Choix du lieu d'injection</td>
@@ -1196,7 +1281,10 @@ ob_start();
                         <td><?php echo $cathselect14; ?></td>
                         <td><?php echo $cathselect15; ?></td>
                         <td><?php echo $cathselect16; ?></td>
-                        <td><?php echo $cathcommentaire4; ?></td>
+                        <td><?php 
+                        $cathc4 = wordwrap($cathcommentaire4, 15, "<br />\n");
+                        echo $cathc4; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Désinfection cutanée</td>
@@ -1204,7 +1292,10 @@ ob_start();
                         <td><?php echo $cathselect18; ?></td>
                         <td><?php echo $cathselect19; ?></td>
                         <td><?php echo $cathselect20; ?></td>
-                        <td><?php echo $cathcommentaire5; ?></td>
+                        <td><?php 
+                        $cathc5 = wordwrap($cathcommentaire5, 15, "<br />\n");
+                        echo $cathc5; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Déclenchement de l'Inserteur</td>
@@ -1212,7 +1303,10 @@ ob_start();
                         <td><?php echo $cathselect22; ?></td>
                         <td><?php echo $cathselect23; ?></td>
                         <td><?php echo $cathselect24; ?></td>
-                        <td><?php echo $cathcommentaire6; ?></td>
+                        <td><?php 
+                        $cathc6 = wordwrap($cathcommentaire6, 15, "<br />\n");
+                        echo $cathc6; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Retrait de l'aiguille</td>
@@ -1220,7 +1314,10 @@ ob_start();
                         <td><?php echo $cathselect26; ?></td>
                         <td><?php echo $cathselect27; ?></td>
                         <td><?php echo $cathselect28; ?></td>
-                        <td><?php echo $cathcommentaire7; ?></td>
+                        <td><?php 
+                        $cathc7 = wordwrap($cathcommentaire7, 15, "<br />\n");
+                        echo $cathc7; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Amorce de la canule</td>
@@ -1228,7 +1325,10 @@ ob_start();
                         <td><?php echo $cathselect211; ?></td>
                         <td><?php echo $cathselect212; ?></td>
                         <td><?php echo $cathselect213; ?></td>
-                        <td><?php echo $cathcommentaire8; ?></td>
+                        <td><?php 
+                        $cathc8 = wordwrap($cathcommentaire8, 15, "<br />\n");
+                        echo $cathc8; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Contrôle glycémique 2h après la pose</td>
@@ -1236,7 +1336,10 @@ ob_start();
                         <td><?php echo $cathselect215; ?></td>
                         <td><?php echo $cathselect216; ?></td>
                         <td><?php echo $cathselect214; ?></td>
-                        <td><?php echo $cathcommentaire9; ?></td>
+                        <td><?php 
+                        $cathc9 = wordwrap($cathcommentaire9, 15, "<br />\n");
+                        echo $cathc9; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Conservation de l'insuline</td>
@@ -1244,7 +1347,10 @@ ob_start();
                         <td><?php echo $cathselect219; ?></td>
                         <td><?php echo $cathselect221; ?></td>
                         <td><?php echo $cathselect222; ?></td>
-                        <td><?php echo $cathcommentaire10; ?></td>
+                        <td><?php 
+                        $cathc10 = wordwrap($cathcommentaire10, 15, "<br />\n");
+                        echo $cathc10; 
+                        ?></td>
                     </tr>
                     <tr>
                         <td>Fréquence de changement des cathéters</td>
@@ -1252,7 +1358,10 @@ ob_start();
                         <td><?php echo $cathselect224; ?></td>
                         <td><?php echo $cathselect225; ?></td>
                         <td><?php echo $cathselect226; ?></td>
-                        <td><?php echo $cathcommentaire11; ?></td>
+                        <td><?php 
+                        $cathc11 = wordwrap($cathcommentaire11, 15, "<br />\n");
+                        echo $cathc11; 
+                        ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -1273,13 +1382,20 @@ ob_start();
                 <tr>
                     <td><strong>Numéro de l'astreinte médicale</strong></td>
                     <td><?php echo $connaissance1; ?></td>
-                    <td><?php echo $cnsobservation1; ?></td>                            
+                    <td>
+                        <?php 
+                        $cns1 = wordwrap($cnsobservation1, 37, "<br />\n");
+                        echo $cns1; 
+                        ?></td>                            
                 </tr>
 
                 <tr>
                     <td><strong>Numéro de l'astreinte BLCM</strong></td>
                     <td><?php echo $connaissance2; ?></td>
-                    <td><?php echo $cnsobservation2; ?></td>
+                    <td><?php 
+                        $cns2 = wordwrap($cnsobservation2, 37, "<br />\n");
+                        echo $cns2; 
+                        ?></td>
                 </tr>
 
                 <tr> 
