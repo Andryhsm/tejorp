@@ -73,6 +73,9 @@ require './protection.php';
 
         <div class="container" style="margin-top: -11vw;">
             <div class="grid">
+                <audio id="clickmenu">
+                    <source src="lib/sound/multimedia_button_click_023.mp3"></source>
+                </audio>
                 <br><br>
                 <div class="row col-lg-offset-1" style="margin-bottom: 50px; ">
                     <div class="col-lg-3 col-md-3 col-xs-3">
@@ -97,7 +100,7 @@ require './protection.php';
                     <figcaption>
                         <h2> <span style="color: #e29000;">+ Ajout</span></h2>
                         <p>Ajouter un nouveau patient</p>
-                        <a href="./page.php">View more</a>
+                        <a class="menu-s" href="./page.php">View more</a>
                     </figcaption>			
                 </figure>
                 <figure class="effect-ming">
@@ -105,7 +108,7 @@ require './protection.php';
                     <figcaption>
                         <h2><span style="color: #e29000;">Acces</span></h2>
                         <p>Accéder au dossier de mes patients</p>
-                        <a href="controle.php">View more</a>
+                        <a class="menu-s" href="controle.php">View more</a>
                     </figcaption>			
                 </figure>
 
@@ -114,7 +117,16 @@ require './protection.php';
         </div>
         <script src="./bootstrap/js/jquery.js"></script>   
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
-
+         <script src="assets/js/jquery-ui.min.js"></script>
+         <script type="text/javascript">
+             
+            jQuery(document).ready(function($) {
+                $(".menu-s").mousedown(function(event) {
+                        var audio2 = $("#clickmenu")[0];
+                        audio2.play();  
+                }); 
+            });
+         </script>
     </body>
 </html>
 

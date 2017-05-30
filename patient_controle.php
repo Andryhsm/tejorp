@@ -371,7 +371,9 @@
                 $("#16").click(function () {
                     $('#6').trigger('click');
                 });
-                $("#1").click(function () {     
+                $("#1").click(function () {    
+                    var audio = $("#clickSound")[0];
+                    audio.play(); 
                     $("#etape1").show();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -397,6 +399,8 @@
                     });
                 });
                 $("#2").click(function () {
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").show();
                     $("#etape3").hide();
@@ -566,6 +570,8 @@ for ($i = 0; $i < 10; $i++) {
                     }
                 });
                 $("#3").click(function () {
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").show();
@@ -716,6 +722,8 @@ for ($i = 1; $i <= 9; $i++) {
                     }
                 });
                 $("#4").click(function () {
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -1149,6 +1157,8 @@ for ($i = 1; $i <= 9; $i++) {
                     });
                 });
                 $("#5").click(function () {
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -1526,6 +1536,8 @@ for ($i = 1; $i <= 9; $i++) {
                     });
                 });
                 $("#6").click(function () {
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -1549,6 +1561,11 @@ for ($i = 1; $i <= 9; $i++) {
                     $("#65").click(function () {
                         $('#5').trigger('click');
                     });
+                });
+
+                $(".menu-s").mousedown(function(event) {
+                   var audio2 = $("#clickmenu")[0];
+                    audio2.play(); 
                 });
             });
         </script>
@@ -1586,11 +1603,11 @@ for ($i = 1; $i <= 9; $i++) {
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="./utilisateur.php">Accueil</a></li>
-                                <li><a href="./controle.php">Contrôle</a></li>
-                                <li><a href="./modification.php">Modifier mon profil</a></li>
-                                <li><a href="./lumiere.php">Conseil</a></li>
-                                <li><a href="./logout.php">Déconnexion</a></li>
+                                <li><a class="menu-s" href="./utilisateur.php">Accueil</a></li>
+                                <li><a class="menu-s" href="./controle.php">Contrôle</a></li>
+                                <li><a class="menu-s" href="./modification.php">Modifier mon profil</a></li>
+                                <li><a class="menu-s" href="./lumiere.php">Conseil</a></li>
+                                <li><a class="menu-s" href="./logout.php">Déconnexion</a></li>
                             </ul>
                         </div>
 
@@ -1612,7 +1629,12 @@ for ($i = 1; $i <= 9; $i++) {
             </div>
 
             <form method="POST" action="" id="form-filter" class="form-horizontal" enctype="multipart/form-data">
-
+                <audio id="clickSound">
+                    <source src="lib/sound/multimedia_button_click_029.mp3"></source>
+                </audio>
+                <audio id="clickmenu">
+                    <source src="lib/sound/multimedia_button_click_015.mp3"></source>
+                </audio>
                 <div class="container" style="margin-top: 82px;">
                     <div class="item active" id="etape1">
                         <?php require './etape1_C.php'; ?>

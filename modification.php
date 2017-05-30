@@ -66,11 +66,11 @@ require './protection.php';
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./utilisateur.php">Accueil</a></li>
-                    <li><a href="./page.php">Installation</a></li>
-                    <li><a href="./controle.php">Contrôle</a></li>
-                     <li><a href="./lumiere.php">Conseil</a></li>
-                    <li><a href="./logout.php">Déconnexion</a></li>
+                    <li><a class="menu-s" href="./utilisateur.php">Accueil</a></li>
+                    <li><a class="menu-s" href="./page.php">Installation</a></li>
+                    <li><a class="menu-s" href="./controle.php">Contrôle</a></li>
+                     <li><a class="menu-s" href="./lumiere.php">Conseil</a></li>
+                    <li><a class="menu-s" href="./logout.php">Déconnexion</a></li>
                   </ul>
                 </div>
 
@@ -88,7 +88,9 @@ require './protection.php';
                     ?>
 
                     <fieldset class="well">
-
+                         <audio id="clickmenu">
+                            <source src="lib/sound/multimedia_button_click_015.mp3"></source>
+                        </audio>
                         <div class="col-lg-4 col-lg-offset-3">
                             <div id="image_preview">
                                 <img class="thumbnail img-responsive" style="vertical-align: center;" width="200px" heigth="200px" src="./image-person/<?php echo $donnees['photo']; ?>">
@@ -200,6 +202,13 @@ require './protection.php';
 
         <script src="assets/js/jquery-ui.min.js"></script>
         <script type="text/javascript">
+             
+            jQuery(document).ready(function($) {
+                $(".menu-s").mousedown(function(event) {
+                        var audio2 = $("#clickmenu")[0];
+                        audio2.play();  
+                }); 
+            });
         // Pour l'autocompletion
                 var ville = [];
                 var code_postal  = [];

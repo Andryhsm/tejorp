@@ -36,6 +36,9 @@ require './protection.php';
                     </button>
                     <a class="navbar-brand" href="./utilisateur.php">Insulinothérapie</a>
                 </div>
+                <audio id="clickmenu">
+                    <source src="lib/sound/multimedia_button_click_015.mp3"></source>
+                </audio>
 
                 <!-- <div id="navbar" class="navbar-collapse collapse">
                     
@@ -54,11 +57,11 @@ require './protection.php';
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./utilisateur.php">Accueil</a></li>
-                    <li><a href="./page.php">Installation</a></li>
-                    <li><a href="./controle.php">Contrôle</a></li>
-                    <li><a href="./modification.php">Modifier mon profil</a></li>
-                    <li><a href="./logout.php">Déconnexion</a></li>
+                    <li><a class="menu-s" href="./utilisateur.php">Accueil</a></li>
+                    <li><a class="menu-s" href="./page.php">Installation</a></li>
+                    <li><a class="menu-s" href="./controle.php">Contrôle</a></li>
+                    <li><a class="menu-s" href="./modification.php">Modifier mon profil</a></li>
+                    <li><a class="menu-s" href="./logout.php">Déconnexion</a></li>
                   </ul>
                 </div>
 
@@ -82,6 +85,14 @@ require './protection.php';
         </div>
         <script src="./bootstrap/js/jquery.js"></script>   
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $(".menu-s").mousedown(function(event) {
+                        var audio2 = $("#clickmenu")[0];
+                        audio2.play();  
+                }); 
+            });
+        </script>
 
     </body>
 </html>

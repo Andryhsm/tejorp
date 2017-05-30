@@ -366,6 +366,9 @@
                     $('#6').trigger('click');
                 });
                 $("#1").click(function () {
+
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").show();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -390,6 +393,9 @@
                     });
                 });
                 $("#2").click(function () {
+
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").show();
                     $("#etape3").hide();
@@ -553,6 +559,9 @@
                     }
                 });
                 $("#3").click(function () {
+
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").show();
@@ -703,6 +712,9 @@
                     }
                 });
                 $("#4").click(function () {
+
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -1135,6 +1147,8 @@
                     });
                 });
                 $("#5").click(function () {
+                    var audio = $("#clickSound")[0];
+                    audio.play();
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -1510,7 +1524,11 @@
                         perempdate2 = $('#perempdate2').val();
                     });
                 });
+
                 $("#6").click(function () {
+                    var audio = $("#clickSound")[0];
+                    audio.play();
+                    
                     $("#etape1").hide();
                     $("#etape2").hide();
                     $("#etape3").hide();
@@ -1535,6 +1553,14 @@
                         $('#5').trigger('click');
                     });
                 });
+
+                $(".menu-s").mousedown(function(event) {
+                   var audio2 = $("#clickmenu")[0];
+                    audio2.play(); 
+                });
+                 $(".enreg").mousedown(function(event) {
+                   
+                });
             });
         </script>
     </head>
@@ -1556,11 +1582,11 @@
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="./utilisateur.php">Accueil</a></li>
-                                <li><a href="./controle.php">Contrôle</a></li>
-                                <li><a href="./modification.php">Modifier mon profil</a></li>
-                                <li><a href="./lumiere.php">Conseil</a></li>
-                                <li><a href="./logout.php">Déconnexion</a></li>
+                                <li><a class="menu-s" href="./utilisateur.php">Accueil</a></li>
+                                <li><a class="menu-s" href="./controle.php">Contrôle</a></li>
+                                <li><a class="menu-s" href="./modification.php">Modifier mon profil</a></li>
+                                <li><a class="menu-s" href="./lumiere.php">Conseil</a></li>
+                                <li><a class="menu-s" href="./logout.php">Déconnexion</a></li>
                             </ul>
                         </div>
 
@@ -1582,8 +1608,18 @@
             </div>
 
             <form method="POST" action="" id="form-filter" class="form-horizontal" enctype="multipart/form-data">
-
-
+                <audio id="clickSound">
+                    <source src="lib/sound/multimedia_button_click_029.mp3"></source>
+                </audio>
+                <audio id="clickmenu">
+                    <source src="lib/sound/multimedia_button_click_015.mp3"></source>
+                </audio>
+                <audio id="clickenreg">
+                    <source src="lib/sound/dustyroom_multimedia_correct_complete_bonus.mp3"></source>
+                </audio>
+                <audio id="erreur">
+                    <source src="lib/sound/dustyroom_multimedia_incorrect_negative_tone.mp3"></source>
+                </audio>
                 <div class="container" style="margin-top: 82px;">
                     <div class="item active" id="etape1">
 <?php require './etape1.php'; ?>
@@ -1806,6 +1842,10 @@
                     $("#form-filter").attr('action', 'content.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
+                    
+                                var audio3 = $("#clickenreg")[0];
+                                audio3.play(); 
+
                 });
 
                 $("input").keypress(function (event)
@@ -1855,7 +1895,8 @@
                                 setTimeout(function () {
                                     $('#ferme').trigger('click');
                                 }, 4000);
-                                
+                                var audio3 = $("#clickenreg")[0];
+                                audio3.play(); 
                                 setTimeout(function () {
                                     $("#form-filter").attr('action', 'content.php');
                                     $("#form-filter").attr('target', '_blank');

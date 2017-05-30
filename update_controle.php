@@ -1023,20 +1023,16 @@ $Debit_44 = (isset($_POST['Debit_44'])) ? $_POST['Debit_44'] : '';
 	$req7->execute(array($alarmedate1, $alarmedate2, $alarmedate3, $alarmedate4, $alarmeselect1, $alarmeselect2, $alarmeselect3, $alarmeselect4, $alarmecommentaire1, $alarmeselect5, $alarmeselect6, $alarmeselect7, $alarmeselect8, $alarmecommentaire2, $alarmeselect9, $alarmeselect10, $alarmeselect11, $alarmeselect12, $alarmecommentaire3, $alarmeselect13, $alarmeselect14, $alarmeselect15, $alarmeselect16, $alarmecommentaire4, $alarmeselect17, $alarmeselect18, $alarmeselect19, $alarmeselect20, $alarmecommentaire5, $alarmeselect21, $alarmeselect22, $alarmeselect23, $alarmeselect24, $alarmecommentaire6, $alarmeselect25, $alarmeselect26, $alarmeselect27, $alarmeselect28, $alarmecommentaire7, $alarmeautre, $idPrescripteur, $idPatient)) or die(print_r($bdd->errorInfo()));
 
 	$bdd->exec("UPDATE  asg1 SET asgdetail1='',  asgdetail2='',  asgdetail3='',  asgdetail4='',  asgobservation1='',  asgobservation2='',  asgobservation3='',  asgobservation4=''  WHERE idPrescripteur='$idPrescripteur' AND idPatient='$idPatient'");
-
-	$req3 = $bdd->prepare("UPDATE  asg1 SET asgdetail1=?,  asgdetail2=?,  asgdetail3=?,  asgdetail4=?,  asgobservation1=?,  asgobservation2=?,  asgobservation3=?,  asgobservation4=?  WHERE idPrescripteur=? AND idPatient=?");
-
 	
+	$req9 = $bdd->prepare("UPDATE  asg1 SET asgdetail1=?,  asgdetail2=?,  asgdetail3=?,  asgdetail4=?,  asgobservation1=?,  asgobservation2=?,  asgobservation3=?,  asgobservation4=?  WHERE idPrescripteur=? AND idPatient=?");
 
-	$req3->execute(array($asgdetail1, $asgdetail2, $asgdetail3, $asgdetail3, $asgobservation1, $asgobservation2, $asgobservation3, $asgobservation4, $idPatient, $idPrescripteur)) or die(print_r($bdd->errorInfo()));
+	$req9->execute(array($asgdetail1,  $asgdetail2,  $asgdetail3,  $asgdetail4,  $asgobservation1,  $asgobservation2,  $asgobservation3,  $asgobservation4, $idPrescripteur, $idPatient));
+
+	$bdd->exec("UPDATE  asg2 SET asgfrequence1='',  asgfrequence2='',  asgconnaissance='b',  asgcommentaire='b' asg2commentaire='b' WHERE idPrescripteur='$idPrescripteur' AND idPatient='$idPatient'");
 	
+	$req4 = $bdd->prepare("UPDATE  asg2 SET asgfrequence1=?,  asgfrequence2=?,  asgconnaissance=?,  asgcommentaire=?, asg2commentaire=?  WHERE idPrescripteur=? AND idPatient=?");
 
-
-	$bdd->exec("UPDATE  asg2 SET asgfrequence1='',  asgfrequence2='',  asgconnaissance='',  asgcommentaire='' WHERE idPrescripteur='$idPrescripteur' AND idPatient='$idPatient'");
-	
-	$req4 = $bdd->prepare("UPDATE  asg2 SET asgfrequence1=?,  asgfrequence2=?,  asgconnaissance=?,  asgcommentaire=? WHERE idPrescripteur=? AND idPatient=?");
-
-	$req4->execute(array($asgfrequence1, $asgfrequence2, $asgconnaissance, $asgcommentaire, $idPrescripteur, $idPatient)) or die(print_r($bdd->errorInfo())); 
+	$req4->execute(array($asgfrequence1, $asgfrequence2, $asgconnaissance, $asgcommentaire, $asg2commentaire, $idPrescripteur, $idPatient)) or die(print_r($bdd->errorInfo())); 
 
 	echo "Enregistrement avec succès ! ";
 
