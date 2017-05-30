@@ -482,10 +482,10 @@ $donneesp = $reponsep->fetch();
                     $(document).ready(function ()
                     {
                         
-                        var materielpompe = "<?php echo utf8_encode($donneescm['pompe']); ?>";
-                        var modeleCatheter = "<?php echo utf8_encode($donneescm['modele']); ?>";
-                        var modele2Catheter = "<?php echo utf8_encode($donneescm['modele2']); ?>";
-                        var modelereservoir = "<?php echo utf8_encode($donneescm['reservoir']); ?>";
+                        var materielpompe = "<?php echo $donneescm['pompe']; ?>";
+                        var modeleCatheter = "<?php echo $donneescm['modele']; ?>";
+                        var modele2Catheter = "<?php echo $donneescm['modele2']; ?>";
+                        var modelereservoir = "<?php echo $donneescm['reservoir']; ?>";
                         var pompeArray = []; 
                         var modeleArray = [];
                         var reservoirArray = [];
