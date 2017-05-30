@@ -57,7 +57,7 @@ $donneesha = $reponseha->fetch();
                 <label for="details">Détails:	</label>
                 <textarea name="details" id="inputDetails" class="form-control" rows="3"><?php echo $donneeshv['details']; ?></textarea>
                 <label for="environnement">Environnement social :	</label>
-                <textarea type="text" rows="3" class="form-control" id="environnement" name="environnement" placeholder="environement social"/><?php echo utf8_encode($donneeshv['environnement']); ?></textarea>
+                <textarea type="text" rows="3" class="form-control" id="environnement" name="environnement" placeholder="environement social"/><?php echo $donneeshv['environnement']; ?></textarea>
 
             </div>
         </div>

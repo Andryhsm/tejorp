@@ -1570,7 +1570,14 @@ for ($i = 1; $i <= 9; $i++) {
 
                                 Contrôle sur 
                                 <?php
-                                    $id = $_POST['id'];
+                                    if(isset($_POST['id'])){
+                                        $_SESSION['patient'] = $_POST['id'];
+                                        $id = $_SESSION['patient'];
+                                    }else{
+                                        $id = $_SESSION['patient'];
+                                    }
+
+                                    $id = $_SESSION['patient'];
                                     $_SESSION['idPatient'] = $id;
                                     $p = explode("-", $id);
                                     echo $p[1] . " " . $p[0];

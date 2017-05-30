@@ -89,7 +89,15 @@ $donneesp = $reponsep->fetch();
 
         <center><h4>INFIRMIERE BASTIDE MEDICAL</h4></center>
 
-        <?php  $capture = $_POST['capture']; ?>
+        <?php  
+        	if(isset($_POST['capture'])){
+
+        		$capture = $_POST['capture']; 	
+        		$_SESSION['capture'] = $_POST['capture'];
+        	}else{
+        		$capture = $_SESSION['capture'];
+        	}
+        	?>
 
         <input type="hidden" class="form-control" value="<?php echo $capture; ?>" name="capture" id="capture">
 

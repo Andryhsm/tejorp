@@ -781,7 +781,6 @@
                 </div>
 
             </fieldset>
-                <input type="submit" value="envoyer">
             <form>
         </div>
 
