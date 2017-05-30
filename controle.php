@@ -264,7 +264,7 @@ $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_
             $.fn.pageMe = function (opts) {
                 var $this = this,
                         defaults = {
-                            perPage: 5,
+                            perPage: 8,
                             showPrevNext: false,
                             hidePageNumbers: false
                         },
@@ -365,7 +365,7 @@ $reponse = $bdd->query("SELECT * FROM infopatient WHERE idPrescripteur = '" . $_
 
             $(document).ready(function () {
 
-                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 5});
+                $('#myTable').pageMe({pagerSelector: '#myPager', showPrevNext: true, hidePageNumbers: false, perPage: 8});
 
             });
         </script>
