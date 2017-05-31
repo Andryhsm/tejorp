@@ -1635,6 +1635,12 @@ for ($i = 1; $i <= 9; $i++) {
                 <audio id="clickmenu">
                     <source src="lib/sound/multimedia_button_click_015.mp3"></source>
                 </audio>
+                <audio id="clickenreg">
+                    <source src="lib/sound/dustyroom_multimedia_correct_complete_bonus.mp3"></source>
+                </audio>
+                <audio id="erreur">
+                    <source src="lib/sound/dustyroom_multimedia_incorrect_negative_tone.mp3"></source>
+                </audio>
                 <div class="container" style="margin-top: 82px;">
                     <div class="item active" id="etape1">
                         <?php require './etape1_C.php'; ?>
@@ -1856,6 +1862,9 @@ for ($i = 1; $i <= 9; $i++) {
                 }
 
                 $('#imprimer').click(function () {
+                    
+                    var audio3 = $("#clickenreg")[0];
+                            audio3.play(); 
                     $("#form-filter").attr('action', 'content_C.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
@@ -1896,6 +1905,8 @@ for ($i = 1; $i <= 9; $i++) {
                                     $('#ferme').trigger('click');
                                 }, 4000);
                             }
+                            var audio3 = $("#clickenreg")[0];
+                            audio3.play(); 
                         },
                         error: function (server_response)
                         {

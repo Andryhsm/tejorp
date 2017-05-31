@@ -1839,12 +1839,13 @@
 
 
                 $('#imprimer').click(function () {
+                    
+                                var audio3 = $("#clickenreg")[0];
+                                audio3.play(); 
                     $("#form-filter").attr('action', 'content.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
                     
-                                var audio3 = $("#clickenreg")[0];
-                                audio3.play(); 
 
                 });
 
