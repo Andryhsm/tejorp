@@ -94,7 +94,7 @@
                     <source src="lib/sound/dustyroom_multimedia_incorrect_negative_tone.mp3"></source>
             </audio>
              <audio id="clickSucces">
-                    <source src="lib/sound/sound_ex_machina_Action_Pop Up.mp3"></source>
+                    <source src="lib/sound/dustyroom_multimedia_correct_complete_bonus.mp3"></source>
             </audio>
         </div>
         <script src="./bootstrap/js/jquery.js"></script>   
@@ -156,7 +156,10 @@
                         {
                             var audio = $("#clickSucces")[0];
                             audio.play();
-                            window.location.href = "utilisateur.php";
+                                setTimeout(function(){
+                                    window.location.href = "utilisateur.php";
+                                }, 800);
+                                    
                         }
                         else
                         {

@@ -1888,6 +1888,8 @@
                                 setTimeout(function () {
                                     $('#ferme').trigger('click');
                                 }, 4000);
+                                var audio3 = $("#erreur")[0];
+                                audio3.play(); 
                             }
                             else
                             {
