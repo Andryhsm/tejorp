@@ -1,6 +1,7 @@
 <?php
 
 require 'cnx.php';
+require_once 'phash.php';
 
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
@@ -34,7 +35,9 @@ if ($fichier == "") {
                 
                 $bdd->exec("UPDATE `prescripteur` SET `nom`='',`prenom`='', `tel`='',`rue`='',`code-postal`='',`ville`='',`etablissement`='',`mdp`='' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
 
-                $bdd->exec("UPDATE `prescripteur` SET `nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$mdp' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+                $hach = phash::hash($mdp);
+                
+                $bdd->exec("UPDATE `prescripteur` SET `nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$hach' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
 
                 echo 'Modification reussi';
             } else {
@@ -69,7 +72,8 @@ if ($fichier == "") {
                 echo 'Modification reussi';
             } elseif ($mdp == $conf_mdp) {
 
-                $bdd->exec("UPDATE `prescripteur` SET `photo`='$fichier',`nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$mdp' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+                $hach = phash::hash($mdp);
+                $bdd->exec("UPDATE `prescripteur` SET `photo`='$fichier',`nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$hach' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
 
                 echo 'Modification reussi';
             } else {
