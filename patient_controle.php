@@ -1669,7 +1669,7 @@ for ($i = 1; $i <= 9; $i++) {
                                 <center>  
 
                                     <img class="zoomEffect" src="./img/save.png" width="120" alt="" id="enregistrer">
-                                    <h3 style="color: black; text-align: center;">ENREGISTRER</h3> 
+                                    <h3 style="color: black;  text-align: center;">ENREGISTRER</h3> 
 
                                 </center>
                             </div>
