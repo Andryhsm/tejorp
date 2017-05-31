@@ -91,6 +91,12 @@ require './protection.php';
                          <audio id="clickmenu">
                             <source src="lib/sound/multimedia_button_click_015.mp3"></source>
                         </audio>
+                         <audio id="clickmodif">
+                            <source src="lib/sound/multimedia_button_click_019.mp3"></source>
+                        </audio>
+                        <audio id="clickenreg">
+                            <source src="lib/sound/dustyroom_multimedia_correct_complete_bonus.mp3"></source>
+                        </audio>
                         <div class="col-lg-4 col-lg-offset-3">
                             <div id="image_preview">
                                 <img class="thumbnail img-responsive" style="vertical-align: center;" width="200px" heigth="200px" src="./image-person/<?php echo $donnees['photo']; ?>">
@@ -208,6 +214,10 @@ require './protection.php';
                         var audio2 = $("#clickmenu")[0];
                         audio2.play();  
                 }); 
+                $(".btn").mousedown(function(event) {
+                        var audio = $("#clickmodif")[0];
+                        audio.play();  
+                });
             });
         // Pour l'autocompletion
                 var ville = [];
@@ -275,7 +285,9 @@ require './protection.php';
                                             contentType: false,
                                             success: function (server_response)
                                             {
-
+                                                                
+                                                var audio3 = $("#clickenreg")[0];
+                                                audio3.play(); 
                                                 $('#erreur_modification').html('<p>' + server_response + '</p>');
                                                 $('#triggerwarning').trigger('click');
                                                 setTimeout(function () {

@@ -5,7 +5,6 @@ require 'cnx.php';
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $tel = $_POST['tel'];
-$adresse = $_POST['adresse'];
 $rue = $_POST['rue'];
 $code_postal = $_POST['code-postal'];
 $ville = $_POST['ville'];
@@ -25,11 +24,17 @@ $fichier = basename($_FILES['photo']['name']);
 if ($fichier == "") {
     
     if ($mdp == "" && $conf_mdp == "") {
-                $bdd->exec("UPDATE `prescripteur` SET `nom`='$nom',`prenom`='$prenom', `tel`='$tel',`adresse`='$adresse',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+
+                $bdd->exec("UPDATE `prescripteur` SET `nom`='',`prenom`='', `tel`='',`rue`='',`code-postal`='',`ville`='',`etablissement`='' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+                
+                $bdd->exec("UPDATE `prescripteur` SET `nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
 
                 echo 'Modification reussi';
             } elseif ($mdp == $conf_mdp) {
-                $bdd->exec("UPDATE `prescripteur` SET `nom`='$nom',`prenom`='$prenom', `tel`='$tel',`adresse`='$adresse',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$mdp' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+                
+                $bdd->exec("UPDATE `prescripteur` SET `nom`='',`prenom`='', `tel`='',`rue`='',`code-postal`='',`ville`='',`etablissement`='',`mdp`='' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+
+                $bdd->exec("UPDATE `prescripteur` SET `nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$mdp' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
 
                 echo 'Modification reussi';
             } else {
@@ -56,11 +61,15 @@ if ($fichier == "") {
         if (move_uploaded_file($_FILES['photo']['tmp_name'], $dossier . $fichier)) {
 
             if ($mdp == "" && $conf_mdp == "") {
-                $bdd->exec("UPDATE `prescripteur` SET `photo`='$fichier',`nom`='$nom',`prenom`='$prenom', `tel`='$tel',`adresse`='$adresse',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+
+                 $bdd->exec("UPDATE `prescripteur` SET `photo`='',`nom`='',`prenom`='', `tel`='',`rue`='',`code-postal`='',`ville`='',`etablissement`='' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+
+                $bdd->exec("UPDATE `prescripteur` SET `photo`='$fichier',`nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
 
                 echo 'Modification reussi';
             } elseif ($mdp == $conf_mdp) {
-                $bdd->exec("UPDATE `prescripteur` SET `photo`='$fichier',`nom`='$nom',`prenom`='$prenom', `tel`='$tel',`adresse`='$adresse',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$mdp' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
+
+                $bdd->exec("UPDATE `prescripteur` SET `photo`='$fichier',`nom`='$nom',`prenom`='$prenom', `tel`='$tel',`rue`='$rue',`code-postal`='$code_postal',`ville`='$ville',`etablissement`='$etablissement',`mdp`='$mdp' WHERE `login`='$login'") or die(print_r($bdd->ErrorInfo()));
 
                 echo 'Modification reussi';
             } else {

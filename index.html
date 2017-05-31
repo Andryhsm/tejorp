@@ -90,6 +90,12 @@
                     </div>
                 </div>
             </div>
+            <audio id="clickSound">
+                    <source src="lib/sound/dustyroom_multimedia_incorrect_negative_tone.mp3"></source>
+            </audio>
+             <audio id="clickSucces">
+                    <source src="lib/sound/sound_ex_machina_Action_Pop Up.mp3"></source>
+            </audio>
         </div>
         <script src="./bootstrap/js/jquery.js"></script>   
         <script src="./bootstrap/js/bootstrap.min.js"></script> 
@@ -148,10 +154,14 @@
                     {
                         if (server_response === "succes")
                         {
+                            var audio = $("#clickSucces")[0];
+                            audio.play();
                             window.location.href = "utilisateur.php";
                         }
                         else
                         {
+                            var audio3 = $("#clickSound")[0];
+                            audio3.play(); 
                             $('#erreur_login').html('<p>' + server_response + '</p>');
                             $('#triggerwarning').trigger('click');
                             setTimeout(function () {
