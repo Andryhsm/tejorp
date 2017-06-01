@@ -920,7 +920,7 @@
                             }
                         ?>
                         
-                        $('[name="pmpautre"]').val("<?php echo utf8_encode($donneespmp['autre']); ?>"); 
+                        $('[name="pmpautre"]').val("<?php echo $donneespmp['autre']; ?>"); 
                     
                         /*Alarmes et précautions*/
 
@@ -938,7 +938,7 @@
                             }
                         ?>
 
-                        $('[name="alarmeautre"]').val("<?php echo utf8_encode($donneesalarme['autre']); ?>");
+                        $('[name="alarmeautre"]').val("<?php echo $donneesalarme['autre']; ?>");
 
                         /*Manipulations*/
 
