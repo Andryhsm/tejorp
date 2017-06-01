@@ -1638,6 +1638,10 @@
                     <div class="item"  id="etape5" style="display: none;">
 <?php require './etape5.php'; ?>
                     </div>
+                    
+                    <input type="text" class="hidden" id="emailUsers" name="emailUsers" value="">
+                    <input type="text" class="hidden" id="partage" name="partage" value="non">
+
                         <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
                     <div class="item" id="etape6" style="display: none;">
                         <div class="container"  style="margin-top: 80px; margin-bottom: -80px;">
@@ -1652,7 +1656,7 @@
                             <div class="col-lg-3">
                                 <center>
 
-                                    <img class="zoomEffect" src="./img/share.png" width="160" alt="">
+                                    <img class="zoomEffect" src="./img/share.png" width="160" alt="" id="partager">
                                     <h3 style="color: black; text-align: center;">PARTAGER</h3>
 
                                 </center>
@@ -1734,6 +1738,29 @@
                     </div>
                 </div>
             </div>
+
+            <a class="btn btn-primary hidden" id="envoie" data-toggle="modal" href='#modal-id'>Trigger modal</a>
+            <div class="modal fade" id="modal-id">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" style="text-align: center;">PARTAGE</h4>
+                        </div>
+                        <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">Entrer des adresses emails: </label>
+                                    <input type="text" class="form-control" name="emailUser" id="listeMails" placeholder="email1@domain.tld;email2@domain.tld;email3@domain.tld...">
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id='closeEnvoie' class="btn hidden btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" id="envoyerPartage" class="btn btn-default">Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
             <script src="./bootstrap/js/bootstrap.min.js"></script> 
             <script src="assets/js/ie-emulation-modes-warning.js"></script>
@@ -1804,7 +1831,46 @@
                     }
                 });
 
+                $('#partager').click(function(event) {
+                    $("#envoie").trigger('click');
 
+                });
+                $('#partager').mousedown(function(event) {
+                    var audio3 = $("#clickSound")[0];
+                    audio3.play();
+                });
+
+                   
+                $("#envoyerPartage").click(function(event) {
+                    var audio = $("#clickmenu")[0];
+                    audio.play();
+                    var email = $('#listeMails').val();
+                    $('#emailUsers').val(email);
+                    $('#partage').val("oui");
+
+                    
+                    var formData = $("#form-filter").serialize();
+
+                    console.log(formData);
+                    if(confirm("Voulez-vous confirmer le partage de la fiche ? ") ){
+                        $("#closeEnvoie").trigger('click');
+                        $.ajax({
+                            url: 'content.php',
+                            type: 'POST',
+                            data: formData,
+                            success: function(data){
+                                var audio3 = $("#clickenreg")[0];
+                                audio3.play();
+                                alert(data);
+                            },
+                            error: function(){
+                                alert("Une erreur de partage !");
+                                var audio3 = $("#erreur")[0];
+                                audio3.play();
+                            }
+                        });
+                    } 
+                });
 
                 $('#enregistrer').click(function () {
                     $('#save').trigger('click');
@@ -1838,7 +1904,7 @@
                 }
 
 
-                $('#imprimer').click(function () {
+                    $('#imprimer').click(function () {
                     
                                 var audio3 = $("#clickenreg")[0];
                                 audio3.play(); 
