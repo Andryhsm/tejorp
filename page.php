@@ -1643,22 +1643,19 @@
                     <input type="text" class="hidden" id="partage" name="partage" value="non">
 
                         <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
-                    <div class="item" id="etape6" style="display: none;">
-                        <div class="container"  style="margin-top: 80px; margin-bottom: -80px;">
+                    <div class="" id="etape6" style="display: none; background: #39382e66; margin-top: 0%; padding-top: 1%;
+                border-radius: 31px;">
+                       <div class="container"  style="margin-top: 80px; margin-bottom: -80px;">
                             <div class="col-lg-3 col-md-offset-1">
                                 <center>  
-
                                     <img class="zoomEffect" src="./img/save.png" width="120" alt="" id="enregistrer">
                                     <h3 style="color: black; text-align: center;">ENREGISTRER</h3> 
-
                                 </center>
                             </div>
                             <div class="col-lg-3">
                                 <center>
-
                                     <img class="zoomEffect" src="./img/share.png" width="160" alt="" id="partager">
                                     <h3 style="color: black; text-align: center;">PARTAGER</h3>
-
                                 </center>
                             </div>
                             <div class="col-lg-3">
@@ -1685,7 +1682,6 @@
                                 Choix du matériel
                             </span>
                         </a></li>
-
                     <li><a class="round red" onClick="enHaut();" id = "2">Etape 2
                             <span class="round">
                                 Données médicale </br>
@@ -1848,10 +1844,11 @@
                     $('#emailUsers').val(email);
                     $('#partage').val("oui");
 
-                    
+
                     var formData = $("#form-filter").serialize();
 
                     console.log(formData);
+
                     if(confirm("Voulez-vous confirmer le partage de la fiche ? ") ){
                         $("#closeEnvoie").trigger('click');
                         $.ajax({
@@ -1873,6 +1870,7 @@
                 });
 
                 $('#enregistrer').click(function () {
+                    $('#partage').val("non");
                     $('#save').trigger('click');
                 });
 
@@ -1905,7 +1903,7 @@
 
 
                     $('#imprimer').click(function () {
-                    
+                    $('#partage').val("non");
                                 var audio3 = $("#clickenreg")[0];
                                 audio3.play(); 
                     $("#form-filter").attr('action', 'content.php');
@@ -1925,6 +1923,7 @@
 
                 $('#save').click(function (e) {
                     e.preventDefault();
+                    $('#partage').val("non");
                     $("#form-filter").attr('action', 'traitement.php');
                     var form = $('#form-filter').get(0);
                     var formData = new FormData(form);// get the form data
@@ -1943,7 +1942,7 @@
                                 window.location.href = "page.php";
 
                                 setTimeout(function () {
-                                    $("#form-filter").attr('action', 'content.php');
+                                    $("#form-filter").im('action', 'content.php');
                                     $("#form-filter").submit();
                                 }, 800);
                             }

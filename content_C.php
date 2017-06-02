@@ -1577,13 +1577,59 @@ $content = ob_get_clean();
 // convert in PDF
 require_once(dirname(__FILE__) . '/html2pdf-4.4.0/html2pdf.class.php');
 
-try {
-    $html2pdf = new HTML2PDF('P', 'A4', 'fr');
-    $html2pdf->setDefaultFont('Times');
-    $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
-    $html2pdf->Output('pdf/content.pdf');
-} catch (HTML2PDF_exception $e) {
-    echo $e;
-    exit;
-}
+    try {
+
+        $html2pdf = new HTML2PDF('P', 'A4', 'fr');
+        $html2pdf->setDefaultFont('Times');
+        $html2pdf->writeHTML($content, isset($_GET['vuehtml']));
+        
+
+        if($partage === "oui"){
+
+            require_once(dirname(__FILE__) . '/pjmail/pjmail.class.php');
+            
+            $pdf = $html2pdf->Output('', true);
+            $mail = new PJmail();
+            $mail->setAllFrom('imedsoftci@cluster020.hosting.ovh.net', 'Installation Pompe');    // mail en cas d'erreur d'envoie
+            $mail->addfrom('imedsoftci@cluster020.hosting.ovh.net', 'Installation Pompe');       // mail envoyeur      
+            //$mail->addrecipient('fenoheriniaina   t@gmail.com');
+           
+            $listeMails = explode(";", $emailUsers);
+            foreach ($listeMails as $value) {
+                $mail->addrecipient($value); 
+            }
+            $sujet = "Fiche de ".$prenompatient." ".$nompatient." ";
+
+            $message = "";
+            
+            if ($statut == "Médecin traitant") {             
+            $message = "Voiçi le fiche suite au suivi d'installation d'une Pompe à insuline de <strong>".$prenompatient." ".$nompatient."</strong>,<br> partager par le ou la ".$statut." <strong>".$medecintraitant." <strong><br><br><br><br><br>Cordialement,<br>";
+            } elseif ($statut == "Diabétologue libéral") { 
+            $message = "Voiçi le fiche suite au suivi d'installation d'une Pompe à insuline de <strong>".$prenompatient." ".$nompatient."</strong>,<br> partager par le ou la ".$statut." <strong>".$diabetologueliberal." <strong><br><br><br><br><br>Cordialement,<br>";
+            } elseif ($statut == "Diabétologue prescripteur") {
+            $message = "Voiçi le fiche suite au suivi d'installation d'une Pompe à insuline de <strong>".$prenompatient." ".$nompatient."</strong>,<br> partager par le ou la ".$statut." <strong>".$diabetologueprescripteur." <strong><br><br><br><br><br>Cordialement,<br>";
+            } elseif ($statut == "Diététicienne") { 
+            $message = "Voiçi le fiche suite au suivi d'installation d'une Pompe à insuline de <strong>".$prenompatient." ".$nompatient."</strong>,<br> partager par le ou la ".$statut." <strong>".$dieteticienne." <strong><br><br><br><br><br>Cordialement,<br>";
+            }        
+            
+
+            $mail->addsubject($sujet); 
+            $mail->html = utf8_decode($message);
+            $mail->addbinattachement("fiche".$prenompatient."_".$nompatient.".pdf", $pdf);
+            
+            if($mail->sendmail()){
+                echo "Erreur d'envoie de la fiche !";
+            }else{
+                echo "Le fiche a été bien envoyer ! ";            
+            }
+
+        }else{
+            
+            $html2pdf->Output('pdf/content.pdf');
+        }
+
+    } catch (HTML2PDF_exception $e) {
+        echo $e;
+        exit;
+    }
 ?>

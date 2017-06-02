@@ -203,10 +203,7 @@
             }
 
             #etape6{
-                background: #39382e66;
-                margin-top: 0%;
-                padding-top: 1%;
-                border-radius: 31px;
+                
             }
 
 
@@ -1667,7 +1664,7 @@ for ($i = 1; $i <= 9; $i++) {
                     <input type="text" class="hidden" name="idPrescripteur" <?php echo "value='".$_SESSION['id']."'"; ?>">
 
                     <?php echo '<input type="text" class="hidden" name="id" value="' . $_SESSION["login"] . '">'; ?>
-                    <div class="item" id="etape6" style="display: none;">
+                    <div class="item" id="etape6" style="display: none; background: #39382e66; margin-top: 0%; padding-top: 1%;border-radius: 31px;">
                          <div class="container"  style="margin-top: 80px; margin-bottom: -80px;">
                             <div class="col-lg-3 col-md-offset-1">
                                 <center>  
@@ -1804,7 +1801,6 @@ for ($i = 1; $i <= 9; $i++) {
 
                         function enHaut()
                         {
-
                             $('html,body').animate({scrollTop: 0}, 'slow');
                         }
             </script>
@@ -1873,7 +1869,7 @@ for ($i = 1; $i <= 9; $i++) {
                     
                     
                     var formData = $("#form-filter").serialize();
-
+                   
                     console.log(formData);
                     if(confirm("Voulez-vous confirmer le partage de la fiche ? ") ){
                         $("#closeEnvoie").trigger('click');
@@ -1927,9 +1923,9 @@ for ($i = 1; $i <= 9; $i++) {
                 }
 
                 $('#imprimer').click(function () {
-                    
+                    $('#partage').val("non");
                     var audio3 = $("#clickenreg")[0];
-                            audio3.play(); 
+                    audio3.play(); 
                     $("#form-filter").attr('action', 'content_C.php');
                     $("#form-filter").attr('target', '_blank');
                     $("#form-filter").submit();
@@ -1945,6 +1941,7 @@ for ($i = 1; $i <= 9; $i++) {
 
                 $('#save').click(function (e) {
                     e.preventDefault();
+                    $('#partage').val("non");
                     $("#form-filter").attr('action', 'update_controle.php');
                     var form = $('#form-filter').get(0);
                     var formData = new FormData(form);// get the form data
@@ -1982,7 +1979,6 @@ for ($i = 1; $i <= 9; $i++) {
                             }, 4000);
                         }
                     });
-
                     setTimeout(function () {
                         $("#form-filter").attr('action', 'content_C.php');
                         $("#form-filter").attr('target', '_blank');
