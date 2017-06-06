@@ -1874,7 +1874,7 @@ for ($i = 1; $i <= 9; $i++) {
                     if(confirm("Voulez-vous confirmer le partage de la fiche ? ") ){
                         $("#closeEnvoie").trigger('click');
                         $.ajax({
-                            url: 'content.php',
+                            url: 'content_C.php',
                             type: 'POST',
                             data: formData,
                             success: function(data){
